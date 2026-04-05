@@ -1,0 +1,38 @@
+name: ZRC Daily Intelligence Briefing
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate daily briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node generate-briefing.js
+
+      - name: Commit and push data.json
+        run: |
+          git config user.name "ZRC Intelligence Bot"
+          git config user.email "intelligence@zenrisecapital.com"
+          git add data.json
+          DATESTR=$(date -u +"%Y-%m-%d")
+          git diff --cached --quiet || git commit -m "📡 Daily briefing — $DATESTR"
+          git push
