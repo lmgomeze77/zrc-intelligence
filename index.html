@@ -210,6 +210,102 @@
     .error-banner p { color: #F87171; font-size: 13px; margin-bottom: 4px; }
     .error-banner small { color: #5A6A80; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
 
+    /* ── FLOATING SUBSCRIBE ───────────────────────────── */
+    .fab-subscribe {
+      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
+      background: linear-gradient(135deg, #C9A84C, #A8893A); color: #060D18;
+      border: none; border-radius: 50px; padding: 14px 22px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; cursor: pointer;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 0 rgba(201,168,76,0.4);
+      transition: all 0.3s ease;
+      display: flex; align-items: center; gap: 8px;
+      animation: fabPulse 3s ease infinite;
+    }
+    .fab-subscribe:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 32px rgba(201,168,76,0.5);
+    }
+    @keyframes fabPulse {
+      0%, 100% { box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 0 rgba(201,168,76,0.4); }
+      50% { box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 8px rgba(201,168,76,0); }
+    }
+
+    .subscribe-overlay {
+      position: fixed; inset: 0; z-index: 2000;
+      background: rgba(4,8,16,0.85); backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      animation: fadeIn 0.25s ease; padding: 20px;
+    }
+    .subscribe-modal {
+      background: linear-gradient(135deg, #0C1628, #0A1220);
+      border: 1px solid rgba(201,168,76,0.2); border-radius: 12px;
+      padding: 36px 32px; max-width: 440px; width: 100%;
+      animation: fadeSlideIn 0.3s ease;
+      position: relative;
+    }
+    .subscribe-close {
+      position: absolute; top: 14px; right: 18px;
+      background: none; border: none; color: #5A6A80;
+      font-size: 22px; cursor: pointer; padding: 4px;
+      transition: color 0.2s;
+    }
+    .subscribe-close:hover { color: #E8DCC8; }
+    .subscribe-modal h2 {
+      color: #E8DCC8; font-size: 24px; font-weight: 600; margin-bottom: 6px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .subscribe-modal p {
+      color: #5A6A80; font-size: 13px; margin-bottom: 22px; line-height: 1.5;
+    }
+    .subscribe-modal .form-row {
+      display: flex; gap: 8px; margin-bottom: 12px;
+    }
+    .subscribe-modal input {
+      flex: 1; background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.15); border-radius: 6px;
+      padding: 12px 14px; color: #E8DCC8; font-size: 14px;
+      font-family: 'Source Serif 4', Georgia, serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .subscribe-modal input:focus { border-color: rgba(201,168,76,0.5); }
+    .subscribe-modal input::placeholder { color: #3A4555; }
+    .subscribe-submit {
+      width: 100%; background: linear-gradient(135deg, #C9A84C, #A8893A);
+      color: #060D18; border: none; border-radius: 6px; padding: 13px;
+      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      letter-spacing: 1.5px; cursor: pointer; transition: all 0.2s;
+    }
+    .subscribe-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+    .subscribe-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .subscribe-note {
+      color: #3A4555; font-size: 10px; text-align: center; margin-top: 14px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    }
+    .subscribe-success {
+      text-align: center; padding: 10px 0;
+    }
+    .subscribe-success .check {
+      font-size: 40px; margin-bottom: 12px; display: block;
+    }
+    .subscribe-success h3 {
+      color: #34D399; font-size: 18px; margin-bottom: 8px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+    .subscribe-success p {
+      color: #A5B4C8; font-size: 13px; margin-bottom: 0;
+    }
+    .subscribe-error {
+      color: #F87171; font-size: 12px; margin-bottom: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    @media (max-width: 640px) {
+      .fab-subscribe { bottom: 20px; right: 16px; padding: 12px 18px; font-size: 11px; }
+      .subscribe-modal { padding: 28px 22px; }
+      .subscribe-modal .form-row { flex-direction: column; }
+    }
+
     /* ── FOOTER ─────────────────────────────────────────── */
     footer {
       border-top: 1px solid rgba(201,168,76,0.1); padding: 20px 32px; text-align: center;
@@ -314,6 +410,104 @@
                   )}
                 </div>
               )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function SubscribeButton() {
+      var [showModal, setShowModal] = useState(false);
+      var [email, setEmail] = useState("");
+      var [firstName, setFirstName] = useState("");
+      var [status, setStatus] = useState("idle"); // idle, loading, success, error
+      var [errorMsg, setErrorMsg] = useState("");
+
+      function handleSubmit(e) {
+        if (e) e.preventDefault();
+        if (!email || !email.includes("@")) {
+          setErrorMsg("Please enter a valid email.");
+          setStatus("error");
+          return;
+        }
+        setStatus("loading");
+        setErrorMsg("");
+
+        fetch("/.netlify/functions/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email, firstName: firstName })
+        })
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.success) {
+              setStatus("success");
+            } else {
+              setErrorMsg(data.error || "Something went wrong.");
+              setStatus("error");
+            }
+          })
+          .catch(function() {
+            setErrorMsg("Connection failed. Please try again.");
+            setStatus("error");
+          });
+      }
+
+      return (
+        <div>
+          <button className="fab-subscribe" onClick={function() { setShowModal(true); setStatus("idle"); }}>
+            <span style={{ fontSize: "16px" }}>{"\u{1F4E1}"}</span>
+            GET THE DAILY BRIEFING
+          </button>
+
+          {showModal && (
+            <div className="subscribe-overlay" onClick={function(e) { if (e.target === e.currentTarget) setShowModal(false); }}>
+              <div className="subscribe-modal">
+                <button className="subscribe-close" onClick={function() { setShowModal(false); }}>{"\u00D7"}</button>
+
+                {status === "success" ? (
+                  <div className="subscribe-success">
+                    <span className="check">{"\u2713"}</span>
+                    <h3>Welcome to ZRC Intelligence</h3>
+                    <p>Your first briefing arrives tomorrow at 06:30 CET.</p>
+                  </div>
+                ) : (
+                  <div>
+                    <h2>Morning Intelligence</h2>
+                    <p>Get the daily geopolitical briefing in your inbox. 8 intelligence desks. Signal-classified. Every morning at 06:30 CET. Free.</p>
+
+                    {status === "error" && <div className="subscribe-error">{errorMsg}</div>}
+
+                    <div className="form-row">
+                      <input
+                        type="text"
+                        placeholder="First name (optional)"
+                        value={firstName}
+                        onChange={function(e) { setFirstName(e.target.value); }}
+                      />
+                      <input
+                        type="email"
+                        placeholder="your@email.com"
+                        value={email}
+                        onChange={function(e) { setEmail(e.target.value); }}
+                        style={{ flex: 2 }}
+                      />
+                    </div>
+
+                    <button
+                      className="subscribe-submit"
+                      onClick={handleSubmit}
+                      disabled={status === "loading"}
+                    >
+                      {status === "loading" ? "SUBSCRIBING..." : "SUBSCRIBE \u2014 FREE"}
+                    </button>
+
+                    <div className="subscribe-note">
+                      No spam. Unsubscribe anytime. Powered by Zenith Rise Capital.
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>
@@ -431,6 +625,8 @@
             <div className="footer-brand">ZENITH RISE CAPITAL · GEOPOLITICAL INTELLIGENCE & INVESTMENT ADVISORY</div>
             <div className="footer-legal">Calesius Global S.L. · Madrid · This briefing is for informational purposes only and does not constitute investment advice.</div>
           </footer>
+
+          <SubscribeButton />
         </div>
       );
     }
