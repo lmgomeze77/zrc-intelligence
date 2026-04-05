@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZRC Morning Intelligence · Zenith Rise Capital</title>
+  <meta name="description" content="Daily geopolitical intelligence and investment advisory briefing by Zenith Rise Capital" />
+  <meta property="og:title" content="ZRC Morning Intelligence · Zenith Rise Capital" />
+  <meta property="og:description" content="Geopolitical Observatory · Investor Intelligence · Advisory Signals — Updated daily at 06:00 CET" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #060D18;
+      color: #A5B4C8;
+      font-family: 'Source Serif 4', Georgia, serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #060D18; }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.2); border-radius: 3px; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes headerReveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes loadDot { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+
+    /* ── HEADER ─────────────────────────────────────────── */
+    .header {
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 28px 32px 24px;
+      animation: headerReveal 0.6s ease;
+    }
+    .header-inner { max-width: 920px; margin: 0 auto; }
+    .header-row {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .live-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: #34D399;
+      animation: pulse 2s ease infinite; box-shadow: 0 0 8px rgba(52,211,153,0.4);
+      display: inline-block; vertical-align: middle;
+    }
+    .brand-tag {
+      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      font-family: 'JetBrains Mono', monospace; vertical-align: middle; margin-left: 12px;
+    }
+    .main-title {
+      color: #E8DCC8; font-size: 32px; font-weight: 600; margin: 6px 0 4px;
+      font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.5px;
+    }
+    .sub-title { color: #5A6A80; font-size: 13px; }
+    .date-block { text-align: right; }
+    .date-text {
+      color: #A5B4C8; font-size: 14px; margin-bottom: 2px;
+      font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+    }
+    .time-text {
+      color: #5A6A80; font-size: 12px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    }
+    .generated-tag {
+      color: #3A4555; font-size: 10px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; margin-top: 4px;
+    }
+    .legend { display: flex; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
+    .legend-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: 1.5px; padding: 3px 8px;
+      border-radius: 3px; font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── GLOBAL BRIEFING ───────────────────────────────── */
+    .global-briefing {
+      max-width: 920px; margin: 0 auto; padding: 20px 32px 0;
+    }
+    .global-briefing-box {
+      background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(201,168,76,0.02));
+      border: 1px solid rgba(201,168,76,0.12); border-radius: 8px;
+      padding: 18px 22px;
+    }
+    .global-briefing-label {
+      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 2px;
+      font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;
+    }
+    .global-briefing-text {
+      color: #E8DCC8; font-size: 15px; line-height: 1.6;
+      font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+    }
+
+    /* ── MAIN ───────────────────────────────────────────── */
+    main { max-width: 920px; margin: 0 auto; padding: 20px 32px 60px; }
+    .desks-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
+    }
+    .mono-label {
+      color: #5A6A80; font-size: 12px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
+    }
+    .mono-hint {
+      color: #5A6A80; font-size: 11px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    }
+
+    /* ── CATEGORY BUTTONS ──────────────────────────────── */
+    .cat-btn {
+      width: 100%; background: transparent;
+      border: 1px solid rgba(201,168,76,0.1); border-radius: 6px;
+      padding: 16px 20px; cursor: pointer; display: flex;
+      align-items: center; justify-content: space-between;
+      transition: all 0.3s ease; margin-bottom: 6px;
+    }
+    .cat-btn:hover { background: linear-gradient(90deg, rgba(201,168,76,0.06), transparent); }
+    .cat-btn.open { background: linear-gradient(90deg, rgba(201,168,76,0.08), transparent); }
+    .cat-btn-left { display: flex; align-items: center; gap: 14px; }
+    .cat-icon { font-size: 22px; flex-shrink: 0; }
+    .cat-label {
+      color: #E8DCC8; font-size: 15px; font-weight: 600;
+      font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: 0.3px;
+    }
+    .cat-desc { color: #5A6A80; font-size: 11.5px; margin-top: 2px; }
+    .cat-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+    .cat-count {
+      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .cat-raw {
+      color: #3A4555; font-size: 9px; letter-spacing: 0.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .cat-arrow {
+      color: #5A6A80; font-size: 18px; transition: transform 0.3s ease; display: inline-block;
+    }
+    .cat-arrow.open { transform: rotate(180deg); }
+    .cat-content { padding: 12px 0; animation: fadeIn 0.3s ease; }
+
+    /* ── NEWS CARDS ─────────────────────────────────────── */
+    .news-card {
+      background: linear-gradient(135deg, rgba(15,25,45,0.95), rgba(10,18,35,0.98));
+      border: 1px solid rgba(201,168,76,0.12); border-left: 3px solid rgba(201,168,76,0.4);
+      border-radius: 6px; padding: 18px 20px; cursor: pointer;
+      transition: all 0.3s ease; margin-bottom: 8px;
+    }
+    .news-card:hover, .news-card.expanded {
+      border-left-color: rgba(201,168,76,0.8);
+      background: linear-gradient(135deg, rgba(18,30,52,0.98), rgba(12,22,42,1));
+    }
+    .news-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+    .news-headline {
+      color: #E8DCC8; font-size: 15px; font-weight: 600; line-height: 1.4;
+      font-family: 'Cormorant Garamond', Georgia, serif; flex: 1;
+    }
+    .signal-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 3px 8px;
+      border-radius: 3px; font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .signal-bullish { background: #0D3B2E; color: #34D399; }
+    .signal-bearish { background: #3B1A1A; color: #F87171; }
+    .signal-neutral { background: #2A2A3A; color: #A5B4C8; }
+    .signal-watch { background: #3B2E0D; color: #FBBF24; }
+
+    .news-detail { margin-top: 12px; animation: fadeIn 0.3s ease; }
+    .news-summary {
+      color: #A5B4C8; font-size: 13.5px; line-height: 1.65; margin-bottom: 10px;
+    }
+    .news-relevance {
+      background: rgba(201,168,76,0.06); border-radius: 4px; padding: 10px 14px;
+      margin-bottom: 8px; color: #C9A84C; font-size: 12px; font-weight: 500;
+    }
+    .news-source {
+      color: #5A6A80; font-size: 11px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    }
+
+    /* ── TAKEAWAY ───────────────────────────────────────── */
+    .takeaway-box {
+      margin-top: 14px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
+      border: 1px solid rgba(201,168,76,0.15); border-radius: 6px; padding: 14px 18px;
+    }
+    .takeaway-label {
+      color: #C9A84C; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      margin-bottom: 6px; font-family: 'JetBrains Mono', monospace;
+    }
+    .takeaway-text {
+      color: #E8DCC8; font-size: 14px; line-height: 1.5; font-style: italic;
+    }
+
+    /* ── LOADING / ERROR ───────────────────────────────── */
+    .loading-state { text-align: center; padding: 80px 20px; }
+    .loading-dots span {
+      display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+      background: #C9A84C; margin: 0 4px;
+    }
+    .loading-dots span:nth-child(1) { animation: loadDot 1.4s infinite 0s; }
+    .loading-dots span:nth-child(2) { animation: loadDot 1.4s infinite 0.2s; }
+    .loading-dots span:nth-child(3) { animation: loadDot 1.4s infinite 0.4s; }
+
+    .error-banner {
+      background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.15);
+      border-radius: 6px; padding: 18px 24px; text-align: center; margin-bottom: 20px;
+    }
+    .error-banner p { color: #F87171; font-size: 13px; margin-bottom: 4px; }
+    .error-banner small { color: #5A6A80; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid rgba(201,168,76,0.1); padding: 20px 32px; text-align: center;
+    }
+    .footer-brand {
+      color: #3A4555; font-size: 11px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; margin-bottom: 4px;
+    }
+    .footer-legal { color: #2A3340; font-size: 10px; }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .header { padding: 20px 16px 18px; }
+      .global-briefing { padding: 16px 16px 0; }
+      main { padding: 16px 16px 40px; }
+      .main-title { font-size: 26px; }
+      .header-row { flex-direction: column; }
+      .date-block { text-align: left; }
+      .cat-btn { padding: 14px 16px; }
+      .news-card { padding: 14px 16px; }
+      .cat-raw { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.26.9/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function SignalBadge({ signal }) {
+      var cls = "signal-badge signal-" + (signal || "neutral");
+      var labels = { bullish: "BULLISH", bearish: "BEARISH", neutral: "NEUTRAL", watch: "WATCH" };
+      return <span className={cls}>{labels[signal] || "NEUTRAL"}</span>;
+    }
+
+    function NewsCard({ item, index }) {
+      var [expanded, setExpanded] = useState(false);
+      return (
+        <div
+          className={"news-card" + (expanded ? " expanded" : "")}
+          onClick={function() { setExpanded(!expanded); }}
+          style={{ animation: "fadeSlideIn 0.4s ease " + (index * 0.08) + "s both" }}
+        >
+          <div className="news-card-header">
+            <div className="news-headline">{item.headline}</div>
+            <SignalBadge signal={item.signal} />
+          </div>
+          {expanded && (
+            <div className="news-detail">
+              <p className="news-summary">{item.summary}</p>
+              <div className="news-relevance">{"\u26A1"} {item.relevance}</div>
+              <span className="news-source">SOURCE: {(item.source || "").toUpperCase()}</span>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function CategorySection({ catId, catData }) {
+      var [isOpen, setIsOpen] = useState(false);
+      var items = catData.items || [];
+      var hasData = items.length > 0;
+
+      return (
+        <div>
+          <button className={"cat-btn" + (isOpen ? " open" : "")} onClick={function() { setIsOpen(!isOpen); }}>
+            <div className="cat-btn-left">
+              <span className="cat-icon">{catData.icon}</span>
+              <div style={{ textAlign: "left" }}>
+                <div className="cat-label">{catData.label}</div>
+                <div className="cat-desc">{catData.description}</div>
+              </div>
+            </div>
+            <div className="cat-right">
+              {hasData && <span className="cat-count">{items.length} SIGNALS</span>}
+              {catData.rawCount > 0 && <span className="cat-raw">FROM {catData.rawCount} SOURCES</span>}
+              <span className={"cat-arrow" + (isOpen ? " open" : "")}>{"\u25BE"}</span>
+            </div>
+          </button>
+
+          {isOpen && (
+            <div className="cat-content">
+              {!hasData ? (
+                <div style={{ textAlign: "center", padding: "20px", color: "#5A6A80", fontSize: "13px" }}>
+                  No significant signals detected for this desk today.
+                </div>
+              ) : (
+                <div>
+                  {items.map(function(item, i) {
+                    return <NewsCard key={i} item={item} index={i} />;
+                  })}
+                  {catData.keyTakeaway && (
+                    <div className="takeaway-box">
+                      <div className="takeaway-label">KEY TAKEAWAY</div>
+                      <div className="takeaway-text">{catData.keyTakeaway}</div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function App() {
+      var [briefing, setBriefing] = useState(null);
+      var [loadError, setLoadError] = useState(false);
+
+      useEffect(function() {
+        fetch("data.json?v=" + Date.now())
+          .then(function(r) {
+            if (!r.ok) throw new Error("Not found");
+            return r.json();
+          })
+          .then(function(data) { setBriefing(data); })
+          .catch(function() { setLoadError(true); });
+      }, []);
+
+      var now = new Date();
+      var timeStr = now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZoneName: "short" });
+
+      if (!briefing && !loadError) {
+        return (
+          <div className="loading-state">
+            <div className="loading-dots"><span></span><span></span><span></span></div>
+            <p style={{ color: "#5A6A80", fontSize: "12px", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "1px", marginTop: "16px" }}>
+              LOADING BRIEFING...
+            </p>
+          </div>
+        );
+      }
+
+      var displayDate = briefing ? briefing.date : now.toLocaleDateString("en-GB", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+      });
+
+      var generatedTime = briefing && briefing.generated
+        ? new Date(briefing.generated).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+        : null;
+
+      var totalItems = briefing
+        ? Object.values(briefing.categories).reduce(function(sum, c) { return sum + (c.items ? c.items.length : 0); }, 0)
+        : 0;
+
+      var categoryOrder = [
+        "geopolitics", "fdi", "critical-minerals", "real-estate",
+        "ma-growth", "emerging-markets", "trade-policy", "food-agriculture"
+      ];
+
+      return (
+        <div>
+          <header className="header">
+            <div className="header-inner">
+              <div className="header-row">
+                <div>
+                  <div>
+                    <span className="live-dot"></span>
+                    <span className="brand-tag">ZENITH RISE CAPITAL</span>
+                  </div>
+                  <h1 className="main-title">Morning Intelligence</h1>
+                  <p className="sub-title">Geopolitical Observatory · Investor Intelligence · Advisory Signals</p>
+                </div>
+                <div className="date-block">
+                  <div className="date-text">{displayDate}</div>
+                  <div className="time-text">{timeStr}</div>
+                  {generatedTime && (
+                    <div className="generated-tag">BRIEFING GENERATED {generatedTime} CET</div>
+                  )}
+                </div>
+              </div>
+              <div className="legend">
+                <span className="legend-badge signal-bullish">BULLISH</span>
+                <span className="legend-badge signal-bearish">BEARISH</span>
+                <span className="legend-badge signal-watch">WATCH</span>
+                <span className="legend-badge signal-neutral">NEUTRAL</span>
+              </div>
+            </div>
+          </header>
+
+          {briefing && briefing.globalBriefing && (
+            <div className="global-briefing">
+              <div className="global-briefing-box">
+                <div className="global-briefing-label">DAILY SYNTHESIS</div>
+                <div className="global-briefing-text">{briefing.globalBriefing}</div>
+              </div>
+            </div>
+          )}
+
+          <main>
+            {loadError && (
+              <div className="error-banner">
+                <p>Briefing data not yet available.</p>
+                <small>The daily briefing generates at 06:00 CET. Run the GitHub Action manually for your first briefing.</small>
+              </div>
+            )}
+
+            {briefing && (
+              <div>
+                <div className="desks-header">
+                  <span className="mono-label">{categoryOrder.length} DESKS · {totalItems} SIGNALS</span>
+                  <span className="mono-hint">TAP DESK TO EXPAND · TAP ITEM FOR DETAIL</span>
+                </div>
+                {categoryOrder.map(function(catId) {
+                  var catData = briefing.categories[catId];
+                  if (!catData) return null;
+                  return <CategorySection key={catId} catId={catId} catData={catData} />;
+                })}
+              </div>
+            )}
+          </main>
+
+          <footer>
+            <div className="footer-brand">ZENITH RISE CAPITAL · GEOPOLITICAL INTELLIGENCE & INVESTMENT ADVISORY</div>
+            <div className="footer-legal">Calesius Global S.L. · Madrid · This briefing is for informational purposes only and does not constitute investment advice.</div>
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+  </script>
+</body>
+</html>
