@@ -103,7 +103,7 @@ const FEEDS = {
   }
 };
 
-// ─── FETCH RSS FEEDS ────────────────────────────────────────────────────────
+// ─── FETCH RSS FEEDS ───────────────────────────────────────────────────────
 
 async function fetchFeed(source) {
   try {
@@ -153,25 +153,30 @@ async function fetchCategory(categoryId) {
 
 // ─── AI SYNTHESIS (ONE SINGLE HAIKU CALL) ────────────────────────────────────
 
+const MAX_RETRIES = 2;
+
 async function synthesizeWithAI(allCategoryData) {
   const prompt = buildPrompt(allCategoryData);
 
-  try {
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": process.env.ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01"
-      },
-      body: JSON.stringify({
-        model: "claude-haiku-4-5-20251001",
-        max_tokens: 4000,
-        system: `You are the intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm based in Madrid. 
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      console.log(`  Attempt ${attempt}/${MAX_RETRIES}...`);
 
-Your task: Given raw RSS headlines grouped by intelligence desk, select the 4-5 most important items per desk, write a concise analytical summary for each, classify its investment signal, and provide a key takeaway per desk.
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": process.env.ANTHROPIC_API_KEY,
+          "anthropic-version": "2023-06-01"
+        },
+        body: JSON.stringify({
+          model: "claude-haiku-4-5-20251001",
+          max_tokens: 8192,
+          system: `You are the intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm based in Madrid. 
 
-CRITICAL: Return ONLY valid JSON, no markdown, no backticks, no preamble.
+Your task: Given raw RSS headlines grouped by intelligence desk, select the 3-4 most important items per desk, write a concise analytical summary for each, classify its investment signal, and provide strategic insights.
+
+CRITICAL: Return ONLY valid JSON, no markdown, no backticks, no preamble. Keep summaries concise (2 sentences max) to stay within token limits.
 
 Return this exact structure:
 {
@@ -180,7 +185,7 @@ Return this exact structure:
       "items": [
         {
           "headline": "Rewritten concise headline with key data",
-          "summary": "2-3 sentence institutional analysis. Include numbers and implications.",
+          "summary": "1-2 sentence institutional analysis. Include numbers and implications.",
           "source": "Original source name",
           "relevance": "One sentence: why this matters for investment decisions",
           "signal": "bullish" | "bearish" | "neutral" | "watch"
@@ -193,30 +198,49 @@ Return this exact structure:
 }
 
 Be specific, data-rich, and analytical. Write in institutional tone. Select only genuinely important items — skip filler. If a desk has no meaningful items, return fewer items rather than padding.`,
-        messages: [{ role: "user", content: prompt }]
-      })
-    });
+          messages: [{ role: "user", content: prompt }]
+        })
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.error) {
-      console.error("API error:", result.error);
-      return null;
+      if (result.error) {
+        console.error(`  API error (attempt ${attempt}):`, result.error);
+        continue;
+      }
+
+      const textBlock = (result.content || [])
+        .filter(b => b.type === "text")
+        .map(b => b.text)
+        .join("");
+
+      if (!textBlock) {
+        console.error(`  Empty response (attempt ${attempt})`);
+        continue;
+      }
+
+      // Check if response was truncated (stop_reason !== "end_turn")
+      if (result.stop_reason && result.stop_reason !== "end_turn") {
+        console.warn(`  ⚠ Response truncated (stop_reason: ${result.stop_reason}), retrying...`);
+        continue;
+      }
+
+      const clean = textBlock.replace(/```json|```/g, "").trim();
+      const parsed = JSON.parse(clean);
+      console.log("  ✅ AI synthesis successful.");
+      return parsed;
+
+    } catch (err) {
+      console.error(`  AI synthesis failed (attempt ${attempt}): ${err.message}`);
+      if (attempt < MAX_RETRIES) {
+        console.log("  Retrying in 3 seconds...");
+        await new Promise(r => setTimeout(r, 3000));
+      }
     }
-
-    const textBlock = (result.content || [])
-      .filter(b => b.type === "text")
-      .map(b => b.text)
-      .join("");
-
-    if (!textBlock) return null;
-
-    const clean = textBlock.replace(/```json|```/g, "").trim();
-    return JSON.parse(clean);
-  } catch (err) {
-    console.error("AI synthesis failed:", err.message);
-    return null;
   }
+
+  console.error("  ❌ All AI synthesis attempts failed.");
+  return null;
 }
 
 function buildPrompt(allCategoryData) {
@@ -243,7 +267,7 @@ function buildPrompt(allCategoryData) {
   return prompt;
 }
 
-// ─── MAIN ────────────────────────────────────────────────────────────────────
+// ─── MAIN ───────────────────────────────────────────────────────────
 
 async function main() {
   console.log("📡 ZRC Morning Intelligence — generating daily briefing\n");
