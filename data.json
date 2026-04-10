@@ -1,55 +1,159 @@
 {
-  "generated": "2026-04-10T05:56:03.813Z",
+  "generated": "2026-04-10T10:33:42.748Z",
   "date": "Friday, 10 April 2026",
-  "globalBriefing": "",
+  "globalBriefing": "Geopolitical de-escalation narratives—Taiwan cross-strait dialogue, Iran ceasefire restraint—compete with persistent Gaza humanitarian crisis and US-emerging market diplomatic friction, creating bifurcated risk environment. Energy markets reflect supply constraints despite ceasefire, with North Sea crude at records and Chinese refiners paying Brent premiums, supporting oil valuations while critical minerals consolidation accelerates in stable jurisdictions (Guyana). PE capital deployment accelerates in defense tech and environmental infrastructure with strong exits, while emerging market banking sector improvements (Nigeria) and tech partnerships (Morocco-EU) support diversified capital allocation away from US-centric frameworks amid Trump administration skepticism.",
   "categories": {
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Gaza ceasefire crumbles: 72,000+ killed, 172,000 injured as Israeli violations persist",
+          "summary": "Six months into a US-brokered truce, Gaza faces ongoing Israeli military operations with massive civilian casualties, indicating fundamental breakdown of conflict resolution mechanisms. Demonstrates failure of diplomatic framework and persistent humanitarian crisis.",
+          "source": "Al Jazeera",
+          "relevance": "Sustained regional instability threatens Middle East investment returns and signals escalation risk despite nominal ceasefire; commodity price volatility will persist.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Taiwan opposition leader meets Xi Jinping in Beijing—first KMT visit in decade",
+          "summary": "Cross-strait dialogue resumed as Taiwan's Kuomintang opposition party seeks engagement with Beijing, signaling potential softening of cross-strait tensions. Marks strategic shift in Taiwan's political positioning ahead of potential policy changes.",
+          "source": "BBC World",
+          "relevance": "De-escalation narrative supports semiconductor and tech supply chain stabilization; could reduce geopolitical risk premium in Asia-Pacific equities.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Iran ceasefire holds strategic leverage: Tehran checked US-Israel war capability single-handedly",
+          "summary": "Iran's unilateral restraint demonstrated military deterrence against US-Israel coalition, establishing new regional power balance. Suggests Iran willing to maintain status quo rather than escalate, reducing near-term conflict probability.",
+          "source": "Al Jazeera",
+          "relevance": "De-escalation reduces oil shock risk and enables market normalization; supports commodity price stabilization if ceasefire maintains.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "Gaza humanitarian crisis persists despite ceasefire, but cross-strait Taiwan dialogue and Iran's demonstrated restraint suggest selective de-escalation may stabilize key regional flashpoints.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Iran war scars markets as Wall Street warns of sustained financial instability",
+          "summary": "Financial sector assesses lingering Iran conflict impacts on markets despite ceasefire announcement, indicating investor concerns about underlying volatility. US-Iran peace talks proceeding in Islamabad but Israel-Lebanon tensions remain unresolved.",
+          "source": "FT World",
+          "relevance": "Market volatility persists despite diplomatic progress; geopolitical risk premium remains elevated, creating headwinds for capital flows to unstable regions.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "Despite ceasefire announcements, Wall Street assesses sustained market scarring from Iran conflict, signaling prolonged elevated volatility and geopolitical risk premium.",
       "rawCount": 5
     },
     "critical-minerals": {
       "label": "Critical Minerals & Energy",
       "icon": "⚡",
       "description": "Supply chains, commodity prices, and energy security",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 5
+      "items": [
+        {
+          "headline": "North Sea crude hits record highs as Hormuz supply constraints intensify post-ceasefire",
+          "summary": "Physical North Sea crude prices surge despite Brent futures below $100/barrel, signaling persistent supply-demand imbalance from Strait of Hormuz disruptions. Gulf producers resuming cargo nominations indicate cautious return to normal flows but constraints remain acute.",
+          "source": "OilPrice.com",
+          "relevance": "Supply constraints support elevated crude valuations and energy sector returns; physical price dislocation indicates sustained logistical constraints despite diplomatic progress.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Chinese refiners buy Iranian crude at Brent premium—first time in years amid supply crunch",
+          "summary": "Chinese independent refiners paying premium to Brent for Iranian crude signals strong regional demand and pricing power as supply tightens. Premium pricing driven by anticipated Indian demand increases, indicating Asian energy competition intensifying.",
+          "source": "OilPrice.com",
+          "relevance": "Asian energy demand remains robust and willing to absorb premium pricing; supports structural energy inflation and favors oil producers' margins.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Argentina approves glacier mining reform to boost sector amid environmental protests",
+          "summary": "Argentina loosens glacier protections to enable mining expansion under Milei administration, raising water security and environmental compliance risks. Reform addresses mining investment constraints but introduces regulatory uncertainty for projects dependent on water resources.",
+          "source": "Mining.com",
+          "relevance": "Enables critical minerals supply diversification but introduces environmental/regulatory litigation risk; lithium production upside offset by reputational and hydro-security concerns.",
+          "signal": "watch"
+        },
+        {
+          "headline": "G Mining acquires G2 Goldfields for $2.2B to consolidate Guyana gold district",
+          "summary": "Merger creates district-scale development combining two Oko projects in Guyana, signaling confidence in jurisdiction and sector consolidation. Guyana emerges as primary gold-mining jurisdiction attracting major capital.",
+          "source": "Mining.com",
+          "relevance": "Guyana positions as critical minerals hub with major institutional capital flowing in; supports commodity supply diversification away from geopolitical hotspots.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "Physical crude supply constraints persist despite diplomatic progress, driving premium pricing and robust energy sector valuations; critical minerals consolidation in stable jurisdictions (Guyana) accelerates while Argentina mining reform introduces regulatory risk.",
+      "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 4
+      "items": [
+        {
+          "headline": "Infra secondaries buyers seek scarce access to unique assets in primary market drought",
+          "summary": "Secondary infrastructure buyers capitalize on limited primary market availability, competing for mature assets with de-risked cash flows. Market dynamics favor secondaries as institutional capital pursues yield in constrained asset universe.",
+          "source": "Infrastructure Investor",
+          "relevance": "Institutional capital seeking secondary infrastructure exposure reflects yield-hunting in low-rate environment; supports valuations for stabilized infra assets.",
+          "signal": "neutral"
+        }
+      ],
+      "keyTakeaway": "Secondary infrastructure markets remain attractive for institutional capital seeking scarce yield-generating assets amid primary market constraints.",
+      "rawCount": 3
     },
     "ma-growth": {
       "label": "M&A & Growth Advisory",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Aevex drone provider sets IPO pricing terms backed by Madison Dearborn",
+          "summary": "Madison Dearborn-backed drone provider advances toward public listing, signaling PE confidence in defense/commercial drone sector maturation. IPO milestone reflects sector scaling and institutional capital appetite for aerospace-adjacent growth.",
+          "source": "PE Hub",
+          "relevance": "Defense tech sector demonstrates strong exit pathways; supports PE deployment in advanced technology with government/commercial dual-use applications.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Ara Partners invests up to $500M in Sedron waste management for North American expansion",
+          "summary": "Large commitment to waste-to-energy technology signals infrastructure investor confidence in environmental services scaling. Investment accelerates manufacturing and deployment capacity across North America.",
+          "source": "PE Hub",
+          "relevance": "Energy transition and circular economy infrastructure attracts major capital; supports ESG-aligned infrastructure asset valuations.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "PE exits accelerating in defense tech and environmental services, reflecting strong capital appetite for geopolitically-insulated growth sectors.",
       "rawCount": 5
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 9
+      "items": [
+        {
+          "headline": "Nigeria completes ₦4.65 trillion bank recapitalization program strengthening financial system",
+          "summary": "Central Bank of Nigeria concludes 24-month recapitalization initiative, substantially raising banking sector capital reserves and stability. Program addresses systemic fragility and positions sector for credit expansion.",
+          "source": "African Business",
+          "relevance": "Strengthened Nigerian banking system supports FDI inflows and emerging market capital flows to West Africa's largest economy; reduces financial system risk.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Morocco-EU AI partnership aims to counter US-China dominance in technology",
+          "summary": "EU-Morocco Digital Dialogue establishes cross-Mediterranean AI cooperation framework, positioning both as alternative tech poles. Partnership addresses chip and AI capacity building to reduce US-China technological duopoly.",
+          "source": "African Business",
+          "relevance": "Emerging EU-Africa tech partnerships diversify geopolitical tech competition; supports European capital flows to North African tech infrastructure.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Senegal PM accuses Trump of global destabilization as West African political tensions rise",
+          "summary": "Ousmane Sonko's rhetoric signals deteriorating Senegal-US relations and broader African skepticism toward Trump administration policies. Political tension reflects regional pushback against US geopolitical positioning.",
+          "source": "Al Jazeera",
+          "relevance": "Senegal FDI exposure to US capital flows may face political headwinds; reflects broader emerging market skepticism toward US-centric investment frameworks.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "Nigeria's banking sector stabilization and Morocco-EU tech partnerships support Africa-focused capital flows, but Senegal's political friction with US administration signals emerging market skepticism toward US alignment.",
+      "rawCount": 7
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
