@@ -43,7 +43,7 @@ function buildHtml(content,name,token){
   <tr><td style="padding:20px 0;" align="center">
     <table cellpadding="0" cellspacing="0"><tr>
       <td style="background:#c9a84c;padding:14px 32px;border-radius:4px;">
-        <a href="https://zenith-news-room.netlify.app" style="color:#0a1628;font-size:13px;font-family:monospace;letter-spacing:1px;text-decoration:none;font-weight:700;white-space:nowrap;">READ FULL INTELLIGENCE BRIEFING &rarr;</a>
+        <a href="https://zenith-news-room.netlify.app" style="color:#0a1628;font-size:12px;font-family:monospace;text-decoration:none;font-weight:700;white-space:nowrap;">FULL BRIEFING &rarr;</a>
       </td>
     </tr></table>
   </td></tr>

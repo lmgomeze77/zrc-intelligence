@@ -130,22 +130,28 @@ function buildEmailHTML(briefing) {
         <tr><td style="height: 32px;"></td></tr>
         <tr>
           <td style="border-top: 1px solid rgba(201,168,76,0.1); padding: 20px 0; text-align: center;">
-            <div style="color: #3A4555; font-size: 11px; font-family: monospace; letter-spacing: 1px; margin-bottom: 6px;">
-              ZENITH RISE CAPITAL · GEOPOLITICAL INTELLIGENCE & INVESTMENT ADVISORY
-            </div>
-            <div style="color: #2A3340; font-size: 10px; font-family: Georgia, serif; margin-bottom: 12px;">
-              Calesius Global S.L. · Madrid · This briefing is for informational purposes only and does not constitute investment advice.
-            </div>
-            <div style="margin-bottom: 8px;">
-              <a href="https://zenith-news-room.netlify.app" style="color: #C9A84C; font-size: 11px; font-family: monospace; letter-spacing: 0.5px; text-decoration: none;">
-                VIEW FULL BRIEFING ONLINE →
-              </a>
-            </div>
-            <div>
-              <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: underline;">
-                Unsubscribe
-              </a>
-            </div>
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr><td align="center" style="color: #3A4555; font-size: 11px; font-family: monospace; letter-spacing: 1px; padding-bottom: 6px;">
+                ZENITH RISE CAPITAL
+              </td></tr>
+              <tr><td align="center" style="color: #2A3340; font-size: 10px; font-family: Georgia, serif; padding-bottom: 16px;">
+                Calesius Global S.L. &middot; Madrid
+              </td></tr>
+              <tr><td align="center" style="padding-bottom: 12px;">
+                <table cellpadding="0" cellspacing="0"><tr>
+                  <td style="background: #C9A84C; padding: 12px 28px; border-radius: 4px;" align="center">
+                    <a href="https://zenith-news-room.netlify.app" style="color: #060D18; font-size: 12px; font-family: monospace; font-weight: 700; text-decoration: none; white-space: nowrap;">FULL BRIEFING &rarr;</a>
+                  </td>
+                </tr></table>
+              </td></tr>
+              <tr><td align="center" style="padding-bottom: 4px;">
+                <a href="https://zenithrisecapital.com" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: none;">zenithrisecapital.com</a>
+              </td></tr>
+              <tr><td align="center">
+                <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: underline;">Unsubscribe</a>
+                <span style="color: #2A3340; font-size: 10px; font-family: Georgia, serif;"> &middot; For informational purposes only.</span>
+              </td></tr>
+            </table>
           </td>
         </tr>
 
