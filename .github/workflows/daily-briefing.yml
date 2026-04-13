@@ -2,14 +2,14 @@ name: ZRC Daily Intelligence Briefing
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  generate:
+  generate-and-send:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -36,3 +36,9 @@ jobs:
           DATESTR=$(date -u +"%Y-%m-%d")
           git diff --cached --quiet || git commit -m "📡 Daily briefing — $DATESTR"
           git push
+
+      - name: Send email digest
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
+        run: node send-digest.js
