@@ -1,22 +1,55 @@
-// send-digest.js
-// Reads data.json and sends the morning briefing email to all subscribers via Resend Broadcast API
-// Runs after generate-briefing.js in the GitHub Action
+// send-digest.js v2
+// Reads data.json, fetches subscribers from Supabase, sends individual emails via Resend.
+// No Broadcast API needed — no RESEND_AUDIENCE_ID required.
+// Runs after generate-briefing.js in the GitHub Action.
 
 const fs = require("fs");
 
-function buildEmailHTML(briefing) {
+// ─── FETCH SUBSCRIBERS FROM SUPABASE ────────────────────────────────────────
+
+async function getSubscribers() {
+  const SUPABASE_URL = process.env.SUPABASE_URL;
+  const SUPABASE_KEY = process.env.SUPABASE_ANON_KEY;
+
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    throw new Error("SUPABASE_URL or SUPABASE_ANON_KEY not set");
+  }
+
+  const res = await fetch(
+    `${SUPABASE_URL}/rest/v1/subscribers?active=eq.true&select=email,name,unsubscribe_token`,
+    {
+      headers: {
+        apikey: SUPABASE_KEY,
+        Authorization: `Bearer ${SUPABASE_KEY}`,
+      },
+    }
+  );
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Supabase error ${res.status}: ${body}`);
+  }
+
+  return res.json();
+}
+
+// ─── BUILD EMAIL HTML ───────────────────────────────────────────────────────
+
+function buildEmailHTML(briefing, name, unsubscribeUrl) {
   const signalColors = {
     bullish: { bg: "#0D3B2E", color: "#34D399" },
     bearish: { bg: "#3B1A1A", color: "#F87171" },
     watch: { bg: "#3B2E0D", color: "#FBBF24" },
-    neutral: { bg: "#2A2A3A", color: "#A5B4C8" }
+    neutral: { bg: "#2A2A3A", color: "#A5B4C8" },
   };
+
+  const greeting = name ? `Good morning, ${name}.` : "Good morning.";
 
   let categoriesHTML = "";
 
   const categoryOrder = [
     "geopolitics", "fdi", "critical-minerals", "real-estate",
-    "ma-growth", "emerging-markets", "trade-policy", "food-agriculture"
+    "ma-growth", "emerging-markets", "trade-policy", "food-agriculture",
   ];
 
   for (const catId of categoryOrder) {
@@ -52,8 +85,7 @@ function buildEmailHTML(briefing) {
             </div>
           </td>
         </tr>
-        <tr><td style="height: 8px;"></td></tr>
-      `;
+        <tr><td style="height: 8px;"></td></tr>`;
     }
 
     let takeawayHTML = "";
@@ -64,8 +96,7 @@ function buildEmailHTML(briefing) {
             <div style="color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; font-family: monospace; margin-bottom: 4px;">KEY TAKEAWAY</div>
             <div style="color: #E8DCC8; font-size: 13px; font-style: italic; line-height: 1.5; font-family: Georgia, serif;">${cat.keyTakeaway}</div>
           </td>
-        </tr>
-      `;
+        </tr>`;
     }
 
     categoriesHTML += `
@@ -81,8 +112,7 @@ function buildEmailHTML(briefing) {
         </td>
       </tr>
       ${itemsHTML}
-      ${takeawayHTML}
-    `;
+      ${takeawayHTML}`;
   }
 
   let globalHTML = "";
@@ -94,12 +124,10 @@ function buildEmailHTML(briefing) {
           <div style="color: #E8DCC8; font-size: 14px; font-style: italic; line-height: 1.6; font-family: Georgia, serif;">${briefing.globalBriefing}</div>
         </td>
       </tr>
-      <tr><td style="height: 8px;"></td></tr>
-    `;
+      <tr><td style="height: 8px;"></td></tr>`;
   }
 
-  return `
-<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
 <body style="margin: 0; padding: 0; background: #060D18; font-family: Georgia, 'Times New Roman', serif;">
@@ -122,7 +150,14 @@ function buildEmailHTML(briefing) {
           </td>
         </tr>
 
-        <tr><td style="height: 20px;"></td></tr>
+        <!-- GREETING -->
+        <tr>
+          <td style="padding: 20px 0 0;">
+            <div style="color: #A5B4C8; font-size: 14px; font-family: Georgia, serif;">${greeting}</div>
+          </td>
+        </tr>
+
+        <tr><td style="height: 16px;"></td></tr>
         ${globalHTML}
         ${categoriesHTML}
 
@@ -148,7 +183,7 @@ function buildEmailHTML(briefing) {
                 <a href="https://zenithrisecapital.com" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: none;">zenithrisecapital.com</a>
               </td></tr>
               <tr><td align="center">
-                <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: underline;">Unsubscribe</a>
+                <a href="${unsubscribeUrl}" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: underline;">Unsubscribe</a>
                 <span style="color: #2A3340; font-size: 10px; font-family: Georgia, serif;"> &middot; For informational purposes only.</span>
               </td></tr>
             </table>
@@ -159,16 +194,17 @@ function buildEmailHTML(briefing) {
     </td></tr>
   </table>
 </body>
-</html>
-  `;
+</html>`;
 }
+
+// ─── SEND EMAILS ────────────────────────────────────────────────────────────
 
 async function sendDigest() {
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
-  const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
+  const BASE_URL = process.env.BASE_URL || "https://zrc-api.onrender.com";
 
-  if (!RESEND_API_KEY || !RESEND_AUDIENCE_ID) {
-    console.log("⚠ Resend keys not configured. Skipping email digest.");
+  if (!RESEND_API_KEY) {
+    console.log("⚠ RESEND_API_KEY not set. Skipping email digest.");
     return;
   }
 
@@ -187,58 +223,62 @@ async function sendDigest() {
     return;
   }
 
-  console.log("📧 Building email digest...");
-  const html = buildEmailHTML(briefing);
+  // Fetch subscribers from Supabase
+  console.log("📋 Fetching subscribers from Supabase...");
+  const subscribers = await getSubscribers();
+  console.log(`   Found ${subscribers.length} active subscriber(s).`);
 
-  // Step 1: Create the broadcast
-  console.log("  Creating broadcast...");
-  const createRes = await fetch("https://api.resend.com/broadcasts", {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + RESEND_API_KEY,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      audience_id: RESEND_AUDIENCE_ID,
-      from: "ZRC Intelligence <intelligence@zenrisecapital.com>",
-      subject: "ZRC Morning Intelligence — " + briefing.date,
-      html: html
-    })
-  });
-
-  const createResult = await createRes.json();
-
-  if (!createRes.ok) {
-    console.error("❌ Failed to create broadcast:", JSON.stringify(createResult));
+  if (subscribers.length === 0) {
+    console.log("⚠ No active subscribers. Skipping email.");
     return;
   }
 
-  const broadcastId = createResult.id;
-  console.log("  Broadcast created: " + broadcastId);
+  // Send individual emails
+  console.log("📧 Sending emails...");
+  const today = new Date().toLocaleDateString("es-ES");
+  let sent = 0;
+  let failed = 0;
 
-  // Step 2: Send the broadcast
-  console.log("  Sending broadcast...");
-  const sendRes = await fetch("https://api.resend.com/broadcasts/" + broadcastId + "/send", {
-    method: "POST",
-    headers: {
-      "Authorization": "Bearer " + RESEND_API_KEY,
-      "Content-Type": "application/json"
+  for (const sub of subscribers) {
+    const unsubscribeUrl = `${BASE_URL}/api/unsubscribe?token=${sub.unsubscribe_token}`;
+    const html = buildEmailHTML(briefing, sub.name, unsubscribeUrl);
+
+    try {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "ZRC Intelligence <intelligence@zenrisecapital.com>",
+          to: sub.email,
+          subject: `ZRC Morning Intelligence · ${today}`,
+          html: html,
+        }),
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        console.log(`   ✅ ${sub.email}`);
+        sent++;
+      } else {
+        console.error(`   ❌ ${sub.email}: ${JSON.stringify(result)}`);
+        failed++;
+      }
+    } catch (err) {
+      console.error(`   ❌ ${sub.email}: ${err.message}`);
+      failed++;
     }
-  });
-
-  const sendResult = await sendRes.json();
-
-  if (!sendRes.ok) {
-    console.error("❌ Failed to send broadcast:", JSON.stringify(sendResult));
-    return;
   }
 
-  console.log("✅ Email digest sent to all subscribers.");
+  console.log(`\n📊 Results: ${sent} sent, ${failed} failed, ${subscribers.length} total.`);
 }
 
-sendDigest().then(() => {
-  process.exit(0);
-}).catch(err => {
-  console.error("Digest error:", err);
-  process.exit(1);
-});
+sendDigest()
+  .then(() => process.exit(0))
+  .catch((err) => {
+    console.error("Digest error:", err);
+    process.exit(1);
+  });
