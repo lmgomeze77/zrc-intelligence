@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-15T07:30:06.012Z",
+  "generated": "2026-04-15T17:49:38.530Z",
   "date": "Wednesday, 15 April 2026",
-  "globalBriefing": "The Iran conflict has emerged as the dominant driver of near-term risk across investment desks. Quantified impacts include 50% automotive sales collapse in the Middle East (Nissan, Stellantis), Hermès Q1 misses, and three-year lows in Chinese petrochemical output, per FT and OilPrice.com. Geopolitical risk is concentrating in two friction points: (1) the Strait of Hormuz, where US blockade enforcement faces documented gaps (Rich Starry transit, per Asia Times) while China and Russia deepen coordination on Iran conflict; and (2) Iran-US negotiations, where Tehran's $270 billion compensation demand and assertion of 'unrecoverable' losses signal low settlement probability per Asia Times. Supply-side dynamics favor oil producers in the near term (Hormuz blockade holding, Canadian windfall profits), but producer investment restraint and Chinese industrial contraction point to downside demand risks. Regulatory headwinds are visible in US antitrust scrutiny of airline consolidation and emerging AI-integration friction in PE add-on acquisitions, per PE Hub and Reuters. US tariff refund processing (CAPE, 20 April) and China-linked tariff threats introduce trade-policy volatility orthogonal to conflict dynamics.",
+  "globalBriefing": "Geopolitical fragmentation and energy shock transmission dominate April 15 sentiment. Israeli-Hezbollah cross-border escalation resumes after failed US diplomacy; Italy's unprecedented Israel defence pact suspension signals Western consensus fracturing; Russia-China coordination deepens. Simultaneously, Iran sanctions enforcement shows limited immediate shipping impact, while Chinese export growth decelerated to 2.5% year-on-year in March amid Middle East friction. Sub-Saharan Africa growth downgrades compound emerging market pressure. Capital allocation is rotating defensively: Saudi PIF deprioritizes LIV Golf for efficiency; OpenAI pauses £40B UK AI project citing energy cost deterioration; infrastructure fundraising reaches six-year lows. Offsetting signals: hospital M&A rebound, Permian shale resilience at sub-$50/bbl thresholds, and World Bank-backed Turkish infrastructure projects suggest selective risk appetite for de-risked, operationally-driven assets. Fed Chair tenure risk and Trump policy uncertainty sustain US institutional risk premium.",
   "categories": {
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -9,28 +9,35 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Iran demands $270 billion war compensation as US-Iran talks resume",
-          "summary": "Iran announced a $270 billion compensation claim for damages from US and Israeli attacks on critical infrastructure, according to Al Jazeera. Fresh US-Iran negotiations are scheduled, creating a defined flashpoint for near-term diplomatic risk.",
-          "source": "Al Jazeera",
-          "relevance": "Compensation demands signal Iran's hardened negotiating posture and risk of deadlock; directly affects sanctions relief timeline and oil market stability.",
-          "signal": "watch"
-        },
-        {
-          "headline": "China's Xi characterizes Moscow relations as 'precious' amid Iran conflict, per Russian FM Lavrov visit",
-          "summary": "Russian Foreign Minister Sergey Lavrov met with Chinese leadership to discuss the Iran war and broader strategic concerns, with Xi describing the relationship as 'precious,' per Al Jazeera. The framing suggests deepened coordination between Beijing and Moscow during active conflict.",
-          "source": "Al Jazeera",
-          "relevance": "China-Russia alignment on Iran conflict reduces diplomatic exit ramps and increases risk of prolonged regional instability affecting supply chains and energy prices.",
+          "headline": "Israel-Hezbollah cross-border strikes resume after US-mediated talks conclude",
+          "summary": "Per BBC World, Israeli strikes hit southern Lebanon and Hezbollah fired rockets at Israel on April 14, one day after rare direct negotiations in the US. The exchange follows an April 8 Israeli bombardment of Lebanon that UN experts characterized as breaching the UN Charter.",
+          "source": "BBC World",
+          "relevance": "Renewed kinetic activity signals fragility of diplomatic channels and elevated regional conflict risk, pressuring energy markets and foreign investment appetite in the Levant.",
           "signal": "bearish"
         },
         {
-          "headline": "Trump publicly criticizes Italian PM Meloni over Iran war stance",
-          "summary": "US President Trump announced he is 'shocked' at PM Meloni and publicly rebuked her over her position on the US-Israel war on Iran, per Al Jazeera. The statement marks rare transatlantic friction within aligned leadership.",
+          "headline": "Italy suspends defence pact with Israel, marking shift by key NATO ally",
+          "summary": "According to Al Jazeera, Italy's Prime Minister Giorgia Meloni has suspended a defence agreement with Israel, described as an unprecedented reversal by one of Israel's historically closest European partners. The suspension has limited immediate economic impact but signals diplomatic realignment.",
           "source": "Al Jazeera",
-          "relevance": "Intra-alliance discord signals potential fragmentation of Western coordination on Iran policy and sanctions enforcement, creating uncertainty for European investors in US-aligned blocs.",
+          "relevance": "Signals potential fracturing of Western consensus on Israel policy; may presage broader European-Israeli trade or security friction affecting defence-industrial clusters.",
           "signal": "watch"
+        },
+        {
+          "headline": "Russian Foreign Minister Lavrov visits China to coordinate on trade, energy, geopolitics",
+          "summary": "Per Google News Geopolitics, Lavrov's visit underscores Moscow-Beijing tightening of coordination across trade, energy, and strategic alignment, reinforcing Russia's Asian pivot amid Western sanctions.",
+          "source": "Google News Geopolitics",
+          "relevance": "Deepening Russia-China institutional linkage reduces Western leverage over energy pricing and supply chains; signals sustained commodity volatility and sanctions durability.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Trump threatens to terminate Federal Reserve Chair Powell's tenure if he remains beyond May",
+          "summary": "Per BBC World and Financial Times, US President Trump has reiterated a threat to remove Jerome Powell as Fed Chair if Powell does not depart when his term as chair concludes in May, escalating institutional political risk.",
+          "source": "BBC World / Financial Times",
+          "relevance": "Central bank independence deterioration raises US policy uncertainty; affects currency, rates, and equity volatility across global portfolios.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Iran-US compensation demands remain unresolved and China-Russia coordination hardens, expect extended sanctions regime and reduced multilateral enforcement capacity.",
+      "keyTakeaway": "If Israeli-Hezbollah kinetic exchange persists and Western diplomatic cohesion continues fragmenting, expect sustained oil volatility and a flight to safe-haven assets.",
       "rawCount": 10
     },
     "fdi": {
@@ -39,28 +46,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Middle East conflict halves regional car sales at Nissan and Stellantis, per FT reporting",
-          "summary": "Nissan and Stellantis report 50% decline in Middle East automotive sales attributable to the Iran conflict, according to FT World. The metric represents the clearest quantified sectoral impact on regional FDI flows to date.",
-          "source": "FT World",
-          "relevance": "50% auto sales collapse signals rapid contraction in Middle East consumer FDI and indicates spillover risk to global automotive supply chains and related investment.",
-          "signal": "bearish"
+          "headline": "Saudi Arabia's PIF reconsiders LIV Golf backing amid Iran war and investment efficiency reset",
+          "summary": "According to Financial Times, Saudi Arabia's Public Investment Fund is evaluating reduced support for the loss-making LIV Golf tour as part of a broader recalibration toward higher-return allocations and away from vanity projects. PIF Governor announced a pivot toward efficiency without retreating from global deals.",
+          "source": "Financial Times",
+          "relevance": "Signals sovereign wealth fund rotation away from speculative ventures toward productive assets; implies capital redeployment toward harder returns and infrastructure in stable markets.",
+          "signal": "neutral"
         },
         {
-          "headline": "Hermès reports Q1 revenue growth of 6%, below forecast, citing Middle East conflict concerns",
-          "summary": "Hermès announced first-quarter revenues rose 6%, falling short of consensus forecasts, with management attributing weakness to Middle East conflict worries, per FT World. The miss suggests luxury sector FDI sentiment deterioration.",
-          "source": "FT World",
-          "relevance": "Luxury goods underperformance signals broader high-income consumer pullback in conflict-adjacent regions, constraining FDI appetite for discretionary-sector assets.",
-          "signal": "bearish"
+          "headline": "IMF endorses Nigeria's bank recapitalization; calls for stronger fiscal buffers",
+          "summary": "Per Google News FDI, the IMF has approved Nigeria's banking sector recapitalization program while recommending enhanced fiscal discipline. The move aims to strengthen financial system resilience and investor confidence in Sub-Saharan Africa's largest economy.",
+          "source": "Google News FDI",
+          "relevance": "Institutionalizes FDI pathway into Nigerian financial sector; validates policy framework improvements that reduce sovereign credit risk for equity and debt investors.",
+          "signal": "bullish"
         },
         {
-          "headline": "China orders Maersk and MSC to exit Panama canal operations; European carriers assume concessions",
-          "summary": "Per FT World, China directed Maersk and MSC to relinquish Panama Canal port operations after Panamanian authorities ejected Hong Kong's CK Hutchison; European shipping groups took control of concessions. The move represents major restructuring of critical logistics infrastructure ownership.",
-          "source": "FT World",
-          "relevance": "Geopolitical restructuring of Panama Canal control creates uncertainty for supply-chain routing and increases leverage risk for European shipping operators managing strategic assets.",
-          "signal": "watch"
+          "headline": "US airline merger between United and American unlikely to deliver passenger-level cost cuts",
+          "summary": "Financial Times reports that a potential tie-up between United and American could create a genuine US flag carrier but offers limited scope for price reduction to consumers, signaling consolidation driven by operational synergies rather than competitive pricing.",
+          "source": "Financial Times",
+          "relevance": "Consolidation in US aviation signals margin protection and reduced pricing pressure; supports investor thesis on oligopolistic structures in mature transport sectors.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Middle East conflict persists and geopolitical restructuring of critical infrastructure continues, expect sustained contraction in regional FDI, particularly in discretionary and automotive sectors.",
+      "keyTakeaway": "If sovereign wealth funds continue rotating toward efficiency-driven allocations and emerging market central banks shore up financial system regulations, expect sustained FDI inflows into de-risked African and Asian markets.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -69,36 +76,65 @@
       "description": "Supply chains, commodity prices, and energy security",
       "items": [
         {
-          "headline": "US maintains Hormuz blockade; all vessels attempting transit reportedly turned back",
-          "summary": "The US blockade of the Strait of Hormuz has held under pressure, with shipping data confirming on 15 April that all vessels attempting passage were successfully turned back, per OilPrice.com. The blockade represents an active control of one of the world's most critical energy chokepoints.",
+          "headline": "US blockade on Iranian port traffic shows minimal initial impact on Strait of Hormuz flows",
+          "summary": "Per OilPrice.com, the first full day of US blockade of vessels calling at Iranian ports registered negligible disruption to Strait of Hormuz traffic as of April 14, suggesting sanctions enforcement encountered limited shipping diversion or stoppage.",
           "source": "OilPrice.com",
-          "relevance": "Sustained Hormuz blockade enforces upside pressure on global oil prices and creates structural supply constraints benefiting non-OPEC and strategic reserve producers.",
+          "relevance": "Indicates sanctions effectiveness constraints; implies Iranian oil may find alternative routing or transshipment venues, limiting intended supply shock and global crude price trajectory.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "China tentatively considers restricting solar equipment exports to US in escalating tech trade friction",
+          "summary": "According to OilPrice.com, China is evaluating restrictions on solar manufacturing equipment exports to the United States, potential escalation in sectoral export controls amid broader US-China technology competition.",
+          "source": "OilPrice.com",
+          "relevance": "Solar supply chain fragmentation risk; threatens US renewable energy capex timelines and raises long-duration energy project costs if Chinese critical inputs face tariffs or restrictions.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Permian basin retains 55,000 sub-$50/barrel drilling locations, reinforcing lowest-cost US shale position",
+          "summary": "Per World Oil analysis cited in Oil & Gas 360, the Permian basin continues to hold an estimated 55,000 drilling locations economically viable below $50/bbl, sustaining its competitive advantage as the US lowest-cost shale play.",
+          "source": "Oil & Gas 360",
+          "relevance": "Underscores Permian resilience to commodity downturns; supports capex discipline by US E&P majors and sustains long-term structural supply floor for crude.",
           "signal": "bullish"
         },
         {
-          "headline": "Canadian oil companies retain windfall profits from Middle East supply squeeze but withhold reinvestment",
-          "summary": "Canadian oil and gas firms expect robust profit growth from the Middle East-driven supply squeeze but announced they will not increase capital investment despite higher cash flows, per Reuters/OilPrice.com. The decision signals cautious medium-term demand outlook among major producers.",
+          "headline": "Western Australia moves to stockpile diesel as dual energy blockades threaten regional supply",
+          "summary": "Per OilPrice.com, Western Australia is implementing diesel stockpiling measures amid dual supply chain disruptions, indicating state-level energy security vulnerability tied to Gulf sourcing and broader geopolitical blockade exposure.",
           "source": "OilPrice.com",
-          "relevance": "Producer restraint despite high margins indicates skepticism about sustained price elevation, implying risk of supply growth if conflict resolves or demand softens.",
+          "relevance": "Reveals energy infrastructure fragility in developed commodity exporters; suggests elevated capex and inventory costs for Australian mining and industrial users if supply cascades worsen.",
           "signal": "watch"
-        },
-        {
-          "headline": "Chinese petrochemical producers idle capacity as feedstock costs rise; output hits three-year low",
-          "summary": "Chinese petrochemical makers have begun reducing output to three-year lows in response to elevated feedstock costs driven by Middle East conflict, per Bloomberg/OilPrice.com. The production cut reflects margin compression in downstream energy sectors.",
-          "source": "OilPrice.com",
-          "relevance": "Chinese chemical sector contraction signals global industrial demand weakness and reduces near-term price floors for oil and petrochemical inputs.",
-          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Hormuz blockade persists while producer investment remains muted and Chinese industrial demand contracts, expect oil prices to sustain elevated floors but face downside risk if conflict or demand environment shifts.",
+      "keyTakeaway": "If Iran sanctions enforcement proves limited in scope and China restricts solar equipment exports, expect oil to trade sideways while renewable energy capex faces cost inflation and timing delays.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "OpenAI pauses £40 billion UK AI infrastructure project citing elevated energy cost economics",
+          "summary": "According to CarbonCredits.com, OpenAI has halted its $40 billion UK AI project, citing data center energy cost pressures as a key constraint on project viability. The pause reflects deteriorating unit economics for compute-intensive infrastructure.",
+          "source": "CarbonCredits.com",
+          "relevance": "Signals demand destruction in hyperscale data center development; implies energy price thresholds now constrain AI capex and tech real estate valuations in high-cost regions.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Turkey secures $2 billion World Bank facility for cross-Bosporus rail megaproject",
+          "summary": "Per Daily Sabah, Türkiye has concluded a $2 billion World Bank financing arrangement for a major rail infrastructure project spanning the Bosporus, advancing critical transit connectivity and regional integration goals.",
+          "source": "Daily Sabah",
+          "relevance": "Signals multilateral development bank appetite for Turkish infrastructure; de-risks project financing and supports Turkish construction and engineering service demand.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Infrastructure fundraising in Q1 2026 reaches second-lowest level in six years at $26.4 billion",
+          "summary": "Infrastructure Investor reports that closed-end unlisted structures raised $26.4 billion in Q1 2026, the second-lowest total in six years, though several large-cap funds remain in late fundraising stages for later-year closures.",
+          "source": "Infrastructure Investor",
+          "relevance": "Indicates softening LP appetite for unlisted infra; implies longer fund-raise cycles and potential valuation compression for mid-market infrastructure assets.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If energy costs remain elevated and LP capital commitment to unlisted infrastructure remains subdued, expect deceleration in greenfield and digital asset capex while World Bank-supported sovereign projects maintain relative attractiveness.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -107,21 +143,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "AI-era PE acquirers face 'visible' operational risk from inconsistent portfolio-company data, per Williams Lea survey",
-          "summary": "Williams Lea's survey documents data inconsistency across add-on acquisitions as operational risk 'visible in a new way' for private equity firms deploying AI tools, per PE Hub. The concern flags integration and AI-readiness as emerging M&A friction points.",
-          "source": "PE Hub",
-          "relevance": "Data quality constraints on PE add-on integrations may compress synergy realization and increase cost of AI-enabled operational improvements, widening valuation risk.",
-          "signal": "watch"
+          "headline": "Aegon offloads 200-year-old UK insurance business to Standard Life for £2 billion",
+          "summary": "Per The Guardian, Aegon has divested its historic UK insurance operations to Standard Life for £2 billion, reflecting a strategic portfolio rationalization and consolidation in the mature UK insurance sector.",
+          "source": "The Guardian",
+          "relevance": "Signals continued M&A in lower-growth Western insurance markets; implies asset reallocation toward higher-return jurisdictions and supports UK insurance sector consolidation thesis.",
+          "signal": "neutral"
         },
         {
-          "headline": "US antitrust authorities express swift skepticism of United Airlines' merger pitch for American Airlines",
-          "summary": "United Airlines' proposed merger with American Airlines drew immediate antitrust skepticism from US regulators, per Reuters. The reaction signals low probability of large-scale US airline consolidation in current regulatory environment.",
-          "source": "Reuters",
-          "relevance": "Antitrust resistance to major airline M&A narrows dealflow in transportation and signals heightened regulatory scrutiny for large-cap horizontal transactions.",
+          "headline": "Hospital sector M&A rebound in 2026 driven by sector-specific strategic and operational drivers",
+          "summary": "Modern Healthcare reports that hospital deal activity is accelerating in 2026, driven by sector-specific consolidation rationales including operational efficiency, service line optimization, and payer mix management.",
+          "source": "Modern Healthcare",
+          "relevance": "Healthcare consolidation supports margin expansion and pricing power narratives; indicates sustained PE and strategic buyer appetite for hospital platform roll-ups.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "HIG Capital acquires Inventus Power, expanding industrial battery and power solutions platform",
+          "summary": "Per PE Hub, HIG Capital has completed acquisition of Inventus Power, a multi-vertical battery and power systems provider serving military, medical, industrial/fleet, and consumer applications.",
+          "source": "PE Hub",
+          "relevance": "Reflects PE capital deployment into critical infrastructure and dual-use technology; validates supply chain diversification theses in power systems amid geopolitical tensions.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If AI integration costs in PE portfolios rise and antitrust scrutiny on large-cap deals remains elevated, expect M&A activity to shift toward smaller, less contestable transactions and data-adjacent tech acquisitions.",
+      "keyTakeaway": "If healthcare consolidation persists and PE capital continues targeting mission-critical industrial infrastructure, expect sustained deal flow in lower-risk, operationally-driven platforms with essential-service positioning.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -130,28 +173,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "US Navy begins Hormuz mine-clearing operations using AI-assisted systems",
-          "summary": "US military officials confirmed the Navy has initiated mine-clearing operations in the Strait of Hormuz using AI systems, per Asia Times. Iranian forces have deployed a limited mine inventory in the waterway, creating an active demining workload.",
-          "source": "Asia Times",
-          "relevance": "Active mine-clearing operations underscore logistics complexity of Hormuz blockade enforcement and introduce technical risk to sustained shipping access.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Chinese-linked tanker Rich Starry transits Hormuz despite US blockade, signaling enforcement challenge",
-          "summary": "The US-sanctioned tanker Rich Starry, with documented links to China, reportedly transited the Strait of Hormuz despite the US blockade, per Asia Times maritime intelligence sources. The incident suggests enforcement gaps in blockade implementation.",
-          "source": "Asia Times",
-          "relevance": "Blockade circumvention by China-linked vessels indicates constraint on US ability to achieve total flow restriction and creates shadow-market channels for Iranian crude exports.",
+          "headline": "IMF downgrades Sub-Saharan Africa growth outlook amid Middle East war energy shock and fiscal pressures",
+          "summary": "African Business reports that the IMF has reduced growth projections for Sub-Saharan Africa, citing energy supply disruption, inflation acceleration, and fiscal strain triggered by Middle East conflict dynamics.",
+          "source": "African Business",
+          "relevance": "Signals downward GDP revision risk for African commodity exporters and oil importers; implies currency depreciation pressure and elevated sovereign credit spreads in the region.",
           "signal": "bearish"
         },
         {
-          "headline": "Iran describes war damages as 'never recoverable' during peace negotiations with US in Islamabad",
-          "summary": "Iranian negotiators stated that conflict-inflicted losses will not be recovered, even under ceasefire scenarios, per Asia Times. The statement reflects hardened posture on compensation and reconstruction demands during active US-Iran talks.",
+          "headline": "Iran conflict pressuring Chinese export growth, with March year-on-year growth decelerating to 2.5%",
+          "summary": "Per Asia Times, Chinese exports grew just 2.5% year-on-year in March, a marked slowdown amid regional conflict-induced supply chain friction and demand softness. The deterioration signals spillover risk to Chinese manufacturing capacity utilization.",
           "source": "Asia Times",
-          "relevance": "Iranian emphasis on unrecoverable losses signals low near-term probability of negotiated settlement and increases risk of deadlock over reparations clauses.",
+          "relevance": "Underscores China's vulnerability to Middle East supply shocks; implies margin compression for Chinese manufacturers and weakened yuan support, affecting emerging market currency baskets.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Myanmar civil war expands with new resistance alliance formation after 78 years of fragmented conflict",
+          "summary": "Asia Times reports that Myanmar's civil conflict, now spanning 78 years as the longest-running in modern history, is experiencing renewed coordination among previously fragmented ethnic armed groups through a new alliance formation.",
+          "source": "Asia Times",
+          "relevance": "Signals escalating Myanmar instability and reduced investor confidence; risks supply chain disruption in garments and minerals and complicates FDI repatriation scenarios.",
           "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Hormuz blockade enforcement remains inconsistent and Iran-US negotiations deadlock over compensation, expect prolonged supply uncertainty and continued fragmentation of energy markets along geopolitical lines.",
+      "keyTakeaway": "If Sub-Saharan African growth downgrades persist, Chinese export momentum falters, and Myanmar conflict intensifies, expect capital flight from frontier markets toward hard-currency safe havens and emerging market debt repricing.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -160,29 +203,44 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Trump administration warns China of tariffs over alleged Iran arms transfers",
-          "summary": "Trump announced tariff threats against China for alleged provision of arms to Iran, per MSN. The threat links trade policy explicitly to conflict dynamics and creates conditional tariff escalation risk.",
-          "source": "MSN",
-          "relevance": "Tariff threats tied to Iran arms proliferation introduce new conditionality to US-China trade negotiations and increase volatility for bilateral goods flows.",
+          "headline": "EU mulls suspension of EU-Israel trade agreement amid ongoing regional conflict",
+          "summary": "Per WION, the European Union is considering suspension of the EU-Israel trade pact, reflecting political and humanitarian concerns tied to the Middle East conflict. No formal action has been taken, but internal discussions are advancing.",
+          "source": "WION",
+          "relevance": "If implemented, suspension would disrupt bilateral trade flows and signal fragmenting Western consensus on Israel policy; raises supply chain risk for EU-Israel joint ventures and trade-dependent industries.",
           "signal": "watch"
         },
         {
-          "headline": "US tariff refund system (CAPE) launches 20 April, beginning processing of prior-year refunds",
-          "summary": "The US government announced the CAPE (Customs and Administration Processing Efficiency) system will begin processing tariff refunds starting 20 April, per Regtechtimes. The initiative suggests systematic revision of prior tariff administration.",
-          "source": "Regtechtimes",
-          "relevance": "Tariff refund processing signals potential retroactive relief for affected importers and adds fiscal cost to tariff regime; impacts net tariff revenue projections.",
+          "headline": "India warns WTO members against weaponizing transparency protocols to justify unilateral trade retaliation",
+          "summary": "Per MSN, India has cautioned WTO membership that invoking transparency and disclosure rules as pretexts for retaliatory tariffs undermines multilateral trade discipline. The statement signals emerging market concern over unilateral trade enforcement escalation.",
+          "source": "MSN",
+          "relevance": "Indicates emerging market resistance to US-style tariff justification frameworks; signals potential WTO rule-set fragmentation and supports argument for bilateral/regional trade agreement reliance.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If China-linked tariff escalation occurs while CAPE refund processing simultaneously expands import relief, expect bifurcated tariff regime benefiting selective trading partners and increasing complexity for trade-exposed sectors.",
+      "keyTakeaway": "If EU-Israel trade suspension proceeds and transparency-based tariff justifications proliferate, expect further WTO framework deterioration and accelerated shift toward bilateral and regional trade agreements.",
       "rawCount": 10
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Kernel partners with NASA Harvest to advance satellite crop monitoring capability in Ukraine",
+          "summary": "Per Kyiv Post, Kernel, a Ukrainian agricultural company, has partnered with NASA Harvest to enhance satellite-based crop monitoring and forecasting, supporting agricultural productivity and supply chain visibility.",
+          "source": "Kyiv Post",
+          "relevance": "Signals technology adoption in Ukrainian agribusiness to offset wartime supply chain disruption; supports long-term agricultural resilience and export capacity restoration.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Verdant Robotics expands agricultural robotics into grass seed and sod segments with novel weed identification",
+          "summary": "Per AgFunder News, Verdant Robotics is entering grass seed and sod production markets, addressing the agronomic challenge of distinguishing grass weeds from crop plants through roboticized identification and removal.",
+          "source": "AgFunder News",
+          "relevance": "Reflects AgTech capex deployment into specialty crop segments; signals automation adoption across crop verticals and margin expansion potential for precision agriculture platforms.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If agricultural technology adoption accelerates and Ukraine restores satellite-monitored crop capacity, expect normalization of Eastern European grain export supply and reduced global food price volatility.",
       "rawCount": 10
     }
   }
