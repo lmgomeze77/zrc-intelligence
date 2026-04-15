@@ -15,7 +15,6 @@ concurrency:
 jobs:
   generate-and-send:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,27 +34,24 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node generate-briefing.js
 
-      - name: Commit and push data.json
-        run: |
-          git config user.name "ZRC Intelligence Bot"
-          git config user.email "intelligence@zenrisecapital.com"
-
-          git add data.json
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-
-          DATESTR=$(date -u +"%Y-%m-%d")
-          git commit -m "📡 Daily briefing — $DATESTR"
-
-          git pull --rebase origin main
-          git push origin HEAD:main
-
       - name: Send email digest
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: node send-digest.js
+
+      - name: Commit and push data.json
+        continue-on-error: true
+        run: |
+          git config user.name "ZRC Intelligence Bot"
+          git config user.email "intelligence@zenrisecapital.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          DATESTR=$(date -u +"%Y-%m-%d")
+          git commit -m "📡 Daily briefing — $DATESTR"
+          git pull --rebase origin main
+          git push origin HEAD:main
