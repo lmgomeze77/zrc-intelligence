@@ -1,6 +1,7 @@
 // netlify/functions/subscribe.js
-// Adds a contact to the Resend audience when someone subscribes.
+// Adds a contact to Resend audience AND Supabase subscribers table.
 // Protected by Cloudflare Turnstile (server-side verification) + honeypot.
+// Supabase has a case-insensitive unique index on email — duplicates return 409.
 
 exports.handler = async (event) => {
   const headers = {
@@ -71,53 +72,109 @@ exports.handler = async (event) => {
       };
     }
 
-    // ── Resend audience add ───────────────────────────────
-    const RESEND_API_KEY = process.env.RESEND_API_KEY;
-    const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
-    if (!RESEND_API_KEY || !RESEND_AUDIENCE_ID) {
-      console.error("Missing Resend environment variables");
-      return {
-        statusCode: 500, headers,
-        body: JSON.stringify({ error: "Service configuration error." })
-      };
+    // ── Normalize email ───────────────────────────────────
+    const cleanEmail = email.trim().toLowerCase();
+    const cleanName = firstName ? firstName.trim() : "";
+
+    // ── Insert into Supabase (source of truth for briefings) ──
+    const SUPABASE_URL = process.env.SUPABASE_URL;
+    const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+    let isAlreadySubscribed = false;
+
+    if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
+      const supaRes = await fetch(
+        SUPABASE_URL + "/rest/v1/subscribers",
+        {
+          method: "POST",
+          headers: {
+            "apikey": SUPABASE_SERVICE_ROLE_KEY,
+            "Authorization": "Bearer " + SUPABASE_SERVICE_ROLE_KEY,
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal"
+          },
+          body: JSON.stringify({
+            email: cleanEmail,
+            name: cleanName,
+            active: true
+          })
+        }
+      );
+
+      if (!supaRes.ok) {
+        const supaBody = await supaRes.text();
+
+        // 409 = unique constraint violation (duplicate email)
+        if (supaRes.status === 409 || supaBody.includes("23505")) {
+          console.log("Supabase: subscriber already exists — " + cleanEmail);
+          isAlreadySubscribed = true;
+        } else {
+          // Log but don't block — Resend insert can still proceed
+          console.error("Supabase insert error:", supaRes.status, supaBody);
+        }
+      } else {
+        console.log("Supabase: new subscriber added — " + cleanEmail);
+      }
+    } else {
+      console.warn("Supabase env vars missing — skipping Supabase insert");
     }
 
-    const response = await fetch(
-      "https://api.resend.com/audiences/" + RESEND_AUDIENCE_ID + "/contacts",
-      {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer " + RESEND_API_KEY,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          email: email.trim().toLowerCase(),
-          first_name: firstName ? firstName.trim() : "",
-          unsubscribed: false
-        })
-      }
-    );
-    const result = await response.json();
+    // ── Add to Resend audience (for contact management) ───
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
+    const RESEND_AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID;
 
-    if (!response.ok) {
-      console.error("Resend error:", JSON.stringify(result));
-      // If contact already exists, treat as success
-      if (result.message && result.message.includes("already exists")) {
-        return {
-          statusCode: 200, headers,
-          body: JSON.stringify({ success: true, message: "You're already subscribed. See you tomorrow at 06:30 CET." })
-        };
+    if (RESEND_API_KEY && RESEND_AUDIENCE_ID) {
+      const resendRes = await fetch(
+        "https://api.resend.com/audiences/" + RESEND_AUDIENCE_ID + "/contacts",
+        {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer " + RESEND_API_KEY,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            email: cleanEmail,
+            first_name: cleanName,
+            unsubscribed: false
+          })
+        }
+      );
+      const resendResult = await resendRes.json();
+
+      if (!resendRes.ok) {
+        if (resendResult.message && resendResult.message.includes("already exists")) {
+          console.log("Resend: contact already exists — " + cleanEmail);
+          isAlreadySubscribed = true;
+        } else {
+          // Log but don't fail the request — Supabase insert may have succeeded
+          console.error("Resend error:", JSON.stringify(resendResult));
+        }
+      } else {
+        console.log("Resend: contact added — " + cleanEmail);
       }
+    } else {
+      console.warn("Resend env vars missing — skipping Resend insert");
+    }
+
+    // ── Response ──────────────────────────────────────────
+    if (isAlreadySubscribed) {
       return {
-        statusCode: 400, headers,
-        body: JSON.stringify({ error: "Subscription failed. Please try again." })
+        statusCode: 200, headers,
+        body: JSON.stringify({
+          success: true,
+          message: "You're already subscribed. See you tomorrow at 06:30 CET."
+        })
       };
     }
 
     return {
       statusCode: 200, headers,
-      body: JSON.stringify({ success: true, message: "Welcome to ZRC Morning Intelligence." })
+      body: JSON.stringify({
+        success: true,
+        message: "Welcome to ZRC Morning Intelligence."
+      })
     };
+
   } catch (err) {
     console.error("Subscribe error:", err);
     return {
