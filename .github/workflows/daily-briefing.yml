@@ -1,17 +1,13 @@
 name: ZRC Daily Intelligence Briefing
-
 on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: zrc-daily-briefing-main
   cancel-in-progress: false
-
 jobs:
   generate-and-send:
     runs-on: ubuntu-latest
@@ -20,27 +16,22 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Install dependencies
         run: npm install
-
       - name: Generate daily briefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node generate-briefing.js
-
       - name: Send email digest
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
-
       - name: Commit and push data.json
         continue-on-error: true
         run: |
