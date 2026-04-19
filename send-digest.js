@@ -251,7 +251,7 @@ async function sendDigest() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "ZRC Intelligence <intelligence@zenrisecapital.com>",
+          from: "ZRC Intelligence <intelligence@zenithrisecapital.com>",
           to: sub.email,
           subject: `ZRC Morning Intelligence · ${today}`,
           html: html,
