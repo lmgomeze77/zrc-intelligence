@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-19T12:49:32.459Z",
+  "generated": "2026-04-19T20:52:39.604Z",
   "date": "Sunday, 19 April 2026",
-  "globalBriefing": "Geopolitical fragmentation is accelerating: the US-Iran Hormuz standoff threatens 20% of seaborne crude flows; US-India bilateral tariff negotiations proceed outside WTO consensus; and Africa repositions from aid-dependent to investment-seeking, signaling capital reallocation. Energy markets reflect this bifurcation—supermajor trading divisions earn record premiums while production stagnates, and US LNG diplomacy reshapes Asian supply chains away from transatlantic partnerships. Capital flows show deterioration in India (negative net FDI, portfolio outflows) and Turkey (rate-cut reversal pressure), validating structural EM headwinds independent of global cycles. Antitrust enforcement blocks large media consolidation while healthcare M&A accelerates, reshaping sector composition. If Hormuz restrictions extend and bilateral trade fragmentation deepens, commodity premiums and supply-chain reshoring costs sustain elevated through 2027.",
+  "globalBriefing": "Escalating Iran-US Hormuz standoff (ship seizure, Iranian transit restrictions) risks sustained oil supply shock and multiplier effects across energy-dependent economies, compounded by European refinery capacity gaps. Concurrent with energy crisis, institutional FDI retrenchment (-62% to real estate in Q1) and capital flight from India despite reserves signal capital repricing away from geopolitical risk zones; conversely, Nigeria post-recapitalization and Africa's reframed investment terms show selective capital concentration in commodity-backed regions. WTO governance paralysis, US-India tariff frictions, and Iran tariff threats are fragmenting trade frameworks while China-India investment thaw opens selective bilateral opportunities. Food security consensus (IMF warnings, FT crisis rhetoric, Indonesia rice autarky) coupled with energy inflation creates dual commodity price spike risk; QXO-TopBuild $17B M&A suggests construction-sector confidence persists despite broader CRE weakness, but Nexstar-Tegna antitrust injunction signals regulatory M&A drag. If Hormuz closure and food supply constraints persist through summer, commodity-importing emerging markets face simultaneous currency depreciation and inflation spiral unless central banks tighten rapidly.",
   "categories": {
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -9,28 +9,35 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "US extends sanctions waiver for Russian energy; Ukraine objects amid Iran conflict",
-          "summary": "The US announced an extension of its sanctions waiver for Russian energy exports, citing supply disruptions from the ongoing US-Israel conflict with Iran now in its second month. Ukraine's government stated opposition to the waiver, according to BBC World and Google News Geopolitics.",
-          "source": "BBC World, Google News Geopolitics",
-          "relevance": "Energy price volatility and sanction enforcement affect commodity markets and European energy security; signals US prioritization of global energy stability over sanctions regime consistency.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Iran restricts Strait of Hormuz transit in response to US naval blockade",
-          "summary": "Iran announced Saturday travel restrictions on the Strait of Hormuz in response to ongoing US naval blockade operations, per Asia Times. The restriction represents escalation in a ceasefire described as in 'grave peril,' with approximately 20% of global oil transiting this chokepoint.",
-          "source": "Asia Times",
-          "relevance": "Direct threat to 20% of global seaborne crude flows; potential oil price spike above USD 100/bbl and shipping cost inflation if restrictions expand or escalate further.",
+          "headline": "US Navy seizes Iran-flagged vessel Touska at Hormuz; Trump confirms engine room strike",
+          "summary": "President Trump announced US forces disabled the cargo ship Touska after it breached a Hormuz blockade, per Al Jazeera. The incident follows Trump administration statements on renewed peace talks with Tehran, creating contradictory signals on escalation intent.",
+          "source": "Al Jazeera",
+          "relevance": "Direct maritime disruption to global oil transit choke point; signals unpredictable enforcement of blockade that could trigger Iranian retaliation and spike energy prices.",
           "signal": "bearish"
         },
         {
-          "headline": "Peru election results delayed; EU observer confirms democratic standards met",
-          "summary": "Peru's electoral authorities announced presidential results will be published by mid-May following delayed vote counting. The EU election observation mission stated the election met democratic standards despite allegations of fraud, per Al Jazeera.",
+          "headline": "Iran announces Strait of Hormuz travel restrictions in response to US blockade; ceasefire 'in grave peril'",
+          "summary": "According to Asia Times, Iran stated it would reimpose Hormuz transit restrictions, claiming the US blockade constitutes 'piracy' and threatening ceasefire stability. The move follows continued US naval enforcement despite reported diplomatic talks.",
+          "source": "Asia Times",
+          "relevance": "Escalating tit-for-tat closures of world's critical petroleum chokepoint; threatens oil supply shock and multiplier effects across energy-dependent economies.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Israeli government approves re-establishment of Sa-Nur West Bank settlement; four sites approved after 20-year eviction gap",
+          "summary": "Per Al Jazeera, Israeli ministers announced settlement reestablishment at Sa-Nur as part of four-site government approval, reversing a two-decade-old evacuation. Move occurs amid ongoing regional military tensions.",
           "source": "Al Jazeera",
-          "relevance": "Political stability outcome in major LatAm economy remains uncertain until mid-May; extends risk window for market repricing of Peru-exposed equities and sovereign debt.",
+          "relevance": "Territorial expansion in contested West Bank increases Palestinian friction and regional instability; complicates any future ceasefire frameworks.",
           "signal": "watch"
+        },
+        {
+          "headline": "Ukraine President Zelensky condemns US waiver extension for Russian energy exports amid Iran conflict",
+          "summary": "Per BBC World, Zelensky opposed the US decision to extend sanctions waivers on Russian energy, which the US justified as addressing supply crunch from the US-Israel conflict with Iran. Ukraine frames move as contradicting stated policy.",
+          "source": "BBC World",
+          "relevance": "Signals US prioritizes global energy stability over Ukraine support; creates diplomatic friction with Kyiv and suggests energy market pressures overriding sanctions regime consistency.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Iran's Hormuz restrictions persist beyond tactical posturing and the US-Iran ceasefire fails, crude oil re-rates upward; if Peru's electoral process validates without major legitimacy crisis, LatAm credit stability improves.",
+      "keyTakeaway": "If Hormuz blockade enforcement persists without diplomatic breakthrough, expect sustained oil price volatility and growing friction between Iran, US allies, and Ukraine over energy security trade-offs.",
       "rawCount": 10
     },
     "fdi": {
@@ -39,21 +46,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "India records foreign portfolio investor exodus and negative net FDI despite strong reserves",
-          "summary": "India faces simultaneous outflows in foreign portfolio investment and negative net foreign direct investment, per MSN citing economist analysis, despite maintaining strong foreign exchange reserves. The desk identifies structural concerns beyond cyclical market weakness.",
+          "headline": "IMF reports Nigeria banking sector better insulated against global shocks post-recapitalization; systemic resilience improved",
+          "summary": "According to LEADERSHIP Newspapers via IMF assessment, Nigeria's banks demonstrated strengthened capital buffers following recent recapitalization requirements. Assessment indicates reduced contagion risk from external financial stress.",
+          "source": "LEADERSHIP Newspapers / IMF",
+          "relevance": "Positive signal for Nigeria-focused FDI flows and regional banking sector stability; supports continued capital inflows to West Africa's largest economy.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "India faces sustained FPI outflows and negative net FDI despite strong foreign currency reserves; structural outlook pressured",
+          "summary": "Per MSN reporting, India's capital inflows turned negative amid Foreign Portfolio Investor exits, offsetting reserve strength of $600+ billion USD. Structural concerns signal investor risk repricing despite macroeconomic cushion.",
           "source": "MSN",
-          "relevance": "Signals deteriorating investor confidence in India's growth narrative independent of macro reserves; increases downside risk to INR and rate expectations if capital flight accelerates.",
+          "relevance": "Capital flight from South Asia's largest economy despite reserve adequacy signals geopolitical or policy-driven risk perception; may constrain rupee stability and growth spending.",
           "signal": "bearish"
         },
         {
-          "headline": "Turkey faces policy dilemma on rate cuts amid market structure headwinds",
-          "summary": "Financial Times reports Turkey's central bank confronts pressure to reverse recent rate-cutting cycle, per 'Market Questions' forward guidance. Institutional investors cite inflation persistence and currency volatility as constraints.",
-          "source": "FT World",
-          "relevance": "TRY volatility likely to increase; policy normalization reduces carry-trade attractiveness and signals higher real rates ahead, pressuring Turkish corporate debt refinancing.",
-          "signal": "bearish"
+          "headline": "Turkey's FDI trends signal structural investment concerns despite remaining on investor radar; underlying risks persist",
+          "summary": "According to PA Turkey analysis, despite continued investor interest, foreign direct investment trends into Turkey show underlying structural challenges. Assessment indicates capital quality or durability concerns beyond headline flows.",
+          "source": "PA Turkey",
+          "relevance": "Mixed FDI signals for Turkey suggest caution on commitment depth; geopolitical positioning and policy continuity risks may deter long-term capital deployment.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If capital exodus from India and Turkey intensifies in tandem, emerging market fund redemptions accelerate and trigger broader EM currency depreciation cycle.",
+      "keyTakeaway": "If energy inflation persists and capital flight from emerging markets continues, FDI winners will concentrate in countries with structural fiscal institutions and commodity buffers (Nigeria) over those with policy uncertainty (India, Turkey).",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -62,28 +76,28 @@
       "description": "Supply chains, commodity prices, and energy security",
       "items": [
         {
-          "headline": "Strait of Hormuz transit restrictions threaten crude and LNG flow; Europe's supermajors' trading divisions boost near-term earnings",
-          "summary": "Iran announced Saturday restrictions on Strait of Hormuz traffic; simultaneously, OilPrice reports Europe's supermajors (BP, Shell, TotalEnergies) expect strong Q1 2026 earnings driven by robust trading divisions, offsetting stagnant upstream output. Trading divisions capitalize on volatility while production remains flat.",
-          "source": "OilPrice.com, Asia Times",
-          "relevance": "Structural disconnect: production capacity cannot expand quickly to offset supply disruptions, making trading floors primary value generators; signals sustained volatility premium and downstream margin compression.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Global lithium production race intensifies; hydropower renaissance supports renewable energy transition",
-          "summary": "OilPrice reports governments globally are accelerating lithium extraction to meet EV and renewable deployment demand, while hydropower capacity is experiencing renewed investment as a diversification lever against energy transition risks. Supply-chain consolidation remains asymmetric.",
+          "headline": "Europe faces summer jet fuel crisis as Iran war accelerates Middle East refinery dependency and supply vulnerability",
+          "summary": "Per OilPrice.com, Europe's kerosene import reliance on Middle East feedstock, combined with decade-long European refinery closures, exposes seasonal supply risk. Iran conflict disruption to global supply chains amplifies gap.",
           "source": "OilPrice.com",
-          "relevance": "Lithium cost curves remain under pressure from supply expansion, benefiting battery OEMs but pressuring miner margins; hydropower upside supports grid stability in jurisdictions reducing fossil baseload.",
-          "signal": "neutral"
+          "relevance": "Peak summer aviation demand colliding with constrained refinery capacity and geopolitical supply interruption; creates acute logistical bottleneck and cost inflation for European transport and tourism sectors.",
+          "signal": "bearish"
         },
         {
-          "headline": "US reshapes Asian energy diplomacy; LNG and crude exports surge amid geopolitical fragmentation",
-          "summary": "Oil & Gas 360 reports US LNG and crude oil exports to Asia are surging as the Trump administration leverages energy diplomacy to reshape regional trade balances. The shift reflects deliberate repositioning away from traditional transatlantic energy partnerships.",
-          "source": "Oil & Gas 360",
-          "relevance": "Indicates sustained US export capacity utilization and premium pricing for Asian LNG; reduces European energy independence optionality and increases political weight of Middle East supply.",
+          "headline": "Mangrove opens North America's first commercial electrochemical lithium refinery in British Columbia; closes regional processing gap",
+          "summary": "According to Mining.com, Mangrove commenced operations at the continent's first lithium refinery, addressing supply chain concentration risk. Facility supports EV battery supply chain nearshoring away from China.",
+          "source": "Mining.com",
+          "relevance": "Domestic lithium refining capacity reduces North American EV supply chain exposure to Chinese processing bottlenecks; supports regional battery manufacturing growth and trade resilience.",
           "signal": "bullish"
+        },
+        {
+          "headline": "Environmental group sues US Interior Department over rare earth mining approval in Mojave Desert; permits questioned",
+          "summary": "Per Mining.com, lawsuit challenges Department of Interior's approval of Dateline rare earth project, alleging missing operational and permitting documentation. Legal action delays domestic rare earth supply expansion.",
+          "source": "Mining.com",
+          "relevance": "Regulatory uncertainty over US rare earth domestic capacity expansion; delays critical minerals supply diversification from China and extends geopolitical vulnerability window.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Hormuz restrictions extend beyond weeks and US energy exports maintain Asian momentum, LNG premia persist above USD 15/MMBtu and lithium spot prices sustain above USD 18/kg.",
+      "keyTakeaway": "If Iran-induced supply shocks persist and US domestic rare earth litigation extends timelines, Europe faces dual summer energy deficit while North America gains relative competitive advantage in EV battery localization.",
       "rawCount": 10
     },
     "real-estate": {
@@ -92,14 +106,21 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "AECOM reports record backlog; Energy Transfer commits USD 5–5.5B infrastructure investment plan for 2026",
-          "summary": "MSN reports AECOM's record project backlog signals robust infrastructure demand, while Energy Transfer (ET) announced USD 5–5.5B capital allocation for infrastructure, per simplywall.st valuation update. Both signal sustained government and private sector deployment.",
-          "source": "MSN, simplywall.st",
-          "relevance": "Validates continued infrastructure spending tailwinds in US; benefits engineering and construction services; signals multi-year revenue visibility for infrastructure-exposed equities.",
+          "headline": "Institutional real estate inflows collapse 62% to $1.41 billion in Q1 2026; capital retrenchment signals sector stress",
+          "summary": "According to MSN data, institutional allocations to real estate fell 62% year-over-year in first quarter, dropping to $1.41 billion. Withdrawal suggests repricing of property risk or capital reallocation to fixed-income assets.",
+          "source": "MSN",
+          "relevance": "Severe institutional pullback from commercial real estate signals either interest rate premium attraction or credit stress concerns; pressures asset valuations and refinancing markets.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Greece commits €2 billion to infrastructure investment through public-private partnerships with EU support backing",
+          "summary": "Per Travel And Tour World, Greek government announced €2 billion infrastructure spending program leveraging EU funding and private sector partnerships. Initiative targets regional development modernization.",
+          "source": "Travel And Tour World",
+          "relevance": "EU-backed infrastructure spending in Greece supports construction sector revenue and can offset CRE weakness through public project acceleration; demonstrates EU capital cycle support for periphery economies.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If infrastructure capex cycles continue on current trajectory through 2027, engineering and construction services experience sustained high single-digit growth.",
+      "keyTakeaway": "If institutional CRE capital flight continues alongside interest rate pressures, concentrated infrastructure spending in EU-backed corridors (Greece, Portugal) will outperform broader commercial property markets.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -108,21 +129,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Antitrust judge blocks Nexstar-Tegna USD 6.2B media merger; American Airlines denies merger with United",
-          "summary": "A federal judge issued a preliminary injunction blocking Nexstar Media's USD 6.2B acquisition of Tegna pending resolution of antitrust litigation, per Los Angeles Times and CBS News. Separately, American Airlines announced it will not pursue a merger with United Airlines.",
-          "source": "Los Angeles Times, CBS News, New York Times",
-          "relevance": "Signals intensified antitrust enforcement scrutiny on media consolidation; reduces large-cap media M&A optionality and suggests deal valuations face regulatory haircuts; airline sector remains fragmented.",
+          "headline": "QXO announces acquisition of TopBuild Corp for $17 billion; consolidates commercial roofing and building enclosure sectors",
+          "summary": "Per Financial Times and Reuters, QXO agreed to acquire TopBuild in all-cash transaction valued at $17 billion, combining roofing and insulation platforms. Deal represents significant consolidation in specialty building products.",
+          "source": "Financial Times / Reuters",
+          "relevance": "Large-cap M&A in construction materials sector signals confidence in housing/commercial building cycle despite CRE capital withdrawal; suggests acquirer sees operational synergies offsetting sector headwinds.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "US federal judge blocks Nexstar Media acquisition of Tegna pending antitrust litigation resolution; deal in limbo",
+          "summary": "According to CBS News, judge issued injunction halting Nexstar-Tegna merger until antitrust case concludes. Legal action extends deal uncertainty and signals heightened regulatory scrutiny of media consolidation.",
+          "source": "CBS News",
+          "relevance": "Judicial intervention in major media M&A demonstrates continued antitrust enforcement pressure; creates legal risk premia for telecom and media consolidation and may deter similar transactions.",
           "signal": "bearish"
         },
         {
-          "headline": "Goldman Sachs, General Atlantic, Aquitaine target autism care scaling; supply-demand imbalance drives healthcare PE deals",
-          "summary": "PE Hub reports leading GPs (Goldman Sachs Alternatives, General Atlantic, Aquitaine) are backing autism care platforms, citing structural supply-demand mismatches as primary thesis. Similar opportunity identification spans mental health assets.",
-          "source": "PE Hub",
-          "relevance": "Validates healthcare services as sustained PE allocation theme; indicates specialized care niches remain fragmented and accessible to consolidators; signals continued healthcare M&A momentum.",
-          "signal": "bullish"
+          "headline": "India cautiously reopens Chinese investment access after multi-year resistance period; policy shift signals risk thaw",
+          "summary": "Per Lowy Institute, India announced gradual softening of Chinese FDI restrictions, indicating geopolitical risk reassessment. Move follows years of India-China strategic tension but remains subject to sector-by-sector review.",
+          "source": "Lowy Institute",
+          "relevance": "Selective China capital access to India unlocks bilateral M&A and JV opportunities; signals India prioritizing growth capital over security concerns but with continued sectoral gatekeeping.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If antitrust enforcement remains elevated and healthcare consolidation accelerates, large-cap media faces slower M&A exit multiples while specialized healthcare platforms command premium valuations.",
+      "keyTakeaway": "If antitrust enforcement persists against consolidation while geopolitical barriers between India and China ease, cross-border M&A will shift toward supply chain/tech partnerships and away from media/telecom roll-ups.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -131,28 +159,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Africa seeks equitable investment and structural reform, not aid, per AUDA-NEPAD at World Bank Spring Meetings",
-          "summary": "African Business reports AUDA-NEPAD CEO Nardos Bekele-Thomas presented a framework at the World Bank Spring Meetings repositioning Africa's negotiating posture from aid-dependent to investment-focused, demanding structural reform and global economic rebalancing.",
-          "source": "African Business",
-          "relevance": "Signals shift in African sovereign capital allocation strategy; increases FDI entry thresholds and governance benchmarks but improves long-term investability; reflects emerging market assertiveness.",
-          "signal": "watch"
-        },
-        {
-          "headline": "ECOWAS Bank and Guinea announce EUR 300M+ investment partnership for infrastructure, energy, agriculture",
-          "summary": "EBID and Guinea signed a strategic partnership unlocking EUR 300M+ in committed priority investments across infrastructure, energy, and agricultural sectors, per African Business. Deployment timeline extends through medium term.",
-          "source": "African Business",
-          "relevance": "Demonstrates bilateral development capital mobilization independent of multilateral institutions; supports West African infrastructure buildout and reduces financing risk for regional operators.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "US-Iran Hormuz standoff raises tensions ahead of Trump-Xi bilateral meeting",
-          "summary": "Asia Times reports the US naval blockade of the Strait of Hormuz has escalated Persian Gulf tensions to 'new and more perilous levels,' with the standoff set to shape the tone of a scheduled Trump-Xi meeting. Geopolitical risk premium embedded in this dialogue.",
+          "headline": "Trump-Xi meeting context: Hormuz naval blockade escalates Persian Gulf tensions ahead of major bilateral talks",
+          "summary": "Per Asia Times, Trump administration's Hormuz blockade announcement has heightened regional military tension immediately before scheduled US-China leadership summit. Escalation signals mixed diplomatic posture entering high-stakes negotiations.",
           "source": "Asia Times",
-          "relevance": "US-China strategic competition now directly exposed to Middle East supply-chain risk; signals potential bifurcation of energy markets by geopolitical bloc; raises structural commodity price floors.",
+          "relevance": "Geopolitical risk spiking during critical trade/tech negotiation window; suggests unpredictable escalation patterns that may disrupt emerging market currency and equity flows dependent on US-China consensus.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Africa reframes partnership terms with Europe from aid-dependence to equitable investment at World Bank Spring Meetings",
+          "summary": "According to African Business, AUDA-NEPAD CEO announced continent-wide shift toward demanding investment parity and structural economic reform rather than aid. Proposition repositions African negotiating leverage.",
+          "source": "African Business",
+          "relevance": "African nations asserting greater FDI terms discipline; signals expectation of higher returns and governance standards for international capital, which may raise cost of capital for African issuers but improve long-term credibility.",
           "signal": "watch"
+        },
+        {
+          "headline": "ECOWAS Bank for Investment and Development and Guinea seal strategic partnership; €300+ million priority investment unlocked",
+          "summary": "Per African Business, EBID and Guinea finalized partnership agreement directing over €300 million to infrastructure, energy, and agriculture. Accord supports West African regional development integration.",
+          "source": "African Business",
+          "relevance": "Multilateral development bank capital deployment to Guinea supports regional stability and commodity sector development; reduces execution risk for investors in West African infrastructure and extractive sectors.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Africa's investment-first positioning gains traction with multilaterals and Hormuz tensions persist, EM FDI flows shift toward African infrastructure while Middle East energy premiums sustain.",
+      "keyTakeaway": "If Hormuz escalation disrupts US-China trade talks while African nations successfully leverage investment leverage over aid dependence, emerging market capital will bifurcate: geopolitically exposed regions face volatility; commodity-backed African investment gains relative stability.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -161,21 +189,28 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "WTO consensus mechanisms strained; ministerial conference signals tariff barriers and India investment deal remain contested",
-          "summary": "Mint reports the WTO faces mounting consensus failures across agendas, while MSN cites a top US trade official identifying tariff barriers with India as a key priority in ongoing bilateral deal talks. India reportedly opposes the IFDA investment deal framework, per Modern Diplomacy.",
-          "source": "Mint, MSN, Modern Diplomacy",
-          "relevance": "Demonstrates persistent multilateral gridlock; bilateral tariff negotiations likely to proceed outside WTO framework, increasing trading nation fragmentation and unpredictability for supply-chain planners.",
+          "headline": "Trump announces 25% tariff threat against Iran; potential escalation risk to US-China trade friction and global supply chains",
+          "summary": "Per Dailyhunt reporting, Trump administration threatened 25% tariffs on Iran, raising concerns that secondary sanctions escalation may reignite US-China protectionist friction. Move signals continued unilateral trade pressure doctrine.",
+          "source": "Dailyhunt",
+          "relevance": "Multi-front tariff threats create supply chain cost inflation and WTO dispute risk; companies exposed to Iran sanctions evasion routes and US-China competition face dual regulatory uncertainty.",
           "signal": "bearish"
         },
         {
-          "headline": "Roughly 20% of US companies eligible for tariff refunds have claimed recoupment; supply-chain resilience remains priority across administrations",
-          "summary": "MSN reports that approximately 20% of companies eligible for tariff duty refunds have filed recoupment claims, indicating modest compliance with administrative processes. Concurrently, Global Trade Magazine highlights supply-chain diversification as persistent risk-mitigation strategy amid geopolitical instability.",
-          "source": "MSN, Global Trade Magazine",
-          "relevance": "Low refund claim rate (20%) suggests either awareness gaps or tariff burden acceptance by corporates; validates sustained supply-chain reshoring and nearshoring investment cycles.",
-          "signal": "neutral"
+          "headline": "World Trade Organization faces consensus deadlock on substantive issues; multilateral trade governance effectiveness deteriorating",
+          "summary": "According to Mint analysis, WTO ministerial process gridlocked on major trade agenda items, with member states unable to reach consensus. Institutional paralysis signals shift toward bilateral/regional trade frameworks.",
+          "source": "Mint",
+          "relevance": "WTO dysfunction accelerates fragmentation into US, EU, and China-led trade blocs; companies lose predictable dispute resolution and face higher cost of navigating parallel tariff/trade rule regimes.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "US trade official identifies tariff barriers with India as key priority in bilateral trade deal negotiations",
+          "summary": "Per MSN reporting, top US trade official flagged India tariff barriers as central negotiation point in upcoming bilateral trade agreement. Focus indicates US push for Indian market opening in services and agriculture.",
+          "source": "MSN",
+          "relevance": "US-India trade friction over market access signals potential tariff escalation and retaliatory duties; impacts Indian IT services exports and US agricultural access to Indian market.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If WTO consensus mechanics remain paralyzed and bilateral tariff negotiations proceed uncoordinated, multinational supply-chain complexity increases and compliance costs rise across jurisdictions.",
+      "keyTakeaway": "If Iran tariff threats and US-India trade frictions proceed without WTO mediation, expect tariff rates to rise 15-25% on contested goods while multinational supply chains relocate away from India and Iran-exposed routes.",
       "rawCount": 10
     },
     "food-agriculture": {
@@ -184,21 +219,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Pine nut production forecast to decline 35% in 2026 with recovery potential by 2028",
-          "summary": "CPG Click Petróleo e Gás reports pine nut production is expected to contract by up to 35% in 2026 with delayed harvest timing, though forecasts suggest material production recovery in 2028. Supply disruption appears cyclical rather than structural.",
-          "source": "CPG Click Petróleo e Gás",
-          "relevance": "Signals short-term commodity price volatility in specialty crops; affects ingredient costs for food manufacturers and confectionery producers; 2028 recovery window provides planning visibility.",
+          "headline": "IMF warns Iran war risks deepening global economic shock with secondary effects on food security and commodity inflation",
+          "summary": "According to MSN reporting IMF analysis, Iran conflict poses systemic risk to global economic stability with downstream food security consequences. Assessment emphasizes multiplier effects beyond energy markets.",
+          "source": "MSN / IMF",
+          "relevance": "International financial institution warning on Iran conflict spillover to agricultural commodity inflation; signals elevated food price risk in emerging markets with limited import buffers and currency depreciation exposure.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Financial Times warns of 'coming global food crisis'; supply chain disruptions and geopolitical tension cited as drivers",
+          "summary": "Per FT reporting, publication highlighted emerging food security risks from compounding supply constraints and regional instability. Warning implies systemic rather than cyclical food price pressure ahead.",
+          "source": "Financial Times",
+          "relevance": "Major financial media escalation of food crisis rhetoric signals institutional consensus on inflation persistence; indicates agricultural commodity hedging and emerging market agricultural investment may outperform.",
           "signal": "watch"
         },
         {
-          "headline": "David Protein scales alternative protein fat capacity; targets USD 300M revenues in 2026",
-          "summary": "AgFunder News reports David Protein has expanded engineered protein fat (EPG) production capacity and plans to pursue commercial CPG partnerships. CEO Peter Rahal targets USD 300M revenues in 2026, indicating aggressive scaling.",
-          "source": "AgFunder News",
-          "relevance": "Validates alternative protein sector remains venture-backed growth engine; signals potential ingredient margin compression for traditional fat suppliers; CPG adoption acceleration supports plant-based scaling thesis.",
-          "signal": "bullish"
+          "headline": "Indonesia deploys nine strategies to accelerate rice self-sufficiency as reserves hit record highs; food security policy pivot",
+          "summary": "According to Indonesia Business Post, Indonesian government announced multi-strategy rice autonomy initiative supported by reserve accumulation. Policy shift signals national food security prioritization over export revenue.",
+          "source": "Indonesia Business Post",
+          "relevance": "Major rice-exporting nation reducing export dependency in favor of domestic food security; tightens global rice supply and increases prices for import-dependent Asian and African markets.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If alternative protein manufacturers achieve CPG scale penetration by Q3 2026 and pine nut shortages persist, traditional fat-ingredient and nut-commodity prices face structural pressure.",
+      "keyTakeaway": "If Iran war inflation combines with Indonesia rice export reduction and IMF-flagged food crisis risks, agricultural commodity price spikes will exceed energy inflation; emerging market food importers face currency depreciation and social stability pressure.",
       "rawCount": 10
     }
   }
