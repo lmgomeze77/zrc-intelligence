@@ -42,49 +42,162 @@ function escapeHtml(value = "") {
     .replace(/>/g, "&gt;");
 }
 
-function formatTextForHtml(value = "") {
+function formatText(value = "") {
   return escapeHtml(value).replace(/\n/g, "<br>");
 }
 
-// ─── BUILD EMAIL HTML (SUMMARY VERSION) ────────────────────────────────────
+function sectionTitle(label) {
+  return `
+    <tr><td style="height: 28px;"></td></tr>
+    <tr>
+      <td style="color: #0F172A; font-size: 18px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; padding-bottom: 10px;">
+        ${escapeHtml(label)}
+      </td>
+    </tr>
+    <tr>
+      <td style="border-top: 3px solid #0F172A; height: 0; line-height: 0; font-size: 0;"></td>
+    </tr>
+    <tr><td style="height: 14px;"></td></tr>
+  `;
+}
+
+function itemBlock(item, showSignal = true) {
+  const signalMap = {
+    bullish: { label: "BULLISH", bg: "#DCFCE7", color: "#166534" },
+    bearish: { label: "BEARISH", bg: "#FEE2E2", color: "#991B1B" },
+    watch: { label: "WATCH", bg: "#FEF3C7", color: "#92400E" },
+    medium: { label: "MEDIUM", bg: "#FEF3C7", color: "#92400E" },
+    high: { label: "HIGH", bg: "#FEE2E2", color: "#991B1B" },
+    low: { label: "LOW", bg: "#DCFCE7", color: "#166534" },
+    neutral: { label: "NEUTRAL", bg: "#E5E7EB", color: "#374151" },
+  };
+
+  const signalKey = String(item.signal || item.risk || "neutral").toLowerCase();
+  const signal = signalMap[signalKey] || signalMap.neutral;
+
+  return `
+    <tr>
+      <td style="padding: 0 0 14px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td style="font-size: 0; line-height: 0;" width="8"></td>
+            <td style="padding: 0;">
+              <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                <tr>
+                  <td style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #0F172A; line-height: 1.45; padding-bottom: 6px;">
+                    ${escapeHtml(item.headline || item.title || "")}
+                  </td>
+                  ${
+                    showSignal
+                      ? `
+                  <td align="right" valign="top" width="90" style="padding-bottom: 6px;">
+                    <span style="display: inline-block; background: ${signal.bg}; color: ${signal.color}; font-size: 10px; font-weight: 700; font-family: Arial, Helvetica, sans-serif; padding: 5px 10px; border-radius: 4px; letter-spacing: 0.8px;">
+                      ${signal.label}
+                    </span>
+                  </td>`
+                      : ""
+                  }
+                </tr>
+              </table>
+              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #3F3F46; line-height: 1.7;">
+                ${formatText(item.summary || "")}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="border-bottom: 1px solid #E5E7EB; height: 0; line-height: 0; font-size: 0;"></td>
+    </tr>
+    <tr><td style="height: 14px;"></td></tr>
+  `;
+}
+
+function takeFirstItems(cat, max = 3) {
+  if (!cat || !Array.isArray(cat.items)) return [];
+  return cat.items.slice(0, max);
+}
+
+function buildMacroSnapshot(categories) {
+  const macroLike = [
+    categories["geopolitics"],
+    categories["fdi"],
+    categories["emerging-markets"],
+    categories["trade-policy"],
+  ]
+    .filter(Boolean)
+    .flatMap((cat) => takeFirstItems(cat, 1));
+
+  if (macroLike.length === 0) return "";
+
+  return `
+    ${sectionTitle("MACRO SNAPSHOT")}
+    ${macroLike.map((item) => itemBlock(item, false)).join("")}
+  `;
+}
+
+function buildRiskRadar(categories) {
+  const riskLike = [
+    categories["geopolitics"],
+    categories["trade-policy"],
+    categories["critical-minerals"],
+  ]
+    .filter(Boolean)
+    .flatMap((cat) => takeFirstItems(cat, 1));
+
+  if (riskLike.length === 0) return "";
+
+  return `
+    ${sectionTitle("GEOPOLITICAL RISK RADAR")}
+    ${riskLike.map((item) => itemBlock(item, true)).join("")}
+  `;
+}
+
+function buildSignals(categories) {
+  const signalsLike = [
+    categories["critical-minerals"],
+    categories["food-agriculture"],
+    categories["real-estate"],
+    categories["ma-growth"],
+  ]
+    .filter(Boolean)
+    .flatMap((cat) => takeFirstItems(cat, 1));
+
+  if (signalsLike.length === 0) return "";
+
+  return `
+    ${sectionTitle("COMMODITY & STRATEGIC SIGNALS")}
+    ${signalsLike.map((item) => itemBlock(item, false)).join("")}
+  `;
+}
+
+// ─── BUILD EMAIL HTML ───────────────────────────────────────────────────────
 
 function buildEmailHTML(briefing, name, unsubscribeUrl) {
   const greeting = name ? `Good morning, ${escapeHtml(name)}.` : "Good morning.";
+  const categories = briefing.categories || {};
 
-  const globalBriefing = formatTextForHtml(briefing.globalBriefing || "");
+  const dateText = escapeHtml(briefing.date || "");
+  const globalBriefing = briefing.globalBriefing
+    ? `
+      <tr><td style="height: 18px;"></td></tr>
+      <tr>
+        <td style="padding: 16px 18px; background: #F8F5EE; border-left: 4px solid #C9A84C;">
+          <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; color: #8B6F1A; letter-spacing: 1px; margin-bottom: 6px;">
+            DAILY SYNTHESIS
+          </div>
+          <div style="font-family: Georgia, 'Times New Roman', serif; font-size: 15px; line-height: 1.7; color: #334155; font-style: italic;">
+            ${formatText(briefing.globalBriefing)}
+          </div>
+        </td>
+      </tr>
+    `
+    : "";
 
-  const categoryOrder = [
-    "geopolitics",
-    "fdi",
-    "critical-minerals",
-    "real-estate",
-    "ma-growth",
-    "emerging-markets",
-    "trade-policy",
-    "food-agriculture",
-  ];
-
-  const activeCategories = categoryOrder
-    .map((catId) => briefing.categories?.[catId])
-    .filter((cat) => cat && cat.items && cat.items.length > 0);
-
-  const categorySummaryHTML =
-    activeCategories.length > 0
-      ? `
-        <tr><td style="height: 22px;"></td></tr>
-        <tr>
-          <td>
-            <div style="color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 2px; font-family: monospace; margin-bottom: 10px;">
-              TODAY'S FOCUS
-            </div>
-            <div style="color: #A5B4C8; font-size: 13px; line-height: 1.8; font-family: Georgia, serif;">
-              ${activeCategories
-                .map((cat) => `• ${escapeHtml(cat.label || "")}`)
-                .join("<br>")}
-            </div>
-          </td>
-        </tr>`
-      : "";
+  const macroHTML = buildMacroSnapshot(categories);
+  const radarHTML = buildRiskRadar(categories);
+  const signalsHTML = buildSignals(categories);
 
   return `<!DOCTYPE html>
 <html>
@@ -92,91 +205,77 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="margin: 0; padding: 0; background: #060D18; font-family: Georgia, 'Times New Roman', serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background: #060D18;">
+<body style="margin: 0; padding: 0; background: #F3F4F6; font-family: Arial, Helvetica, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background: #F3F4F6;">
     <tr>
-      <td align="center" style="padding: 20px;">
-        <table width="600" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%;">
-
-          <!-- HEADER -->
+      <td align="center" style="padding: 0;">
+        <table width="760" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%; max-width: 760px; background: #FFFFFF;">
+          
           <tr>
-            <td style="padding: 28px 0 20px; border-bottom: 1px solid rgba(201,168,76,0.15);">
-              <div style="color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 3px; font-family: monospace; margin-bottom: 6px;">
-                ● ZENITH RISE CAPITAL
-              </div>
-              <div style="color: #E8DCC8; font-size: 28px; font-weight: 600; font-family: Georgia, serif; letter-spacing: -0.5px;">
-                Morning Intelligence
-              </div>
-              <div style="color: #5A6A80; font-size: 13px; margin-top: 4px;">
-                ${escapeHtml(briefing.date || "")} · Geopolitical Observatory · Advisory Signals
+            <td style="padding: 24px 28px 18px 28px; border-bottom: 1px solid #E5E7EB;">
+              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 700; color: #0F172A;">
+                ZRC Morning Intelligence · ${dateText}
               </div>
             </td>
           </tr>
 
-          <!-- GREETING -->
           <tr>
-            <td style="padding: 20px 0 0;">
-              <div style="color: #A5B4C8; font-size: 14px; font-family: Georgia, serif;">${greeting}</div>
-            </td>
-          </tr>
-
-          <tr><td style="height: 16px;"></td></tr>
-
-          <!-- SUMMARY -->
-          <tr>
-            <td style="padding: 16px 20px; background: rgba(201,168,76,0.05); border: 1px solid rgba(201,168,76,0.1); border-radius: 6px;">
-              <div style="color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 2px; font-family: monospace; margin-bottom: 6px;">
-                DAILY SYNTHESIS
-              </div>
-              <div style="color: #E8DCC8; font-size: 14px; font-style: italic; line-height: 1.6; font-family: Georgia, serif;">
-                ${globalBriefing || "The full briefing is available via the link below."}
+            <td style="padding: 26px 28px 10px 28px;">
+              <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #475569;">
+                ${greeting}
               </div>
             </td>
           </tr>
 
-          ${categorySummaryHTML}
-
-          <!-- FOOTER -->
-          <tr><td style="height: 32px;"></td></tr>
           <tr>
-            <td style="border-top: 1px solid rgba(201,168,76,0.1); padding: 20px 0; text-align: center;">
-              <table width="100%" cellpadding="0" cellspacing="0">
+            <td style="padding: 10px 28px 36px 28px;">
+              <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
                 <tr>
-                  <td align="center" style="color: #3A4555; font-size: 11px; font-family: monospace; letter-spacing: 1px; padding-bottom: 6px;">
-                    ZENITH RISE CAPITAL
+                  <td style="font-family: Arial, Helvetica, sans-serif; font-size: 30px; font-weight: 800; color: #0F172A; letter-spacing: 0.2px; padding-bottom: 8px;">
+                    ZRC MORNING INTELLIGENCE
                   </td>
                 </tr>
                 <tr>
-                  <td align="center" style="color: #2A3340; font-size: 10px; font-family: Georgia, serif; padding-bottom: 16px;">
-                    Calesius Global S.L. &middot; Madrid
+                  <td style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #6B7280;">
+                    ${dateText}
                   </td>
                 </tr>
+
+                ${globalBriefing}
+                ${macroHTML}
+                ${radarHTML}
+                ${signalsHTML}
+
+                <tr><td style="height: 18px;"></td></tr>
+
                 <tr>
-                  <td align="center" style="padding-bottom: 12px;">
-                    <table cellpadding="0" cellspacing="0">
+                  <td align="left" style="padding-top: 6px;">
+                    <table cellpadding="0" cellspacing="0" role="presentation">
                       <tr>
-                        <td style="background: #C9A84C; padding: 12px 28px; border-radius: 4px;" align="center">
-                          <a href="https://zenith-news-room.netlify.app" style="color: #060D18; font-size: 12px; font-family: monospace; font-weight: 700; text-decoration: none; white-space: nowrap;">
-                            FULL BRIEFING &rarr;
+                        <td style="background: #C9A84C; padding: 12px 22px; border-radius: 4px;">
+                          <a href="https://zenith-news-room.netlify.app" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-weight: 700; color: #111827; text-decoration: none; letter-spacing: 0.8px;">
+                            FULL BRIEFING →
                           </a>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
+
+                <tr><td style="height: 34px;"></td></tr>
+
                 <tr>
-                  <td align="center" style="padding-bottom: 4px;">
-                    <a href="https://zenithrisecapital.com" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: none;">
-                      zenithrisecapital.com
-                    </a>
+                  <td style="border-top: 1px solid #E5E7EB; padding-top: 18px;">
+                    <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6B7280; line-height: 1.8;">
+                      Zenith Rise Capital · Calesius Global S.L. · Madrid
+                    </div>
+                    <div style="font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #6B7280; line-height: 1.8;">
+                      <a href="${unsubscribeUrl}" style="color: #6B7280; text-decoration: underline;">Unsubscribe</a>
+                      <span> · For informational purposes only.</span>
+                    </div>
                   </td>
                 </tr>
-                <tr>
-                  <td align="center">
-                    <a href="${unsubscribeUrl}" style="color: #5A6A80; font-size: 10px; font-family: monospace; text-decoration: underline;">Unsubscribe</a>
-                    <span style="color: #2A3340; font-size: 10px; font-family: Georgia, serif;"> &middot; For informational purposes only.</span>
-                  </td>
-                </tr>
+
               </table>
             </td>
           </tr>
