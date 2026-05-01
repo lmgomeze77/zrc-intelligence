@@ -1,7 +1,7 @@
 {
-  "generated": "2026-04-30T08:21:03.090Z",
-  "date": "Thursday, 30 April 2026",
-  "globalBriefing": "Geopolitical escalation in Iran is driving oil to $125+ Brent with demand destruction offsetting ~1.6 million barrels of losses, while OPEC+ unity fractures as UAE exits the cartel. European and Asian powers are recalibrating strategic autonomy and non-aligned positioning, reshaping trade and FDI flows toward regionalism. Supply-chain disruptions are elevating input costs across energy, fertiliser, and critical minerals—driving PE capital into metals/mining and infrastructure consolidation, while Big Tech's $725 billion AI capex concentration creates capital allocation winners in semiconductors and data centres. Trade fragmentation accelerates via new US tariff probes, but EU-Mercosur finalisation and diversified trade partnerships moderate full decoupling. Food security risks are acute in Africa and the Levant due to conflict-driven fertiliser constraints, elevating agritech and alternative-nutrient valuations.",
+  "generated": "2026-05-01T08:10:50.275Z",
+  "date": "Friday, 1 May 2026",
+  "globalBriefing": "Oil prices have stabilized near $112/bbl amid Iran ceasefire fragility, supply outages exceeding 1 billion barrels, and OPEC's structural fracturing (UAE departure on May 1). Geopolitical risk spans Ukraine military operations, Somalia piracy resurgence, and Gaza humanitarian deterioration, all depressing emerging-market sentiment. Capital flows show selective strength: UK residential property and household finances resilient; India targeting $130bn FDI by 2030; African capital markets attracting custody innovation; but CRE lending faces compression (Apollo's $8.6bn portfolio sale) and agtech venture funding is contracting. Trade policy is fragmenting: US threatens 100% China tariffs over Iran oil; EU-Mercosur and India-NZ FTAs expand; preferential blocs accelerate outside US framework. Farm bill passage stabilizes agricultural policy, but fertilizer supply disruptions and Strait of Hormuz risks create commodity price floors and input scarcity for non-self-sufficient producers like Brazil. Net effect: elevated energy prices and geopolitical risk premia will persist; capital rotates to regulated European infrastructure and commodity-hedged emerging markets while traditional CRE and low-return agtech face structural headwinds.",
   "categories": {
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -9,28 +9,35 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "US Central Command prepares strike options on Iran; oil rises to 2022 high",
-          "summary": "Axios reported CENTCOM has prepared plans for \"short and powerful\" strikes on Iran, coinciding with Brent crude reaching its highest price since 2022. Trump administration officials are being briefed on military options as tensions persist on day 62 of the conflict.",
-          "source": "BBC World / Axios",
-          "relevance": "Direct supply-chain risk to energy markets; military escalation could trigger sustained oil price premium affecting global production costs and inflation.",
+          "headline": "Iran announces conditional response to potential US military action; ceasefire in place since April 8",
+          "summary": "Iran's government has stated it would respond to renewed US attacks, according to Al Jazeera. A ceasefire between Iran and the US has held since April 8, 2026, though diplomatic channels remain stalled.",
+          "source": "Al Jazeera",
+          "relevance": "Risk of ceasefire collapse would trigger immediate oil price volatility and broader regional instability affecting energy markets and FDI sentiment.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Russia conducts overnight strikes across Ukraine; one killed, several injured in Black Sea and central regions",
+          "summary": "Russian forces attacked multiple Ukrainian targets overnight, per Al Jazeera reporting. Casualties were recorded in the Black Sea region and central Ukraine.",
+          "source": "Al Jazeera",
+          "relevance": "Continued military operations underscore persistence of the Ukraine conflict; affects European energy security, commodity prices, and supply chain risk for investors in Eastern Europe.",
           "signal": "bearish"
         },
         {
-          "headline": "US blockade of Iranian ports continues; analysts assess trajectory toward prolonged attrition war",
-          "summary": "Trump stated the US port blockade is working and urged Iran to \"give up.\" Al Jazeera analysis notes the conflict is trending toward a \"frozen\" state of attrition absent a permanent diplomatic settlement, with both sides sustaining significant costs.",
+          "headline": "Gaza unemployment soars amid economic collapse; workers report difficulty securing income on May Day",
+          "summary": "According to Al Jazeera, Gaza's labor market has contracted substantially, with unemployment rising and workers accepting precarious employment. No specific unemployment rate provided by the source.",
           "source": "Al Jazeera",
-          "relevance": "Protracted conflict reduces probability of near-term resolution; prolonged sanctions and disruption extend supply-chain fragmentation and commodity price volatility.",
-          "signal": "watch"
+          "relevance": "Humanitarian deterioration signals prolonged regional instability; relevant for humanitarian bond pricing and emerging-market risk premiums in the Levant.",
+          "signal": "bearish"
         },
         {
-          "headline": "European leaders discuss EU mutual defence clause as alternative to NATO coordination",
-          "summary": "Several European officials have called for debate on invoking the EU's mutual assistance mechanism amid US tensions. This reflects potential recalibration of European security architecture independent of NATO frameworks.",
+          "headline": "Somalia piracy incidents rise; at least four vessel hijackings reported in past two weeks",
+          "summary": "Al Jazeera reports at least four ships have been hijacked recently off Somalia, raising concerns about piracy resurgence. The reporting links the uptick to regional instability including the Iran conflict.",
           "source": "Al Jazeera",
-          "relevance": "Signals emerging fissures in transatlantic alliance; could reshape defense spending, procurement, and industrial policy across Europe.",
-          "signal": "watch"
+          "relevance": "Increased maritime security costs and insurance premiums for Indian Ocean shipping; affects logistics and supply chain predictability for global trade.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If US military escalation in Iran proceeds without diplomatic off-ramp, expect sustained $110+ Brent crude pricing, European strategic autonomy moves, and extended supply-chain fragmentation across energy and critical minerals.",
+      "keyTakeaway": "If the Iran-US ceasefire fragments or regional instability spreads further, insurance, energy, and shipping costs will compress margins across emerging-market exporters.",
       "rawCount": 10
     },
     "fdi": {
@@ -39,28 +46,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Brent crude exceeds $125; traders price prolonged Middle East supply disruption",
-          "summary": "Oil prices surged past $125/barrel as traders account for extended Strait of Hormuz blockade and shrinking inventories. FT World reports the surge reflects expectations of months-long disruption to Middle East supply flows.",
-          "source": "FT World",
-          "relevance": "High energy costs deter capital flows to energy-intensive sectors; shifts FDI allocation toward renewables, LNG alternatives, and energy-efficient infrastructure.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Google outpaces rivals as Big Tech AI capex plans reach $725 billion",
-          "summary": "Alphabet's cloud business grows faster than Amazon and Microsoft; Meta stock declined on raised capex guidance, while Big Tech allocates record capital to AI infrastructure. Google's relative strength suggests market confidence in competitive positioning.",
-          "source": "FT World",
-          "relevance": "Hyperscale AI capex concentration creates opportunities in semiconductor supply, data-centre real estate, and infrastructure providers; signals structural shift in tech investment priorities.",
+          "headline": "UK house prices increased in April despite Iran conflict; growth attributed to household financial strength",
+          "summary": "The Financial Times reports UK residential property prices rose unexpectedly in April 2026, with analysts attributing the gain to relative resilience in household balance sheets. The Iran war's economic impact did not suppress demand.",
+          "source": "Financial Times",
+          "relevance": "Indicates domestic demand remains intact in a major developed market; supports valuations for UK-focused real estate and consumer-facing equities.",
           "signal": "bullish"
         },
         {
-          "headline": "DCC rejects £5 billion takeover bid from KKR and Energy Capital Partners",
-          "summary": "FTSE 100 energy group DCC announced the £5 billion offer \"fundamentally undervalues\" the business, signalling resistance to PE-led consolidation in volatile energy markets.",
-          "source": "FT World",
-          "relevance": "Reflects seller confidence amid high energy prices; may indicate PE firms cautious on energy assets during geopolitical uncertainty, reducing M&A activity in sector.",
-          "signal": "neutral"
+          "headline": "Apollo Commercial Real Estate divests $8.6 billion CRE loan portfolio to Athene",
+          "summary": "Apollo Commercial Real Estate Finance announced the sale of an $8.6 billion commercial real estate loan portfolio to Athene, per stock reporting. The transaction signals portfolio rebalancing in the CRE lending space.",
+          "source": "Stock Titan (reporting on SEC filings)",
+          "relevance": "Large-scale CRE loan transfer reflects cautious sentiment on commercial property; suggests investors are rotating out of direct CRE exposure toward credit alternatives.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "India targets $130 billion in FDI inflows by 2030; Invest India CEO announces growth ambition",
+          "summary": "According to The New Indian Express, India's government investment promotion agency has set a formal target of $130 billion in foreign direct investment by 2030. No baseline FDI figure for comparison was provided in the headline.",
+          "source": "The New Indian Express",
+          "relevance": "India positioning itself as alternative to China for manufacturing and tech FDI; relevant for portfolio managers seeking emerging-market diversification.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If energy prices stabilize above $110 Brent while AI capex momentum persists, FDI will concentrate in technology and renewable infrastructure; traditional energy M&A remains subdued.",
+      "keyTakeaway": "If emerging markets like India sustain investor confidence and developed-market household finances hold, capital will continue to rotate toward growth markets rather than traditional developed-economy assets.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -69,35 +76,35 @@
       "description": "Supply chains, commodity prices, and energy security",
       "items": [
         {
-          "headline": "Iran war destroys 1.6 million barrels/day of oil demand; ING notes demand destruction offsets supply losses",
-          "summary": "ING commodity analysts reported the Middle East conflict and resulting oil price surge have destroyed 1.6 million barrels of daily demand. This demand destruction partially offsets supply losses, moderating price escalation.",
-          "source": "OilPrice.com / ING",
-          "relevance": "Demand destruction suggests price ceiling risk if macro growth slows; limits upside for high-cost producers and extends inventory build risk.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Japan considers $3 billion electricity subsidies amid LNG supply crunch",
-          "summary": "Reuters reported the Japanese government is evaluating three-month electricity subsidies (est. $3 billion) to offset LNG price surges and supply tightness affecting power generation.",
-          "source": "OilPrice.com / Reuters",
-          "relevance": "Reveals supply stress on US allies; sustained LNG price elevation redirects capex toward renewable infrastructure and storage; confirms buyer-side vulnerability to Middle East disruption.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Wall Street asset managers compete for Shell's $10-15 billion LNG Canada stake",
-          "summary": "Three major asset management firms are bidding for Shell's interest in the LNG Canada project, with valuations ranging $10-15 billion. Reflects institutional appetite for diversified North American LNG assets amid supply tightness.",
-          "source": "OilPrice.com / Reuters",
-          "relevance": "Signals confidence in long-term LNG premium and North American supply resilience; supports CAPEX in Canadian LNG infrastructure and related services.",
+          "headline": "Brent crude trading at $112.10/bbl; oil set for weekly gain on supply constraints",
+          "summary": "As of reporting time, Brent crude was trading at $112.10 per barrel and headed for a positive weekly close, per OilPrice.com. The firm attributes the strength to ongoing supply-side pressures.",
+          "source": "OilPrice.com",
+          "relevance": "Sustained elevated oil prices compress downstream manufacturing margins; increase inflation hedging demand for commodity-exposed equities and energy infrastructure.",
           "signal": "bullish"
         },
         {
-          "headline": "UAE announced departure from OPEC after 59 years; analysts assess cartel cohesion risk",
-          "summary": "Per multiple sources, the UAE's exit from OPEC+framework signals disagreement over production discipline and pricing strategy among Gulf producers. Asia Times notes this reflects a \"growing divide\" on cartel management.",
-          "source": "Asia Times / Oil & Gas 360",
-          "relevance": "Fragmentation of producer discipline raises volatility risk; could accelerate price swings and complicate long-term supply forecasting for downstream consumers.",
+          "headline": "UAE formally exits OPEC on May 1, 2026; marks latest cartel departure and shifts crude export dynamics",
+          "summary": "The United Arab Emirates announced its departure from OPEC effective May 1, 2026, ending nearly six decades of membership, according to OilPrice.com and Asia Times. The move follows other recent exits and signals fracturing of production coordination.",
+          "source": "OilPrice.com / Asia Times",
+          "relevance": "OPEC fragmentation reduces cartel price-setting power; creates volatility in crude and increases supply optionality but complicates medium-term price forecasting for energy investors.",
           "signal": "watch"
+        },
+        {
+          "headline": "Woodside Energy struggles to secure buyers for US-based LNG; pricing cited as obstacle",
+          "summary": "Woodside Energy faces difficulty marketing liquefied natural gas from its Louisiana facility, according to Reuters reporting via OilPrice.com. Unnamed sources indicate pricing misalignment with buyer demand.",
+          "source": "OilPrice.com (citing Reuters)",
+          "relevance": "LNG oversupply or pricing weakness undermines project returns for Australian energy investors; relevant for infrastructure fund valuations and energy credit spreads.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Chinese researchers test new low-cost battery technology; demand surge driven by oil-gas supply constraints",
+          "summary": "OilPrice.com reports Chinese research institutions are developing a lower-cost battery variant, with expanded development interest driven by elevated hydrocarbon prices and policy shift toward renewable alternatives.",
+          "source": "OilPrice.com",
+          "relevance": "Battery innovation accelerates energy transition; supports valuations in renewable infrastructure and EV-supply-chain materials but pressures traditional oil and gas equities.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If OPEC+ cohesion deteriorates while Iran blockade persists, expect $100-130 Brent trading range with heightened volatility, sustained LNG premiums, and accelerated energy transition capex.",
+      "keyTakeaway": "If elevated oil prices (above $110/bbl) persist and OPEC fragmentation deepens, renewable energy and battery technology investment will compound, while LNG projects face margin compression.",
       "rawCount": 10
     },
     "real-estate": {
@@ -106,28 +113,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Blackstone-backed data-centre yieldco IPO may spark wave of infrastructure yield vehicles",
-          "summary": "Infrastructure Investor reports data-centre stableco structuring is emerging as a yield-generation model following Blackstone's template. Reflects institutional appetite for long-duration, inflation-linked real-asset returns.",
+          "headline": "Apollo Commercial Real Estate sells $8.6B loan portfolio to Athene; signals shift in CRE credit positioning",
+          "summary": "Apollo Commercial Real Estate Finance divested an $8.6 billion commercial real estate loan portfolio to Athene, per stock reporting. The transaction represents significant deleveraging in commercial lending.",
+          "source": "Stock Titan",
+          "relevance": "Large portfolio sales reflect hedging or de-risking sentiment in CRE; pressures valuations for remaining CRE debt portfolios and signals tighter commercial credit conditions.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Infrastructure Investor reports flight to quality; Europe attracting capital over US on regulatory stability",
+          "summary": "According to Infrastructure Investor's roundtable discussion, four infrastructure professionals confirm capital is shifting toward European assets due to more stable regulatory frameworks and diversified dealflow compared to the US.",
           "source": "Infrastructure Investor",
-          "relevance": "Signals maturation of data-centre as core infrastructure asset class; attracts pension and sovereign-wealth capital; supports sustained capex in hyperscale facilities.",
+          "relevance": "Geographic reallocation of infrastructure capital favors European projects and utilities; affects US infrastructure fund performance and opportunity costs for European-focused allocators.",
           "signal": "bullish"
         },
         {
-          "headline": "Kyivstar completes $1.3 billion digital infrastructure investment; Ukraine rebuilds telecom resilience",
-          "summary": "Kyivstar completed its $1.3 billion investment program strengthening Ukraine's digital infrastructure. The Fast Mode reports continued capex in critical telecom assets despite ongoing geopolitical stress.",
-          "source": "The Fast Mode",
-          "relevance": "Demonstrates post-conflict infrastructure capital appetite; signals long-term FDI confidence in Eastern European rebuild cycle; supports telecom and tech services providers.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Beale Infrastructure announces $3 billion hyperscale data-centre campus in Kansas",
-          "summary": "Beale Infrastructure announced a multi-phase Kansas data-centre development as part of a $3 billion infrastructure investment. Reflects continued US strategic focus on onshore data-centre capacity amid AI demand surge.",
-          "source": "01net",
-          "relevance": "Supports continued US real-estate and construction capex; benefits construction, power, and telecoms suppliers; reflects data localisation and resilience trends.",
+          "headline": "I Squared Capital reaches $2 billion first close for Fund IV and advances Growth Markets Infrastructure Fund II",
+          "summary": "I Squared Capital announced a first close of approximately $2 billion for its flagship Fund IV and concurrent progress on a Growth Markets Infrastructure Fund II, per Infrastructure Investor. Final close timelines were not specified.",
+          "source": "Infrastructure Investor",
+          "relevance": "Successful capital raises indicate sustained institutional appetite for infrastructure equity; supports valuations for infrastructure GPs and platform companies.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If AI capex and data-localisation demand persist, US and allied-nation data-centre and digital infrastructure real estate will attract sustained institutional capital; yields remain supported by long-term lease structures.",
+      "keyTakeaway": "If regulatory stability differentials between Europe and the US persist, institutional capital will continue rotating toward European infrastructure, while CRE lending will remain under pressure absent credit normalization.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -136,28 +143,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Private equity metals-mining investments surge; Q1 2026 records $9 billion partnership",
-          "summary": "PE investments in metals and mining accelerated in Q1 2026, including a reported $9 billion partnership deal. Sahm notes sector consolidation momentum reflects commodity-price confidence and supply-chain reshoring themes.",
-          "source": "Sahm",
-          "relevance": "Signals PE conviction on critical minerals scarcity and energy-transition metals demand; supports valuations in lithium, cobalt, and rare-earth producers.",
+          "headline": "Paramount-Warner Bros. merger triggers Australian regulatory review; consumer class action filed in US",
+          "summary": "The proposed Paramount-Warner Bros. transaction, reported at $110 billion by Bloomberg Law, is under review in Australia and has been named in a subscriber class action suit filed in US courts, per multiple sources including The Hollywood Reporter.",
+          "source": "Bloomberg Law News / The Hollywood Reporter / MLex",
+          "relevance": "Regulatory friction and litigation risk increase deal execution uncertainty; relevant for entertainment and media equity valuations and debt risk premiums.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Clearlake Capital completes Qualus acquisition; power grid platform buyout from New Mountain Capital",
+          "summary": "Clearlake Capital finalized its acquisition of Qualus, a power and electric services grid platform previously owned by New Mountain Capital, per PE Hub. Deal terms were not disclosed.",
+          "source": "PE Hub",
+          "relevance": "Continued PE interest in grid modernization and energy infrastructure; reflects market appetite for assets addressing energy transition and resilience.",
           "signal": "bullish"
         },
         {
-          "headline": "OpenGate acquires TotalSafety EMEA division; PE consolidation continues in energy-services sector",
-          "summary": "PE-backed OpenGate announced acquisition of TotalSafety's EMEA operations, a provider of safety and compliance services to petrochemical and oil-gas customers. Reflects continued roll-up activity in energy-support services.",
-          "source": "PE Hub",
-          "relevance": "Shows PE appetite for safety/compliance infrastructure tied to energy producers; supports valuations in mission-critical service providers.",
+          "headline": "British International Investment targets £9 billion in new capital for African infrastructure and growth equity",
+          "summary": "BII, the UK's development finance institution, announced plans to mobilize £9 billion in fresh capital for African-focused investments, according to africaprivateequitynews.com. Deployment timeline was not specified.",
+          "source": "africaprivateequitynews.com",
+          "relevance": "Expanded DFI capital into Africa signals policy backing for emerging-market risk; improves risk-adjusted returns for Africa-focused allocators and reduces crowding-out effects.",
           "signal": "bullish"
-        },
-        {
-          "headline": "Healthcare M&A uptick in 2026; sponsors adjust deal structures to improve close rates",
-          "summary": "PE Hub reports healthcare dealmaking is accelerating in 2026, with sponsors adapting methodologies to improve transaction completion. Matthew Brohm (Arnall Golden Gregory) notes sponsors are \"rethinking methods\" to navigate volatility.",
-          "source": "PE Hub",
-          "relevance": "Signals growing appetite for defensive healthcare assets; increased deal activity supports advisory fees and infrastructure consolidation.",
-          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If geopolitical risk premiums persist and critical minerals remain supply-constrained, PE capital will concentrate in energy services, metals/mining, and essential infrastructure; healthcare consolidation will continue as defensive hedge.",
+      "keyTakeaway": "If regulatory hostility to mega-deals persists but DFI capital into growth markets accelerates, mid-market and infrastructure M&A will outperform large-cap entertainment/media consolidation.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -166,35 +173,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Indonesia signs Major Defense Pact with US while maintaining non-aligned diplomatic posture",
-          "summary": "Asia Times reports Indonesia executed rare diplomatic choreography on April 13, 2026, signing a Major Defense Pact with the Pentagon while preserving non-aligned positioning. Reflects Jakarta's strategy of hedging between US and China without formal bloc alignment.",
+          "headline": "UAE departs OPEC on May 1, 2026; Asia Times analyzes petroyuan dynamics and regional rebalancing",
+          "summary": "The United Arab Emirates formally left OPEC on May 1, per Asia Times reporting. The outlet notes the departure signals potential shifts in petrocurrency dynamics, particularly regarding yuan-denominated oil trading.",
           "source": "Asia Times",
-          "relevance": "Signals ASEAN pivot toward balancing great-power competition; supports Indonesia's defense spending and tech-transfer opportunities; may influence regional FDI patterns.",
+          "relevance": "OPEC exit opens opportunity for Gulf producer bilateral deals with Asia; reduces constraints on UAE-China trade settlement and supports renminbi internationalization goals.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "India-Bangladesh diplomatic tension escalates; India summons acting High Commissioner over Assam CM remarks",
+          "summary": "Bangladesh issued a diplomatic protest and summoned India's acting High Commissioner in response to controversial statements by Assam Chief Minister Himanta Biswa Sarma, per Asia Times reporting on April 30.",
+          "source": "Asia Times",
+          "relevance": "Regional diplomatic friction raises geopolitical risk premium for South Asian infrastructure and cross-border FDI; relevant for India-Bangladesh joint projects and treaty stability.",
           "signal": "watch"
         },
         {
-          "headline": "Turkey positioned as Iran war beneficiary without military engagement; trade and energy leverage increase",
-          "summary": "Asia Times analysis notes Turkey's notable restraint following February 28 Iran strike reflects strategic positioning to extract economic concessions. Turkey benefits from sanctions-driven redirection of Iranian trade and energy flows.",
-          "source": "Asia Times",
-          "relevance": "Turkey's geopolitical leverage increases capital-access risk for Iran-exposed firms; elevates Turkey's energy-trading and logistics intermediary role; attracts FDI in critical infrastructure.",
+          "headline": "Iran conflict impacts US agribusiness outlook for 2026; Africa evolving capital markets reshape custody demands",
+          "summary": "Successful Farming reports that elevated oil and fertilizer prices from the Iran war are boosting 2026 outlooks for US agricultural producers. Separately, African Business notes that continental capital markets are driving custodian innovation in real-time settlement and cross-border execution.",
+          "source": "Successful Farming / African Business",
+          "relevance": "Commodity price spikes benefit agribusiness equities while African market infrastructure maturation attracts institutional allocators; both support emerging-market equity valuations.",
           "signal": "bullish"
-        },
-        {
-          "headline": "South Korea pivots toward strategic autonomy; restructures amid US-China rivalry expansion",
-          "summary": "Asia Times reports Seoul is recalibrating security and economic strategy to achieve autonomy amid widening US-China competition across minerals, energy, supply chains, and technology. Reflects Seoul's reassessment of alliance dependencies.",
-          "source": "Asia Times",
-          "relevance": "Signals Korea's increased defense/tech capex and supply-chain diversification; reshuffles semiconductor, battery, and critical-minerals procurement; impacts Northeast Asia FDI flows.",
-          "signal": "watch"
-        },
-        {
-          "headline": "UAE exits OPEC after 59 years; signals producer-cartel realignment and Gulf geopolitical rebalancing",
-          "summary": "Asia Times and Oil & Gas 360 report the UAE's departure from OPEC reflects fundamental disagreement over production discipline and pricing strategy. The exit highlights divergence among Gulf producers on cartel cohesion.",
-          "source": "Asia Times / Oil & Gas 360",
-          "relevance": "Fractures traditional Gulf OPEC consensus; elevates UAE's independent pricing leverage and energy-export strategy; recalibrates Middle East geopolitical alignments.",
-          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If ASEAN non-alignment persists, Turkey's sanctions-arbitrage role expands, and UAE-Saudi differences widen, emerging-market capital flows will bifurcate: petro-states gain leverage; non-aligned manufacturers attract diversification FDI.",
+      "keyTakeaway": "If OPEC fragmentation persists and energy prices remain elevated, commodity exporters in emerging markets will see margin expansion, while African capital market infrastructure development attracts longer-term allocations.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -203,29 +203,29 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Trump administration launches trade probes to prepare new tariff regimes; Supreme Court rejection prompts restructuring",
-          "summary": "Per multiple sources, the Trump administration is conducting trade investigations to design tariff frameworks after the Supreme Court rejected prior tariff authority. New import-tax mechanisms are under development.",
-          "source": "Inquirer.com / readers.id",
-          "relevance": "Signals renewed tariff escalation risk; enterprises must reassess supply-chain exposure to US import duties; supports nearshoring and supply-chain diversification initiatives.",
+          "headline": "US threatens 100% tariffs on Chinese goods over Iran oil purchases",
+          "summary": "According to MEXC Exchange reporting, the United States has threatened punitive tariffs of 100% on Chinese imports in response to alleged Iranian oil purchases by China.",
+          "source": "MEXC Exchange",
+          "relevance": "Escalation of US-China trade friction; creates severe downside tail risk for US importers, Chinese exporters, and multinational supply chains with Asia exposure.",
           "signal": "bearish"
         },
         {
-          "headline": "EU-Mercosur trade agreement finalized; signals rules-based multilateral trade progress amid tariff uncertainty",
-          "summary": "Peterson Institute reports the EU-Mercosur trade agreement has reached finality after prolonged negotiation. The accord expands market access for agricultural and industrial goods across Atlantic trade.",
-          "source": "Peterson Institute for International Economics",
-          "relevance": "Demonstrates continued multilateral deal-closure capacity; supports South American agricultural and commodity exporters; offsets US tariff uncertainty with alternative market access.",
+          "headline": "EU launches free trade zone with Mercosur; India-New Zealand FTA operational; India-UK CETA negotiations advance",
+          "summary": "Blue News reports the EU has formally launched a major free trade agreement with Mercosur states. Separately, India-New Zealand FTA is underway and India's trade minister held talks with the UK to advance CETA implementation, per Daily Pioneer and Social News XYZ.",
+          "source": "Blue News / Daily Pioneer / Social News XYZ",
+          "relevance": "Proliferation of preferential trade agreements outside US-led framework; supports regional supply-chain fragmentation and increases opportunities for exporters in EU, South Asia, and ANZ.",
           "signal": "bullish"
         },
         {
-          "headline": "Global trade persists despite tariffs; partnerships reconfigure as tariff regimes redirect trade flows",
-          "summary": "Christian Science Monitor reports global trade volumes continue expanding despite tariff implementation, but trade patterns are shifting toward new partner configurations. Data suggests tariff-avoidance redirects rather than collapse trade.",
-          "source": "Christian Science Monitor",
-          "relevance": "Indicates supply-chain flexibility and tariff-mitigation strategies are functional; supports FDI in tariff-advantaged jurisdictions and nearshoring hubs.",
+          "headline": "Trump administration lifts tariffs on UK whiskey in gesture to departing King Charles; signals selective tariff relief",
+          "summary": "Reuters reports the Trump administration removed tariffs on UK whiskey in a symbolic gesture. The move indicates willingness to deploy tariff relief for diplomatic purposes.",
+          "source": "Reuters",
+          "relevance": "Demonstrates tariff policy volatility and scope for deal-making; undermines predictability for exporters but creates opportunities for targeted lobbying and bilateral negotiation.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If new US tariff regimes are enacted while EU-Mercosur gains traction, trade will fragment along regional blocs; nearshoring and supply-chain regionalization will accelerate across manufacturing and agriculture.",
-      "rawCount": 9
+      "keyTakeaway": "If US-China tariff escalation materializes while preferential trade blocs expand outside the US, supply chains will fragment and emerging markets with free-trade agreements will gain competitive advantage.",
+      "rawCount": 10
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
@@ -233,28 +233,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Middle East conflict tightens fertiliser exports; African food security deteriorates as supply constrains",
-          "summary": "Business Insider Africa reports Middle East conflict is restricting fertiliser exports, creating acute supply pressure for Africa's agricultural inputs. Food-security risks are escalating on the continent.",
-          "source": "Business Insider Africa",
-          "relevance": "Fertiliser supply constraints will elevate global agricultural input costs; reduces yields in import-dependent regions; supports alternative nutrient and agritech capital allocation.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Lebanon faces acute food insecurity; UN reports 1.2 million+ residents affected",
-          "summary": "UN agencies report over 1.2 million people in Lebanon face acute food insecurity. The crisis reflects broader regional supply disruptions and economic instability linked to Middle East conflict.",
-          "source": "UN / Jordanian News Agency",
-          "relevance": "Signals humanitarian-led demand for food aid and emergency nutrition; creates market for crisis-stabilised supply chains and food-security tech platforms.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Brazil sugarcane production forecast to grow 5.3% despite global commodity headwinds",
-          "summary": "Valor International reports Brazilian sugarcane production is projected to expand 5.3% in the current cycle. The forecast indicates continued yield growth in a major commodity export economy.",
-          "source": "Valor International",
-          "relevance": "Supports Brazilian agricultural-export growth and commodity revenues; reinforces Brazil's strategic commodity-supplier position amid fertiliser-constrained competitors.",
+          "headline": "House passes 2026 Farm Bill with county-level priorities; US farm bill enacted",
+          "summary": "The US House passed the 2026 Farm Bill with key provisions for county agricultural support, per the National Association of Counties and House.gov reporting.",
+          "source": "National Association of Counties / House.gov",
+          "relevance": "Confirmed farm policy stability supports crop-input pricing and provides certainty for agricultural equity and commodity derivatives markets.",
           "signal": "bullish"
+        },
+        {
+          "headline": "Brazil Potash makes case for domestic supply as Iran war disrupts fertilizer markets; Brazil reliant on 98% import dependency",
+          "summary": "Brazil Potash highlighted that Brazil accounts for 22% of global potash demand but depends on imports for 98% of supply, per AgFunder News. The firm argues Iran war-driven supply disruptions justify domestic production investment.",
+          "source": "AgFunder News",
+          "relevance": "Fertilizer supply bottlenecks create margin expansion for Brazilian domestic producers; justifies capex in agricultural input infrastructure and supports commodity prices.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Food security concerns rise due to Strait of Hormuz instability; early agtech fund closures signal sector financing stress",
+          "summary": "Inquirer.net published analysis linking Strait of Hormuz shipping risks to global food security; separately, AgFunder News reports Earlybird closed its deeptech fund, citing sector-wide unit economics challenges in agtech.",
+          "source": "Inquirer.net / AgFunder News",
+          "relevance": "Maritime risk to food supply chains increases price volatility for agricultural commodities; agtech financing contraction signals consolidation pressure and potential acquisition opportunities.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Middle East fertiliser disruption persists and African supply tightens, global agricultural input costs will rise sharply; Brazil and alternative-nutrient producers will capture margin expansion while food-import-dependent regions face inflation pressure.",
+      "keyTakeaway": "If fertilizer supply disruptions persist and maritime security costs rise, commodity-rich agricultural exporters will see margin gains, but agtech startups will face capital scarcity unless unit economics improve.",
       "rawCount": 10
     }
   }
