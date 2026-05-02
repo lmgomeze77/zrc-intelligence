@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-01T08:10:50.275Z",
-  "date": "Friday, 1 May 2026",
-  "globalBriefing": "Oil prices have stabilized near $112/bbl amid Iran ceasefire fragility, supply outages exceeding 1 billion barrels, and OPEC's structural fracturing (UAE departure on May 1). Geopolitical risk spans Ukraine military operations, Somalia piracy resurgence, and Gaza humanitarian deterioration, all depressing emerging-market sentiment. Capital flows show selective strength: UK residential property and household finances resilient; India targeting $130bn FDI by 2030; African capital markets attracting custody innovation; but CRE lending faces compression (Apollo's $8.6bn portfolio sale) and agtech venture funding is contracting. Trade policy is fragmenting: US threatens 100% China tariffs over Iran oil; EU-Mercosur and India-NZ FTAs expand; preferential blocs accelerate outside US framework. Farm bill passage stabilizes agricultural policy, but fertilizer supply disruptions and Strait of Hormuz risks create commodity price floors and input scarcity for non-self-sufficient producers like Brazil. Net effect: elevated energy prices and geopolitical risk premia will persist; capital rotates to regulated European infrastructure and commodity-hedged emerging markets while traditional CRE and low-return agtech face structural headwinds.",
+  "generated": "2026-05-02T07:42:40.450Z",
+  "date": "Saturday, 2 May 2026",
+  "globalBriefing": "Geopolitical conflict in the Middle East (Iran war day 64, Israel-Hezbollah escalation, UNIFIL troop pressure) is producing cascading economic spillovers: fertilizer supply disruption threatening global food security per WMO/Euronews; currency collapse in Iran reducing purchasing power; Gulf capital flight documented by CFR; UAE OPEC withdrawal fracturing energy coalition; and shipping route contestation reshaping trade logistics. Simultaneously, Trump tariff policy remains inconsistently applied (EU autos hit with 25%, UK whisky relief, US-India bilateral talks ongoing), while China expands African tariff preferences and global antitrust enforcers intensify scrutiny on AI subsector M&A. Infrastructure investor capital is reallocating from US to Europe seeking regulatory stability, APAC CRE sustains momentum, and PE continues take-private deployments in specialized healthcare and pharma—but tariff unpredictability and geopolitical-driven input cost shocks are creating structural headwinds for manufacturing margins and agricultural supply chains.",
   "categories": {
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -9,35 +9,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Iran announces conditional response to potential US military action; ceasefire in place since April 8",
-          "summary": "Iran's government has stated it would respond to renewed US attacks, according to Al Jazeera. A ceasefire between Iran and the US has held since April 8, 2026, though diplomatic channels remain stalled.",
+          "headline": "China urges UNIFIL reversal as Israel-Hezbollah combat produces rising mission casualties",
+          "summary": "According to Al Jazeera, China has called for reversal of UNIFIL departure from Lebanon amid escalating conflict between Israel and Hezbollah, with the UN mission documenting increased casualty figures. The statement reflects Beijing's concern over regional stability and UN peacekeeping presence amid direct-fire hostilities.",
           "source": "Al Jazeera",
-          "relevance": "Risk of ceasefire collapse would trigger immediate oil price volatility and broader regional instability affecting energy markets and FDI sentiment.",
+          "relevance": "UNIFIL troop presence and casualty escalation directly impact regional security risk premiums and logistics costs for Middle East-exposed portfolios.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Trump rejects Iranian peace proposal on day 64 of conflict; argues ceasefire terminates hostilities requirement for congressional authorization",
+          "summary": "Per Al Jazeera, President Trump states the latest Iranian peace proposal contains demands he cannot accept, and separately argues to Congress that a ceasefire means hostilities have terminated, negating the War Powers Resolution requirement for legislative approval. The position reflects continued contested interpretations of conflict status and executive authority.",
+          "source": "Al Jazeera, BBC World",
+          "relevance": "Uncertainty over conflict duration, ceasefire terms, and legal war authority creates forward valuation risk for insurance, defense contracting, and oil hedging strategies.",
           "signal": "watch"
         },
         {
-          "headline": "Russia conducts overnight strikes across Ukraine; one killed, several injured in Black Sea and central regions",
-          "summary": "Russian forces attacked multiple Ukrainian targets overnight, per Al Jazeera reporting. Casualties were recorded in the Black Sea region and central Ukraine.",
-          "source": "Al Jazeera",
-          "relevance": "Continued military operations underscore persistence of the Ukraine conflict; affects European energy security, commodity prices, and supply chain risk for investors in Eastern Europe.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Gaza unemployment soars amid economic collapse; workers report difficulty securing income on May Day",
-          "summary": "According to Al Jazeera, Gaza's labor market has contracted substantially, with unemployment rising and workers accepting precarious employment. No specific unemployment rate provided by the source.",
-          "source": "Al Jazeera",
-          "relevance": "Humanitarian deterioration signals prolonged regional instability; relevant for humanitarian bond pricing and emerging-market risk premiums in the Levant.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Somalia piracy incidents rise; at least four vessel hijackings reported in past two weeks",
-          "summary": "Al Jazeera reports at least four ships have been hijacked recently off Somalia, raising concerns about piracy resurgence. The reporting links the uptick to regional instability including the Iran conflict.",
-          "source": "Al Jazeera",
-          "relevance": "Increased maritime security costs and insurance premiums for Indian Ocean shipping; affects logistics and supply chain predictability for global trade.",
-          "signal": "bearish"
+          "headline": "US embassy in UK elevates threat level to 'severe,' advises citizens to avoid schools, churches, tourist sites and vary travel patterns",
+          "summary": "According to BBC World, the US embassy has raised its threat assessment in the United Kingdom and issued guidance for American citizens to modify movement patterns and avoid congregate locations. The advisory reflects elevated security threat assessment in a NATO ally jurisdiction.",
+          "source": "BBC World",
+          "relevance": "Elevated UK threat warnings impact travel demand, event attendance, and tourism-dependent equities; signals potential security incident risk affecting transatlantic business flows.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If the Iran-US ceasefire fragments or regional instability spreads further, insurance, energy, and shipping costs will compress margins across emerging-market exporters.",
+      "keyTakeaway": "If Iran-US conflict ceasefire remains contested and regional peacekeeping missions face rising casualty pressure, then Middle East geopolitical risk premiums will remain elevated across energy, insurance, and logistics sectors.",
       "rawCount": 10
     },
     "fdi": {
@@ -46,28 +39,21 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "UK house prices increased in April despite Iran conflict; growth attributed to household financial strength",
-          "summary": "The Financial Times reports UK residential property prices rose unexpectedly in April 2026, with analysts attributing the gain to relative resilience in household balance sheets. The Iran war's economic impact did not suppress demand.",
-          "source": "Financial Times",
-          "relevance": "Indicates domestic demand remains intact in a major developed market; supports valuations for UK-focused real estate and consumer-facing equities.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Apollo Commercial Real Estate divests $8.6 billion CRE loan portfolio to Athene",
-          "summary": "Apollo Commercial Real Estate Finance announced the sale of an $8.6 billion commercial real estate loan portfolio to Athene, per stock reporting. The transaction signals portfolio rebalancing in the CRE lending space.",
-          "source": "Stock Titan (reporting on SEC filings)",
-          "relevance": "Large-scale CRE loan transfer reflects cautious sentiment on commercial property; suggests investors are rotating out of direct CRE exposure toward credit alternatives.",
+          "headline": "Chinese investment in US remains stagnant despite potential Xi-Trump summit, per Indian Panorama analysis",
+          "summary": "According to The Indian Panorama, Chinese capital deployment to the US is not expected to recover materially even if bilateral summit occurs, signaling persistent structural barriers to cross-border investment flows. The report reflects sustained FDI friction despite diplomatic engagement.",
+          "source": "The Indian Panorama",
+          "relevance": "Sustained China-US investment decoupling constrains US portfolio company exit valuations and signals continued fragmentation of global capital allocation.",
           "signal": "bearish"
         },
         {
-          "headline": "India targets $130 billion in FDI inflows by 2030; Invest India CEO announces growth ambition",
-          "summary": "According to The New Indian Express, India's government investment promotion agency has set a formal target of $130 billion in foreign direct investment by 2030. No baseline FDI figure for comparison was provided in the headline.",
-          "source": "The New Indian Express",
-          "relevance": "India positioning itself as alternative to China for manufacturing and tech FDI; relevant for portfolio managers seeking emerging-market diversification.",
-          "signal": "bullish"
+          "headline": "Council on Foreign Relations flags disappearing Gulf capital amid Iran war, citing Wall Street risk oversight gap",
+          "summary": "Per CFR analysis, Gulf-region capital is withdrawing amid Iran conflict duration, yet Wall Street risk frameworks may be inadequately pricing this capital flight. The analysis documents capital reallocation away from Iran-adjacent risk zones.",
+          "source": "Council on Foreign Relations",
+          "relevance": "Gulf capital outflows reduce liquidity for Middle East-focused infrastructure and energy projects; increases cost of capital for regional portfolio companies.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If emerging markets like India sustain investor confidence and developed-market household finances hold, capital will continue to rotate toward growth markets rather than traditional developed-economy assets.",
+      "keyTakeaway": "If geopolitical conflict duration extends and Gulf capital continues outflow, then emerging market FDI velocity will decelerate and emerging-market-focused funds will face LP redemption pressure.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -76,35 +62,35 @@
       "description": "Supply chains, commodity prices, and energy security",
       "items": [
         {
-          "headline": "Brent crude trading at $112.10/bbl; oil set for weekly gain on supply constraints",
-          "summary": "As of reporting time, Brent crude was trading at $112.10 per barrel and headed for a positive weekly close, per OilPrice.com. The firm attributes the strength to ongoing supply-side pressures.",
-          "source": "OilPrice.com",
-          "relevance": "Sustained elevated oil prices compress downstream manufacturing margins; increase inflation hedging demand for commodity-exposed equities and energy infrastructure.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "UAE formally exits OPEC on May 1, 2026; marks latest cartel departure and shifts crude export dynamics",
-          "summary": "The United Arab Emirates announced its departure from OPEC effective May 1, 2026, ending nearly six decades of membership, according to OilPrice.com and Asia Times. The move follows other recent exits and signals fracturing of production coordination.",
-          "source": "OilPrice.com / Asia Times",
-          "relevance": "OPEC fragmentation reduces cartel price-setting power; creates volatility in crude and increases supply optionality but complicates medium-term price forecasting for energy investors.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Woodside Energy struggles to secure buyers for US-based LNG; pricing cited as obstacle",
-          "summary": "Woodside Energy faces difficulty marketing liquefied natural gas from its Louisiana facility, according to Reuters reporting via OilPrice.com. Unnamed sources indicate pricing misalignment with buyer demand.",
-          "source": "OilPrice.com (citing Reuters)",
-          "relevance": "LNG oversupply or pricing weakness undermines project returns for Australian energy investors; relevant for infrastructure fund valuations and energy credit spreads.",
+          "headline": "Iran war reshapes shipping straits geopolitics; US aims to restrict Chinese capital access, per Fortune",
+          "summary": "According to Fortune, the Iran conflict has transformed strategic maritime chokepoints into contested zones, with the US positioning to exclude Chinese logistics and capital flows. The shift affects commodity transport routes and trade financing architecture.",
+          "source": "Fortune",
+          "relevance": "Shipping route disruption and geopolitical gatekeeping increase hedging costs for energy and critical mineral supply chains; benefits logistics arbitrage and alternative routing infrastructure.",
           "signal": "bearish"
         },
         {
-          "headline": "Chinese researchers test new low-cost battery technology; demand surge driven by oil-gas supply constraints",
-          "summary": "OilPrice.com reports Chinese research institutions are developing a lower-cost battery variant, with expanded development interest driven by elevated hydrocarbon prices and policy shift toward renewable alternatives.",
+          "headline": "Iran currency crisis deepens as war impact batters sanctions-hit economy; record lows against USD",
+          "summary": "OilPrice.com documents Iran's currency falling to record lows against the US dollar as two months of conflict and air strikes compound sanctions pressure on the economy. The currency collapse reflects macroeconomic stress from conflict and external sanctions.",
           "source": "OilPrice.com",
-          "relevance": "Battery innovation accelerates energy transition; supports valuations in renewable infrastructure and EV-supply-chain materials but pressures traditional oil and gas equities.",
-          "signal": "bullish"
+          "relevance": "Currency devaluation reduces Iran's purchasing power for commodity imports and increases input costs for regional supply chains; affects pricing for oil, petrochemicals, and minerals transiting Iranian intermediaries.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "US rig count increases by 3 to 547; energy markets entering structural phase beyond volatility",
+          "summary": "Baker Hughes data cited in Oil & Gas 360 shows US rig count at 547 after +3 weekly increase, while the desk reports energy markets transitioning into structural rather than cyclical dynamics. The uptick indicates continued domestic exploration activity amid shifting market fundamentals.",
+          "source": "Oil & Gas 360",
+          "relevance": "Sustained rig deployment signals domestic energy production confidence; structural market shift may cushion energy price volatility and protect long-duration energy infrastructure valuations.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Occidental Petroleum CEO Vicki Hollub to retire June 1; COO Richard Jackson assumes leadership",
+          "summary": "World Oil reports via Oil & Gas 360 that Occidental Petroleum's President and CEO Vicki Hollub will retire effective June 1, 2026, with Chief Operating Officer Richard Jackson transitioning to the role. The leadership transition occurs during sustained energy sector activity.",
+          "source": "Oil & Gas 360 (World Oil)",
+          "relevance": "CEO transition at major integrated energy player creates potential strategy and capital allocation shifts; market will assess Jackson's appetite for M&A, carbon capture, and production growth versus Hollub's portfolio.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If elevated oil prices (above $110/bbl) persist and OPEC fragmentation deepens, renewable energy and battery technology investment will compound, while LNG projects face margin compression.",
+      "keyTakeaway": "If Iran conflict disrupts shipping routes and currency devaluation persists while US rig counts sustain upward momentum, then commodity supply fragmentation will support domestic energy producers and penalize import-dependent industrial users.",
       "rawCount": 10
     },
     "real-estate": {
@@ -113,28 +99,21 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Apollo Commercial Real Estate sells $8.6B loan portfolio to Athene; signals shift in CRE credit positioning",
-          "summary": "Apollo Commercial Real Estate Finance divested an $8.6 billion commercial real estate loan portfolio to Athene, per stock reporting. The transaction represents significant deleveraging in commercial lending.",
-          "source": "Stock Titan",
-          "relevance": "Large portfolio sales reflect hedging or de-risking sentiment in CRE; pressures valuations for remaining CRE debt portfolios and signals tighter commercial credit conditions.",
+          "headline": "Asia-Pacific commercial real estate investment momentum remained robust in Q1 2026, per institutional investor data",
+          "summary": "According to Institutional Real Estate, Inc., Asia-Pacific CRE investment activity sustained momentum through Q1 2026, indicating continued capital deployment to the region. The reading reflects persistent institutional allocations to regional property despite macro uncertainty.",
+          "source": "Institutional Real Estate, Inc.",
+          "relevance": "Sustained APAC CRE dealflow signals institutional confidence in regional economy trajectories and provides denominator growth for property-focused emerging market funds.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Infrastructure investors show flight-to-quality and reallocation toward Europe; US regulatory stability advantage eroding",
+          "summary": "Per Infrastructure Investor roundtable, four infrastructure professionals document capital migration from US to European assets, citing regulatory stability and diversified dealflow as drivers. The shift reflects changing risk-return calculus in infrastructure allocation.",
+          "source": "Infrastructure Investor",
+          "relevance": "Investor reallocation from US to European infrastructure reduces deal velocity and valuation support for US-focused infra GPs; creates opportunity for European-denominated infrastructure secondaries.",
           "signal": "bearish"
-        },
-        {
-          "headline": "Infrastructure Investor reports flight to quality; Europe attracting capital over US on regulatory stability",
-          "summary": "According to Infrastructure Investor's roundtable discussion, four infrastructure professionals confirm capital is shifting toward European assets due to more stable regulatory frameworks and diversified dealflow compared to the US.",
-          "source": "Infrastructure Investor",
-          "relevance": "Geographic reallocation of infrastructure capital favors European projects and utilities; affects US infrastructure fund performance and opportunity costs for European-focused allocators.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "I Squared Capital reaches $2 billion first close for Fund IV and advances Growth Markets Infrastructure Fund II",
-          "summary": "I Squared Capital announced a first close of approximately $2 billion for its flagship Fund IV and concurrent progress on a Growth Markets Infrastructure Fund II, per Infrastructure Investor. Final close timelines were not specified.",
-          "source": "Infrastructure Investor",
-          "relevance": "Successful capital raises indicate sustained institutional appetite for infrastructure equity; supports valuations for infrastructure GPs and platform companies.",
-          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If regulatory stability differentials between Europe and the US persist, institutional capital will continue rotating toward European infrastructure, while CRE lending will remain under pressure absent credit normalization.",
+      "keyTakeaway": "If Asia-Pacific CRE momentum sustains while European infrastructure attracts flight-to-quality capital, then US commercial real estate valuations face compression and European infra debt will see multiple expansion.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -143,28 +122,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Paramount-Warner Bros. merger triggers Australian regulatory review; consumer class action filed in US",
-          "summary": "The proposed Paramount-Warner Bros. transaction, reported at $110 billion by Bloomberg Law, is under review in Australia and has been named in a subscriber class action suit filed in US courts, per multiple sources including The Hollywood Reporter.",
-          "source": "Bloomberg Law News / The Hollywood Reporter / MLex",
-          "relevance": "Regulatory friction and litigation risk increase deal execution uncertainty; relevant for entertainment and media equity valuations and debt risk premiums.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Clearlake Capital completes Qualus acquisition; power grid platform buyout from New Mountain Capital",
-          "summary": "Clearlake Capital finalized its acquisition of Qualus, a power and electric services grid platform previously owned by New Mountain Capital, per PE Hub. Deal terms were not disclosed.",
-          "source": "PE Hub",
-          "relevance": "Continued PE interest in grid modernization and energy infrastructure; reflects market appetite for assets addressing energy transition and resilience.",
+          "headline": "Belden acquires Ruckus Networks for $1.85B, outbidding Extreme Networks; network infrastructure consolidation continues",
+          "summary": "Per SDxCentral, Belden completed acquisition of Ruckus Networks for $1.85 billion, prevailing over competing bidder Extreme Networks. The transaction reflects ongoing consolidation in enterprise networking and wireless infrastructure subsectors.",
+          "source": "SDxCentral",
+          "relevance": "Network infrastructure M&A signals continued cash deployment for enterprise tech stack consolidation; validates valuations in cloud and wireless segments as acquisition multiples.",
           "signal": "bullish"
         },
         {
-          "headline": "British International Investment targets £9 billion in new capital for African infrastructure and growth equity",
-          "summary": "BII, the UK's development finance institution, announced plans to mobilize £9 billion in fresh capital for African-focused investments, according to africaprivateequitynews.com. Deployment timeline was not specified.",
-          "source": "africaprivateequitynews.com",
-          "relevance": "Expanded DFI capital into Africa signals policy backing for emerging-market risk; improves risk-adjusted returns for Africa-focused allocators and reduces crowding-out effects.",
-          "signal": "bullish"
+          "headline": "ArchiMed to take Esperion Therapeutics private for $1.1 billion; cardio drug platform acquisition expected to close Q3 2026",
+          "summary": "Per Fierce Pharma and PE Hub, ArchiMed announced acquisition of Esperion Therapeutics for $1.1 billion to take the cardiovascular drug developer private, with close expected in Q3 2026. The transaction values the platform at $1.1 billion and reflects PE appetite for specialized pharma assets.",
+          "source": "Fierce Pharma, PE Hub",
+          "relevance": "Cardio pharma take-private validates specialist therapeutic development as buyout-eligible asset class; signals PE dry powder deployment and GP confidence in clinical-stage risk monetization.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Global antitrust enforcers tackle AI 'stealth mergers' and 'acqui-hires'; regulatory scrutiny intensifies on tech talent consolidation",
+          "summary": "Per JD Supra, antitrust authorities across jurisdictions are increasing scrutiny on AI sector M&A structured as talent acquisitions ('acqui-hires') and minority stake combinations ('stealth mergers') that bypass traditional deal notification thresholds. The enforcement focus documents regulatory response to below-threshold tech consolidation.",
+          "source": "JD Supra",
+          "relevance": "Antitrust enforcement intensity on AI talent aggregation will increase transaction friction and legal costs for tech acquirers; reduces M&A velocity in AI subsector and pressures valuation multiples for AI-dependent platform companies.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If regulatory hostility to mega-deals persists but DFI capital into growth markets accelerates, mid-market and infrastructure M&A will outperform large-cap entertainment/media consolidation.",
+      "keyTakeaway": "If antitrust enforcers continue escalating scrutiny on AI subsector M&A while PE deploys capital to carve-out and take-private transactions, then mid-market tech and specialized healthcare acquisition activity will sustain while large-cap consolidation will face regulatory delays.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -173,28 +152,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "UAE departs OPEC on May 1, 2026; Asia Times analyzes petroyuan dynamics and regional rebalancing",
-          "summary": "The United Arab Emirates formally left OPEC on May 1, per Asia Times reporting. The outlet notes the departure signals potential shifts in petrocurrency dynamics, particularly regarding yuan-denominated oil trading.",
+          "headline": "UAE withdraws from OPEC on April 28; Iranian war deepens Gulf coalition faultlines, per Asia Times analysis",
+          "summary": "According to Asia Times, the United Arab Emirates announced OPEC departure on April 28, with the analysis attributing the move to deepened regional faultlines exposed by the Iran conflict. The withdrawal documents a major policy shift from a core OPEC member.",
           "source": "Asia Times",
-          "relevance": "OPEC exit opens opportunity for Gulf producer bilateral deals with Asia; reduces constraints on UAE-China trade settlement and supports renminbi internationalization goals.",
-          "signal": "neutral"
+          "relevance": "UAE OPEC departure signals Gulf coalition fracturing and unilateral oil production policy reset; reduces OPEC+ coordination on supply and elevates oil price volatility exposure for emerging market energy importers.",
+          "signal": "bearish"
         },
         {
-          "headline": "India-Bangladesh diplomatic tension escalates; India summons acting High Commissioner over Assam CM remarks",
-          "summary": "Bangladesh issued a diplomatic protest and summoned India's acting High Commissioner in response to controversial statements by Assam Chief Minister Himanta Biswa Sarma, per Asia Times reporting on April 30.",
+          "headline": "State Department issues joint statement supporting Panama over Chinese detention of Panama-flagged vessels; characterizes incidents as 'blockade'",
+          "summary": "Per Asia Times, the US State Department issued a statement in solidarity with Panama in response to increased detentions of Panama-flagged ships at Chinese ports, which it characterized as a blockade. The US framing reflects escalating US-China friction over maritime access and Canal chokepoint control.",
           "source": "Asia Times",
-          "relevance": "Regional diplomatic friction raises geopolitical risk premium for South Asian infrastructure and cross-border FDI; relevant for India-Bangladesh joint projects and treaty stability.",
+          "relevance": "Panama Canal leverage contest and China-US maritime friction increase shipping uncertainty and insurance costs for transpacific and transcontinental trade; benefits alternative logistics routing and port infrastructure in non-aligned jurisdictions.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Myanmar: Aung San Suu Kyi moved to house arrest from prison; political economy signals remain contested despite detention status change",
+          "summary": "Asia Times documents that Aung San Suu Kyi has been transferred from prison to house arrest status, noting the shift has generated emotional response both domestically and internationally while cautioning against reading it as signal of broader political liberalization. The technical custody change does not necessarily signal regime policy reversal.",
+          "source": "Asia Times",
+          "relevance": "Myanmar detention status changes create uncertainty over political trajectory and FDI climate recovery; house arrest status may eventually enable foreign engagement or could signal hardened regime control, requiring continued monitoring for investment decision-making.",
           "signal": "watch"
-        },
-        {
-          "headline": "Iran conflict impacts US agribusiness outlook for 2026; Africa evolving capital markets reshape custody demands",
-          "summary": "Successful Farming reports that elevated oil and fertilizer prices from the Iran war are boosting 2026 outlooks for US agricultural producers. Separately, African Business notes that continental capital markets are driving custodian innovation in real-time settlement and cross-border execution.",
-          "source": "Successful Farming / African Business",
-          "relevance": "Commodity price spikes benefit agribusiness equities while African market infrastructure maturation attracts institutional allocators; both support emerging-market equity valuations.",
-          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If OPEC fragmentation persists and energy prices remain elevated, commodity exporters in emerging markets will see margin expansion, while African capital market infrastructure development attracts longer-term allocations.",
+      "keyTakeaway": "If UAE OPEC exit persists and US-China maritime friction escalates while Myanmar political status remains contested, then emerging market commodity importers face energy cost pressure while geopolitical risk-premium will persist for ASEAN and Middle East-exposed allocations.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -203,28 +182,35 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "US threatens 100% tariffs on Chinese goods over Iran oil purchases",
-          "summary": "According to MEXC Exchange reporting, the United States has threatened punitive tariffs of 100% on Chinese imports in response to alleged Iranian oil purchases by China.",
-          "source": "MEXC Exchange",
-          "relevance": "Escalation of US-China trade friction; creates severe downside tail risk for US importers, Chinese exporters, and multinational supply chains with Asia exposure.",
+          "headline": "Trump imposes 25% tariffs on EU cars and trucks, citing non-compliance with agreed trade deal terms",
+          "summary": "Per The Economic Times, President Trump announced 25% tariffs on EU automobiles and trucks, stating that the EU has not complied with existing trade agreement commitments. The action represents escalation of US-EU trade friction and implements tariff penalties for alleged non-compliance.",
+          "source": "The Economic Times",
+          "relevance": "EU automotive tariffs increase input costs for US manufacturers and reduce European export competitiveness; depresses vehicle sector equities on both continents and signals continued US trade unilateralism.",
           "signal": "bearish"
         },
         {
-          "headline": "EU launches free trade zone with Mercosur; India-New Zealand FTA operational; India-UK CETA negotiations advance",
-          "summary": "Blue News reports the EU has formally launched a major free trade agreement with Mercosur states. Separately, India-New Zealand FTA is underway and India's trade minister held talks with the UK to advance CETA implementation, per Daily Pioneer and Social News XYZ.",
-          "source": "Blue News / Daily Pioneer / Social News XYZ",
-          "relevance": "Proliferation of preferential trade agreements outside US-led framework; supports regional supply-chain fragmentation and increases opportunities for exporters in EU, South Asia, and ANZ.",
-          "signal": "bullish"
+          "headline": "Trump lifts tariffs on UK whisky to commemorate departing King Charles; selective tariff relief signals diplomatic signaling",
+          "summary": "Reuters documents that President Trump lifted tariffs on UK whisky in a gesture timed to King Charles's departure, indicating tariff policy can be deployed for diplomatic signaling and ceremonial purposes. The action demonstrates discretionary tariff application on bilateral basis.",
+          "source": "Reuters",
+          "relevance": "Selective tariff relief based on diplomatic timing signals tariff policy inconsistency and bilateral negotiation leverage; creates uncertainty for tariff predictability and suggests sector-specific lobbying can influence trade outcomes.",
+          "signal": "neutral"
         },
         {
-          "headline": "Trump administration lifts tariffs on UK whiskey in gesture to departing King Charles; signals selective tariff relief",
-          "summary": "Reuters reports the Trump administration removed tariffs on UK whiskey in a symbolic gesture. The move indicates willingness to deploy tariff relief for diplomatic purposes.",
-          "source": "Reuters",
-          "relevance": "Demonstrates tariff policy volatility and scope for deal-making; undermines predictability for exporters but creates opportunities for targeted lobbying and bilateral negotiation.",
+          "headline": "China scraps tariffs for all but one African nation; tariff-free market access establishes 'bridge for shared prosperity'",
+          "summary": "Per BBC and CGTN, China has eliminated tariffs on African imports from all nations except one, framing the move as establishing tariff-free market access to support African development. The policy represents major reduction in Chinese import barriers and signals strategic regional investment.",
+          "source": "BBC, CGTN",
+          "relevance": "Chinese tariff elimination on African goods incentivizes commodity exports and manufacturing relocation from Asia to Africa; creates competitive pressure on Asian suppliers and potentially redirects supply chains toward Africa-China trade blocs.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "US and India prioritize tariff barrier reduction in bilateral trade deal talks; WTO ministerial engagement intensifies",
+          "summary": "Per DD News and MSN, US Trade Representative Piyush Goyal has identified tariff barriers with India as a priority in ongoing bilateral trade negotiations, with engagement occurring at the WTO Ministerial Conference. The focus documents bilateral trade friction points in US-India commercial relationship.",
+          "source": "DD News, MSN",
+          "relevance": "US-India tariff negotiations could reshape bilateral trade flows and affect third-country sourcing calculus for US importers; reduced US-India barriers would redirect supply chains from China and other Asian producers.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If US-China tariff escalation materializes while preferential trade blocs expand outside the US, supply chains will fragment and emerging markets with free-trade agreements will gain competitive advantage.",
+      "keyTakeaway": "If Trump tariff policy remains selectively applied based on diplomatic signals while US-India tariff talks advance and China expands African preferential access, then supply chain fragmentation will accelerate and tariff-dependent sectors will see continued valuation pressure from policy unpredictability.",
       "rawCount": 10
     },
     "food-agriculture": {
@@ -233,28 +219,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "House passes 2026 Farm Bill with county-level priorities; US farm bill enacted",
-          "summary": "The US House passed the 2026 Farm Bill with key provisions for county agricultural support, per the National Association of Counties and House.gov reporting.",
-          "source": "National Association of Counties / House.gov",
-          "relevance": "Confirmed farm policy stability supports crop-input pricing and provides certainty for agricultural equity and commodity derivatives markets.",
-          "signal": "bullish"
+          "headline": "Fertiliser crisis linked to Iran war sparks global food security concerns; input cost shock ripples through agricultural sector",
+          "summary": "According to Euronews, fertilizer supply disruption traced to the Iran conflict is generating global food security alarms, reflecting fertilizer input cost escalation and availability risks. The connection documents how geopolitical conflict directly affects agricultural input costs and productivity.",
+          "source": "Euronews",
+          "relevance": "Iran-conflict-driven fertilizer cost shock will increase agricultural input costs globally and compress farm margins; reduces yield-per-acre expectations and elevates commodity price volatility for emerging market food importers.",
+          "signal": "bearish"
         },
         {
-          "headline": "Brazil Potash makes case for domestic supply as Iran war disrupts fertilizer markets; Brazil reliant on 98% import dependency",
-          "summary": "Brazil Potash highlighted that Brazil accounts for 22% of global potash demand but depends on imports for 98% of supply, per AgFunder News. The firm argues Iran war-driven supply disruptions justify domestic production investment.",
-          "source": "AgFunder News",
-          "relevance": "Fertilizer supply bottlenecks create margin expansion for Brazilian domestic producers; justifies capex in agricultural input infrastructure and supports commodity prices.",
-          "signal": "bullish"
+          "headline": "WMO report documents extreme heat already exceeding field limits; threatens crop yields, livestock productivity, fishing, and water availability",
+          "summary": "Per CPG Click Petróleo e Gás citing WMO analysis, extreme heat stress has already surpassed agronomic sustainability thresholds in multiple production systems, creating threats to crop yields, livestock productivity, and water availability. The finding documents climate impact on agricultural input constraints.",
+          "source": "WMO (via CPG Click Petróleo e Gás)",
+          "relevance": "Documented climate-driven yield ceiling reduces long-term agricultural supply elasticity and elevates commodity price support floors; benefits agricultural productivity technology and alternative protein platforms while pressuring traditional commodity yields.",
+          "signal": "bearish"
         },
         {
-          "headline": "Food security concerns rise due to Strait of Hormuz instability; early agtech fund closures signal sector financing stress",
-          "summary": "Inquirer.net published analysis linking Strait of Hormuz shipping risks to global food security; separately, AgFunder News reports Earlybird closed its deeptech fund, citing sector-wide unit economics challenges in agtech.",
-          "source": "Inquirer.net / AgFunder News",
-          "relevance": "Maritime risk to food supply chains increases price volatility for agricultural commodities; agtech financing contraction signals consolidation pressure and potential acquisition opportunities.",
-          "signal": "watch"
+          "headline": "US Farm Bill passes with $187 billion SNAP cuts; major social safety net reduction signals domestic policy austerity",
+          "summary": "Per Legis1, the US Farm Bill has passed with $187 billion in cuts to SNAP (Supplemental Nutrition Assistance Program), representing a major reduction in domestic food assistance spending. The provision reflects fiscal austerity priorities in agricultural policy.",
+          "source": "Legis1",
+          "relevance": "SNAP cuts reduce domestic food demand and create deflationary pressure on commodity prices; benefits budget-conscious food manufacturers while pressuring farm revenues and rural income stability.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If fertilizer supply disruptions persist and maritime security costs rise, commodity-rich agricultural exporters will see margin gains, but agtech startups will face capital scarcity unless unit economics improve.",
+      "keyTakeaway": "If Iran-driven fertilizer crisis persists, climate-driven heat stress constrains yields, and SNAP cuts reduce domestic food demand, then global commodity supply will face input scarcity while demand destruction will suppress prices—creating margin compression for commodity producers.",
       "rawCount": 10
     }
   }
