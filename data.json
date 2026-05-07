@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-06T08:25:57.831Z",
-  "date": "Wednesday, 6 May 2026",
-  "globalBriefing": "Geopolitical de-escalation in the Middle East (Hormuz pause, Iran-U.S. talks) is easing near-term crude supply-shock premiums despite 8-year-low global inventory levels; simultaneously, structural Asian tensions (China's J-35AE supply to Pakistan, India risk premium) and U.S. trade hardening (asymmetric Bangladesh terms, tariff escalation) are fragmenting global capital flows toward regionalized supply chains and higher-risk sovereigns. India's sustained real estate capital inflows (USD 30.7B) and EM central bank divergence (BOK rate-hike signals, RBI hold) suggest differentiated EM performance ahead, with currency and equity valuations increasingly dependent on individual-nation FDI and geopolitical posture.",
-  "marketOpen": "Key morning risk: any escalatory comments from Iran, U.S., or China on nuclear ambitions or Taiwan could immediately reverse yesterday's Hormuz de-risking and drive crude above USD 100 and risk-off flows into defensives.",
+  "generated": "2026-05-07T08:32:43.933Z",
+  "date": "Thursday, 7 May 2026",
+  "globalBriefing": "Iran conflict on day 69 remains unresolved despite reported US-Iran negotiations and Pakistan mediation, with Russia-Iran coordination deepening; energy prices sustained above $70/bbl WTI, benefiting integrated oil majors (Shell $6.92bn Q1 profits) and pressuring global logistics costs (Maersk +$500mn/month). Central banks navigate asymmetric inflation: BoC signals tightening if oil persists elevated, Fed holds policy steady, while Tanzania maintains 5.75% rate despite GDP growth—creating divergent monetary cycles that favor USD strength and energy-intensive sector margin compression. Supply-chain fragmentation accelerates as Australia restricts LNG exports, EU suspends methane rules, G7 coordinates critical minerals diversification, and Asia pivots energy sourcing away from Middle East, unlocking long-duration infrastructure capex but constraining near-term global growth momentum.",
+  "marketOpen": "Watch for oil price direction—if negotiations progress and prices dip below $70/bbl, energy equities and emerging market currencies face reversal; conversely, if talks stall, Maersk-type logistics warnings may widen global cost pressures and trigger flight to defensives.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,28 +10,28 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "RBI MPC holds repo rate unchanged; projects FY27 GDP growth at 6.9%",
-          "summary": "Per MSN, India's Reserve Bank maintained its policy rate while issuing a 6.9% GDP growth forecast for fiscal 2027, signaling confidence in current monetary stance amid stable growth conditions. The projection suggests the RBI sees limited near-term inflation pressures requiring rate adjustments.",
-          "source": "MSN",
-          "relevance": "Holds implications for rupiah stability and emerging market capital flows; India's growth trajectory affects EM asset valuations and commodity demand.",
-          "signal": "neutral"
+          "headline": "Bank of Canada head Macklem warns consecutive rate hikes possible if oil prices stay elevated",
+          "summary": "Per investingLive, BoC Governor Macklem signals readiness for sequential rate increases should crude prices remain elevated, reflecting energy cost pass-through to inflation expectations. Current energy market dynamics tied to Iran conflict create upside risk to Canadian monetary policy trajectory.",
+          "source": "investingLive",
+          "relevance": "CAD strength likely if oil prices persist above current levels; BoC tightening cycle would compress bond duration risk.",
+          "signal": "watch"
         },
         {
-          "headline": "ECB wage tracker indicates negotiated wage pressures stable in 2026",
-          "summary": "According to ECB data release, eurozone wage growth remains contained despite economic recovery, suggesting inflation expectations remain anchored below target levels. Stable wage dynamics reduce immediate policy pressure on the ECB's interest rate path.",
-          "source": "ECB Press Releases",
-          "relevance": "Supports EUR stability and justifies ECB's current accommodative stance; reduces likelihood of near-term hawkish surprises affecting euro fixed income.",
+          "headline": "Tanzania maintains central bank rate at 5.75% as GDP growth accelerates",
+          "summary": "Per streamlinefeed.co.ke, Tanzania's monetary authority held rates steady despite reported GDP expansion, suggesting policymakers view current restrictive settings as sufficient to manage inflation while preserving growth. Rate hold contrasts with growth trajectory, indicating confidence in disinflation progress.",
+          "source": "streamlinefeed.co.ke",
+          "relevance": "Signal of monetary policy normalization in emerging African markets; supports fixed-income entry points in TZS-denominated debt.",
           "signal": "bullish"
         },
         {
-          "headline": "BOK policymaker signals possible shift to rate hikes as inflation risks build",
-          "summary": "Per KED Global, a Bank of Korea official indicated openness to tightening monetary policy in response to emerging inflationary pressures, marking a potential pivot from the current easing cycle. The signal reflects Korea's assessment of domestic demand and imported inflation dynamics.",
-          "source": "KED Global",
-          "relevance": "Korean won and KRW-denominated assets face potential upward pressure; signals diverging monetary policy paths across EM central banks.",
-          "signal": "bearish"
+          "headline": "Federal Reserve's Williams states policy well positioned for economic risks and uncertainty",
+          "summary": "Per AOL.com citing Fed commentary, Williams indicates current rate settings (4.25–4.50%) provide adequate buffer against downside surprises. Statement suggests Fed sees symmetric risk management rather than imminent pivot.",
+          "source": "AOL.com",
+          "relevance": "Signals low near-term cut probability; supports USD strength and 2-year yield floor at current levels.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If eurozone wage stability persists while EM central banks (India, Korea) diverge on tightening, expect continued EUR outperformance against Asian currencies and wider yield spreads favoring EU fixed income.",
+      "keyTakeaway": "If oil prices remain elevated due to Iran conflict, BoC enters tightening cycle while Fed holds; USD and CAD strength follows, pressuring commodity-linked emerging market currencies.",
       "rawCount": 10
     },
     "geopolitics": {
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Trump pauses US 'Project Freedom' mission in Strait of Hormuz citing progress toward Iran agreement",
-          "summary": "Per Al Jazeera, the U.S. suspended its escort operation through the Strait of Hormuz following reported diplomatic progress in negotiations with Iran, de-escalating immediate military risk in the vital waterway. Trump stated the pause reflects movement toward a broader settlement.",
+          "headline": "Iran war day 69: Trump states US-Iran talks progressing; Tehran reviewing US proposal via Pakistan mediation",
+          "summary": "Per Al Jazeera, US President Trump reports diplomatic progress as Iran considers a ceasefire framework delivered through Pakistan as intermediary. Mediator Pakistan states efforts to \"convert ceasefire into permanent end to war.\"",
           "source": "Al Jazeera",
-          "relevance": "Reduces geopolitical oil shock premium; signals potential near-term stability in Gulf shipping lanes and global crude supply.",
+          "relevance": "Peace negotiations reduce tail-risk oil shock; positive for equities if talks advance, but market remains exposed to breakdown scenario.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Shell reports $6.92bn Q1 2026 profits boosted by Iran war oil price surge and trading windfall",
+          "summary": "Per BBC World and OilPrice.com, Shell's first-quarter earnings exceeded consensus on strength of elevated crude prices driven by Iran conflict and strong trading profit realization. Supermajor benefited from volatility-induced margin expansion.",
+          "source": "BBC World / OilPrice.com",
+          "relevance": "Energy equity valuations repriced higher on geopolitical risk premium; integrated oils outperform refiners if conflict persists.",
           "signal": "bullish"
         },
         {
-          "headline": "Syria announces dismantling of Hezbollah-linked cell plotting assassinations against government officials",
-          "summary": "According to Al Jazeera, Syrian authorities reported breaking up a network planning targeted killings of high-level state personnel, claiming the cell maintained links to Hezbollah operations. The disclosure reflects ongoing internal security tensions in post-conflict Syria.",
-          "source": "Al Jazeera",
-          "relevance": "Highlights persistent destabilization risk in Levantine geopolitics; may affect Lebanon's political stability and regional investment confidence.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Iran's football chief demands US respect IRGC during FIFA World Cup co-hosting",
-          "summary": "Per Al Jazeera, Iran's football federation chair issued a statement requiring that U.S. officials refrain from insulting Iranian military institutions during the shared tournament, signaling domestic political sensitivities around regime representation. The demand reflects parallel diplomatic negotiations occurring outside sports channels.",
-          "source": "Al Jazeera",
-          "relevance": "Underscores fragility of current Iran-US de-escalation; symbolic tensions during World Cup could signal breakdown in broader negotiations.",
-          "signal": "watch"
+          "headline": "Russia and Iran expand diplomatic coordination during high-level Moscow talks",
+          "summary": "Per boldnewsonline.com, Russia and Iran conducted high-level diplomatic engagement signaling deepened bilateral coordination. Timing coincides with US-Iran ceasefire negotiations, suggesting multi-party geopolitical repositioning.",
+          "source": "boldnewsonline.com",
+          "relevance": "Russia-Iran axis strengthening reduces US negotiating leverage; extends conflict duration risk and sustains energy price floor.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Hormuz military pause holds and Iran-US talks progress, expect crude volatility to moderate and Gulf trade premiums to compress; conversely, any symbolic diplomatic incident (e.g., World Cup protocol breach) may reignite oil shock pricing.",
+      "keyTakeaway": "If US-Iran ceasefire negotiations fail and Russia-Iran bloc solidifies, oil prices remain elevated (>$75/bbl), energy equities retain premium valuations, and emerging markets exposed to supply disruption face currency depreciation.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Oil falls below $100 after Trump pauses Hormuz escort plan; de-escalation signals ease Gulf supply pressure",
-          "summary": "Per OilPrice.com, crude prices extended second consecutive daily decline following the suspension of U.S. military operations in the Strait of Hormuz, with traders interpreting the pause as a reduction in immediate supply-shock risk. The move reflects market reassessment of geopolitical risk premium embedded in energy prices.",
-          "source": "OilPrice.com",
-          "relevance": "Lower energy costs improve corporate cash flows in oil-intensive sectors (shipping, chemicals, utilities); reduces input cost inflation for downstream industries and supports M&A valuations in energy-dependent regions.",
+          "headline": "Maersk warns economic impact of Iran conflict to ripple for months; container shipping costs surged $500mn monthly",
+          "summary": "Per FT World, the world's second-largest container shipping line reports Iran war has increased operational costs by $500 million per month and projects multi-month economic spillover from supply chain disruption. Warning reflects broader supply-side inflation transmission.",
+          "source": "FT World",
+          "relevance": "Shipping costs are leading indicator of goods inflation and margin compression for import-dependent sectors; signals sticky global cost pressures.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "SoftBank shares surge as Japanese stock market hits record high; Nikkei 225 reaches new peak post-holiday",
+          "summary": "Per FT World, SoftBank gains (via OpenAI and Arm positions) drove Nikkei 225 to all-time high after holiday closure, signaling risk-on sentiment in Japanese equities. Tech concentration in index rallies reflect AI momentum and yen weakness.",
+          "source": "FT World",
+          "relevance": "Japan tech exposure remains attractive for long-duration AI bets; yen depreciation supports export competitiveness amid global uncertainty.",
           "signal": "bullish"
         },
         {
-          "headline": "Iran's top diplomat visits China ahead of Trump-Xi summit; analysts suggest Tehran may serve as negotiating leverage",
-          "summary": "According to FT World, Iran's foreign minister traveled to Beijing in advance of scheduled U.S.-China talks, with analysts noting that Xi Jinping could deploy the Iran relationship as a bargaining tool in broader U.S. negotiations. The move signals Iran's pivot toward Asian alignment.",
+          "headline": "UniCredit to sell parts of Russian business; move will hit profits by up to €3.3 billion",
+          "summary": "Per FT World, Italian banking group UniCredit announces divestiture of Russian operations, anticipating profit impact of €3.3 billion from write-downs and exit costs. De-risking move reflects geopolitical sanctions and regulatory pressure on Russia exposure.",
           "source": "FT World",
-          "relevance": "Signals potential shift in FDI flows toward Asia-aligned sectors; Iranian capital may redirect toward Chinese and Asian counterparts; affects Western energy and tech investment trajectories in Middle East.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Diageo posts sales boost as buyers load up on drinks ahead of World Cup; Latin America drives beat",
-          "summary": "Per FT World, the FTSE 100 beverages group reported quarterly sales acceleration, driven by inventory buildup in Latin America ahead of the World Cup event, though U.S. spirits demand remained subdued. Regional strength offset North American weakness, beating analyst forecasts.",
-          "source": "FT World",
-          "relevance": "Signals consumer spending resilience in Latin American markets; validates emerging market discretionary consumption thesis and supports LatAm-focused equity valuations.",
-          "signal": "bullish"
+          "relevance": "European bank earnings at risk from Russia exits; signals broader capital reallocation away from sanctioned jurisdictions.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If U.S.-Iran de-escalation holds, Gulf de-risking will sustain lower oil prices and improve FDI returns in downstream industries; simultaneously, LatAm consumer momentum supports valuations for regional consumer and luxury-goods exposure.",
+      "keyTakeaway": "If Iran conflict persists and shipping costs remain elevated, import-dependent manufacturing sees margin compression; simultaneously, Japan tech rally and European bank Russia exits create tactical divergence favoring Asia equity rotation.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,28 +100,28 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Goldman Sachs reports global oil inventories falling to 8-year low amid third-month supply disruption",
-          "summary": "Per OilPrice.com citing Goldman Sachs analysis, crude inventory levels have reached their lowest point in eight years, with depletion occurring faster than anticipated, while the Middle East supply shock persists into its third consecutive month. The rate of inventory drawdown suggests underlying supply-demand tightness.",
+          "headline": "EU suspends methane emissions reporting rules as energy crunch intensifies amid higher oil and gas prices",
+          "summary": "Per OilPrice.com, European Union temporarily suspends regulation requiring oil and gas suppliers to report supply-chain emissions, citing energy security pressures from elevated commodity prices. Suspension signals prioritization of energy availability over environmental compliance.",
           "source": "OilPrice.com",
-          "relevance": "Despite near-term Hormuz de-escalation, structural inventory depletion supports oil price floor; any renewed geopolitical incident will trigger sharper price spikes; inflation risk to energy-intensive supply chains.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Australia plans A$10 billion fuel stockpile covering 50+ days of demand to guard against supply squeezes",
-          "summary": "According to OilPrice.com, Australia's government announced plans to spend AUD 10 billion (USD 7 billion) building strategic fuel reserves sufficient to cover at least 50 days of domestic consumption. The initiative reflects heightened energy security concerns driven by Middle East volatility.",
-          "source": "OilPrice.com",
-          "relevance": "Signals structural demand for crude and refined products; demonstrates institutional recognition of supply-shock durability; supportive for oil prices and energy infrastructure investment.",
+          "relevance": "ESG-compliant energy equities face regulatory policy reversal; fossil fuel valuations supported by near-term energy security narrative.",
           "signal": "bullish"
         },
         {
-          "headline": "EU energy ministers set to discuss domestic gas drilling in response to Middle East supply squeeze",
-          "summary": "Per OilPrice.com citing Reuters, European Union member states are evaluating local natural gas extraction as a policy response to regional energy supply pressures stemming from Middle East geopolitical tensions. The discussion reflects a shift toward energy self-sufficiency objectives.",
+          "headline": "Australia mandates LNG exporters reserve 20% of gas output for domestic market to prevent supply shortages",
+          "summary": "Per OilPrice.com, Australian government requires energy companies to allocate one-fifth of natural gas production domestically, with global LNG export implications. Mandate reflects domestic supply anxiety amid global demand surge.",
           "source": "OilPrice.com",
-          "relevance": "Supports long-term European energy infrastructure capex; creates FDI opportunities in domestic gas production and renewable energy projects; may constrain future LNG import demand from traditional suppliers.",
+          "relevance": "Structural reduction in global LNG supply tightens market; supports Asian LNG import prices and constrains energy-intensive manufacturing in Australia.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "US oil exporters surge in role as global swing supplier amid Iran conflict-driven global shortage",
+          "summary": "Per OilPrice.com, United States plays central role as world's incremental crude supplier, with surging exports helping offset global shortage triggered by Iran war. Export volumes support geopolitical leverage and energy security positioning.",
+          "source": "OilPrice.com",
+          "relevance": "US energy security strengthens relative to Europe and Asia; supports USD valuation and long-duration US energy infrastructure capex.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If inventory depletion persists and geopolitical risks remain unresolved, oil prices stabilize above USD 95–100; Australia's stockpiling and EU gas policies signal structural shift toward energy security capex, benefiting infrastructure and energy transition investment.",
+      "keyTakeaway": "If Iran conflict persists and Australia restricts LNG exports, global energy supply remains inelastic; EU methane rule suspension signals regulatory capitulation, sustaining oil/gas prices above $70/bbl WTI and supporting US energy sector capex cycle.",
       "rawCount": 10
     },
     "real-estate": {
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "India's real estate sector records USD 30.7 billion in equity inflows; sustained capital influx signals sector strength",
-          "summary": "Per Realty Plus Magazine, India's property market has attracted USD 30.7 billion in equity capital, reflecting continued institutional investor confidence in residential and commercial real estate development. The inflow underscores EM real estate's appeal amid global capital reallocation.",
-          "source": "Realty Plus Magazine",
-          "relevance": "Validates India's real estate trajectory as stable and capital-efficient; supports valuations for Indian REITs and property developers; signals sustained FDI confidence in Indian urbanization trends.",
+          "headline": "Blackstone-backed Bagmane Prime Office REIT IPO fully subscribed; Bengaluru growth story attracts capital",
+          "summary": "Per Blackstone and Devdiscourse, Bagmane's Indian office REIT achieved full subscription at IPO, signaling institutional appetite for India's tier-1 commercial real estate. Bengaluru focus reflects tech sector expansion and office space demand from AI/software firms.",
+          "source": "Devdiscourse",
+          "relevance": "India office REITs provide proxy to tech employment growth and IT capex cycle; currency depreciation risk offsets yield advantage.",
           "signal": "bullish"
         },
         {
-          "headline": "Aware Super eyes AUD 500 million Sydney office acquisition as Hong Kong investor seeks exit",
-          "summary": "According to The Australian, the Australian pension fund Aware Super is pursuing a major Sydney CBD office asset valued at AUD 500 million as a Hong Kong-based owner looks to divest, reflecting domestic capital stepping into premium commercial real estate. The transaction signals continued appetite for trophy assets.",
-          "source": "The Australian",
-          "relevance": "Indicates domestic Australian capital is rotating into office real estate; may reflect confidence in Sydney CBD recovery or desire to hedge currency exposure; affects regional CRE valuations.",
+          "headline": "Global Net Lease acquires industrial REIT for $535 million; consolidation in logistics real estate accelerates",
+          "summary": "Per The Real Deal, GNL completed $535 million industrial REIT acquisition, reflecting broader consolidation in logistics-focused commercial property. Deal size signals institutional capital chase for supply-chain aligned assets.",
+          "source": "The Real Deal",
+          "relevance": "Industrial real estate valuations elevated by supply-chain de-risking demand; cap rates compressed, limiting entry points.",
           "signal": "neutral"
         },
         {
-          "headline": "Ancala launches EUR 2 billion fourth flagship fund following EUR 1.4 billion predecessor close in February 2024",
-          "summary": "Per Infrastructure Investor, the UK infrastructure manager Ancala announced a new EUR 2 billion fund, oversubscribed above its predecessor's EUR 1.2 billion initial target that closed at EUR 1.4 billion fourteen months prior. The larger fundraise signals continued LP appetite for European infrastructure.",
+          "headline": "Partners Group emphasizes co-locating solar and storage with existing gas generation to meet US power demand at lower cost",
+          "summary": "Per Infrastructure Investor, Partners Group positions hybrid renewable-fossil energy infrastructure as cost-effective path to meeting rising US power demand. Strategy balances energy transition policy with economic fundamentals.",
           "source": "Infrastructure Investor",
-          "relevance": "Demonstrates sustained institutional capital for infrastructure debt and equity; validates 15–20 year asset class performance; supports valuations for unlisted infrastructure and private debt strategies.",
+          "relevance": "US energy transition capex favors flexible hybrid infrastructure; supports long-duration power contracts and infrastructure fund AUM growth.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If India's real estate capital flows sustain above USD 30 billion annually and European infrastructure fundraising remains robust, unlisted real estate and infrastructure will outpace public CRE indices; Australian office may face secular headwinds from remote work dynamics.",
+      "keyTakeaway": "If US power demand growth accelerates and energy prices remain elevated, hybrid solar-storage-gas projects attract institutional capital at 6–7% levered IRRs; India office REITs outperform amid tech expansion, but EM currency risk hedges costs.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,28 +160,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "EQT sweetens EUR 12 billion offer for Britain's Intertek; company weighs bid amid competitive tension",
-          "summary": "Per Reuters via Al Jazeera, the Swedish private equity firm EQT has raised its takeover proposal for the UK-listed testing and inspection services provider Intertek to approximately EUR 12 billion, with the target company evaluating the improved terms. The increased offer reflects competitive bidding dynamics.",
-          "source": "Reuters / Al Jazeera",
-          "relevance": "Signals PE appetite for defensive, recurring-revenue service businesses; EUR 12 billion valuation sets benchmark for quality service-sector M&A multiples; validates higher exit valuations in mid-market buyouts.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Gilead completes acquisition of Arcellx CAR-T biotech; trims 108 roles at Redwood City facility post-close",
-          "summary": "According to Fierce Biotech, Gilead has closed its buyout of Arcellx and subsequently eliminated 108 positions at the acquired company's California operations, consistent with typical post-acquisition integration and cost-optimization processes. The restructuring reflects synergy capture in biotech M&A.",
-          "source": "Fierce Biotech",
-          "relevance": "Demonstrates continued pharma-biotech consolidation; validates deal theses for specialized cell therapy platforms; indicates cost-cutting focus in biotech M&A post-close.",
+          "headline": "Bayer acquires Perfuse Therapeutics for $2.4 billion; bets on mid-stage vision drug platform",
+          "summary": "Per ETPharma.com, Bayer announced $2.4 billion acquisition of Perfuse Therapeutics to expand ophthalmology portfolio with mid-stage vision-treatment candidates. Deal reflects pharma M&A focus on specialty therapeutic areas with less competitive generics pressure.",
+          "source": "ETPharma.com",
+          "relevance": "Large-cap pharma M&A remains active despite macro uncertainty; specialty care valuations sustain 12–15x revenue multiples.",
           "signal": "neutral"
         },
         {
-          "headline": "GameStop issues unsolicited USD 56 billion acquisition offer targeting eBay; bid value signals activist investor thesis",
-          "summary": "Per Al Jazeera, the video game retailer GameStop has announced an uninvited takeover proposal for the online marketplace eBay valued at approximately USD 56 billion, representing a strategic shift for GameStop and testing eBay shareholder receptiveness to transformative M&A. The bid reflects activist repositioning.",
-          "source": "Al Jazeera",
-          "relevance": "Signals activist capital seeking scale in digital commerce; validates thesis that e-commerce consolidation will accelerate; eBay valuation becomes relevant to online retail comps.",
-          "signal": "watch"
+          "headline": "Core Scientific stock jumps 10% after Polaris buyout announcement; CoreWeave merger failure triggers alternative exit",
+          "summary": "Per TipRanks, Core Scientific's equity surged following Polaris acquisition announcement after failed CoreWeave merger, suggesting distressed-asset consolidation. Deal value not disclosed; signals AI infrastructure asset valuations under pressure post-failed transaction.",
+          "source": "TipRanks",
+          "relevance": "AI infrastructure M&A multiples compressed by failed public-market exits; private equity consolidation likely at discounted entry points.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Korean private equity firms diversify into real estate from core buyout strategies",
+          "summary": "Per KED Global, buyout-focused Korean PE firms shift portfolio allocation toward real estate, reflecting reduced LBO opportunities in domestic market. Strategy mirrors Asian PE trend toward infrastructure and real asset diversification.",
+          "source": "KED Global",
+          "relevance": "PE fund capital recycling toward real assets suggests equity market valuations seen as elevated; supports real estate fund deployment.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If large-cap private equity can sustain EUR 12 billion+ valuations for quality service businesses and activist capital pursues scale combinations, mid-market and large-cap M&A volumes will remain elevated; biotech consolidation will continue as pharma seeks specialized asset accretion.",
+      "keyTakeaway": "If AI infrastructure exits remain pressured and LBO multiples contract, Korean PE and global sponsors chase real estate and specialty pharma; expect M&A activity to shift toward defensive subsectors (healthcare, logistics) over high-growth tech.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -190,28 +190,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "China prepares supply of J-35AE stealth fighter to Pakistan; analysts flag nuclear escalation risk with India",
-          "summary": "Per Asia Times, China is reportedly preparing to transfer the J-35AE stealth aircraft to Pakistan, with analysts warning that the platform could enable deeper strikes into Indian territory and destabilize the existing nuclear balance between the two powers. The development marks a strategic shift in South Asian military capabilities.",
+          "headline": "Asia's geographic pivot accelerates amid Hormuz Strait crisis; long-term energy supply chain reorientation underway",
+          "summary": "Per Asia Times, Strait of Hormuz disruptions from Iran war trigger structural realignment of Asian energy sourcing and trade routes away from Persian Gulf dependence. Legacy impact extends beyond immediate conflict to reshape regional geopolitics.",
           "source": "Asia Times",
-          "relevance": "Heightens India-Pakistan geopolitical risk and investor risk premiums on South Asian equities and sovereigns; affects India's defense spending and capital allocation; may trigger Indian counter-procurement announcements.",
-          "signal": "bearish"
+          "relevance": "Asian supply-chain de-risking from Middle East creates long-duration capex cycle for alternative infrastructure; supports India and ASEAN logistics and port assets.",
+          "signal": "bullish"
         },
         {
-          "headline": "China quietly positioned Luckin Coffee as official sponsor of 2026 World Latte Art Championship; erased Taiwan recognition",
-          "summary": "According to Asia Times, Chinese coffee chain Luckin Coffee secured official World Latte Art Championship sponsorship in April 2026, with the event backdrop crediting only Luckin rather than acknowledging Taiwan's competitive presence or prior associations. The symbolic repositioning reflects China's soft-power expansion.",
+          "headline": "Japan navigates energy and security collision as Russia oil deliveries continue; Sakhalin-2 supplies Japanese refineries",
+          "summary": "Per Asia Times, Japan received Sakhalin-2 oil shipment, signaling continued Russian energy reliance despite geopolitical tension. Balance between energy diversification goals and supply security reflects pragmatic hedging strategy.",
           "source": "Asia Times",
-          "relevance": "Signals China's incremental sovereignty assertion in consumer-facing global platforms; validates thesis that China is systematizing cultural and commercial influence expansion; affects sentiment toward China-linked consumer brands and EM consumer stocks.",
+          "relevance": "Japan energy security tethered to Russia despite sanctions; constrains Japan's hard-power alignment with US-led coalition, creating policy divergence.",
           "signal": "watch"
         },
         {
-          "headline": "Two Iranian Very Large Crude Carriers successfully transited U.S. Hormuz blockade via Lombok Strait; carried 3.8 million barrels",
-          "summary": "Per Asia Times, the VLCC tankers HUGE and DERYA successfully navigated through Indonesia's Lombok Strait with 3.8 million barrels of crude, circumventing the U.S. Navy's Hormuz patrol operation. The transit demonstrates alternative shipping routes reducing dependence on the contested waterway.",
-          "source": "Asia Times",
-          "relevance": "Demonstrates Iranian sanctions evasion capability and supply-chain resilience; validates that crude flows can bypass Hormuz disruptions; reduces structural oil-shock premium and supports lower oil-price scenarios.",
-          "signal": "bearish"
+          "headline": "French investors double down on Africa amid diplomatic reset; institutional capital shifts away from post-colonial constraints",
+          "summary": "Per African Business, French institutional investors increase exposure to African business and entrepreneurship, marking departure from traditional post-colonial investment patterns. Capital reflow signals reputational reset and emerging market appetite.",
+          "source": "African Business",
+          "relevance": "Africa-focused institutional capital inflows support local currency stability and equity multiples; creates entry points for pan-African fund mandates.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If China consolidates soft-power dominance in emerging markets and Iran sustains alternative crude routes, South Asian geopolitical risk premiums will widen while global crude prices face downward pressure; India-Pakistan escalation would be primary asymmetric tail risk.",
+      "keyTakeaway": "If Asia's energy reorientation away from Gulf persists and French capital resets Africa relationships, emerging market FDI flows toward India, ASEAN, and Sub-Saharan Africa; local currency valuations supported if geopolitical risk premiums compress.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -220,28 +220,28 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "US-Bangladesh trade deal imposes 131 conditions on Bangladesh versus 6 on United States; imbalance signals asymmetric negotiation outcome",
-          "summary": "Per Daily Voice of Asia, the bilateral trade agreement between the United States and Bangladesh contains 131 compliance requirements for Bangladesh compared to six for the U.S., reflecting highly asymmetric negotiating leverage. The disparity highlights structural power imbalance in bilateral trade architecture.",
-          "source": "Daily Voice of Asia",
-          "relevance": "Signals Bangladesh faces elevated compliance costs and regulatory burden; may reduce Bangladesh competitiveness and FDI appeal; validates protectionist U.S. trade posture affecting lower-income trading partners.",
-          "signal": "bearish"
+          "headline": "G7 decries economic coercion; swipes at China over trade practices in critical minerals coordination",
+          "summary": "Per pmg-ky1.com, Group of Seven nations formally condemns what member states characterize as economic coercion, with implicit reference to China's trade and supply-chain policies. G7 critical minerals talks aim to create alternative supply chains.",
+          "source": "pmg-ky1.com",
+          "relevance": "G7 critical minerals diversification reduces China monopoly leverage; supports US and allied rare-earth and battery material capex.",
+          "signal": "bullish"
         },
         {
-          "headline": "US hardens tariff stance as trading partners seek relief, autonomy, and alternatives to U.S.-centric trade structures",
-          "summary": "According to Hinrich Foundation, the United States is intensifying tariff measures while partner nations are actively pursuing alternative trade arrangements and greater economic autonomy outside U.S.-led frameworks. The dynamic reflects a fragmentation of global trade governance.",
-          "source": "Hinrich Foundation",
-          "relevance": "Supports thesis that de-globalization and regionalization will accelerate; validates FDI shift toward intra-regional Asian and LatAm supply chains; implies margin compression for U.S. exporters.",
-          "signal": "bearish"
+          "headline": "US tariff theater fuels divide between administrations and trading partners; policy uncertainty persists",
+          "summary": "Per China Daily, US tariff positioning described as theatrical posturing creating division and uncertainty among trading partners. Commentary reflects contested interpretation of US trade policy intent and credibility.",
+          "source": "China Daily",
+          "relevance": "Tariff policy uncertainty remains elevated; companies defer capex until clarity emerges on sectoral targeting and enforcement timeline.",
+          "signal": "watch"
         },
         {
-          "headline": "America's AI boom faces blind spot in trade policy; semiconductor and input-supply chains vulnerable to disruption",
-          "summary": "Per Coalition for a Prosperous America, the U.S. AI sector expansion may be undermined by gaps in trade policy governance of critical semiconductor supplies and advanced chip inputs, leaving the industry exposed to supply-chain fragmentation. The oversight reflects misalignment between industrial and trade strategies.",
+          "headline": "America's AI boom has trade policy blind spot; strategic vulnerability in semiconductor and talent access",
+          "summary": "Per Coalition for a Prosperous America, US AI sector growth proceeds without coherent trade policy framework for critical input protection (semiconductors, rare earths, talent). Gap creates asymmetric competitive risk if adversaries use trade restrictions.",
           "source": "Coalition for a Prosperous America",
-          "relevance": "Flags systemic risk to U.S. AI competitiveness; validates thesis that semiconductor supply-chain resilience requires strategic trade alignment; supports government capex in domestic chip manufacturing.",
+          "relevance": "US AI supply-chain dependencies (TSMC, rare earths) exposed to geopolitical leverage; supports semiconductor capex and allied foundry subsidy programs.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If U.S. tariff hardening persists and asymmetric trade terms proliferate, lower-income trading partners will accelerate regionalization away from U.S. frameworks; AI sector faces chip-supply vulnerabilities absent proactive trade and industrial policy alignment.",
+      "keyTakeaway": "If G7 critical minerals diversification accelerates and US tariff policy remains unpredictable, technology supply chains fragment; alternative foundries (SMIC, Samsung, Intel foundry) attract capex, but near-term uncertainty constrains semiconductor sector multiples.",
       "rawCount": 5
     },
     "food-agriculture": {
@@ -250,28 +250,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Wheat and corn production estimates revised downward; soybean projections increased; drought pressures grain complex",
-          "summary": "Per The Western Producer and RFD-TV, U.S. crop progress reports indicate reduced wheat and corn production forecasts driven by drought stress, while soybean acreage planting surges ahead of historical norms. The mixed signals reflect regional moisture distribution and planting dynamics.",
-          "source": "The Western Producer / RFD-TV",
-          "relevance": "Supports near-term grain price support for wheat and corn; soybeans face yield-realization risk if drought intensifies; affects agricultural commodity valuations and input costs for livestock and food production.",
+          "headline": "India's government foodgrain stocks reach 604 lakh tonnes; nearly triple buffer requirement indicating surplus production",
+          "summary": "Per The Economic Times, Indian government maintains foodgrain reserves at 604 lakh tonnes, approximately 3x the statutory buffer requirement. Surplus signals strong domestic harvest and potential for export capacity expansion.",
+          "source": "The Economic Times",
+          "relevance": "India can sustain global food price stability and export volumes; supports emerging market food security and rupee stability.",
           "signal": "bullish"
         },
         {
-          "headline": "Corn closes at USD 4.80 per bushel on May 5, 2026; commodity price reflects input-cost and supply dynamics",
-          "summary": "According to Successful Farming, corn futures settled at USD 4.80 per bushel, a price level incorporating current supply expectations and input-cost pressures. The price provides a baseline for agricultural cash margins and feedstock costs.",
-          "source": "Successful Farming",
-          "relevance": "At USD 4.80, corn margins support farmer replanting decisions; feedstock costs for livestock and ethanol producers remain manageable; validates agricultural sector profitability for commodity-exposed operators.",
-          "signal": "neutral"
+          "headline": "Boomitra achieves major milestone as Mexican ranchers realize financial gains from regenerative grazing practices",
+          "summary": "Per AgFunder News, Boomitra reports ranchers in Northern Mexico receiving meaningful payments for regenerative agriculture transitions, signaling market validation of environmental practice monetization. Milestone indicates scaling of agri-carbon ecosystem.",
+          "source": "AgFunder News",
+          "relevance": "Regenerative agriculture carbon credit market matures; creates additional revenue streams for commodity producers and supports rural capex.",
+          "signal": "bullish"
         },
         {
-          "headline": "Biosphere lands Pentagon funding to build portable 'protein from air' bioreactors using UV sterilization; lower capex design",
-          "summary": "Per AgFunder News, the precision-fermentation firm Biosphere has secured Department of Defense funding to develop field-deployable bioreactors producing protein via biological air conversion, utilizing UV sterilization to reduce capital expenditure and operational costs versus traditional steam-sterilization systems. The innovation signals alternative protein commercialization.",
+          "headline": "Environmental and geopolitical pressures drive deeptech investment in agrifood solutions; engineering-intensive innovation accelerates",
+          "summary": "Per AgFunder News, agrifood sector attracts deeptech capital amid climate and supply-chain pressures, requiring engineering and scientific depth beyond traditional agtech. Trend signals shift toward capital-intensive, margin-preserving innovation.",
           "source": "AgFunder News",
-          "relevance": "Validates Pentagon's interest in alternative protein supply chains for military logistics; signals government-backed pathway for precision fermentation; supports long-term structural demand for biotech protein production over commodity grains.",
+          "relevance": "Agtech valuations support deeper technical IP and capex; venture-backed food companies pursue profitability over growth-at-loss models.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If drought pressures persist and wheat/corn supplies tighten while soybeans maintain acreage strength, grain prices will support farmer margins; Pentagon-backed alternative protein funding signals structural shift reducing commodity grain demand long-term.",
+      "keyTakeaway": "If India maintains food surplus exports and regenerative agriculture monetization scales globally, commodity price deflation supports emerging market real wages; agrifood deeptech consolidation attracts institutional VC capital at higher entry valuations.",
       "rawCount": 10
     }
   }
