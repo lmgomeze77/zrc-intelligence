@@ -1,8 +1,8 @@
 {
-  "generated": "2026-05-10T08:06:46.266Z",
-  "date": "Sunday, 10 May 2026",
-  "globalBriefing": "Global markets face compressing geopolitical risk premia as Ukraine negotiations accelerate while Middle East escalation persists, creating asymmetric commodity price exposure tied to Strait of Hormuz blockade continuity. Tariff and trade policy fragmentation (EU auto sector €8bn loss, WTO reform gridlock, rare earth supply competition) is redirecting capital flows toward US onshoring and bilateral trade corridors, while PE infrastructure deployment ($4.8bn ECP VI, $900bn data center opportunity) and fintech M&A (Capital One-Brex) validate continued equity market appetite despite macro policy uncertainty. Agricultural sector stress (fourth consecutive loss year, FAO fertilizer warnings, Midwest input inflation) and crude supply constraints from SPR depletion and Iran conflict collide with energy demand resilience, sustaining commodity volatility as structural rather than cyclical.",
-  "marketOpen": "Primary catalyst: confirmation of Ukraine ceasefire negotiation momentum or escalation signal from Putin; secondary risk: Strait of Hormuz blockade duration and fertilizer supply chain tightness; watch EU central bank policy guidance on yield trajectory and carmaker sector valuation repricing.",
+  "generated": "2026-05-11T09:37:37.597Z",
+  "date": "Monday, 11 May 2026",
+  "globalBriefing": "Divergent macro trajectories emerge: US growth projects >5% (capital-spending-driven) while ECB signals rate caution, widening USD/EUR rate differential and supporting dollar strength. Geopolitical fractures deepen—Iran-US diplomatic deadlock on day 73 sustains $80+ Brent, triggering coal-demand surges in Asia while China auto sales plummet 21.5% YoY, compressing base-metal demand. FDI contractions across Philippines (−31% YoY), India (FX reserve pressure escalating), and UK (Starmer political crisis) signal synchronized EM/DM capital reversal, with INR and GBP facing depreciation risk if crises persist; simultaneously, Indonesia's debt wall and Venezuela's post-Maduro transition uncertainty add EM credit stress.",
+  "marketOpen": "Primary catalyst: Brent crude direction contingent on Trump-Iran diplomatic signals; watch for ECB speaker commentary on rate path specificity and Asia equities' response to China auto demand collapse (−21.5% April) and potential coal-thermal-power demand recovery.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,29 +10,29 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "Banxico cuts policy rate to 6.50%, signals easing cycle approaching conclusion",
-          "summary": "Mexico's central bank reduced its benchmark rate to 6.50%, per Mexico Business News, indicating policymakers view inflation trajectory as permitting reduced accommodation. The move signals Banxico's easing cycle is nearing terminal levels.",
-          "source": "Mexico Business News",
-          "relevance": "MXN currency weakness risk if rate cuts accelerate faster than Fed tapering; emerging market fixed income exposure to Mexico faces compression.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "European yields and oil prices rise amid pending central bank decisions",
-          "summary": "European markets recorded mixed performance as oil prices and sovereign yields moved higher ahead of scheduled central bank policy announcements, per MSN reporting. The directional pressures suggest market participants are pricing in tightening risks.",
-          "source": "MSN",
-          "relevance": "Eurozone fixed income duration risk intensifying; energy sector volatility may persist until policy clarity emerges.",
+          "headline": "ECB's Kocher signals potential rate move if inflation outlook deteriorates",
+          "summary": "ECB Governing Council member Kocher reports readiness to adjust rates contingent on inflation trajectory, per AOL.com. Statement follows de Guindos' parting remarks urging caution on monetary policy timing.",
+          "source": "AOL.com",
+          "relevance": "Rate path uncertainty increases hedging demand for EUR duration; affects short-end curve positioning.",
           "signal": "watch"
         },
         {
-          "headline": "Federal Reserve approves Columbia Bank MHC and Columbia Financial regulatory applications",
-          "summary": "The Federal Reserve Board issued formal approval for related applications by Columbia Bank MHC and Columbia Financial, Inc., per official Fed announcement. No material policy implications disclosed.",
-          "source": "Federal Reserve Board",
-          "relevance": "Routine regulatory approval; minimal market signal for regional banking sector at this time.",
+          "headline": "White House economist projects US GDP growth could exceed 5% amid capital spending expansion",
+          "summary": "Senior US economic official estimates potential GDP growth above 5% driven by elevated capital expenditure, per AOL.com. Projection contrasts with ECB's cautious inflation guidance and diverges transatlantic growth narratives.",
+          "source": "AOL.com",
+          "relevance": "Divergent growth forecasts (US >5% vs. ECB caution) widen rate differential expectations; supports USD strength.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Australia pursues fiscal-monetary coordination to manage inflation amid reform initiatives",
+          "summary": "Australian government balances budget reform with inflation restraint objectives, per Reuters/Investing.com. Reflects global central bank challenge of supporting growth while controlling price pressures.",
+          "source": "Reuters",
+          "relevance": "AUD policy divergence from USD/EUR creates cross-Pacific carry trade opportunities; watch for RBA messaging.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If Eurozone central banks signal hawkish bias at upcoming decisions, EUR strength will compress relative returns on cross-asset allocations; Mexico's easing cycle end suggests MXN downside risk versus higher-yielding alternatives.",
-      "rawCount": 6
+      "keyTakeaway": "If ECB holds rates steady while US growth accelerates above 5%, USD/EUR upside to 1.15+ likely as rate differential widens; monitor next ECB meeting for inflation guidance specificity.",
+      "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Putin states Ukraine conflict 'coming to an end,' signals openness to negotiations",
-          "summary": "Russian President Putin expressed his assessment that the Ukraine conflict is approaching conclusion and indicated potential for negotiations, per BBC World. Putin simultaneously critiqued Western support for President Zelensky.",
+          "headline": "Trump rejects Iran peace proposal; Brent crude rises 3.33% as diplomatic impasse deepens",
+          "summary": "US President Trump characterized Iran's ceasefire and sanctions-relief response as 'totally unacceptable,' per Al Jazeera; oil markets spike as peace negotiations stall on day 73 of conflict. Reuters reports three supertankers successfully exited Strait of Hormuz using vessel tracking evasion.",
+          "source": "Al Jazeera / OilPrice.com",
+          "relevance": "Prolonged Iran-US standoff sustains $80+ Brent price floor; restricts corridor supply, forcing coal substitution in emerging markets.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Philippine VP Sara Duterte impeached for second time; presidential eligibility now disputed",
+          "summary": "Vice President faces Senate trial of uncertain outcome that could disqualify her from future presidential runs, per BBC World. Political instability persists in southeast Asia's key geostrategic node.",
           "source": "BBC World",
-          "relevance": "Geopolitical risk premium may compress if ceasefire negotiations materialize; energy and defense sector valuations vulnerable to de-escalation scenarios.",
+          "relevance": "Philippine policy uncertainty dampens FDI inflows (already down 31% YoY in Feb per BusinessWorld); elevated regulatory risk for Manila-listed equities.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Hantavirus confirmed in US and French nationals returning from Antarctic research vessel",
+          "summary": "One American and one French citizen tested positive after ship departure; five additional passengers quarantined in Paris 'until further notice,' per France's prime minister/BBC World. Infection source remains unconfirmed.",
+          "source": "BBC World",
+          "relevance": "Emerging infectious disease risk in research supply chains; potential disruption to Antarctic mineral exploration ventures.",
           "signal": "watch"
-        },
-        {
-          "headline": "Lebanon reports 39 killed in Israeli strikes despite announced ceasefire accord",
-          "summary": "Lebanon's government reported 39 deaths from Israeli military strikes, per BBC World, occurring despite announcement of a ceasefire agreement between Israel and Hezbollah last month. Conflict dynamics remain active.",
-          "source": "BBC World",
-          "relevance": "Middle East geopolitical risk premium remains elevated; insurance and defense contractors exposed; energy infrastructure vulnerability persists.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "EU sidelined in Ukraine talks as Russia questions European geopolitical influence",
-          "summary": "According to The Eastern Herald, the EU has been marginalized in Ukraine negotiation processes while Russia contests European strategic authority. The development signals shift in diplomatic architecture.",
-          "source": "The Eastern Herald",
-          "relevance": "European political risk increases; EUR weakness potential; divergence between US-Russia bilateral talks and EU interests creates policy uncertainty.",
-          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Putin-led negotiations accelerate toward Ukraine ceasefire, geopolitical risk premium compresses sharply across energy and defense equities; if Middle East escalation continues despite ceasefire language, Strait of Hormuz risks intensify commodity volatility.",
+      "keyTakeaway": "If Iran-US diplomatic deadlock persists beyond Q2 2026, oil supply shocks sustain >$80 Brent and force coal demand substitution in Asia, benefiting thermal coal producers while pressuring energy-intensive EM currencies.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "European carmakers absorb €8 billion tariff impact as Trump threatens 25% levy escalation",
-          "summary": "European automotive manufacturers have recorded €8 billion in losses attributable to Trump administration tariffs, per FT World, with the US president threatening further increases to 25% unless EU implements prior trade concessions. Tariff impacts remain unresolved.",
-          "source": "FT World",
-          "relevance": "European auto sector capital allocation pressure; supply chain repatriation acceleration; valuation compression for EU-listed automotive equities.",
+          "headline": "Philippines FDI net inflows contract 31% year-on-year in February amid regional instability",
+          "summary": "Foreign direct investment declined to unspecified absolute value in Feb 2026, per BusinessWorld. Contraction follows VP Duterte impeachment proceedings and reflects broader EM capital flight amid geopolitical uncertainty.",
+          "source": "BusinessWorld Online",
+          "relevance": "Southeast Asia FDI deterioration signals confidence loss in political stability; diverts growth capital toward safer developed markets.",
           "signal": "bearish"
         },
         {
-          "headline": "Germany accelerates defense procurement, plans Tomahawk purchase following Trump policy disagreement",
-          "summary": "Germany's defense minister intends to visit Washington to pursue Tomahawk air-defense acquisitions, per FT World, following Chancellor Merz's policy disagreement with US President Trump. Defense spending commitments are escalating.",
-          "source": "FT World",
-          "relevance": "US defense contractor revenues expand (Raytheon, Lockheed Martin exposure); European defense manufacturing faces competitive pressure; NATO interoperability capex accelerates.",
-          "signal": "bullish"
+          "headline": "India's PM Modi urges currency conservation as Gulf crisis pressures foreign exchange reserves",
+          "summary": "Prime Minister announces work-from-home directives, travel restrictions, and gold purchase limits to preserve foreign exchange amid Middle East energy shock, per FT World. Policy escalation signals acute external account stress.",
+          "source": "FT World / OilPrice.com",
+          "relevance": "INR depreciation risk imminent if oil prices remain above $80; capital controls framework emerging—restricts repatriation for foreign investors.",
+          "signal": "bearish"
         },
         {
-          "headline": "Aliko Dangote eyes Mombasa, Kenya for 650,000-barrel-per-day refinery mega-project",
-          "summary": "Africa's richest man, Dangote, informed Financial Times he is leaning toward Mombasa, Kenya as the site for a 650,000-barrel-per-day refinery, rather than Tanzania. The project remains subject to final site selection.",
+          "headline": "UK government bonds weaken as political pressure on PM Starmer threatens fiscal stability",
+          "summary": "Gilt yields rise as Prime Minister battles to retain office following poor election results, per FT World. Monday speech critical to preserving credibility; policy uncertainty undermines sterling-denominated asset valuations.",
           "source": "FT World",
-          "relevance": "East African FDI acceleration; Kenyan infrastructure and energy sector capex expansion; refining capacity increases regional oil import substitution.",
-          "signal": "bullish"
+          "relevance": "UK political instability elevates GBP/USD volatility; longer-duration gilts face sell-off risk if Starmer's authority erodes.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Dangote's Mombasa refinery moves toward execution, East African energy independence increases and oil import costs compress; EU tariff escalation forces automotive OEM capex reallocation toward US onshoring, reducing European manufacturing ROI.",
+      "keyTakeaway": "Simultaneous FDI contractions in Philippines (−31% YoY), India (FX pressure escalating), and UK (political risk mounting) signal broad-based EM and developed-market capital flow reversal; expect flight-to-safety into Swiss francs and Japanese yen.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,29 +100,29 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Citi forecasts continued oil market volatility tied to ongoing Iran conflict dynamics",
-          "summary": "Citigroup projects sustained crude price fluctuations pending resolution of whether Iran and US President Trump reach an agreement on hostilities, per World Oil reporting. Oil volatility remains structural until diplomatic clarity emerges.",
-          "source": "World Oil / Citi",
-          "relevance": "Energy sector valuations remain volatile; hedging costs rise; downstream margin compression risk for refiners in low-volatility scenarios.",
-          "signal": "watch"
+          "headline": "Brent crude surges 3.33% after Trump rejects Iran peace proposal; oil diplomacy stalls on day 73",
+          "summary": "US President declined Iran's May 10 ceasefire and sanctions-relief offer, described as 'totally unacceptable,' per Al Jazeera/OilPrice.com. Impasse sustains supply disruption expectations and upward price pressure in Asian trading Monday.",
+          "source": "OilPrice.com / Al Jazeera",
+          "relevance": "$80+ Brent floor limits downside; underpin oil majors' FY2026 cash generation; pressure margins for refiners and airlines.",
+          "signal": "bullish"
         },
         {
-          "headline": "Iran-Israel conflict blockade of Strait of Hormuz threatens Gulf investment boom in Central Asia",
-          "summary": "Per OilPrice.com, the 2026 US-Israel war on Iran (commenced February 28, 2026 with airstrikes; Iranian retaliation via missiles, drones, and Strait blockade) poses threats to Gulf investment programs extending into Central Asia. Regional capital flows face disruption.",
+          "headline": "Global coal imports surge in March-April as Middle East energy crisis deepens supply disruptions",
+          "summary": "Global coal shipments accelerated in recent weeks as buyers substituted away from disrupted Middle East oil and gas, per OilPrice.com. Trend reflects structural fuel-switching as energy security concerns override carbon transition timelines.",
           "source": "OilPrice.com",
-          "relevance": "Petrochemical and fertilizer supply chain risk; LNG export constraints; Central Asian infrastructure project funding delays; commodity price spikes for energy and nutrients.",
-          "signal": "bearish"
+          "relevance": "Thermal coal demand rally benefits Australian, Indonesian, and South African producers; undercuts clean energy valuations short-term.",
+          "signal": "bullish"
         },
         {
-          "headline": "US Strategic Petroleum Reserve depletion pressures Trump administration to explore military base crude reserves",
-          "summary": "The Trump administration is examining unconventional crude extraction from federal military installations as SPR reserves face continued depletion via emergency stock releases, per OilPrice.com. SPR refill capacity constraints are evident.",
+          "headline": "China car sales plunge 21.5% in April; gasoline-powered vehicle demand collapses amid fuel price shock",
+          "summary": "Passenger vehicle sales dropped 21.5% YoY in April as higher fuel costs suppressed internal combustion engine demand, per OilPrice.com. EV uptake failed to offset shortfall, signaling price elasticity weakness in auto sector.",
           "source": "OilPrice.com",
-          "relevance": "Strategic reserve depletion signals longer-term crude supply tightness; energy security premiums may rise; geopolitical leverage for oil-producing states increases.",
+          "relevance": "China auto production slowdown reduces metallurgical coal and iron ore demand; bearish for base metals and commodity currencies (AUD, BRL).",
           "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Strait of Hormuz remains disrupted by Iran blockade operations, crude and LNG prices remain elevated, compressing downstream refiner margins while upstream explorers gain; SPR depletion limits US government demand-side price management tools.",
-      "rawCount": 10
+      "keyTakeaway": "If oil prices sustain above $80 through Q3 2026 due to Iran-US impasse, thermal coal rallies further while EV adoption stalls; base metals face headwinds from China auto contraction (−21.5% April), benefiting only traditional energy and defensive commodity allocations.",
+      "rawCount": 5
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "ECP VI infrastructure fund nears $5 billion target with $4.8 billion raised in less than 18 months",
-          "summary": "Energy Capital Partners' sixth flagship infrastructure fund has accumulated $4.8 billion toward its $5 billion hard cap in under 18 months post-launch, per Infrastructure Investor. Fund momentum signals strong institutional appetite for infrastructure equity.",
-          "source": "Infrastructure Investor",
-          "relevance": "Infrastructure asset valuations remain robust; exit multiples support PE infrastructure fund performance; data center and renewable energy subsectors attract continued capital.",
+          "headline": "Nscale secures $790 million financing for AI infrastructure buildout in Norway",
+          "summary": "Data center developer closes $790M capital raise to support artificial intelligence infrastructure expansion in Nordic region, per Nscale press. Investment reflects institutional appetite for compute-intensive assets in low-cost-power jurisdictions.",
+          "source": "Nscale",
+          "relevance": "AI infrastructure capital intensity drives real estate demand in energy-rich regions; benefits European data center REITs and Norwegian property valuations.",
           "signal": "bullish"
         },
         {
-          "headline": "Blackstone, Blue Owl, and major investors chase $900 billion data center opportunity",
-          "summary": "Leading institutional investors including Blackstone and Blue Owl are deploying capital into data center development targeting a $900 billion addressable market, per Business Insider. AI compute demand is driving infrastructure consolidation.",
-          "source": "Business Insider",
-          "relevance": "Data center REIT valuations supported by demand elasticity; power infrastructure capex accelerates; real estate capital reallocation toward tech-adjacent properties.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Boston Properties REIT gains on valuation rebound speculation following office market reassessment",
-          "summary": "Boston Properties equity recorded gains attributed to market reassessment of office REIT valuations, per AD HOC NEWS. Market participants are repricing office real estate following prolonged discount phases.",
+          "headline": "Great Portland Estates reports leasing momentum at 170 Piccadilly lifts London office occupancy",
+          "summary": "UK premium office REIT announces positive lettings activity at flagship Mayfair property, per AD HOC NEWS. Data point contrasts with broader London office softness but reflects niche resilience in trophy assets.",
           "source": "AD HOC NEWS",
-          "relevance": "Office REIT valuation risk to upside if capital stack tightening reverses; hybrid work stabilization may support legacy office recovery.",
-          "signal": "watch"
+          "relevance": "London trophy office recovery supports valuations for prime central London portfolios; limited positive signal for grade-B stock amid political uncertainty.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Venture capital and pension fund participation expanded for highway PPP projects in infrastructure financing",
+          "summary": "Regulatory change permits alternative capital sources (VC, pensions) to participate in road infrastructure public-private partnerships, per The Economic Times. Policy shift broadens capital access for infrastructure sponsors.",
+          "source": "The Economic Times",
+          "relevance": "Infrastructure financing democratization reduces cost of capital for road operators; benefits Indian and emerging-market toll operators and asset-backed securitizations.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If AI-driven data center demand sustains infrastructure fund deployment velocity, traditional office REITs face relative underperformance; ECP VI's near-completion signals PE infrastructure capital availability, supporting power grid and renewable energy capex.",
+      "keyTakeaway": "If AI infrastructure capital continues flowing to Nordic data centers and PPP regulations broaden pension/VC access, long-duration infrastructure assets outperform amid yield-seeking behavior, while UK office REITs remain trapped by political instability.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,29 +160,29 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
-          "summary": "Eventbrite shareholders voted to approve a $500 million acquisition by Bending Spoons, per TicketNews. Transaction remains subject to regulatory clearance completion.",
-          "source": "TicketNews",
-          "relevance": "Digital infrastructure consolidation trend; software M&A valuations support mid-market exit multiples; SaaS buyer appetite remains stable.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Capital One completes Brex acquisition, expanding digital payments and fintech strategy",
-          "summary": "Capital One finalized its Brex buyout transaction, per MSN, enhancing the bank's digital payments capabilities and fintech market positioning. Integration execution now becomes the operational focus.",
-          "source": "MSN",
-          "relevance": "Financial services consolidation accelerates; digital payment infrastructure gains scale; traditional bank digital transformation via M&A validated.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Siris Capital to triple investment return via Equiniti portfolio company sale",
-          "summary": "Siris Capital Group expects to achieve a three-fold return on invested capital through the expected sale of portfolio company Equiniti, per PE Hub. Exit multiples reflect strong operational value creation.",
+          "headline": "Blackstone to acquire majority stake in Greek e-commerce platform Skroutz from CVC Capital Partners",
+          "summary": "Leading US asset manager completes acquisition of Skroutz (12M+ products, 9,000 merchants) from CVC, per PE Hub. Transaction reflects Blackstone's expansion into high-growth digital commerce assets in southeastern Europe.",
           "source": "PE Hub",
-          "relevance": "PE infrastructure and software returns validate continuation of elevated exit multiples; investor distributions support LP dry powder for new commitments.",
+          "relevance": "Strategic tech acquisition in Greek market signals confidence in EM digital infrastructure consolidation; supports Blackstone's LatAm/EMEA tech thesis.",
           "signal": "bullish"
+        },
+        {
+          "headline": "Capital One completes Brex acquisition; integrates digital payments capability into consumer banking platform",
+          "summary": "US bank finalizes buyout of fintech payments provider Brex, expanding digital transaction and SME lending footprint, per MSN. Transaction strengthens Capital One's competitive positioning in embedded finance segment.",
+          "source": "MSN",
+          "relevance": "US regional bank consolidation in fintech reduces competitive fragmentation; benefits large-cap regional banks; pressures independent payment processors.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Altor launches acquisition offer for Sleep Cycle; AI sleep-tracking application targeted by Nordic PE sponsor",
+          "summary": "Altor partners announce takeover bid for Sleep Cycle, an AI-powered sleep-quality tracking application, per PE Hub. Reflects Nordic PE appetite for consumer health-tech and digital wellness platforms.",
+          "source": "PE Hub",
+          "relevance": "Health-tech M&A volume suggests robust exit multiples for digital wellness; supports valuations for wearables and health app portfolios.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If PE exit multiples remain elevated through mid-2026, GP dry powder and LP appetite sustain M&A velocity; fintech consolidation via major bank acquisitions (Capital One-Brex) suggests digital payments infrastructure consolidation will continue.",
-      "rawCount": 10
+      "keyTakeaway": "Strategic M&A by large caps (Blackstone into Greek e-commerce, Capital One into fintech) signals continued consolidation in digital and EM tech; PE-backed deals in health tech reflect robust exit multiples, sustaining valuations for SaaS and consumer health platforms.",
+      "rawCount": 6
     },
     "emerging-markets": {
       "label": "Emerging Markets",
@@ -190,29 +190,29 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Pakistan leverages geopolitical positioning as multipolar competition intensifies across key regions",
-          "summary": "Pakistan has enhanced its strategic value by maintaining working relationships with rival geopolitical powers as global competition intensifies across multiple domains, per Asia Times analysis. Multipolar arbitrage is elevating Pakistan's negotiating position.",
+          "headline": "Indonesia's debt wall threatens fiscal resilience as economy runs on borrowed time despite 5% growth narrative",
+          "summary": "Indonesian government faces critical test of fiscal sustainability beneath surface-level 5% GDP growth claims; structural debt dynamics signal external vulnerability, per Asia Times. Debt servicing pressures mounting amid global rate environment.",
           "source": "Asia Times",
-          "relevance": "Pakistani political risk premium may compress if great-power accommodation deepens; currency stability benefits from diplomatic leverage; FDI inflows may accelerate.",
+          "relevance": "IDR depreciation risk elevated if debt refinancing costs spike; emerging-market credit spreads widen on Indonesia contagion concerns.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "India's defense sector emerges as strategic manufacturing hub; announces defense launches demonstrating industrial self-reliance doctrine",
+          "summary": "Indian government unveils coordinated defense manufacturing initiatives emphasizing technological autonomy and industrial capacity, per Asia Times. Policy shift signals pivot toward domestic weaponry production and reduced import dependency.",
+          "source": "Asia Times",
+          "relevance": "Defense industrialization supports Indian manufacturing valuations; reduces FX outflows for military imports; elevates geopolitical tensions with Pakistan/China.",
           "signal": "bullish"
         },
         {
-          "headline": "East African countries plan sovereign satellite launch capabilities for communications and digital access",
-          "summary": "East African governments are prioritizing sovereign satellite capabilities to enhance communications, broadcasting, and digital infrastructure access, per African Business. Space infrastructure development is becoming a regional strategic objective.",
-          "source": "African Business",
-          "relevance": "East African telecommunications capex accelerates; infrastructure fund allocations shift toward space tech; digital economy investment increases.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Morocco dominates North African corporate landscape with eight of nine largest listed companies",
-          "summary": "According to African Business, eight of the nine largest listed companies in North Africa are Moroccan entities, with 11 Moroccan firms in Africa's Top 20. Morocco's capital market concentration and corporate scale advantage is pronounced.",
-          "source": "African Business",
-          "relevance": "Moroccan equity market concentration risk; sovereign credit quality benefits from corporate tax base; MENA regional capital allocation flows toward Morocco.",
-          "signal": "bullish"
+          "headline": "Venezuela enters post-Maduro transition under VP Delcy Rodriguez; US forces captured sitting president four months prior",
+          "summary": "Vice President Rodriguez assumed presidency following US military apprehension of President Nicolás Maduro; transition details remain opaque after 120 days, per Asia Times. Political legitimacy of new regime unresolved.",
+          "source": "Asia Times",
+          "relevance": "Venezuelan oil production recovery uncertain under Rodriguez; geopolitical risk premium persists for Latin American energy assets.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Pakistan sustains its multipolar arbitrage positioning, PKR stability and asset class premiums compress; Morocco's corporate dominance in North Africa supports currency strength and infrastructure capital allocation, benefiting Moroccan sovereign credit spreads.",
-      "rawCount": 10
+      "keyTakeaway": "If Indonesia's debt servicing costs spike and IDR depreciates >8%, contagion spreads to broader EM credit; India's defense self-reliance offsets FX pressures; Venezuela's production recovery remains contingent on Rodriguez regime legitimacy.",
+      "rawCount": 5
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
@@ -220,29 +220,15 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Australia-US rare earth deal triggers backlash in Malaysia, exposing supply chain geopolitical friction",
-          "summary": "An Australia-US rare earth agreement sparked criticism in Malaysia, per The Diplomat, revealing supply chain sensitivities and competing regional interests in critical minerals access. Geopolitical competition over rare earth resources is intensifying.",
-          "source": "The Diplomat",
-          "relevance": "Rare earth supply chain fragmentation accelerates; Malaysia explores alternative suppliers; US-Australia supply agreements face regional opposition.",
-          "signal": "watch"
-        },
-        {
-          "headline": "WTO multilateralism faces structural crisis; Uganda expresses frustration with reform stagnation",
-          "summary": "Uganda has registered frustration with lack of progress on WTO institutional reforms, per The Independent Uganda, reflecting broader multilateral governance deterioration. WTO reform agendas remain gridlocked across membership.",
-          "source": "The Independent Uganda",
-          "relevance": "Bilateral and regional trade agreements displace WTO frameworks; tariff escalation risk remains elevated; trade dispute resolution clarity declines.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Multilateralism crisis and WTO reform imperative dominate trade policy discourse",
-          "summary": "Per MSN analysis, the crisis of multilateralism and the necessity of WTO reform have become central to trade policy debate. Structural governance challenges in global trade institutions are limiting dispute resolution effectiveness.",
-          "source": "MSN",
-          "relevance": "Trade policy uncertainty persists; unilateral tariff escalation risk remains; export-dependent equity sectors face valuation compression.",
+          "headline": "India faces market access challenges in ongoing EU free trade agreement negotiations",
+          "summary": "Indian negotiating position confronts barriers to agricultural and services exports under proposed EU-India FTA terms, per The India Forum. Dispute over tariff liberalization and regulatory harmonization stalls bilateral trade deepening.",
+          "source": "The India Forum",
+          "relevance": "FTA delays reduce Indian agricultural and IT services export upside; limits currency appreciation drivers for INR despite short-term FX pressures.",
           "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If WTO reform deadlock persists, bilateral and regional trade fragmentation accelerates; rare earth supply chain geopolitical competition intensifies pressure on US-China technology decoupling and critical minerals access costs.",
-      "rawCount": 4
+      "keyTakeaway": "If EU-India FTA stalls indefinitely, Indian exporters lose tariff concessions while India's FX reserve pressure from Gulf crisis intensifies; trade policy paralysis compounds macro headwinds.",
+      "rawCount": 1
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
@@ -250,29 +236,29 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "US crop prices (wheat, corn, soybean) remain below breakeven thresholds, signaling fourth consecutive loss year",
-          "summary": "Wheat, corn, and soybean prices have fallen below breakeven levels, per Capital Press, indicating the fourth consecutive year of negative farm economics. Commodity prices remain structurally suppressed relative to input costs.",
-          "source": "Capital Press",
-          "relevance": "Agricultural sector credit stress accelerates; farm bankruptcies increase; commodity derivatives pricing reflects sustained margin pressure.",
+          "headline": "West and Central African nations advance wheat self-sufficiency push amid global supply chain stress",
+          "summary": "Regional governments mobilize wheat production initiatives to reduce import dependency, per The Nation Newspaper. Policy reflects food security concerns as global supply-chain vulnerabilities persist post-pandemic.",
+          "source": "The Nation Newspaper",
+          "relevance": "African wheat production expansion reduces reliance on Black Sea/US exports; pressures global wheat prices downward if yields normalize.",
           "signal": "bearish"
         },
         {
-          "headline": "FAO warns fertilizer scarcity from Strait of Hormuz crisis threatens next harvest cycles and global food supplies",
-          "summary": "The FAO has issued a warning that fertilizer supply constraints resulting from the Strait of Hormuz blockade will affect upcoming harvest cycles and food security globally, per Global Agriculture reporting. Nutrient availability is becoming a binding constraint.",
-          "source": "Global Agriculture / FAO",
-          "relevance": "Agricultural input cost inflation accelerates; fertilizer equities rally; food price inflation risk increases; emerging market food security risk rises.",
+          "headline": "Ghana ginger shortage opens import door; Chinese suppliers gain market foothold as domestic production falters",
+          "summary": "Domestic ginger scarcity in Ghana drives rising imports from China, per CediRates. Supply disruption reflects local agricultural production challenges and shifts sourcing geography eastward.",
+          "source": "CediRates",
+          "relevance": "EM agricultural input costs rise as local production declines; Chinese suppliers consolidate agri-supply dominance in West Africa.",
           "signal": "bearish"
         },
         {
-          "headline": "Midwest farmers face rising fertilizer and diesel costs as 2026 planting season approaches",
-          "summary": "US Midwest farmers are experiencing elevated fertilizer and diesel costs ahead of the 2026 planting season, per Aberdeen Insider reporting. Input cost pressures are compressing farm margins at the beginning of the production cycle.",
-          "source": "Aberdeen Insider",
-          "relevance": "Agricultural input inflation compounds margin pressure; farm credit stress accelerates; commodity price recovery needed to restore farm profitability.",
-          "signal": "bearish"
+          "headline": "Super El Niño pattern impending; global supply chain disruptions forecast across agricultural and energy sectors",
+          "summary": "Climate modeling indicates intensified El Niño conditions looming; broad-based impacts anticipated for food production, energy, and logistics networks, per ORF Middle East. Timing and severity remain uncertain.",
+          "source": "ORF Middle East",
+          "relevance": "Weather volatility premium embeds into agricultural commodity futures; logistics costs rise; emerging-market agricultural exports face margin compression.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Strait of Hormuz remains disrupted and fertilizer supply tightens, global food prices inflate while farmer profitability remains suppressed, creating divergent risks for food retailers versus commodity producers; fourth consecutive loss year in US crop economics signals farm sector credit distress.",
-      "rawCount": 9
+      "keyTakeaway": "If Super El Niño materializes and persists into 2026 Q4, agricultural commodity volatility spikes; African wheat expansion offers partial hedge, but Ghana-style import dependency reveals supply fragility; Chinese agri-input dominance deepens.",
+      "rawCount": 5
     }
   }
 }
