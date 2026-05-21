@@ -99,45 +99,65 @@ function keyTakeaway(text) {
   `;
 }
 
-// Single item row — headline + badge + summary + relevance
-function itemRow(item, showSignal = true) {
+// Single item row — "full" mode (featured: headline + badge + summary)
+//                   or "compact" mode (headline + badge only, one line)
+// Relevance is intentionally dropped from the email; it still lives in data.json
+// and is rendered in full on the ZRC platform.
+function itemRow(item, mode = "full") {
   const headline = escapeHtml(item.headline || item.title || "");
   const summary  = formatText(item.summary || "");
-  const relevance = item.relevance ? `<div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#64748B;margin-top:6px;padding-left:10px;border-left:2px solid #E5E7EB;font-style:italic;">${escapeHtml(item.relevance)}</div>` : "";
-  const badge = showSignal ? signalBadge(item.signal || item.risk) : "";
+  const badge    = signalBadge(item.signal || item.risk);
 
-  return `
+  // COMPACT MODE — single-line teaser with gold bullet
+  if (mode === "compact") {
+    return `
     <tr>
-      <td style="padding:0 0 16px 0;">
+      <td style="padding:0 0 10px 0;">
         <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
           <tr>
-            <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#0F172A;line-height:1.4;padding-bottom:5px;">
-              ${headline}${badge ? `&nbsp;&nbsp;${badge}` : ""}
+            <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;color:#334155;line-height:1.5;">
+              <span style="color:#C9A84C;margin-right:6px;font-weight:800;">›</span>${headline}&nbsp;&nbsp;${badge}
             </td>
           </tr>
-          <tr>
-            <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#475569;line-height:1.65;">
-              ${summary}
-            </td>
-          </tr>
-          ${relevance ? `<tr><td>${relevance}</td></tr>` : ""}
         </table>
       </td>
     </tr>
+    `;
+  }
+
+  // FULL MODE — featured item, no relevance block
+  return `
     <tr>
-      <td style="border-bottom:1px solid #F1F5F9;height:0;line-height:0;font-size:0;"></td>
+      <td style="padding:0 0 14px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;color:#0F172A;line-height:1.4;padding-bottom:5px;">
+              ${headline}&nbsp;&nbsp;${badge}
+            </td>
+          </tr>
+          <tr>
+            <td style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#475569;line-height:1.6;">
+              ${summary}
+            </td>
+          </tr>
+        </table>
+      </td>
     </tr>
-    <tr><td style="height:14px;"></td></tr>
+    <tr><td style="border-bottom:1px solid #F1F5F9;height:0;line-height:0;font-size:0;"></td></tr>
+    <tr><td style="height:12px;"></td></tr>
   `;
 }
 
-// Renders a full desk section (header + items + takeaway)
+// Renders a desk section: 1 featured item (full) + remaining items as compact
+// headline-only rows + Key Takeaway chip. Drives traffic to FULL BRIEFING.
 function deskSection(cat, accent, max = 3) {
   if (!cat || !Array.isArray(cat.items) || cat.items.length === 0) return "";
   const items = cat.items.slice(0, max);
+  const [featured, ...rest] = items;
   return `
     ${sectionHeader(cat.icon || "📌", cat.label, accent)}
-    ${items.map(item => itemRow(item, true)).join("")}
+    ${itemRow(featured, "full")}
+    ${rest.map(item => itemRow(item, "compact")).join("")}
     ${keyTakeaway(cat.keyTakeaway)}
   `;
 }
