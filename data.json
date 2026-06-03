@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T10:21:24.990Z",
-  "date": "Tuesday, 2 June 2026",
-  "globalBriefing": "Central banks across Asia (BOK) and the US (Fed) are holding restrictive policy through mid-2026, sustaining elevated yields and pressuring emerging-market currencies, while geopolitical escalations in Ukraine and partial ceasefires in Levantine conflicts create asymmetric energy supply risks with Hormuz constraints supporting downstream refining margins through Q4 2026. Japanese PE capital deployment, UK FDI inflows, and Mexican REIT consolidation signal renewed institutional confidence in non-eurozone assets, contrasting with German infrastructure underutilization and US crane rental/logistics sector rollup consolidation indicating US growth concentration in software-adjacent and specialized biotech M&A. Commodity supply dynamics show China recovering LNG demand amid Australian strike risks, India's wheat production threatened by heat, and US grain prices declining—offsetting near-term food inflation but creating regional vulnerability for southern Africa and South Asia amid reshoring-driven supply chain regionalization.",
-  "marketOpen": "Monitor Asia equities (KRW, SGD sensitivity to BOK rate signal), USD-EM currency pairs (BRL, MXN structural bid from Brazil growth), and energy (Brent crude $78–82 range if Ichthys strike unresolved) for directional conviction on Q3 rate hold credibility.",
+  "generated": "2026-06-03T10:56:14.780Z",
+  "date": "Wednesday, 3 June 2026",
+  "globalBriefing": "Eurozone contraction risks and Australian GDP weakness compound macro headwinds as RBI maintains policy hold amid rupee depreciation, while US tariff proposals on 60 countries and Indian capital controls restrict FDI flows at a critical juncture. Middle East military escalation (Iran-Kuwait airport strike) and ongoing Ukraine conflict threaten Gulf energy transit and European stability, supported by IEA warnings of critically low oil inventories entering peak summer demand and Goldman Sachs forecasts of consumer behaviour shifts from energy cost pressure. Supply chain regionalization and WTO reform uncertainty signal structural cost inflation ahead, partially offset by extended grain market weakness and El Niño production risk that remains contingent on weather materialization.",
+  "marketOpen": "Monitor Middle East energy transit risk and oil inventory depletion updates; US tariff implementation timeline on 60-nation scope and eurozone Q2 GDP contraction probability dominate risk sentiment at equity open.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,28 +10,28 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "Bank of Korea signals rate hike amid strong semiconductor growth and inflation focus",
-          "summary": "According to The Korea Times and 조선일보, the Bank of Korea Governor stated strong growth provides room to prioritize inflation control, signaling a potential rate increase. The BOK is balancing robust semiconductor sector performance against price pressures.",
-          "source": "The Korea Times, 조선일보",
-          "relevance": "Higher Korean rates would strengthen KRW, reducing carry-trade attractiveness and potentially triggering EM currency volatility.",
+          "headline": "Eurozone business activity contracted in May amid war-driven inflation, pointing to potential Q2 GDP contraction",
+          "summary": "According to The Mighty 790 KFGO, eurozone business conditions weakened in May with inflation pressures attributed to war-related supply disruptions. This signals potential economic contraction in the second quarter and suggests the ECB faces headwinds for rate normalization.",
+          "source": "The Mighty 790 KFGO",
+          "relevance": "Eurozone GDP contraction would pressure EUR and weigh on equity valuations in continental Europe; rate cut timing becomes critical.",
           "signal": "bearish"
         },
         {
-          "headline": "Federal Reserve rate cut expectations fade as June mortgage outlook anticipates policy rates near current levels",
-          "summary": "Per Caledonian Record analysis, market expectations for Fed rate cuts have diminished, with mortgage rates likely to remain elevated through June as policy rates hold steady. The shift reflects persistent inflation concerns.",
-          "source": "Caledonian Record",
-          "relevance": "Sustained high Fed rates extend duration risk for bonds and reduce refinancing tailwinds for commercial real estate.",
-          "signal": "bearish"
+          "headline": "RBI Monetary Policy Committee meets with inflation, growth, and rupee stability in focus; rate hold anticipated",
+          "summary": "Per TradingView reporting, India's central bank convenes with market expectations centered on holding rates as policymakers weigh inflation persistence against growth pressures and currency depreciation. The rupee pressure reflects broader emerging market capital outflow risks.",
+          "source": "TradingView",
+          "relevance": "If RBI holds rates while rupee weakens, EM currency volatility increases; impacts INR-denominated asset returns and cross-border capital flows.",
+          "signal": "watch"
         },
         {
-          "headline": "ECB Consumer Expectations Survey results and international euro role show moderate 2025 expansion",
-          "summary": "Per ECB Press Releases, the April 2026 Consumer Expectations Survey and data on the euro's international role document moderate growth in the currency's reserve and transaction functions during 2025. No quantified percentage change disclosed.",
-          "source": "ECB Press Releases",
-          "relevance": "Modest eurozone currency internationalization supports EUR stability but indicates limited capital inflows from reserve diversification.",
-          "signal": "neutral"
+          "headline": "Australia's Q1 2026 GDP growth missed consensus estimates, with severe weather and weak demand cited as constraints",
+          "summary": "According to CNBC, Australian economic growth underperformed in the first quarter, with adverse weather conditions and soft demand reducing output. This suggests continued headwinds for the Australian economy entering mid-2026.",
+          "source": "CNBC",
+          "relevance": "Below-trend Australian GDP growth supports RBA rate-cut thesis; impacts AUD currency and equity valuations for commodity-linked sectors.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If central banks maintain restrictive policy through Q3 2026, bond yields will remain elevated and EM currencies face depreciation pressure against USD and stronger regional rates.",
+      "keyTakeaway": "If eurozone contraction materializes and growth divergence widens across major economies, expect ECB to ease while growth remains fragile in Australia and India—favoring safe-haven currencies and higher-yielding EM assets face continued pressure.",
       "rawCount": 10
     },
     "geopolitics": {
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Russia conducts massive attack on Ukrainian cities; at least 18 killed including children",
-          "summary": "Per BBC World, Russian military operations across multiple Ukrainian cities resulted in at least 18 deaths, including an eight-year-old child pulled from apartment rubble. The reporting documents casualty figures and rescue operations without attribution of military justification.",
+          "headline": "Iranian drones and missiles strike Kuwait International Airport, killing at least one person and damaging Terminal One",
+          "summary": "Per BBC World, Iranian military action hit Kuwait's civilian airport infrastructure overnight, resulting in casualties and facility damage. The attack represents direct escalation of regional military operations involving Gulf state infrastructure.",
           "source": "BBC World",
-          "relevance": "Escalation in kinetic operations raises energy supply disruption risk (Black Sea corridor) and extends insurance costs for European-bound Ukrainian commodities.",
-          "signal": "watch"
+          "relevance": "Kuwait airport disruption threatens regional air cargo flows and signals intensifying Middle East military operations; oil price volatility and geopolitical risk premiums likely to widen.",
+          "signal": "bearish"
         },
         {
-          "headline": "Israel-Hezbollah ceasefire plan accepted by both parties; clashes continue despite US framework",
-          "summary": "According to BBC World, Israel and Hezbollah have both accepted a US-brokered partial ceasefire plan, though ground clashes continue. The framework is characterized as crucial to broader Iran peace process negotiations.",
+          "headline": "US and Iran conduct mutual strikes; Kuwait reports drone attack on civilian airport as regional tensions escalate",
+          "summary": "According to BBC World, retaliatory military action between US and Iran continues, with Iranian drones striking Kuwait's international airport and causing civilian casualties. The pattern indicates sustained escalation in the Gulf region beyond bilateral US-Iran dynamics.",
           "source": "BBC World",
-          "relevance": "Ceasefire acceptance reduces immediate Strait of Hormuz closure risk but continued clashes signal implementation uncertainty for energy markets.",
-          "signal": "watch"
+          "relevance": "Broadening regional military engagement raises Strait of Hormuz transit risk; oil supply disruption scenario becomes more material for energy markets and global inflation expectations.",
+          "signal": "bearish"
         },
         {
-          "headline": "Kenya High Court orders government disclosure of Ebola facility details amid public protest and deaths",
-          "summary": "Per Al Jazeera, Kenya's High Court has mandated release of information on a US-planned Ebola treatment facility; BBC World reports two people shot dead during demonstrations in Nanyuki, with hundreds protesting the site selection.",
-          "source": "Al Jazeera, BBC World",
-          "relevance": "Judicial intervention and public unrest may delay US biosecurity infrastructure expansion in East Africa, affecting regional investment climate.",
+          "headline": "Seven killed in drone strike on civilian bus in Russian-occupied Crimea traveling between Moscow and Simferopol",
+          "summary": "Per BBC World, a civilian bus operating in Russian-controlled territory in Ukraine was struck by drone, resulting in multiple fatalities. The attack reflects ongoing military operations affecting civilian infrastructure in disputed regions.",
+          "source": "BBC World",
+          "relevance": "Continued Ukraine-Russia military operations underscore geopolitical risk in Eastern Europe; impacts energy transit routes and investment climate in adjacent EU markets.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Ukraine energy infrastructure damage accelerates or Israel-Hezbollah ceasefire collapses, oil will test $100/bbl and LNG spot prices will spike above $20/MMBtu.",
+      "keyTakeaway": "If Middle East military operations intensify beyond current scope and disrupt Gulf energy infrastructure or Strait of Hormuz transit, oil price shock scenarios increase materially; simultaneous Ukraine escalation compounds European energy security concerns.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Japan's Advantage Partners launches $1.8 billion buyout fund; Japanese private capital enters infrastructure space",
-          "summary": "Per Nikkei Asia, Advantage Partners has closed a $1.8 billion fund dedicated to leveraged buyouts, expanding Japanese PE activity in mid-market consolidation. The fund represents continued Japanese institutional capital deployment post-rate normalization.",
-          "source": "Nikkei Asia",
-          "relevance": "JPY-denominated PE fund inflows indicate capital returning to Japan's domestic economy as yen carry unwind moderates.",
-          "signal": "bullish"
+          "headline": "US proposes tariffs of at least 10% on 60 countries following forced labour investigation; represents White House effort to resurrect comprehensive tariff framework",
+          "summary": "According to Financial Times, the US administration announces tariff proposals affecting 60 nations following labour compliance reviews, marking a significant tariff policy initiative after prior legal setbacks. The scope suggests coordinated protectionist approach across multiple jurisdictions.",
+          "source": "Financial Times",
+          "relevance": "Broad tariff implementation would disrupt FDI inflows to affected countries and raise costs for multinational supply chains; impacts valuations of exporters and import-dependent sectors.",
+          "signal": "bearish"
         },
         {
-          "headline": "Sterling strengthens despite UK fiscal concerns as investment inflows rise, per Bank of America",
-          "summary": "According to Investing.com Australia citing BofA analysis, GBP has appreciated despite elevated UK government debt ratios, driven by rising foreign direct investment flows. The resilience contradicts typical fiscal-stress currency patterns.",
-          "source": "Bank of America (via Investing.com Australia)",
-          "relevance": "UK FDI inflows suggest confidence in post-Brexit trade frameworks; GBP strength supports external financing costs but pressures export competitiveness.",
-          "signal": "neutral"
+          "headline": "India tightens checks on overseas capital flows as currency depreciation pressures mount; regulatory controls intensify",
+          "summary": "Per Reuters exclusive reporting, Indian authorities implement enhanced scrutiny on outbound investment flows in response to rupee weakness and capital account pressures. The measure reflects policy response to EM currency volatility affecting India's external position.",
+          "source": "Reuters",
+          "relevance": "Tightened outbound FDI controls reduce capital mobility for Indian entities; impacts EM fund flows and cost of capital for Indian corporations with international expansion plans.",
+          "signal": "bearish"
         },
         {
-          "headline": "Shanghai promotes tech enterprise listings and steadily advances REIT inclusion in Stock Connect programs",
-          "summary": "Per AASTOCKS.com, Shanghai authorities are supporting technology enterprise IPOs with strong scientific attributes and progressively integrating Real Estate Investment Trusts into Shanghai-Hong Kong Stock Connect cross-border mechanisms.",
-          "source": "AASTOCKS.com",
-          "relevance": "REIT market integration expands cross-border capital flow channels, increasing yuan-based real estate asset liquidity for foreign institutions.",
+          "headline": "Blackstone closes $13.1 billion Asia private equity fund, largest in firm's regional history",
+          "summary": "According to HedgeCo.Net, Blackstone completes fundraising for its largest Asia-focused PE vehicle at $13.1 billion, signaling continued institutional confidence in regional mid-market investment opportunities. The capital commitment suggests sustained appetite for Asian asset acquisition.",
+          "source": "HedgeCo.Net",
+          "relevance": "Large Asia PE fund deployment supports valuations for mid-market industrial and services targets in the region; indicates PE dry powder remains available despite macro uncertainty.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Japanese PE capital and UK FDI inflows sustain, Asian and Commonwealth equity allocations will outpace eurozone capital raising through H2 2026.",
+      "keyTakeaway": "If US tariff implementation proceeds on 60-country scope while India tightens capital controls, cross-border FDI velocity slows materially; large Asia PE funds may absorb capital seeking regional refuge from protectionist policy spillover.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,28 +100,28 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Goldman Sachs forecasts strong refining profits through 2026 due to Strait of Hormuz supply constraints and diesel margin strength",
-          "summary": "Per OilPrice.com citing Goldman Sachs analysis, refining margins are expected to remain elevated through 2026 driven by petroleum product scarcity linked to the Strait of Hormuz supply crisis, with diesel spreads particularly strong.",
-          "source": "Goldman Sachs (via OilPrice.com)",
-          "relevance": "Sustained high refining margins support downstream energy stocks and compress retail fuel margins; risk asymmetry favors integrated majors over refiners.",
-          "signal": "bullish"
+          "headline": "IEA warns global oil inventories could reach critically low levels ahead of peak summer demand if stock draws accelerate",
+          "summary": "Per BOE Report analysis cited by Oil & Gas 360, the International Energy Agency projects inventory depletion risks during peak seasonal demand, contingent on continued draws. Critical stockpile levels would amplify price volatility in second-half trading.",
+          "source": "Oil & Gas 360 (source: IEA)",
+          "relevance": "Low inventory thresholds reduce supply buffer against demand shocks; increases upside oil price risk and inflation pass-through to refined products and energy-intensive manufacturing.",
+          "signal": "watch"
         },
         {
-          "headline": "China's LNG imports recover to 4.9 million tons in May; rebound ahead of summer cooling demand peak",
-          "summary": "According to Bloomberg shipping data reported by OilPrice.com, China imported 4.9 million tons of LNG in May, a slight year-on-year increase, signaling recovery demand as peak air-conditioning season approaches.",
-          "source": "Bloomberg (via OilPrice.com)",
-          "relevance": "Rising Chinese LNG demand supports spot prices and justifies additional Australian/US supply project sanctioning; signals recovery in Asian energy demand.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Strike action at Ichthys LNG facility in Australia raises supply suspension risk pending wage resolution",
-          "summary": "Per OilPrice.com, union workers at the Ichthys LNG project in Australia have begun limited industrial action, with threat of broader work suspension unless wage disputes with employers are resolved.",
+          "headline": "Goldman Sachs CEO warns tightening crude oil supply will alter consumer behaviour as imbalance with demand persists into H2 2026",
+          "summary": "According to OilPrice.com, Goldman Sachs leadership projects supply-demand imbalances will drive behavioural shifts among consumers in the second half of the year, amplifying inflation impacts. The forecast signals sustained pricing pressure absent supply recovery.",
           "source": "OilPrice.com",
-          "relevance": "Work stoppage at major LNG export terminal could disrupt Asian LNG spot markets; wage inflation in energy sector compounds operating cost pressures.",
+          "relevance": "Consumer behaviour adjustment due to energy costs signals structural inflation persistence; impacts CPI expectations and central bank rate trajectory across developed markets.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Australian LNG production disrupted by industrial action at Ichthys project; cargo loadings delayed as strike action begins",
+          "summary": "Per Reuters reporting cited by OilPrice.com, labor action at the Ichthys LNG facility offshore Australia has begun impacting cargo operations, with vessel delays reported. The supply disruption affects LNG market balances during peak demand season.",
+          "source": "OilPrice.com",
+          "relevance": "Australian LNG supply interruption tightens global LNG markets and supports spot price premiums; impacts Asian buyer costs and energy-intensive manufacturing competitiveness.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Hormuz-driven refining margin compression reverses or Australian LNG strikes broaden, Brent crude will consolidate $75–85/bbl and Asian LNG will remain $15–18/MMBtu through Q4 2026.",
+      "keyTakeaway": "If global oil inventories deplete to critical levels while LNG supply disruptions persist and Middle East transit risks elevate, energy price shocks become more probable; consumer demand destruction and inflation volatility would follow.",
       "rawCount": 10
     },
     "real-estate": {
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Mexico's Fibra MTY wins bidding war for Fibra Macquarie in $1.7 billion all-cash acquisition",
-          "summary": "Per Bloomberg, Mexico's Fibra MTY has prevailed in competitive bidding to acquire Fibra Macquarie for $1.7 billion, consolidating Mexican REIT market presence and signaling confidence in regional property valuations.",
-          "source": "Bloomberg",
-          "relevance": "Successful large-cap REIT M&A indicates stable financing conditions and institutional appetite for Mexico property exposure despite peso volatility.",
+          "headline": "EU and South Africa partner to fund energy transition projects, coordinating investment framework for infrastructure decarbonization",
+          "summary": "According to Enlit World, EU and South African authorities establish joint financing mechanism for energy transition initiatives, signaling coordinated capital mobilization for infrastructure modernization. Partnership structure supports renewable and grid modernization deployment.",
+          "source": "Enlit World",
+          "relevance": "EU-South Africa energy transition funding creates infrastructure investment opportunity set; benefits renewable energy developers and grid modernization contractors in the region.",
           "signal": "bullish"
         },
         {
-          "headline": "Germany's EUR 500 billion infrastructure fund falls short of spending and project implementation targets",
-          "summary": "Per Prop News Time and Devdiscourse reporting, Germany's major infrastructure fund has underperformed on both capital deployment and project execution metrics, signaling execution risk and delayed stimulus multiplier effects.",
-          "source": "Prop News Time, Devdiscourse",
-          "relevance": "Underutilized German infrastructure spending reduces eurozone capex-driven growth expectations and pressures construction-sector M&A activity.",
-          "signal": "bearish"
+          "headline": "UK-Ghana investment and skills pact advances bilateral economic cooperation; job creation and infrastructure investment targeted",
+          "summary": "Per Mirage News, UK and Ghana announce partnership framework emphasizing employment generation and capital investment, with skills development components. The accord reflects bilateral commitment to infrastructure and human capital advancement.",
+          "source": "Mirage News",
+          "relevance": "UK-Ghana infrastructure investment pact opens project finance opportunities for British and African developers; supports long-term emerging market real asset returns.",
+          "signal": "neutral"
         },
         {
-          "headline": "UBS initiates Seven Hills Realty Trust with buy rating citing attractive valuation; firm closes $52.3 million in mortgage loans",
-          "summary": "According to Investing.com, UBS has initiated coverage of Seven Hills Realty Trust with a positive rating based on valuation levels; Business Wire reports the firm closed two first mortgage loans totaling $52.3 million, signaling active lending operations.",
-          "source": "Investing.com, Business Wire",
-          "relevance": "Renewed analyst coverage and active mortgage origination in US REIT space indicate normalizing credit availability and income stability for mortgage REITs.",
+          "headline": "UBS initiates Seven Hills Realty Trust coverage with buy rating, citing attractive valuation metrics in current REIT landscape",
+          "summary": "According to Investing.com, UBS begins equity research coverage on Seven Hills Realty Trust with positive recommendation based on valuation assessment. The initiation suggests institutional analyst view of relative value in select REIT securities.",
+          "source": "Investing.com",
+          "relevance": "UBS buy initiation on Seven Hills REIT may attract institutional capital flows to select real estate securities; indicates selective REIT valuations offer entry points despite sector headwinds.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If German infrastructure utilization accelerates and US REIT dividend yields hold above 4%, European infrastructure plays and US mortgage REITs will outperform residential REIT valuations through year-end.",
+      "keyTakeaway": "If EU-South Africa and UK-Ghana infrastructure partnerships deploy committed capital on schedule, emerging market real asset infrastructure will benefit; however, REIT valuations remain dependent on interest rate trajectory and credit spreads.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,28 +160,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Barry Diller's People Entertainment bids for MGM Resorts, values casino operator at $18 billion",
-          "summary": "Per Reuters, People Entertainment, controlled by Barry Diller, has submitted a bid to acquire MGM Resorts at an enterprise valuation of $18 billion, marking entry of major media investor into gaming sector consolidation.",
+          "headline": "U.S. Bancorp completes acquisition of BTIG, expanding capital markets platform and investment banking capabilities",
+          "summary": "Per Yahoo Finance Singapore, U.S. Bancorp finalizes BTIG buyout transaction, adding capital markets infrastructure and advisory services to its investment banking division. The completion enhances Bancorp's competitive positioning in institutional finance.",
+          "source": "Yahoo Finance Singapore",
+          "relevance": "Bancorp's BTIG acquisition consolidates capital markets capacity and cross-selling opportunities; supports revenue synergies for investment banking and trading operations.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Barry Diller's People Entertainment bids for MGM Resorts at $18 billion valuation, entering hospitality acquisition competition",
+          "summary": "According to Reuters, People Entertainment (Diller-backed) submits acquisition proposal for MGM Resorts at $18 billion enterprise value, competing for control of the major casino operator. The bid represents significant strategic interest in gaming and hospitality consolidation.",
           "source": "Reuters",
-          "relevance": "Media-backed gaming acquisition attempt signals valuation reset for Las Vegas casino operators and potential strategic repositioning toward entertainment-media convergence.",
+          "relevance": "MGM takeover bid at $18B valuation signals strategic value recognition in gaming assets; if successful, creates larger hospitality player with enhanced operational leverage.",
           "signal": "watch"
         },
         {
-          "headline": "Servier inks $2.6 billion acquisition of Edgewise's muscular dystrophy unit to strengthen neurology pipeline",
-          "summary": "Per Fierce Biotech, French pharma firm Servier has agreed to acquire Edgewise's muscular dystrophy therapeutic assets for $2.6 billion, expanding its neurology and rare disease portfolio.",
+          "headline": "Servier acquires Edgewise Therapeutics' muscular dystrophy unit for $2.6 billion to expand neurology pipeline",
+          "summary": "Per Fierce Biotech, Servier completes $2.6 billion acquisition of muscular dystrophy assets from Edgewise, bolstering its neurology therapeutic portfolio. The transaction reflects pharma consolidation in rare neurological disease franchises.",
           "source": "Fierce Biotech",
-          "relevance": "Large-cap pharma asset acquisition for rare disease focus indicates continued high valuations for specialized biotech platforms and orphan drug franchises.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Thoma Bravo closes WWEX rollup acquisition; PE portco merger combines logistics and fintech platforms",
-          "summary": "Per PE Hub and The Business Journals, Thoma Bravo portfolio companies WWEX Group (third-party logistics) and Auctane (shipping/commerce software) have completed merger, creating integrated parcel-to-software platform.",
-          "source": "PE Hub, The Business Journals",
-          "relevance": "Vertical integration of logistics and software assets reflects PE strategy to capture margin expansion through operational software embedding in physical assets.",
+          "relevance": "Servier's rare disease acquisition at $2.6B valuation supports biotech M&A market activity; demonstrates continued strategic appetite for neurological disease platforms.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If large-cap pharma continues $2–3B acquisitions of biotech rare-disease franchises, and PE rollups achieve 25%+ EBITDA margin targets, healthcare and logistics M&A will sustain mid-double-digit volume growth through 2027.",
+      "keyTakeaway": "If PE and strategic buyer M&A activity sustains current pace amid macro uncertainty, transaction multiples may remain resilient in select sectors; however, broader capital markets dislocation would compress deal flow.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -190,28 +190,28 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "China advances space-based orbital computing infrastructure as next frontier of digital economy expansion",
-          "summary": "Per TV BRICS, China is progressing development of orbital data centers and space-based computing capacity, positioning satellite-based digital services as emergent economic frontier. No quantified capex or timeline disclosed.",
-          "source": "TV BRICS",
-          "relevance": "Chinese orbital compute infrastructure investment indicates long-term technological decoupling strategy and new hardware capex cycle for satellite/aerospace supply chains.",
-          "signal": "watch"
+          "headline": "Xi Jinping introduces new authoritative US-China diplomatic formulation at recent Beijing summit, signaling strategic reframing of bilateral engagement terms",
+          "summary": "According to Asia Times, Chinese President Xi unveiled a new tífǎ (authoritative formulation) for US-China relations during Trump's May visit to Beijing, representing deliberate strategic repositioning. The terminology shift reflects China's assertion of negotiating parity in great-power dialogue.",
+          "source": "Asia Times",
+          "relevance": "China's new bilateral formulation signals confidence in long-term relative positioning; if sustained, suggests lower near-term trade escalation risk and potential for structured competition frameworks.",
+          "signal": "neutral"
         },
         {
-          "headline": "Brazil set to re-enter world's top 10 economies in 2026 as growth outpaces major markets",
-          "summary": "According to TV BRICS, Brazil's economic growth trajectory is projected to restore its position among the global top 10 largest economies in 2026, surpassing growth rates of major developed markets. Specific GDP growth rate not quantified.",
-          "source": "TV BRICS",
-          "relevance": "Brazilian economic recovery supports BRL appreciation and increases investor allocation to Latin American equities and commodity exporters.",
-          "signal": "bullish"
+          "headline": "Xi closes policy doors after promising US CEOs wider market access; signals divergence between diplomatic rhetoric and regulatory implementation",
+          "summary": "Per Asia Times, Chinese government restricts corporate market openings promised to US business leaders accompanying Trump to Beijing, indicating disconnect between bilateral diplomatic messaging and domestic policy execution. The pattern reflects state control tensions in reform commitment.",
+          "source": "Asia Times",
+          "relevance": "Divergence between Xi's commitments to US CEOs and actual regulatory closure increases investor uncertainty on China market access; impacts multinational corporate guidance for China operations.",
+          "signal": "bearish"
         },
         {
-          "headline": "Trump administration reportedly considers rescinding sanctions on Eritrea as critical minerals and security partner",
-          "summary": "Per African Business, the Trump administration is exploring sanctions relief for Eritrea, viewing the East African state as potential source of critical minerals and strategic security asset in regional geopolitics.",
+          "headline": "South Africa faces renewed xenophobic violence; Ghanaian citizens evacuated as xenophobia casts shadow over regional security",
+          "summary": "According to African Business, renewed xenophobic incidents in South Africa prompt evacuation of Ghanaian nationals, signaling persistent social instability in the region. The pattern reflects underlying tensions affecting investor confidence in South African institutions.",
           "source": "African Business",
-          "relevance": "Potential US sanctions relief on Eritrea could unlock critical minerals supply diversification away from China and increase Horn of Africa geopolitical leverage.",
-          "signal": "watch"
+          "relevance": "Xenophobic violence and citizen evacuations from South Africa erode regional investor confidence; impacts FDI inflows to the country and regional trade dynamics.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Brazil sustains >3% real GDP growth and Eritrea sanctions are lifted, emerging-market currencies will strengthen against USD and commodity-linked EM equities will see sustained capital inflows through 2027.",
+      "keyTakeaway": "If China maintains rhetorical openness while restricting actual market access, US-China business relationship deteriorates incrementally; concurrent South African social instability reduces Southern Africa FDI appeal, fragmenting emerging market capital allocation.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -220,28 +220,21 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Section 232 steel tariffs on Mexico exports documented; 2025 trade impact under WTO rules and reciprocity analysis",
-          "summary": "Per Discovery Alert and The Financial Express, Section 232 steel tariffs imposed on Mexico are being analyzed through WTO compliance frameworks and reciprocity principles. Impact quantification on 2025 trade volumes pending formal documentation.",
-          "source": "Discovery Alert, The Financial Express",
-          "relevance": "US-Mexico steel tariff disputes signal trade friction; elevated input costs for North American automotive and construction sectors constrain margin expansion.",
-          "signal": "bearish"
+          "headline": "WTO reform agenda advances following subsidy shock; multilateral trade architecture reassesses governance frameworks",
+          "summary": "Per economy.ac analysis, World Trade Organization reform discussions intensify in response to recent subsidy policy shocks across major economies, with focus on institutional governance modernization. The discourse reflects structural strain on existing dispute mechanisms.",
+          "source": "economy.ac",
+          "relevance": "WTO reform advancement signals potential rule-based trade system recalibration; if successful, may establish new guardrails limiting unilateral tariff/subsidy actions—or codify fragmentation if negotiations fail.",
+          "signal": "watch"
         },
         {
-          "headline": "WTO framework analysis of tariff rules and reciprocity principles guides current US trade policy negotiations",
-          "summary": "Per The Financial Express, multilateral trade policy discussions reference WTO legal framework and reciprocity doctrines to evaluate current tariff regimes. No specific policy changes announced.",
-          "source": "The Financial Express",
-          "relevance": "WTO-centered tariff dispute resolution suggests bilateral trade tensions remain manageable; institutional frameworks limit unilateral tariff escalation.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Global supply chain rewiring accelerates amid wars and trade conflicts; deglobalization thesis gains institutional acceptance",
-          "summary": "Per Modern Diplomacy, geopolitical conflicts and trade disputes are driving structural reorganization of international supply chains. Analysis characterizes reshoring and regionalization as responses to security concerns, not temporary cyclical moves.",
+          "headline": "Global supply chains rewiring amid wars and trade conflicts; end-of-globalization thesis gains institutional credibility",
+          "summary": "According to Modern Diplomacy analysis, supply chain restructuring accelerates due to geopolitical conflicts and trade protectionism, with structural shifts replacing just-in-time efficiency models. The trend reflects strategic decoupling and regionalization of manufacturing networks.",
           "source": "Modern Diplomacy",
-          "relevance": "Supply chain regionalization increases onshore manufacturing capex and support margins for domestic industrial companies; FDI redirects from low-cost to allied nations.",
-          "signal": "bullish"
+          "relevance": "Supply chain regionalization increases manufacturing costs and reduces operational efficiency; impacts multinational profitability and reshores labour-intensive sectors to higher-cost regions.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If Section 232 tariffs expand beyond steel and Mexico-US trade tensions escalate, regional supply chains will accelerate nearshoring capex and support North American industrial valuations through 2027.",
+      "keyTakeaway": "If global supply chain regionalization persists and WTO reform fails to establish new trade rules, structural inflation from higher production costs becomes embedded; tariff escalation cycles worsen absent multilateral coordination framework.",
       "rawCount": 5
     },
     "food-agriculture": {
@@ -250,28 +243,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "US corn, soybean, and wheat prices decline in June 2026; USDA releases first crop condition ratings and grain inspection data",
-          "summary": "Per Agrolatam and Successful Farming, major US grain prices retreated in early June 2026; USDA June crop condition ratings and late-May grain inspection data show corn leading volumes with Mexico as top destination. Specific price declines and condition percentages not quantified in headlines.",
-          "source": "Agrolatam, Successful Farming, IndexBox",
-          "relevance": "Declining US grain prices reduce inflation pressures on feed and food producers; favorable crop conditions support supply expectations and limit commodity volatility.",
+          "headline": "Grain markets extend losing streak as corn, soybeans, and wheat prices fall amid oversupply concerns and weak demand signals",
+          "summary": "Per Agrolatam reporting, agricultural commodity prices decline across major grains due to supply abundance and reduced demand indicators, extending multi-period price weakness. The trend reflects continued margin pressure for commodity producers.",
+          "source": "Agrolatam",
+          "relevance": "Grain price weakness compresses farmer margins and reduces agricultural input demand; supports lower food CPI and reduces inflation pass-through from commodity sectors.",
           "signal": "bullish"
         },
         {
-          "headline": "Rising winter heat threatens India's wheat harvest and food security; agricultural transformation must prioritize exports and standards",
-          "summary": "Per ETV Bharat and Down To Earth, elevated winter temperatures in India pose yield risks to wheat production and broader food security; concurrent analysis calls for export-focused, standards-driven transformation of Indian agriculture value chains.",
-          "source": "ETV Bharat, Down To Earth",
-          "relevance": "Indian wheat yield pressure may reduce global supply and support grain prices; India's export-oriented agricultural expansion increases competition for emerging-market grain demand.",
-          "signal": "watch"
+          "headline": "Soybeans close down more than 15 cents on June 2, 2026; extended agricultural commodity weakness persists",
+          "summary": "According to Successful Farming, soybean prices recorded significant intraday declines exceeding 15 cents per bushel, consistent with broader grain market weakness. The magnitude of movement indicates sustained selling pressure in oilseed complex.",
+          "source": "Successful Farming",
+          "relevance": "Large single-day soybean declines signal continued oversupply conditions; reduced agricultural commodity inflation supports central bank disinflationary narratives.",
+          "signal": "bullish"
         },
         {
-          "headline": "Zimbabwe food access improves with harvests; grain prices remain elevated in deficit areas despite production gains",
-          "summary": "Per ZAWYA, Zimbabwe has achieved improved food access following harvests, but grain prices persist at elevated levels in food-deficit regions, indicating distribution and market structure constraints.",
-          "source": "ZAWYA",
-          "relevance": "Southern African grain market dysfunction persists despite production recovery; regional food security remains vulnerable to supply disruptions.",
+          "headline": "Powerful El Niño weather system could disrupt US farmers and trigger global food price volatility in 2026",
+          "summary": "Per Agrolatam analysis, meteorological forecasts project significant El Niño development with potential to disrupt North American agricultural production and generate global food price shocks. Weather system timing and intensity remain uncertain but carry material production risk.",
+          "source": "Agrolatam",
+          "relevance": "If El Niño materializes with forecast intensity, US grain production faces yield pressure; global food price inflation risk increases and reverses current commodity weakness trend.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If US grain prices stabilize near current levels and India's wheat yield declines materialize, global food inflation will reaccelerate and emerging-market food security investments will attract impact capital flows.",
+      "keyTakeaway": "If grain oversupply persists while El Niño weather disruption fails to materialize, agricultural commodity prices remain depressed and support lower food inflation—but adverse weather outcome would reverse gains and create volatile price spikes.",
       "rawCount": 10
     }
   }
