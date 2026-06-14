@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-13T08:56:53.095Z",
-  "date": "Saturday, 13 June 2026",
-  "globalBriefing": "Macroeconomic divergence widened this week: the ECB raised rates amid stagflation signals from Germany, while the Federal Reserve's decision remains pending, creating USD-EUR volatility. A U.S.-Iran nuclear deal near finalization would materially ease oil market disruption, reducing Brent prices below $100/bbl and benefiting transport equities; simultaneously, SpaceX's $2.2 trillion IPO validated demand for space-infrastructure capital. Trade fragmentation accelerated with U.S. tariff extension through July 24 and India's anti-dumping duties, signaling bilateral protectionism will supersede multilateral frameworks. Institutional capital is redeploying into emerging markets (Nigeria's naira stabilization, Lagos FDI), digital assets (Japan's crypto-ETF framework), and climate infrastructure (ARM-Harith's $76 million first close), while mega-M&A approvals in media and pharma unlock follow-on consolidation waves across healthcare and consumer services.",
-  "marketOpen": "Primary catalyst: Federal Reserve rate decision announcement within 7 days; secondary risk: Iran nuclear deal finalization timeline, which would trigger immediate crude-oil decline and shipping-cost compression if confirmed before Monday close.",
+  "generated": "2026-06-14T09:32:01.105Z",
+  "date": "Sunday, 14 June 2026",
+  "globalBriefing": "Three macro forces converge: a potential US-Iran accord pressures crude prices downward while reducing Strait geopolitical risk, ECB tightening diverges from BoE hold in a currency-sensitive environment, and mega-cap M&A (Paramount-Warner, EA LBO) signals institutional capital confidence despite macro uncertainty. Emerging markets benefit from improved credibility (Nigeria CBN award) and local currency infrastructure momentum, while oil producers face earnings compression if Hormuz premium collapses. Watch for agreement execution timing on Iran deal and Q2 Eurozone GDP confirmation of fiscal-led stabilization.",
+  "marketOpen": "Primary risk: confirmation or delay of US-Iran accord signing by June 15; if confirmed, crude and EM currencies rally amid geopolitical de-risking; if stalled, energy volatility resurges and near-term risk sentiment deteriorates.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,29 +10,29 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "ECB raises interest rates; Lagarde confirms decision 'robust across three scenarios'",
-          "summary": "The European Central Bank announced a rate increase per Euronews, with ECB President Lagarde stating the decision was supported across multiple economic scenarios. The euro rose following the announcement, per Investing.com.",
-          "source": "Euronews, ECB Press Releases, Investing.com",
-          "relevance": "ECB tightening signals sustained inflation concerns in eurozone; investors should monitor EUR strength impact on dollar-denominated assets and euro-area equity valuations.",
-          "signal": "bearish"
+          "headline": "ECB announces rate hike; euro appreciates as dollar declines on Trump Iran deal comments",
+          "summary": "According to Investing.com, the ECB raised rates and the euro strengthened against a weakening dollar following Trump's statements on an Iran accord. EUR/USD reaction reflects reduced geopolitical risk premium offsetting monetary divergence.",
+          "source": "Investing.com",
+          "relevance": "Euro strength may pressure Eurozone export competitiveness; watch for ECB forward guidance on terminal rate.",
+          "signal": "neutral"
         },
         {
-          "headline": "Germany's Bundesbank cuts 2026 growth forecast, raises inflation expectations amid 'war drag'",
-          "summary": "According to the Wall Street Journal, the German Bundesbank revised downward its growth expectation while raising its inflation forecast, citing ongoing conflict impacts. The divergence signals stagflation risk in Europe's largest economy.",
-          "source": "WSJ",
-          "relevance": "Stagflation signals in Germany reduce eurozone growth outlook; investors should reassess exposure to cyclical European equities and consider duration positioning in European bonds.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Fed rate decision pending; inflation and geopolitical uncertainty cited as decision factors",
-          "summary": "Per the National Association of Home Builders, the Federal Reserve faces a rate decision next week amid inflation pressures and geopolitical volatility. No specific rate move has been confirmed; the decision remains data-dependent.",
-          "source": "NAHB, Big Rapids Pioneer",
-          "relevance": "Fed decision represents primary near-term macro catalyst; unclear outcome creates volatility in equity futures and Treasury yields; watch for inflation data releases ahead of decision.",
+          "headline": "Bank of England faces balancing act as inflation and growth dynamics remain contested",
+          "summary": "Per EDP24, the BoE is expected to hold rates as policymakers navigate conflicting pressures. No specific inflation or growth figures provided in headline; rate hold suggests data-dependent stance.",
+          "source": "EDP24",
+          "relevance": "GBP stability and gilt curve positioning depend on BoE's next move; watch for CPI prints ahead of July decision.",
           "signal": "watch"
+        },
+        {
+          "headline": "Bundesbank reports German government spending prevented GDP contraction",
+          "summary": "According to Global Banking & Finance Review citing Bundesbank statement, fiscal support offset economic headwinds in Germany. Magnitude of spending impact and underlying GDP growth rate not quantified in headline.",
+          "source": "Global Banking & Finance Review",
+          "relevance": "German fiscal dependency may constrain ECB easing; watch Eurozone Q2 GDP for confirmation of stabilization.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If ECB tightening and German stagflation signals persist while Fed remains on hold, expect continued EUR/USD strength and widening European growth-inflation gap—pressuring eurozone cyclicals and supporting EUR-denominated safe assets.",
-      "rawCount": 10
+      "keyTakeaway": "If ECB maintains hawkish stance and BoE holds, expect EUR/GBP strength relative to USD, pressuring dollar funding costs across EM and corporate credit.",
+      "rawCount": 9
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "U.S., Iran, and mediator Pakistan announce Iran nuclear deal near finalization",
-          "summary": "According to BBC World, the United States, Iran, and Pakistan have reported that a deal to end hostilities is close to being finalized; Iran states the agreement would reopen the Strait of Hormuz. Trump announced the deal on social media per Investing.com.",
-          "source": "BBC World, Investing.com",
-          "relevance": "Deal finalization would materially ease Strait of Hormuz supply disruption and reduce oil price volatility; direct impact on energy commodity pricing and shipping insurance costs.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Elon Musk reaches $1.11 trillion net worth; SpaceX IPO values firm at $2.2 trillion",
-          "summary": "Per Bloomberg's rich list cited by BBC World, Musk became the world's first trillionaire as SpaceX completed its Nasdaq listing at a $2.2 trillion valuation. This reflects equity market confidence in commercial space infrastructure.",
-          "source": "BBC World, Bloomberg",
-          "relevance": "SpaceX IPO success validates space-tech sector demand; investors should monitor aerospace supply chain beneficiaries and satellite communications infrastructure plays.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "England's World Cup squad faces equipment theft in Kansas City ahead of tournament arrival",
-          "summary": "Per BBC World, equipment destined for England's World Cup squad was reportedly stolen or went missing upon arrival in Kansas City, with local police investigating. The incident does not appear to impact team participation.",
+          "headline": "Trump states US-Iran deal to be signed Sunday; Tehran disputes timeline clarity",
+          "summary": "Per BBC World, Trump announced a signing date while Iran's government stated an exact date has not been finalized. Both parties acknowledge agreement framework but diverge on execution timing.",
           "source": "BBC World",
-          "relevance": "Isolated logistical incident; minimal material investment impact unless broader security or event-organization concerns emerge.",
+          "relevance": "Strait of Hormuz sanctions relief would reduce oil risk premium; deal certainty critical for energy market pricing.",
+          "signal": "watch"
+        },
+        {
+          "headline": "UK Ministry of Defence seizes suspected Russian shadow fleet tanker Smyrtos in English Channel during six-hour operation",
+          "summary": "According to Al Jazeera, the UK captured the vessel in an enforcement action against sanctions evasion. No details on vessel value, cargo, or sanctions regime cited provided.",
+          "source": "Al Jazeera",
+          "relevance": "Escalating shadow fleet interdiction increases logistics costs for Russian energy exports; supports oil price floor if sustained.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "UK Court of Appeal to rule on government's proscription of Palestine Action as terrorist organization",
+          "summary": "Per Al Jazeera, the court will decide whether the government's designation was lawful. Outcome affects protest frameworks and reputational risk for financial institutions with UK exposure.",
+          "source": "Al Jazeera",
+          "relevance": "Legal precedent may shape regulatory treatment of activist organizations; minimal direct capital markets impact.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If U.S.-Iran deal finalizes, expect immediate Brent crude decline toward $70–80/bbl range, benefiting transport and airline equities; simultaneous SpaceX IPO success signals strong demand for space-infrastructure capex allocation.",
+      "keyTakeaway": "If US-Iran accord proceeds, Strait of Hormuz risk premium collapses; if stalled, shadow fleet enforcement sustains marginal oil cost inflation.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Japan moves toward stablecoin and crypto ETF regulation; institutional adoption pathway clarified",
-          "summary": "Per the International Policy Digest, Japan is advancing regulatory frameworks for stablecoins and cryptocurrency exchange-traded funds, signaling institutional acceptance of digital assets. Specific regulatory detail and timeline not disclosed in headline.",
-          "source": "International Policy Digest",
-          "relevance": "Japan's crypto-ETF approval would unlock institutional capital inflows into digital asset class; watch for similar moves in EU and Singapore that could trigger multi-billion-dollar FDI reallocation to crypto infrastructure.",
+          "headline": "Trump and Tehran signal imminent bilateral accord to reopen Strait of Hormuz; Pakistan notes ceasefire extension agreement progress",
+          "summary": "Per FT World, Trump and Pakistan confirm framework alignment on regional de-escalation; Iran cautions timing remains unconfirmed. Agreement scope and phasing not detailed.",
+          "source": "FT World",
+          "relevance": "Strait reopening reduces energy supply risk premium and unlocks $50bn+ Iranian oil export capacity; portfolio rebalancing toward EM equities likely.",
           "signal": "bullish"
         },
         {
-          "headline": "Luxembourg positions as pivotal hub for tokenization adoption across European financial sector",
-          "summary": "According to Funds Europe, Luxembourg is leveraging regulatory clarity to accelerate adoption of tokenized financial instruments among European financial institutions. Details on specific tokenization projects or capital commitments not provided in headline.",
-          "source": "Funds Europe",
-          "relevance": "Luxembourg's tokenization leadership creates concentrated FDI opportunity for fintech infrastructure providers; investors should monitor EU Central Securities Depositories (CSD) for tokenization pilots.",
+          "headline": "Wall Street records elevated fundraising volume as AI-driven capital raises intensify across SpaceX, Anthropic, and Alphabet financings",
+          "summary": "According to FT World, investors continue absorbing substantial new issuance amid AI sector momentum. Aggregate raise volumes and implied valuations not specified.",
+          "source": "FT World",
+          "relevance": "High-growth tech capital formation may crowd out mid-market PE deployments; watch for yield compression in late-stage rounds.",
           "signal": "bullish"
         },
         {
-          "headline": "National Economic Council hosts Bali family office summit in July; Indonesia targets wealth capital inflows",
-          "summary": "Per the Indonesia Business Post, Indonesia's National Economic Council is convening a family office summit in Bali next month to attract international wealth capital. No specific capital targets or investment mandates disclosed.",
-          "source": "Indonesia Business Post",
-          "relevance": "Indonesia's family office outreach suggests policy drive to channel UHNW capital into local infrastructure and equity; watch for subsequent FDI announcements in renewable energy and fintech.",
-          "signal": "neutral"
+          "headline": "Israel's economy demonstrates resilience amid two decades of growth despite war disruptions and energy shocks",
+          "summary": "Per FT World, Israel's 'trampoline' economy has absorbed geopolitical and commodity volatility without structural contraction. Specific GDP or sector data not provided.",
+          "source": "FT World",
+          "relevance": "Israeli equities and tech valuations supported by macroeconomic durability; defensive positioning less warranted than consensus suggests.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Japan's crypto-ETF framework and Luxembourg's tokenization framework both advance simultaneously, expect $50–100 billion capital migration into digital asset infrastructure and fintech hubs across Asia-Pacific and Europe.",
+      "keyTakeaway": "If Iran accord materializes, regional capital reallocation accelerates; if delayed, AI-driven tech fundraising sustains global PE momentum while constraining traditional infrastructure FDI.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,28 +100,28 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Oil market faces supply disruption aftermath; prices remain below $100/bbl despite three-month Hormuz blockade",
-          "summary": "Per OilPrice.com, oil prices remain below $100 per barrel approximately 3.5 months after the Strait of Hormuz blockade caused the worst supply disruption in history, driven by expectations of imminent U.S.-Iran deal resolution. Market is pricing in near-term supply recovery.",
+          "headline": "Oil prices decline sharply after Trump announces Iran peace deal progress; crude markets extend Friday losses",
+          "summary": "According to OilPrice.com, crude fell following Trump's Iran accord statement, with markets pricing reduced geopolitical premium. Specific WTI or Brent price levels not cited.",
           "source": "OilPrice.com",
-          "relevance": "Oil market risk/reward skewed: Brent below $100 underprices geopolitical tail risk if Iran deal fails; investors should monitor deal timeline and Hormuz transit data for entry points.",
-          "signal": "watch"
-        },
-        {
-          "headline": "China's fusion reactor on track for ignition by 2027; aims to accelerate global clean-energy leadership",
-          "summary": "According to OilPrice.com, China's Experimental Advanced Superconducting Tokamak project is targeting a major nuclear fusion milestone by 2027, positioning China to advance in the global race for commercial fusion energy. Specific power output targets not disclosed.",
-          "source": "OilPrice.com",
-          "relevance": "China's 2027 fusion timeline threatens U.S. energy-tech dominance; investors should de-risk exposure to legacy thermal power and increase allocation to nuclear and advanced materials suppliers in China.",
+          "relevance": "Energy sector earnings multiple compression if prices sustain $60s-$70s WTI; producer capex guidance critical.",
           "signal": "bearish"
         },
         {
-          "headline": "U.S. oil rig count fluctuates; Baker Hughes reports 562–563 active rigs as drilling pace inches upward",
-          "summary": "Per Baker Hughes data cited in Oil & Gas 360 and OilPrice.com, the U.S. active rig count moved between 562 and 563 rigs over the past week, reflecting marginal increases in drilling activity. The pace remains subdued relative to five-year historical averages.",
-          "source": "Baker Hughes, Oil & Gas 360, OilPrice.com",
-          "relevance": "Subdued U.S. drilling activity signals muted capex confidence; upstream operators remain cautious on long-cycle projects despite oil price recovery from Hormuz shock.",
+          "headline": "UK sets January 2027 deadline to close Russian crude import loophole on diesel and jet fuel refined in third countries",
+          "summary": "Per OilPrice.com, the UK government announced a formal sanctions implementation date. Enforcement mechanism and affected volumes not quantified.",
+          "source": "OilPrice.com",
+          "relevance": "Russian fuel exports face refinery rerouting costs; impacts refined product spreads and regional energy security planning.",
           "signal": "neutral"
+        },
+        {
+          "headline": "US rig count decreased by 1 to 562; investor liquidity in oil markets retreats at record pace amid extreme volatility",
+          "summary": "According to Oil & Gas 360 (Baker Hughes data), drilling activity remains constrained; per BOE Report, volatility is draining market participation. Specific spreads, trading volume metrics not provided.",
+          "source": "Oil & Gas 360",
+          "relevance": "Rig count floor signals production plateau; watch for price floor support if OPEC+ coordination strengthens.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Iran deal finalizes and Hormuz reopens, Brent crude falls to $70–80/bbl, triggering upstream CapEx cuts; simultaneously, China's 2027 fusion ignition would accelerate renewable energy transition and depress long-cycle fossil-fuel investment.",
+      "keyTakeaway": "If Iran deal executes, crude pressure persists into Q3; if stalled, rig stabilization and shadow fleet enforcement form price support at $65–$70 WTI.",
       "rawCount": 10
     },
     "real-estate": {
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "U.S. REITs benefit from Fed pause; three high-quality names positioned to capitalize on rate stability",
-          "summary": "Per SimplyWall.st analysis, three high-quality U.S. REITs are positioned to benefit from an anticipated Federal Reserve rate pause, with improved fundamentals as borrowing costs stabilize. Specific REIT names and valuations not disclosed in headline.",
-          "source": "SimplyWall.st",
-          "relevance": "Fed pause would unlock REIT capital appreciation as cost-of-capital declines; investors should overweight defensive REITs (residential, logistics) over rate-sensitive office and retail.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "ARM-Harith closes first $76 million tranche for climate transition infrastructure fund",
-          "summary": "Per Pulse 2.0, ARM-Harith Partners achieved a first close of $76 million for its climate transition fund, targeting infrastructure investments aligned with climate objectives. Final fund size and deployment timeline not specified.",
-          "source": "Pulse 2.0",
-          "relevance": "Climate infrastructure capital mobilization signals investor appetite for ESG-linked real assets; watch for follow-on closes and pipeline deployment rates as bellwether for climate-capex demand.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Minto Apartment REIT files for Canadian IPO; multifamily securitization trend continues",
-          "summary": "According to RENX, Minto has filed to take its apartment portfolio public via an income trust IPO structure. Offering size, timeline, and unit pricing not disclosed; positioning reflects broader Canadian multifamily financialization trend.",
-          "source": "RENX",
-          "relevance": "Canadian multifamily IPO wave signals liquidity event timing for residential real estate; investors should monitor cap-rate compression risk as institutional capital floods sector.",
+          "headline": "Blackstone engagement with H&R REIT confirmed as US real estate assets attract institutional capital interest",
+          "summary": "Per Globest, Blackstone's interest in H&R REIT assets has been confirmed. Deal valuation, asset class focus, and timing not disclosed.",
+          "source": "Globest",
+          "relevance": "REIT M&A activity signals institutional conviction in US property despite rate uncertainty; watch for cap rate expansion triggers.",
           "signal": "neutral"
+        },
+        {
+          "headline": "EIB governors endorse strategy to expand investment in energy, technology, and defence infrastructure",
+          "summary": "According to Business Review, the European Investment Bank's board approved a revised investment mandate. Capital allocation percentages and deployment timeline not specified.",
+          "source": "Business Review",
+          "relevance": "EU infrastructure funding prioritization may favor energy transition and defence over traditional commercial real estate.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Blue carbon market forecast to accelerate through 2035 driven by corporate net-zero commitments and policy support",
+          "summary": "Per IndexBox, the blue carbon sector is projected to expand. Specific CAGR, market size, or policy measures not quantified in headline.",
+          "source": "IndexBox",
+          "relevance": "Climate finance flows may support coastal and marine infrastructure valuations; watch for carbon credit pricing stability.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Fed holds rates steady and Minto IPO prices above consensus cap-rate expectations, expect REIT sector rally of 5–8%; climate transition funds will likely attract $500 million+ in Q3 deployments across renewable energy and EV charging infrastructure.",
+      "keyTakeaway": "If cap rates normalize upward due to Fed divergence from ECB, REIT valuations compress; EIB's defence/energy pivot may redirect infrastructure capital from commercial property.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,28 +160,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "U.S. Department of Justice approves $111 billion Paramount-Skydance-Warner Bros. Discovery merger",
-          "summary": "Per Philenews and Polygon.com, the U.S. Department of Justice cleared the $111 billion Paramount-Skydance-Warner Bros. Discovery mega-merger, removing the final major regulatory hurdle. The deal consolidates three major streaming and content platforms.",
-          "source": "DOJ, Philenews, Polygon.com",
-          "relevance": "Mega-merger approval signals DOJ tolerance for media consolidation; investors should reassess entertainment-sector M&A pipeline and streaming competitive dynamics post-close.",
+          "headline": "US Department of Justice approves $111 billion Paramount-Skydance buyout of Warner Bros Discovery",
+          "summary": "According to Philenews, the DOJ cleared the media mega-merger. Deal financing structure, integration timeline, and antitrust conditions not detailed.",
+          "source": "Philenews",
+          "relevance": "Mega-cap entertainment consolidation signals large-cap M&A confidence; watch for streaming synergy realization and labour integration.",
           "signal": "bullish"
         },
         {
-          "headline": "GSK acquires Nuvalent for $10.6 billion; patent-cliff mitigation via oncology platform acquisition",
-          "summary": "According to TradingView, GlaxoSmithKline announced a $10.6 billion acquisition of Nuvalent, a oncology-focused biotech firm, as part of patent-cliff risk mitigation strategy. Deal is positioned to strengthen GSK's cancer drug portfolio.",
-          "source": "TradingView",
-          "relevance": "Large-cap pharma M&A acceleration signals patent-cliff urgency; investors should monitor biotech acquisition multiples and evaluate standalone biotech vs. pharma-backed platforms.",
+          "headline": "Electronic Arts leveraged buyout reaches $55 billion, marking the largest LBO transaction executed in 2026",
+          "summary": "Per tech-insider.org, EA's take-private transaction closed at $55bn. Debt-to-EBITDA multiple, sponsor identity, and post-acquisition strategy not specified.",
+          "source": "tech-insider.org",
+          "relevance": "Software/gaming LBO scale signals PE confidence in high-margin recurring revenue; impacts public gaming equity valuations and debt markets.",
           "signal": "bullish"
         },
         {
-          "headline": "Leonard Green completes $3.1 billion take-private of Mister Car Wash; PE buyout of service franchises continues",
-          "summary": "Per Bez Kabli, Leonard Green Partners completed its $3.1 billion leveraged buyout of Mister Car Wash, with the company delisted from public markets. Deal reflects PE appetite for consumer service consolidation opportunities.",
-          "source": "Bez Kabli",
-          "relevance": "PE dry powder remains active in lower-capex service sectors; investors tracking public-to-private arbitrage should monitor spin-off and secondary buyout pipelines.",
+          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
+          "summary": "According to TicketNews, Eventbrite shareholders voted in favour of the transaction. Regulatory timeline and deal conditions outstanding.",
+          "source": "TicketNews",
+          "relevance": "Mid-market SaaS M&A proceeding despite macro uncertainty; signals sustained PE/strategic capital deployment in event-tech vertical.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If Paramount-Warner Bros. and GSK mega-deals close on schedule, expect $100+ billion in follow-on M&A announcements across media, healthcare, and consumer services by Q3 2026 as strategic buyers compete for scale and patent protection.",
+      "keyTakeaway": "If mega-cap entertainment and gaming LBOs clear execution, expect sustained PE dry powder deployment; watch for junk debt spreads and covenant architecture given high leverage levels.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -190,59 +190,37 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Nigeria's central bank wins Central Bank of the Year award; Cardoso reforms restore credibility and stabilize currency",
-          "summary": "Per African Business, Nigeria's central bank earned global recognition for sweeping reforms under Governor Yemi Cardoso that restored market credibility and stabilized the naira. The award reflects market confidence in monetary policy independence.",
+          "headline": "Nigeria's central bank wins Central Bank of the Year award following sweeping reforms under Governor Yemi Cardoso",
+          "summary": "Per African Business, the CBN earned global recognition for institutional reforms, market stabilization, and economic repositioning. Specific macroeconomic outcomes (inflation, FX stability) not quantified.",
           "source": "African Business",
-          "relevance": "Nigeria's CBN credibility restoration supports naira appreciation trajectory and reduces FX volatility premium; investors should increase allocation to Nigerian fixed-income and equities.",
+          "relevance": "CBN credibility gains may attract EM capital inflows and reduce naira depreciation pressure; watch for debt sustainability.",
           "signal": "bullish"
         },
         {
-          "headline": "President Tinubu positions Lagos as Africa's primary investment gateway; state unveils infrastructure and fintech opportunities",
-          "summary": "According to African Business, Nigerian President Tinubu and Lagos Governor Sanwo-Olu publicly highlighted Lagos as Africa's foremost investment destination, with opportunities across infrastructure, technology, finance, and agriculture sectors. FDI inflow expectations underpin positioning.",
-          "source": "African Business",
-          "relevance": "Lagos marketing drive targets institutional FDI into African tech hubs and infrastructure; investors should monitor Lagos special economic zones and fintech licensing activity.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Cambodia initiates UNCLOS conciliation with Thailand over maritime boundary; disputes governed by international law",
-          "summary": "Per Asia Times, Cambodia initiated compulsory conciliation proceedings under the UN Convention on the Law of the Sea on June 2 against Thailand to protect maritime sovereignty and resource rights. Both nations remain committed to peaceful resolution via institutional framework.",
+          "headline": "Asia-Pacific financial system transformation underway as geopolitical tensions and capital flow volatility drive shift toward local currency settlement",
+          "summary": "According to Asia Times, regional economies are exploring de-dollarization mechanisms amid supply chain realignment. Specific currency projects, settlement volumes, or adoption timelines not provided.",
           "source": "Asia Times",
-          "relevance": "UNCLOS conciliation reduces military escalation risk in South China Sea; investors should monitor outcome for regional energy exploration and maritime commerce implications.",
+          "relevance": "CNY and yen localization may reduce USD demand and raise carry-trade unwind risk; impacts EM FX volatility.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Russia pitches stealthy missile-armed submarine exports to Asia amid sanctions constraints and allegiance complications",
+          "summary": "Per Asia Times, Russia is marketing new submarine designs to meet regional demand. Deal pipeline, customer interest, and sanctions impact on defence exports not detailed.",
+          "source": "Asia Times",
+          "relevance": "Limited commercial prospects due to sanctions; minimal capital markets impact on EM defence/industrial equity valuations.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If Nigeria's naira stabilizes and Lagos FDI commitments materialize into $5+ billion annual inflows, Nigerian equities could outperform MSCI EM by 10–15%; simultaneously, Cambodia-Thailand UNCLOS process de-risks Southeast Asia maritime investment climate.",
-      "rawCount": 10
+      "keyTakeaway": "If CBN reforms sustain and Asia advances local currency settlement, EM central banks gain policy autonomy; if capital flows reverse, emerging market debt faces repricing.",
+      "rawCount": 7
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "U.S. maintains 10% import surcharge through July 24; tariff policy timeline extended amid bilateral negotiations",
-          "summary": "Per Vinetur, the United States extended its 10% import surcharge through July 24, maintaining tariff pressure on trading partners. No statement was released clarifying negotiation status or conditions for removal.",
-          "source": "Vinetur",
-          "relevance": "Extended tariff timeline signals continued U.S. protectionism; importers should front-load shipments and lock in tariff-hedging strategies ahead of July 24 decision point.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "India imposes anti-dumping duty on aluminum foil imports; trade defense measure impacts regional supply chains",
-          "summary": "According to Discovery Alert, India has enacted an anti-dumping duty on aluminum foil imports as of 2026. The measure targets unfair pricing practices; specific tariff rate and affected countries not disclosed in headline.",
-          "source": "Discovery Alert",
-          "relevance": "Indian anti-dumping duties signal protectionist policy drift in South Asia; packaging and light-industrial sectors should reassess sourcing strategy and tariff pass-through capacity.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "WTO Deputy Director-General Nordquist affirms multilateral trade system remains foundation despite growing systemic challenges",
-          "summary": "Per the World Trade Organization, DDG Nordquist issued a statement affirming the WTO's role as the foundation of global trade while acknowledging mounting structural challenges to the rules-based order. No specific policy reforms were proposed.",
-          "source": "WTO",
-          "relevance": "WTO acknowledgment of systemic strain signals fragmentation risk; investors should de-risk exposure to most-favored-nation tariff treatment and increase hedging on bilateral trade disputes.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If U.S. maintains 10% surcharge through July and India expands anti-dumping scope, expect regional trade fragmentation and 3–5% input-cost inflation for EM-dependent manufacturers; WTO's inability to enforce compliance amplifies bilateral dispute tail risk.",
-      "rawCount": 3
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 0
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
@@ -250,28 +228,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "USDA cuts U.S. winter wheat harvest outlook following Plains drought; production pressure amid supply glut",
-          "summary": "Per Successful Farming, the USDA revised downward its 2026 winter wheat harvest estimate due to persistent drought in the Plains region. Grain markets slid following the report, per Agrolatam, as massive global supplies continue to pressure farm income.",
-          "source": "Successful Farming, Agrolatam",
-          "relevance": "Wheat supply reduction offers modest price support; however, global grain glut maintains downward pressure on farm incomes; investors should monitor corn and soybean production estimates for production-cost inflation signals.",
-          "signal": "neutral"
+          "headline": "Indonesia faces drought risk assessment amid current rice stock adequacy questions for sustained supply",
+          "summary": "Per Tempo.co English, analysts question Indonesia's rice reserves' resilience to prolonged drought. Specific stock levels, consumption rates, or import dependency not quantified.",
+          "source": "Tempo.co English",
+          "relevance": "Rice supply shocks could pressurize regional food inflation and trigger government intervention; impacts agricultural commodity pricing.",
+          "signal": "watch"
         },
         {
-          "headline": "Chunk Foods targets profitability by 2027; alternative meat startup accelerates capex-light scaling post-Meati collapse",
-          "summary": "Per AgFunder News, Chunk Foods grew revenues 140% year-over-year and recently secured retail listings at Whole Foods, Sprouts, and H.E.B., positioning profitability for 2027. The firm has adopted a capital-light model to avoid Meati-style collapse.",
+          "headline": "Chunk Foods reports 140% revenue growth; secures listings at major US retailers and targets profitability in 2027",
+          "summary": "According to AgFunder News, the alternative meat producer achieved significant top-line expansion and expanded distribution. Operating margin, capex requirements, and competitive positioning not disclosed.",
           "source": "AgFunder News",
-          "relevance": "Alt-meat sector consolidation continues as capital-efficient players gain distribution; investors should differentiate between venture-backed pre-profitability firms and those approaching positive unit economics.",
+          "relevance": "Alt-protein sector scaling ahead of profitability demonstrates investor conviction; watch for unit economics and market adoption rates.",
           "signal": "bullish"
         },
         {
-          "headline": "Haiti's spring agricultural season compromised by erratic rainfall and persistent insecurity; crop production outlook weakens",
-          "summary": "Per ReliefWeb, Haiti's May–September 2026 spring agricultural season faces headwinds from erratic rainfall patterns and ongoing security challenges that disrupt farming operations. Production and income impacts expected through harvest season.",
-          "source": "ReliefWeb",
-          "relevance": "Haiti climate and security shocks reduce regional agricultural supply; investors should monitor Caribbean commodity pricing and humanitarian relief funding requirements.",
+          "headline": "Nigeria faces counterfeit fertilizer market infiltration; agricultural storage fund allocation raises adequacy concerns",
+          "summary": "Per LEADERSHIP Newspapers and Minute Mirror, Nigeria's food security faces input quality and storage infrastructure constraints. Government budget allocation and estimated crop losses not specified.",
+          "source": "LEADERSHIP Newspapers / Minute Mirror",
+          "relevance": "Agricultural productivity risks in Nigeria may reduce grain exports and pressurize regional food prices; impacts fertilizer demand.",
           "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If U.S. wheat production declines continue and global grain glut persists, farm-income compression accelerates commodity consolidation; simultaneously, Chunk Foods' path to profitability validates capital-light alt-protein models, signaling $2+ billion PE inflows into the segment by 2027.",
+      "keyTakeaway": "If Indonesian drought materializes and African fertilizer constraints persist, global grain prices face upside risk; alt-protein adoption may offset commodity inflation for food security.",
       "rawCount": 10
     }
   }
