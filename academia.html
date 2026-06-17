@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZRC Academia · Formación en Inteligencia de Inversión</title>
+  <meta name="description" content="ZRC Academia — El primer programa de formación online en análisis geopolítico para inversores. Herramientas de inteligencia usadas por profesionales, ahora accesibles a todos." />
+  <meta property="og:title" content="ZRC Academia · Formación en Inteligencia de Inversión" />
+  <meta property="og:description" content="Aprende a leer el mundo antes de que los mercados lo reflejen. Cursos de inteligencia de inversión por Zenith Rise Capital." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #060D18;
+      color: #A5B4C8;
+      font-family: 'Source Serif 4', Georgia, serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #060D18; }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.2); border-radius: 3px; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes headerReveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ── HEADER ───────────────────────────────────────── */
+    .header {
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding: 24px 32px 20px;
+      animation: headerReveal 0.6s ease;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(6,13,24,0.97);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .header-brand {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .header-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 700;
+      color: #C9A84C; letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .header-logo span { color: #E8DCC8; }
+    .header-divider {
+      width: 1px; height: 24px; background: rgba(201,168,76,0.2);
+    }
+    .header-section {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 500;
+      color: #C9A84C; letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .header-nav {
+      display: flex; align-items: center; gap: 28px;
+    }
+    .nav-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 500;
+      color: #A5B4C8; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-link:hover, .nav-link.active { color: #C9A84C; }
+    .nav-cta {
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      color: #C9A84C; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover { background: rgba(201,168,76,0.1); border-color: #C9A84C; }
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero {
+      padding: 80px 32px 60px;
+      max-width: 1100px; margin: 0 auto;
+      animation: fadeSlideIn 0.7s ease 0.1s both;
+    }
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 500;
+      color: #C9A84C; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: #C9A84C;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6vw, 76px);
+      font-weight: 600; line-height: 1.05;
+      color: #E8DCC8; letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+    .hero-title em {
+      font-style: italic; color: #C9A84C;
+    }
+    .hero-subtitle {
+      font-size: 18px; font-weight: 300;
+      color: #7A8FA8; line-height: 1.6;
+      max-width: 620px; margin-top: 20px; margin-bottom: 40px;
+    }
+    .hero-stats {
+      display: flex; gap: 40px; flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 4px; }
+    .hero-stat-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 600; color: #C9A84C;
+    }
+    .hero-stat-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #7A8FA8; letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, rgba(201,168,76,0.3) 0%, transparent 100%);
+      margin: 40px 0;
+    }
+
+    /* ── COURSES SECTION ──────────────────────────────── */
+    .section { padding: 0 32px 80px; max-width: 1100px; margin: 0 auto; }
+    .section-header {
+      display: flex; align-items: baseline; justify-content: space-between;
+      margin-bottom: 40px; gap: 20px; flex-wrap: wrap;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px; font-weight: 600; color: #E8DCC8;
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #7A8FA8; letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Course grid */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    /* ── COURSE CARD ──────────────────────────────────── */
+    .course-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(201,168,76,0.03) 100%);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: fadeSlideIn 0.6s ease both;
+    }
+    .course-card:hover {
+      border-color: rgba(201,168,76,0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .course-card-thumb {
+      height: 200px;
+      background: linear-gradient(135deg, #0B1628 0%, #0D1F3C 50%, #091224 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .course-card-thumb::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 40%, rgba(201,168,76,0.12) 0%, transparent 70%);
+    }
+    .course-thumb-globe {
+      font-size: 64px; opacity: 0.7;
+      position: relative; z-index: 1;
+    }
+    .course-thumb-label {
+      position: absolute; bottom: 12px; left: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; font-weight: 700;
+      color: #C9A84C; letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: rgba(6,13,24,0.8);
+      padding: 4px 8px; border-radius: 2px;
+    }
+    .course-thumb-duration {
+      position: absolute; bottom: 12px; right: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #A5B4C8;
+      background: rgba(6,13,24,0.8);
+      padding: 4px 8px; border-radius: 2px;
+    }
+    .course-card-body { padding: 24px; }
+    .course-card-meta {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px;
+    }
+    .badge-open { background: rgba(52,211,153,0.15); color: #34D399; border: 1px solid rgba(52,211,153,0.3); }
+    .badge-new { background: rgba(201,168,76,0.15); color: #C9A84C; border: 1px solid rgba(201,168,76,0.3); }
+    .badge-lang { background: rgba(165,180,200,0.1); color: #A5B4C8; border: 1px solid rgba(165,180,200,0.2); }
+    .badge-level { background: rgba(139,92,246,0.1); color: #A78BFA; border: 1px solid rgba(139,92,246,0.2); }
+    .course-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px; font-weight: 600; color: #E8DCC8;
+      line-height: 1.25; margin-bottom: 10px;
+    }
+    .course-card-desc {
+      font-size: 14px; color: #7A8FA8; line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .course-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding-top: 16px;
+    }
+    .course-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-weight: 700; color: #C9A84C;
+    }
+    .course-price span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: #7A8FA8; margin-left: 4px;
+    }
+    .course-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #C9A84C 0%, #A88A3A 100%);
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      color: #060D18; letter-spacing: 0.1em; text-transform: uppercase;
+      transition: all 0.2s; text-decoration: none;
+    }
+    .course-cta:hover { opacity: 0.9; transform: scale(1.02); }
+
+    /* ── COMING SOON CARD ──────────────────────────────── */
+    .coming-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px dashed rgba(201,168,76,0.15);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 320px; padding: 40px;
+      flex-direction: column; gap: 16px; text-align: center;
+    }
+    .coming-icon { font-size: 36px; opacity: 0.4; }
+    .coming-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; color: #4A5568;
+    }
+    .coming-desc {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #4A5568; letter-spacing: 0.1em;
+    }
+
+    /* ── VALUE PROPOSITIONS ────────────────────────────── */
+    .value-section {
+      padding: 60px 32px 80px;
+      border-top: 1px solid rgba(201,168,76,0.1);
+    }
+    .value-inner { max-width: 1100px; margin: 0 auto; }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px; margin-top: 48px;
+    }
+    .value-item {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .value-icon {
+      font-size: 28px; width: 52px; height: 52px;
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .value-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px; font-weight: 600; color: #E8DCC8;
+    }
+    .value-desc { font-size: 14px; color: #7A8FA8; line-height: 1.65; }
+
+    /* ── QUOTE ──────────────────────────────────────────── */
+    .quote-section {
+      padding: 60px 32px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.05) 0%, transparent 100%);
+      border-top: 1px solid rgba(201,168,76,0.1);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .quote-inner {
+      max-width: 760px; margin: 0 auto; text-align: center;
+    }
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 80px; line-height: 0.6;
+      color: rgba(201,168,76,0.3);
+      display: block; margin-bottom: 24px;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px; font-style: italic;
+      color: #E8DCC8; line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    .quote-author {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: #C9A84C; letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid rgba(201,168,76,0.1);
+      padding: 32px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700;
+      color: rgba(201,168,76,0.5); letter-spacing: 0.18em;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .footer-legal {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; color: rgba(165,180,200,0.3); letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 640px) {
+      .header { padding: 18px 20px; }
+      .hero { padding: 48px 20px 40px; }
+      .section { padding: 0 20px 60px; }
+      .header-nav { display: none; }
+      .courses-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a href="index.html" class="header-logo">ZRC<span>·Intelligence</span></a>
+        <div class="header-divider"></div>
+        <span class="header-section">Academia</span>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Briefing Diario</a>
+        <a href="academia.html" class="nav-link active">Academia</a>
+        <a href="curso-geopolitico.html" class="nav-cta">Ver Curso →</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">ZRC Academia</div>
+    <h1 class="hero-title">
+      Formación en<br>
+      <em>Inteligencia</em><br>
+      de Inversión
+    </h1>
+    <p class="hero-subtitle">
+      Las herramientas analíticas que usan los fondos soberanos y gestoras institucionales,
+      ahora en formato accesible. Aprende a leer el mundo antes de que los mercados lo reflejen.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">1</span>
+        <span class="hero-stat-label">Curso disponible</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">€29</span>
+        <span class="hero-stat-label">Precio de lanzamiento</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">ES · EN</span>
+        <span class="hero-stat-label">Idiomas</span>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+  </div>
+
+  <!-- COURSES -->
+  <section class="section">
+    <div class="section-header">
+      <h2 class="section-title">Cursos disponibles</h2>
+      <span class="section-label">1 de 6 planificados</span>
+    </div>
+
+    <div class="courses-grid">
+
+      <!-- COURSE 1 — Featured / Available -->
+      <div class="course-card" style="animation-delay: 0.1s">
+        <div class="course-card-thumb">
+          <span class="course-thumb-globe">🌍</span>
+          <span class="course-thumb-label">Curso Fundacional</span>
+          <span class="course-thumb-duration">◉ 28 min</span>
+        </div>
+        <div class="course-card-body">
+          <div class="course-card-meta">
+            <span class="badge badge-open">Abierto</span>
+            <span class="badge badge-new">Nuevo</span>
+            <span class="badge badge-lang">ES · EN</span>
+            <span class="badge badge-level">Introductorio</span>
+          </div>
+          <h3 class="course-card-title">Gestión del Riesgo Geopolítico para Inversores</h3>
+          <p class="course-card-desc">
+            Aprende el Framework ZRC de 5 Vectores, las 12 señales de alerta temprana y el protocolo
+            de decisión para gestionar activos bajo incertidumbre geopolítica. Incluye 3 casos de
+            estudio reales, presentación descargable y ejercicios interactivos.
+          </p>
+          <div class="course-card-footer">
+            <div>
+              <div class="course-price">€29<span>/ acceso permanente</span></div>
+            </div>
+            <a href="curso-geopolitico.html" class="course-cta">
+              Acceder al curso →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coming Soon 1 -->
+      <div class="coming-card" style="animation-delay: 0.2s">
+        <div class="coming-icon">🏦</div>
+        <div class="coming-title">Análisis Macro para Inversores</div>
+        <div class="coming-desc">Disponible Q3 2025</div>
+      </div>
+
+      <!-- Coming Soon 2 -->
+      <div class="coming-card" style="animation-delay: 0.3s">
+        <div class="coming-icon">⚡</div>
+        <div class="coming-title">Commodities Críticos y Cadenas de Suministro</div>
+        <div class="coming-desc">Disponible Q4 2025</div>
+      </div>
+
+      <!-- Coming Soon 3 -->
+      <div class="coming-card" style="animation-delay: 0.4s">
+        <div class="coming-icon">🌏</div>
+        <div class="coming-title">Mercados Emergentes: Riesgo y Oportunidad</div>
+        <div class="coming-desc">Disponible Q1 2026</div>
+      </div>
+
+      <!-- Coming Soon 4 -->
+      <div class="coming-card" style="animation-delay: 0.5s">
+        <div class="coming-icon">📊</div>
+        <div class="coming-title">Capital Privado en Entornos Inciertos</div>
+        <div class="coming-desc">Disponible Q2 2026</div>
+      </div>
+
+      <!-- Coming Soon 5 -->
+      <div class="coming-card" style="animation-delay: 0.6s">
+        <div class="coming-icon">🏛️</div>
+        <div class="coming-title">Política Comercial y Sanciones</div>
+        <div class="coming-desc">Disponible Q2 2026</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITIONS -->
+  <div class="value-section">
+    <div class="value-inner">
+      <div class="section-header">
+        <h2 class="section-title">Por qué ZRC Academia</h2>
+        <span class="section-label">Diferenciadores</span>
+      </div>
+      <div class="value-grid">
+        <div class="value-item">
+          <div class="value-icon">🔭</div>
+          <div class="value-title">Inteligencia Operativa</div>
+          <div class="value-desc">No teoría académica. Frameworks usados en entornos reales de toma de decisión por analistas de Zenith Rise Capital.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">📡</div>
+          <div class="value-title">Actualización Continua</div>
+          <div class="value-desc">Los cursos se nutren del briefing diario de ZRC. Las señales del mundo real entran en los materiales en tiempo casi real.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🌐</div>
+          <div class="value-title">Bilingüe por diseño</div>
+          <div class="value-desc">Todo el contenido en español e inglés. Ideal para inversores con carteras globales que trabajan en entornos multiculturales.</div>
+        </div>
+        <div class="value-item">
+          <div class="value-icon">🎯</div>
+          <div class="value-title">Aplicación inmediata</div>
+          <div class="value-desc">Cada curso termina con un framework accionable y ejercicios basados en escenarios reales. Aprende y aplica en el mismo día.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-section">
+    <div class="quote-inner">
+      <span class="quote-mark">&ldquo;</span>
+      <p class="quote-text">
+        El riesgo geopolítico no es ruido. Es la señal que el mercado todavía no ha procesado.
+        Aprenderlo es una ventaja competitiva.
+      </p>
+      <div class="quote-author">— Zenith Rise Capital · ZRC Academia</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-brand">ZENITH RISE CAPITAL · ZRC ACADEMIA · GEOPOLITICAL INTELLIGENCE</div>
+    <div class="footer-legal">Calesius Global S.L. · Madrid · Los cursos son materiales formativos y no constituyen asesoramiento de inversión.</div>
+  </footer>
+
+</body>
+</html>
