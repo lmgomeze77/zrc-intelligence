@@ -1,278 +1,80 @@
 {
-  "generated": "2026-06-23T09:36:20.908Z",
-  "date": "Tuesday, 23 June 2026",
-  "globalBriefing": "US-Iran normalization (asset unfreezes, sanctions relief, nuclear inspection agreements) is reducing geopolitical premium in energy markets, with Brent crude sliding to $77.51/bbl and WTI at $73.62/bbl, while China's first public REITs and India's record US LPG imports signal capital reallocation toward non-traditional sources and infrastructure financing. Concurrent Big Tech sell-off, UK political uncertainty, and 40% fertilizer price elevation driven by Strait disruptions are creating bifurcated investment flows: away from US tech and developed-market CRE, toward Asian growth economies, African FDI destinations, and commodity exporters.",
-  "marketOpen": "Monitor crude's hold below $75 WTI (settlement dependent on Iran talks renewal) and Big Tech sector stabilization (revenue guidance risks); ECB rate path signaling and UK political developments (Burnham leadership odds) are secondary catalysts.",
+  "generated": "2026-06-24T09:25:20.682Z",
+  "date": "Wednesday, 24 June 2026",
+  "globalBriefing": "",
+  "marketOpen": "",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [
-        {
-          "headline": "ECB warns Middle East crisis is squeezing eurozone growth and stoking inflation",
-          "summary": "Per Crypto Briefing, the ECB has warned that Middle East tensions are exerting downward pressure on eurozone growth while contributing to inflationary pressures. The statement reflects concern that geopolitical risk is offsetting monetary tightening efforts.",
-          "source": "Crypto Briefing / ECB",
-          "relevance": "If eurozone growth deteriorates despite rate hikes, the ECB may face pressure to pause or reverse tightening, weakening the EUR and pressuring eurozone fixed income.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Singapore inflation holds at 1.8% in May, cooler than expected as services costs ease",
-          "summary": "According to CNBC, Singapore's year-over-year inflation remained at 1.8% in May, below consensus expectations, as service sector cost pressures moderated. The data suggests disinflationary momentum in a major Asian financial hub.",
-          "source": "CNBC",
-          "relevance": "Sustained below-target inflation in Singapore may delay MAS rate hikes, supporting SGD depreciation and regional carry trades.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "UBS raises Taiwan's GDP growth forecast to 9.9% for 2026",
-          "summary": "Per Focus Taiwan, UBS has revised upward its 2026 Taiwan GDP growth forecast to 9.9%, significantly above consensus, suggesting acceleration in tech-driven expansion. This follows strong first-half performance in semiconductors.",
-          "source": "Focus Taiwan / UBS",
-          "relevance": "Upside growth surprise in Taiwan supports TWD appreciation and increases valuations for semiconductor and electronics exporters in the region.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If eurozone disinflation pressures mount while Asian economies accelerate, the ECB may ease sooner than priced, creating a widening growth and rate differential favoring Asian and emerging-market equities.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [
-        {
-          "headline": "Iran and US conclude technical talks in Switzerland; agreement reached to release $12 billion in frozen assets",
-          "summary": "According to Al Jazeera, Iran's top negotiator Mohammad Ghalibaf announced successful conclusion of technical talks with the US in Switzerland, with agreement to release $12 billion in frozen Iranian assets. The talks followed a broader US-Iran memorandum signed at the G7 summit on June 17.",
-          "source": "Al Jazeera",
-          "relevance": "Asset unfreezing reduces near-term Iran liquidity constraints and signals de-escalation; lower geopolitical premium may support crude prices and reduce regional conflict risk for investors with Middle East exposure.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "US eases Iran oil sanctions for 60 days after Iran agrees to international nuclear inspections",
-          "summary": "Per Al Jazeera, the US has eased oil sanctions on Iran for a 60-day period following Iranian agreement to allow international nuclear inspections. This represents the latest phase in the phased normalization framework signed mid-June.",
-          "source": "Al Jazeera",
-          "relevance": "Temporary sanctions relief expands Iran's oil export capacity, increasing global supply and placing downward pressure on crude prices; medium-term trajectory depends on inspection compliance and renewal negotiations.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "UN inquiry reports Israel's 'deliberate targeting' of Gaza children part of ongoing 'genocide'",
-          "summary": "According to Al Jazeera, a UN Commission of Inquiry has stated that Israel's 'deliberate targeting' of Gaza children constitutes part of an ongoing 'genocide.' The finding is contested; Israel disputes the characterization.",
-          "source": "Al Jazeera / UN Commission of Inquiry",
-          "relevance": "Escalating legal and reputational risk for entities with Israel exposure; potential triggers for divestment campaigns and sectoral sanctions targeting defense contractors and financial institutions.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If Iran nuclear normalization and asset unfreezing hold through the 60-day window, crude prices face further compression and regional conflict risk recedes, benefiting energy importers and reducing Middle East geopolitical premium across global portfolios.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [
-        {
-          "headline": "Big Tech leads sell-off in global stocks as SpaceX rally reverses",
-          "summary": "Per Financial Times, a broad decline in technology equities has reverberated across global markets, with a prior SpaceX rally reversing course. The shift reflects changing sentiment toward high-growth, capital-intensive sectors.",
-          "source": "Financial Times",
-          "relevance": "Sector rotation away from Big Tech suggests margin compression concerns or rising real rates; investors should rotate toward value and defensive positioning in equity allocations.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Cityscape Global launches Capitals platform as global investors increase focus on Saudi Arabia",
-          "summary": "According to EIN Presswire, Cityscape Global has launched a new platform, Capitals, amid reported increased institutional investor interest in Saudi Arabia. The initiative reflects capital reallocation toward the Kingdom's diversification agenda.",
-          "source": "EIN Presswire",
-          "relevance": "Increased institutional FDI flows into Saudi Arabia support real estate and infrastructure asset valuations; opportunities exist in Vision 2030-aligned sectors including tech hubs and logistics.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "UK 'irritated' by EU move to delay key summit after Starmer's resignation",
-          "summary": "Per Financial Times, the UK government has expressed irritation at the EU's postponement of a July summit on closer bilateral relations, ostensibly in response to uncertainty around UK Prime Minister Starmer's political position. Brussels is reportedly preparing for the prospect of Andy Burnham becoming PM.",
-          "source": "Financial Times",
-          "relevance": "Political uncertainty around UK leadership may delay FDI and trade negotiations with the EU; investors should monitor UK domestic political developments and their impact on regulatory and tax policy.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "Tech sector weakness and UK political uncertainty create headwinds for FDI into developed markets; concurrent Saudi Arabia capital flows suggest regional reallocation toward emerging-market infrastructure and real-estate assets.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [
-        {
-          "headline": "Oil prices extend decline to $77.51 Brent, $73.62 WTI on reports of US-Iran peace talks progress",
-          "summary": "According to OilPrice.com, crude prices have continued their downward trajectory, with Brent crude at $77.51 per barrel and WTI at $73.62, attributed to reports of progress in US-Iran peace negotiations and Strait of Hormuz stabilization.",
-          "source": "OilPrice.com",
-          "relevance": "Sustained crude decline below $75 WTI pressures upstream capex and cash flow; exploration-stage projects face GO/NO-GO reviews, reducing near-term supply expansion.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "India boosts US LPG imports to record high in June despite elevated prices",
-          "summary": "Per OilPrice.com, India is importing record volumes of US liquefied petroleum gas in June despite higher prices, reflecting efforts to replace constrained supply from Middle East sources disrupted by the Strait of Hormuz crisis.",
-          "source": "OilPrice.com",
-          "relevance": "Structural shift in LPG sourcing from Middle East to US Gulf increases US export economics; supports petrochemical feedstock pricing and US energy export competitiveness.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "TerraLithium and BHE Renewables advance toward commercial-scale lithium extraction using direct lithium extraction process",
-          "summary": "According to Mining.com, TerraLithium and BHE Renewables have achieved production of lithium chloride using direct lithium extraction (DLE) technology at a geothermal facility in California, advancing toward commercial deployment.",
-          "source": "Mining.com",
-          "relevance": "DLE technology de-risks US domestic lithium supply; reduces reliance on brine extraction and supports EV battery supply-chain resilience for North American manufacturers.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If crude remains below $75 WTI and DLE lithium extraction scales commercially, US energy exporters face margin pressure while battery and EV manufacturers gain supply-chain optionality and cost reduction potential.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [
-        {
-          "headline": "China's first public commercial REITs debut with institutional firm involvement",
-          "summary": "Per Law.asia, China has launched its first public commercial real estate investment trusts (REITs), with major institutional firms steering the offering. The development marks a milestone in China's real estate sector financialization and represents an alternative to traditional debt financing.",
-          "source": "Law.asia",
-          "relevance": "Chinese REIT market entry reduces leverage in property sector and provides equity capital for stabilized assets; supports price discovery and institutional capital allocation to distressed CRE.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Data centers emerge as real estate's new center of gravity, per CoStar",
-          "summary": "According to CoStar, data centers have become the dominant driver of real estate capital allocation and leasing velocity, displacing traditional office and retail. Institutional investor focus on AI infrastructure and cloud computing is reshaping property market fundamentals.",
-          "source": "CoStar",
-          "relevance": "Structural shift toward data center demand supports industrial real estate valuations and REITs with power-intensive, long-duration leases; creates headwinds for legacy office and retail CRE.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Generation Mining secures CAD$200 million subordinated debt commitment from Canada Infrastructure Bank",
-          "summary": "Per ABF Journal and Business Wire, Generation Mining has secured a CAD$200 million subordinated debt commitment from the Canada Infrastructure Bank, providing capital for mineral extraction infrastructure development.",
-          "source": "ABF Journal / Business Wire",
-          "relevance": "Government-backed infrastructure financing for critical minerals extraction de-risks project capex; supports lithium, copper, and battery metal supply-chain projects aligned with energy transition.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If data center demand sustains and Chinese REIT market deepens, real estate capital will concentrate in AI-infrastructure and industrial assets while legacy office and retail CRE faces secular valuation compression.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [
-        {
-          "headline": "AbbVie to acquire Apogee Therapeutics for $10.9 billion, sharpening immunology focus",
-          "summary": "According to Reuters and Genetic Engineering and Biotechnology News, AbbVie has announced a $10.9 billion acquisition of Apogee Therapeutics, a firm developing eczema and other immunology treatments. The deal expands AbbVie's immunology pipeline and addresses portfolio concentration risks.",
-          "source": "Reuters / Genetic Engineering and Biotechnology News",
-          "relevance": "Large pharma M&A in immunology reflects high valuation multiples for late-stage biologics and signals consolidation of specialty therapeutics; supports pipeline stability for large-cap pharma but pressures mid-cap biotech valuations.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Spirit Airlines lands buyout offer after shutdown, may fly again",
-          "summary": "Per TheStreet, Spirit Airlines has received a buyout offer following its operational shutdown, raising the prospect of operational revival under new ownership. The transaction represents a distressed-asset acquisition in commercial aviation.",
-          "source": "TheStreet",
-          "relevance": "Distressed asset recovery in airline sector suggests capital availability for turnarounds; however, structural headwinds in domestic carrier capacity and competition limit upside.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Signal Hill-backed architecture and engineering firm Aeterna Group launches following consolidation of five firms",
-          "summary": "According to PE Hub, Signal Hill has backed the launch of Aeterna Group, formed by uniting five architecture and engineering firms (CSArch, ZMM, Kluber, KGD, and Omni Associates). The consolidation reflects PE interest in professional services platform building.",
-          "source": "PE Hub",
-          "relevance": "Professional services consolidation under PE ownership typically generates margin expansion via overhead synergies; signals confidence in A&E sector demand and recurring revenue potential.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If large pharma M&A valuations sustain above 20x EBITDA and professional services consolidation continues, mid-market software, healthcare, and service sector platforms will attract PE capital seeking defensive growth profiles.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [
-        {
-          "headline": "China's humanoid robots move into Asia's workforce as aging crisis pressures labor supply",
-          "summary": "Per Asia Times, humanoid robots are being deployed at baggage handling and other labor-intensive functions across Asian airports and logistics hubs as aging demographics and labor shortages mount. Japan's Haneda Airport is cited as an early deployment site.",
-          "source": "Asia Times",
-          "relevance": "Accelerated robotics deployment in Asia reduces labor cost inflation pressure and supports automation-sector valuations; however, may weigh on wages and consumption in labor-intensive sectors.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Japan's frigate sales pitch masks wider Indo-Pacific security architecture amid China's rise and US uncertainty",
-          "summary": "According to Asia Times, Japan's strategic expansion of naval equipment sales to regional partners reflects broader efforts to build an alternative security architecture in the Indo-Pacific amid China's military modernization and uncertainty around US strategic commitment.",
-          "source": "Asia Times",
-          "relevance": "Regional military spending acceleration supports Japanese defense and shipbuilding exports; however, escalates geopolitical tensions and increases hedging costs for regional investors.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Africa's FDI inflows exceed $100 billion in 2025, reshaping economic landscape across the continent",
-          "summary": "Per African Business, foreign direct investment into Africa totaled more than $100 billion in 2025, fundamentally reshaping capital allocation patterns across the continent. The article notes that headline figures mask significant sectoral and geographic concentration.",
-          "source": "African Business",
-          "relevance": "Sustained $100bn+ annual FDI flows into Africa support infrastructure, tech, and manufacturing development; however, concentration in extractives and limited backward linkages constrain broad-based employment growth.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If African FDI sustains above $100 billion annually and Asian automation offsets labor-inflation pressures, emerging markets will bifurcate between tech-enabled service exporters and commodity-dependent economies facing structural headwinds.",
-      "rawCount": 8
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 10
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "US fields questions at WTO on temporary global tariff proposal",
-          "summary": "According to Law360, the United States has presented and fielded questions from WTO members regarding a temporary global tariff proposal, with discussions ongoing regarding scope, duration, and compliance mechanisms.",
-          "source": "Law360 / WTO",
-          "relevance": "Uncertainty around US tariff architecture creates near-term trade policy risk; outcome of WTO deliberations will determine exposure for exporters and import-dependent manufacturers.",
-          "signal": "watch"
-        },
-        {
-          "headline": "India convenes 2-day 'Chintan Shivir' on environment-related trade measures and free trade agreements",
-          "summary": "Per Devdiscourse and DD News, India has convened a two-day policy forum (Chintan Shivir) in Delhi to address environment-related trade barriers and free trade agreement negotiation strategy, focused on safeguarding export interests.",
-          "source": "Devdiscourse / DD News",
-          "relevance": "Indian FTA strategy aimed at minimizing environmental conditionality reflects pushback against green protectionism; outcome affects textile, agriculture, and manufacturing export competitiveness.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Placeholder for third trade-policy item (insufficient distinct signal from remaining headlines)",
-          "summary": "The remaining trade-policy desk headlines lack quantifiable data or distinct policy announcements suitable for institutional briefing. Recommend monitoring for subsequent regulatory filings and formal policy statements.",
-          "source": "Multiple sources",
-          "relevance": "Trade policy desk lacks sufficient actionable signals at this time.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If US global tariff proposal advances and India's FTA negotiations narrow green-trade exceptions, emerging-market exporters face margin compression while developed-market importers gain leverage in supplier negotiations.",
-      "rawCount": 4
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 5
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [
-        {
-          "headline": "Fertilizer prices spike 40 percent due to Iran war disrupting Strait of Hormuz shipping",
-          "summary": "According to sekbernews.id and related sources, fertilizer prices have increased approximately 40 percent due to disruption in Strait of Hormuz shipping caused by the Iran conflict, constraining global nutrient supply.",
-          "source": "sekbernews.id",
-          "relevance": "Elevated fertilizer costs compress agricultural margins and increase food-price inflation risk, particularly in phosphate and potash-dependent developing economies; impacts crop yields and rural income.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "India imports record LPG volumes from US to replace constrained Middle East supply amid Strait disruptions",
-          "summary": "Per OilPrice.com, India is sourcing record LPG imports from the United States to compensate for reduced supply from the Middle East caused by Strait of Hormuz disruptions, raising fertilizer feedstock costs.",
-          "source": "OilPrice.com",
-          "relevance": "Fertilizer production cost inflation feeds into global agricultural input pricing; sustains upside pressure on grain, oilseed, and protein valuations.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Cultivated meat sector faces ongoing consolidation and failures after investment boom; limited light at end of tunnel",
-          "summary": "According to AgFunder News, the cultivated meat industry is experiencing high-profile failures and consolidation following earlier investment euphoria, with profitability and regulatory pathways remaining uncertain.",
-          "source": "AgFunder News",
-          "relevance": "Cultivated meat sector valuations and funding dry up; reflects investor risk repricing on commercialization timelines; supports conventional protein and plant-based alternatives.",
-          "signal": "bearish"
-        }
-      ],
-      "keyTakeaway": "If Strait of Hormuz disruptions persist and fertilizer prices remain elevated, global crop yields face downward pressure while food inflation sustains, benefiting commodity futures and commodity-exporting emerging markets.",
-      "rawCount": 8
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 10
     }
   }
 }
