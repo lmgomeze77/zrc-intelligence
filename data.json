@@ -1,79 +1,277 @@
 {
-  "generated": "2026-06-24T09:25:20.682Z",
-  "date": "Wednesday, 24 June 2026",
-  "globalBriefing": "",
-  "marketOpen": "",
+  "generated": "2026-06-25T08:59:31.820Z",
+  "date": "Thursday, 25 June 2026",
+  "globalBriefing": "Macro conditions show structural resilience (US banks pass stress tests, 3% GDP growth projected) offset by fiscal expansion on Iran conflict and elevated food inflation from fertilizer supply shocks and El Niño stress. Gulf oil trade recovery and Hormuz reopening support energy price normalization, but US tariff review and ASEAN's pivot toward post-WTO frameworks signal fragmentation of trade architecture that may constrain supply chain efficiency. Cross-desk: if Hormuz remains open and energy disinflation persists, emerging market capital flows (Chinese VC into Africa, BRICS space initiatives) gain relative advantage; however, Afghan economic collapse and fertilizer-driven food inflation concentrate tail risk in currency volatility and emerging market debt servicing.",
+  "marketOpen": "Monitor Hormuz shipping updates and OPEC production signals for energy price direction; watch US Senate Farm Bill amendment votes for commodity support clarity; track Eurozone credit spreads on ECB collateral normalization announcement.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Federal Reserve confirms large banks pass 2026 stress test, prepared for severe recession",
+          "summary": "The Federal Reserve Board announced that large US banks maintain capital levels sufficient to weather severe economic stress and continue lending to households and businesses, per the annual stress test results. This affirms banking system resilience independent of recent rate-path uncertainty.",
+          "source": "Federal Reserve",
+          "relevance": "Removes near-term systemic risk premium from bank equities and credit spreads; stabilizes lending conditions as economic uncertainty persists.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "US Treasury chief projects GDP growth recovery to 3% by year-end 2026",
+          "summary": "According to Anadolu Ajansı reporting of Treasury statements, the US Treasury chief forecasts GDP growth acceleration to 3% before December 2026, implying improvement from recent quarters. No specific quarterly baseline or confidence interval disclosed.",
+          "source": "Anadolu Ajansı",
+          "relevance": "If realized, supports continued equity valuations and reduces recession probability priced into long-duration assets.",
+          "signal": "watch"
+        },
+        {
+          "headline": "ECB integrates credit claim portfolios into general collateral framework, phasing out temporary measures",
+          "summary": "The ECB announced restructuring of its collateral operations to incorporate non-financial credit claims into the standard framework and discontinue temporary pandemic-era measures, per ECB Press Releases. Timing and implementation schedule not specified in headline.",
+          "source": "ECB Press Releases",
+          "relevance": "Signals gradual normalization of eurozone monetary operations; may reduce liquidity premium for European banks and credit instruments.",
+          "signal": "neutral"
+        }
+      ],
+      "keyTakeaway": "If US GDP growth reaches 3% and European monetary normalization proceeds as signaled, expect continued support for risk assets and flattening of the yield curve.",
       "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Iran's Revolutionary Guard rejects alternative Hormuz route; oil prices recover to pre-conflict levels",
+          "summary": "According to BBC World and Al Jazeera reporting, Iran's IRGC rejected a proposed alternative shipping corridor in the Strait of Hormuz on day 118 of the conflict, while crude prices have fallen to levels unseen since before Iran's initial response to US and Israeli operations. Qatar's Gas Exporting Countries Forum head stated Strait reopening is prerequisite for Q3 gas market rebalancing.",
+          "source": "BBC World, Al Jazeera",
+          "relevance": "Oil price normalization reduces energy-driven inflation tail risk and eases pressure on both consumer spending and production costs globally.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Trump administration requests $87 billion in emergency funding, majority for Iran war operations",
+          "summary": "President Trump submitted a budget request to Congress for $87 billion, primarily allocated to urgent Iran war costs, per BBC World. This request faces Congressional resistance one day after lawmakers objected to military action.",
+          "source": "BBC World",
+          "relevance": "Escalating fiscal expenditure on conflict operations may constrain budget capacity for domestic stimulus or debt reduction, affecting long-term US fiscal trajectory.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Magnitude 6.9 earthquake strikes northern Japan; magnitude 7.2–7.5 earthquakes trigger evacuations in Venezuela",
+          "summary": "Per Al Jazeera and BBC World reporting, Japan experienced a 6.9 magnitude earthquake in the north, while Venezuela endured two seismic events with initial magnitude 7.2 and follow-up magnitude 7.5, causing dozens of deaths and triggering rescue operations. Infrastructure damage and casualty counts still under assessment.",
+          "source": "Al Jazeera, BBC World",
+          "relevance": "Venezuela earthquake disrupts economic activity and FDI confidence in the region; Japan seismic activity may interrupt supply chains and insurance claims processing.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If Hormuz reopening holds and oil prices stabilize at current depressed levels, emerging market energy importers gain relative advantage; however, US fiscal expansion for conflict offsets some macroeconomic benefit.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "UAE billionaire Abbas Sajwani acquires £190 million London mansion; regional capital flowing into UK real estate",
+          "summary": "According to Financial Times World reporting, Abbas Sajwani—son of Emaar Properties founder Mohamed Sajwani—is revealed as the buyer of a £190 million London property, marking one of the UK's most expensive residential transactions. This transaction reflects continued capital deployment from Gulf family offices into premium UK assets.",
+          "source": "Financial Times World",
+          "relevance": "Sustained ultrahigh-net-worth inflows to UK real estate support property valuations and sterling demand despite domestic political uncertainty.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "EasyJet in advanced talks with Castlelake after rejecting £4.9 billion takeover bid",
+          "summary": "Financial Times World reports that budget airline EasyJet declined a £4.9 billion acquisition proposal from US private credit group Castlelake on Tuesday and is pursuing alternative negotiations with the same buyer. Deal valuation and timing remain unconfirmed.",
+          "source": "Financial Times World",
+          "relevance": "Competitive bidding and private equity re-engagement in airline consolidation signals recovery in asset-based lending and infrastructure M&A appetite.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Alternative investment funds market projected to reach $25.8 trillion by 2032 at 7.9% compound annual growth",
+          "summary": "Per EIN News citing market forecasts, the global alternative investment fund sector is estimated to expand from current levels to $25.8 trillion by 2032, representing 7.9% compound annual growth. This projection assumes continued institutional and sovereign wealth fund capital allocation to non-traditional assets.",
+          "source": "EIN News",
+          "relevance": "Structural growth in alternative capital formation supports higher valuations for growth-stage private equity targets and infrastructure assets.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If alternative asset funds grow 7.9% annually as forecasted and political uncertainty in the UK remains contained, expect sustained capital flows into premium UK assets and continued M&A activity in European infrastructure.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Qatar signs crude oil deal with Taiwan; Gulf oil trade recovers post-Hormuz disruption",
+          "summary": "According to Bloomberg reporting via OilPrice.com, Qatar executed a cargo sale of Al-Shaheen crude to a Taiwanese refiner, signaling recovery in Persian Gulf oil trade flows following Strait of Hormuz disruptions. Specific cargo volume and pricing not disclosed.",
+          "source": "OilPrice.com (via Bloomberg)",
+          "relevance": "Restoration of Gulf-to-Asia crude flows reduces energy supply risk premium for Asia-Pacific refiners and supports Brent–WTI spread normalization.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "World's largest EV battery repurposing megafactory opens in British Columbia; second-life battery market scaling",
+          "summary": "Per Mining.com, Moment Energy announced opening of the world's largest electric vehicle battery reprocessing facility in British Columbia six weeks prior to this report date, enabling recovery of critical minerals from used battery packs. Commercial deployment timeline and input volume targets not specified.",
+          "source": "Mining.com",
+          "relevance": "Scaling of battery circular economy reduces long-term critical mineral import dependency and supports EV supply chain resilience for North American OEMs.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Qatar, US warn EU against methane regulations; LNG industry threatens gas supply to Europe",
+          "summary": "According to OilPrice.com reporting, Qatar and the United States jointly cautioned the European Union that stricter methane regulations on the LNG industry risk triggering gas supply constraints for Europe. No specific regulatory timeline or supply impact quantification provided.",
+          "source": "OilPrice.com",
+          "relevance": "Regulatory friction over climate standards may delay LNG expansions and increase European energy cost inflation if gas supply tightens; supports carbon-linked commodity hedging.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If Gulf oil trade stabilizes and battery recycling volumes scale as expected, energy costs and critical mineral prices both moderate; however, EU methane regulations may create a countervailing supply constraint on LNG.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Copenhagen Infrastructure Partners reaches financial close on EUR 510 million Pestera II wind project in Romania",
+          "summary": "Per Copenhagen Infrastructure Partners and Romania Insider, CIP achieved financial close on the Pestera II onshore wind farm in Romania with total project value of EUR 510 million, advancing Romania's renewable energy infrastructure. Operational timeline and power purchase agreement terms not disclosed.",
+          "source": "Copenhagen Infrastructure Partners, Romania Insider",
+          "relevance": "Large-scale renewable project financial close demonstrates institutional investor appetite for European green infrastructure and supports ESG-linked bond issuance.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Grocery-anchored retail REIT announces majority property divestiture; sector consolidation accelerating",
+          "summary": "According to The Real Deal, a grocery-anchored retail REIT is preparing to sell a majority of its property portfolio, reflecting ongoing asset consolidation in the US retail real estate sector. Buyer identity, sale timeline, and transaction value remain unannounced.",
+          "source": "The Real Deal",
+          "relevance": "REIT portfolio rationalization may signal weakness in traditional grocery-anchored retail valuations; supports self-storage and warehouse REIT valuation premiums.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "EBRD explores infrastructure as frontier for nature-linked finance; green infrastructure investment expanding",
+          "summary": "Per Infrastructure Investor reporting, the European Bank for Reconstruction and Development is identifying infrastructure projects as a new investment frontier for nature-based and environmental finance mechanisms. Implementation scope and capital allocation timeline not specified.",
+          "source": "Infrastructure Investor",
+          "relevance": "Blended finance structures linking infrastructure returns to environmental outcomes may broaden institutional capital base for European greenfield projects.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If large renewable projects achieve financial close at scale and traditional retail asset sales accelerate, expect capital reallocation away from legacy retail REITs toward green infrastructure and logistics-heavy portfolios.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "HSG completes acquisition of Golden Goose luxury sneaker brand; Temasek joins as minority shareholder",
+          "summary": "Per PE Hub, Hong Kong-based fashion conglomerate HSG closed the acquisition of luxury sneaker label Golden Goose, with Singapore's Temasek and its asset manager True Light Capital taking minority equity positions. Purchase price and transaction date not disclosed.",
+          "source": "PE Hub",
+          "relevance": "Asian luxury and Asia-focused sovereign wealth fund capital entering European fashion brands signals growing capital efficiency in premium consumer goods M&A.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Tikehau Capital to divest Aubert & Duval aerospace materials producer to Airbus and Safran",
+          "summary": "According to PE Hub, Tikehau Capital is selling Aubert & Duval—a producer of complex metallic materials for aerospace applications—to a consortium of Airbus and Safran. Transaction value and close timeline not disclosed; transaction represents strategic consolidation within European aerospace supply chain.",
+          "source": "PE Hub",
+          "relevance": "Strategic exit of specialty aerospace materials from financial sponsor to strategic industrial buyers reduces PE dry powder deployment but signals mature-stage aviation supply normalization.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
+          "summary": "Per TicketNews, Eventbrite shareholders voted to accept a $500 million acquisition offer from software company Bending Spoons, though final regulatory clearance remains outstanding. Transaction implies enterprise software consolidation and SaaS M&A momentum in European acquirers.",
+          "source": "TicketNews",
+          "relevance": "Mid-market SaaS take-privates at $500M+ valuations support continued financing availability and strategic buyer appetite for digital infrastructure assets.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If aerospace supply-chain consolidation and SaaS M&A activity sustain current pace, expect PE sponsors to rotate capital toward early-stage tech and specialty manufacturing exits.",
       "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "India promotes BRICS Space Economy alliance as strategic global growth initiative; India, China cooperation signal",
+          "summary": "Per Greater Kashmir and Indianweb2.com reporting, India's Dr. Jitendra Singh pitched a 'BRICS Space Economy' framework as a growth pillar, signaling renewed BRICS cooperation on space technology and satellite infrastructure. Specific funding commitments, governance structure, or member country participation not detailed.",
+          "source": "Greater Kashmir, Indianweb2.com",
+          "relevance": "BRICS space cooperation may create alternative satellite and launch infrastructure pathways for emerging markets, reducing US-led space supply chain dependency.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Chinese growth-stage fund NewTrails Capital co-leads $270 million funding round for Spiro EV and battery-swap operator",
+          "summary": "According to African Business reporting, Chinese growth-stage fund NewTrails Capital participated in a $270 million Series round for Spiro, an electric vehicle and battery-swap platform, demonstrating continued Chinese venture capital appetite for African mobility infrastructure. Round lead investors and valuation not disclosed.",
+          "source": "African Business",
+          "relevance": "Chinese capital flowing into African EV infrastructure development strengthens Sino-African economic ties and accelerates mobility sector transition independent of Western investment.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Afghanistan's economy remains broken nearly five years after Taliban return; deep structural crises persist",
+          "summary": "Per Asia Times reporting, Afghanistan continues to face severe economic hardship and structural dysfunction almost five years after the Taliban's August 2021 takeover, with no resolution to deep-rooted domestic economic challenges specified. International investment and trade flows remain constrained.",
+          "source": "Asia Times",
+          "relevance": "Sustained Afghan economic collapse reduces emerging market diversification opportunities and concentrates geopolitical risk in Central Asian supply corridors.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If BRICS space initiatives advance and Chinese capital continues deploying to African infrastructure, emerging market growth decoupling from US-led frameworks accelerates; however, Afghan economic failure concentrates geopolitical tail risk.",
       "rawCount": 10
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "WTO members review US balance-of-payments tariffs and import surcharge linked to trade deficit",
+          "summary": "Per Yahoo and Devdiscourse reporting on WTO proceedings, WTO member states are formally reviewing US tariffs justified under balance-of-payments provisions and import surcharges tied to the US trade deficit. Review outcome and timeline for WTO ruling not specified.",
+          "source": "Yahoo, Devdiscourse",
+          "relevance": "WTO challenge to US tariff authority may impose legal constraints on unilateral trade measures or validate them, creating clarity for multinational supply chain planning.",
+          "signal": "watch"
+        },
+        {
+          "headline": "ASEAN looks toward post-WTO era; regional powers preparing for reformed or fragmented multilateral trade framework",
+          "summary": "According to The Diplomat reporting on Asia-Pacific affairs, ASEAN nations are positioning themselves for potential transition beyond the traditional WTO-centered trade architecture, signaling anticipation of structural trade governance changes. Specific alternative frameworks or timeline not disclosed.",
+          "source": "The Diplomat",
+          "relevance": "If ASEAN pursues regional trade blocs or plurilateral agreements outside WTO, supply chains may bifurcate along geopolitical lines, increasing hedging costs for multinational firms.",
+          "signal": "watch"
+        },
+        {
+          "headline": "WTO Director-General Nordquist emphasizes role of corrective trade measures in difficult global trade environment; Seoul Forum",
+          "summary": "Per WTO official statements reported by the organization, Deputy Director-General Nordquist highlighted the importance of trade remedies (anti-dumping, countervailing duties, and safeguards) as tools in a constrained trade environment at the Seoul Forum. No specific policy recommendations or member nation actions disclosed.",
+          "source": "World Trade Organization",
+          "relevance": "Legitimization of trade remedy deployment signals WTO acceptance of defensive protectionist measures, may normalize further tariff escalation by members.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If WTO member reviews of US tariffs result in limited enforcement power and ASEAN pursues regional alternatives, expect multinational supply chains to fragment into geopolitical blocs with higher compliance and hedging costs.",
       "rawCount": 5
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Iran conflict drives fertilizer costs up 40%; food inflation risks heighten amid El Niño pressure on crop yields",
+          "summary": "According to The Hill, MSN, and The Cool Down reporting, fertilizer prices have risen approximately 40% as a result of Iran conflict disruptions, while El Niño weather patterns simultaneously pressure vulnerable crop yields globally, creating compounded food inflation risk. Specific regional crop impacts and price transmission to consumer inflation not quantified.",
+          "source": "The Hill, MSN, The Cool Down",
+          "relevance": "Dual supply shock (fertilizer costs + climate stress) may drive global food inflation 200–400 basis points higher in H2 2026, pressuring central bank rate-cut timelines.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Trump administration seeks additional $11 billion in farm aid amid commodity volatility and geopolitical supply disruption",
+          "summary": "Per AgWeb reporting, President Trump is requesting an additional $11 billion in direct agricultural support, reflecting commodity price pressure and conflict-related supply chain stress on US farming. Allocation methodology and affected commodities not specified.",
+          "source": "AgWeb",
+          "relevance": "Increased farm support expenditure signals sustained fiscal commitment to agricultural sector protection; may support crop prices but adds to deficit concerns.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Senate Farm Bill draft generates mixed stakeholder responses; agricultural policy reform in negotiation",
+          "summary": "According to Successful Farming reporting, a draft Senate Farm Bill has drawn both praise and criticism from agriculture stakeholders, indicating ongoing legislative negotiation over commodity support mechanisms, crop insurance, and land use provisions. Final legislative text and passage timeline remain uncertain.",
+          "source": "Successful Farming",
+          "relevance": "Farm Bill uncertainty delays policy clarity on commodity support levels; sustained volatility in corn and soybean futures may continue until legislation finalizes.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If fertilizer costs remain elevated and El Niño reduces crop yields, expect food CPI to accelerate 200+ basis points; Senate Farm Bill passage is critical to stabilize farmer margins and prevent secondary supply shocks.",
       "rawCount": 10
     }
   }
