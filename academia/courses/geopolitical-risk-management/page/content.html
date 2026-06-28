@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ZRC-ACAD-GRM-01 · Gestión del Riesgo Geopolítico</title>
+  <style>
+    :root {
+      --navy-dark:  #060D18;
+      --navy:       #0B2545;
+      --navy-mid:   #0D1B2A;
+      --navy-light: #1E3A5C;
+      --gold:       #C9A227;
+      --gold-light: #E0B84A;
+      --text:       #B8C8D8;
+      --text-dim:   #7A9ABB;
+      --white:      #FFFFFF;
+      --transition: .2s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--navy-dark);
+      color: var(--text);
+      font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Loading / Auth screens ── */
+    #screen-loading, #screen-denied {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 1.5rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    #screen-denied { display: none; }
+
+    .spinner {
+      width: 48px; height: 48px;
+      border: 4px solid var(--navy-light);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .denied-icon {
+      font-size: 3rem;
+      color: var(--gold);
+    }
+    .denied-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.8rem;
+      color: var(--white);
+    }
+    .denied-body { color: var(--text-dim); max-width: 480px; }
+    .denied-body a { color: var(--gold); }
+
+    /* ── Main content (hidden until auth passes) ── */
+    #screen-content { display: none; }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--navy);
+      border-bottom: 2px solid var(--gold);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .header-brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: .05em;
+      text-decoration: none;
+    }
+    .header-course-tag {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .lang-toggle {
+      display: flex;
+      gap: .5rem;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--navy-light);
+      color: var(--text-dim);
+      padding: .3rem .75rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: .8rem;
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .lang-btn.active, .lang-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* ── Layout ── */
+    .content-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .course-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: .5rem;
+    }
+    .course-subtitle {
+      font-size: .8rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Video block ── */
+    .video-section {
+      background: var(--navy-mid);
+      border: 1px solid var(--navy-light);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 2.5rem;
+    }
+    .video-ratio {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+      background: #000;
+    }
+    .video-ratio iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background: var(--navy);
+      color: var(--text-dim);
+      font-size: .9rem;
+    }
+    .video-placeholder-icon { font-size: 3rem; color: var(--gold); opacity: .5; }
+    .video-caption {
+      padding: 1rem 1.5rem;
+      font-size: .8rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--navy-light);
+    }
+
+    /* ── Materials grid ── */
+    .section-label {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .material-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--navy-light);
+      border-radius: 6px;
+      padding: 1.25rem 1.25rem 1.25rem 1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color var(--transition);
+    }
+    .material-card:hover { border-color: var(--gold); }
+    .material-icon {
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+    .material-info {}
+    .material-name {
+      color: var(--white);
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: .2rem;
+    }
+    .material-desc { font-size: .8rem; color: var(--text-dim); }
+    .btn-download {
+      display: inline-block;
+      margin-top: .75rem;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .45rem .9rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background var(--transition);
+    }
+    .btn-download:hover { background: var(--gold-light); }
+    .btn-download.coming-soon {
+      background: var(--navy-light);
+      color: var(--text-dim);
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ── Content tabs (modules) ── */
+    .tabs-nav {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--navy-light);
+      padding-bottom: 0;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--text-dim);
+      padding: .6rem 1rem;
+      cursor: pointer;
+      font-size: .85rem;
+      transition: color var(--transition), border-color var(--transition);
+      margin-bottom: -1px;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Syllabus accordion ── */
+    .module-list { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+    .module-item {
+      background: var(--navy-mid);
+      border: 1px solid var(--navy-light);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .module-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+    }
+    .module-trigger:hover { color: var(--white); }
+    .module-title { font-size: .9rem; font-weight: 700; }
+    .module-time { font-size: .75rem; color: var(--text-dim); white-space: nowrap; }
+    .module-chevron {
+      color: var(--gold);
+      font-size: .85rem;
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+    .module-item.open .module-chevron { transform: rotate(180deg); }
+    .module-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s ease;
+    }
+    .module-item.open .module-body { max-height: 600px; }
+    .module-body-inner {
+      padding: 0 1.25rem 1.25rem;
+      font-size: .85rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--navy-light);
+      padding-top: 1rem;
+    }
+    .module-body-inner ul { list-style: disc; padding-left: 1.25rem; line-height: 2; }
+
+    /* ── Exercises section ── */
+    .exercise-card {
+      background: var(--navy-mid);
+      border: 1px solid var(--navy-light);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .exercise-number {
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .5rem;
+    }
+    .exercise-title { font-size: 1rem; color: var(--white); font-weight: 700; margin-bottom: .5rem; }
+    .exercise-desc { font-size: .85rem; color: var(--text-dim); }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--navy-light);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: .75rem;
+      color: var(--text-dim);
+      margin-top: 4rem;
+    }
+    .site-footer a { color: var(--gold); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .content-wrapper { padding: 2rem 1rem; }
+      .materials-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════ LOADING SCREEN -->
+<div id="screen-loading">
+  <div class="spinner"></div>
+  <p id="loading-msg">Verificando acceso…</p>
+</div>
+
+<!-- ══════════════════════════════════════════════ DENIED SCREEN -->
+<div id="screen-denied">
+  <div class="denied-icon">⚠</div>
+  <h1 class="denied-title" id="denied-title">Acceso no autorizado</h1>
+  <p class="denied-body" id="denied-body">
+    Este enlace no es válido o ha expirado. Si compraste el curso escríbenos a
+    <a href="mailto:academia@zenithrisecapital.com">academia@zenithrisecapital.com</a>
+    y te enviaremos un nuevo enlace.
+  </p>
+</div>
+
+<!-- ══════════════════════════════════════════════ COURSE CONTENT -->
+<div id="screen-content">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div>
+      <a class="header-brand" href="/">Zenith Academia · ZRC</a>
+      <div class="header-course-tag" id="tag-course-id">ZRC-ACAD-GRM-01</div>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="es" onclick="setLang('es')">ES</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- Course title -->
+    <p class="course-subtitle" data-key="courseCode">ZRC-ACAD-GRM-01 · Masterclass</p>
+    <h1 class="course-title" data-key="courseTitle">Gestión del Riesgo Geopolítico para la Inversión</h1>
+
+    <!-- ── VIDEO ── -->
+    <section class="video-section">
+      <div class="video-ratio" id="video-container">
+        <!--
+          Replace the placeholder below with your Vimeo embed once the video is uploaded.
+          Example:
+          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID?h=HASH&title=0&byline=0&portrait=0&dnt=1"
+                  allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        -->
+        <div class="video-placeholder">
+          <span class="video-placeholder-icon">▶</span>
+          <span data-key="videoComingSoon">Vídeo · Próximamente</span>
+        </div>
+      </div>
+      <div class="video-caption" data-key="videoCaption">
+        Masterclass · 28 min · ZRC-ACAD-GRM-01 · Gestión del Riesgo Geopolítico para la Inversión
+      </div>
+    </section>
+
+    <!-- ── MATERIALS ── -->
+    <p class="section-label" data-key="materialsLabel">Materiales del curso</p>
+    <div class="materials-grid">
+
+      <div class="material-card">
+        <div class="material-icon">📄</div>
+        <div class="material-info">
+          <div class="material-name" data-key="mat1Name">Manual ES</div>
+          <div class="material-desc" data-key="mat1Desc">~3.500 palabras · Marcos teóricos, casos, glosario</div>
+          <a class="btn-download coming-soon" href="#" data-key="btnDownload">Descargar PDF</a>
+        </div>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon">📄</div>
+        <div class="material-info">
+          <div class="material-name" data-key="mat2Name">Handbook EN</div>
+          <div class="material-desc" data-key="mat2Desc">~3.500 words · Frameworks, cases, glossary</div>
+          <a class="btn-download coming-soon" href="#" data-key="btnDownload2">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon">📊</div>
+        <div class="material-info">
+          <div class="material-name" data-key="mat3Name">Diapositivas ES + EN</div>
+          <div class="material-desc" data-key="mat3Desc">21 slides · Bilingüe · ZRC Framework</div>
+          <a class="btn-download coming-soon" href="#" data-key="btnDownload3">Descargar PPT</a>
+        </div>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon">✏️</div>
+        <div class="material-info">
+          <div class="material-name" data-key="mat4Name">Ejercicios + Rúbrica</div>
+          <div class="material-desc" data-key="mat4Desc">4 análisis · Soluciones comentadas · 100 pts</div>
+          <a class="btn-download coming-soon" href="#" data-key="btnDownload4">Descargar PDF</a>
+        </div>
+      </div>
+
+      <div class="material-card">
+        <div class="material-icon">💬</div>
+        <div class="material-info">
+          <div class="material-name" data-key="mat5Name">Subtítulos SRT</div>
+          <div class="material-desc" data-key="mat5Desc">ES + EN · Sincronizados · 28 min</div>
+          <a class="btn-download coming-soon" href="#" data-key="btnDownload5">Descargar SRT</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── TABS: Syllabus / Exercises ── -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('syllabus')" data-key="tabSyllabus">Temario</button>
+      <button class="tab-btn" onclick="switchTab('exercises')" data-key="tabExercises">Ejercicios</button>
+    </div>
+
+    <!-- Tab: Syllabus -->
+    <div id="tab-syllabus" class="tab-panel active">
+      <ul class="module-list">
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod1Title">Módulo 1 · Riesgo Geopolítico — Definición y Alcance</div>
+              <div class="module-time">00:00 – 04:30</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod1Items">
+              <li>Por qué el riesgo geopolítico es ahora sistémico</li>
+              <li>Distinción: riesgo → incertidumbre → volatilidad</li>
+              <li>Panorama 2024-2025: MOEX, Huawei, Mar Rojo</li>
+              <li>Limitaciones de las herramientas clásicas (VaR, beta)</li>
+            </ul>
+          </div></div>
+        </li>
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod2Title">Módulo 2 · Marco Analítico ZRC — 4 Capas</div>
+              <div class="module-time">04:30 – 10:00</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod2Items">
+              <li>Capa 1: Factores Estructurales (C1 × 1.0)</li>
+              <li>Capa 2: Regulatorio-Institucional (C2 × 1.2)</li>
+              <li>Capa 3: Operacional (C3 × 1.3)</li>
+              <li>Capa 4: Sensibilidad de Mercado (C4 × 0.8)</li>
+              <li>ZRC Geopolitical Score = (C1+C2+C3+C4) / 4.3 × 100</li>
+            </ul>
+          </div></div>
+        </li>
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod3Title">Módulo 3 · Canales de Transmisión al Mercado</div>
+              <div class="module-time">10:00 – 15:30</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod3Items">
+              <li>Canal Energético: commodities → inflación → tipos</li>
+              <li>Canal de Cadenas de Suministro: nearshoring, reshoring</li>
+              <li>Canal de Divisas y Flujos de Capital: refugio, carry trade</li>
+              <li>Canal de Prima de Riesgo: spreads, volatilidad implícita</li>
+            </ul>
+          </div></div>
+        </li>
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod4Title">Módulo 4 · Casos Prácticos</div>
+              <div class="module-time">15:30 – 21:00</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod4Items">
+              <li>Caso A: Sanciones MOEX — desglose capa a capa</li>
+              <li>Caso B: Huawei / desacoplamiento tecnológico</li>
+              <li>Caso C: Crisis del Mar Rojo — Suez y cadenas logísticas</li>
+              <li>Lectura cruzada: 3 casos simultáneos con ZRC Score</li>
+            </ul>
+          </div></div>
+        </li>
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod5Title">Módulo 5 · Estrategias de Cobertura</div>
+              <div class="module-time">21:00 – 25:30</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod5Items">
+              <li>Activos refugio y sus límites (USD, CHF, oro, T-bills)</li>
+              <li>Diversificación geopolítica vs. diversificación financiera</li>
+              <li>Derivados como seguros: opciones sobre VIX e índices</li>
+              <li>Ajuste de posición: reducción beta, rotación sectorial</li>
+            </ul>
+          </div></div>
+        </li>
+
+        <li class="module-item">
+          <button class="module-trigger" onclick="toggleModule(this)">
+            <span>
+              <div class="module-title" data-key="mod6Title">Módulo 6 · Integración en el Proceso Inversor</div>
+              <div class="module-time">25:30 – 28:00</div>
+            </span>
+            <span class="module-chevron">▼</span>
+          </button>
+          <div class="module-body"><div class="module-body-inner">
+            <ul data-key="mod6Items">
+              <li>Cuándo activar el análisis geopolítico en el proceso</li>
+              <li>Señales de alerta temprana (early warnings)</li>
+              <li>Plantilla de decisión ZRC: Go / Watch / Avoid</li>
+              <li>Cierre: principios de convicción bajo incertidumbre</li>
+            </ul>
+          </div></div>
+        </li>
+
+      </ul>
+    </div><!-- /tab-syllabus -->
+
+    <!-- Tab: Exercises -->
+    <div id="tab-exercises" class="tab-panel">
+
+      <div class="exercise-card">
+        <div class="exercise-number" data-key="ex1Num">Ejercicio 1</div>
+        <div class="exercise-title" data-key="ex1Title">Clasificación del Riesgo Geopolítico</div>
+        <div class="exercise-desc" data-key="ex1Desc">Analiza tres eventos reales recientes y clasifica cada uno en la capa correspondiente del Marco ZRC de 4 capas. Justifica la asignación y estima el ZRC Geopolitical Score para cada caso.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-number" data-key="ex2Num">Ejercicio 2</div>
+        <div class="exercise-title" data-key="ex2Title">Análisis de Canal de Transmisión</div>
+        <div class="exercise-desc" data-key="ex2Desc">Selecciona un conflicto o tensión geopolítica activa. Traza el recorrido del impacto desde el evento político hasta los activos financieros, identificando qué canales de transmisión se activan y en qué secuencia.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-number" data-key="ex3Num">Ejercicio 3</div>
+        <div class="exercise-title" data-key="ex3Title">Construcción de Escenarios</div>
+        <div class="exercise-desc" data-key="ex3Desc">Define tres escenarios (base, adverso, severo) para una situación geopolítica de tu elección. Para cada escenario especifica: probabilidad, ZRC Score estimado, impacto en cartera y estrategia de cobertura recomendada.</div>
+      </div>
+
+      <div class="exercise-card">
+        <div class="exercise-number" data-key="ex4Num">Ejercicio 4</div>
+        <div class="exercise-title" data-key="ex4Title">Estudio de Caso Integrado</div>
+        <div class="exercise-desc" data-key="ex4Desc">Aplica el Marco ZRC completo al caso MOEX 2022: clasifica por capas, traza canales de transmisión, puntúa el ZRC Score, evalúa las coberturas disponibles y redacta un informe de decisión Go / Watch / Avoid.</div>
+      </div>
+
+      <p style="color:var(--text-dim);font-size:.85rem;margin-top:1.5rem;" data-key="exercisesNote">
+        Las soluciones detalladas y rúbricas de corrección están disponibles en el documento de ejercicios (PDF).
+      </p>
+    </div><!-- /tab-exercises -->
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Zenith Rise Capital · Calesius Global S.L. · Todos los derechos reservados</p>
+    <p style="margin-top:.4rem;"><a href="mailto:academia@zenithrisecapital.com">academia@zenithrisecapital.com</a></p>
+  </footer>
+
+</div><!-- /screen-content -->
+
+
+<script>
+// ══════════════════════════════════════════════════════════════════
+//  ACCESS CONTROL
+//  1. Read ?token=UUID from the URL
+//  2. POST to /.netlify/functions/verify-access with { token }
+//  3. If valid → show course; if not → show denied screen
+// ══════════════════════════════════════════════════════════════════
+
+const VERIFY_ENDPOINT = "/.netlify/functions/verify-access";
+
+async function bootstrap() {
+  const params = new URLSearchParams(window.location.search);
+  const token  = params.get("token");
+
+  if (!token) {
+    showDenied();
+    return;
+  }
+
+  try {
+    const res = await fetch(VERIFY_ENDPOINT, {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ token }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      if (data.valid) {
+        showContent();
+        return;
+      }
+    }
+  } catch (e) {
+    console.warn("verify-access fetch failed:", e);
+  }
+
+  showDenied();
+}
+
+function showContent() {
+  document.getElementById("screen-loading").style.display = "none";
+  document.getElementById("screen-content").style.display = "block";
+}
+
+function showDenied() {
+  document.getElementById("screen-loading").style.display = "none";
+  document.getElementById("screen-denied").style.display  = "flex";
+  applyI18n(); // translate the denied screen too
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  LANGUAGE TOGGLE
+// ══════════════════════════════════════════════════════════════════
+
+const i18n = {
+  es: {
+    courseCode:     "ZRC-ACAD-GRM-01 · Masterclass",
+    courseTitle:    "Gestión del Riesgo Geopolítico para la Inversión",
+    videoComingSoon:"Vídeo · Próximamente",
+    videoCaption:   "Masterclass · 28 min · ZRC-ACAD-GRM-01 · Gestión del Riesgo Geopolítico para la Inversión",
+    materialsLabel: "Materiales del curso",
+    mat1Name: "Manual ES", mat1Desc: "~3.500 palabras · Marcos teóricos, casos, glosario",
+    mat2Name: "Handbook EN", mat2Desc: "~3.500 words · Frameworks, cases, glossary",
+    mat3Name: "Diapositivas ES + EN", mat3Desc: "21 slides · Bilingüe · ZRC Framework",
+    mat4Name: "Ejercicios + Rúbrica", mat4Desc: "4 análisis · Soluciones comentadas · 100 pts",
+    mat5Name: "Subtítulos SRT", mat5Desc: "ES + EN · Sincronizados · 28 min",
+    btnDownload: "Descargar PDF", btnDownload2: "Download PDF",
+    btnDownload3: "Descargar PPT", btnDownload4: "Descargar PDF", btnDownload5: "Descargar SRT",
+    tabSyllabus: "Temario", tabExercises: "Ejercicios",
+    mod1Title: "Módulo 1 · Riesgo Geopolítico — Definición y Alcance",
+    mod2Title: "Módulo 2 · Marco Analítico ZRC — 4 Capas",
+    mod3Title: "Módulo 3 · Canales de Transmisión al Mercado",
+    mod4Title: "Módulo 4 · Casos Prácticos",
+    mod5Title: "Módulo 5 · Estrategias de Cobertura",
+    mod6Title: "Módulo 6 · Integración en el Proceso Inversor",
+    mod1Items: ["Por qué el riesgo geopolítico es ahora sistémico","Distinción: riesgo → incertidumbre → volatilidad","Panorama 2024-2025: MOEX, Huawei, Mar Rojo","Limitaciones de las herramientas clásicas (VaR, beta)"],
+    mod2Items: ["Capa 1: Factores Estructurales (C1 × 1.0)","Capa 2: Regulatorio-Institucional (C2 × 1.2)","Capa 3: Operacional (C3 × 1.3)","Capa 4: Sensibilidad de Mercado (C4 × 0.8)","ZRC Geopolitical Score = (C1+C2+C3+C4) / 4.3 × 100"],
+    mod3Items: ["Canal Energético: commodities → inflación → tipos","Canal de Cadenas de Suministro: nearshoring, reshoring","Canal de Divisas y Flujos de Capital: refugio, carry trade","Canal de Prima de Riesgo: spreads, volatilidad implícita"],
+    mod4Items: ["Caso A: Sanciones MOEX — desglose capa a capa","Caso B: Huawei / desacoplamiento tecnológico","Caso C: Crisis del Mar Rojo — Suez y cadenas logísticas","Lectura cruzada: 3 casos simultáneos con ZRC Score"],
+    mod5Items: ["Activos refugio y sus límites (USD, CHF, oro, T-bills)","Diversificación geopolítica vs. diversificación financiera","Derivados como seguros: opciones sobre VIX e índices","Ajuste de posición: reducción beta, rotación sectorial"],
+    mod6Items: ["Cuándo activar el análisis geopolítico en el proceso","Señales de alerta temprana (early warnings)","Plantilla de decisión ZRC: Go / Watch / Avoid","Cierre: principios de convicción bajo incertidumbre"],
+    ex1Num: "Ejercicio 1", ex1Title: "Clasificación del Riesgo Geopolítico",
+    ex1Desc: "Analiza tres eventos reales recientes y clasifica cada uno en la capa correspondiente del Marco ZRC de 4 capas. Justifica la asignación y estima el ZRC Geopolitical Score para cada caso.",
+    ex2Num: "Ejercicio 2", ex2Title: "Análisis de Canal de Transmisión",
+    ex2Desc: "Selecciona un conflicto o tensión geopolítica activa. Traza el recorrido del impacto desde el evento político hasta los activos financieros, identificando qué canales de transmisión se activan y en qué secuencia.",
+    ex3Num: "Ejercicio 3", ex3Title: "Construcción de Escenarios",
+    ex3Desc: "Define tres escenarios (base, adverso, severo) para una situación geopolítica de tu elección. Para cada escenario especifica: probabilidad, ZRC Score estimado, impacto en cartera y estrategia de cobertura recomendada.",
+    ex4Num: "Ejercicio 4", ex4Title: "Estudio de Caso Integrado",
+    ex4Desc: "Aplica el Marco ZRC completo al caso MOEX 2022: clasifica por capas, traza canales de transmisión, puntúa el ZRC Score, evalúa las coberturas disponibles y redacta un informe de decisión Go / Watch / Avoid.",
+    exercisesNote: "Las soluciones detalladas y rúbricas de corrección están disponibles en el documento de ejercicios (PDF).",
+    loadingMsg: "Verificando acceso…",
+    deniedTitle: "Acceso no autorizado",
+    deniedBody: "Este enlace no es válido o ha expirado. Si compraste el curso escríbenos a academia@zenithrisecapital.com y te enviaremos un nuevo enlace.",
+  },
+  en: {
+    courseCode:     "ZRC-ACAD-GRM-01 · Masterclass",
+    courseTitle:    "Geopolitical Risk Management for Investment",
+    videoComingSoon:"Video · Coming soon",
+    videoCaption:   "Masterclass · 28 min · ZRC-ACAD-GRM-01 · Geopolitical Risk Management for Investment",
+    materialsLabel: "Course materials",
+    mat1Name: "Manual ES", mat1Desc: "~3,500 words · Theoretical frameworks, cases, glossary",
+    mat2Name: "Handbook EN", mat2Desc: "~3,500 words · Frameworks, cases, glossary",
+    mat3Name: "Slides ES + EN", mat3Desc: "21 slides · Bilingual · ZRC Framework",
+    mat4Name: "Exercises + Rubric", mat4Desc: "4 analyses · Annotated solutions · 100 pts",
+    mat5Name: "SRT Subtitles", mat5Desc: "ES + EN · Synced · 28 min",
+    btnDownload: "Download PDF", btnDownload2: "Download PDF",
+    btnDownload3: "Download PPT", btnDownload4: "Download PDF", btnDownload5: "Download SRT",
+    tabSyllabus: "Syllabus", tabExercises: "Exercises",
+    mod1Title: "Module 1 · Geopolitical Risk — Definition and Scope",
+    mod2Title: "Module 2 · ZRC Analytical Framework — 4 Layers",
+    mod3Title: "Module 3 · Transmission Channels to Markets",
+    mod4Title: "Module 4 · Case Studies",
+    mod5Title: "Module 5 · Hedging Strategies",
+    mod6Title: "Module 6 · Integration into the Investment Process",
+    mod1Items: ["Why geopolitical risk is now systemic","Distinction: risk → uncertainty → volatility","2024-2025 panorama: MOEX, Huawei, Red Sea","Limitations of classical tools (VaR, beta)"],
+    mod2Items: ["Layer 1: Structural Factors (C1 × 1.0)","Layer 2: Regulatory-Institutional (C2 × 1.2)","Layer 3: Operational (C3 × 1.3)","Layer 4: Market Sensitivity (C4 × 0.8)","ZRC Geopolitical Score = (C1+C2+C3+C4) / 4.3 × 100"],
+    mod3Items: ["Energy Channel: commodities → inflation → rates","Supply Chain Channel: nearshoring, reshoring","Currency & Capital Flows Channel: safe havens, carry trade","Risk Premium Channel: spreads, implied volatility"],
+    mod4Items: ["Case A: MOEX Sanctions — layer-by-layer breakdown","Case B: Huawei / tech decoupling","Case C: Red Sea Crisis — Suez and logistics chains","Cross-reading: 3 simultaneous cases with ZRC Score"],
+    mod5Items: ["Safe haven assets and their limits (USD, CHF, gold, T-bills)","Geopolitical vs. financial diversification","Derivatives as insurance: VIX and index options","Position adjustment: beta reduction, sector rotation"],
+    mod6Items: ["When to activate geopolitical analysis in the process","Early warning signals","ZRC decision template: Go / Watch / Avoid","Close: principles of conviction under uncertainty"],
+    ex1Num: "Exercise 1", ex1Title: "Geopolitical Risk Classification",
+    ex1Desc: "Analyse three recent real events and classify each one in the corresponding layer of the 4-Layer ZRC Framework. Justify the assignment and estimate the ZRC Geopolitical Score for each case.",
+    ex2Num: "Exercise 2", ex2Title: "Transmission Channel Analysis",
+    ex2Desc: "Select an active geopolitical conflict or tension. Trace the impact path from the political event to financial assets, identifying which transmission channels are activated and in what sequence.",
+    ex3Num: "Exercise 3", ex3Title: "Scenario Construction",
+    ex3Desc: "Define three scenarios (base, adverse, severe) for a geopolitical situation of your choice. For each scenario specify: probability, estimated ZRC Score, portfolio impact, and recommended hedging strategy.",
+    ex4Num: "Exercise 4", ex4Title: "Integrated Case Study",
+    ex4Desc: "Apply the full ZRC Framework to the MOEX 2022 case: classify by layers, trace transmission channels, score the ZRC Score, evaluate available hedges, and write a Go / Watch / Avoid decision report.",
+    exercisesNote: "Detailed solutions and grading rubrics are available in the exercises document (PDF).",
+    loadingMsg: "Verifying access…",
+    deniedTitle: "Unauthorised access",
+    deniedBody: "This link is invalid or has expired. If you purchased the course please write to academia@zenithrisecapital.com and we will send you a new link.",
+  },
+};
+
+let currentLang = "es";
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll(".lang-btn").forEach(b => {
+    b.classList.toggle("active", b.dataset.lang === lang);
+  });
+  applyI18n();
+}
+
+function applyI18n() {
+  const t = i18n[currentLang];
+  document.querySelectorAll("[data-key]").forEach(el => {
+    const key = el.dataset.key;
+    if (!(key in t)) return;
+    const val = t[key];
+    if (Array.isArray(val)) {
+      el.innerHTML = val.map(s => `<li>${s}</li>`).join("");
+    } else {
+      el.textContent = val;
+    }
+  });
+  // Denied/loading screens use id-based elements
+  const dm = document.getElementById("loading-msg");
+  const dt = document.getElementById("denied-title");
+  const db = document.getElementById("denied-body");
+  if (dm) dm.textContent = t.loadingMsg;
+  if (dt) dt.textContent = t.deniedTitle;
+  if (db) db.innerHTML = t.deniedBody.replace(
+    "academia@zenithrisecapital.com",
+    '<a href="mailto:academia@zenithrisecapital.com">academia@zenithrisecapital.com</a>'
+  );
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  UI INTERACTIONS
+// ══════════════════════════════════════════════════════════════════
+
+function toggleModule(btn) {
+  const item = btn.closest(".module-item");
+  item.classList.toggle("open");
+}
+
+let activeTab = "syllabus";
+function switchTab(name) {
+  document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById("tab-" + name).classList.add("active");
+  document.querySelector(`[onclick="switchTab('${name}')"]`).classList.add("active");
+  activeTab = name;
+}
+
+// ══════════════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════════════
+applyI18n();
+bootstrap();
+</script>
+</body>
+</html>
