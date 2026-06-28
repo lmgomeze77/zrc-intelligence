@@ -153,19 +153,10 @@ nav {
   background: var(--gold); color: var(--navy-dark);
   font-family: var(--sans); font-size: .88rem; font-weight: 700;
   letter-spacing: .06em; text-transform: uppercase; text-align: center;
-  border: none; border-radius: var(--radius); cursor: not-allowed;
-  opacity: .55; transition: none;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  text-decoration: none; transition: background var(--transition);
 }
-.btn-primary:not(:disabled) {
-  cursor: pointer; opacity: 1;
-}
-.btn-primary:not(:disabled):hover {
-  background: var(--gold-light);
-}
-.soon-note {
-  font-size: .74rem; color: var(--text-muted); text-align: center;
-  margin-top: .75rem;
-}
+.btn-primary:hover { background: var(--gold-light); }
 .card-includes { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
 .card-includes-title {
   font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
@@ -361,9 +352,10 @@ section:nth-child(even) { background: var(--navy-mid); }
   background: var(--gold); color: var(--navy-dark);
   font-family: var(--sans); font-size: .9rem; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase;
-  border: none; border-radius: var(--radius); cursor: not-allowed;
-  opacity: .55;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  text-decoration: none; transition: background var(--transition);
 }
+.btn-cta:hover { background: var(--gold-light); }
 
 /* ── Footer ────────────────────────────────────────────── */
 footer {
@@ -432,8 +424,7 @@ footer strong { color: var(--gold); }
     <div class="hero-card">
       <div class="hero-card-price">29 €</div>
       <div class="hero-card-vat" data-key="vatNote">IVA incluido · Acceso de por vida</div>
-      <button class="btn-primary" disabled data-key="btnBuy">Acceso por 29 € · próximamente</button>
-      <p class="soon-note" data-key="soonNote">La pasarela de pago estará disponible en breve.</p>
+      <a class="btn-primary" href="https://buy.stripe.com/5kQ7sMe9u6AIdQYfDc2Nq07" data-key="btnBuy">Comprar acceso · 29 €</a>
       <div class="card-includes">
         <div class="card-includes-title" data-key="includesTitle">Este curso incluye</div>
         <div class="include-item" data-key="inc1">Masterclass de 28 minutos</div>
@@ -671,8 +662,8 @@ footer strong { color: var(--gold); }
   <div class="cta-price">29 €</div>
   <p class="cta-desc" data-key="ctaDesc">Acceso de por vida · Materiales en ES y EN · Subtítulos incluidos</p>
   <div class="btn-cta-wrap">
-    <button class="btn-cta" disabled data-key="btnBuy2">Acceso por 29 € · próximamente</button>
-    <span class="soon-note" data-key="ctaSoon">La pasarela de pago Stripe estará disponible en breve. Regístrate para recibir notificación.</span>
+    <a class="btn-cta" href="https://buy.stripe.com/5kQ7sMe9u6AIdQYfDc2Nq07" data-key="btnBuy2">Comprar acceso · 29 €</a>
+    <span style="font-size:.75rem;color:var(--text-muted);margin-top:.4rem;" data-key="ctaSafe">🔒 Pago seguro con Stripe</span>
   </div>
 </section>
 
@@ -713,9 +704,8 @@ const T = {
     chipLevel:     '◆ Nivel: <span>Avanzado</span>',
     chipLang:      '🌐 Idiomas: <span>ES · EN</span>',
     chipUpdated:   '📅 <span>Junio 2025</span>',
-    vatNote:       'IVA incluido · Acceso de por vida',
-    btnBuy:        'Acceso por 29 € · próximamente',
-    soonNote:      'La pasarela de pago estará disponible en breve.',
+    vatNote:       'IVA incluido · Pago seguro con Stripe · Acceso de por vida',
+    btnBuy:        'Comprar acceso · 29 €',
     includesTitle: 'Este curso incluye',
     inc1:          'Masterclass de 28 minutos',
     inc2:          'Manual escrito ES + EN (~3.500 palabras)',
@@ -775,8 +765,8 @@ const T = {
     excerptBody:   'El 24 de febrero de 2022, el índice MOEX de la Bolsa de Moscú cayó un 45 % en 72 horas. El rublo perdió el 30 % de su valor frente al dólar en diez días. Los fondos con exposición rusa sufrieron pérdidas de entre el 60 y el 90 % en pocas semanas. Este no fue un accidente: fue el resultado de que los mercados no habían incorporado el riesgo geopolítico en sus precios. En este curso aprenderás a no cometer ese mismo error.',
     ctaLabel:      'Inscripción',
     ctaDesc:       'Acceso de por vida · Materiales en ES y EN · Subtítulos incluidos',
-    btnBuy2:       'Acceso por 29 € · próximamente',
-    ctaSoon:       'La pasarela de pago Stripe estará disponible en breve. Regístrate para recibir notificación.',
+    btnBuy2:       'Comprar acceso · 29 €',
+    ctaSafe:       '🔒 Pago seguro con Stripe',
     footLearn:     'Qué aprenderás',
     footSyl:       'Temario',
     footInstr:     'Instructor',
@@ -795,9 +785,8 @@ const T = {
     chipLevel:     '◆ Level: <span>Advanced</span>',
     chipLang:      '🌐 Languages: <span>ES · EN</span>',
     chipUpdated:   '📅 <span>June 2025</span>',
-    vatNote:       'VAT included · Lifetime access',
-    btnBuy:        'Access for €29 · coming soon',
-    soonNote:      'Payment gateway will be available shortly.',
+    vatNote:       'VAT included · Secure payment via Stripe · Lifetime access',
+    btnBuy:        'Buy access · €29',
     includesTitle: 'This course includes',
     inc1:          '28-minute masterclass',
     inc2:          'Written handbook ES + EN (~3,500 words)',
@@ -857,8 +846,8 @@ const T = {
     excerptBody:   'On 24 February 2022, the MOEX index of the Moscow Exchange fell 45% in 72 hours. The ruble lost 30% of its value against the dollar in ten days. Funds with Russian exposure suffered losses of 60–90% in a matter of weeks. This was not an accident — it was the result of markets failing to price in geopolitical risk. In this course, you will learn how not to make the same mistake.',
     ctaLabel:      'Enrol',
     ctaDesc:       'Lifetime access · Materials in ES and EN · Subtitles included',
-    btnBuy2:       'Access for €29 · coming soon',
-    ctaSoon:       'Stripe payment gateway coming soon. Register to be notified at launch.',
+    btnBuy2:       'Buy access · €29',
+    ctaSafe:       '🔒 Secure payment via Stripe',
     footLearn:     'What you\'ll learn',
     footSyl:       'Syllabus',
     footInstr:     'Instructor',
