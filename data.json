@@ -1,277 +1,79 @@
 {
-  "generated": "2026-06-30T09:31:46.538Z",
-  "date": "Tuesday, 30 June 2026",
-  "globalBriefing": "Three cross-cutting currents dominate: (1) Monetary policy uncertainty—ECB recalibration signals and elevated Fed rate hike probabilities create USD strength risks and EM currency volatility; (2) Trade fragmentation—EU-China structured dialogue offsets semiconductor decoupling and rare earths supply chain brittleness; (3) Commodities and climate stress—monsoon delays, energy premiums, extreme heat events, and input cost inflation create stagflationary risks for agricultural and energy exporters. Capital flows remain cautious: PE consolidation in manufacturing and utilities persists, but infrastructure funding (green funds, EBID, European rail) reflects institutional reallocation toward tangible assets and ESG-compliant securities.",
-  "marketOpen": "Monitor June payrolls data timing and Fed rate guidance for USD direction; watch EU-China trade dialogue developments for tariff escalation risk; track monsoon forecast updates for grain price support.",
+  "generated": "2026-07-01T09:41:51.590Z",
+  "date": "Wednesday, 1 July 2026",
+  "globalBriefing": "",
+  "marketOpen": "",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [
-        {
-          "headline": "ECB President Lagarde delivers address on policy fundamentals amid uncertainty",
-          "summary": "Christine Lagarde's remarks on returning to policy basics signal ECB recalibration in response to uncertain macroeconomic conditions. The statement reflects central bank focus on foundational transmission mechanisms rather than forward guidance.",
-          "source": "ECB Press Releases",
-          "relevance": "Suggests potential shift in ECB communication strategy; investors should monitor for rate path clarity at next policy meeting.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Fed rate hike probability rises on June payrolls expectations; global liquidity risk emerges",
-          "summary": "Per TradingKey reporting, market pricing reflects elevated probability of Fed rate increases tied to June employment data release, with concurrent warnings of global liquidity stress. No official Fed guidance yet issued.",
-          "source": "TradingKey",
-          "relevance": "USD strength and emerging market currency volatility likely if payrolls data exceeds consensus; watch for cross-asset deleveraging signals.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Stronger GDP outlook creates policy dilemma for central banks amid inflation persistence",
-          "summary": "Per Valor International, upgraded growth forecasts present challenge for monetary authorities balancing inflation control against economic deceleration risks. Oxford Economics scenarios model stagflation and IFRS 9/CECL impacts.",
-          "source": "Valor International",
-          "relevance": "Conflicting growth and inflation signals increase central bank policy error risk; fixed income positioning vulnerable if rates held higher for longer.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If June payrolls exceed 200k and Fed signals rate maintenance, expect USD appreciation and EM currency depreciation; if growth disappoints, pivot to rate-cut expectations.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [
-        {
-          "headline": "Explosive device injures Ukrainian oligarch and family in Monaco; international manhunt initiated",
-          "summary": "Per BBC World reporting, a blast at a Monaco location contained bolts and pellets, injuring a Ukrainian oligarch and family members. Monaco government confirmed the explosive device nature; investigation ongoing.",
-          "source": "BBC World",
-          "relevance": "Escalates security risks for high-net-worth Ukrainian nationals in Western Europe; may trigger wealth relocation and increased security infrastructure spending.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Record temperatures across Central and Eastern Europe exceed 35°C; 130 million people affected",
-          "summary": "Per Al Jazeera reporting, Slovakia and Czechia record extreme heat events with temperatures above 95°F (35°C) spanning 130 million people across the region. Climate records confirmed broken.",
-          "source": "Al Jazeera",
-          "relevance": "Infrastructure strain on energy grids; elevated demand for cooling and power; agricultural output risk in region; insurance and utilities sector exposure material.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "EU escalates trade measures against China; bilateral trade imbalance cited as deindustrialisation concern",
-          "summary": "Per Al Jazeera reporting, EU trade commissioner and Chinese commerce minister held talks as bloc seeks to limit Chinese import influx. Discussions frame trade imbalance as threat to European industrial capacity.",
-          "source": "Al Jazeera",
-          "relevance": "Tariff escalation risk; EU-China supply chain fragmentation accelerates; European manufacturers and importers face margin compression.",
-          "signal": "bearish"
-        }
-      ],
-      "keyTakeaway": "If EU-China trade tensions formalize into tariffs, European equities and Chinese export-dependent sectors face headwinds; security incidents increase wealth protection demand in Western Europe.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [
-        {
-          "headline": "Barclays acquires 999-year lease on Canary Wharf HQ for £750 million in major London office transaction",
-          "summary": "Per FT World reporting, UK bank Barclays completed purchase of its London headquarters lease in one of Europe's largest office deals in recent years. Transaction signals institutional appetite for trophy London real estate despite sector headwinds.",
-          "source": "FT World",
-          "relevance": "London office market stabilization signal; indicates financial sector real estate confidence; may anchor valuations for UK commercial property portfolios.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Foreign investment funds commit capital to Vietnam industrial expansion; FDI prioritization confirmed",
-          "summary": "Per Laodong.vn reporting, businesses and foreign investment funds announced commitments to prioritize capital investment in Vietnam across industrial sectors. Formal pledges reflect EM diversification away from China.",
-          "source": "Laodong.vn",
-          "relevance": "Vietnam supply chain expansion accelerates; manufacturing relocation from China accelerates; Southeast Asian industrial stocks and infrastructure beneficiaries.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "GCC and UNDP launch regional connectivity and investment initiative across Arab states",
-          "summary": "Per UNDP announcement, GCC Secretariat General partnered with UNDP to present initiative targeting connectivity, investment, and resilience across Arab region. Multilateral framework signals coordination on capital deployment.",
-          "source": "UNDP",
-          "relevance": "GCC institutional capital mobilization; intra-Arab FDI flows may increase; sovereign wealth fund coordination in energy transition and infrastructure.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If Vietnam FDI inflows sustain, industrial and logistics stocks outperform; UK office market stabilization may support REIT valuations if lease structures remain durable.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [
-        {
-          "headline": "Pakistan purchases LNG cargo at $1/MMBtu premium to regional spot; supply disruption pressures persist",
-          "summary": "Per OilPrice.com, Pakistan paid premium pricing for urgent liquefied natural gas procurement, indicating continued regional supply constraints. Spot market premium reflects physical supply tightness.",
-          "source": "OilPrice.com",
-          "relevance": "Asian LNG price volatility elevated; Pakistan fiscal stress from energy import costs; global LNG demand fundamentals tight.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Gulf producers accelerate oil and LNG loading as Hormuz Strait remains open; supply race intensifies",
-          "summary": "Per Oil & Gas 360 reporting, Saudi Arabia, UAE, and Qatar actively load crude and LNG cargoes with Hormuz Strait passage unobstructed. Actions indicate producers maximizing export capacity amid geopolitical uncertainty.",
-          "source": "Oil & Gas 360",
-          "relevance": "Oil price ceiling formation if supply pushed hard; Middle East energy premium compression if corridor stability holds; energy exporters capture margin expansion.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "U.S. led global CO2 emissions growth in 2025, accounting for 30% of global increase; coal and transport cited",
-          "summary": "Per OilPrice.com reporting, U.S. accounted for approximately 30% of global carbon dioxide emissions growth in 2025. Report attributes rise to energy sector and transport activity expansion.",
-          "source": "OilPrice.com",
-          "relevance": "Carbon offset and ESG-sensitive asset pricing pressure; renewable energy transition funding demand sustains; climate policy uncertainty remains.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If Hormuz Strait supply flows continue uninterrupted, oil price downside risks increase; if energy demand growth persists, carbon-intensive commodity valuations face ESG-driven volatility.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [
-        {
-          "headline": "Pension funds back Atlas Salt's $590 million mine development as infrastructure-backed asset class",
-          "summary": "Per Crux Investor reporting, pension funds committed capital to Atlas Salt's $590 million mining project framed as infrastructure investment. Decision reflects institutional shift toward hard asset backing.",
-          "source": "Crux Investor",
-          "relevance": "Infrastructure-oriented commodities attract long-term capital; pension fund rebalancing toward tangible assets; salt markets beneficiary of industrial demand.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "ETAF green fund reaches $250 million first close; ESG infrastructure capital mobilization accelerates",
-          "summary": "Per Impact Investor reporting, ETAF green-focused fund achieved $250 million initial close. Capital deployment signals institutional commitment to ESG-classified infrastructure.",
-          "source": "Impact Investor",
-          "relevance": "Green infrastructure asset valuations supported by capital availability; ESG-screened real assets command premium; renewable energy and grid modernization beneficiaries.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Lombardy rail infrastructure project receives new funding allocation; regional transport modernization advances",
-          "summary": "Per megaproject.com reporting, Lombardy region secured funding for rail infrastructure development. Project advancement reflects European Union transportation modernization priorities.",
-          "source": "megaproject.com",
-          "relevance": "European infrastructure procurement acceleration; Italian construction and engineering services demand increases; transportation asset valuations supported.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If pension fund infrastructure capital commitment sustains, real assets and green infrastructure REITs outperform; European regional development spending supports construction and engineering stocks.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [
-        {
-          "headline": "Triton enters exclusive talks to acquire Bureau Veritas fuel testing unit for €470 million",
-          "summary": "Per PE Hub reporting, private equity firm Triton commenced exclusive negotiations to carve out Bureau Veritas' fuel testing and inspection business valued at €470 million. Asset operates 320 testing sites across 45 countries serving 8,000-plus clients.",
-          "source": "PE Hub",
-          "relevance": "Regulatory-backed revenue streams attract PE multiples; fuel standards compliance creates predictable cash flows; energy transition compliance demand supports valuation.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "CVC acquires Italy's Clevertech; advanced industrial packaging systems market consolidates",
-          "summary": "Per PE Hub reporting, CVC Capital Partners completed acquisition of Clevertech, Italian manufacturer of advanced industrial automated packaging systems. Transaction reflects PE appetite for manufacturing automation.",
-          "source": "PE Hub",
-          "relevance": "Automation and robotics capital deployment accelerates; Italian industrial asset valuations strengthen; e-commerce packaging demand benefits.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "IMM PE selected as preferred bidder for Kolon Industries' advanced materials division; chip/display sector consolidates",
-          "summary": "Per KED Global reporting, IMM PE designated preferred bidder for Kolon Industries' chip and display materials business unit. Selection reflects PE focus on semiconductor supply chain assets.",
-          "source": "KED Global",
-          "relevance": "Semiconductor materials sector consolidation accelerates; PE capital supporting advanced materials manufacturing; supply chain diversification away from China gains momentum.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If PE acquisitions in manufacturing automation and materials accelerate, valuations sustain; regulatory-backed inspection and compliance services command stable multiples.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [
-        {
-          "headline": "Trump administration proposes cutting Fulbright Program by 80%; U.S. soft power retrenchment signals shift",
-          "summary": "Per Asia Times reporting, President Trump's Fiscal Year 2027 budget proposal cuts the Fulbright educational exchange program by nearly 80%. Reduction represents significant decline in U.S. educational diplomacy investment.",
-          "source": "Asia Times",
-          "relevance": "EM education and institutional ties to U.S. weaken; alternative educational partnerships with China and EU strengthen; geopolitical alignment shifts in university/research sectors.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "China faces potential 'lost decades' due to confusing economic policy signals amid trade surplus expansion",
-          "summary": "Per Asia Times reporting, China's economic calculations present internal contradictions as trade surplus grows, potentially creating policy ineffectiveness. Analysis warns of multi-decade growth stagnation risk.",
-          "source": "Asia Times",
-          "relevance": "Chinese asset valuations face secular headwinds if policy incoherence persists; EM capital rotation away from China accelerates; regional trade rebalancing opportunity emerges.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "EBID commits $268 million to Nigeria's Taraba State for industrial, agricultural, and renewable energy development",
-          "summary": "Per African Business reporting, ECOWAS Bank for Investment and Development approved $268 million financing package with Nigeria's Taraba State. Funds target industry, agriculture, and renewable energy sectors.",
-          "source": "African Business",
-          "relevance": "West African industrial capacity expansion; Nigeria energy transition acceleration; regional development bank capital deployment signals institutional confidence.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If U.S. soft power retrenchment continues, EM institutional realignment toward China accelerates; if China policy clarity improves, EM export diversification from China benefits Vietnamese and Southeast Asian assets.",
-      "rawCount": 10
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 9
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "EU and China establish structured trade dialogue platform; rare earths and export controls headline agenda",
-          "summary": "Per Euractiv and INSIGHT EU MONITORING reporting, EU and China launched formal trade talks framework addressing rare earths access, export controls, and WTO reform. Structured platform indicates bilateral commitment to managed friction.",
-          "source": "Euractiv",
-          "relevance": "Tariff escalation risk moderates if dialogue sustains; rare earths supply chain predictability improves; WTO reform pathway signals rules-based trade system preference.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Merz floats Plaza Accord-style currency intervention model to address China trade imbalance",
-          "summary": "Per Asia Times reporting, EU trade official Merz proposed coordinated currency management framework modeled on 1985 Plaza Accord to rebalance EU-China trade relationship. Proposal signals willingness to use exchange rate tools.",
-          "source": "Asia Times",
-          "relevance": "Coordinated intervention risk elevates EUR volatility; FX regime uncertainty increases for major crosses; emerging market currency stability threatened if major powers shift intervention posture.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Nvidia CEO Huang attempts to sell H200 chips in Beijing; China denies advanced chip access despite diplomatic engagement",
-          "summary": "Per Asia Times reporting, Nvidia CEO Jensen Huang traveled to Beijing on presidential delegation to market H200 processors but encountered Chinese resistance to advanced chip sales. Denial signals continued U.S.-China semiconductor decoupling.",
-          "source": "Asia Times",
-          "relevance": "Semiconductor supply chain fragmentation persists; Nvidia market access constraints in China; alternative chip suppliers (SMIC, domestic Chinese AI) gain adoption momentum.",
-          "signal": "bearish"
-        }
-      ],
-      "keyTakeaway": "If EU-China structured dialogue stabilizes trade friction, risk-off sentiment moderates; if semiconductor decoupling deepens, Nvidia valuations face China revenue headwinds and domestic U.S. chipmaking beneficiaries strengthen.",
-      "rawCount": 5
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 6
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [
-        {
-          "headline": "Historic India monsoon delay exposes vulnerability in global grain supply chains",
-          "summary": "Per streamlinefeed.co.ke reporting, India's monsoon delay has reached historically significant levels, creating supply chain disruptions across global grain markets. Timing and severity underscore climate volatility impact on agricultural systems.",
-          "source": "streamlinefeed.co.ke",
-          "relevance": "Global grain prices face upside pressure if Indian monsoon delays persist; food inflation risk emerges; agricultural commodity hedging demand increases.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "U.S. farmers report rising production costs for corn, soybeans, sorghum, and wheat; input cost inflation persists",
-          "summary": "Per UkrAgroConsult reporting, U.S. farmers face elevated production expenses across major grain crops. Cost pressures reflect fertilizer, fuel, and labor input inflation.",
-          "source": "UkrAgroConsult",
-          "relevance": "U.S. agricultural margins compress; farm debt stress increases; commodity price support required to sustain producer profitability; agricultural credit risk rises.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Farmers delay fertilizer purchases as debt relief negotiations extend; input demand softens amid negotiations",
-          "summary": "Per Valor International reporting, agricultural producers postpone fertilizer acquisition pending resolution of debt relief discussions. Purchasing delays reflect cash flow constraints and policy uncertainty.",
-          "source": "Valor International",
-          "relevance": "Fertilizer sector demand softens if payment delays widen; agricultural productivity risks if nutrient application defers; farmer balance sheet stress persists.",
-          "signal": "bearish"
-        }
-      ],
-      "keyTakeaway": "If Indian monsoon deficit persists and U.S. farmer cash flows tighten, grain prices face sustained upside pressure; if debt relief agreements materialize, fertilizer demand rebounds and input cost deflation may ease producer margin stress.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     }
   }
