@@ -186,7 +186,7 @@ async function fetchCategory(categoryId) {
 
 // ─── AI SYNTHESIS ─────────────────────────────────────────────────────────
 
-const MAX_RETRIES = 2;
+const MAX_RETRIES = 3;
 
 async function synthesizeWithAI(allCategoryData) {
   const prompt = buildPrompt(allCategoryData);
@@ -204,7 +204,7 @@ async function synthesizeWithAI(allCategoryData) {
         },
         body: JSON.stringify({
           model: "claude-haiku-4-5-20251001",
-          max_tokens: 8192,
+          max_tokens: 16000,
           system: `You are the chief intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm in Madrid. Your briefings are read by family offices, institutional investors, and senior advisors.
 
 Your task: Given raw RSS headlines grouped by intelligence desk, select the 3 most important items per desk, write concise analytical summaries, classify investment signals, and provide a key takeaway per desk.
@@ -248,10 +248,18 @@ Return this exact structure:
         })
       });
 
+      if (!response.ok) {
+        const errBody = await response.text();
+        console.error(`  ❌ HTTP ${response.status} (attempt ${attempt}): ${errBody.substring(0, 500)}`);
+        if (attempt < MAX_RETRIES) await new Promise(r => setTimeout(r, 3000));
+        continue;
+      }
+
       const result = await response.json();
 
       if (result.error) {
-        console.error(`  API error (attempt ${attempt}):`, result.error);
+        console.error(`  API error (attempt ${attempt}):`, JSON.stringify(result.error));
+        if (attempt < MAX_RETRIES) await new Promise(r => setTimeout(r, 3000));
         continue;
       }
 
@@ -261,16 +269,23 @@ Return this exact structure:
         .join("");
 
       if (!textBlock) {
-        console.error(`  Empty response (attempt ${attempt})`);
+        console.error(`  Empty response (attempt ${attempt}). Full result: ${JSON.stringify(result).substring(0, 500)}`);
         continue;
       }
 
       if (result.stop_reason && result.stop_reason !== "end_turn") {
-        console.warn(`  ⚠ Response truncated (stop_reason: ${result.stop_reason}), retrying...`);
+        console.warn(`  ⚠ Response truncated (stop_reason: ${result.stop_reason}, ${textBlock.length} chars received), retrying...`);
         continue;
       }
 
-      const clean = textBlock.replace(/```json|```/g, "").trim();
+      let clean = textBlock.replace(/```json|```/g, "").trim();
+      // Guard against any stray preamble/trailing text around the JSON object
+      const firstBrace = clean.indexOf("{");
+      const lastBrace = clean.lastIndexOf("}");
+      if (firstBrace > 0 || lastBrace < clean.length - 1) {
+        clean = clean.substring(firstBrace, lastBrace + 1);
+      }
+
       const parsed = JSON.parse(clean);
       console.log("  ✅ AI synthesis successful.");
       return parsed;
@@ -312,6 +327,25 @@ function buildPrompt(allCategoryData) {
   return prompt;
 }
 
+function buildFallbackBriefing(allRaw) {
+  console.warn("  ⚠ Using fallback (non-AI) briefing from raw headlines.");
+  const categories = {};
+  for (const [catId, items] of Object.entries(allRaw)) {
+    categories[catId] = items.slice(0, 3).map(item => ({
+      headline: item.title,
+      summary: item.summary || "",
+      source: item.source,
+      signal: "neutral",
+      link: item.link
+    }));
+  }
+  return {
+    categories,
+    globalBriefing: "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
+    marketOpen: ""
+  };
+}
+
 // ─── MAIN ─────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -333,7 +367,11 @@ async function main() {
   console.log(`\n  Total: ${totalItems} items across ${Object.keys(FEEDS).length} desks\n`);
 
   console.log("Phase 2: AI synthesis (single Haiku call)...\n");
-  const aiResult = await synthesizeWithAI(allRaw);
+  let aiResult = await synthesizeWithAI(allRaw);
+
+  if (!aiResult) {
+    aiResult = buildFallbackBriefing(allRaw);
+  }
 
   const briefing = {
     generated: new Date().toISOString(),
