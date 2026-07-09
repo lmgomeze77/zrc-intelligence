@@ -1,79 +1,277 @@
 {
-  "generated": "2026-07-08T08:24:26.979Z",
-  "date": "Wednesday, 8 July 2026",
-  "globalBriefing": "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
-  "marketOpen": "",
+  "generated": "2026-07-09T09:41:22.948Z",
+  "date": "Thursday, 9 July 2026",
+  "globalBriefing": "US-Iran military escalation has disrupted Strait of Hormuz traffic sharply, collapsing tanker flows and triggering Goldman Sachs' reversal to warn of extended supply disruption; simultaneously, Venture Global captures 69% margin expansion on LNG liquefaction fees, while US crude surges to two-week highs. Central banks maintain divergent stances—the Fed signals rates held through 2026 per FOMC minutes, while China's central bank pledges accommodative policy amid demand weakness, setting up USD/CNY strength and EM currency volatility. On the real economy, structural shifts emerge: Arkansas rice acreage collapses to 50-year lows; NYC office-to-residential conversion faces structural execution risks; and fertilizer trade remedy cancellation signals US agricultural policy openness to imports despite domestic producer objections.",
+  "marketOpen": "Primary catalyst: USDA crop report release timing and magnitude—if corn/soybean yields surprise low, grain volatility spikes; if Hormuz blockade extends beyond 48 hours without diplomatic resolution, WTI tests 120+ and energy equity opens sharply higher.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "FOMC Minutes from June 16-17 signal higher-for-longer rate stance amid lower GDP growth expectations",
+          "summary": "Per Federal Reserve official minutes, the Committee maintained a restrictive bias despite downward GDP revisions, per FXStreet and Bitget reporting. A senior economist cited by AOL.com projects rates remain stationary through end-2026, conflicting with market pricing.",
+          "source": "Federal Reserve; FXStreet; Bitget; AOL.com",
+          "relevance": "Rate hold expectation reduces duration risk for fixed income; curve flattening likely if GDP miss accelerates without Fed pivot.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "China's People's Bank announces accommodative monetary policy continuation amid weak domestic demand and external shocks",
+          "summary": "Per WNWN-FM, China's central bank pledged policy support in response to ongoing demand weakness and external headwinds. Timing coincides with renewed US-Iran tensions affecting regional trade flows.",
+          "source": "WNWN-FM",
+          "relevance": "Signals potential CNY weakness as China eases while Fed holds; emerging market currency volatility expected if divergence widens.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Japanese Yen records sustained weakness against US Dollar with limited upside momentum",
+          "summary": "Per NBC reporting via CryptoRank, the yen remains structurally weak despite geopolitical risk premium in oil markets. Reflects persistent interest rate differential favoring USD holdings.",
+          "source": "NBC; CryptoRank",
+          "relevance": "Yen carry trades remain profitable; risk of sharp repricing if Fed cuts materialize or BoJ signals normalization.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If Fed holds through year-end while China eases, expect widening USD/CNY parity and compressed global risk appetite across EM assets.",
       "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "US and Iran exchange military strikes for second consecutive night; Strait of Hormuz traffic drops dramatically",
+          "summary": "According to BBC World and Al Jazeera, the US and Iran conducted reciprocal strikes after Iran reportedly attacked US-linked military sites in Kuwait, Bahrain, and Qatar following US bombardment of Iranian targets. Shipping traffic through Strait has fallen sharply.",
+          "source": "BBC World; Al Jazeera",
+          "relevance": "Critical energy chokepoint disruption; WTI crude elevated; LNG arbitrage spreads widen; containment of further escalation undefined.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Western Europe records hottest June on record; thousands of deaths linked to heatwaves across France, Spain, Belgium",
+          "summary": "Per Al Jazeera, June 2026 marked the warmest month in Western European records, with mortality spikes concentrated in France, Spain, and Belgium. Underlying climate data supports sustained heat pattern risk.",
+          "source": "Al Jazeera",
+          "relevance": "Agricultural output risk; energy demand spike (cooling); insurance/reinsurance sector exposure; sovereign fiscal pressure on emergency spending.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Trump administration signals mixed signals on Greenland policy; EU nations divided on carbon costs framework",
+          "summary": "Per FT World, Trump administration messaging on Greenland strategic interest remains contradictory, while EU member states show divergent positions on future carbon pricing mechanisms. Long-term policy uncertainty persists.",
+          "source": "FT World",
+          "relevance": "Arctic resource competition ambiguity; EU policy fragmentation limits coordinated green capex; geopolitical arbitrage opportunities in Nordic/Arctic positioning.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If US-Iran military escalation persists beyond current cycle, Strait of Hormuz closure extends supply shock; if contained, energy risk premium normalizes sharply.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "China implements proposed penalties on cross-border securities business; Luxembourg regulator tightens Chinese investment oversight",
+          "summary": "Per The National Law Review and IFLR, Chinese authorities announced compliance penalties for cross-border securities transactions while Luxembourg regulators imposed stricter vetting of Chinese capital inflows. Regulatory tightening reduces deal velocity.",
+          "source": "The National Law Review; IFLR",
+          "relevance": "Chinese SWF and institutional capital faces friction costs entering European markets; alternative venues (UAE, Asia) become more attractive for Beijing-backed investors.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "UAE records $48.24 billion FDI inflows in 2025, ranking top in Middle East and ninth globally",
+          "summary": "Per IndexBox, UAE attracted $48.24 billion in foreign direct investment during 2025, establishing regional leadership and ninth-place global standing. Performance reflects geopolitical stability premium and regulatory openness relative to regional peers.",
+          "source": "IndexBox",
+          "relevance": "UAE positioning as regional capital magnet diverts FDI from traditional EM hubs; risk assets favor Gulf Cooperation Council jurisdictions over broader EM.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Asia-Pacific dealmaking remains resilient despite energy supply chain vulnerabilities",
+          "summary": "Per A&O Shearman, M&A activity in Asia-Pacific region continues despite recognition of structural energy supply disruption risks. Deal volume suggests participant confidence in deal completion despite macro headwinds.",
+          "source": "A&O Shearman",
+          "relevance": "Selective regional M&A momentum supports equity volatility compression; energy-dependent sectors (chemicals, logistics) command risk premium.",
+          "signal": "neutral"
+        }
+      ],
+      "keyTakeaway": "If China's capital controls tighten further, UAE and Singapore emerge as primary FDI conduits for Asian capital seeking European market access.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Oil prices surge to two-week high as markets reassess Iran ceasefire durability; Goldman Sachs reverses guidance to warn of extended supply disruption",
+          "summary": "Per OilPrice.com, WTI crude reached two-week peaks on July 8-9 after US-Iran escalation resumed, contradicting week-prior glut warnings. Goldman Sachs issued revised assessment forecasting prolonged Persian Gulf supply constraints versus prior bullish outlook.",
+          "source": "OilPrice.com",
+          "relevance": "Crude volatility elevated 15–25%; energy inflation resumes; refiners face margin compression if Hormuz blockade extends beyond days.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Hormuz tanker traffic grinds to halt following US-Iran missile exchange; ceasefire collapse declared by Trump administration",
+          "summary": "Per OilPrice.com, Strait of Hormuz shipping flows collapsed from prior-week flood volumes to near-zero after resumption of direct military hostilities. Trump administration publicly declared prior ceasefire arrangement defunct.",
+          "source": "OilPrice.com",
+          "relevance": "WTI forward curve steepens; contango collapses; LNG spreads widen; energy security risk premium dominates risk asset pricing.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "US LNG exporter Venture Global reports 69% surge in liquefaction fees to $6.45/mmBtu amid Middle East supply turmoil",
+          "summary": "Per OilPrice.com, Venture Global recorded liquefaction fee increases from $3.82 to $6.45 per million BTU in Q2 2026, representing 69% sequential growth driven by Middle East supply disruption and demand reallocation to US sources.",
+          "source": "OilPrice.com",
+          "relevance": "US LNG exporters capture margin windfall; international LNG buyers face cost inflation; energy-intensive manufacturing relocates toward US.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If Hormuz remains disrupted beyond 72 hours, Brent crude tests $120–130/barrel; US LNG and renewable energy capex accelerates as hedges.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "NYC office-to-residential conversion pipeline disrupted by structural failures at former Pfizer headquarters; support column buckling event triggers broader asset class reassessment",
+          "summary": "Per Bisnow, buckling of two support columns at the 19-million-square-foot former Pfizer conversion in Midtown Manhattan on July 8 created immediate structural liability questions for the sector. Event signals potential engineering or contractor execution risks in large-scale projects.",
+          "source": "Bisnow",
+          "relevance": "Conversion project valuation uncertainty increases; insurance and liability costs rise; project financing becomes costlier; NYC commercial real estate re-risk spreads.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Multiple US states implement special power rate structures for data center operations to contain household electricity cost inflation",
+          "summary": "Per Bisnow, state regulators are introducing preferential electricity pricing for data center operators in response to record demand growth from AI infrastructure build-out. Measure aims to prevent retail rate increases while subsidizing tech capex.",
+          "source": "Bisnow",
+          "relevance": "Data center REITs benefit from rate certainty; traditional utility equity faces margin compression; rural/industrial real estate valuations rise.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Palisades Village high-end retail district scheduled to reopen August 15, 2026 following $100 million fire recovery effort",
+          "summary": "Per Bisnow, the Pacific Palisades open-air retail asset will resume operations on August 15 after 18+ months of post-fire reconstruction at $100 million total cost. Reopening signals luxury retail capex resilience despite prior catastrophic loss.",
+          "source": "Bisnow",
+          "relevance": "Luxury retail leasing demand remains intact; insurance/reinsurance claims resolution supports investor confidence; California CRE recovery narrative gains evidence.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If NYC conversion casualties multiply, institutional capital redeploys from conversion plays toward data centers and Sunbelt industrial logistics.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Searchlight Capital identifies B2B events, blue-collar services, and AI-resilient premium assets as primary investment thesis; selective deal activity expected in H2 2026",
+          "summary": "Per PE Hub, Searchlight managing partner James Redmayne reported narrowing bid-ask spreads on quality assets and projected H2 2026 deal pickup among 'differentiated thesis' buyers. Bifurcation noted between defensible premium assets and cyclical/AI-exposed weakness.",
+          "source": "PE Hub",
+          "relevance": "PE dry powder deploys selectively; quality asset multiples stable; cyclical/AI-exposed assets discount sharply; mid-market consolidation accelerates.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Arrow Global completes acquisition of Fusion Specialty Group managing general agent; £290 million gross premium book integrated",
+          "summary": "Per PE Hub, Arrow Global closed acquisition of Fusion Specialty Group, a 2018-founded MGA with approximately £290 million annual gross written premiums across 1,500 policies. Deal reflects specialty insurance M&A consolidation momentum.",
+          "source": "PE Hub",
+          "relevance": "Insurance specialty MGA consolidation supports defensible earnings; pricing power increases for holders; sector valuations reflect quality premium.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "PSG Equity agrees majority growth investment in BrightAnalytics, Belgium-based CPM software provider serving 1,300+ CFO-focused customers",
+          "summary": "Per PE Hub, PSG Equity committed growth capital to BrightAnalytics, a corporate performance management software platform with 1,300+ customers across Belgium, Netherlands, Nordics, and France. Enterprise SaaS consolidation pattern continues.",
+          "source": "PE Hub",
+          "relevance": "Enterprise software SaaS valuations remain resilient; buy-and-build consolidation in fintech/operations tools accelerates; regional European platforms attract PE attention.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If H2 2026 deal velocity exceeds consensus, premium asset multiples compress while cyclical/AI-exposed discounts widen further, creating bifurcated exit environment.",
       "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "US-Iran ceasefire collapse centers on Hormuz control; second direct military confrontation follows MOU failure within months",
+          "summary": "Per Asia Times, renewed US-Iran military strikes mark second major MOU violation, with Hormuz Strait dominance cited as core dispute. Washington reportedly struck 80 targets; underlying strategic competition unresolved.",
+          "source": "Asia Times",
+          "relevance": "EM energy-dependent currencies (MYR, IDR, THB) face depreciation pressure; regional risk premium widens; FX volatility hedges become expensive.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Kenya and Cameroon pursue private-sector financing partnerships at African Trade and Investment Development Insurance AGM amid sovereign debt pressures",
+          "summary": "Per African Business, Kenya and Cameroon leveraged ATIDI's forum to court private investment partnerships as mounting public debt constrains fiscal capacity. Reflects structural EM sovereign financing challenges.",
+          "source": "African Business",
+          "relevance": "African credit spreads widen; private capital demand increases; blended finance mechanisms gain urgency; currency stability risk for frontier EM names.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Australia-Fiji defense pact signals Pacific regional realignment; South Pacific emerges as great-power competition epicenter",
+          "summary": "Per Asia Times, Australia-Fiji bilateral defense agreement represents hardening Pacific geopolitical alignment away from Chinese influence. Reflects broader South Pacific strategic repositioning amid US-China competition.",
+          "source": "Asia Times",
+          "relevance": "Pacific EM positioning shifts toward Quad-aligned frameworks; Chinese capital flows to region face headwinds; infrastructure financing terms harden.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If Hormuz disruption sustains, energy-importing EM sovereign risk spreads widen 50–100 bps; if resolved, frontier market valuations benefit from de-risking.",
       "rawCount": 10
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "US administration cancels hard-won fertilizer trade remedies; domestic producers warned against relying on home market protection",
+          "summary": "Per Coalition For A Prosperous America, the Trump administration rescinded prior fertilizer antidumping/countervailing duties, signaling strategic shift away from agricultural trade protection. Domestic producers explicitly advised to expect import competition.",
+          "source": "Coalition For A Prosperous America",
+          "relevance": "US fertilizer equity faces margin compression; agricultural input costs decline; farm profitability improves; commodity price support weakens.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Italy wine industry seeks supply constraints following unsold inventory surge; protectionist response to demand weakness",
+          "summary": "Per Vinetur via Google News, Italian winemakers are urging supply-side controls in response to mounting inventory backlogs. Request reflects pricing pressure and demand weakness in traditional export markets.",
+          "source": "Vinetur",
+          "relevance": "EU agricultural sector fragmentation; trade tension risk rises; consumer wine prices may face support; luxury goods demand softening signals.",
+          "signal": "watch"
+        },
+        {
+          "headline": "India faces critical minerals supply constraints in electric mobility transition; dependency risks geopolitical leverage",
+          "summary": "Per ORF (Observer Research Foundation), India's EV sector expansion confronts structural critical minerals sourcing deficits. Geopolitical supply chain vulnerability embedded in sector growth trajectory.",
+          "source": "ORF Online",
+          "relevance": "India EV capex faces cost headwinds; supply chain diversification becomes strategic priority; China lithium/rare earth leverage persists.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If fertilizer trade remedies remain cancelled, agricultural commodity complexity widens; if Italy's supply controls spread EU-wide, protectionist cascade risks.",
       "rawCount": 3
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Corn rally stalls ahead of USDA crop report release; market sentiment turns cautious on supply/yield data",
+          "summary": "Per Agrolatam, corn futures momentum reversed as traders awaited USDA report data on yield and acreage. Price discovery pause reflects information asymmetry ahead of official crop estimates.",
+          "source": "Agrolatam",
+          "relevance": "Commodity volatility likely to spike on USDA release; hedging costs increase; seasonal price support uncertain pending report.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Arkansas rice acreage falls to near 50-year low as farmers shift to higher-margin soybean and corn cultivation",
+          "summary": "Per Arkansas Democrat-Gazette citing USDA data, Arkansas rice planted area contracted to 50-year lows as economics favored competing crops. Structural crop mix shift reflects relative profitability dynamics.",
+          "source": "Arkansas Democrat-Gazette; USDA",
+          "relevance": "Rice supply tightening supports prices; producer economics favor soy/corn; global rice availability pressure emerges if trend widens.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Soybeans break above $12 per bushel as China restarts bulk purchases; grain market optimism broadens",
+          "summary": "Per Agrolatam, soybean futures exceeded $12/bushel on renewed Chinese buying demand, signaling shift from prior week's weakness. Chinese crop import signals demand stabilization after prior hesitation.",
+          "source": "Agrolatam",
+          "relevance": "Chinese protein demand recovery supports EM agricultural exporters (Brazil, Argentina); USD weakness likely given commodity inflows.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If Chinese soy purchases sustain, Brazil/Argentina agricultural equities rally; if rice acreage losses spread to other regions, global grain inflation resurfaces.",
       "rawCount": 10
     }
   }
