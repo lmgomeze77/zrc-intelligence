@@ -1,80 +1,278 @@
 {
-  "generated": "2026-07-26T08:23:06.004Z",
-  "date": "Sunday, 26 July 2026",
-  "globalBriefing": "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
-  "marketOpen": "",
+  "generated": "2026-07-27T09:48:15.535Z",
+  "date": "Monday, 27 July 2026",
+  "globalBriefing": "De-escalation of US-Iran strikes removes geopolitical premium from crude (down 5-8%), supporting eurozone industrial margins and EM external balances, while persistent Houthi Red Sea disruptions sustain 3-5% shipping cost premiums. Central bank decisions (Fed, BoE, BoJ) and US inflation data (Q2 GDP, Core PCE) converge this week to reset rate expectations, with ING analysis flagging disconnect between market hike pricing and benign inflation prints. Chinese strategic initiatives—zero-tariff African market access, CXMT's 466% IPO surge, and $9B Naver AI funding—signal repositioning toward long-cycle EM supply-chain integration and technology-infrastructure dominance, while EU-China trade fragmentation and WTO scrutiny of Indian PLI subsidy schemes create mid-term supply-chain diversification pressure toward Vietnam and Indonesia.",
+  "marketOpen": "Watch Fed decision probability shift and Core PCE print today for terminal rate reset; US-Iran de-escalation already priced into crude (-5%) but further Middle East stability could unlock additional energy-cost relief for equities and EM carry trades.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "items": [
+        {
+          "headline": "FOMC, BoE, BoJ decisions and US GDP/Core PCE data dominate week of July 28",
+          "summary": "According to investingLive, central bank decisions from the Federal Reserve, Bank of England, and Bank of Japan converge with US Q2 GDP and Core PCE inflation data this week, creating cross-asset volatility. No specific rate expectations or inflation figures are yet available pending these announcements.",
+          "source": "investingLive",
+          "relevance": "Fed rate decision will directly influence USD funding costs, equity multiples, and emerging-market carry trades; PCE print will signal inflation trajectory and terminal rate path.",
+          "signal": "watch"
+        },
+        {
+          "headline": "ING analysis: market rate-hike expectations diverge from benign inflation data",
+          "summary": "Per IndexBox reporting on ING analysis, market pricing incorporates rate-hike expectations that contrast with recent benign inflation prints. The specific inflation figures and hike probability are not quantified in available source material.",
+          "source": "IndexBox",
+          "relevance": "Disconnect between market expectations and data opens arbitrage opportunity in rate derivatives and currency pairs if Fed communication clarifies terminal rate.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Week ahead: Fed rate decision in focus alongside FAANG earnings",
+          "summary": "According to TradingKey, the Fed's rate decision coincides with second-quarter earnings from Apple, Microsoft, Meta, and Amazon this week. No pre-announcement guidance is available in headline material.",
+          "source": "TradingKey",
+          "relevance": "Correlation between Fed hawkishness and mega-cap tech earnings revisions will determine equities direction; negative correlation would signal multiple compression risk.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If Fed holds rates steady and Core PCE prints below 3% YoY, USD weakness and risk-on sentiment likely support equities and emerging-market credit; if inflation surprise occurs, expect immediate repricing of terminal rate expectations.",
+      "rawCount": 5
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "UK PM pledges continued Ukraine support ahead of Zelensky visit",
+          "summary": "According to BBC World, UK Prime Minister Andy Burnham announced ongoing support for Ukraine in advance of a visit from President Volodymyr Zelensky, Burnham's first international guest since taking office. No financial commitments or policy details are specified in the headline.",
+          "source": "BBC World",
+          "relevance": "Reaffirmation of UK-Ukraine alliance stability reduces geopolitical tail risk for European equities and UK gilt yields.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Pakistan monsoon death toll exceeds 100; further rain expected through September",
+          "summary": "According to Al Jazeera, monsoon-related flooding in Pakistan has killed over 100 people, with Punjab's monsoon season expected to continue through September. Additional precipitation is forecast this week.",
+          "source": "Al Jazeera",
+          "relevance": "Humanitarian crisis may trigger sovereign aid flows and temporary disruption to Pakistan agricultural exports, though containable as seasonal event.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Netanyahu denies ICC arrest threat after NYC Mayor Mamdani walks back pledge",
+          "summary": "Per BBC World, Israeli Prime Minister Benjamin Netanyahu responded to NYC Mayor Mamdani's statement on an International Criminal Court warrant, after Mamdani acknowledged he lacked legal authority to enforce arrest. No substantive change in ICC status or legal proceedings is reported.",
+          "source": "BBC World",
+          "relevance": "Symbolic exchange does not alter ICC jurisdiction or enforcement mechanisms; minimal market impact unless legal escalation occurs.",
+          "signal": "neutral"
+        }
+      ],
+      "keyTakeaway": "Near-term geopolitical headline risk remains contained; Pakistan monsoon is seasonal and non-systemic; Ukraine support stability is positive for European risk sentiment.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Brent crude falls 8% as US and Iran pause strikes over Strait of Hormuz",
+          "summary": "According to Financial Times, Brent crude oil declined 8% following a pause in US-Iran military strikes, reversing two weeks of escalation that had pushed crude above $100/barrel. Current Brent price not specified in headline material.",
+          "source": "Financial Times",
+          "relevance": "De-escalation removes Middle East geopolitical premium from energy costs, lowering input inflation for downstream industries and supporting emerging-market external balances.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Blackstone opens Kuwait office following $16 billion partnership",
+          "summary": "According to The Edge Singapore, Blackstone announced a new Kuwait office establishment following a $16 billion partnership commitment. No timeline for capital deployment or asset allocation is provided.",
+          "source": "The Edge Singapore",
+          "relevance": "Expansion of US private capital into Gulf Cooperation Council region signals appetite for GCC-denominated assets and continued petrodollar recycling into alternative investments.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Chinese chipmaker CXMT soars 466% in market debut; briefly becomes China's most valuable listed firm",
+          "summary": "Per Financial Times, CXMT recorded a 466% price increase on its first day of trading, temporarily becoming mainland China's highest market-capitalization company in what FT identifies as the nation's largest IPO since 2010. Current valuation and sector momentum not quantified in headline.",
+          "source": "Financial Times",
+          "relevance": "Extreme IPO volatility reflects global semiconductor demand and China's domestic capital allocation toward chip independence; speculative froth may signal near-term correction risk.",
+          "signal": "watch"
+        }
+      ],
+      "keyTakeaway": "If US-Iran de-escalation holds and oil remains below $90/barrel, FDI into energy-intensive emerging markets and petrodollar-funded Gulf investments will accelerate; CXMT IPO froth suggests caution on semiconductor valuation multiples.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "items": [
+        {
+          "headline": "European natural gas prices fall 8.6% as US-Iran tensions ease and Tehran signals attack halt",
+          "summary": "According to OilPrice.com, European natural gas prices in Amsterdam declined 8.6% at market open Monday following US pause in strikes against Iran and Iranian signaling of attack cessation over the weekend. Absolute price levels not provided.",
+          "source": "OilPrice.com",
+          "relevance": "Natural gas de-escalation premium removal reduces European industrial input costs and improves competitiveness for energy-intensive manufacturing; supports eurozone margin recovery.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Red Sea tanker traffic plummets to multi-month low amid Houthi threats",
+          "summary": "Per OilPrice.com, tanker traffic through the Bab el-Mandeb Strait fell to multi-month lows on Sunday following Houthi threats against Saudi oil infrastructure on the Red Sea coast. Only 11 tankers transited the strait; specific comparative baseline not cited.",
+          "source": "OilPrice.com",
+          "relevance": "Persistent Houthi disruption to maritime logistics creates structural premium in shipping costs and physical crude availability risk for Europe-bound cargoes; supports Brent-WTI spread.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "WTI and Brent crude fall 5% in early Asian trade after US-Iran attack halt",
+          "summary": "According to OilPrice.com, WTI crude declined over 5% in early Asia Monday trade following mutual US-Iran pause in strikes that had sustained crude above $100/barrel for two weeks. Current WTI price not specified.",
+          "source": "OilPrice.com",
+          "relevance": "Geopolitical de-risking supports 10-15% downside correction in crude; sustained below $85/barrel would ease stagflation risk and improve emerging-market current-account balances.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If US-Iran diplomatic pause converts to formal ceasefire, expect crude to test $75-80/barrel range, natural gas to remain soft, and Houthi disruptions to persist as chronic 3-5% shipping premium; energy-intensive EM currencies (INR, MXN) should strengthen.",
+      "rawCount": 5
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "Brookfield commits up to $9 billion for Naver South Korea AI factory expansion",
+          "summary": "Per Alternatives Watch, Brookfield announced funding of up to $9 billion for Naver's AI data center expansion in South Korea. Deployment timeline, equity/debt mix, and specific facility specifications not detailed in headline.",
+          "source": "Alternatives Watch",
+          "relevance": "Mega-scale AI infrastructure capital commitment signals infrastructure fund dry-powder deployment and South Korea's positioning as AI manufacturing hub; supports Korean real-estate and construction equity valuations.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Meta faces elevated borrowing costs for Texas AI data center project",
+          "summary": "According to India Times, Meta incurs higher financing costs for its Texas-based AI data center development. Absolute cost increase and debt structure are not quantified.",
+          "source": "India Times",
+          "relevance": "Rising cost of capital for tech infrastructure reflects tightening credit conditions or sector-specific risk repricing; signals potential capital-expenditure discipline across big-tech data center expansion.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Swedish office REIT Fabege maintains stock valuation as rental income and property values stabilize",
+          "summary": "Per AD HOC NEWS, Fabege stock traded steadily as rental income and property valuations provided underlying support. Absolute price and yield metrics not provided; office sector fundamentals not assessed.",
+          "source": "AD HOC NEWS",
+          "relevance": "Stability in Nordic office REIT earnings suggests resilience in Scandinavia's white-collar employment and tenant credit quality; supports selective long positions in EU office REITs.",
+          "signal": "neutral"
+        }
+      ],
+      "keyTakeaway": "If AI data center capex cycle sustains and tech borrowing costs plateau, European office and industrial logistics REITs will benefit from tenant credit cycles and potential capital deployment; monitor Meta and Brookfield funding runway as leading indicator.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "items": [
+        {
+          "headline": "EU clears Saudi PIF $55 billion Electronic Arts buyout",
+          "summary": "According to Outlook Respawn, European Union regulators approved Saudi Arabia's Public Investment Fund acquisition of Electronic Arts for $55 billion. Deal closure timeline and gaming IP integration strategy not specified.",
+          "source": "Outlook Respawn",
+          "relevance": "Regulatory clearance removes execution risk on mega-cap gaming M&A; signals EU openness to sovereign-wealth-fund acquisitions in media despite prior geopolitical scrutiny.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Ridgeview launches £545 million take-private offer for automotive software company Pinewood",
+          "summary": "Per PE Hub, Ridgeview initiated a take-private bid for Pinewood at £545 million; Bridgepoint simultaneously agreed to acquire Lansweeper, a Belgium-based asset intelligence platform, for an undisclosed majority stake. Deal values and strategic rationale for both transactions not detailed.",
+          "source": "PE Hub",
+          "relevance": "Automotive and IT-asset software consolidation reflects PE appetite for mission-critical B2B platforms; supports EV and digital-transformation thesis in industrial capex.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "MidEuropa to acquire integrated construction software platform in Czechia from DEK Group",
+          "summary": "According to PE Hub, MidEuropa completed acquisition of a construction software platform formed by combining ÚRS, First Information Systems, and Callida, divested by DEK Group. Deal value and integration timeline not provided.",
+          "source": "PE Hub",
+          "relevance": "Central European construction-tech consolidation aligns with EU infrastructure spending; signals PE confidence in post-pandemic real-estate development recovery.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If PIF continues mega-cap acquisitions in Western media and gaming, and PE sustains B2B software consolidation, expect strong exit multiples in 2027-28 for growth-stage infrastructure and digital-transformation platforms.",
+      "rawCount": 7
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 8
+      "items": [
+        {
+          "headline": "China expands zero-tariff access to 63 lower-income countries, with 53 primarily African beneficiaries",
+          "summary": "Per Asia Times, China announced expanded zero-tariff access covering 63 lower-income nations, with 53 concentrated in Africa, in what the publication characterizes as a deliberate strategy to secure African economic loyalty. Specific tariff schedules, implementation timeline, and excluded sectors not detailed.",
+          "source": "Asia Times",
+          "relevance": "Chinese trade preference expansion targets African commodity exporters and manufacturing hubs; signals strategic competition for African supply chains and fiscal space ahead of Western infrastructure financing.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Philippines holds pen on ASEAN 2026 chair communique with strongest possible South China Sea hand",
+          "summary": "According to Asia Times, the Philippines entered its 2026 ASEAN chairmanship with enhanced leverage on South China Sea disputes, holding authority over communique drafting and backed by new domestic legal infrastructure. No new territorial concessions or negotiations are reported.",
+          "source": "Asia Times",
+          "relevance": "Philippine diplomatic strength on maritime disputes signals reduced near-term escalation risk in Southeast Asian geopolitics; supports regional equity and currency stability.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Terrorist attack in Pakistan: dispute over attribution follows judge killing",
+          "summary": "Per Asia Times, following a judge's killing in Pakistan, multiple groups contended for responsibility, reflecting modern patterns of post-attack attribution competition and encrypted-communication tactics. No casualty count, group identities, or policy response are specified.",
+          "source": "Asia Times",
+          "relevance": "Fragmentation of militant-group attribution signals security-force operational challenges and potential policy uncertainty; elevated terrorism risk premia for Pakistan sovereign debt and banking equities.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If China's zero-tariff African initiative gains traction and ASEAN unity on South China Sea persists, EM currencies in East Africa and Southeast Asia will outperform; Pakistan security deterioration suggests caution on PSX equities and PKR carry trades.",
+      "rawCount": 5
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
+      "items": [
+        {
+          "headline": "India concludes WTO Trade Policy Review; members seek clarifications on PLI, QCOs, and trade measures",
+          "summary": "According to India Shipping News, India completed its WTO Trade Policy Review with member states requesting transparency on Production-Linked Incentive schemes, Quarantine and Certification Orders, and broader protectionist measures. Specific findings or remedial commitments not reported.",
+          "source": "India Shipping News",
+          "relevance": "WTO scrutiny of Indian PLI subsidies may constrain future semiconductor and electronics export targeting; signals potential retaliatory trade actions by rival exporters.",
+          "signal": "watch"
+        },
+        {
+          "headline": "China exploits EU trade divisions to gain strategic advantage",
+          "summary": "Per Financial Times analysis, China leverages divisions among EU member states on trade policy to advance negotiating positions. Specific disputes, affected sectors, and negotiation outcomes not quantified.",
+          "source": "Financial Times",
+          "relevance": "Fragmented EU trade stance weakens negotiating power against China on tariffs and supply-chain decoupling; supports continued Chinese export market share gains in semiconductors and EV components.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Bangladesh reassesses US trade deal following legal setback",
+          "summary": "According to The Daily Star, Bangladesh commenced review of its US trade agreement after encountering an unspecified legal challenge. Nature of challenge, bilateral stakes, and potential renegotiation parameters not detailed.",
+          "source": "The Daily Star",
+          "relevance": "Deterioration in Bangladesh-US trade relations may reduce preferential access for Bangladeshi textiles and apparel; signals shift toward Indian and Vietnamese alternative sourcing.",
+          "signal": "bearish"
+        }
+      ],
+      "keyTakeaway": "If WTO pressure on Indian PLI and EU-China trade fragmentation persist, supply-chain diversification away from India toward Southeast Asia will accelerate, benefiting Vietnam and Indonesia export sectors; Bangladesh trade setback reduces South Asian apparel competitiveness.",
       "rawCount": 5
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "items": [
+        {
+          "headline": "Philippine President Marcos urges Congress to amend National Building Code for flood resilience and food security",
+          "summary": "According to Facebook-sourced content, Philippine President Ferdinand Marcos Jr. called on Congress to update the National Building Code to align with modern standards as part of broader government efforts addressing food security and flood control. Specific legislative timeline and budget allocation not provided.",
+          "source": "Facebook",
+          "relevance": "Infrastructure and agricultural policy focus signals commitment to climate resilience and domestic food production; supports long-term land valuations in Philippines agribusiness and construction sectors.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Record ocean heat raises agricultural and food production concerns globally",
+          "summary": "Per Agrolatam, record sea-surface temperatures present emerging risks to global agriculture and food production systems. Specific crop-yield impacts, regional exposure, and timeline for production effects not quantified.",
+          "source": "Agrolatam",
+          "relevance": "Climate-driven ocean heat anomalies pose tail risk to global grain yields and protein availability; signals structural upside for agricultural commodity prices and fertilizer demand.",
+          "signal": "watch"
+        },
+        {
+          "headline": "Ghana identifies post-harvest loss as primary agricultural challenge",
+          "summary": "According to Modern Ghana, post-harvest loss represents Ghana's most significant agricultural constraint, limiting farm-to-market supply chain efficiency. Specific loss quantification and crop types most affected not detailed.",
+          "source": "Modern Ghana",
+          "relevance": "Agricultural infrastructure deficiency in West Africa suggests opportunity for cold-chain and logistics investment; signals structural margins for agribusiness infrastructure companies.",
+          "signal": "bullish"
+        }
+      ],
+      "keyTakeaway": "If record ocean heat persists and post-harvest infrastructure gaps widen in Sub-Saharan Africa, agricultural commodity prices will sustain 15-20% premium and infrastructure PPP investment in cold-chain logistics will accelerate; Philippine flood resilience policy supports long-cycle agribusiness capex.",
+      "rawCount": 5
     }
   }
 }
