@@ -1,8 +1,8 @@
 {
-  "generated": "2026-07-29T08:37:47.065Z",
-  "date": "Wednesday, 29 July 2026",
-  "globalBriefing": "Central banks face a quandary: ECB wage growth is contained at 2.7% while global bond yields hit 2008 highs, signaling either policy error or genuine term-premium compression from geopolitical shocks. The Middle East flare-up (US-Saudi strikes, Iranian responses, Japan earthquake) has tightened energy supplies and pushed oil higher, exacerbating stagflation fears while simultaneously pressuring growth-sensitive equities through collateral calls on leveraged AI positions. Emerging markets show resilience (Ecobank, Vietnam banking clean-up) but face headwinds from US tariff escalation (50% on Canada, India farm disputes, Brazil retaliation), which threatens commodity prices and supply-chain profitability across frontier exporters.",
-  "marketOpen": "Watch Fed rate decision for signal on global yield trajectory; elevated oil prices and margin calls on tech leverage create dual tail-risk to equity risk premium, while trade escalation supports defensive positioning.",
+  "generated": "2026-07-30T08:23:51.640Z",
+  "date": "Thursday, 30 July 2026",
+  "globalBriefing": "Fed held rates at 4.25–4.50% with three dissents, signaling hawkish bias that has compressed long-duration bonds and supported USD near 1.1450 EUR/USD; concurrently, renewed US-Iran military strikes threaten Strait of Hormuz throughput, supporting energy premiums while Chinese equities post decade-worst monthly performance as AI capex boom consolidates into megacap infrastructure plays. Trade escalation (reciprocal tariffs, Brazil/India counter-measures, agricultural export curbs) is creating bifurcated market outcome: agribusiness consolidators and defense-adjacent real estate rally, while small-farm credit stress and secondary commercial real estate face structural headwinds.",
+  "marketOpen": "Watch for German GDP/CPI data at 8:00 CET and any escalation in Strait of Hormuz incidents; if both disappoint, EUR weakness and energy-price volatility will drive equity opening moves.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,28 +10,28 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "ECB Wage Tracker Reports 2.7% Negotiated Wage Growth in Q1 2027",
-          "summary": "Per ECB press releases, negotiated wage growth stands at 2.7% in Q1 2027, indicating contained labor cost pressures. This aligns with the ECB's inflation target framework and suggests limited wage-driven inflation risk in the near term.",
-          "source": "ECB Press Releases",
-          "relevance": "Supports ECB rate-hold thesis; constrains upside inflation expectations and moderates EUR volatility.",
+          "headline": "Fed holds rates steady at 4.25–4.50% with three FOMC members dissenting; EUR/USD trading near 1.1450",
+          "summary": "The Federal Reserve maintained its policy rate unchanged, according to the FOMC statement, with dissent recorded among committee members. Markets are repricing EUR/USD based on policy divergence expectations rather than spot price action alone, per FXStreet.",
+          "source": "Federal Reserve, FXStreet, think.ing.com",
+          "relevance": "Monetary policy hold signals potential rate-cut delays; three dissents indicate hawkish faction. Dollar strength likely to persist absent surprise Eurozone CPI weakness.",
           "signal": "neutral"
         },
         {
-          "headline": "Bank of Japan Holds Policy Rate at 1% While Upgrading GDP Forecast Amid Yen Near 40-Year Low",
-          "summary": "According to Tech Times, the Bank of Japan maintained its policy rate at 1% and upgraded its GDP forecast despite the yen trading near 40-year lows. The BoJ's forecasting upgrade suggests confidence in domestic demand momentum despite currency weakness.",
-          "source": "Tech Times",
-          "relevance": "BoJ normalization on pause despite weak yen; JPY weakness supportive of export-heavy equities; rate trajectory now dependent on yen stabilization rather than inflation metrics.",
+          "headline": "Euro zone bond yields rose following Fed hold; market participants await German GDP and inflation data",
+          "summary": "According to Modern Diplomacy and FXStreet reports, eurozone fixed-income yields moved higher post-Fed decision, with traders positioned ahead of imminent German macro releases. The euro edged lower on the data-dependency trade.",
+          "source": "Modern Diplomacy, FXStreet",
+          "relevance": "German GDP and CPI prints will be critical for ECB forward guidance; weak data could support EUR downside; strong data could trigger yield curve steepening.",
           "signal": "watch"
         },
         {
-          "headline": "Global Bond Yields Reach Highest Level Since 2008 as Fed Decision Approaches",
-          "summary": "Per CryptoRank, global bond yields have risen to levels not seen since 2008 ahead of an imminent Fed rate decision. Elevated yields reflect heightened term premium and policy uncertainty across major developed markets.",
-          "source": "CryptoRank",
-          "relevance": "Rising global yields increase refinancing risk for levered corporates and sovereigns; signals potential pivot in Fed trajectory if yields sustain at these levels.",
+          "headline": "Bond markets are pricing Fed policy normalization ahead of rate-cut expectations; oil prices climb amid Middle East tensions",
+          "summary": "Per KFGO Morning Bid analysis, bond markets are performing monetary-policy work via duration repricing rather than waiting for explicit Fed guidance. Oil moves reflect geopolitical risk despite persistent shipping flows through key straits.",
+          "source": "The Mighty 790 KFGO, OilPrice.com",
+          "relevance": "Curve flattening and energy price volatility create stagflation hedging demand; long-duration assets face headwinds if bond yields remain elevated.",
           "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If the Fed maintains its current policy stance and global yields remain near 2008 highs, expect continued compression in equity risk premiums and rotation toward rate-sensitive sectors.",
+      "keyTakeaway": "If German GDP and CPI miss expectations, ECB easing may accelerate, weakening EUR; if data holds, dollar and treasury yields likely extend gains into Q3.",
       "rawCount": 10
     },
     "geopolitics": {
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Saudi Arabia Joins US in Strikes on Iran-Backed Militias in Iraq; US Central Command Reports Proxy Group Attacks on Military Bases and Energy Infrastructure",
-          "summary": "Per BBC World, Saudi Arabia and the US conducted joint strikes against Iran-backed militias in Iraq in response to proxy group attacks on US bases and Saudi energy infrastructure. US Central Command confirms the operational coordination and stated rationale.",
+          "headline": "US launches heavy strikes on Iran following attempted attack on American troops; missile exchange resumes after period of relative calm",
+          "summary": "According to BBC World, after weeks of reduced hostilities, both the United States and Iran have restarted missile attacks, marking an escalation in direct military engagement. Video and damage reports from Iran's Qeshm Island, per Al Jazeera, document widespread destruction.",
+          "source": "BBC World, Al Jazeera",
+          "relevance": "Strait of Hormuz throughput risk elevated; oil volatility premium likely to persist; insurance and shipping costs may spike, affecting energy and logistics supply chains.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Three Greek firefighters killed in wildfires driven by gale-force winds; southern European regions face evacuation",
+          "summary": "Per BBC World, wildfire conditions on Crete and other southern European regions have prompted village evacuations and fatalities. Gale-force winds are reported to have accelerated fire spread across multiple nations.",
           "source": "BBC World",
-          "relevance": "Escalation in Gulf regional tensions; elevated risk to Hormuz transit and Saudi oil/petrochemical export flows; potential for further retaliatory cycles affecting energy markets.",
+          "relevance": "Agricultural output and tourism infrastructure face near-term disruption; insurance claims may rise; regional labor availability constrained.",
           "signal": "watch"
         },
         {
-          "headline": "Russia Reports Ukrainian Drone Attacks on Industrial Sites; Major Retailer Wildberries Evacuates Warehouses",
-          "summary": "According to Al Jazeera, Russian industrial sites came under Ukrainian drone attack, with Wildberries (Russia's largest online retailer) evacuating warehouses in Ryazan. Reports indicate ongoing targeting of civilian logistics infrastructure.",
-          "source": "Al Jazeera",
-          "relevance": "Supply chain disruption risk for Russian consumer and logistics sectors; signals expansion of Ukrainian strike doctrine into rear-area infrastructure.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Japan Mounting Rescue Operations After Kyushu Earthquake; At Least 13 Deaths Reported",
-          "summary": "Per BBC World, Japan initiated emergency rescue operations following a Tuesday earthquake on the island of Kyushu with confirmed fatalities of at least 13 people. Search-and-rescue operations are ongoing beneath collapsed structures.",
-          "source": "BBC World",
-          "relevance": "Near-term supply chain risk for Japanese manufacturing and automotive exports; potential insurance and reconstruction spending; secondary impact on regional semiconductor logistics.",
+          "headline": "China implements forced-assimilation policy in minority regions; UN Refugee Convention faces anti-migration pressure in Western nations",
+          "summary": "Foreign Affairs reports that China has codified forced assimilation as law in ethnic minority areas. Separately, the 1951 UN Refugee Convention marks its 75th anniversary amid rising anti-migration sentiment, per Al Jazeera.",
+          "source": "Foreign Affairs, Al Jazeera",
+          "relevance": "Geopolitical risk: China policy may trigger international sanctions or humanitarian concerns; Western migration backlash may constrain skilled-labor flows to developed markets and affect labor-cost arbitrage.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Gulf tensions sustain elevated levels and the Strait of Hormuz faces repeated interdiction threats, expect premium compression in energy hedges and heightened political risk premium for Middle Eastern assets.",
+      "keyTakeaway": "If US-Iran military exchanges persist, Strait of Hormuz closure risk rises, tightening crude and lifting energy-adjacent asset volatility; if China minority policies provoke multilateral response, China equity valuations face headwind.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Adani Group Weighs Bid for Associated British Ports as Canadian Pension Funds Prepare to Divest Stakes",
-          "summary": "Per FT World, Asia's richest man Mukesh Adani is considering a bid for Associated British Ports as two Canadian pension funds prepare to exit their positions. The transaction would represent significant FDI into UK critical infrastructure.",
-          "source": "FT World",
-          "relevance": "Signals shift in FDI composition toward Indian capital acquiring UK strategic assets; regulatory scrutiny likely on foreign ownership of port infrastructure.",
-          "signal": "watch"
-        },
-        {
-          "headline": "AI Sell-Off Triggers Hedge Fund Collateral Calls Amid Market Repricing",
-          "summary": "According to FT World, the recent AI sector correction has triggered margin calls and collateral demands on leveraged hedge fund positions. The repricing reflects de-leveraging cycles across tech-exposed strategies.",
-          "source": "FT World",
-          "relevance": "Hedge fund liquidations may force asset sales across diversified portfolios; elevated volatility risk in illiquid credit and equity positions.",
+          "headline": "Chinese stocks on track for worst month in decade; investors exiting 'picks and shovels' AI suppliers",
+          "summary": "According to Financial Times World, Chinese equities are posting their worst monthly performance in ten years as portfolio flows reverse from semiconductor and infrastructure suppliers to AI boom. Shandong-based Innolight fell 10% on Hong Kong IPO debut despite supplying US and Chinese datacentre operators.",
+          "source": "Financial Times World",
+          "relevance": "China tech and semiconductor exposure faces valuation compression; EM flows may rebalance from Asia to other emerging markets; US tech suppliers' cost of capital advantage widens.",
           "signal": "bearish"
         },
         {
-          "headline": "Vietnam Targets Foreign Investment Assets at 15% of GDP Under Financial Market Reform Plan",
-          "summary": "Per Theinvestor, Vietnam has set a target for foreign investment assets to reach 15% of GDP as part of its financial market reform initiative. This signals regulatory openness to increased FDI inflows and capital account liberalization.",
-          "source": "Theinvestor",
-          "relevance": "Positive signal for Vietnam-focused emerging market funds; implies regulatory commitment to capital market depth and foreign participation.",
+          "headline": "OpenAI plans US$500 billion AI datacenter project with Nvidia backing; CBRE reports 16% Q2 revenue growth driven by data center infrastructure",
+          "summary": "Per Mexico Business News, OpenAI is advancing a half-trillion-dollar datacentre initiative. Concurrently, CBRE posted 16% revenue growth in Q2 with core earnings per share rising 30%, powered by infrastructure and data-centre business performance, per Bisnow.",
+          "source": "Mexico Business News, Bisnow",
+          "relevance": "Massive capex deployment favors real estate, power, and networking infrastructure; datacentre valuations and cap rates may compress further, reducing yield for new investors.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "State Street to acquire Santander CACEIS Latin American operations and enter Mexico market; ADX brings Botswana Stock Exchange onto Tabadul hub",
+          "summary": "According to Mexico Business News and The TRADE, State Street is expanding fintech infrastructure into LatAm via Santander CACEIS, while Abu Dhabi Exchange is integrating the Botswana Stock Exchange into its regional trading platform.",
+          "source": "Mexico Business News, The TRADE",
+          "relevance": "LatAm and African financial infrastructure consolidation attracts institutional capital; emerging-market liquidity and custody standardization may lower entry friction for family offices.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Vietnam sustains its liberalization trajectory and foreign asset targets, expect increased institutional allocation to Vietnamese equities and fixed income; conversely, if AI-driven margin calls continue, expect cross-market liquidations affecting emerging market liquidity.",
+      "keyTakeaway": "If megacap AI capex sustains, datacentre and power REIT multiples face headwind despite strong revenue; if Chinese equity outflows continue, LatAm and African EM receiving flows may see currency appreciation pressure.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,28 +100,28 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "US-Saudi Consortium Plans $5 Billion Gulf Refinery Outside Strait of Hormuz",
-          "summary": "Per OilPrice.com, a US-Saudi consortium is developing a $5 billion refinery capacity project in the Persian Gulf region positioned outside the Hormuz Strait. The project proceeds despite stated geopolitical risks in the region.",
+          "headline": "Qatar successfully sends first LNG cargo through Strait of Hormuz after tanker attack three weeks prior",
+          "summary": "Per Bloomberg reporting via OilPrice.com, QatarEnergy resumed LNG shipments through the Strait of Hormuz after a three-week hiatus following earlier tanker strike, signaling operational normalization despite renewed US-Iran hostilities.",
+          "source": "OilPrice.com (Bloomberg)",
+          "relevance": "LNG supply continuity reduces immediate energy crisis risk; however, insurance premiums and rerouting costs remain elevated, offsetting price relief on marginal barrels.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "US backs Madagascar rare-earths project; Pentagon invests in MP Materials as Washington accelerates break from China's dominance",
+          "summary": "According to OilPrice.com, the Trump administration is advancing a new rare-earths initiative in Madagascar while the Pentagon's MP Materials deal marks the largest US government intervention in the rare-earth sector in decades, reflecting strategic supply-chain diversification.",
           "source": "OilPrice.com",
-          "relevance": "Long-term supply chain resilience play; signals confidence in regional stability despite near-term tensions; reduces choke-point dependency for downstream processing.",
+          "relevance": "US rare-earths supply-chain reshoring will take 3–5 years; near-term China remains dominant, but long-term pricing power shifts; rare-earth ETFs and US-listed miners (MP Materials) face valuation expansion if geopolitical risks sustain.",
           "signal": "bullish"
         },
         {
-          "headline": "Oil Prices Surge on Fresh Middle East Strikes and Bullish US Inventory Data",
-          "summary": "According to OilPrice.com, oil prices spiked in early Asian trade on Wednesday following renewed Middle East hostilities and a bullish US crude draw reported by the API. Price action reflects supply tightness concerns relative to demand.",
-          "source": "OilPrice.com",
-          "relevance": "Energy inflation risk accelerated; supports commodities allocation and reduces real yield expectations; pressures consumer discretionary equities.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "US Army Selects Company for Rare Earth Processing Operations at Military Base; First Domestic Facility",
-          "summary": "Per OilPrice.com, the US Army has contracted a company to build and operate rare earth processing facilities on a military base for the first time. This represents a strategic shift toward domestic rare earth supply resilience.",
-          "source": "OilPrice.com",
-          "relevance": "Reduces US dependency on Chinese rare earth supply; supports long-cycle defense and advanced manufacturing supply chains; positive for domestic specialized minerals producers.",
+          "headline": "Japan's Eneos buys rare Canadian crude cargo; NTH Cycle to list on NYSE as pure-play critical mineral refining company",
+          "summary": "OilPrice.com reports Japan's largest refiner is diversifying crude sourcing away from Middle Eastern suppliers, purchasing Canadian oil. Separately, NTH Cycle—a critical mineral refining firm—is pursuing NYSE listing via SPAC merger, per Oil & Gas 360.",
+          "source": "OilPrice.com, Oil & Gas 360",
+          "relevance": "Crude source diversification reduces Strait of Hormuz concentration risk; critical mineral refining consolidation signals industrial-policy tailwind and rising capex in processing infrastructure.",
           "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If Middle East strikes persist and oil prices remain elevated, energy-intensive industrials face margin compression; conversely, domestic rare earth capacity buildout reduces tech supply chain vulnerability over a 3-5 year horizon.",
+      "keyTakeaway": "If Hormuz transits stabilize, LNG prices may fall 5–10%, but if US-China rare-earths race intensifies, US-listed MP Materials and battery-supply-chain equities will outperform commodity pure-plays.",
       "rawCount": 10
     },
     "real-estate": {
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Mixed-Income Housing Financing Model Addresses Developer Constraints in Macroeconomic Environment",
-          "summary": "Per Bisnow, states are deploying new financing structures to enable mixed-income housing development amid a shortage of housing inventory and challenging capital formation conditions. The model aims to overcome developer reluctance under current macro conditions.",
+          "headline": "CBRE posts 16% Q2 revenue growth; infrastructure and data-center business drives 30% core EPS expansion amid 'highly volatile' geopolitical backdrop",
+          "summary": "Per Bisnow, CBRE delivered 16% sequential revenue growth in Q2 2026, with data-center and infrastructure segments delivering 30% core earnings-per-share expansion despite acknowledged global volatility. Newmark similarly reported record Q2 revenue driven by multifamily investment and coastal office leasing.",
           "source": "Bisnow",
-          "relevance": "Reflects policy recognition of housing affordability crisis; signals potential for public-private hybrid financing; supports affordable housing REITs and specialized developers.",
-          "signal": "neutral"
+          "relevance": "Data-centre and multifamily REITs trading at premium valuations; cap-rate compression ongoing; office assets in secondary markets face continued distress.",
+          "signal": "bullish"
         },
         {
-          "headline": "Mamdani Program Expands Support for NYC Small Retailers Navigating Rising Rents and Operational Costs",
-          "summary": "According to Bisnow, New York City has expanded the Mamdani program to help small retailers negotiate with landlords amid rising rents, limited availability, and elevated operating expenses. The initiative addresses commercial real estate affordability pressure on SMEs.",
+          "headline": "BXP closes in on third DC office development while shrinking overall assets; US defense sector expansion triggers multibillion-dollar contractor surge and defense real-estate boom",
+          "summary": "According to Bisnow, Boston Properties is concentrating new development in Washington D.C., executing a third trophy office project within two years while reducing asset base. Separately, US defense-sector expansion is driving the fastest contractor spending in decades, sparking defence real-estate demand.",
           "source": "Bisnow",
-          "relevance": "Suggests elevated retail sector distress in major metros; landlord concessions may compress net lease REIT valuations; supports SME retention in high-cost urban markets.",
+          "relevance": "Defense-adjacent real estate (industrial, logistics, manufacturing) likely to see cap-rate compression; trophy office in gateway markets (NYC, DC, SF) decoupling from secondary markets.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Franklin BSP Realty Trust misses Q2 2026 sales expectations; Apollo Commercial Real Estate Finance hits new 12-month low",
+          "summary": "Per stockstory.org and MarketBeat, FBRT underperformed consensus revenue expectations in Q2, while ARI—a commercial real-estate finance REIT—declined to 12-month lows, signaling sector-specific credit and valuation stress.",
+          "source": "stockstory.org, MarketBeat",
+          "relevance": "Commercial mortgage-backed securities and leveraged REIT valuations under pressure; refinancing risk for 2027–2028 maturities remains material.",
           "signal": "bearish"
-        },
-        {
-          "headline": "Lineage Cold Storage Facility in LA Boyle Heights Draws Pest Infestations; Regulatory Fine Issued",
-          "summary": "Per Bisnow, Lineage Logistics received a regulatory fine for rotting food and pest infestations at its burned cold storage warehouse in Boyle Heights, LA. The 500,000 sq ft facility's delayed remediation has created neighborhood environmental and food safety risks.",
-          "source": "Bisnow",
-          "relevance": "Highlights operational risk and liability in logistics real estate; signals potential for tightened warehouse facility standards; impacts cold chain reliability.",
-          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If urban commercial real estate distress continues and landlord concessions accelerate, net lease REIT and logistics REIT valuations face downward pressure; mixed-income financing innovation may only partially offset affordability constraints.",
+      "keyTakeaway": "If data-center capex sustains at $500B+ scale, US real-estate bifurcates: tech-enabled assets and defense-adjacent properties rally while traditional office CRE faces further capitalization compression.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,28 +160,28 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Stonepeak and CMA CGM Complete $2.4 Billion United Ports Joint Venture Investment; CMA CGM Retains 75% Ownership and Operations",
-          "summary": "Per PE Hub, Stonepeak has committed $2.4 billion for a 25% stake in United Ports while CMA CGM retains 75% ownership and full operational control. The structure combines infrastructure capital with shipping logistics integration.",
-          "source": "PE Hub",
-          "relevance": "Signals infra-sponsor appetite for ports/maritime assets; validates port operator valuations at scale; supports integrated shipping logistics consolidation thesis.",
+          "headline": "Grant Thornton Advisors to acquire CBIZ for $5 billion; CBIZ stock posts largest single-day gain in over 20 years",
+          "summary": "Per Reuters and tradingview.com, Grant Thornton announced a $5 billion cash acquisition of CBIZ to expand US accounting and advisory reach. CBIZ shareholders received a significant premium, triggering the largest single-day stock gain in two decades.",
+          "source": "Reuters, tradingview.com",
+          "relevance": "Large-cap professional-services M&A signals PE appetite for recurring-revenue platforms; accounting-firm consolidation thesis supports multiples for similar targets.",
           "signal": "bullish"
         },
         {
-          "headline": "AIP Completes Buyout of Honeywell's Intelligrated Material Handling Business",
-          "summary": "According to PE Hub, AIP (American Industrial Partners) has completed its acquisition of Honeywell Technologies' Intelligrated material handling firm. The transaction consolidates logistics automation capabilities under industrial-focused PE ownership.",
+          "headline": "AIP completes take-private of Avanos Medical at $25 per share; Vista Equity Partners acquires Quantios from Hg",
+          "summary": "Per PE Hub, AIP finalized its take-private acquisition of Avanos Medical at $25/share in cash, removing a public medical-device manufacturer from equity markets. Vista Equity simultaneously acquired software firm Quantios—previously merged by Hg and EQT in 2023—from Hg.",
           "source": "PE Hub",
-          "relevance": "Reflects PE appetite for logistics automation and supply chain infrastructure; supports valuation multiples for logistics tech and automation vendors.",
+          "relevance": "PE take-privates in healthcare-tech and software continue; recurring-revenue models command premium multiples; management rollups (like Quantios) attract tier-1 sponsor capital.",
           "signal": "bullish"
         },
         {
-          "headline": "Blackstone's $11.5 Billion PNM Acquisition Faces Regulatory Scrutiny and Ratepayer Concerns",
-          "summary": "Per KOAT, Blackstone's proposed $11.5 billion acquisition of Public Service Company of New Mexico faces regulatory review and ratepayer opposition. The transaction highlights political economy challenges in utility infrastructure privatization.",
-          "source": "KOAT",
-          "relevance": "Signals regulatory headwinds for utility privatization deals; ratepayer political risk may constrain deal pricing and earn-out structures for utility acquisition vehicles.",
-          "signal": "watch"
+          "headline": "BlackRock-backed Influence Media Partners acquires Anthem Entertainment music catalogs for over $600 million; Macquarie lines up Win Waste for sale",
+          "summary": "According to PE Hub, Influence Media—backed by BlackRock capital—closed acquisition of Anthem Entertainment's 24,000-song catalog (including Britney Spears, Justin Timberlake hits) for $600M+. Separately, Macquarie is marketing Win Waste (Wheelabrator) to strategics and infrastructure funds.",
+          "source": "PE Hub",
+          "relevance": "Music-catalog consolidation and infrastructure-asset monetization reflect PE dry powder deployment; recurring cash flows and inflation-hedge characteristics support valuations.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If utility regulatory approval standards tighten and ratepayer opposition sustains, large infrastructure PE deals face extended timelines and valuation haircuts; conversely, maritime and logistics assets continue attracting premium capital allocation.",
+      "keyTakeaway": "If PE deal-flow sustains at current pace, equity valuations for recurring-revenue targets (software, professional services, media rights) will compress on exit multiples; debt markets remain supportive for LBOs.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -190,29 +190,29 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Ecobank Group Posts Resilient H1 2026 Results Despite Challenging Pan-African Operating Environment",
-          "summary": "Per African Business, Ecobank Group, the leading pan-African banking group, reported H1 2026 financial results reflecting resilient performance amid a challenging regional operating environment. The bank sustains profitability and market position across multiple African sovereigns.",
+          "headline": "Afreximbank and Dangote partner to reshape African industrial future; Dangote Refinery breaks cycle of raw-material export and finished-goods import",
+          "summary": "Per African Business, Afreximbank and Nigeria's Dangote Group announced a strategic alliance to drive industrial transformation across the continent. Dangote Refinery represents a structural break from Africa's historical pattern of exporting commodities and importing processed goods.",
           "source": "African Business",
-          "relevance": "Validates pan-African banking consolidation thesis; signals credit quality stability in frontier markets; supports allocations to diversified African financial platforms.",
+          "relevance": "African industrial consolidation and value-add processing reduce commodity price volatility exposure; regional supply chains attract FDI; Afreximbank credit expansion supports EM capex cycles.",
           "signal": "bullish"
         },
         {
-          "headline": "Vietnam Executes Major Banking System Clean-Up; 86 Million Accounts Deleted; Regulatory Rationalization Underway",
-          "summary": "According to Asia Times, Vietnamese banks initiated deletion of over 86 million accounts (representing ~43% of total accounts) starting September last year, reducing the total portfolio to 113 million personal and 711,000 organizational accounts. This represents a systemic rationalization of dormant and fraudulent accounts.",
-          "source": "Asia Times",
-          "relevance": "Signals regulatory enforcement and financial system hygiene in Vietnam; reduces systemic credit risk but may constrain deposit growth metrics; supports banking sector stability.",
-          "signal": "neutral"
+          "headline": "Ethiopia follows China's model with textile-focused industrial parks; 85% of park production in textiles, led by $250M Hawassa Industrial Park",
+          "summary": "African Business reports Ethiopia is replicating Chinese industrial-policy architecture, concentrating textile and garment manufacturing in dedicated parks. The $250 million Hawassa Industrial Park leads production, capturing 85% of park-wide output.",
+          "source": "African Business",
+          "relevance": "East African textile and apparel exports positioned to gain from China+1 reshoring; FDI into Ethiopia and regional manufacturing hubs likely to accelerate.",
+          "signal": "bullish"
         },
         {
-          "headline": "AUDA-NEPAD Launches Five-Year Framework for Africa's Island Economies; Climate Adaptation and Trade Linkages Focus",
-          "summary": "Per African Business, the African Union Development Agency (AUDA-NEPAD) launched a five-year program targeting seven African island economies to support climate change adaptation, trade strengthening, and economic linkage development. The initiative addresses vulnerability to external shocks in isolated island markets.",
+          "headline": "Ecobank Group delivers resilient H1 2026 performance despite challenging operating environment; Madagascar faces acute power shortages but shows electrification momentum",
+          "summary": "Per African Business, pan-African lender Ecobank posted solid first-half results amid regional headwinds. Madagascar, facing severe electricity deficits, shows early signs of accelerating electrification despite infrastructure gaps.",
           "source": "African Business",
-          "relevance": "Signals multilateral commitment to climate-resilient development in vulnerable African markets; supports green bonds and climate-focused EM investing.",
+          "relevance": "African banking sector credit quality and loan growth support regional asset valuations; Madagascar's energy infrastructure capex creates long-dated power-project opportunities.",
           "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If pan-African banking consolidation continues and regulatory standards tighten, expect margin compression for smaller lenders but stable valuations for diversified regional platforms like Ecobank; Vietnam's financial system rationalization reduces tail risk for banking sector exposure.",
-      "rawCount": 10
+      "keyTakeaway": "If industrial-policy consolidation (Dangote, Hawassa, textile parks) sustains, African EM valuations decouple upward from commodity cycles; currency depreciation risk remains if capital inflows reverse.",
+      "rawCount": 5
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
@@ -220,28 +220,28 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "US and Japan Urge India to Address Export Restrictions and Farm Protectionism at WTO Trade Policy Review",
-          "summary": "Per Business Standard and The New Indian Express, the US and Japan formally raised concerns about India's farm sector export restrictions and subsidy regimes during India's WTO trade policy review. The challenge reflects disagreement over agricultural market openness commitments.",
-          "source": "Business Standard / The New Indian Express",
-          "relevance": "Signals escalating trade tension over agricultural protectionism; risk of retaliatory US/Japan tariffs targeting Indian exports; pressures Indian agriculture sector valuations.",
+          "headline": "Trump revives court-blocked reciprocal tariffs as 'Forced Labor Tariffs'; China warns of retaliation with 'all necessary measures'",
+          "summary": "Per economy.ac, the Trump administration has repackaged previously court-blocked reciprocal tariff authority under a 'forced labor' legal framework. China's foreign ministry issued symmetrical language warning of comprehensive countermeasures, per the same source.",
+          "source": "economy.ac",
+          "relevance": "Tariff escalation cycle risk elevated; US import price pressures may persist; China retaliatory tariffs on US agriculture and semiconductors likely trigger supply-chain dislocation.",
           "signal": "bearish"
         },
         {
-          "headline": "Brazil Retaliates Against US Agricultural Tariffs in Escalating Trade Clash",
-          "summary": "According to Agrolatam, Brazil has struck back against US tariffs in a trade dispute threatening global agricultural supply chains. The bilateral escalation reflects divergence on commodity market access and subsidy frameworks.",
-          "source": "Agrolatam",
-          "relevance": "Agricultural commodity price volatility likely to increase; commodity exporters face margin risk; supports long-duration hedges on agricultural inputs.",
+          "headline": "Brazil strikes back at US tariffs amid trade clash threatening global agriculture; US and Japan urge India to address farm-sector export restrictions",
+          "summary": "Agrolatam reports Brazil is imposing counter-tariffs in response to US agricultural trade measures. Concurrently, Business Standard notes the US and Japan are pressuring India to remove farm-export controls, creating multilateral trade friction.",
+          "source": "Agrolatam, Business Standard",
+          "relevance": "Agricultural commodity prices face volatility from retaliatory tariffs and export restrictions; food inflation risks re-emerge in developed economies; emerging-market farm producers face price pressure.",
           "signal": "bearish"
         },
         {
-          "headline": "President Trump Imposes New 50% Tariffs on Certain Canadian Imports",
-          "summary": "Per Wiley Rein, President Trump has announced new 50% tariffs on specified Canadian import categories. The tariff action represents escalation in US-Canada trade relations and reflects protectionist policy stance.",
-          "source": "Wiley Rein",
-          "relevance": "Direct negative for Canadian exporters and US importers of Canadian goods; supports US domestic producers but pressures cross-border supply chains and consumer prices.",
-          "signal": "bearish"
+          "headline": "China welcomes WTO ruling against Türkiye's vehicle restrictions; WTO reviews India's economic trajectory amid protectionist sentiment",
+          "summary": "Per news.cgtn.com, China welcomed a WTO dispute ruling against Turkish vehicle import restrictions. Separately, India's World reports the WTO's latest trade-policy review examines India's protectionist measures within the context of its development agenda.",
+          "source": "news.cgtn.com, India's World",
+          "relevance": "WTO enforcement of tariff rules remains selective; emerging markets' industrial-policy autonomy increasingly constrained; automotive supply chains face friction.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Trump-era tariff escalation broadens to include agricultural and resource sectors, expect stagflationary pressure on commodity-intensive EM economies and supply-chain dependent industrials globally.",
+      "keyTakeaway": "If US reciprocal tariff authority survives judicial review, global trade volumes may contract 2–4% by end-2026; if Brazil and India counter-escalate, agricultural and auto sectors face margin compression.",
       "rawCount": 5
     },
     "food-agriculture": {
@@ -250,28 +250,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "India Accelerates Summer Crop Sowing as Monsoon Rains Revive Agricultural Conditions",
-          "summary": "Per streamlinefeed.co.ke, India's summer crop sowing activity has accelerated following revival of vital monsoon rainfall. The improved precipitation patterns support near-term agricultural output recovery.",
-          "source": "streamlinefeed.co.ke",
-          "relevance": "Positive for Indian agricultural supply and commodity prices; supports rural income and food inflation trajectory in South Asia.",
+          "headline": "Bunge doubles quarterly profit as strong soy demand offsets global market turbulence; feeder cattle prices rise $5.30 as commodity markets stabilize",
+          "summary": "Per Agrolatam, Bunge achieved 100% profit growth in the latest quarter despite global volatility, driven by robust soy demand. Successful Farming reports feeder cattle futures rose $5.30 on July 28, 2026, signaling livestock input stabilization.",
+          "source": "Agrolatam, Successful Farming",
+          "relevance": "Agricultural commodity prices recovering from tariff-shock lows; livestock feed costs stabilizing; agribusiness margin expansion supports equity valuations.",
           "signal": "bullish"
         },
         {
-          "headline": "Cargill Ventures Signals Renewed Dealmaking Interest in Agrifoodtech as Market Resets",
-          "summary": "According to AgFunder News, Cargill Ventures' head stated the agrifoodtech sector is reaching 'an interesting and exciting place' where activity is expected to accelerate. The statement reflects confidence that valuation normalization is creating fresh investment opportunities.",
+          "headline": "Quercus Biosolutions closes $5M seed round targeting resistant weeds with designer proteins; livestock methane reduction generates first inset carbon credits via Athian",
+          "summary": "Per AgFunder News, Quercus Biosolutions secured $5 million seed funding to deploy protein-based herbicide platform for resistant-weed management. Simultaneously, Brazilian beef pilot (Minerva Foods) generated inset carbon credits via emissions-reduction projects, per the same source.",
           "source": "AgFunder News",
-          "relevance": "Signals bottom-fishing phase in agtech valuations; supports emergence of specialized agricultural technology platforms; indicates capital redeployment into sector consolidation.",
-          "signal": "watch"
+          "relevance": "Precision-agriculture and climate-tech capex accelerating; carbon-credit markets and ESG-linked commodity premiums create value; beef producers accessing inset markets reduce carbon-offset costs.",
+          "signal": "bullish"
         },
         {
-          "headline": "Feeder Cattle Prices Rise $5.30; Federal Reserve Survey Reports Continued Price and Input Cost Pressures",
-          "summary": "Per Successful Farming and agrinews-pubs.com, feeder cattle futures closed up $5.30 on July 28, 2026. Simultaneously, a Federal Reserve survey reports ongoing price and input cost concerns among agricultural producers.",
-          "source": "Successful Farming / agrinews-pubs.com",
-          "relevance": "Livestock cost inflation persists; pressures meat sector margins; supports animal feed and input supplier valuations.",
-          "signal": "neutral"
+          "headline": "Fed survey: crop prices and credit stay weak; big food companies filing lawsuits against public-health policy, mirroring Big Tobacco strategy",
+          "summary": "Per agronews.com, Federal Reserve regional surveys indicate crop prices remain depressed and credit availability constrained for farmers. Lighthouse Reports, via AgFunder News, documents hundreds of lawsuits filed by major food companies against government public-health regulations.",
+          "source": "agronews.com, AgFunder News (Lighthouse Reports)",
+          "relevance": "Farm credit stress persists despite commodity recovery; food-sector litigation risk may limit regulatory margins; small-farm consolidation likely continues.",
+          "signal": "bearish"
         }
       ],
-      "keyTakeaway": "If monsoon conditions stabilize and agrifoodtech M&A activity resumes, expect margin expansion for agricultural technology providers and improvement in commodity supply outlook; however, sustained input cost pressures will constrain farmer profitability.",
+      "keyTakeaway": "If soy and livestock demand sustains while tariff cycles stabilize, agribusiness consolidators (Bunge, large processors) see margin expansion; if crop prices remain suppressed, small-farm debt stress and M&A acceleration continue.",
       "rawCount": 10
     }
   }
