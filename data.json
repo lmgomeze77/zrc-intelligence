@@ -1,277 +1,79 @@
 {
-  "generated": "2026-08-01T08:17:32.440Z",
-  "date": "Saturday, 1 August 2026",
-  "globalBriefing": "US economic growth slowed to 1.5% in Q2 2026 while inflation remains sticky; the Fed held rates at 4.25–4.50% for a fifth straight meeting as long-term Treasury yields grind higher around 4.7%, signaling investor unease about stagflation and duration risk. The ECB is poised to tighten in September following upside inflation surprises, widening the policy divergence with the Fed and supporting EUR appreciation. Geopolitical tensions—Russian missile escalation in Ukraine, West Bank settler violence, and Hormuz-adjacent energy security risks—compound supply-chain uncertainty for commodity-dependent emerging markets, while strategic capital reallocation from the Gulf toward Asia and record UK equity momentum suggest selective de-risking and portfolio rebalancing underway.",
-  "marketOpen": "Watch USD weakness versus EUR if ECB hawkish signals persist and for any intraday volatility if Ukraine crop or Middle East energy developments break; monitor crude oil tail risks given Abqaiq attack concerns and ASEAN's asymmetric Hormuz exposure.",
+  "generated": "2026-08-02T08:21:08.077Z",
+  "date": "Sunday, 2 August 2026",
+  "globalBriefing": "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
+  "marketOpen": "",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "items": [
-        {
-          "headline": "US GDP growth records 1.5% in Q2 2026; inflation remains elevated as Fed holds rates steady",
-          "summary": "Per PBS, US second-quarter GDP expanded 1.5% with inflation described as stubbornly high. The Federal Reserve held rates steady for a fifth consecutive meeting, per Bisnow, while long-term Treasury yields ground higher around 4.7% amid investor concerns.",
-          "source": "PBS, Bisnow",
-          "relevance": "Sluggish growth combined with persistent inflation and higher long-term yields signals potential stagflation risk; duration exposure vulnerability for fixed-income portfolios.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Eurozone inflation surprises to upside; ECB September rate hike probability increases",
-          "summary": "Per Morningstar, Eurozone inflation printed above expectations, raising the probability of an ECB rate increase in September. According to VT Markets, the euro edges higher on these hike expectations despite the Fed holding rates.",
-          "source": "Morningstar, VT Markets",
-          "relevance": "ECB tightening cycle tilts EUR bullish and widens USD/EUR spread; European equities and credit face headwinds from higher rates.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Bank of Canada rate cut odds diminish following upside GDP surprise",
-          "summary": "Per CryptoRank, Canadian GDP data exceeded forecasts, reducing market expectations for Bank of Canada rate cuts. This stands in contrast to dovish central bank expectations earlier in the cycle.",
-          "source": "CryptoRank",
-          "relevance": "CAD strengthens on reduced easing expectations; reduces relative attractiveness of Canadian fixed-income and growth assets versus peers.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If sluggish US growth (1.5% Q2) persists while inflation remains sticky and ECB tightens, expect USD weakness versus EUR and duration-negative repricing across developed-market fixed income.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "items": [
-        {
-          "headline": "Russian ballistic missile strikes on Kyiv kill at least nine; Ukraine officials report escalation in deadly attacks",
-          "summary": "Per BBC World, a Russian strike on the Ukrainian capital killed at least nine people as Moscow escalates ballistic missile operations against Kyiv. The attack represents a continuation of an established pattern of strikes on civilian infrastructure.",
-          "source": "BBC World",
-          "relevance": "Sustained Russian targeting of urban centers raises supply-chain disruption risk for Ukrainian commodity exports and European energy markets dependent on Black Sea logistics.",
-          "signal": "watch"
-        },
-        {
-          "headline": "FIFA abandons controversial World Cup investment plan following widespread opposition",
-          "summary": "Per BBC World, FIFA president Gianni Infantino scrapped plans to monetize stakes in major competitions after opposition from national federations including the AFC. The AFC issued a statement that FIFA's future must be shaped through proper consultation, per Al Jazeera.",
-          "source": "BBC World, Al Jazeera",
-          "relevance": "Reputational reset for FIFA governance may stabilize long-term tournament revenues; marginal positive for host-nation infrastructure spending and media rights valuations.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Settler violence against Palestinians rises in West Bank as settlements expand; BBC interviews settler citing revenge justification",
-          "summary": "Per BBC World, an Israeli West Bank settler stated in an interview that attacks on Palestinians are justified as revenge, as settler violence rises amid expanding settlements and outposts. The outlet frames this as part of an escalating pattern of such incidents.",
-          "source": "BBC World",
-          "relevance": "Persistent West Bank tensions pose risks to Israeli civil stability, Palestinian economic development, and regional investment confidence; monitor for spillover into neighboring markets.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If Russian strikes on Ukrainian urban centers persist and West Bank settler violence continues unabated, expect elevated volatility in Black Sea commodity logistics and regional equities tied to Israeli-Palestinian economic recovery.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [
-        {
-          "headline": "UK FTSE 100 reaches record high in July; retail investment platforms record surge in trading activity",
-          "summary": "Per Financial Times World, the FTSE 100 hit a record high in July, prompting a flurry of trades on UK investment platforms with daily trade volumes jumping. The narrative coincides with Labour Party's new prime minister establishing policy momentum.",
-          "source": "Financial Times World",
-          "relevance": "Strong UK equity momentum and retail participation suggest domestic confidence recovery; signals potential upside for UK-listed multinationals and financials if sustained.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Japanese yen weakens to ¥163 range; experts cite structural factors underlying persistent depreciation",
-          "summary": "Per finance.biggo.com, the yen has weakened to the ¥163 per USD range, with experts attributing the decline to structural factors rather than short-term dynamics. The source recommends investors adopt strategies to address relentless depreciation.",
-          "source": "finance.biggo.com",
-          "relevance": "Sustained JPY weakness supports Japanese exporters and reduces hedging costs for FX-exposed portfolios; attractive entry point for yen-denominated assets for foreigners.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Gulf region deepens partnerships beyond oil; strategic diversification toward Asia accelerates",
-          "summary": "Per Al Majalla, Gulf states are reorienting capital flows and strategic partnerships eastward, shifting investment focus beyond traditional energy sectors. The shift reflects long-term diversification away from hydrocarbon dependence.",
-          "source": "Al Majalla",
-          "relevance": "GCC capital redirection toward Asia increases FDI competition in emerging markets; supports valuation multiples for Asia-focused infrastructure, tech, and consumer plays.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If UK equity momentum sustains and Gulf FDI shifts eastward while JPY weakness persists, expect outperformance in Asia-focused growth assets and Japanese exporters versus developed-market defensive plays.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "items": [
-        {
-          "headline": "Venture capital funding surges into US nuclear startups as AI power demand drives energy requirements",
-          "summary": "Per OilPrice.com, venture capitalists are directing significant capital into US nuclear fusion and fission startups in response to surging electricity demand from artificial intelligence infrastructure. The acceleration reflects investor conviction that nuclear energy is essential to meeting AI power needs.",
-          "source": "OilPrice.com",
-          "relevance": "Nuclear capex expansion signals long-term demand for uranium, enrichment services, and reactor components; benefits uranium equities and specialty materials suppliers.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Petrobras records Q2 2026 production of 3.34 MMboed, up 14.1% year-over-year; highest output in company history",
-          "summary": "Per World Oil via Oil & Gas 360, Petrobras increased combined oil and natural gas production to a record 3.34 million barrels of oil equivalent per day in Q2 2026, representing 14.1% growth year-over-year. The output surge reflects upstream investment and operational improvements.",
-          "source": "Oil & Gas 360",
-          "relevance": "Record Brazilian hydrocarbon output increases supply cushion for Atlantic basin crude and LNG; moderates global energy prices and improves credit metrics for Brazilian energy exporters.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Attack on Saudi Aramco's Abqaiq complex becomes most consequential energy development of current period; oil markets may be misreading risk",
-          "summary": "Per OilPrice.com, the latest reported attack on Saudi Aramco's Abqaiq oil-processing facility is described as one of the most consequential energy developments in the current period, with the implication that markets may be underpricing the risk of future supply disruption.",
-          "source": "OilPrice.com",
-          "relevance": "Abqaiq vulnerability to attack poses tail-risk for crude supply stability; supports elevated oil risk premium and hedging strategies for downstream refiners and petrochemical producers.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If nuclear VC funding sustains and Abqaiq remains a high-risk target while Petrobras output stays elevated, long-term energy security improves for AI infrastructure but crude oil volatility premium remains embedded in marginal-cost supply.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [
-        {
-          "headline": "Camden Property Trust completes $1.63 billion sale of 11-property California portfolio; clears $1.5 billion divestiture target",
-          "summary": "Per Bisnow, Camden Property Trust sold its 11-property West Coast portfolio for $1.63 billion, roughly seven months after announcing its exit from California. The transaction fulfills the REIT's stated $1.5 billion capital reallocation mandate.",
-          "source": "Bisnow",
-          "relevance": "Large-scale REIT de-risking from California signals caution on West Coast rent growth; capital redirection to markets with lower regulatory risk and stronger yield profiles.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Treasury yields grind higher around 4.7%; Wall Street questions whether Powell successor Warsh is dovish or hawkish",
-          "summary": "Per Bisnow, long-term Treasury yields remain elevated around 4.7% as markets debate the policy stance of Federal Reserve leadership. The uncertainty reflects prior FOMC decision to hold rates flat for the fifth consecutive meeting.",
-          "source": "Bisnow",
-          "relevance": "Sticky 4.7% UST yields compress real estate cap rates; headwind for value-add and development projects; favors core, income-focused properties with long-dated leases.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Avison Young's UK entities have assets frozen by bank over unpaid tax liabilities",
-          "summary": "Per Bisnow, the UK operations of real estate services firm Avison Young have had assets frozen by its bank due to unpaid tax obligations. The action reflects broader cash-flow pressures within the company.",
-          "source": "Bisnow",
-          "relevance": "Idiosyncratic credit stress at major CRE services provider; signals operational strain in the real estate advisory ecosystem; monitor for broader fee pressure and service quality degradation.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If treasury yields remain anchored above 4.5% and large REITs continue de-risking from high-cost states, expect compression in development feasibility and pivot toward income-generative core assets with structural yield support.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [
-        {
-          "headline": "Electronic Arts acquisition by PIF-led consortium expected to close August 4, 2026; $55 billion go-private transaction finalizes",
-          "summary": "Per Pocket Gamer.biz and Hypebeast, Electronic Arts' $55 billion go-private acquisition led by the Saudi Public Investment Fund is scheduled to close on August 4, 2026. The transaction represents one of the largest gaming-sector acquisitions in history.",
-          "source": "Pocket Gamer.biz, Hypebeast",
-          "relevance": "PIF gaming-sector bet signals strategic pivot toward entertainment tech; validates premium valuations for interactive media and signals Saudi capital's appetite for US consumer tech assets.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "NXP negotiating acquisition of AMBA for self-driving chip capabilities; AMBA stock rockets 18% on deal talks",
-          "summary": "Per TradingView, AMBA stock surged 18% on reports of acquisition discussions with NXP Semiconductors focused on autonomous vehicle chip technology. The deal would consolidate self-driving chip capabilities within NXP's portfolio.",
-          "source": "TradingView",
-          "relevance": "Consolidation in autonomous vehicle chipsets reduces competition; supports higher multiples for automotive semiconductor suppliers with differentiated autonomous IP.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Renk refinances €1.05 billion debt; German defense equipment manufacturer sets stage for earnings recovery",
-          "summary": "Per AD HOC NEWS, Renk announced a €1.05 billion refinancing transaction, positioning the German defense and industrial equipment manufacturer ahead of its half-year earnings report. The refinance suggests creditor and lender confidence in the firm's recovery trajectory.",
-          "source": "AD HOC NEWS",
-          "relevance": "Successful debt refinance for European defense-industrial company supports earnings stability and capital allocation flexibility amid elevated geopolitical demand.",
-          "signal": "bullish"
-        }
-      ],
-      "keyTakeaway": "If the EA/PIF close completes and NXP/AMBA consolidation proceeds, expect M&A momentum to accelerate in tech, autonomous vehicles, and defense, with strategic buyer multiples compressing independent targets.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "items": [
-        {
-          "headline": "South Korea faces AI economic test amid broader history of navigating global financial shocks; market volatility reflects AI boom sustainability concerns",
-          "summary": "Per Asia Times, South Korea must demonstrate whether its economy can navigate the challenges of an AI boom after successfully surviving the 1997 Asian financial crisis, 2008 Lehman shock, and 2013 taper tantrum. Last week's market movements reflect uncertainty about AI-driven growth sustainability.",
-          "source": "Asia Times",
-          "relevance": "South Korea's exposure to AI capex and semiconductor cycles creates earnings volatility; watch for signs of AI demand slowdown in tech exports and memory chip pricing.",
-          "signal": "watch"
-        },
-        {
-          "headline": "ECOWAS Bank finances G Farms agricultural transformation in The Gambia with $10.04 million facility",
-          "summary": "Per African Business, the ECOWAS Bank for Investment and Development signed a $10.04 million facility agreement with G Farms Limited on July 28, 2026, to support agricultural equipment acquisition and expansion in The Gambia. The financing reflects regional development bank focus on agricultural productivity.",
-          "source": "African Business",
-          "relevance": "Multilateral agricultural financing in West Africa signals sustained donor confidence in agribusiness expansion; supports commodity supply growth and food security across ECOWAS.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Hormuz crisis impacts ASEAN regional economics asymmetrically; energy security challenges and supply-chain disruption create winners and losers",
-          "summary": "Per Asia Times, the Hormuz Strait crisis affects ASEAN economies unevenly, reflecting differential exposure to oil price shocks, maritime disruption, and human costs. The article frames the crisis as both an energy shock and a human development index reflecting regional inequality.",
-          "source": "Asia Times",
-          "relevance": "Oil-import-dependent ASEAN economies face inflation and current-account pressures; energy-exporting peers benefit from elevated crude premiums; monitor FX and sovereign spread widening.",
-          "signal": "watch"
-        }
-      ],
-      "keyTakeaway": "If South Korean AI demand falters and Hormuz tensions persist, oil-importing ASEAN nations face stagflationary pressure while commodity exporters rally, widening emerging-market valuation divergence.",
-      "rawCount": 10
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 7
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "Trump administration expands tariff state; India advised to exercise patience amid global trade regime shifts",
-          "summary": "Per The Indian Express, the Trump administration is expanding the scope of its tariff regime, with commentary suggesting India should adopt a patient posture toward ongoing US trade policy changes. The framing implies tariff escalation is ongoing rather than concluded.",
-          "source": "The Indian Express",
-          "relevance": "Expanding US tariff apparatus increases export uncertainty for India and emerging markets; pressures margins for exporters without pricing power and diverts trade flows.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "WTO Director-General reports 72% of world trade remains under WTO framework despite rise of bilateral arrangements",
-          "summary": "Per Tribune Online, WTO Director-General Ngozi Okonjo-Iweala stated that 72% of global trade continues to flow under WTO multilateral rules. The figure implies a substantial but declining share, as bilateral and regional agreements gain ground.",
-          "source": "Tribune Online",
-          "relevance": "WTO rules-based trade system remains dominant but eroding; signals fragmentation risk for supply chains dependent on MFN status and non-discrimination principles.",
-          "signal": "watch"
-        },
-        {
-          "headline": "US Treasury and USTR officials press China on rare earth exports and agricultural purchases as trade boards take shape",
-          "summary": "Per Business Upturn, Trump administration officials including Treasury Secretary Bessent and USTR Greer are engaging China on rare earth trade and agricultural commodity procurement as formal trade negotiation structures are established. The approach signals transactional engagement.",
-          "source": "Business Upturn",
-          "relevance": "US-China rare earth and agricultural trade negotiations may ease supply constraints for US manufacturers; agricultural pricing pressure if China increases purchases.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If the Trump tariff regime expands while WTO coverage declines and US-China rare earths talks progress unevenly, expect supply-chain fragmentation, higher input costs for US manufacturers, and bifurcation between US-aligned and non-aligned trade blocs.",
-      "rawCount": 5
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 4
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [
-        {
-          "headline": "USDA commodity reports strengthen corn and soybean prices; improved pricing opens sales window for farmers",
-          "summary": "Per Agrolatam, USDA commodity reports lifted grain market sentiment, with stronger corn and soybean prices creating an opportunity window for farmer sales. The improved pricing environment reflects supply-demand positioning and seasonal dynamics.",
-          "source": "Agrolatam",
-          "relevance": "Higher grain prices support farmer margins and crop-linked credit availability; favorable for agricultural equipment and input suppliers and commodity-linked financials.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Ukraine crop forecast reaches 85 MMT contingent on August heat sparing late-season crops; harvest timing remains uncertain",
-          "summary": "Per ASAP Agri via Latifundist.com, Ukraine's 2026 grain crop could reach 85 million metric tons if August heat does not stress late-season planting. The forecast remains conditional on weather patterns in coming weeks.",
-          "source": "Latifundist.com",
-          "relevance": "Strong Ukrainian grain production supplies global markets; elevated weather volatility during critical maturation period creates grain price tail risk and commodity hedging demand.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Corteva raises full-year profit forecast but shares decline following revenue miss; margin expansion offsets top-line softness",
-          "summary": "Per The Mighty 790 KFGO, agricultural inputs company Corteva raised its full-year earnings guidance despite a quarterly revenue shortfall. The disconnect signals margin expansion and cost discipline offsetting sales pressure.",
-          "source": "The Mighty 790 KFGO",
-          "relevance": "Corteva margin expansion amid weaker sales suggests input pricing discipline but demand softness; watch for demand destruction signals in commercial agriculture.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If Ukrainian harvest reaches 85 MMT and US grain prices remain elevated while Corteva margins expand, global agricultural supply improves but input cost inflation persists, supporting commodity prices and pressuring end-use margins.",
+      "items": [],
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     }
   }
