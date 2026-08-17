@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-16T20:28:35.389Z",
-  "date": "Sunday, 16 August 2026",
-  "globalBriefing": "Central banks in developed markets signal September rate hikes (ECB, BoJ) while managing stagflation pressures—a policy bind that constrains growth outlooks. Geopolitically, the Strait of Hormuz remains blockaded, sustaining a $93 billion windfall for oil majors and underpinning crude valuations above $75/bbl; Trump's stated intent to claim Strait sovereignty introduces acute escalation risk. UK infrastructure costs balloon (£20bn Thames Barrier upgrade), US trade enforcement expands against tariff-evasion intermediaries, and select M&A activity shows cautious sentiment in consumer tech (Eventbrite $500M) while patent-driven healthtech (Masimo $10B bid) and cross-border China exposure (Meta unwinding Manus) show divergent sector dynamics.",
-  "marketOpen": "Watch ECB/BoJ rate-hike signals and any Trump administration clarification on Strait of Hormuz claim, as either confirmed escalation or policy walk-back will set crude oil and equity volatility parameters for the week.",
+  "generated": "2026-08-17T06:51:05.039Z",
+  "date": "Monday, 17 August 2026",
+  "globalBriefing": "Japan's GDP miss and elevated JGB yields near 3% signal BOJ policy strain amid weakening domestic demand, while Thailand's growth beat and IMF support for Egypt stabilize regional EM sentiment. Simultaneously, Hormuz tanker slowdowns and European gas inventory lows support oil and LNG valuations, though private credit stress and PayPal's $53 billion acquisition talks indicate M&A appetite remains selective. Geopolitical risks include reduced US-Korea military coordination, Iran's victory claims, and a historic DRC Ebola outbreak, all of which pose regional stability and supply-chain challenges.",
+  "marketOpen": "Monitor JGB yields near 3% and BOJ commentary for further tightening signals; track Hormuz tanker flows and crude strength; assess PayPal deal progress as barometer for large-cap tech M&A sentiment.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,29 +10,29 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "ECB and BoJ both signal September rate hikes; Euro steadies against Yen",
-          "summary": "According to CryptoRank, both the European Central Bank and Bank of Japan have signaled intent to raise rates in September 2026, supporting EUR/JPY stability. This simultaneous tightening by two major central banks reflects divergent growth-inflation dynamics across regions.",
-          "source": "CryptoRank",
-          "relevance": "Concurrent rate hikes by ECB and BoJ will compress carry trades and increase volatility in developed-market FX and duration assets.",
-          "signal": "watch"
+          "headline": "Japan GDP misses forecasts; domestic demand signals weakness amid BOJ rate-normalization debate",
+          "summary": "Per Firstpost, Japan's Q2 GDP came below consensus expectations, with consumption and capital spending declining according to Al Jazeera's reporting. This creates a policy dilemma for the BOJ as it manages potential rate normalization against slowing domestic demand.",
+          "source": "Firstpost, Al Jazeera",
+          "relevance": "Weaker Japanese growth may delay further BOJ tightening, supporting JPY carry trades and extending the duration of accommodative policy for yen-denominated assets.",
+          "signal": "bearish"
         },
         {
-          "headline": "IMF unlocks $1.8 billion for Egypt after seventh program review",
-          "summary": "Per Arab News, the International Monetary Fund has released $1.8 billion to Egypt following completion of its seventh program review. This tranche supports Egypt's macroeconomic stabilization under its IMF arrangement.",
+          "headline": "Thailand Q2 GDP beats forecast; full-year outlook raised by authorities",
+          "summary": "The Business Times reports Thailand's second-quarter GDP exceeded analyst expectations, prompting officials to revise upward the 2026 full-year growth projection. This contrasts with regional softness in Japan and reflects resilience in Southeast Asian demand.",
+          "source": "The Business Times",
+          "relevance": "Thailand's outperformance may support regional equity rotation toward Southeast Asian exporters and reduce contagion risk from broader Asia slowdown.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "IMF unlocks $1.8 billion for Egypt following seventh program review",
+          "summary": "Arab News reports the IMF has released $1.8 billion in funds to Egypt following completion of its seventh program review, signaling continued compliance with structural adjustment commitments. This tranche supports Egypt's external reserves and refinancing capacity.",
           "source": "Arab News",
-          "relevance": "IMF disbursement reduces Egypt's near-term external financing risk and may support EGP stability, relevant for EM fixed-income investors.",
+          "relevance": "Egypt's continued IMF support reduces near-term FX stress and backstops emerging market sentiment; relevant for EM bond spreads and Egyptian-exposed portfolios.",
           "signal": "neutral"
-        },
-        {
-          "headline": "Central banks face rate dilemma as inflation persists while growth slows",
-          "summary": "The Guardian reports that central banks confront conflicting signals: inflation remains elevated while economic growth decelerates, complicating policy calibration. This policy bind reflects stagflationary pressures across multiple economies.",
-          "source": "The Guardian",
-          "relevance": "If stagflation dynamics dominate into Q4 2026, central banks may pause or reverse rate hikes, creating equity volatility and bond curve inversion risks.",
-          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If ECB and BoJ execute September hikes while growth concerns mount, expect a steepening of developed-market yield curves and near-term equity headwinds across Asia-Pacific and Eurozone equities.",
-      "rawCount": 7
+      "keyTakeaway": "If BOJ delays normalization due to weak domestic demand while Thailand sustains growth, EM carry and JPY weakness may persist, benefiting unhedged EM equity exposure.",
+      "rawCount": 6
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -40,28 +40,28 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Trump envoy Kushner meets Hamas leaders in Egypt to advance Gaza peace plan",
-          "summary": "According to Al Jazeera and BBC World, Trump envoy Jared Kushner met Hamas leadership in Egypt to promote a Gaza settlement plan; diplomatic sources report Kushner has advocated Palestinian disarmament as a condition. This meeting occurs one week after Israel rejected the Trump administration's initial plan.",
-          "source": "Al Jazeera, BBC World",
-          "relevance": "Progress or stalling of Gaza negotiations directly affects oil price stability and regional geopolitical premium; mediation attempts reduce immediate escalation risk.",
+          "headline": "Trump announces reduction of US military drills with South Korea after staying out of Iran war",
+          "summary": "Per BBC World, Trump cites his 'very good relationship' with North Korea's leader in deciding to downsize joint exercises with South Korea. The decision follows Seoul's decision not to participate in recent Iran-related military operations.",
+          "source": "BBC World",
+          "relevance": "Reduced US-Korea military coordination signals potential shift in alliance commitment signaling and may embolden regional actors; material for Korea risk premium and defense contractor outlooks.",
           "signal": "watch"
         },
         {
-          "headline": "Russia sustains high casualty rate: largest Ukrainian attack of 2026 kills at least seven in Moscow strikes",
-          "summary": "BBC World reports that Russia acknowledges at least seven killed in Ukraine's largest attack of 2026, with retaliatory Russian strikes igniting fires across Kyiv overnight. Casualty and strike intensity remain elevated on both sides.",
-          "source": "BBC World",
-          "relevance": "Sustained high-intensity combat in Ukraine maintains geopolitical risk premium in energy and commodity prices; no deescalation signals present.",
-          "signal": "bearish"
+          "headline": "Iran's Parliament speaker declares military and political victory in conflict with US and Israel",
+          "summary": "Al Jazeera reports Mohammad Bagher Ghalibaf has declared both a military and political victory; this statement arrives amid ongoing regional tensions. The claim is contested by US and regional counterparts.",
+          "source": "Al Jazeera",
+          "relevance": "Rhetoric of victory may reflect negotiation positioning ahead of any ceasefire talks; relevant for oil price stability, regional insurance premiums, and defense contracting in the Gulf.",
+          "signal": "watch"
         },
         {
-          "headline": "Turkey's Erdogan expresses serious concern over Israeli attacks on Lebanon; calls for Strait of Hormuz reopening",
-          "summary": "Per Al Jazeera, Turkish President Erdogan stated that continued Israeli military operations against Lebanon represent a serious concern for Türkiye and separately called for reopening of the Strait of Hormuz amid ongoing oil market disruption. No direct Turkish military response has been announced.",
-          "source": "Al Jazeera",
-          "relevance": "Turkish diplomatic escalation regarding Lebanon increases risk of broader regional conflict; Hormuz closure remains a critical supply constraint for crude oil markets.",
+          "headline": "Ebola outbreak in DR Congo becomes deadliest in country's history; fastest-growing on record per BBC",
+          "summary": "BBC World reports the Bundibugyo Ebola outbreak in the Democratic Republic of Congo has exceeded all previous mortality records in the country and is advancing at the fastest rate on record. Health emergency response and regional containment efforts are ongoing.",
+          "source": "BBC World",
+          "relevance": "Largest DRC Ebola outbreak poses humanitarian and economic risks to Central African mining operations and supply chains; material for commodity logistics and EM health-linked credit risk.",
           "signal": "watch"
         }
       ],
-      "keyTakeaway": "If Gaza mediation stalls while Turkey escalates rhetoric on Lebanon and the Strait remains constrained, geopolitical risk premium in Brent crude will persist above $80/bbl through Q4 2026.",
+      "keyTakeaway": "If US-Korea military coordination shrinks while Iran claims victory and DRC Ebola spreads, regional stability risks rise in East Asia and Central Africa, pressuring commodity logistics and defense allocations.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,28 +70,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "JPMorgan CEO Jamie Dimon warns UK Chancellor against higher bank taxes ahead of October Budget",
-          "summary": "Financial Times reports that JPMorgan Chief Executive Jamie Dimon has lobbied UK Chancellor John Healey against increased bank taxation, part of broader financial services sector advocacy ahead of the October 2026 Budget. The firm is signaling potential capital reallocation if tax policy becomes less competitive.",
-          "source": "FT World",
-          "relevance": "UK bank tax increases may trigger FDI outflows from London financial services; affects sterling valuations and UK equity valuations in financials.",
-          "signal": "watch"
-        },
-        {
-          "headline": "US considers sanctions against Brazilian Supreme Court judge as diplomatic tensions escalate",
-          "summary": "Financial Times reports the US is evaluating sanctions on a Brazilian judge, marking a fresh diplomatic setback as leftist President Lula launches his re-election campaign. This move signals potential escalation in US-Brazil bilateral relations.",
-          "source": "FT World",
-          "relevance": "US sanctions on Brazilian judicial officials would strain bilateral relations and potentially discourage US institutional capital flows into Brazil equities.",
+          "headline": "Japan's 10-year bond yield hits three-decade high near 3% as weak yen fuels inflation concerns",
+          "summary": "Financial Times reports Japan's 10-year JGB yield has approached 3% for the first time in 30 years, driven by yen weakness and inflation concerns. This marks a structural shift in yield regimes after decades of sub-1% tenure.",
+          "source": "Financial Times",
+          "relevance": "Higher JGB yields signal BOJ tightening expectations and constrain valuation multiples for yen-carry hedged global equity; material for duration exposure and JPY FX positioning.",
           "signal": "bearish"
         },
         {
-          "headline": "Kuwait accelerates FDI drive to draw global investors",
-          "summary": "Kuwait Times reports that Kuwait is intensifying its foreign direct investment attraction efforts as part of broader regional capital mobilization strategy. The GCC state is positioning itself as an alternative investment destination in the Middle East.",
-          "source": "kuwaittimes.com",
-          "relevance": "Increased capital competition in the GCC region may support diversification away from UAE/Saudi Arabia-focused EM allocations; positive for Kuwait sovereign credit and equity markets.",
-          "signal": "neutral"
+          "headline": "Private credit market shows stress signals at 2017 levels as troubled loans swell",
+          "summary": "FT analysis documents that private credit market stress indicators have returned to levels last seen in 2017, with troubled loan delinquencies rising. This suggests credit cycle inflection within alternative asset classes.",
+          "source": "Financial Times",
+          "relevance": "Private credit stress may reduce LP dry powder for buyouts and infrastructure, tightening capital availability and increasing cost of capital for mid-market sponsors.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Higgsfield valued at $5.4 billion; Goldman Sachs and Intel back AI video start-up targeting marketing content",
+          "summary": "FT reports AI video company Higgsfield, founded by former Snap executive Alex Mashrabov, has raised capital at a $5.4 billion valuation with backing from Goldman Sachs and Intel. The firm targets generative video for business marketing applications.",
+          "source": "Financial Times",
+          "relevance": "High-valuation AI video funding signals continued institutional appetite for generative content tools; material for venture-stage tech allocation and AI infrastructure demand.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If UK bank taxation increases materially while US-Brazil relations deteriorate, expect FDI reallocation away from developed-market financial hubs and LatAm toward GCC and Asia-Pacific alternatives.",
+      "keyTakeaway": "If JGB yields remain elevated near 3% and private credit stress persists while AI video attracts mega-capital, global capital may rotate from traditional PE/credit toward AI-linked venture and public markets.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -100,29 +100,29 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Oil majors capture $93 billion windfall from Iran-linked Strait of Hormuz closure",
-          "summary": "OilPrice.com reports that oil majors have realized approximately $93 billion in cumulative windfall profits as crude prices have surged following near-total closure of the Strait of Hormuz, a critical Asia-Europe trade corridor. The blockade reflects broader Iran-related geopolitical disruption.",
+          "headline": "Hormuz tanker traffic slows further; Brent crude trades at $88.62/barrel amid supply pressure",
+          "summary": "OilPrice.com reports tanker traffic through the Strait of Hormuz has declined further, maintaining upward pressure on crude prices, with Brent trading at $88.62 per barrel at time of reporting. Continued strait congestion supports oil valuations.",
           "source": "OilPrice.com",
-          "relevance": "Sustained Strait closure supports elevated Brent crude valuations above long-run equilibrium; extends margin expansion for integrated and upstream operators through 2026-2027.",
+          "relevance": "Persistent Hormuz supply constraints sustain oil premium; material for energy inflation, refined product margins, and shipping cost exposure across trading desks.",
           "signal": "bullish"
         },
         {
-          "headline": "AI energy demand strains fossil fuel supply chain; hyperscaler data center buildout outpaces energy infrastructure",
-          "summary": "OilPrice.com reports that artificial intelligence's energy footprint is accelerating fossil fuel demand, with hyperscale data center construction outpacing energy industry capacity additions. Industry commentary indicates power supply remains a critical constraint.",
+          "headline": "Europe's gas storage inventory at lowest levels with heating season less than three months away",
+          "summary": "OilPrice.com reports European natural gas storage levels are at the lowest on record with under three months until winter heating demand peaks. This heightens seasonal vulnerability and price risk ahead of Q4 2026.",
           "source": "OilPrice.com",
-          "relevance": "Structural energy supply deficit from AI-driven demand underpins long-duration bullish case for oil, natural gas, and power utilities through 2027-2028.",
-          "signal": "bullish"
+          "relevance": "Low European gas inventories ahead of heating season increase LNG import demand and may elevate Henry Hub-TTF spreads; material for energy security and utility margin forecasts.",
+          "signal": "bearish"
         },
         {
-          "headline": "US nuclear fuel supply: only 7% of American reactor fuel sourced domestically; Trump administration pushes homegrown expansion",
-          "summary": "OilPrice.com reports that the United States produces only 7% of its own nuclear fuel domestically despite being the world's largest nuclear energy producer; the Trump administration is advocating rapid domestic nuclear capacity expansion. Import dependence remains acute.",
-          "source": "OilPrice.com",
-          "relevance": "Structural US nuclear fuel import dependence creates vulnerabilities; domestic expansion policies would support uranium mining equities and long-dated nuclear fuel service contracts.",
-          "signal": "watch"
+          "headline": "India allows delayed renewable solar projects to pay grid access fees instead of losing connections",
+          "summary": "Reuters reports that India's Central Electricity Authority has granted solar developers missing project deadlines the option to pay fees to retain grid access rather than face disconnection. This flexibility eases compliance pressure on renewable deployment.",
+          "source": "Reuters via OilPrice.com",
+          "relevance": "Softer renewable project enforcement may slow grid modernization pace but reduces capex defaults; material for Indian renewable bonds and utility dispatch expectations.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If Strait of Hormuz closure persists while AI-driven energy demand continues accelerating, Brent crude will likely remain above $75/bbl and uranium spot prices will benefit from US nuclear renaissance policy.",
-      "rawCount": 6
+      "keyTakeaway": "If Hormuz remains constrained, European gas inventories stay depressed, and India's renewable timelines slip, oil and LNG markets remain price-supported while global energy transition timelines extend.",
+      "rawCount": 5
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
@@ -130,28 +130,28 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "London's Thames Barrier flood defence upgrade could cost £20 billion and require replacement sooner than projected due to extreme weather",
-          "summary": "Financial Times reports that senior UK government officials warn the Thames Barrier flood defence system may require replacement far sooner than originally planned, with upgrade costs potentially reaching £20 billion, driven by accelerating extreme weather events. Cost implications exceed previous infrastructure budgets.",
-          "source": "FT World",
-          "relevance": "Unexpected £20 billion capex burden on UK infrastructure spending may reduce other investment allocations and affect gilt issuance; negative for London commercial real estate valuations in flood-risk zones.",
-          "signal": "bearish"
+          "headline": "Liverpool property prices rise 83% near Anfield, outpacing London price growth in 2026",
+          "summary": "Bisnow reports Liverpool real estate has appreciated 83% in the Anfield area, exceeding property price gains in London for the reporting period. This signals geographic rotation in UK residential demand away from capital-intensive zones.",
+          "source": "Bisnow",
+          "relevance": "Outsized Liverpool appreciation suggests regional repricing and potential yield-chasing into secondary UK cities; material for UK regional REIT exposure and residential developer thesis.",
+          "signal": "bullish"
         },
         {
-          "headline": "US Department of Transportation announces $47 million investment to support public-private partnership (P3) engagement",
-          "summary": "USDOT announces nearly $47 million in funding to advance public-private partnership activity for infrastructure development, per JD Supra. This reflects federal prioritization of private capital mobilization for transportation infrastructure.",
-          "source": "JD Supra",
-          "relevance": "US federal support for infrastructure P3 structures creates demand for institutional capital in toll roads, transit, and logistics infrastructure; supports real asset valuations.",
-          "signal": "neutral"
+          "headline": "Copenhagen Infrastructure Partners closes $3 billion Growth Markets Fund II, tripling prior fund size",
+          "summary": "Pulse 2.0 reports CIP has closed its Growth Markets Fund II at $3 billion, representing a threefold increase over the prior fund. This signals strong LP appetite for emerging-market infrastructure and energy transition investment.",
+          "source": "Pulse 2.0",
+          "relevance": "Expanded infrastructure fund deployment supports grid, renewable, and transportation capex in growth markets; material for EM infrastructure bonds and utility equity performance.",
+          "signal": "bullish"
         },
         {
-          "headline": "Grid investment surge of 2026 reshapes utility operator evaluation criteria",
-          "summary": "MarketScale reports that accelerating grid infrastructure investment in 2026 is fundamentally altering how utility operators must evaluate operational and strategic priorities. The investment cycle is being driven by energy transition and data center power demand.",
+          "headline": "Grid investment surge of 2026 reshapes utility operator evaluation criteria and capital deployment",
+          "summary": "MarketScale reports that 2026's unprecedented grid infrastructure investment is shifting how utility operators assess capital priorities and operational metrics. Modernization investment is accelerating across transmission and distribution.",
           "source": "MarketScale",
-          "relevance": "Elevated utility capex cycles support long-duration cashflows for utility equities and infrastructure debt; positive for regulated utility valuations.",
-          "signal": "neutral"
+          "relevance": "Elevated grid capex commitments support utility dividend sustainability and warrant focus on balance-sheet capacity; material for utility equity valuations and infrastructure bond demand.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If UK flood defence costs materialize as £20 billion capex while US grid investments accelerate, expect divergent performance between UK logistics/commercial real estate (negative) and US utility infrastructure equity (positive).",
+      "keyTakeaway": "If regional UK property repricing, mega-infrastructure fund closes, and grid capex accelerates, utility and secondary-city REIT valuations may re-rate upward as capital availability and project visibility improve.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -160,29 +160,29 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
-          "summary": "TicketNews reports that Eventbrite shareholders have voted to approve a $500 million sale to Italian software company Bending Spoons, with regulatory clearance still required. Transaction values Eventbrite at a discount to historical valuations.",
-          "source": "TicketNews",
-          "relevance": "Eventbrite sale signals continued consolidation in digital ticketing; lower valuation multiples suggest cautious M&A sentiment in consumer software.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Masimo advances toward $10 billion buyout after winning blood oxygen patent case against Apple",
-          "summary": "Stocktwits reports that medical device company Masimo is positioned for a $10 billion acquisition following a patent litigation victory against Apple over blood oxygen sensing technology. The patent win enhances Masimo's valuation and M&A attractiveness.",
-          "source": "Stocktwits",
-          "relevance": "Patent-driven valuation uplift in medical devices signals potential consolidation wave in healthtech; M&A multiples may expand in IP-rich sub-sectors.",
+          "headline": "PayPal in $53 billion buyout talks with Stripe and Advent; initial offer reportedly rebuffed",
+          "summary": "Eastern Herald reports PayPal is in acquisition discussions with Stripe and Advent Capital at an estimated $53 billion enterprise value; the initial offer has been rejected. Negotiations remain active between parties.",
+          "source": "Eastern Herald",
+          "relevance": "Large fintech buyout talks signal continued consolidation appetite despite macro uncertainty; material for PayPal equity volatility and fintech M&A multiples.",
           "signal": "watch"
         },
         {
-          "headline": "Meta unwinds Manus acquisition as China lifts travel ban on founders",
-          "summary": "Seeking Alpha reports via Financial Times that Meta is reversing its acquisition of Manus (Chinese AR/VR startup) concurrently with China's lifting of international travel restrictions on the founders, per Financial Times reporting. Deal unwinding reflects China-US tech sector tensions and regulatory shifts.",
-          "source": "Seeking Alpha / FT World",
-          "relevance": "Meta's Manus divestiture signals retrenchment from China-exposed tech M&A; affects sentiment on US tech acquirers' China strategy and VC exit multiples.",
-          "signal": "bearish"
+          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
+          "summary": "TicketNews reports Eventbrite shareholders have approved a $500 million acquisition by Bending Spoons, with final regulatory clearance still outstanding. The deal values the ticketing platform at $500 million in equity consideration.",
+          "source": "TicketNews",
+          "relevance": "Eventbrite exit at $500 million signals SaaS consolidation valuations in the mid-market and reduced IPO urgency for platform businesses.",
+          "signal": "neutral"
+        },
+        {
+          "headline": "Workday buyout discussions could shift Wall Street perception of AI threat to enterprise software",
+          "summary": "SekBerNews reports that potential Workday acquisition talks may alter investor sentiment regarding AI displacement risk in enterprise software. Any deal would represent significant valuation reset in the HCM software category.",
+          "source": "SekBerNews",
+          "relevance": "Workday M&A activity signals continued large-cap software buyout demand and may reset AI-disruption risk premiums across HCM and ERP vendors.",
+          "signal": "watch"
         }
       ],
-      "keyTakeaway": "If regulatory approval for Eventbrite sale completes while Meta continues exiting China-exposed assets, expect lower tech M&A multiples and cautious institutional capital deployment into cross-border growth deals through late 2026.",
-      "rawCount": 5
+      "keyTakeaway": "If PayPal deal closes, Eventbrite regulatory clears, and Workday auction proceeds, mid-to-large-cap SaaS consolidation multiples may compress while private equity dry powder redeploys toward takeout targets.",
+      "rawCount": 7
     },
     "emerging-markets": {
       "label": "Emerging Markets",
@@ -190,29 +190,29 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Former Chinese Premier Zhu Rongji dies at 97; architect of China's opening-to-the-world strategy",
-          "summary": "Asia Times reports the death of Zhu Rongji, age 97, who served as Chinese Premier and spearheaded market reforms and China's integration into global trade during the 1990s-2000s. His legacy includes SOE restructuring and WTO accession facilitation.",
-          "source": "Asia Times",
-          "relevance": "Zhu's passing marks symbolic endpoint of post-1978 reform era; has no immediate market impact but underscores historical shift from market-liberalization consensus in Beijing policy circles.",
-          "signal": "neutral"
-        },
-        {
-          "headline": "Trump states intent to declare Strait of Hormuz a US territory",
-          "summary": "Asia Times reports that President Trump announced Friday his intention to declare the Strait of Hormuz—currently blockaded by Iran for much of the past five months—a US territory. The statement triggered international alarm and contradicts established maritime law.",
-          "source": "Asia Times",
-          "relevance": "If Trump administration pursues Strait territorial claims, expect acute escalation of US-Iran tensions, sustained oil price volatility above $75/bbl, and potential broader Middle East geopolitical risk premium.",
-          "signal": "watch"
-        },
-        {
-          "headline": "Israel's economy rebounds after Iran war-driven slump; macroeconomic recovery underway",
-          "summary": "NDTV Profit reports that the Israeli economy has rebounded following a contractionary period triggered by Iran-related military conflict. Economic recovery reflects resumption of normal activity and investor confidence stabilization.",
-          "source": "NDTV Profit",
-          "relevance": "Israeli economic recovery supports shekel stability and EM equity valuations for Israel-exposed allocations; signals regional conflict intensity may not sustain contraction indefinitely.",
+          "headline": "Asset recycling framework offers Africa potential capital unlock amid constrained public finances and high borrowing costs",
+          "summary": "African Business reports African governments are exploring asset recycling strategies to free trapped capital from existing infrastructure while managing elevated debt service burdens. The model redirects cashflows to new capex without expanding public debt.",
+          "source": "African Business",
+          "relevance": "African asset recycling could ease sovereign fiscal stress and attract infrastructure capital; material for EM sovereign spreads and infrastructure fund deployment in Sub-Saharan Africa.",
           "signal": "bullish"
+        },
+        {
+          "headline": "China observes deeper American geopolitical current beyond Trump personality; long-term structural shifts shape Beijing's strategy",
+          "summary": "Asia Times reports Beijing assesses Trump's 2016 election and 2024 return as reflecting deeper American political currents rather than electoral accidents, suggesting structural China-US competition. This shapes Chinese medium-term strategic planning.",
+          "source": "Asia Times",
+          "relevance": "If China views US policy shifts as structural rather than cyclical, expect sustained tech decoupling, supply-chain reshoring, and elevated US-China strategic competition; material for tech sanctions risk and EM trade realignment.",
+          "signal": "bearish"
+        },
+        {
+          "headline": "Former Chinese Premier Zhu Rongji dies at 97; architect of China's WTO entry and market-opening reform",
+          "summary": "Asia Times reports Zhu Rongji, who died August 12 at age 97, served as the premier who opened China to the world and implemented foundational market reforms. His legacy shaped modern Asia's trade and investment architecture.",
+          "source": "Asia Times",
+          "relevance": "Zhu's death marks symbolic transition away from market-opening consensus in China; relevant for historical context on EM integrations and potential policy inflection in Chinese approach to globalization.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If Trump's Strait of Hormuz claim gains diplomatic traction while Israeli economy recovers, expect divergent EM performance: oil-exporting emerging markets benefit from supply constraints while Israel-specific assets outperform broader Levantine exposure.",
-      "rawCount": 3
+      "keyTakeaway": "If African asset recycling gains traction, China pursues structural decoupling, and reform-era leadership transitions occur, EM capital flows may reallocate toward Sub-Saharan infrastructure while China-linked EM exposure faces headwinds.",
+      "rawCount": 5
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
@@ -220,14 +220,21 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "White House accuses over 40 countries of enabling China to evade US tariffs",
-          "summary": "The Cradle reports that the White House has alleged that more than 40 countries are facilitating Chinese circumvention of US tariffs, suggesting transhipment and tariff-arbitrage behavior. No specific remedial measures were announced alongside the accusation.",
-          "source": "thecradle.co",
-          "relevance": "US tariff enforcement expansion against third-party countries will disrupt supply chains and increase compliance costs; signals escalating protectionism into late 2026.",
+          "headline": "White House accuses over 40 countries of assisting China in tariff evasion; escalates trade enforcement rhetoric",
+          "summary": "TheCradle reports the White House has publicly accused more than 40 nations of helping China circumvent US tariffs through transshipment and origin-laundering schemes. The administration signals intensified enforcement against tariff-avoidance networks.",
+          "source": "TheCradle",
+          "relevance": "Expanded US tariff enforcement against third-country transshipment hubs may disrupt supply chains through Vietnam, Mexico, and Southeast Asia; material for EM export risk and multinational supply-chain repositioning costs.",
           "signal": "bearish"
+        },
+        {
+          "headline": "EU-China Trade and Investment Consultations ongoing; formal dialogue framework documented",
+          "summary": "OFCS Report documents EU-China trade and investment consultations are underway, indicating structured dialogue channels remain active. No resolution announced; bilateral engagement continues on trade frictions.",
+          "source": "OFCS.Report",
+          "relevance": "Maintained EU-China consultation channels suggest scope for negotiated trade resolution; relevant for European export exposure to China and potential tariff rollback scenarios.",
+          "signal": "neutral"
         }
       ],
-      "keyTakeaway": "If the White House pursues countervailing measures against tariff-evasion jurisdictions, expect widening supply chain disruption costs and potential retaliatory tariffs from China, pressuring multinational corporate margins through Q4 2026.",
+      "keyTakeaway": "If US tariff enforcement on third-country China evasion accelerates while EU-China talks stall, supply-chain costs rise and EM transshipment hubs face margin compression; European exporters gain relative positioning.",
       "rawCount": 2
     },
     "food-agriculture": {
@@ -236,15 +243,29 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Indonesia anchors 2027 state budget on food and energy self-reliance priorities",
-          "summary": "ANTARA News reports that Indonesia's 2027 state budget framework prioritizes food security and energy independence as strategic objectives, reflecting policy focus on domestic supply resilience. Budget allocation reflects commodity price volatility exposure.",
-          "source": "ANTARA News",
-          "relevance": "Indonesian budget shift toward food self-reliance signals reduced agricultural import exposure and potential policy support for domestic grain and plantation sectors.",
+          "headline": "Global farm productivity gains and inventory strength position food system to withstand 'super' El Niño weather risk",
+          "summary": "Japan Today reports decades of agricultural productivity improvements and elevated grain inventories have strengthened global food system resilience against severe El Niño weather events. Buffer stocks remain adequate for seasonal demand absorption.",
+          "source": "Japan Today",
+          "relevance": "Strong global farm inventories reduce near-term food inflation risk even if El Niño disrupts seasonal yields; material for food CPI forecasts and agricultural commodity volatility expectations.",
+          "signal": "bullish"
+        },
+        {
+          "headline": "Indonesia anchors 2027 state budget on food and energy self-reliance; domestic production prioritized",
+          "summary": "Antara News reports Indonesia's 2027 budget framework places food and energy security as core pillars, emphasizing domestic production over imports. Policy signals shift toward supply-side resilience and reduced import dependency.",
+          "source": "Antara News",
+          "relevance": "Indonesian food self-reliance focus may reduce regional import demand and support domestic agricultural output; material for agricultural commodity export demand from EM producers.",
           "signal": "neutral"
+        },
+        {
+          "headline": "AI adoption in Nigerian agriculture signals emerging-market agricultural productivity shift; technology deployment accelerating",
+          "summary": "BusinessAmLive reports Nigerian agricultural sector is adopting AI tools for productivity and yield optimization, signaling technology-driven modernization in Sub-Saharan farming. Adoption rates suggest structural productivity gains.",
+          "source": "BusinessAmLive",
+          "relevance": "EM agricultural AI adoption may unlock productivity gains and reduce structural food inflation in Sub-Saharan Africa; material for Nigerian agribusiness valuations and regional food security.",
+          "signal": "bullish"
         }
       ],
-      "keyTakeaway": "If El Niño conditions persist while Indonesia tightens food self-reliance policies, expect upward pressure on regional grain prices and support for Southeast Asian agricultural equities.",
-      "rawCount": 5
+      "keyTakeaway": "If global farm inventories remain strong, Indonesia reduces import reliance, and EM AI adoption accelerates, food commodity price pressure may ease while African agritech investment opportunities expand.",
+      "rawCount": 6
     }
   }
 }
