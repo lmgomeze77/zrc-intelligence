@@ -1,8 +1,14 @@
-// generate-briefing.js v3
+// generate-briefing.js v4
 // 9 intelligence desks including dedicated MACRO & CENTRAL BANKS desk.
 // Each desk is a clean, non-overlapping data source — no cross-desk duplication.
 // UPDATED MAY 2026: Added macro/central-bank desk; all feeds verified.
+// UPDATED AUG 2026 (v4): Executive intelligence layer — market regime, risk index,
+//   region signals, executive pulse, opportunity radar, house view, catalyst
+//   calendar — plus impact / conviction / horizon on every desk item. Each of
+//   those fields has a deterministic fallback derived from the desks, and the
+//   previous data.json is fed back in so house levels move with continuity.
 
+const fs = require("fs");
 const Parser = require("rss-parser");
 const parser = new Parser({
   timeout: 15000,
@@ -184,12 +190,174 @@ async function fetchCategory(categoryId) {
   return unique.slice(0, 10);
 }
 
+// ─── INTELLIGENCE LAYER VOCABULARIES ──────────────────────────────────────
+// Everything the executive layer can emit is constrained to a closed vocabulary
+// so the front-end never has to guess, and so day-over-day comparisons are real.
+
+const SCHEMA_VERSION = 2;
+
+const SIGNALS = ["bullish", "bearish", "neutral", "watch"];
+const CONVICTIONS = ["low", "medium", "high"];
+const HORIZONS = ["0-1M", "1-3M", "3-6M", "6-12M", "12M+"];
+
+const REGIME_TONES = ["CONSTRUCTIVE", "BALANCED", "CAUTIOUS"];
+const REGION_VIEWS = ["POSITIVE", "CONSTRUCTIVE", "NEUTRAL", "MIXED", "CAUTIOUS", "NEGATIVE"];
+const PRIVATE_MARKET_VIEWS = ["ATTRACTIVE", "SELECTIVE", "NEUTRAL", "TIGHT", "CHALLENGING"];
+const HOUSE_VIEWS = ["CONSTRUCTIVE", "SELECTIVE", "NEUTRAL", "CAUTIOUS", "DEFENSIVE"];
+const IMPACT_LEVELS = ["HIGH", "MEDIUM", "LOW"];
+
+// Fixed House View book. Same labels every day → the "change" line is meaningful.
+const HOUSE_VIEW_THEMES = [
+  "Spain & Madrid Real Estate",
+  "European Credit & Financing",
+  "Private Capital Deployment",
+  "Energy & Commodities",
+  "Emerging Markets",
+  "Global Risk Appetite"
+];
+
+// Signal → directional weight used by every derived metric.
+const SIGNAL_DIRECTION = { bullish: 1, bearish: -1, watch: 0, neutral: 0 };
+// Signal → risk contribution (bearish adds more risk than a bullish print removes).
+const SIGNAL_RISK_WEIGHT = { bullish: -1, bearish: 1.2, watch: 0.6, neutral: 0 };
+
+function pick(value, allowed, fallback) {
+  const v = String(value == null ? "" : value).trim().toUpperCase();
+  return allowed.includes(v) ? v : fallback;
+}
+
+function normalizeSignal(signal) {
+  const v = String(signal == null ? "" : signal).trim().toLowerCase();
+  return SIGNALS.includes(v) ? v : "neutral";
+}
+
+function normalizeConviction(conviction, impact) {
+  const v = String(conviction == null ? "" : conviction).trim().toLowerCase();
+  if (CONVICTIONS.includes(v)) return v;
+  if (impact >= 5) return "high";
+  if (impact >= 3) return "medium";
+  return "low";
+}
+
+function normalizeHorizon(horizon) {
+  const v = String(horizon == null ? "" : horizon).trim().toUpperCase().replace(/\s+/g, "");
+  return HORIZONS.includes(v) ? v : "1-3M";
+}
+
+function normalizeImpact(impact, signal) {
+  const n = Math.round(Number(impact));
+  if (Number.isFinite(n) && n >= 1 && n <= 5) return n;
+  // No usable value from the model → infer a conservative default from the signal.
+  return normalizeSignal(signal) === "neutral" ? 2 : 3;
+}
+
+function clamp(n, min, max) {
+  return Math.min(max, Math.max(min, n));
+}
+
 // ─── AI SYNTHESIS ─────────────────────────────────────────────────────────
 
 const MAX_RETRIES = 3;
 
-async function synthesizeWithAI(allCategoryData) {
-  const prompt = buildPrompt(allCategoryData);
+const SYSTEM_PROMPT = `You are the chief intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm in Madrid. Your briefings are read by family offices, institutional investors, and senior advisors.
+
+You produce TWO layers every morning.
+
+LEVEL 1 — EXECUTIVE INTELLIGENCE (house level, read in 60 seconds):
+market regime, risk index, region signals, executive pulse, opportunity radar, house view, catalyst calendar.
+
+LEVEL 2 — DESK INTELLIGENCE:
+for each desk, the 3 most important items, each with analysis and full classification.
+
+Level 1 must be DERIVED FROM Level 2. Never assert at house level something that no desk item supports.
+
+NEUTRALITY RULES (strict):
+1. ATTRIBUTE EVERY CLAIM. Never state contested facts as settled. Name the source: "according to Reuters," "per ECB statement," "IMF estimates."
+2. QUANTIFY, DON'T CHARACTERIZE. Use data: "third consecutive week" not "surging." "14 basis points" not "sharp rise."
+3. USE NEUTRAL VERBS: reports, announces, records, estimates, confirms, publishes, issues. Never: violates, escalates, sparks, slams, blasts.
+4. SYMMETRIC FRAMING. Apply identical grammatical structure and verb register to all parties in any dispute.
+5. NO EDITORIALIZING. Never imply causality unless sourced. Never imply who is right or wrong.
+6. LABEL DISPUTED TERMS. Qualify contested terminology appropriately.
+7. STRIP SOURCE BIAS. Extract only factual claims; discard editorial framing from source material.
+
+MACRO DESK SPECIAL RULES:
+- For the "macro" desk, prioritize: central bank rate decisions, CPI/PPI/PCE prints, GDP data, unemployment figures, yield curve moves, and major FX developments.
+- Quantify: always include the actual number (e.g. "Fed holds at 4.25-4.50%", "Eurozone CPI at 2.2% YoY").
+- Do NOT include geopolitical items in the macro desk — that is a separate desk.
+
+CLASSIFICATION SCALES (apply identically every day — these are the spine of the product):
+- signal: "bullish" | "bearish" | "neutral" | "watch". The direction of the implication for capital allocation, NOT sentiment about the event. "watch" = direction unresolved but the item is positioned to matter.
+- impact: integer 1-5. 1 = marginal, single-name relevance. 3 = changes positioning within one sector or one region. 5 = repricing event across asset classes.
+- conviction: "low" | "medium" | "high". Your confidence in the READ, given source quality and corroboration. A single unconfirmed report is "low" regardless of how large the story is.
+- horizon: "0-1M" | "1-3M" | "3-6M" | "6-12M" | "12M+". When the implication is expected to be expressed in prices or capital flows.
+Reserve impact 5 for genuine cross-asset events. If everything is a 4 or 5, the scale is useless.
+
+RISK INDEX (integer 0-100): the ZRC read on aggregate capital-markets risk.
+0-30 benign · 31-50 normal · 51-70 elevated · 71-100 stressed.
+You are given yesterday's value. Move it by more than 12 points ONLY if today's headlines contain an explicit, quantified shock. Absent new information, keep it within a few points of yesterday.
+
+REGION SIGNALS — choose exactly one term from each list:
+- europe / spain: POSITIVE | CONSTRUCTIVE | NEUTRAL | MIXED | CAUTIOUS | NEGATIVE
+- privateMarkets: ATTRACTIVE | SELECTIVE | NEUTRAL | TIGHT | CHALLENGING
+
+MARKET REGIME TONE — exactly one of: CONSTRUCTIVE | BALANCED | CAUTIOUS.
+
+EXECUTIVE PULSE — exactly 3 entries, the three things a principal must know before the working day. Each: a 1-3 word "title" (the theme, not the desk name), "text" of at most 240 characters written as analysis rather than headline restatement, and a "signal". Every pulse entry must trace back to an item you included in a desk.
+
+OPPORTUNITY RADAR — 4 to 6 themes where capital allocation is actually implicated today. "theme" is a capital-allocation theme, not a desk label (e.g. "European bank credit", "LNG shipping capacity"). "direction": "up" | "down" | "flat". "conviction": "HIGH" | "MEDIUM" | "SELECTIVE". "relevance": integer 1-5 for relevance to ZRC's mandate (Spain and Europe, real assets, private capital, cross-border flows).
+
+HOUSE VIEW — return one entry for EACH of these six labels, in this order, every day:
+${HOUSE_VIEW_THEMES.map(t => `  - ${t}`).join("\n")}
+Each entry: "label" exactly as written above, "view" one of CONSTRUCTIVE | SELECTIVE | NEUTRAL | CAUTIOUS | DEFENSIVE, "signal" one of bullish | bearish | neutral | watch, and "change": one sentence stating what moved the view since the previous briefing, or explicitly stating that the view is unchanged and why. You are given yesterday's house view — do not flip a view without evidence in today's headlines.
+
+CATALYST CALENDAR — up to 6 dated events in the NEXT 72 HOURS that could move prices.
+Include an event ONLY if today's headlines reference it, or if it is a scheduled release/meeting you are confident about (central bank decisions, CPI/GDP prints, elections, OPEC meetings, index reviews, major earnings).
+NEVER invent an event, a date, or a time. If timing is uncertain, use "TBC" for the time rather than guessing.
+"time": short mono-style string, CET (e.g. "TUE 11:00 CET", "WED TBC"). "title": the event. "impact": "HIGH" | "MEDIUM" | "LOW".
+If nothing qualifies, return an empty array — an empty calendar is better than a fabricated one.
+
+CRITICAL: Return ONLY valid JSON. No markdown. No backticks. No preamble. Keep summaries to 2 sentences max.
+
+Return this exact structure:
+{
+  "riskIndex": 0-100,
+  "marketRegime": { "tone": "CONSTRUCTIVE" | "BALANCED" | "CAUTIOUS", "rationale": "One sentence, data-first." },
+  "regionSignals": { "europe": "...", "spain": "...", "privateMarkets": "..." },
+  "executivePulse": [
+    { "title": "Rates", "text": "...", "signal": "bullish" }
+  ],
+  "opportunityRadar": [
+    { "theme": "...", "direction": "up", "conviction": "HIGH", "relevance": 4 }
+  ],
+  "houseView": [
+    { "label": "Spain & Madrid Real Estate", "view": "CONSTRUCTIVE", "signal": "bullish", "change": "..." }
+  ],
+  "catalysts": [
+    { "time": "TUE 11:00 CET", "title": "Eurozone CPI", "impact": "HIGH" }
+  ],
+  "categories": {
+    "category_id": {
+      "items": [
+        {
+          "headline": "Precise headline with attributed data point",
+          "summary": "1-2 sentence institutional analysis. Numbers and source attribution. No editorializing.",
+          "source": "Original source name",
+          "relevance": "One sentence: direct investment implication.",
+          "signal": "bullish" | "bearish" | "neutral" | "watch",
+          "impact": 1-5,
+          "conviction": "low" | "medium" | "high",
+          "horizon": "0-1M" | "1-3M" | "3-6M" | "6-12M" | "12M+"
+        }
+      ],
+      "keyTakeaway": "One sentence conditional: if X holds, expect Y for Z asset class"
+    }
+  },
+  "globalBriefing": "3 sentence top-level synthesis. Cross-desk connections. Data-first. No drama.",
+  "marketOpen": "One sentence: primary risk or catalyst to watch at market open today."
+}`;
+
+async function synthesizeWithAI(allCategoryData, previous) {
+  const prompt = buildPrompt(allCategoryData, previous);
 
   for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
     try {
@@ -204,46 +372,8 @@ async function synthesizeWithAI(allCategoryData) {
         },
         body: JSON.stringify({
           model: "claude-haiku-4-5-20251001",
-          max_tokens: 16000,
-          system: `You are the chief intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm in Madrid. Your briefings are read by family offices, institutional investors, and senior advisors.
-
-Your task: Given raw RSS headlines grouped by intelligence desk, select the 3 most important items per desk, write concise analytical summaries, classify investment signals, and provide a key takeaway per desk.
-
-NEUTRALITY RULES (strict):
-1. ATTRIBUTE EVERY CLAIM. Never state contested facts as settled. Name the source: "according to Reuters," "per ECB statement," "IMF estimates."
-2. QUANTIFY, DON'T CHARACTERIZE. Use data: "third consecutive week" not "surging." "14 basis points" not "sharp rise."
-3. USE NEUTRAL VERBS: reports, announces, records, estimates, confirms, publishes, issues. Never: violates, escalates, sparks, slams, blasts.
-4. SYMMETRIC FRAMING. Apply identical grammatical structure and verb register to all parties in any dispute.
-5. NO EDITORIALIZING. Never imply causality unless sourced. Never imply who is right or wrong.
-6. LABEL DISPUTED TERMS. Qualify contested terminology appropriately.
-7. STRIP SOURCE BIAS. Extract only factual claims; discard editorial framing from source material.
-
-MACRO DESK SPECIAL RULES:
-- For the "macro" category, prioritize: central bank rate decisions, CPI/PPI/PCE prints, GDP data, unemployment figures, yield curve moves, and major FX developments.
-- Quantify: always include the actual number (e.g. "Fed holds at 4.25–4.50%", "Eurozone CPI at 2.2% YoY").
-- Do NOT include geopolitical items in the macro desk — that is a separate desk.
-
-CRITICAL: Return ONLY valid JSON. No markdown. No backticks. No preamble. Keep summaries to 2 sentences max.
-
-Return this exact structure:
-{
-  "categories": {
-    "category_id": {
-      "items": [
-        {
-          "headline": "Precise headline with attributed data point",
-          "summary": "1-2 sentence institutional analysis. Numbers and source attribution. No editorializing.",
-          "source": "Original source name",
-          "relevance": "One sentence: direct investment implication.",
-          "signal": "bullish" | "bearish" | "neutral" | "watch"
-        }
-      ],
-      "keyTakeaway": "One sentence conditional: if X holds, expect Y for Z asset class"
-    }
-  },
-  "globalBriefing": "3 sentence top-level synthesis. Cross-desk connections. Data-first. No drama.",
-  "marketOpen": "One sentence: primary risk or catalyst to watch at market open today."
-}`,
+          max_tokens: 20000,
+          system: SYSTEM_PROMPT,
           messages: [{ role: "user", content: prompt }]
         })
       });
@@ -303,12 +433,28 @@ Return this exact structure:
   return null;
 }
 
-function buildPrompt(allCategoryData) {
+function buildPrompt(allCategoryData, previous) {
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long", year: "numeric", month: "long", day: "numeric"
   });
 
   let prompt = `Today is ${today}. Below are raw RSS headlines from the last 48 hours, grouped by intelligence desk. Each desk is independent — do not move items between desks.\n\n`;
+
+  if (previous) {
+    prompt += `=== PREVIOUS BRIEFING (${previous.date || "prior session"}) — for continuity only ===\n`;
+    if (previous.riskIndex != null) prompt += `Risk index: ${previous.riskIndex}\n`;
+    if (previous.marketRegime?.tone) prompt += `Market regime: ${previous.marketRegime.tone}\n`;
+    if (previous.regionSignals) {
+      prompt += `Region signals: europe=${previous.regionSignals.europe}, spain=${previous.regionSignals.spain}, privateMarkets=${previous.regionSignals.privateMarkets}\n`;
+    }
+    if (Array.isArray(previous.houseView) && previous.houseView.length) {
+      prompt += `House view:\n`;
+      for (const v of previous.houseView) prompt += `  - ${v.label}: ${v.view}\n`;
+    }
+    prompt += `Anchor today's executive layer to these values. Change them only where today's headlines justify it, and say so in the "change" fields.\n\n`;
+  } else {
+    prompt += `=== NO PREVIOUS BRIEFING AVAILABLE — establish the initial house levels ===\n\n`;
+  }
 
   for (const [catId, items] of Object.entries(allCategoryData)) {
     const config = FEEDS[catId];
@@ -324,33 +470,284 @@ function buildPrompt(allCategoryData) {
     prompt += "\n";
   }
 
+  prompt += `Desk ids to return, exactly: ${Object.keys(FEEDS).join(", ")}.\n`;
+
   return prompt;
+}
+
+function readPreviousBriefing() {
+  try {
+    const raw = fs.readFileSync("data.json", "utf8");
+    const parsed = JSON.parse(raw);
+    console.log(`  ↩ Previous briefing loaded (${parsed.date || "undated"}, risk index ${parsed.riskIndex ?? "n/a"}).`);
+    return parsed;
+  } catch (err) {
+    console.warn(`  ⚠ No usable previous briefing (${err.message}).`);
+    return null;
+  }
 }
 
 function buildFallbackBriefing(allRaw) {
   console.warn("  ⚠ Using fallback (non-AI) briefing from raw headlines.");
   const categories = {};
   for (const [catId, items] of Object.entries(allRaw)) {
-    categories[catId] = items.slice(0, 3).map(item => ({
-      headline: item.title,
-      summary: item.summary || "",
-      source: item.source,
-      signal: "neutral",
-      link: item.link
-    }));
+    categories[catId] = {
+      items: items.slice(0, 3).map(item => ({
+        headline: item.title,
+        summary: item.summary || "",
+        source: item.source,
+        relevance: "",
+        signal: "neutral",
+        link: item.link
+      })),
+      keyTakeaway: ""
+    };
   }
   return {
     categories,
     globalBriefing: "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
-    marketOpen: ""
+    marketOpen: "",
+    degraded: true
+  };
+}
+
+// ─── DERIVED INTELLIGENCE ─────────────────────────────────────────────────
+// Every executive-layer field has a deterministic fallback computed from the
+// desk items, so data.json is complete even when the model omits a block.
+
+function normalizeItems(aiCat) {
+  const items = Array.isArray(aiCat?.items) ? aiCat.items : [];
+  return items
+    .filter(item => item && item.headline)
+    .map(item => {
+      const signal = normalizeSignal(item.signal);
+      const impact = normalizeImpact(item.impact, signal);
+      return {
+        headline: String(item.headline).trim(),
+        summary: String(item.summary || "").trim(),
+        source: String(item.source || "").trim(),
+        relevance: String(item.relevance || "").trim(),
+        signal,
+        impact,
+        conviction: normalizeConviction(item.conviction, impact),
+        horizon: normalizeHorizon(item.horizon),
+        ...(item.link ? { link: item.link } : {})
+      };
+    });
+}
+
+function flattenItems(categories) {
+  return Object.entries(categories).flatMap(([catId, cat]) =>
+    (cat.items || []).map(item => Object.assign({ categoryId: catId, categoryLabel: cat.label }, item))
+  );
+}
+
+function deriveRiskIndex(allItems, previousRisk) {
+  if (!allItems.length) return previousRisk != null ? previousRisk : 50;
+
+  let weighted = 0;
+  let mass = 0;
+  for (const item of allItems) {
+    weighted += (SIGNAL_RISK_WEIGHT[item.signal] || 0) * item.impact;
+    mass += item.impact;
+  }
+
+  const normalized = mass > 0 ? weighted / mass : 0;
+  const raw = clamp(Math.round(50 + 35 * normalized), 5, 95);
+
+  // Smooth against the previous session so the index reads as a level, not noise.
+  if (previousRisk == null) return raw;
+  return clamp(Math.round(previousRisk + clamp(raw - previousRisk, -12, 12)), 5, 95);
+}
+
+function deriveRegimeTone(allItems) {
+  if (!allItems.length) return "BALANCED";
+  const score = allItems.reduce((sum, i) => sum + (SIGNAL_DIRECTION[i.signal] || 0) * i.impact, 0);
+  const mass = allItems.reduce((sum, i) => sum + i.impact, 0) || 1;
+  const normalized = score / mass;
+  if (normalized >= 0.15) return "CONSTRUCTIVE";
+  if (normalized <= -0.15) return "CAUTIOUS";
+  return "BALANCED";
+}
+
+const CONVICTION_RANK = { high: 3, medium: 2, low: 1 };
+
+function rankItems(allItems) {
+  return allItems.slice().sort((a, b) =>
+    (b.impact - a.impact) ||
+    ((CONVICTION_RANK[b.conviction] || 0) - (CONVICTION_RANK[a.conviction] || 0)) ||
+    (Math.abs(SIGNAL_DIRECTION[b.signal] || 0) - Math.abs(SIGNAL_DIRECTION[a.signal] || 0))
+  );
+}
+
+function derivePulse(aiPulse, allItems) {
+  const fromAI = (Array.isArray(aiPulse) ? aiPulse : [])
+    .filter(p => p && p.title && p.text)
+    .slice(0, 3)
+    .map(p => ({
+      title: String(p.title).trim(),
+      text: String(p.text).trim(),
+      signal: normalizeSignal(p.signal)
+    }));
+
+  if (fromAI.length === 3) return fromAI;
+
+  // Top up from the highest-impact desk items, skipping themes already covered.
+  const used = new Set(fromAI.map(p => p.title.toLowerCase()));
+  for (const item of rankItems(allItems)) {
+    if (fromAI.length >= 3) break;
+    const title = item.categoryLabel || "Key signal";
+    if (used.has(title.toLowerCase())) continue;
+    used.add(title.toLowerCase());
+    fromAI.push({
+      title,
+      text: item.relevance || item.summary || item.headline,
+      signal: item.signal
+    });
+  }
+
+  return fromAI;
+}
+
+function deriveRadar(aiRadar, categories) {
+  const fromAI = (Array.isArray(aiRadar) ? aiRadar : [])
+    .filter(r => r && r.theme)
+    .slice(0, 6)
+    .map(r => ({
+      theme: String(r.theme).trim(),
+      direction: ["up", "down", "flat"].includes(String(r.direction).toLowerCase())
+        ? String(r.direction).toLowerCase()
+        : "flat",
+      conviction: pick(r.conviction, ["HIGH", "MEDIUM", "SELECTIVE"], "SELECTIVE"),
+      relevance: clamp(Math.round(Number(r.relevance)) || 3, 1, 5)
+    }));
+
+  if (fromAI.length >= 4) return fromAI;
+
+  // Short of four themes → top up from the desks, ranked by conviction-weighted impact.
+  const derived = Object.values(categories)
+    .filter(cat => (cat.items || []).length)
+    .map(cat => {
+      const items = cat.items;
+      const score = items.reduce((s, i) => s + (SIGNAL_DIRECTION[i.signal] || 0) * i.impact, 0);
+      const mass = items.reduce((s, i) => s + i.impact, 0);
+      const avgImpact = mass / items.length;
+      const highConviction = items.filter(i => i.conviction === "high").length;
+
+      return {
+        theme: cat.label,
+        direction: score > 0 ? "up" : score < 0 ? "down" : "flat",
+        conviction: highConviction >= 2 || mass >= 10 ? "HIGH" : mass >= 6 ? "MEDIUM" : "SELECTIVE",
+        relevance: clamp(Math.round(avgImpact), 1, 5),
+        _rank: Math.abs(score)
+      };
+    })
+    .sort((a, b) => b._rank - a._rank)
+    .map(({ _rank, ...row }) => row);
+
+  const seen = new Set(fromAI.map(r => r.theme.toLowerCase()));
+  for (const row of derived) {
+    if (fromAI.length >= 6) break;
+    if (seen.has(row.theme.toLowerCase())) continue;
+    seen.add(row.theme.toLowerCase());
+    fromAI.push(row);
+  }
+
+  return fromAI;
+}
+
+function deriveHouseView(aiHouseView, previousHouseView, regimeTone) {
+  const byLabel = new Map(
+    (Array.isArray(aiHouseView) ? aiHouseView : [])
+      .filter(v => v && v.label)
+      .map(v => [String(v.label).trim().toLowerCase(), v])
+  );
+  const prevByLabel = new Map(
+    (Array.isArray(previousHouseView) ? previousHouseView : [])
+      .filter(v => v && v.label)
+      .map(v => [String(v.label).trim().toLowerCase(), v])
+  );
+
+  return HOUSE_VIEW_THEMES.map(label => {
+    const key = label.toLowerCase();
+    const ai = byLabel.get(key);
+    const prev = prevByLabel.get(key);
+
+    if (ai) {
+      return {
+        label,
+        view: pick(ai.view, HOUSE_VIEWS, "NEUTRAL"),
+        signal: normalizeSignal(ai.signal),
+        change: String(ai.change || "").trim() || "Unchanged from the previous briefing."
+      };
+    }
+
+    // Model skipped this theme → carry yesterday's stance forward, flagged as carried.
+    if (prev) {
+      return {
+        label,
+        view: pick(prev.view, HOUSE_VIEWS, "NEUTRAL"),
+        signal: normalizeSignal(prev.signal),
+        change: "Carried forward — no new evidence in today's intelligence."
+      };
+    }
+
+    return {
+      label,
+      view: regimeTone === "CONSTRUCTIVE" ? "SELECTIVE" : regimeTone === "CAUTIOUS" ? "CAUTIOUS" : "NEUTRAL",
+      signal: "neutral",
+      change: "Initial house level — no prior briefing to compare against."
+    };
+  });
+}
+
+function deriveCatalysts(aiCatalysts) {
+  return (Array.isArray(aiCatalysts) ? aiCatalysts : [])
+    .filter(c => c && c.title)
+    .slice(0, 6)
+    .map(c => ({
+      time: String(c.time || c.date || "TBC").trim().toUpperCase(),
+      title: String(c.title).trim(),
+      impact: pick(c.impact, IMPACT_LEVELS, "MEDIUM")
+    }));
+}
+
+function deriveRegionSignals(aiRegionSignals, categories, regimeTone) {
+  const ai = aiRegionSignals || {};
+
+  // Fallback: read Europe/Spain off the desks that actually carry regional content.
+  const europeItems = flattenItems(categories).filter(i =>
+    /europe|euro|ecb|eu |spain|spanish|madrid|germany|france|italy/i.test(
+      `${i.headline} ${i.summary} ${i.relevance}`
+    )
+  );
+  const europeTone = europeItems.length ? deriveRegimeTone(europeItems) : regimeTone;
+  const toneToRegion = { CONSTRUCTIVE: "CONSTRUCTIVE", BALANCED: "NEUTRAL", CAUTIOUS: "CAUTIOUS" };
+
+  const privateItems = [
+    ...(categories["ma-growth"]?.items || []),
+    ...(categories["fdi"]?.items || []),
+    ...(categories["real-estate"]?.items || [])
+  ];
+  const privateTone = privateItems.length ? deriveRegimeTone(privateItems) : regimeTone;
+  const toneToPrivate = { CONSTRUCTIVE: "ATTRACTIVE", BALANCED: "SELECTIVE", CAUTIOUS: "TIGHT" };
+
+  return {
+    europe: pick(ai.europe, REGION_VIEWS, toneToRegion[europeTone]),
+    spain: pick(ai.spain, REGION_VIEWS, toneToRegion[europeTone]),
+    privateMarkets: pick(ai.privateMarkets, PRIVATE_MARKET_VIEWS, toneToPrivate[privateTone])
   };
 }
 
 // ─── MAIN ─────────────────────────────────────────────────────────────────
 
 async function main() {
-  console.log("📡 ZRC Morning Intelligence v3 — generating daily briefing\n");
-  console.log("Phase 1: Fetching RSS feeds...\n");
+  console.log("📡 ZRC Morning Intelligence v4 — generating daily briefing\n");
+  console.log("Phase 0: Reading previous briefing for continuity...\n");
+
+  const previous = readPreviousBriefing();
+
+  console.log("\nPhase 1: Fetching RSS feeds...\n");
 
   const allRaw = {};
   let totalItems = 0;
@@ -367,43 +764,84 @@ async function main() {
   console.log(`\n  Total: ${totalItems} items across ${Object.keys(FEEDS).length} desks\n`);
 
   console.log("Phase 2: AI synthesis (single Haiku call)...\n");
-  let aiResult = await synthesizeWithAI(allRaw);
+  let aiResult = await synthesizeWithAI(allRaw, previous);
 
   if (!aiResult) {
     aiResult = buildFallbackBriefing(allRaw);
   }
 
-  const briefing = {
-    generated: new Date().toISOString(),
-    date: new Date().toLocaleDateString("en-GB", {
-      weekday: "long", day: "numeric", month: "long", year: "numeric"
-    }),
-    globalBriefing: aiResult?.globalBriefing || "",
-    marketOpen: aiResult?.marketOpen || "",
-    categories: {}
-  };
+  console.log("\nPhase 3: Assembling executive intelligence layer...\n");
 
+  // Desks first — the executive layer is derived from them.
+  const categories = {};
   for (const catId of Object.keys(FEEDS)) {
     const config = FEEDS[catId];
     const aiCat = aiResult?.categories?.[catId];
 
-    briefing.categories[catId] = {
+    categories[catId] = {
       label: config.label,
       icon: config.icon,
       description: config.description,
-      items: aiCat?.items || [],
+      items: normalizeItems(aiCat),
       keyTakeaway: aiCat?.keyTakeaway || "No significant signals detected.",
       rawCount: allRaw[catId].length
     };
   }
 
-  const fs = require("fs");
+  const allItems = flattenItems(categories);
+  const previousRisk = Number.isFinite(Number(previous?.riskIndex)) ? Number(previous.riskIndex) : null;
+
+  const aiRisk = Math.round(Number(aiResult?.riskIndex));
+  const riskIndex = Number.isFinite(aiRisk) && aiRisk >= 0 && aiRisk <= 100
+    ? clamp(aiRisk, 0, 100)
+    : deriveRiskIndex(allItems, previousRisk);
+
+  const regimeTone = pick(aiResult?.marketRegime?.tone, REGIME_TONES, deriveRegimeTone(allItems));
+  const regionSignals = deriveRegionSignals(aiResult?.regionSignals, categories, regimeTone);
+
+  const briefing = {
+    schemaVersion: SCHEMA_VERSION,
+    generated: new Date().toISOString(),
+    date: new Date().toLocaleDateString("en-GB", {
+      weekday: "long", day: "numeric", month: "long", year: "numeric"
+    }),
+
+    // ── Executive layer ──
+    riskIndex,
+    riskIndexPrev: previousRisk,
+    marketRegime: {
+      tone: regimeTone,
+      rationale: String(aiResult?.marketRegime?.rationale || "").trim(),
+      riskIndex,
+      europe: regionSignals.europe,
+      spain: regionSignals.spain,
+      privateMarkets: regionSignals.privateMarkets
+    },
+    regionSignals,
+    executivePulse: derivePulse(aiResult?.executivePulse, allItems),
+    opportunityRadar: deriveRadar(aiResult?.opportunityRadar, categories),
+    houseView: deriveHouseView(aiResult?.houseView, previous?.houseView, regimeTone),
+    catalysts: deriveCatalysts(aiResult?.catalysts),
+
+    // ── Synthesis ──
+    globalBriefing: aiResult?.globalBriefing || "",
+    marketOpen: aiResult?.marketOpen || "",
+
+    // ── Desks ──
+    categories
+  };
+
+  if (aiResult?.degraded) briefing.degraded = true;
+
   fs.writeFileSync("data.json", JSON.stringify(briefing, null, 2));
 
-  const aiItems = Object.values(briefing.categories)
-    .reduce((sum, c) => sum + (c.items?.length || 0), 0);
+  const aiItems = allItems.length;
+  const classified = allItems.filter(i => i.impact && i.conviction && i.horizon).length;
 
   console.log(`✅ Done. ${aiItems} curated items from ${totalItems} raw headlines.`);
+  console.log(`   Regime ${regimeTone} · risk index ${riskIndex}${previousRisk != null ? ` (prev ${previousRisk})` : ""}`);
+  console.log(`   ${briefing.executivePulse.length} pulse · ${briefing.opportunityRadar.length} radar themes · ${briefing.houseView.length} house views · ${briefing.catalysts.length} catalysts`);
+  console.log(`   ${classified}/${aiItems} items fully classified (impact · conviction · horizon)`);
   console.log("📄 data.json written.\n");
 }
 
