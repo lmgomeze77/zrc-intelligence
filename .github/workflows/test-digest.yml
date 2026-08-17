@@ -1,0 +1,60 @@
+name: ZRC Test Digest (manual)
+
+# Manual test send. Deliberately isolated from the daily pipeline:
+#   · sends to ONE address, never to the subscriber list (Supabase is not queried)
+#   · never commits data.json, so a test run cannot alter the published briefing
+#   · regenerating the briefing is opt-in, since it costs an Anthropic API call
+on:
+  workflow_dispatch:
+    inputs:
+      test_email:
+        description: 'Address to send the test briefing to'
+        required: true
+        type: string
+      regenerate:
+        description: 'Regenerate data.json first (costs one API call; needed to see the executive layer before the next 06:00 run)'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  test-send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Regenerate briefing (optional)
+        if: ${{ inputs.regenerate }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node generate-briefing.js
+
+      - name: Preview email (dry run — no send)
+        env:
+          DRY_RUN: '1'
+        run: node send-digest.js
+
+      - name: Send single test email
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          TEST_EMAIL: ${{ inputs.test_email }}
+        run: node send-digest.js
+
+      - name: Upload rendered email
+        uses: actions/upload-artifact@v4
+        with:
+          name: email-preview
+          path: email-preview.html
+          if-no-files-found: warn

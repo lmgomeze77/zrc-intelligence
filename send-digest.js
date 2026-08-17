@@ -600,13 +600,28 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
 </html>`;
 }
 
+// Subject carries the house position — the reader sees the call before opening.
+function buildSubject(briefing) {
+  const today = new Date().toLocaleDateString("es-ES");
+  const bits = [`ZRC Morning Intelligence · ${today}`];
+  if (briefing.marketRegime?.tone) bits.push(briefing.marketRegime.tone);
+  if (briefing.riskIndex != null) bits.push(`Risk ${briefing.riskIndex}`);
+  return bits.join(" · ");
+}
+
 // ─── SEND DIGEST ──────────────────────────────────────────────────────────────
 
 async function sendDigest() {
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
   const BASE_URL = process.env.BASE_URL || "https://zrc-api.onrender.com";
 
-  if (!RESEND_API_KEY) {
+  // Two test modes, both of which leave the subscriber list untouched:
+  //   DRY_RUN=1              → render email-preview.html and exit. No network at all.
+  //   TEST_EMAIL=you@zrc.com → send exactly one real email to that address.
+  const DRY_RUN = /^(1|true|yes)$/i.test(process.env.DRY_RUN || "");
+  const TEST_EMAIL = (process.env.TEST_EMAIL || "").trim();
+
+  if (!RESEND_API_KEY && !DRY_RUN) {
     console.log("⚠ RESEND_API_KEY not set. Skipping email digest.");
     return;
   }
@@ -622,8 +637,50 @@ async function sendDigest() {
     0
   );
 
-  if (totalItems === 0) {
+  if (totalItems === 0 && !DRY_RUN) {
     console.log("⚠ No signals in briefing. Skipping email.");
+    return;
+  }
+
+  if (DRY_RUN) {
+    const html = buildEmailHTML(briefing, "Luis", `${BASE_URL}/api/unsubscribe?token=PREVIEW`);
+    fs.writeFileSync("email-preview.html", html);
+    console.log("🧪 DRY RUN — no email sent, no subscriber lookup.");
+    console.log(`   Briefing:  ${briefing.date || "undated"} · ${totalItems} signals`);
+    console.log(`   Regime:    ${briefing.marketRegime?.tone || "—"} · risk index ${briefing.riskIndex ?? "—"}`);
+    console.log(`   Executive: ${(briefing.executivePulse || []).length} pulse · ${(briefing.catalysts || []).length} catalysts · ${(briefing.houseView || []).length} house views`);
+    console.log(`   Written:   email-preview.html (${Math.round(html.length / 1024)} KB)`);
+    if (!briefing.executivePulse) {
+      console.log("   ⚠ This data.json predates the executive layer — run generate-briefing.js for the full email.");
+    }
+    return;
+  }
+
+  if (TEST_EMAIL) {
+    console.log(`🧪 TEST SEND — one email to ${TEST_EMAIL}. Subscriber list not touched.`);
+    const html = buildEmailHTML(briefing, "Luis", `${BASE_URL}/api/unsubscribe?token=TEST`);
+    const subject = buildSubject(briefing);
+    console.log(`   Subject: [TEST] ${subject}`);
+    const res = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "ZRC Intelligence <intelligence@zenithrisecapital.com>",
+        to: TEST_EMAIL,
+        subject: `[TEST] ${subject}`,
+        html,
+      }),
+    });
+    const result = await res.json();
+    if (res.ok) {
+      console.log(`   ✅ Sent to ${TEST_EMAIL} (id ${result.id || "n/a"})`);
+    } else {
+      console.error(`   ❌ Failed: ${JSON.stringify(result)}`);
+      process.exit(1);
+    }
     return;
   }
 
@@ -637,13 +694,7 @@ async function sendDigest() {
   }
 
   console.log("📧 Sending emails...");
-  const today = new Date().toLocaleDateString("es-ES");
-
-  // Subject carries the house position — the reader sees the call before opening.
-  const subjectBits = [`ZRC Morning Intelligence · ${today}`];
-  if (briefing.marketRegime?.tone) subjectBits.push(briefing.marketRegime.tone);
-  if (briefing.riskIndex != null) subjectBits.push(`Risk ${briefing.riskIndex}`);
-  const subject = subjectBits.join(" · ");
+  const subject = buildSubject(briefing);
   console.log(`   Subject: ${subject}`);
   let sent = 0;
   let failed = 0;
