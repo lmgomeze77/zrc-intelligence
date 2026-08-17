@@ -1,16 +1,28 @@
-// send-digest.js v3
-// Redesigned IB-level email structure — 6 non-overlapping sections.
-// Each section maps 1:1 to exactly one category. Zero content duplication.
-// New sections:
-//   1. DAILY SYNTHESIS (cross-desk)
-//   2. MACRO & CENTRAL BANKS (macro category only)
-//   3. GEOPOLITICAL RISK RADAR (geopolitics only)
-//   4. TRADE & POLICY SIGNALS (trade-policy only)
-//   5. CAPITAL FLOWS & DEALS (fdi + ma-growth)
-//   6. COMMODITIES & REAL ASSETS (critical-minerals + food-agriculture + real-estate)
-//   7. EMERGING MARKETS (emerging-markets only)
+// send-digest.js v4
+// Two-layer email: the executive read at the top, trimmed desk signals below.
+// The email is deliberately a SUMMARY — it carries the house position and the
+// hooks, and sends the reader to the platform for the analysis behind them.
+//
+//   LEVEL 1 — EXECUTIVE
+//     0. HOUSE POSITION strip (regime · risk index · Europe / Spain / private markets)
+//     1. EXECUTIVE PULSE (three signals, 60-second read)
+//     2. DAILY SYNTHESIS (cross-desk) + at the open
+//     3. CATALYST CALENDAR (next 72 hours)
+//   LEVEL 2 — DESKS (trimmed; full items live on the platform)
+//     4. MACRO & CENTRAL BANKS (macro category only)
+//     5. GEOPOLITICAL RISK RADAR (geopolitics only)
+//     6. TRADE & POLICY SIGNALS (trade-policy only)
+//     7. CAPITAL FLOWS & DEALS (fdi + ma-growth)
+//     8. COMMODITIES & REAL ASSETS (critical-minerals + food-agriculture + real-estate)
+//     9. EMERGING MARKETS (emerging-markets only)
+//    10. HOUSE VIEW teaser (positions only — the rationale is the reason to click)
+//
+// Every executive block returns "" when its field is absent, so a v1-shaped
+// data.json still produces a valid, shorter briefing.
 
 const fs = require("fs");
+
+const PLATFORM_URL = "https://zenith-news-room.netlify.app";
 
 // ─── SUPABASE ────────────────────────────────────────────────────────────────
 
@@ -99,13 +111,222 @@ function keyTakeaway(text) {
   `;
 }
 
+// ─── EXECUTIVE LAYER BLOCKS ──────────────────────────────────────────────────
+
+function truncate(value = "", max = 200) {
+  const s = String(value).trim();
+  if (s.length <= max) return s;
+  return s.slice(0, max).replace(/[\s,;:.\-–—]+$/, "") + "…";
+}
+
+// Small mono label used across the executive strip
+function microLabel(text, color = "#64748B") {
+  // nowrap: at phone widths a wrapped label knocks the value below its neighbours.
+  return `<div style="font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:800;color:${color};letter-spacing:1.2px;text-transform:uppercase;white-space:nowrap;">${escapeHtml(text)}</div>`;
+}
+
+// 0. HOUSE POSITION — regime, risk index, and the three region signals.
+function regimeStrip(briefing) {
+  const regime = briefing.marketRegime || {};
+  const regions = briefing.regionSignals || {};
+  const tone = regime.tone || "";
+  const risk = briefing.riskIndex != null ? briefing.riskIndex : regime.riskIndex;
+  const europe = regions.europe || regime.europe || "";
+  const spain = regions.spain || regime.spain || "";
+  const priv = regions.privateMarkets || regime.privateMarkets || "";
+
+  if (!tone && risk == null) return "";
+
+  const prev = briefing.riskIndexPrev;
+  let delta = "";
+  if (risk != null && prev != null && Number.isFinite(Number(prev))) {
+    const d = Number(risk) - Number(prev);
+    delta = d === 0
+      ? "UNCHANGED VS PRIOR"
+      : `${d > 0 ? "+" : ""}${d} VS PRIOR`;
+  }
+
+  const toneColor = tone === "CONSTRUCTIVE" ? "#6EE7B7" : tone === "CAUTIOUS" ? "#FCA5A5" : "#E2E8F0";
+
+  // Values are kept at 11px without letter-spacing: three columns of long words
+  // ("CONSTRUCTIVE") otherwise force the whole email wider than a phone screen.
+  const regionCell = (label, value) => value ? `
+    <td width="33%" valign="top" style="padding:0 6px 0 0;">
+      ${microLabel(label, "#64748B")}
+      <div style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;color:#E2E8F0;margin-top:3px;">${escapeHtml(value)}</div>
+    </td>` : "";
+
+  const regionRow = (europe || spain || priv) ? `
+    <tr><td colspan="2" style="height:12px;"></td></tr>
+    <tr>
+      <td colspan="2" style="border-top:1px solid #1E293B;padding-top:11px;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            ${regionCell("Europe", europe)}
+            ${regionCell("Spain", spain)}
+            ${regionCell("Private mkts", priv)}
+          </tr>
+        </table>
+      </td>
+    </tr>` : "";
+
+  return `
+    <tr><td style="height:18px;"></td></tr>
+    <tr>
+      <td style="background:#0F172A;padding:16px 20px;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td valign="top">
+              ${microLabel("Market regime", "#C9A84C")}
+              <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;color:${toneColor};letter-spacing:-0.2px;margin-top:4px;">${escapeHtml(tone || "—")}</div>
+            </td>
+            <td valign="top" align="right">
+              ${microLabel("ZRC risk index", "#C9A84C")}
+              <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;color:#FFFFFF;margin-top:4px;">
+                ${risk != null ? escapeHtml(String(risk)) : "—"}<span style="font-size:11px;font-weight:700;color:#64748B;"> / 100</span>
+              </div>
+              ${delta ? `<div style="font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:800;color:#64748B;letter-spacing:1.2px;margin-top:3px;">${escapeHtml(delta)}</div>` : ""}
+            </td>
+          </tr>
+          ${regionRow}
+        </table>
+      </td>
+    </tr>
+  `;
+}
+
+// 1. EXECUTIVE PULSE — the three things to know, capped so it stays a teaser.
+function pulseSection(briefing) {
+  const pulse = Array.isArray(briefing.executivePulse) ? briefing.executivePulse.slice(0, 3) : [];
+  if (!pulse.length) return "";
+
+  const rows = pulse.map((p, i) => `
+    <tr>
+      <td style="padding:0 0 13px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td width="26" valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;color:#C9A84C;padding-top:1px;">0${i + 1}</td>
+            <td valign="top">
+              <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;color:#0F172A;padding-bottom:4px;">
+                ${escapeHtml(p.title || "Key signal")}&nbsp;&nbsp;${signalBadge(p.signal)}
+              </div>
+              <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#475569;line-height:1.6;">
+                ${formatText(truncate(p.text, 230))}
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  `).join("");
+
+  return `
+    ${sectionHeader("⚡", "Executive Pulse · 60 second read", "#0F172A")}
+    ${rows}
+  `;
+}
+
+// 3. CATALYST CALENDAR — dates only. What they imply is on the platform.
+function catalystSection(briefing) {
+  const catalysts = Array.isArray(briefing.catalysts) ? briefing.catalysts.slice(0, 4) : [];
+  if (!catalysts.length) return "";
+
+  const rows = catalysts.map(c => `
+    <tr>
+      <td style="padding:0 0 9px 0;">
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          <tr>
+            <td width="120" valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:800;color:#92400E;letter-spacing:0.8px;padding-top:2px;white-space:nowrap;">
+              ${escapeHtml(c.time || c.date || "TBC")}
+            </td>
+            <td valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;color:#334155;line-height:1.45;">
+              ${escapeHtml(c.title || "")}
+            </td>
+            <td align="right" valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:9px;font-weight:800;color:#94A3B8;letter-spacing:0.8px;white-space:nowrap;padding-top:2px;">
+              ${escapeHtml(String(c.impact || "MEDIUM").toUpperCase())}
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  `).join("");
+
+  return `
+    ${sectionHeader("🗓", "Catalyst Calendar · next 72 hours", "#92400E")}
+    ${rows}
+  `;
+}
+
+// 10. HOUSE VIEW teaser — positions only, deliberately without the rationale.
+function houseViewSection(briefing) {
+  const views = Array.isArray(briefing.houseView) ? briefing.houseView.slice(0, 6) : [];
+  if (!views.length) return "";
+
+  const viewColor = v => ({
+    CONSTRUCTIVE: "#065F46", SELECTIVE: "#92400E", NEUTRAL: "#374151",
+    CAUTIOUS: "#9A3412", DEFENSIVE: "#991B1B"
+  })[String(v || "").toUpperCase()] || "#374151";
+
+  // Label above the stance rather than beside it — side-by-side in two columns
+  // pushes the minimum width past a phone screen.
+  const cell = v => v ? `
+    <td width="50%" valign="top" style="padding:0 8px 10px 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#F8FAFC;border:1px solid #E2E8F0;">
+        <tr>
+          <td style="padding:9px 11px;">
+            <div style="font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;color:#334155;line-height:1.35;">
+              ${escapeHtml(v.label || "")}
+            </div>
+            <div style="font-family:Arial,Helvetica,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.9px;color:${viewColor(v.view)};margin-top:4px;">
+              ${escapeHtml(String(v.view || "").toUpperCase())}
+            </div>
+          </td>
+        </tr>
+      </table>
+    </td>` : `<td width="50%"></td>`;
+
+  const rows = [];
+  for (let i = 0; i < views.length; i += 2) {
+    rows.push(`<tr>${cell(views[i])}${cell(views[i + 1])}</tr>`);
+  }
+
+  return `
+    ${sectionHeader("🎯", "ZRC House View", "#0F172A")}
+    <tr>
+      <td>
+        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+          ${rows.join("")}
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#94A3B8;line-height:1.6;padding-top:2px;">
+        What moved each position since yesterday — <a href="${PLATFORM_URL}" style="color:#92400E;font-weight:700;text-decoration:underline;">read the house view in full</a>.
+      </td>
+    </tr>
+  `;
+}
+
+// Hidden preview line shown by most clients next to the subject.
+function preheader(briefing) {
+  const bits = [];
+  if (briefing.marketRegime?.tone) bits.push(`Regime ${briefing.marketRegime.tone}`);
+  if (briefing.riskIndex != null) bits.push(`risk index ${briefing.riskIndex}/100`);
+  const lead = Array.isArray(briefing.executivePulse) && briefing.executivePulse[0]
+    ? briefing.executivePulse[0].text
+    : briefing.globalBriefing;
+  if (lead) bits.push(truncate(lead, 110));
+  return escapeHtml(bits.join(" · "));
+}
+
 // Single item row — "full" mode (featured: headline + badge + summary)
 //                   or "compact" mode (headline + badge only, one line)
 // Relevance is intentionally dropped from the email; it still lives in data.json
 // and is rendered in full on the ZRC platform.
 function itemRow(item, mode = "full") {
   const headline = escapeHtml(item.headline || item.title || "");
-  const summary  = formatText(item.summary || "");
+  // Trimmed on purpose: the email carries the signal, the platform carries the analysis.
+  const summary  = formatText(truncate(item.summary || "", 200));
   const badge    = signalBadge(item.signal || item.risk);
 
   // COMPACT MODE — single-line teaser with gold bullet
@@ -154,10 +375,22 @@ function deskSection(cat, accent, max = 3) {
   if (!cat || !Array.isArray(cat.items) || cat.items.length === 0) return "";
   const items = cat.items.slice(0, max);
   const [featured, ...rest] = items;
+
+  // Say what is being held back — the count is the reason to open the briefing.
+  const held = cat.items.length - items.length;
+  const moreRow = held > 0 ? `
+    <tr>
+      <td style="padding:0 0 10px 0;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#94A3B8;">
+        <a href="${PLATFORM_URL}" style="color:#94A3B8;text-decoration:none;">+ ${held} further signal${held > 1 ? "s" : ""} on this desk &rsaquo;</a>
+      </td>
+    </tr>
+  ` : "";
+
   return `
     ${sectionHeader(cat.icon || "📌", cat.label, accent)}
     ${itemRow(featured, "full")}
     ${rest.map(item => itemRow(item, "compact")).join("")}
+    ${moreRow}
     ${keyTakeaway(cat.keyTakeaway)}
   `;
 }
@@ -171,7 +404,9 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
 
   const cats = briefing.categories || {};
   const dateText = escapeHtml(briefing.date || "");
-  const dayOfWeek = new Date().toLocaleDateString("en-US", { weekday: "long" });
+
+  const deskCount = Object.values(cats).filter(c => (c.items || []).length).length;
+  const totalSignals = Object.values(cats).reduce((sum, c) => sum + (c.items?.length || 0), 0);
 
   // ── DAILY SYNTHESIS BOX ─────────────────────────────────────────────────
   const synthHtml = briefing.globalBriefing ? `
@@ -185,32 +420,40 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
     </tr>
   ` : "";
 
+  // ── EXECUTIVE LAYER ─────────────────────────────────────────────────────
+  const houseStrip   = regimeStrip(briefing);
+  const pulseHtml    = pulseSection(briefing);
+  const catalystHtml = catalystSection(briefing);
+  const houseHtml    = houseViewSection(briefing);
+
   // ── DESK SECTIONS (1-to-1 mapping, zero overlap) ────────────────────────
-  const macroSection       = deskSection(cats["macro"],             "#1D4ED8", 3); // blue
-  const geoSection         = deskSection(cats["geopolitics"],       "#B91C1C", 3); // red
-  const tradeSection       = deskSection(cats["trade-policy"],      "#7C3AED", 3); // purple
+  // Item counts are deliberately below what each desk holds: the executive
+  // layer now carries the top of the briefing, and the desks are the teaser.
+  const macroSection       = deskSection(cats["macro"],             "#1D4ED8", 2); // blue
+  const geoSection         = deskSection(cats["geopolitics"],       "#B91C1C", 2); // red
+  const tradeSection       = deskSection(cats["trade-policy"],      "#7C3AED", 2); // purple
   const flowsSection       = (() => {
     // Merge FDI + M&A into one "Capital Flows & Deals" section
-    const fdi = cats["fdi"]?.items?.slice(0, 2) || [];
-    const ma  = cats["ma-growth"]?.items?.slice(0, 2) || [];
-    const merged = [...fdi, ...ma].slice(0, 4);
+    const fdi = cats["fdi"]?.items || [];
+    const ma  = cats["ma-growth"]?.items || [];
+    const merged = [...fdi.slice(0, 2), ...ma.slice(0, 2)];
     if (merged.length === 0) return "";
     const takeaway = cats["fdi"]?.keyTakeaway || cats["ma-growth"]?.keyTakeaway || "";
     const pseudoCat = { icon: "💰", label: "Capital Flows & Deals", items: merged, keyTakeaway: takeaway };
-    return deskSection(pseudoCat, "#0D9488", 4); // teal
+    return deskSection(pseudoCat, "#0D9488", 3); // teal
   })();
   const commodSection      = (() => {
-    // Merge critical-minerals + food-agriculture into "Commodities & Real Assets"
+    // Merge critical-minerals + food-agriculture + real-estate into "Commodities & Real Assets"
     const cm   = cats["critical-minerals"]?.items?.slice(0, 2)  || [];
     const food = cats["food-agriculture"]?.items?.slice(0, 1)   || [];
     const re   = cats["real-estate"]?.items?.slice(0, 1)        || [];
-    const merged = [...cm, ...food, ...re].slice(0, 4);
+    const merged = [...cm, ...food, ...re];
     if (merged.length === 0) return "";
     const takeaway = cats["critical-minerals"]?.keyTakeaway || "";
     const pseudoCat = { icon: "⚡", label: "Commodities & Real Assets", items: merged, keyTakeaway: takeaway };
-    return deskSection(pseudoCat, "#D97706", 4); // amber
+    return deskSection(pseudoCat, "#D97706", 3); // amber
   })();
-  const emSection          = deskSection(cats["emerging-markets"], "#059669", 3); // green
+  const emSection          = deskSection(cats["emerging-markets"], "#059669", 2); // green
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -220,6 +463,7 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
   <title>ZRC Morning Intelligence</title>
 </head>
 <body style="margin:0;padding:0;background:#F1F5F9;font-family:Arial,Helvetica,sans-serif;">
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all;opacity:0;color:transparent;font-size:1px;line-height:1px;">${preheader(briefing)}</div>
   <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#F1F5F9;">
     <tr>
       <td align="center" style="padding:20px 0 32px;">
@@ -260,26 +504,47 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
             <td style="padding:8px 28px 28px;">
               <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
 
-                <!-- Daily Synthesis -->
+                <!-- 0. House position: regime · risk index · region signals -->
+                ${houseStrip}
+
+                <!-- 1. Executive Pulse -->
+                ${pulseHtml}
+
+                <!-- 2. Daily Synthesis -->
                 ${synthHtml}
 
-                <!-- 1. Macro & Central Banks -->
+                <!-- 3. Catalyst Calendar -->
+                ${catalystHtml}
+
+                <!-- ── LEVEL 2 · DESK SIGNALS ─────────────────────────── -->
+                <tr><td style="height:26px;"></td></tr>
+                <tr>
+                  <td style="border-top:2px solid #0F172A;padding-top:12px;">
+                    <span style="font-family:Arial,Helvetica,sans-serif;font-size:9px;font-weight:800;color:#0F172A;letter-spacing:2px;text-transform:uppercase;">Level 2 &nbsp;·&nbsp; Desk signals</span>
+                    <span style="font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#94A3B8;">&nbsp;&nbsp;selected items — each desk holds more</span>
+                  </td>
+                </tr>
+
+                <!-- 4. Macro & Central Banks -->
                 ${macroSection}
 
-                <!-- 2. Geopolitical Risk Radar -->
+                <!-- 5. Geopolitical Risk Radar -->
                 ${geoSection}
 
-                <!-- 3. Trade & Industrial Policy -->
+                <!-- 6. Trade & Industrial Policy -->
                 ${tradeSection}
 
-                <!-- 4. Capital Flows & Deals -->
+                <!-- 7. Capital Flows & Deals -->
                 ${flowsSection}
 
-                <!-- 5. Commodities & Real Assets -->
+                <!-- 8. Commodities & Real Assets -->
                 ${commodSection}
 
-                <!-- 6. Emerging Markets -->
+                <!-- 9. Emerging Markets -->
                 ${emSection}
+
+                <!-- 10. ZRC House View -->
+                ${houseHtml}
 
                 <!-- ── CTA ──────────────────────────────────────── -->
                 <tr><td style="height:28px;"></td></tr>
@@ -289,11 +554,12 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
                       <tr>
                         <td style="padding:16px 20px;">
                           <span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#94A3B8;">
-                            Full analysis, charts, and source links available on the ZRC Intelligence platform.
+                            <strong style="color:#E2E8F0;">${escapeHtml(String(totalSignals))} signals across ${escapeHtml(String(deskCount))} desks</strong> this morning —
+                            with the Opportunity Radar, house-view rationale and sources.
                           </span>
                         </td>
                         <td align="right" style="padding:16px 20px;white-space:nowrap;">
-                          <a href="https://zenith-news-room.netlify.app" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;color:#0F172A;background:#C9A84C;text-decoration:none;padding:9px 18px;letter-spacing:0.8px;display:inline-block;">
+                          <a href="${PLATFORM_URL}" style="font-family:Arial,Helvetica,sans-serif;font-size:11px;font-weight:800;color:#0F172A;background:#C9A84C;text-decoration:none;padding:9px 18px;letter-spacing:0.8px;display:inline-block;">
                             FULL BRIEFING →
                           </a>
                         </td>
@@ -372,6 +638,13 @@ async function sendDigest() {
 
   console.log("📧 Sending emails...");
   const today = new Date().toLocaleDateString("es-ES");
+
+  // Subject carries the house position — the reader sees the call before opening.
+  const subjectBits = [`ZRC Morning Intelligence · ${today}`];
+  if (briefing.marketRegime?.tone) subjectBits.push(briefing.marketRegime.tone);
+  if (briefing.riskIndex != null) subjectBits.push(`Risk ${briefing.riskIndex}`);
+  const subject = subjectBits.join(" · ");
+  console.log(`   Subject: ${subject}`);
   let sent = 0;
   let failed = 0;
 
@@ -389,7 +662,7 @@ async function sendDigest() {
         body: JSON.stringify({
           from: "ZRC Intelligence <intelligence@zenithrisecapital.com>",
           to: sub.email,
-          subject: `ZRC Morning Intelligence · ${today}`,
+          subject,
           html,
         }),
       });

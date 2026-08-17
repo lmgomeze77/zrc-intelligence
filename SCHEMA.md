@@ -98,6 +98,25 @@ follow from that:
 This means the very first run after deploying reads as "initial house level" — that is
 expected, and it resolves the following morning.
 
+## Who reads what
+
+`index.html` renders everything. `send-digest.js` deliberately renders a subset — the
+email is a summary that points at the platform:
+
+| Field | Email | Platform |
+| --- | --- | --- |
+| `marketRegime`, `riskIndex`, `regionSignals` | house-position strip | regime grid |
+| `executivePulse` | all three, text capped at 230 chars | full |
+| `globalBriefing`, `marketOpen` | full | full |
+| `catalysts` | first 4 | first 6 |
+| `houseView` | labels + stance only | stance **and** `change` rationale |
+| `opportunityRadar` | — (named in the call to action) | full table |
+| `categories[].items` | 2-3 per section, summaries capped at 200 chars | all, plus `relevance` |
+| `impact`, `conviction`, `horizon` | — | badge on every signal |
+
+Anything withheld is withheld on purpose. If you add a field, decide which side of that
+line it belongs on before wiring it into the email.
+
 ## Adding a desk
 
 Add it to `FEEDS` in `generate-briefing.js` **and** to `CATEGORY_ORDER` in `index.html`.
