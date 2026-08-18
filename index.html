@@ -5,332 +5,508 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZRC Morning Intelligence · Zenith Rise Capital</title>
-  <meta name="description" content="Daily geopolitical intelligence and investment advisory briefing by Zenith Rise Capital" />
+  <meta name="description" content="Daily geopolitical intelligence, capital markets signals and investment advisory briefing by Zenith Rise Capital" />
   <meta property="og:title" content="ZRC Morning Intelligence · Zenith Rise Capital" />
-  <meta property="og:description" content="Geopolitical Observatory · Investor Intelligence · Advisory Signals — Updated daily at 06:00 CET" />
+  <meta property="og:description" content="Markets · Geopolitics · Capital · Opportunities — Updated daily" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📡</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --bg: #060D18;
+      --panel: #0B1526;
+      --panel-2: #0E1A2E;
+      --gold: #C9A84C;
+      --gold-soft: rgba(201,168,76,.14);
+      --cream: #E8DCC8;
+      --text: #A5B4C8;
+      --muted: #5A6A80;
+      --faint: #344156;
+      --green: #34D399;
+      --red: #F87171;
+      --amber: #FBBF24;
+      --line: rgba(201,168,76,.12);
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      background: #060D18;
-      color: #A5B4C8;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(201,168,76,.055), transparent 35%),
+        var(--bg);
+      color: var(--text);
       font-family: 'Source Serif 4', Georgia, serif;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
+
+    button, input { font: inherit; }
+    button { color: inherit; }
+
+    ::selection { background: rgba(201,168,76,.25); color: var(--cream); }
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #060D18; }
-    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.2); border-radius: 3px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,.22); border-radius: 3px; }
 
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .45; } }
     @keyframes headerReveal { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes loadDot { 0%, 80%, 100% { opacity: 0.2; } 40% { opacity: 1; } }
+    @keyframes loadDot { 0%,80%,100% { opacity: .2; } 40% { opacity: 1; } }
+    @keyframes fabPulse {
+      0%,100% { box-shadow: 0 4px 24px rgba(201,168,76,.35), 0 0 0 0 rgba(201,168,76,.4); }
+      50% { box-shadow: 0 4px 24px rgba(201,168,76,.35), 0 0 0 8px rgba(201,168,76,0); }
+    }
 
-    /* ── HEADER ─────────────────────────────────────────── */
+    .shell { max-width: 1080px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }
+
+    /* HEADER */
     .header {
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      padding: 28px 32px 24px;
-      animation: headerReveal 0.6s ease;
+      border-bottom: 1px solid var(--line);
+      padding: 28px 0 22px;
+      animation: headerReveal .6s ease;
     }
-    .header-inner { max-width: 920px; margin: 0 auto; }
+
     .header-row {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      flex-wrap: wrap; gap: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
     }
+
     .live-dot {
-      width: 8px; height: 8px; border-radius: 50%; background: #34D399;
-      animation: pulse 2s ease infinite; box-shadow: 0 0 8px rgba(52,211,153,0.4);
+      width: 8px; height: 8px; border-radius: 50%; background: var(--green);
+      animation: pulse 2s ease infinite; box-shadow: 0 0 8px rgba(52,211,153,.4);
       display: inline-block; vertical-align: middle;
     }
+
     .brand-tag {
-      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 3px;
-      font-family: 'JetBrains Mono', monospace; vertical-align: middle; margin-left: 12px;
+      color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      font-family: 'JetBrains Mono', monospace; margin-left: 12px; vertical-align: middle;
     }
+
     .main-title {
-      color: #E8DCC8; font-size: 32px; font-weight: 600; margin: 6px 0 4px;
-      font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.5px;
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 38px; line-height: 1; font-weight: 600; letter-spacing: -.6px;
+      margin: 9px 0 7px;
     }
-    .sub-title { color: #5A6A80; font-size: 13px; }
+
+    .sub-title { color: var(--muted); font-size: 13px; letter-spacing: .15px; }
+
     .date-block { text-align: right; }
     .date-text {
-      color: #A5B4C8; font-size: 14px; margin-bottom: 2px;
-      font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+      color: var(--text); font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 15px; font-weight: 500; margin-bottom: 2px;
     }
-    .time-text {
-      color: #5A6A80; font-size: 12px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    .time-text, .generated-tag {
+      font-family: 'JetBrains Mono', monospace;
     }
-    .generated-tag {
-      color: #3A4555; font-size: 10px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px; margin-top: 4px;
+    .time-text { color: var(--muted); font-size: 11px; letter-spacing: .5px; }
+    .generated-tag { color: var(--faint); font-size: 9px; letter-spacing: .5px; margin-top: 5px; }
+
+    .top-nav {
+      display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px;
+      font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 1.2px;
     }
-    .legend { display: flex; gap: 14px; margin-top: 18px; flex-wrap: wrap; }
-    .legend-badge {
-      font-size: 9px; font-weight: 700; letter-spacing: 1.5px; padding: 3px 8px;
-      border-radius: 3px; font-family: 'JetBrains Mono', monospace;
+    .top-nav a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .top-nav a:hover { color: var(--gold); }
+
+    /* EXECUTIVE LAYER */
+    .executive { padding-top: 24px; }
+
+    .eyebrow {
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
     }
 
-    /* ── GLOBAL BRIEFING ───────────────────────────────── */
-    .global-briefing {
-      max-width: 920px; margin: 0 auto; padding: 20px 32px 0;
+    .section-title {
+      color: var(--cream); font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px; font-weight: 600; margin-top: 5px;
     }
+
+    .section-sub {
+      color: var(--muted); font-size: 12px; margin-top: 3px;
+    }
+
+    .regime-grid {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(4, 1fr);
+      gap: 1px;
+      margin-top: 16px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .regime-cell {
+      background: linear-gradient(180deg, rgba(13,24,43,.98), rgba(8,16,30,.98));
+      min-height: 88px; padding: 14px 15px;
+    }
+
+    .regime-cell.primary { background: linear-gradient(135deg, rgba(201,168,76,.12), rgba(11,21,38,.98)); }
+
+    .metric-label {
+      color: var(--muted); font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; letter-spacing: 1.3px; text-transform: uppercase;
+    }
+
+    .metric-value {
+      color: var(--cream); font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20px; font-weight: 600; margin-top: 5px; line-height: 1.05;
+    }
+
+    .metric-sub {
+      margin-top: 7px; color: var(--muted); font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: .4px;
+    }
+
+    .pulse-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 12px;
+    }
+
+    .pulse-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, rgba(15,25,45,.96), rgba(9,17,32,.98));
+      border-radius: 7px; padding: 18px;
+    }
+
+    .pulse-num {
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: 1px;
+    }
+
+    .pulse-title {
+      color: var(--cream); font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 17px; font-weight: 600; margin: 7px 0 6px;
+    }
+
+    .pulse-text { font-size: 12.5px; line-height: 1.55; color: var(--text); }
+
+    /* SYNTHESIS */
+    .global-briefing { padding-top: 12px; }
     .global-briefing-box {
-      background: linear-gradient(135deg, rgba(201,168,76,0.06), rgba(201,168,76,0.02));
-      border: 1px solid rgba(201,168,76,0.12); border-radius: 8px;
-      padding: 18px 22px;
-    }
-    .global-briefing-label {
-      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 2px;
-      font-family: 'JetBrains Mono', monospace; margin-bottom: 8px;
+      background: linear-gradient(135deg, rgba(201,168,76,.065), rgba(201,168,76,.018));
+      border: 1px solid rgba(201,168,76,.14);
+      border-radius: 8px; padding: 18px 22px;
     }
     .global-briefing-text {
-      color: #E8DCC8; font-size: 15px; line-height: 1.6;
-      font-family: 'Source Serif 4', Georgia, serif; font-style: italic;
+      color: var(--cream); font-size: 15px; line-height: 1.62; font-style: italic;
+    }
+    .market-open {
+      display: flex; gap: 11px; align-items: baseline; flex-wrap: wrap;
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(201,168,76,.14);
+    }
+    .market-open-label {
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; font-weight: 700; letter-spacing: 1.2px; white-space: nowrap;
+    }
+    .market-open-text { color: var(--text); font-size: 13px; line-height: 1.55; flex: 1; min-width: 220px; }
+
+    /* ANALYTIC GRIDS */
+    .intel-section { padding-top: 26px; scroll-margin-top: 12px; }
+
+    .section-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 16px; margin-bottom: 12px;
     }
 
-    /* ── MAIN ───────────────────────────────────────────── */
-    main { max-width: 920px; margin: 0 auto; padding: 20px 32px 60px; }
+    .mono-hint {
+      color: var(--muted); font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: .7px;
+    }
+
+    .radar-grid {
+      display: grid; grid-template-columns: 1.2fr .5fr .7fr .8fr;
+      border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+    }
+
+    .radar-row { display: contents; }
+
+    .radar-cell {
+      min-height: 48px; display: flex; align-items: center;
+      padding: 11px 14px; border-bottom: 1px solid rgba(201,168,76,.08);
+      background: rgba(10,18,34,.76); font-size: 12px;
+    }
+
+    .radar-row:last-child .radar-cell { border-bottom: 0; }
+    .radar-header .radar-cell {
+      min-height: 34px; color: var(--muted); background: rgba(201,168,76,.04);
+      font-family: 'JetBrains Mono', monospace; font-size: 8px; letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .theme-name { color: var(--cream); font-weight: 600; }
+    .conviction { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: .7px; }
+    .radar-dir { font-size: 15px; line-height: 1; letter-spacing: 0; }
+    .stars { color: var(--gold); letter-spacing: 1px; white-space: nowrap; }
+    .dir-up { color: var(--green); }
+    .dir-down { color: var(--red); }
+    .dir-flat { color: var(--muted); }
+
+    .house-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 10px;
+    }
+
+    .house-card {
+      border: 1px solid var(--line); border-radius: 7px; background: rgba(10,18,34,.8);
+      padding: 15px 16px;
+    }
+
+    .house-card-top {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .house-label { color: var(--cream); font-size: 13px; font-weight: 600; }
+    .house-view {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 1px;
+    }
+    .house-change { color: var(--muted); font-size: 11px; line-height: 1.45; margin-top: 8px; }
+
+    .catalyst-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    .catalyst {
+      border-left: 2px solid rgba(201,168,76,.55); background: rgba(10,18,34,.7);
+      padding: 13px 15px; border-radius: 0 6px 6px 0;
+    }
+    .catalyst-time {
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: .8px;
+    }
+    .catalyst-title { color: var(--cream); font-size: 13px; margin-top: 5px; }
+    .catalyst-impact {
+      color: var(--muted); font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; letter-spacing: 1px; margin-top: 7px;
+    }
+
+    /* DESKS */
+    main { padding-top: 28px; padding-bottom: 72px; }
     .desks-header {
       display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 20px; flex-wrap: wrap; gap: 8px;
+      margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
     }
     .mono-label {
-      color: #5A6A80; font-size: 12px;
+      color: var(--muted); font-size: 11px;
       font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
     }
-    .mono-hint {
-      color: #5A6A80; font-size: 11px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
-    }
 
-    /* ── CATEGORY BUTTONS ──────────────────────────────── */
     .cat-btn {
       width: 100%; background: transparent;
-      border: 1px solid rgba(201,168,76,0.1); border-radius: 6px;
-      padding: 16px 20px; cursor: pointer; display: flex;
+      border: 1px solid rgba(201,168,76,.1); border-radius: 6px;
+      padding: 15px 18px; cursor: pointer; display: flex;
       align-items: center; justify-content: space-between;
-      transition: all 0.3s ease; margin-bottom: 6px;
+      transition: all .3s ease; margin-bottom: 6px; text-align: left;
     }
-    .cat-btn:hover { background: linear-gradient(90deg, rgba(201,168,76,0.06), transparent); }
-    .cat-btn.open { background: linear-gradient(90deg, rgba(201,168,76,0.08), transparent); }
-    .cat-btn-left { display: flex; align-items: center; gap: 14px; }
-    .cat-icon { font-size: 22px; flex-shrink: 0; }
+    .cat-btn:hover { background: linear-gradient(90deg, rgba(201,168,76,.055), transparent); }
+    .cat-btn.open { background: linear-gradient(90deg, rgba(201,168,76,.08), transparent); }
+    .cat-btn-left { display: flex; align-items: center; gap: 13px; }
+    .cat-icon { font-size: 20px; flex-shrink: 0; }
     .cat-label {
-      color: #E8DCC8; font-size: 15px; font-weight: 600;
-      font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: 0.3px;
+      color: var(--cream); font-size: 15px; font-weight: 600;
+      font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: .3px;
     }
-    .cat-desc { color: #5A6A80; font-size: 11.5px; margin-top: 2px; }
+    .cat-desc { color: var(--muted); font-size: 11px; margin-top: 2px; }
     .cat-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
     .cat-count {
-      color: #C9A84C; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: 1px;
       font-family: 'JetBrains Mono', monospace;
     }
     .cat-raw {
-      color: #3A4555; font-size: 9px; letter-spacing: 0.5px;
+      color: var(--faint); font-size: 8px; letter-spacing: .5px;
       font-family: 'JetBrains Mono', monospace;
     }
-    .cat-arrow {
-      color: #5A6A80; font-size: 18px; transition: transform 0.3s ease; display: inline-block;
-    }
+    .cat-arrow { color: var(--muted); font-size: 16px; transition: transform .3s ease; }
     .cat-arrow.open { transform: rotate(180deg); }
-    .cat-content { padding: 12px 0; animation: fadeIn 0.3s ease; }
+    .cat-content { padding: 8px 0 12px; animation: fadeIn .3s ease; }
 
-    /* ── NEWS CARDS ─────────────────────────────────────── */
+    /* NEWS CARDS */
     .news-card {
-      background: linear-gradient(135deg, rgba(15,25,45,0.95), rgba(10,18,35,0.98));
-      border: 1px solid rgba(201,168,76,0.12); border-left: 3px solid rgba(201,168,76,0.4);
-      border-radius: 6px; padding: 18px 20px; cursor: pointer;
-      transition: all 0.3s ease; margin-bottom: 8px;
+      background: linear-gradient(135deg, rgba(15,25,45,.95), rgba(10,18,35,.98));
+      border: 1px solid rgba(201,168,76,.12);
+      border-left: 3px solid rgba(201,168,76,.4);
+      border-radius: 6px; padding: 17px 19px; cursor: pointer;
+      transition: all .3s ease; margin-bottom: 8px;
     }
     .news-card:hover, .news-card.expanded {
-      border-left-color: rgba(201,168,76,0.8);
-      background: linear-gradient(135deg, rgba(18,30,52,0.98), rgba(12,22,42,1));
+      border-left-color: rgba(201,168,76,.85);
+      background: linear-gradient(135deg, rgba(18,30,52,.98), rgba(12,22,42,1));
     }
+
     .news-card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
     .news-headline {
-      color: #E8DCC8; font-size: 15px; font-weight: 600; line-height: 1.4;
+      color: var(--cream); font-size: 15px; font-weight: 600; line-height: 1.4;
       font-family: 'Cormorant Garamond', Georgia, serif; flex: 1;
     }
-    .signal-badge {
-      font-size: 10px; font-weight: 700; letter-spacing: 1.5px; padding: 3px 8px;
-      border-radius: 3px; font-family: 'JetBrains Mono', monospace;
-      white-space: nowrap; flex-shrink: 0;
-    }
-    .signal-bullish { background: #0D3B2E; color: #34D399; }
-    .signal-bearish { background: #3B1A1A; color: #F87171; }
-    .signal-neutral { background: #2A2A3A; color: #A5B4C8; }
-    .signal-watch { background: #3B2E0D; color: #FBBF24; }
 
-    .news-detail { margin-top: 12px; animation: fadeIn 0.3s ease; }
-    .news-summary {
-      color: #A5B4C8; font-size: 13.5px; line-height: 1.65; margin-bottom: 10px;
+    .signal-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: 1.3px; padding: 3px 8px;
+      border-radius: 3px; font-family: 'JetBrains Mono', monospace; white-space: nowrap;
     }
+    .signal-bullish { background: #0D3B2E; color: var(--green); }
+    .signal-bearish { background: #3B1A1A; color: var(--red); }
+    .signal-neutral { background: #2A2A3A; color: var(--text); }
+    .signal-watch { background: #3B2E0D; color: var(--amber); }
+
+    .signal-strip {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 11px;
+    }
+    .micro-badge {
+      border: 1px solid rgba(201,168,76,.11); border-radius: 3px;
+      color: var(--muted); font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; letter-spacing: .8px; padding: 3px 6px;
+    }
+
+    .news-detail { margin-top: 12px; animation: fadeIn .3s ease; }
+    .detail-label {
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+      font-size: 8px; font-weight: 700; letter-spacing: 1.2px; margin-bottom: 4px;
+    }
+    .news-summary { color: var(--text); font-size: 13px; line-height: 1.65; margin-bottom: 11px; }
     .news-relevance {
-      background: rgba(201,168,76,0.06); border-radius: 4px; padding: 10px 14px;
-      margin-bottom: 8px; color: #C9A84C; font-size: 12px; font-weight: 500;
+      background: rgba(201,168,76,.06); border-radius: 4px;
+      padding: 10px 13px; margin-bottom: 9px; color: var(--cream); font-size: 12px; line-height: 1.5;
     }
     .news-source {
-      color: #5A6A80; font-size: 11px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+      color: var(--muted); font-size: 9px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: .5px;
     }
 
-    /* ── TAKEAWAY ───────────────────────────────────────── */
     .takeaway-box {
-      margin-top: 14px;
-      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
-      border: 1px solid rgba(201,168,76,0.15); border-radius: 6px; padding: 14px 18px;
+      margin-top: 10px; background: linear-gradient(135deg, rgba(201,168,76,.08), rgba(201,168,76,.03));
+      border: 1px solid rgba(201,168,76,.15); border-radius: 6px; padding: 14px 18px;
     }
     .takeaway-label {
-      color: #C9A84C; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--gold); font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
       margin-bottom: 6px; font-family: 'JetBrains Mono', monospace;
     }
-    .takeaway-text {
-      color: #E8DCC8; font-size: 14px; line-height: 1.5; font-style: italic;
-    }
+    .takeaway-text { color: var(--cream); font-size: 14px; line-height: 1.5; font-style: italic; }
 
-    /* ── LOADING / ERROR ───────────────────────────────── */
-    .loading-state { text-align: center; padding: 80px 20px; }
+    /* STATES */
+    .loading-state { text-align: center; padding: 100px 20px; }
     .loading-dots span {
       display: inline-block; width: 8px; height: 8px; border-radius: 50%;
-      background: #C9A84C; margin: 0 4px;
+      background: var(--gold); margin: 0 4px;
     }
     .loading-dots span:nth-child(1) { animation: loadDot 1.4s infinite 0s; }
-    .loading-dots span:nth-child(2) { animation: loadDot 1.4s infinite 0.2s; }
-    .loading-dots span:nth-child(3) { animation: loadDot 1.4s infinite 0.4s; }
+    .loading-dots span:nth-child(2) { animation: loadDot 1.4s infinite .2s; }
+    .loading-dots span:nth-child(3) { animation: loadDot 1.4s infinite .4s; }
 
     .error-banner {
-      background: rgba(248,113,113,0.06); border: 1px solid rgba(248,113,113,0.15);
+      background: rgba(248,113,113,.06); border: 1px solid rgba(248,113,113,.15);
       border-radius: 6px; padding: 18px 24px; text-align: center; margin-bottom: 20px;
     }
-    .error-banner p { color: #F87171; font-size: 13px; margin-bottom: 4px; }
-    .error-banner small { color: #5A6A80; font-size: 11px; font-family: 'JetBrains Mono', monospace; }
+    .error-banner p { color: var(--red); font-size: 13px; margin-bottom: 4px; }
+    .error-banner small { color: var(--muted); font-size: 10px; font-family: 'JetBrains Mono', monospace; }
 
-    /* ── FLOATING SUBSCRIBE ───────────────────────────── */
+    /* SUBSCRIBE */
     .fab-subscribe {
       position: fixed; bottom: 28px; right: 28px; z-index: 1000;
-      background: linear-gradient(135deg, #C9A84C, #A8893A); color: #060D18;
-      border: none; border-radius: 50px; padding: 14px 22px;
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+      background: linear-gradient(135deg, #C9A84C, #A8893A); color: var(--bg);
+      border: none; border-radius: 50px; padding: 13px 20px;
+      font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700;
       letter-spacing: 1px; cursor: pointer;
-      box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 0 rgba(201,168,76,0.4);
-      transition: all 0.3s ease;
-      display: flex; align-items: center; gap: 8px;
+      transition: all .3s ease; display: flex; align-items: center; gap: 8px;
       animation: fabPulse 3s ease infinite;
     }
-    .fab-subscribe:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 32px rgba(201,168,76,0.5);
-    }
-    @keyframes fabPulse {
-      0%, 100% { box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 0 rgba(201,168,76,0.4); }
-      50% { box-shadow: 0 4px 24px rgba(201,168,76,0.35), 0 0 0 8px rgba(201,168,76,0); }
-    }
+    .fab-subscribe:hover { transform: translateY(-2px); }
 
     .subscribe-overlay {
       position: fixed; inset: 0; z-index: 2000;
-      background: rgba(4,8,16,0.85); backdrop-filter: blur(8px);
+      background: rgba(4,8,16,.86); backdrop-filter: blur(8px);
       display: flex; align-items: center; justify-content: center;
-      animation: fadeIn 0.25s ease; padding: 20px;
+      animation: fadeIn .25s ease; padding: 20px;
     }
     .subscribe-modal {
       background: linear-gradient(135deg, #0C1628, #0A1220);
-      border: 1px solid rgba(201,168,76,0.2); border-radius: 12px;
+      border: 1px solid rgba(201,168,76,.2); border-radius: 12px;
       padding: 36px 32px; max-width: 440px; width: 100%;
-      animation: fadeSlideIn 0.3s ease;
-      position: relative;
+      animation: fadeSlideIn .3s ease; position: relative;
     }
     .subscribe-close {
       position: absolute; top: 14px; right: 18px;
-      background: none; border: none; color: #5A6A80;
+      background: none; border: none; color: var(--muted);
       font-size: 22px; cursor: pointer; padding: 4px;
-      transition: color 0.2s;
     }
-    .subscribe-close:hover { color: #E8DCC8; }
+    .subscribe-close:hover { color: var(--cream); }
     .subscribe-modal h2 {
-      color: #E8DCC8; font-size: 24px; font-weight: 600; margin-bottom: 6px;
+      color: var(--cream); font-size: 24px; font-weight: 600; margin-bottom: 6px;
       font-family: 'Cormorant Garamond', Georgia, serif;
     }
-    .subscribe-modal p {
-      color: #5A6A80; font-size: 13px; margin-bottom: 22px; line-height: 1.5;
-    }
-    .subscribe-modal .form-row {
-      display: flex; gap: 8px; margin-bottom: 12px;
-    }
+    .subscribe-modal p { color: var(--muted); font-size: 13px; margin-bottom: 22px; line-height: 1.5; }
+    .subscribe-modal .form-row { display: flex; gap: 8px; margin-bottom: 12px; }
     .subscribe-modal input {
-      flex: 1; background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,168,76,0.15); border-radius: 6px;
-      padding: 12px 14px; color: #E8DCC8; font-size: 14px;
-      font-family: 'Source Serif 4', Georgia, serif;
-      outline: none; transition: border-color 0.2s;
+      flex: 1; background: rgba(255,255,255,.04);
+      border: 1px solid rgba(201,168,76,.15); border-radius: 6px;
+      padding: 12px 14px; color: var(--cream); font-size: 14px;
+      outline: none; transition: border-color .2s;
     }
-    .subscribe-modal input:focus { border-color: rgba(201,168,76,0.5); }
-    .subscribe-modal input::placeholder { color: #3A4555; }
+    .subscribe-modal input:focus { border-color: rgba(201,168,76,.5); }
+    .subscribe-modal input::placeholder { color: var(--faint); }
     .subscribe-submit {
       width: 100%; background: linear-gradient(135deg, #C9A84C, #A8893A);
-      color: #060D18; border: none; border-radius: 6px; padding: 13px;
-      font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
-      letter-spacing: 1.5px; cursor: pointer; transition: all 0.2s;
+      color: var(--bg); border: none; border-radius: 6px; padding: 13px;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+      letter-spacing: 1.5px; cursor: pointer;
     }
-    .subscribe-submit:hover { opacity: 0.9; transform: translateY(-1px); }
-    .subscribe-submit:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    .subscribe-note {
-      color: #3A4555; font-size: 10px; text-align: center; margin-top: 14px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;
+    .subscribe-submit:disabled { opacity: .5; cursor: not-allowed; }
+    .subscribe-note, .subscribe-error {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
     }
-    .subscribe-success {
-      text-align: center; padding: 10px 0;
-    }
-    .subscribe-success .check {
-      font-size: 40px; margin-bottom: 12px; display: block;
-    }
+    .subscribe-note { color: var(--faint); text-align: center; margin-top: 14px; letter-spacing: .5px; }
+    .subscribe-error { color: var(--red); margin-bottom: 10px; }
+    .subscribe-success { text-align: center; padding: 10px 0; }
+    .subscribe-success .check { font-size: 40px; margin-bottom: 12px; display: block; }
     .subscribe-success h3 {
-      color: #34D399; font-size: 18px; margin-bottom: 8px;
+      color: var(--green); font-size: 18px; margin-bottom: 8px;
       font-family: 'Cormorant Garamond', Georgia, serif;
     }
-    .subscribe-success p {
-      color: #A5B4C8; font-size: 13px; margin-bottom: 0;
+
+    footer {
+      border-top: 1px solid rgba(201,168,76,.1);
+      padding: 22px 32px 28px; text-align: center;
     }
-    .subscribe-error {
-      color: #F87171; font-size: 12px; margin-bottom: 10px;
-      font-family: 'JetBrains Mono', monospace;
+    .footer-brand {
+      color: var(--faint); font-size: 9px;
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; margin-bottom: 5px;
+    }
+    .footer-legal { color: #2A3340; font-size: 9px; }
+
+    @media (max-width: 820px) {
+      .regime-grid { grid-template-columns: repeat(2,1fr); }
+      .regime-cell.primary { grid-column: span 2; }
+      .pulse-grid, .house-grid, .catalyst-grid { grid-template-columns: 1fr; }
+      .radar-grid { grid-template-columns: 1fr .45fr .65fr; }
+      .radar-cell:nth-child(4n) { display: none; }
     }
 
     @media (max-width: 640px) {
-      .fab-subscribe { bottom: 20px; right: 16px; padding: 12px 18px; font-size: 11px; }
+      .shell { padding-left: 16px; padding-right: 16px; }
+      .header { padding-top: 20px; }
+      .main-title { font-size: 31px; }
+      .header-row { flex-direction: column; }
+      .date-block { text-align: left; }
+      .top-nav { gap: 12px; }
+      .regime-grid { grid-template-columns: 1fr 1fr; }
+      .regime-cell { min-height: 80px; }
+      .pulse-card { padding: 15px; }
+      .section-head { align-items: flex-start; flex-direction: column; }
+      .cat-btn { padding: 13px 14px; }
+      .news-card { padding: 14px 15px; }
+      .cat-raw { display: none; }
+      .radar-grid { grid-template-columns: 1fr .5fr; }
+      .radar-cell:nth-child(3n), .radar-cell:nth-child(4n) { display: none; }
+      .fab-subscribe { bottom: 18px; right: 14px; padding: 11px 15px; font-size: 9px; }
       .subscribe-modal { padding: 28px 22px; }
       .subscribe-modal .form-row { flex-direction: column; }
     }
-
-    /* ── FOOTER ─────────────────────────────────────────── */
-    footer {
-      border-top: 1px solid rgba(201,168,76,0.1); padding: 20px 32px; text-align: center;
-    }
-    .footer-brand {
-      color: #3A4555; font-size: 11px;
-      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px; margin-bottom: 4px;
-    }
-    .footer-legal { color: #2A3340; font-size: 10px; }
-
-    /* ── RESPONSIVE ─────────────────────────────────────── */
-    @media (max-width: 640px) {
-      .header { padding: 20px 16px 18px; }
-      .global-briefing { padding: 16px 16px 0; }
-      main { padding: 16px 16px 40px; }
-      .main-title { font-size: 26px; }
-      .header-row { flex-direction: column; }
-      .date-block { text-align: left; }
-      .cat-btn { padding: 14px 16px; }
-      .news-card { padding: 14px 16px; }
-      .cat-raw { display: none; }
-    }
   </style>
 </head>
+
 <body>
   <div id="app"></div>
 
@@ -341,75 +517,376 @@
   <script type="text/babel">
     const { useState, useEffect, useRef } = React;
 
+    // Must stay in sync with the desk ids in generate-briefing.js (FEEDS).
+    const CATEGORY_ORDER = [
+      "macro", "geopolitics", "fdi", "critical-minerals", "real-estate",
+      "ma-growth", "emerging-markets", "trade-policy", "food-agriculture"
+    ];
+
+    const SIGNAL_SCORE = { bullish: 2, watch: 0, neutral: 0, bearish: -2 };
+
+    function normalizeSignal(signal) {
+      return ["bullish","bearish","neutral","watch"].includes(signal) ? signal : "neutral";
+    }
+
+    function labelFromSignal(signal) {
+      return ({ bullish: "POSITIVE", bearish: "NEGATIVE", neutral: "NEUTRAL", watch: "WATCH" })[normalizeSignal(signal)];
+    }
+
+    function directionFromSignal(signal) {
+      if (signal === "bullish") return { symbol: "↑", cls: "dir-up" };
+      if (signal === "bearish") return { symbol: "↓", cls: "dir-down" };
+      return { symbol: "→", cls: "dir-flat" };
+    }
+
+    function flattenItems(briefing) {
+      if (!briefing || !briefing.categories) return [];
+      return CATEGORY_ORDER.flatMap(function(catId) {
+        const cat = briefing.categories[catId];
+        if (!cat || !cat.items) return [];
+        return cat.items.map(function(item) {
+          return Object.assign({ categoryId: catId, categoryLabel: cat.label }, item);
+        });
+      });
+    }
+
+    function derivePulse(briefing) {
+      if (briefing.executivePulse && briefing.executivePulse.length) return briefing.executivePulse.slice(0,3);
+
+      const all = flattenItems(briefing);
+      const ranked = all.slice().sort(function(a,b) {
+        const ap = typeof a.impact === "number" ? a.impact : Math.abs(SIGNAL_SCORE[normalizeSignal(a.signal)] || 0);
+        const bp = typeof b.impact === "number" ? b.impact : Math.abs(SIGNAL_SCORE[normalizeSignal(b.signal)] || 0);
+        return bp - ap;
+      });
+
+      // One entry per desk — three cards on the same desk is not a pulse.
+      const seen = {};
+      const out = [];
+      ranked.forEach(function(item) {
+        if (out.length >= 3) return;
+        const title = item.categoryLabel || "Key signal";
+        if (seen[title]) return;
+        seen[title] = true;
+        out.push({
+          title: title,
+          text: item.relevance || item.summary || item.headline,
+          signal: normalizeSignal(item.signal)
+        });
+      });
+      return out;
+    }
+
+    function deriveRegime(briefing) {
+      if (briefing.marketRegime) return briefing.marketRegime;
+
+      const all = flattenItems(briefing);
+      const score = all.reduce(function(sum,item) {
+        return sum + (SIGNAL_SCORE[normalizeSignal(item.signal)] || 0);
+      }, 0);
+
+      let tone = "BALANCED";
+      if (score >= 4) tone = "CONSTRUCTIVE";
+      if (score <= -4) tone = "CAUTIOUS";
+
+      return {
+        tone: tone,
+        riskIndex: briefing.riskIndex ?? "—",
+        europe: briefing.regionSignals?.europe || "NEUTRAL",
+        spain: briefing.regionSignals?.spain || "NEUTRAL",
+        privateMarkets: briefing.regionSignals?.privateMarkets || "SELECTIVE"
+      };
+    }
+
+    function deriveRadar(briefing) {
+      if (briefing.opportunityRadar && briefing.opportunityRadar.length) return briefing.opportunityRadar;
+
+      const rows = CATEGORY_ORDER.map(function(catId) {
+        const cat = briefing.categories?.[catId];
+        if (!cat) return null;
+        const items = cat.items || [];
+        if (!items.length) return null;
+
+        const score = items.reduce(function(sum,item) {
+          return sum + (SIGNAL_SCORE[normalizeSignal(item.signal)] || 0);
+        }, 0);
+
+        const abs = items.reduce(function(sum,item) {
+          return sum + Math.abs(SIGNAL_SCORE[normalizeSignal(item.signal)] || 0);
+        }, 0);
+
+        return {
+          theme: cat.label,
+          direction: score > 0 ? "up" : score < 0 ? "down" : "flat",
+          conviction: abs >= 6 ? "HIGH" : abs >= 3 ? "MEDIUM" : "SELECTIVE",
+          relevance: Math.min(5, Math.max(2, items.length))
+        };
+      }).filter(Boolean);
+
+      return rows.slice(0,6);
+    }
+
     function SignalBadge({ signal }) {
-      var cls = "signal-badge signal-" + (signal || "neutral");
-      var labels = { bullish: "BULLISH", bearish: "BEARISH", neutral: "NEUTRAL", watch: "WATCH" };
-      return <span className={cls}>{labels[signal] || "NEUTRAL"}</span>;
+      signal = normalizeSignal(signal);
+      const cls = "signal-badge signal-" + signal;
+      const labels = { bullish: "BULLISH", bearish: "BEARISH", neutral: "NEUTRAL", watch: "WATCH" };
+      return <span className={cls}>{labels[signal]}</span>;
+    }
+
+    function ExecutiveLayer({ briefing }) {
+      const regime = deriveRegime(briefing);
+      const pulse = derivePulse(briefing);
+
+      return (
+        <section className="shell executive" id="pulse">
+          <div className="eyebrow">60 SECOND READ</div>
+          <h2 className="section-title">Executive Pulse</h2>
+          <p className="section-sub">What matters before the working day begins.</p>
+
+          <div className="regime-grid">
+            <div className="regime-cell primary">
+              <div className="metric-label">Market regime</div>
+              <div className="metric-value">{regime.tone}</div>
+              <div className="metric-sub">ZRC DAILY ASSESSMENT</div>
+            </div>
+            <div className="regime-cell">
+              <div className="metric-label">Risk index</div>
+              <div className="metric-value">{regime.riskIndex}</div>
+              <div className="metric-sub">0 LOW · 100 HIGH</div>
+            </div>
+            <div className="regime-cell">
+              <div className="metric-label">Europe</div>
+              <div className="metric-value">{regime.europe}</div>
+              <div className="metric-sub">HOUSE SIGNAL</div>
+            </div>
+            <div className="regime-cell">
+              <div className="metric-label">Spain</div>
+              <div className="metric-value">{regime.spain}</div>
+              <div className="metric-sub">HOUSE SIGNAL</div>
+            </div>
+            <div className="regime-cell">
+              <div className="metric-label">Private markets</div>
+              <div className="metric-value">{regime.privateMarkets}</div>
+              <div className="metric-sub">CAPITAL WINDOW</div>
+            </div>
+          </div>
+
+          {pulse.length > 0 && (
+            <div className="pulse-grid">
+              {pulse.map(function(item,i) {
+                return (
+                  <div className="pulse-card" key={i}>
+                    <div className="pulse-num">0{i+1} · {labelFromSignal(item.signal)}</div>
+                    <div className="pulse-title">{item.title}</div>
+                    <div className="pulse-text">{item.text}</div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    function OpportunityRadar({ briefing }) {
+      const rows = deriveRadar(briefing);
+      if (!rows.length) return null;
+
+      return (
+        <section className="shell intel-section" id="radar">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">CAPITAL ALLOCATION</div>
+              <h2 className="section-title">ZRC Opportunity Radar</h2>
+            </div>
+            <div className="mono-hint">SIGNAL · CONVICTION · ZRC RELEVANCE</div>
+          </div>
+
+          <div className="radar-grid">
+            <div className="radar-row radar-header">
+              <div className="radar-cell">Theme</div>
+              <div className="radar-cell">Signal</div>
+              <div className="radar-cell">Conviction</div>
+              <div className="radar-cell">Relevance</div>
+            </div>
+
+            {rows.map(function(row,i) {
+              const d = row.direction === "up"
+                ? { symbol:"↑", cls:"dir-up" }
+                : row.direction === "down"
+                ? { symbol:"↓", cls:"dir-down" }
+                : { symbol:"→", cls:"dir-flat" };
+
+              const relevance = Math.max(1, Math.min(5, Number(row.relevance || 3)));
+
+              return (
+                <div className="radar-row" key={i}>
+                  <div className="radar-cell theme-name">{row.theme}</div>
+                  <div className={"radar-cell conviction radar-dir " + d.cls}>{d.symbol}</div>
+                  <div className="radar-cell conviction">{row.conviction || "SELECTIVE"}</div>
+                  <div className="radar-cell stars">{"★".repeat(relevance)}{"☆".repeat(5-relevance)}</div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    function HouseView({ briefing }) {
+      const views = briefing.houseView || [];
+      if (!views.length) return null;
+
+      return (
+        <section className="shell intel-section" id="house-view">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">PROPRIETARY VIEW</div>
+              <h2 className="section-title">ZRC House View</h2>
+            </div>
+            <div className="mono-hint">CHANGE FROM PRIOR BRIEFING WHERE RELEVANT</div>
+          </div>
+
+          <div className="house-grid">
+            {views.map(function(v,i) {
+              const signal = normalizeSignal(v.signal);
+              const cls = signal === "bullish" ? "dir-up" : signal === "bearish" ? "dir-down" : "dir-flat";
+              return (
+                <div className="house-card" key={i}>
+                  <div className="house-card-top">
+                    <div className="house-label">{v.label}</div>
+                    <div className={"house-view " + cls}>{v.view || labelFromSignal(signal)}</div>
+                  </div>
+                  {v.change && <div className="house-change">{v.change}</div>}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
+    }
+
+    function CatalystCalendar({ briefing }) {
+      const catalysts = briefing.catalysts || [];
+      if (!catalysts.length) return null;
+
+      return (
+        <section className="shell intel-section" id="catalysts">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow">NEXT 72 HOURS</div>
+              <h2 className="section-title">Catalyst Calendar</h2>
+            </div>
+            <div className="mono-hint">EVENTS WITH POTENTIAL MARKET SENSITIVITY</div>
+          </div>
+
+          <div className="catalyst-grid">
+            {catalysts.slice(0,6).map(function(c,i) {
+              return (
+                <div className="catalyst" key={i}>
+                  <div className="catalyst-time">{c.time || c.date || "TBC"}</div>
+                  <div className="catalyst-title">{c.title}</div>
+                  <div className="catalyst-impact">SENSITIVITY · {(c.impact || "MEDIUM").toUpperCase()}</div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      );
     }
 
     function NewsCard({ item, index }) {
-      var [expanded, setExpanded] = useState(false);
+      const [expanded, setExpanded] = useState(false);
+      const impact = item.impact != null ? item.impact : null;
+      const conviction = item.conviction || null;
+      const horizon = item.horizon || null;
+
       return (
         <div
           className={"news-card" + (expanded ? " expanded" : "")}
           onClick={function() { setExpanded(!expanded); }}
-          style={{ animation: "fadeSlideIn 0.4s ease " + (index * 0.08) + "s both" }}
+          style={{ animation: "fadeSlideIn .4s ease " + (index * .06) + "s both" }}
         >
           <div className="news-card-header">
             <div className="news-headline">{item.headline}</div>
             <SignalBadge signal={item.signal} />
           </div>
+
+          {(impact || conviction || horizon) && (
+            <div className="signal-strip">
+              {impact != null && <span className="micro-badge">IMPACT {impact}/5</span>}
+              {conviction && <span className="micro-badge">CONVICTION {String(conviction).toUpperCase()}</span>}
+              {horizon && <span className="micro-badge">HORIZON {String(horizon).toUpperCase()}</span>}
+            </div>
+          )}
+
           {expanded && (
             <div className="news-detail">
-              <p className="news-summary">{item.summary}</p>
-              <div className="news-relevance">{"\u26A1"} {item.relevance}</div>
-              <span className="news-source">SOURCE: {(item.source || "").toUpperCase()}</span>
+              {item.summary && (
+                <>
+                  <div className="detail-label">WHAT HAPPENED</div>
+                  <p className="news-summary">{item.summary}</p>
+                </>
+              )}
+
+              {item.relevance && (
+                <>
+                  <div className="detail-label">WHY IT MATTERS / ZRC VIEW</div>
+                  <div className="news-relevance">{item.relevance}</div>
+                </>
+              )}
+
+              {item.source && (
+                <span className="news-source">SOURCE: {String(item.source).toUpperCase()}</span>
+              )}
             </div>
           )}
         </div>
       );
     }
 
-    function CategorySection({ catId, catData }) {
-      var [isOpen, setIsOpen] = useState(false);
-      var items = catData.items || [];
-      var hasData = items.length > 0;
+    function CategorySection({ catData }) {
+      const [isOpen, setIsOpen] = useState(false);
+      const items = catData.items || [];
+      const hasData = items.length > 0;
 
       return (
         <div>
           <button className={"cat-btn" + (isOpen ? " open" : "")} onClick={function() { setIsOpen(!isOpen); }}>
             <div className="cat-btn-left">
               <span className="cat-icon">{catData.icon}</span>
-              <div style={{ textAlign: "left" }}>
+              <div>
                 <div className="cat-label">{catData.label}</div>
                 <div className="cat-desc">{catData.description}</div>
               </div>
             </div>
+
             <div className="cat-right">
               {hasData && <span className="cat-count">{items.length} SIGNALS</span>}
               {catData.rawCount > 0 && <span className="cat-raw">FROM {catData.rawCount} SOURCES</span>}
-              <span className={"cat-arrow" + (isOpen ? " open" : "")}>{"\u25BE"}</span>
+              <span className={"cat-arrow" + (isOpen ? " open" : "")}>▾</span>
             </div>
           </button>
 
           {isOpen && (
             <div className="cat-content">
               {!hasData ? (
-                <div style={{ textAlign: "center", padding: "20px", color: "#5A6A80", fontSize: "13px" }}>
+                <div style={{ textAlign:"center", padding:"20px", color:"#5A6A80", fontSize:"13px" }}>
                   No significant signals detected for this desk today.
                 </div>
               ) : (
-                <div>
-                  {items.map(function(item, i) {
+                <>
+                  {items.map(function(item,i) {
                     return <NewsCard key={i} item={item} index={i} />;
                   })}
+
                   {catData.keyTakeaway && (
                     <div className="takeaway-box">
                       <div className="takeaway-label">KEY TAKEAWAY</div>
                       <div className="takeaway-text">{catData.keyTakeaway}</div>
                     </div>
                   )}
-                </div>
+                </>
               )}
             </div>
           )}
@@ -418,29 +895,30 @@
     }
 
     function SubscribeButton() {
-      var [showModal, setShowModal] = useState(false);
-      var [email, setEmail] = useState("");
-      var [firstName, setFirstName] = useState("");
-      var [website, setWebsite] = useState(""); // honeypot
-      var [token, setToken] = useState("");
-      var [status, setStatus] = useState("idle"); // idle, loading, success, error
-      var [errorMsg, setErrorMsg] = useState("");
-      var widgetRef = useRef(null);
-      var widgetIdRef = useRef(null);
+      const [showModal, setShowModal] = useState(false);
+      const [email, setEmail] = useState("");
+      const [firstName, setFirstName] = useState("");
+      const [website, setWebsite] = useState("");
+      const [token, setToken] = useState("");
+      const [status, setStatus] = useState("idle");
+      const [errorMsg, setErrorMsg] = useState("");
+      const widgetRef = useRef(null);
+      const widgetIdRef = useRef(null);
 
-      // Render / reset the Turnstile widget when the modal opens
       useEffect(function() {
         if (!showModal || status === "success") return;
 
-        var tries = 0;
-        var iv = setInterval(function() {
+        let tries = 0;
+        const iv = setInterval(function() {
           tries++;
           if (window.turnstile && widgetRef.current) {
             clearInterval(iv);
+
             if (widgetIdRef.current !== null) {
               try { window.turnstile.remove(widgetIdRef.current); } catch (e) {}
               widgetIdRef.current = null;
             }
+
             widgetIdRef.current = window.turnstile.render(widgetRef.current, {
               sitekey: "0x4AAAAAAC-gJp4BOq14SXQM",
               theme: "dark",
@@ -449,7 +927,7 @@
               "expired-callback": function() { setToken(""); }
             });
           } else if (tries > 40) {
-            clearInterval(iv); // give up after ~4s
+            clearInterval(iv);
           }
         }, 100);
 
@@ -465,13 +943,14 @@
 
       function handleSubmit(e) {
         if (e) e.preventDefault();
-        if (website) return; // honeypot triggered, silently drop
+        if (website) return;
 
         if (!email || !email.includes("@")) {
           setErrorMsg("Please enter a valid email.");
           setStatus("error");
           return;
         }
+
         if (!token) {
           setErrorMsg("Please complete the verification below.");
           setStatus("error");
@@ -484,7 +963,7 @@
         fetch("/.netlify/functions/subscribe", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: email, firstName: firstName, token: token, website: website })
+          body: JSON.stringify({ email, firstName, token, website })
         })
           .then(function(r) { return r.json(); })
           .then(function(data) {
@@ -493,101 +972,74 @@
             } else {
               setErrorMsg(data.error || "Something went wrong.");
               setStatus("error");
-              if (widgetIdRef.current !== null && window.turnstile) {
-                window.turnstile.reset(widgetIdRef.current);
-              }
+              if (widgetIdRef.current !== null && window.turnstile) window.turnstile.reset(widgetIdRef.current);
               setToken("");
             }
           })
           .catch(function() {
             setErrorMsg("Connection failed. Please try again.");
             setStatus("error");
-            if (widgetIdRef.current !== null && window.turnstile) {
-              window.turnstile.reset(widgetIdRef.current);
-            }
+            if (widgetIdRef.current !== null && window.turnstile) window.turnstile.reset(widgetIdRef.current);
             setToken("");
           });
       }
 
       return (
-        <div>
+        <>
           <button className="fab-subscribe" onClick={function() { setShowModal(true); setStatus("idle"); }}>
-            <span style={{ fontSize: "16px" }}>{"\u{1F4E1}"}</span>
+            <span style={{ fontSize:"15px" }}>📡</span>
             GET THE DAILY BRIEFING
           </button>
 
           {showModal && (
             <div className="subscribe-overlay" onClick={function(e) { if (e.target === e.currentTarget) setShowModal(false); }}>
               <div className="subscribe-modal">
-                <button className="subscribe-close" onClick={function() { setShowModal(false); }}>{"\u00D7"}</button>
+                <button className="subscribe-close" onClick={function() { setShowModal(false); }}>×</button>
 
                 {status === "success" ? (
                   <div className="subscribe-success">
-                    <span className="check">{"\u2713"}</span>
+                    <span className="check">✓</span>
                     <h3>Welcome to ZRC Intelligence</h3>
-                    <p>Your first briefing arrives tomorrow at 06:30 CET.</p>
+                    <p>Your first briefing arrives tomorrow morning.</p>
                   </div>
                 ) : (
-                  <div>
+                  <>
                     <h2>Morning Intelligence</h2>
-                    <p>Get the daily geopolitical briefing in your inbox. 8 intelligence desks. Signal-classified. Every morning at 06:30 CET. Free.</p>
+                    <p>Markets, geopolitics, capital and opportunities. Signal-classified intelligence from Zenith Rise Capital.</p>
 
                     {status === "error" && <div className="subscribe-error">{errorMsg}</div>}
 
                     <div className="form-row">
-                      <input
-                        type="text"
-                        placeholder="First name (optional)"
-                        value={firstName}
-                        onChange={function(e) { setFirstName(e.target.value); }}
-                      />
-                      <input
-                        type="email"
-                        placeholder="your@email.com"
-                        value={email}
-                        onChange={function(e) { setEmail(e.target.value); }}
-                        style={{ flex: 2 }}
-                      />
+                      <input type="text" placeholder="First name (optional)" value={firstName} onChange={function(e) { setFirstName(e.target.value); }} />
+                      <input type="email" placeholder="your@email.com" value={email} onChange={function(e) { setEmail(e.target.value); }} style={{ flex:2 }} />
                     </div>
 
-                    {/* Honeypot — invisible to humans, bots fill it */}
                     <input
-                      type="text"
-                      name="website"
-                      tabIndex="-1"
-                      autoComplete="off"
-                      value={website}
-                      onChange={function(e) { setWebsite(e.target.value); }}
-                      style={{ position: "absolute", left: "-9999px", opacity: 0, pointerEvents: "none", height: 0, width: 0 }}
+                      type="text" name="website" tabIndex="-1" autoComplete="off"
+                      value={website} onChange={function(e) { setWebsite(e.target.value); }}
+                      style={{ position:"absolute", left:"-9999px", opacity:0, pointerEvents:"none", height:0, width:0 }}
                       aria-hidden="true"
                     />
 
-                    {/* Cloudflare Turnstile widget */}
-                    <div ref={widgetRef} style={{ margin: "4px 0 14px", minHeight: "65px" }}></div>
+                    <div ref={widgetRef} style={{ margin:"4px 0 14px", minHeight:"65px" }}></div>
 
-                    <button
-                      className="subscribe-submit"
-                      onClick={handleSubmit}
-                      disabled={status === "loading" || !token}
-                    >
-                      {status === "loading" ? "SUBSCRIBING..." : "SUBSCRIBE \u2014 FREE"}
+                    <button className="subscribe-submit" onClick={handleSubmit} disabled={status === "loading" || !token}>
+                      {status === "loading" ? "SUBSCRIBING..." : "SUBSCRIBE — FREE"}
                     </button>
 
-                    <div className="subscribe-note">
-                      No spam. Unsubscribe anytime. Protected by Cloudflare.
-                    </div>
-                  </div>
+                    <div className="subscribe-note">No spam. Unsubscribe anytime. Protected by Cloudflare.</div>
+                  </>
                 )}
               </div>
             </div>
           )}
-        </div>
+        </>
       );
     }
 
     function App() {
-      var [briefing, setBriefing] = useState(null);
-      var [loadError, setLoadError] = useState(false);
+      const [briefing, setBriefing] = useState(null);
+      const [loadError, setLoadError] = useState(false);
 
       useEffect(function() {
         fetch("data.json?v=" + Date.now())
@@ -599,41 +1051,40 @@
           .catch(function() { setLoadError(true); });
       }, []);
 
-      var now = new Date();
-      var timeStr = now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZoneName: "short" });
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString("en-GB", {
+        hour: "2-digit", minute: "2-digit", timeZoneName: "short"
+      });
 
       if (!briefing && !loadError) {
         return (
           <div className="loading-state">
             <div className="loading-dots"><span></span><span></span><span></span></div>
-            <p style={{ color: "#5A6A80", fontSize: "12px", fontFamily: "'JetBrains Mono', monospace", letterSpacing: "1px", marginTop: "16px" }}>
-              LOADING BRIEFING...
+            <p style={{ color:"#5A6A80", fontSize:"11px", fontFamily:"'JetBrains Mono', monospace", letterSpacing:"1px", marginTop:"16px" }}>
+              LOADING ZRC INTELLIGENCE...
             </p>
           </div>
         );
       }
 
-      var displayDate = briefing ? briefing.date : now.toLocaleDateString("en-GB", {
-        weekday: "long", day: "numeric", month: "long", year: "numeric"
+      const displayDate = briefing ? briefing.date : now.toLocaleDateString("en-GB", {
+        weekday:"long", day:"numeric", month:"long", year:"numeric"
       });
 
-      var generatedTime = briefing && briefing.generated
-        ? new Date(briefing.generated).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
+      const generatedTime = briefing && briefing.generated
+        ? new Date(briefing.generated).toLocaleTimeString("en-GB", { hour:"2-digit", minute:"2-digit" })
         : null;
 
-      var totalItems = briefing
-        ? Object.values(briefing.categories).reduce(function(sum, c) { return sum + (c.items ? c.items.length : 0); }, 0)
+      const totalItems = briefing?.categories
+        ? Object.values(briefing.categories).reduce(function(sum,c) {
+            return sum + (c.items ? c.items.length : 0);
+          }, 0)
         : 0;
-
-      var categoryOrder = [
-        "geopolitics", "fdi", "critical-minerals", "real-estate",
-        "ma-growth", "emerging-markets", "trade-policy", "food-agriculture"
-      ];
 
       return (
         <div>
           <header className="header">
-            <div className="header-inner">
+            <div className="shell">
               <div className="header-row">
                 <div>
                   <div>
@@ -641,60 +1092,83 @@
                     <span className="brand-tag">ZENITH RISE CAPITAL</span>
                   </div>
                   <h1 className="main-title">Morning Intelligence</h1>
-                  <p className="sub-title">Geopolitical Observatory · Investor Intelligence · Advisory Signals</p>
+                  <p className="sub-title">Markets · Geopolitics · Capital · Opportunities</p>
                 </div>
+
                 <div className="date-block">
                   <div className="date-text">{displayDate}</div>
                   <div className="time-text">{timeStr}</div>
-                  {generatedTime && (
-                    <div className="generated-tag">BRIEFING GENERATED {generatedTime} CET</div>
-                  )}
+                  {generatedTime && <div className="generated-tag">BRIEFING GENERATED {generatedTime} CET</div>}
                 </div>
               </div>
-              <div className="legend">
-                <span className="legend-badge signal-bullish">BULLISH</span>
-                <span className="legend-badge signal-bearish">BEARISH</span>
-                <span className="legend-badge signal-watch">WATCH</span>
-                <span className="legend-badge signal-neutral">NEUTRAL</span>
-              </div>
+
+              <nav className="top-nav">
+                <a href="#pulse">EXECUTIVE PULSE</a>
+                <a href="#radar">OPPORTUNITY RADAR</a>
+                <a href="#house-view">HOUSE VIEW</a>
+                <a href="#catalysts">CATALYSTS</a>
+                <a href="#deep-dive">DEEP DIVE</a>
+              </nav>
             </div>
           </header>
 
-          {briefing && briefing.globalBriefing && (
-            <div className="global-briefing">
+          {briefing && <ExecutiveLayer briefing={briefing} />}
+
+          {briefing && (briefing.globalBriefing || briefing.marketOpen) && (
+            <section className="shell global-briefing">
               <div className="global-briefing-box">
-                <div className="global-briefing-label">DAILY SYNTHESIS</div>
-                <div className="global-briefing-text">{briefing.globalBriefing}</div>
+                <div className="eyebrow" style={{ marginBottom:"8px" }}>DAILY SYNTHESIS</div>
+                {briefing.globalBriefing && (
+                  <div className="global-briefing-text">{briefing.globalBriefing}</div>
+                )}
+                {briefing.marketOpen && (
+                  <div className="market-open">
+                    <span className="market-open-label">AT THE OPEN</span>
+                    <span className="market-open-text">{briefing.marketOpen}</span>
+                  </div>
+                )}
               </div>
-            </div>
+            </section>
           )}
 
-          <main>
+          {briefing && <OpportunityRadar briefing={briefing} />}
+          {briefing && <HouseView briefing={briefing} />}
+          {briefing && <CatalystCalendar briefing={briefing} />}
+
+          <main className="shell" id="deep-dive">
             {loadError && (
               <div className="error-banner">
                 <p>Briefing data not yet available.</p>
-                <small>The daily briefing generates at 06:00 CET. Run the GitHub Action manually for your first briefing.</small>
+                <small>The daily briefing is generated automatically. Run the GitHub Action manually if needed.</small>
               </div>
             )}
 
             {briefing && (
-              <div>
-                <div className="desks-header">
-                  <span className="mono-label">{categoryOrder.length} DESKS · {totalItems} SIGNALS</span>
-                  <span className="mono-hint">TAP DESK TO EXPAND · TAP ITEM FOR DETAIL</span>
+              <>
+                <div className="section-head">
+                  <div>
+                    <div className="eyebrow">LEVEL 2 · DEEP DIVE</div>
+                    <h2 className="section-title">Intelligence Desks</h2>
+                  </div>
+                  <div className="mono-hint">TAP DESK TO EXPAND · TAP SIGNAL FOR DETAIL</div>
                 </div>
-                {categoryOrder.map(function(catId) {
-                  var catData = briefing.categories[catId];
+
+                <div className="desks-header">
+                  <span className="mono-label">{CATEGORY_ORDER.length} DESKS · {totalItems} SIGNALS</span>
+                </div>
+
+                {CATEGORY_ORDER.map(function(catId) {
+                  const catData = briefing.categories?.[catId];
                   if (!catData) return null;
-                  return <CategorySection key={catId} catId={catId} catData={catData} />;
+                  return <CategorySection key={catId} catData={catData} />;
                 })}
-              </div>
+              </>
             )}
           </main>
 
           <footer>
-            <div className="footer-brand">ZENITH RISE CAPITAL · GEOPOLITICAL INTELLIGENCE & INVESTMENT ADVISORY</div>
-            <div className="footer-legal">Calesius Global S.L. · Madrid · This briefing is for informational purposes only and does not constitute investment advice.</div>
+            <div className="footer-brand">ZENITH RISE CAPITAL · INDEPENDENT INTELLIGENCE FOR CAPITAL ALLOCATION AND CORPORATE DECISIONS</div>
+            <div className="footer-legal">Calesius Global S.L. · Madrid · For informational purposes only. Nothing herein constitutes investment advice or a recommendation to transact.</div>
           </footer>
 
           <SubscribeButton />
