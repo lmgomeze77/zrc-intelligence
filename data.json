@@ -1,8 +1,118 @@
 {
-  "generated": "2026-08-18T06:39:40.045Z",
-  "date": "Tuesday, 18 August 2026",
-  "globalBriefing": "EM central banks confront a narrowing policy corridor: Taiwan's 11.6% GDP growth and expected December rate rise signal resilience, yet eurozone Bund yields remain sticky despite ECB dovishness, while China's 10-year bonds compress amid weak growth—forcing foreign investors into US assets (788% surge in US-bound capital) and away from EM equities. Geopolitical risk has spiked: Trump's reported dialogue with North Korea and pressure on Korean exercises, combined with reports of 50,000 NK troops deploying to Russia, raise alliance credibility questions and sustain commodity supply uncertainty. Across private capital and infrastructure, bifurcation is evident: data center and AI-automation deals remain robust (THL/Queue-It, Bowmark/InfraXmedia, CIP's $3B fund), while hospitality real estate shows 30% distressed sales in California and Eventbrite exits at discounts, signaling cyclical stress in consumer-facing asset classes.",
-  "marketOpen": "Primary risk at market open: if Fed sentiment continues to shift dovish (softer rate expectations per TradingPedia), the dollar-yen carry unwind and emerging-market capital flight will accelerate, pressuring EM equities and widening EM-DM yield spreads despite still-elevated global rates.",
+  "schemaVersion": 2,
+  "generated": "2026-08-19T06:42:27.407Z",
+  "date": "Wednesday, 19 August 2026",
+  "riskIndex": 62,
+  "riskIndexPrev": null,
+  "marketRegime": {
+    "tone": "CAUTIOUS",
+    "rationale": "Middle East escalation rhetoric, Hormuz transit delays, and Ukraine political instability offset modest commodity relief and M&A activity.",
+    "riskIndex": 62,
+    "europe": "CAUTIOUS",
+    "spain": "NEUTRAL",
+    "privateMarkets": "SELECTIVE"
+  },
+  "regionSignals": {
+    "europe": "CAUTIOUS",
+    "spain": "NEUTRAL",
+    "privateMarkets": "SELECTIVE"
+  },
+  "executivePulse": [
+    {
+      "title": "Hormuz Supply Risk",
+      "text": "Unidentified projectile struck vessel in Strait of Hormuz on Tuesday; Iran conditions strait closure on US interim deal compliance. Brent crude at $91/bbl. Refined fuel shortages sustaining margin premiums despite crude weakness.",
+      "signal": "bearish"
+    },
+    {
+      "title": "Ukraine Election Pressure",
+      "text": "Ousted Defence Minister Mykhailo Fedorov publicly called for elections during wartime—first major political figure to break martial law consensus since Feb 2022. Creates policy uncertainty in active conflict.",
+      "signal": "watch"
+    },
+    {
+      "title": "Trump-Kim Signaling",
+      "text": "Trump announced pause on new Canadian tariffs for 3 days (trade deal progress) and is scaling back US-South Korea joint military exercises, citing 'very good' relationship with North Korea. De-escalation narrative conflicts with Iran rhetoric.",
+      "signal": "neutral"
+    }
+  ],
+  "opportunityRadar": [
+    {
+      "theme": "Middle East Energy Arbitrage",
+      "direction": "up",
+      "conviction": "HIGH",
+      "relevance": 5
+    },
+    {
+      "theme": "US Shale Discipline vs. Oil Upside",
+      "direction": "down",
+      "conviction": "HIGH",
+      "relevance": 4
+    },
+    {
+      "theme": "Data Center Debt & Construction",
+      "direction": "up",
+      "conviction": "MEDIUM",
+      "relevance": 3
+    },
+    {
+      "theme": "Healthcare IT & Revenue Automation",
+      "direction": "up",
+      "conviction": "MEDIUM",
+      "relevance": 2
+    },
+    {
+      "theme": "Defense Stock Revaluation Risk",
+      "direction": "down",
+      "conviction": "MEDIUM",
+      "relevance": 3
+    }
+  ],
+  "houseView": [
+    {
+      "label": "Spain & Madrid Real Estate",
+      "view": "NEUTRAL",
+      "signal": "neutral",
+      "change": "No new Spanish or Madrid-specific data today; view unchanged pending ECB rate guidance and eurozone inflation follow-through."
+    },
+    {
+      "label": "European Credit & Financing",
+      "view": "CAUTIOUS",
+      "signal": "bearish",
+      "change": "UK CPI accelerated to 2.9% YoY in July (above BoE target); eurozone energy shocks now visible in headline inflation. ECB Lane speech signals defence spending tailwinds but geopolitical cost-push remains."
+    },
+    {
+      "label": "Private Capital Deployment",
+      "view": "SELECTIVE",
+      "signal": "neutral",
+      "change": "Healthcare tech M&A (Weave $650M, Humata acquisition, CheckedUp sale) shows sector depth; data center debt surge ($1.3T tracking) attracts capital but faces policy headwinds (Pennsylvania restrictions). Deployment remains selective by subsector."
+    },
+    {
+      "label": "Energy & Commodities",
+      "view": "CONSTRUCTIVE",
+      "signal": "bullish",
+      "change": "Hormuz traffic slowdown, Iran-US rhetoric, and diesel margin records (per OilPrice) sustain refined-product upside. Brent at $91/bbl signals near-term supply tension. Thiel's $76M Argentina Vaca Muerta investment underscores long-cycle shale confidence despite US capex cuts."
+    },
+    {
+      "label": "Emerging Markets",
+      "view": "CAUTIOUS",
+      "signal": "watch",
+      "change": "Mecca Joint Defense Pact signals Middle East consolidation; Taliban governance instability persists; Trump's Hormuz 'US territory' labeling creates jurisdictional ambiguity. Pakistan nuclear posture discussion elevates tactical doctrine risk."
+    },
+    {
+      "label": "Global Risk Appetite",
+      "view": "DEFENSIVE",
+      "signal": "bearish",
+      "change": "Hormuz incident, Ukraine martial-law fracture, and Trump's volatile signaling (simultaneous tariff pause and Iran rhetoric) combine to justify defensive positioning. Chinese robot IPO strength does not offset geopolitical tail risks."
+    }
+  ],
+  "catalysts": [
+    {
+      "time": "WED TBC",
+      "title": "ECB Philip Lane remarks: Defence spending and euro area economy",
+      "impact": "MEDIUM"
+    }
+  ],
+  "globalBriefing": "Middle East escalation (Hormuz projectile strike, Trump's territorial labeling, Iran's closure threat) now drives macro volatility; refined-product margins at records despite crude decline, supporting energy inflation in eurozone and UK. Geopolitical bifurcation emerges as Trump simultaneously pauses Canadian tariffs (negotiation signal) while stoking Iran rhetoric, creating policy coherence risk. Ukraine's defence minister publicly calls for wartime elections, fracturing political consensus needed for sustained Western aid allocation. Private capital consolidates in healthcare tech (Weave $650M, Humata, CheckedUp) and data center infrastructure ($1.3T debt), signaling conviction in fragmented market consolidation and long-cycle hard assets.",
+  "marketOpen": "Watch for any escalation rhetoric from Iran or further US Hormuz statements; refined-product margins and Brent crude ($91/bbl baseline) will reprice on binary deal/closure binary. Monitor ECB Lane remarks for defence-spending fiscal implications and inflation guidance.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -10,29 +120,28 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "DBS lifts Taiwan 2026 GDP forecast to 11.6%, projects December rate rise",
-          "summary": "DBS Economics reports Taiwan 2026 GDP growth forecast at 11.6%, signaling double-digit expansion and triggering expectations for a monetary policy tightening in December. This represents material upward revision from prior consensus and suggests regional growth resilience amid global macro uncertainty.",
-          "source": "VT Markets",
-          "relevance": "Taiwan rate rise would strengthen NTD, compress EM carry trades, and signal confidence in regional demand offsetting developed-market growth concerns.",
-          "signal": "bullish"
+          "headline": "UK inflation accelerated to 2.9% YoY in July, above BoE target",
+          "summary": "UK CPI rose to 2.9% YoY in July per Financial Times, above the Bank of England's 2% target. Middle East energy shock cited as driver. Signals inflationary tail risk in developed economies and constrains BoE rate-cut optionality.",
+          "source": "Financial Times World",
+          "relevance": "Pushes eurozone inflation expectations higher and narrows scope for ECB easing; affects euro asset valuations and cross-border capital flows.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Euro extends gains as softer Fed expectations weigh on dollar valuation",
-          "summary": "According to TradingPedia, EUR/USD has extended gains amid market repricing of Federal Reserve rate-cut expectations, reflecting diminished Fed tightening bias relative to ECB policy divergence. The move signals dollar weakness despite higher absolute US rates if market participants anticipate earlier Fed pivot.",
-          "source": "TradingPedia",
-          "relevance": "Dollar depreciation raises hedging costs for USD-denominated emerging-market debt and increases refinancing pressure on dollar-indexed liabilities globally.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "German Bund yields hold near multi-day highs as ECB rate hike bets fade",
-          "summary": "Per CryptoRank, German Bund yields remain elevated despite reduced market expectations for ECB rate increases, indicating a repricing of long-term inflation and fiscal sustainability concerns independent of near-term policy. ECB's Philip R. Lane has published analysis on defense spending impacts on eurozone economy, adding structural commentary.",
-          "source": "CryptoRank; ECB Press Releases",
-          "relevance": "Sticky Bund yields despite dovish ECB pivot suggest eurozone inflation or debt concerns persist; investors rotating to fixed income would reduce risk appetite for peripheral bonds and EM assets.",
-          "signal": "watch"
+          "headline": "ECB Philip R. Lane: The rise in defence spending and the euro area economy",
+          "summary": "ECB Vice President Lane released remarks on how increased defence spending affects euro area growth, pricing, and monetary policy transmission. Content of remarks not yet detailed in available headlines; expected to address fiscal crowding, labour market, and inflation pass-through.",
+          "source": "ECB Press Releases",
+          "relevance": "May signal ECB's medium-term inflation and growth forecasts; could inform markets' expectations for autumn rate guidance and 2027 terminal rate.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "1-3M"
         }
       ],
-      "keyTakeaway": "If Taiwan delivers double-digit 2026 growth and the Fed cuts rates earlier than priced, EM central banks face a narrowing policy corridor—rising twin deficits in developed markets could trigger EM capital flight despite attractive yield spreads.",
-      "rawCount": 10
+      "keyTakeaway": "If UK inflation remains sticky above BoE target and eurozone absorbs similar energy shocks, ECB will face trade-off between defence-spending growth support and inflation risk, potentially deferring rate cuts into Q4 2026.",
+      "rawCount": 1
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -40,28 +149,47 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Trump states North Korea's Kim Jong Un has responded positively to conversation request; Seoul reportedly uneasy over potential drill reductions",
-          "summary": "According to Al Jazeera, Trump reports positive-stage diplomatic engagement with North Korea while simultaneously requesting Seoul reduce annual joint exercises. Per FT World, this demand has unsettled the South Korean alliance, raising questions about US commitment credibility and regional deterrence architecture.",
-          "source": "Al Jazeera; FT World",
-          "relevance": "Perceived weakening of US-ROK security commitment increases geopolitical risk premium in Korean won and equities; defense contractors exposed to Korea face policy uncertainty.",
-          "signal": "bearish"
+          "headline": "Ukraine's sacked Defence Minister Mykhailo Fedorov calls for elections during wartime martial law",
+          "summary": "Per Al Jazeera and BBC World, Fedorov issued first major Ukrainian political figure demand for presidential elections since Russia's full-scale invasion in February 2022. Martial law has suspended elections throughout the conflict; his call signals growing internal pressure to hold votes despite active hostilities.",
+          "source": "Al Jazeera, BBC World",
+          "relevance": "Indicates deepening civil-military political tension in Ukraine; electoral pressure during wartime could destabilize security consensus and redirect international aid debates toward domestic legitimacy vs. military continuity.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Russia warns UK over drone supplies to Ukraine; UK responds with solidarity pledge",
-          "summary": "Per BBC World, Russian authorities issued a warning regarding British drone provision to Ukraine, and the UK Ministry of Defence responded by affirming continued support alongside Ukraine. The exchange confirms sustained Western military assistance despite Russian objections.",
+          "headline": "Trump announces 3-day pause on new Canadian tariffs; US-South Korea to shorten joint war games at Washington's request",
+          "summary": "Per BBC World, Trump delayed imposition of new tariffs on Canadian goods for 72 hours to finalize trade deal. Separately, South Korea announced it is shortening military exercises with US, citing Washington request and citing Trump's stated 'very good' relationship with North Korea's Kim Jong Un.",
           "source": "BBC World",
-          "relevance": "Continued Western weapons escalation sustains Russia sanctions regime and commodity supply disruption; energy and metals price volatility remains elevated.",
-          "signal": "watch"
+          "relevance": "Signals Trump administration's pivot toward negotiation over tariff escalation (near-term market relief) and de-militarization of Korean peninsula (reduces deterrent posture). Contradicts concurrent Iran rhetoric; creates policy coherence risk.",
+          "signal": "neutral",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
         },
         {
-          "headline": "Zambia's incumbent Hichilema wins second presidential term with 60% of vote after election official attacks temporarily halted count",
-          "summary": "According to Al Jazeera, President Hichilema secured reelection with 60% support, though the process involved security incidents that briefly interrupted vote tallying. This outcome provides policy continuity for Africa's copper-rich economy.",
-          "source": "Al Jazeera",
-          "relevance": "Election victory stabilizes Zambia's debt restructuring path and mining policy framework; reduces near-term sovereign risk and supports copper market stability.",
-          "signal": "bullish"
+          "headline": "Trump posts map labeling Strait of Hormuz 'US territory' on Truth Social; Iran conditions strait closure on US interim deal",
+          "summary": "Per Asia Times and multiple energy sources, Trump posted a map on Truth Social depicting the Strait of Hormuz as US territory, escalating rhetoric days after threatening such a declaration. Simultaneously, Iran (per Oil & Gas 360) stated the strait will remain shut until US meets interim deal conditions.",
+          "source": "Asia Times, Oil & Gas 360",
+          "relevance": "Elevates jurisdictional and sovereignty dispute over world's most critical oil chokepoint; creates binary outcome risk (deal or prolonged closure). Markets pricing intermediate pricing tension; extended closure would trigger $120+ Brent scenario.",
+          "signal": "bearish",
+          "impact": 5,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Mecca Joint Defense Pact signed by Saudi Arabia, Turkey, Pakistan; creates collective defence linking Middle East and South Asia",
+          "summary": "Per Asia Times, Saudi Arabia, Turkey, and Pakistan signed the Mecca Joint Defense Pact, establishing a new collective defence arrangement. The pact represents tactical consolidation of Middle East and South Asia geopolitical posture and introduces new alliance architecture outside traditional frameworks.",
+          "source": "Asia Times",
+          "relevance": "Signals structural realignment in Middle East deterrence doctrine; may elevate regional arms competition, defence spending, and capital flows into Gulf security infrastructure.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If Trump reduces Korea military exercises and North Korea sanctions enforcement erodes, regional conflict risk premium rises, weighing on Asian equities and safe-haven currencies; commodity exporters benefit from sustained Western-Russia confrontation.",
+      "keyTakeaway": "If Trump's Hormuz and tariff rhetoric remain uncoordinated, market volatility will spike on uncertainty over whether negotiation (Canada precedent) or confrontation (Iran rhetoric) governs policy; Ukraine electoral pressure will distract from military consensus needed for Western aid allocation.",
       "rawCount": 10
     },
     "fdi": {
@@ -70,29 +198,28 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "China's 10-year government bond yield falls to 13-month low amid weak economic growth; foreign investors rotate toward sovereign debt",
-          "summary": "Per FT World, Chinese 10-year yields have declined to 13-month lows as investors flee risk assets on growth concerns, signaling capital flight into perceived safety. This yield compression reflects demand from both domestic and foreign allocators seeking yield with perceived stability.",
-          "source": "FT World",
-          "relevance": "China yield compression narrows Chinese-US rate differentials, reducing carry-trade appeal and pressuring CNY; emerging markets lose relative yield advantage versus developed-market safe havens.",
-          "signal": "bearish"
+          "headline": "Chinese humanoid robot maker Unitree surges 600% in Shanghai trading debut",
+          "summary": "Per Financial Times World, Unitree Robotics began Shanghai trading and surged 600% on debut, reflecting investor appetite for humanoid and autonomous systems amid global AI capital acceleration. No pricing or valuation details disclosed in headline.",
+          "source": "Financial Times World",
+          "relevance": "Signals sustained Chinese domestic capital appetite for hard tech and autonomous systems; may redirect emerging-market FDI away from traditional infrastructure into AI-adjacent hardware.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Foreign investors increasingly reallocate from emerging-market equities into emerging-market debt; US-bound outbound investment surges 788% to account for nearly 40% of total",
-          "summary": "According to Valor International and finance.biggo.com, foreign portfolio flows are rotating from EM equities to EM hard-currency bonds, while outbound investment surges toward US assets—with US-bound capital reaching 788% growth and 40% of total outflows. This reflects risk-off repositioning and US rate attraction.",
-          "source": "Valor International; finance.biggo.com",
-          "relevance": "Capital reallocation away from EM equities into US fixed income depresses emerging-market equity valuations and sovereign bond demand; increases refinancing risk for EM sovereigns.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "Malaysia's institutional investors show increased interest in digital assets; Floating Point announces $125M Fund III focused on complexity arbitrage",
-          "summary": "Per Asia Asset Management and The Manila Times, Malaysian institutional investors are diversifying into digital assets, while venture capital funds continue deploying capital into infrastructure-adjacent technologies. This signals selective risk appetite in Asia despite broader EM headwinds.",
-          "source": "Asia Asset Management; The Manila Times",
-          "relevance": "Institutional adoption of digital assets in Asia creates alternative capital deployment channels; reduces pressure on traditional asset classes in region but adds regulatory uncertainty.",
-          "signal": "neutral"
+          "headline": "FT assessment: 'The defence stocks aren't defensive'; rearmament cycle may underdeliver",
+          "summary": "Per Financial Times World headline, analysis suggests defence equities are not behaving defensively and that the rearmament thesis may disappoint. No detailed reasoning provided in headline; appears to be contrarian view vs. consensus defence-spending tailwind narrative.",
+          "source": "Financial Times World",
+          "relevance": "Challenges consensus bullish case on defence sector amid geopolitical escalation; suggests valuation risk or execution concerns within defence supply chains.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "low",
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If foreign investors continue rotating from EM equities into US bonds and digital assets while avoiding EM debt, emerging-market currencies face depreciation pressure and refinancing costs rise materially for sovereigns and corporates.",
-      "rawCount": 10
+      "keyTakeaway": "If defence equities continue to underperform despite Middle East escalation and NATO rearmament, capital will rotate into hard tech (robotics, AI infrastructure) and away from traditional defence contractors, reshaping emerging-market FDI patterns.",
+      "rawCount": 5
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
@@ -100,28 +227,67 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Libya seeks $36–40 billion in foreign investment to expand oil output to 2 million barrels per day by early 2030s",
-          "summary": "Per OilPrice.com citing Financial Times reporting, Libyan authorities have signaled capital requirements of $36–40 billion to boost crude production capacity toward 2 million bpd. This investment horizon extends into 2030s and depends on geopolitical stability and sanctions environment.",
+          "headline": "Oil prices extend gains for fourth consecutive day; Hormuz tanker traffic slows amid Iran-US rhetoric escalation",
+          "summary": "Per OilPrice.com, crude oil extended gains for the fourth consecutive day as tanker-tracking data shows fresh Strait of Hormuz traffic slowdown. Fresh Iran-US rhetoric escalation cited as driver. Brent crude reported at ~$91/bbl as of Tuesday trading.",
           "source": "OilPrice.com",
-          "relevance": "Libya expansion remains contingent on Western sanctions relief and security stability; represents supply-side pressure on oil prices only if geopolitical conditions normalize.",
-          "signal": "watch"
+          "relevance": "Supply shock premium now embedded in Brent pricing; refined-product margins remain elevated. Extended Hormuz tension would support $95-100/bbl floor; closure scenario triggers $120+ spike. Energy inflation risk for eurozone and UK persists.",
+          "signal": "bearish",
+          "impact": 4,
+          "conviction": "high",
+          "horizon": "0-1M"
         },
         {
-          "headline": "US shale majors cut capital spending plans despite higher oil prices; prioritize debt reduction and shareholder returns",
-          "summary": "According to OilPrice.com, leading US shale producers are reducing capex budgets despite elevated crude valuations, instead allocating cash toward balance-sheet repair and distributions. This reflects capital discipline after prior cycle losses.",
+          "headline": "US refiners report extraordinary earnings amid Iran war; refined fuel shortage deepens despite Brent decline from $126 wartime peak to ~$90",
+          "summary": "Per OilPrice.com, US refiners are generating outsized earnings despite Brent crude declining from $126 wartime peak to ~$90/bbl. Shortage of refined fuels (diesel, gasoline) cited as margin driver. Refiner spreads at elevated levels relative to crude pricing.",
           "source": "OilPrice.com",
-          "relevance": "Subdued shale capex despite $70+ oil limits US supply growth, supporting price floors; reduces sector employment and infrastructure investment multipliers.",
-          "signal": "neutral"
+          "relevance": "Refined-product margin regime is decoupled from crude; implies structural supply shortage (either refinery downtime or logistics disruption) that supports energy inflation longer than crude price alone suggests. Benefit to integrated majors with refining exposure; headwind to European refiners with weaker margins.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Power Metals advances North America's only cesium project amid critical mineral supply-chain competition with defense priorities",
-          "summary": "Per OilPrice.com, Power Metals is progressing cesium production development as US defense requirements collide with critical mineral supply constraints. This represents early-stage deployment in a defensively important rare-earth adjacent sector.",
+          "headline": "Hormuz Strait closure conditional on US interim deal compliance, per Iran statement",
+          "summary": "Per Oil & Gas 360 citing BOE Report, Iran announced the Strait of Hormuz will remain shut until the US meets the conditions of an interim deal. No details on deal terms disclosed in headline; represents binary negotiation outcome.",
+          "source": "Oil & Gas 360",
+          "relevance": "Creates two scenarios: (1) deal achieved, strait reopens, Brent crashes toward $70; (2) stalemate, closure persists indefinitely, Brent rallies to $120+. Market currently pricing intermediate ($85-95) scenario; tail risk to both sides is extreme.",
+          "signal": "watch",
+          "impact": 5,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "US shale majors cut spending plans despite higher oil prices, shifting cash to shareholder returns",
+          "summary": "Per OilPrice.com, US oil companies dominating the shale sector are trimming capital expenditure plans and redirecting cash to shareholder distributions despite elevated crude prices. Reflects discipline over volume growth in price-volatile environment.",
           "source": "OilPrice.com",
-          "relevance": "Cesium and critical-minerals development supports US defense-industrial base resilience but faces long lead times; creates upside optionality for specialized materials allocators.",
-          "signal": "watch"
+          "relevance": "Constrains US production growth ceiling; if Hormuz closure persists, OPEC+ will have monopoly on marginal supply and pricing power. Supports long-cycle LNG and deepwater over shale. Positive for energy security of non-US producers (Argentina, Canada).",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "6-12M"
+        },
+        {
+          "headline": "Peter Thiel invests $76 million for 1% stake in major Vaca Muerta shale operator, Argentina",
+          "summary": "Per OilPrice.com, Palantir chairman and hedge fund owner Peter Thiel acquired a 1% stake in a top-tier Vaca Muerta shale operator, representing $76M capital commitment. Described as latest evidence of institutional conviction in Argentina's unconventional oil play.",
+          "source": "OilPrice.com",
+          "relevance": "Signals institutional capital confidence in Argentina shale despite macro volatility and currency instability; suggests long-cycle unconventional plays are attractive relative to Middle East upside/downside volatility. Relevant to Argentina EM positioning and energy commodity hedging strategies.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "12M+"
+        },
+        {
+          "headline": "Unidentified projectile strikes cargo vessel in Strait of Hormuz; Brent crude tops $91/bbl",
+          "summary": "Per Oil & Gas 360, an unidentified projectile struck a cargo vessel transiting the Strait of Hormuz on Tuesday. Brent crude rose above $91/bbl in response. No vessel damage or casualty details disclosed; no attribution of projectile source in headline.",
+          "source": "Oil & Gas 360",
+          "relevance": "First direct physical attack on transit vessel reported; marks tactical escalation beyond rhetoric. Creates insurance/war-risk premium for tanker fleet and elevates tail-risk probability for extended closure. Will drive rerouting around Cape of Good Hope, adding 7-10 days to voyage duration and lifting all-in shipping cost 15-25%.",
+          "signal": "bearish",
+          "impact": 4,
+          "conviction": "high",
+          "horizon": "0-1M"
         }
       ],
-      "keyTakeaway": "If US shale capex remains flat and Libya sanctions persist, crude supply tightens into 2027–2028; critical-minerals scarcity (cesium, rare earths) will elevate defense and energy transition costs unless domestic production accelerates.",
+      "keyTakeaway": "If Hormuz closure persists beyond 30 days, refined-product margins will compress from current extremes but Brent will spike to $115-130/bbl, rewarding energy equity and LNG positions while pressuring European manufacturing competitiveness and eurozone inflation expectations.",
       "rawCount": 10
     },
     "real-estate": {
@@ -130,29 +296,38 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "California hotel sales rise amid distressed market; nearly 30% involve lender involvement, signaling debt maturity pressures",
-          "summary": "Per Bisnow, California hotel transaction volumes have increased, but approximately 30% involve lender-driven or distressed sales, indicating maturing debt obligations and refinancing stress. This trend reflects higher cap rates and declining occupancy resilience post-pandemic.",
+          "headline": "Data center debt surge reaches $1.3 trillion; 15 major lenders tracked funding 4,296 US facilities",
+          "summary": "Per Bisnow, an accounting of 4,296 data center facilities across the US reveals $1.3 trillion in cumulative debt outstanding, with 15 major lenders leading the financing wave. No breakdown of lender concentration, default rates, or debt-to-EBITDA metrics disclosed.",
           "source": "Bisnow",
-          "relevance": "Hospitality debt maturity wall pressures hotel REITs and mezzanine lenders; forces down valuations and increases operator leverage risk in high-cost markets.",
-          "signal": "bearish"
+          "relevance": "Capital intensity of AI-adjacent infrastructure creates systemic credit risk if utilization or power cost assumptions break; also signals institutional conviction in decades-long datacenter capex cycle. Relevant to European infrastructure funds and real estate debt markets looking to deploy capital in hard assets.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "6-12M"
         },
         {
-          "headline": "Builders increasingly adopt prefabrication and modular construction to accelerate delivery timelines as speed becomes critical investment consideration",
-          "summary": "According to Bisnow, construction firms are turning toward prefab solutions to meet rapid delivery requirements across data centers and residential sectors, with speed advantages outweighing cost considerations. This signals market demand prioritizing time-to-occupancy.",
+          "headline": "Pennsylvania Governor Josh Shapiro implements restrictive executive order on data center projects amid public backlash",
+          "summary": "Per Bisnow, Pennsylvania Gov. Shapiro announced new restrictions on data center development via executive order, responding to public opposition to projects. No specific restrictions detailed; description as 'restrictive' implies tightened environmental, utility, or permitting standards.",
           "source": "Bisnow",
-          "relevance": "Modular construction adoption reduces labor dependency and supply-chain bottlenecks, supporting data center ROI but potentially pressuring traditional construction labor demand.",
-          "signal": "bullish"
+          "relevance": "Signals emerging regulatory headwind to data center sprawl in Northeast; may redirect capital toward less-constrained geographies (Texas, Arizona). Creates policy risk for $1.3T debt portfolio if permitting delays cascade.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
         },
         {
-          "headline": "CIP secures $3 billion for Growth Markets Fund II; J.P. Morgan publishes infrastructure financing framework for US data center expansion",
-          "summary": "Per Mexico Business News and J.P. Morgan, growth-focused infrastructure capital continues deploying at scale—CIP raising $3 billion for emerging-market infrastructure, while JPM outlines financing solutions for US data center proliferation. Both signals reflect sustained long-duration capital appetite.",
-          "source": "Mexico Business News; J.P. Morgan",
-          "relevance": "Data center and emerging-market infrastructure financing remains robust despite macro uncertainty; supports secular AI/computing demand thesis and EM growth narratives.",
-          "signal": "bullish"
+          "headline": "AvalonBay, Equity Residential (merged as Vivmark) sell Boston apartment towers as merger settlement condition",
+          "summary": "Per Bisnow, Vivmark (the merged entity of AvalonBay and Equity Residential) agreed to divest a pair of Boston residential properties as part of antitrust settlement with Massachusetts state authorities. No sale price, timing, or buyer details disclosed.",
+          "source": "Bisnow",
+          "relevance": "Indicates regulatory sensitivity to residential consolidation in high-cost coastal markets; may signal broader antitrust scrutiny of large multifamily REITs. Liquidation of Boston assets at potential distressed pricing could create acquisition opportunity for smaller regional operators.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "1-3M"
         }
       ],
-      "keyTakeaway": "If maturing hotel debt accelerates forced sales while data center demand sustains capital flows, real estate bifurcates—hospitality distress offsets data center strength, pressuring diversified real estate funds toward sector rotation.",
-      "rawCount": 10
+      "keyTakeaway": "If data center debt financing remains abundant but regulatory permitting becomes materially slower, capital will concentrate in existing parks with stranded debt in newer, delayed projects, creating refinancing risk and potential equity write-downs for sponsors.",
+      "rawCount": 5
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
@@ -160,29 +335,58 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Eventbrite shareholders approve $500 million sale to Bending Spoons; regulatory approval pending",
-          "summary": "Per TicketNews, Eventbrite shareholders have voted in favor of a $500 million acquisition by Bending Spoons, with regulatory clearance still outstanding. Transaction values the ticketing platform at a discount to historical valuations, reflecting challenged digital advertising environment.",
-          "source": "TicketNews",
-          "relevance": "Eventbrite exit signals private capital consolidation in digital marketing/ticketing; regulatory approval timing and conditions will indicate antitrust enforcement direction.",
-          "signal": "neutral"
+          "headline": "TowerBrook, Clayton Dubilier & Rice-backed R1 acquires prior-authorization AI firm Humata",
+          "summary": "Per PE Hub, healthcare revenue management company R1 (backed by TowerBrook and CD&R) announced acquisition of Humata, a prior-authorization (PA) automation platform using AI. No transaction value, deal timing, or terms disclosed in headline.",
+          "source": "PE Hub",
+          "relevance": "Signals PE capital appetite for healthcare administrative automation (PA, billing, revenue cycle). Humata's core IP (automating insurer-provider administrative friction) is high-margin software overlay. Deal structure suggests PE view of near-term consolidation in healthcare backend tech.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
         },
         {
-          "headline": "THL Capital acquires Queue-It from GRO Capital as second investment from THL Automation Fund II; agentic commerce growth targeted",
-          "summary": "Per PE Hub, THL Capital is acquiring Queue-It (consumer commerce automation software) from GRO Capital as part of its Automation Fund II deployment strategy. Transaction reflects rising PE interest in autonomous/agentic commerce tooling amid AI acceleration.",
+          "headline": "Francisco Partners takes health tech firm Weave private for $650 million",
+          "summary": "Per PE Hub, private equity firm Francisco Partners announced a going-private transaction for Weave, a health tech platform serving small and medium-sized healthcare businesses, valuing the company at $650 million. No prior revenue, EBITDA, or valuation multiple details disclosed.",
           "source": "PE Hub",
-          "relevance": "AI-adjacent software acquisitions create upside optionality for portfolio companies exposed to commerce automation; validates agentic commerce as emerging private equity thesis.",
-          "signal": "bullish"
+          "relevance": "Weave is software-as-a-service platform for healthcare practice management; $650M valuation suggests 5-8x EBITDA multiple, implying ~$80-130M EBITDA and strong unit economics. Reflects PE confidence in fragmented healthcare SME market consolidation thesis.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Bowmark Capital acquires majority stake in InfraXmedia from Opus Origin; platform serves global data center and AI infrastructure sectors",
-          "summary": "According to PE Hub, Bowmark Capital has taken a controlling stake in InfraXmedia (B2B media, events, intelligence platform covering data centers, compute, AI infrastructure) from prior owner Opus Origin. Acquisition reflects strong consolidation appetite in infrastructure-adjacent information services.",
+          "headline": "Rockbridge agrees to sell healthcare media firm CheckedUp to Providence Equity; Varsity Healthcare Partners joins as minority investor",
+          "summary": "Per PE Hub, Rockbridge Capital agreed to sell CheckedUp (a healthcare media/content platform) to Providence Equity Partners, with Varsity Healthcare Partners joining as strategic minority investor alongside existing management. No transaction value or timeline disclosed.",
           "source": "PE Hub",
-          "relevance": "Data center and AI infrastructure information services experience sustained PE demand; validates secular growth in infrastructure intelligence and vertical SaaS models.",
-          "signal": "bullish"
+          "relevance": "Content/media in healthcare vertical is niche consolidation play; Providence's entry signals larger fund conviction in healthcare marketing and patient engagement segments. Minority co-invest structure suggests management continuity and growth optionality valued by both sellers and buyers.",
+          "signal": "bullish",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Stellex-backed Crest Industrial Technology acquires manufacturer Dukane",
+          "summary": "Per PE Hub, Crest (an industrial technology manufacturer backed by Stellex Capital Partners) announced acquisition of Dukane. No transaction value, Dukane business description, or integration timeline disclosed.",
+          "source": "PE Hub",
+          "relevance": "Stellex is a lower-middle-market PE firm; Crest transaction represents typical platform add-on M&A. Relevant to industrial consolidation and manufacturing automation themes but limited information constrains investment implication.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Agellus-backed Bluejack acquires Phillips Fire & Life Safety, expanding fire/life safety services nationally",
+          "summary": "Per PE Hub, Bluejack (a national fire and life safety services provider backed by Agellus Capital) announced acquisition of Phillips Fire & Life Safety, expanding its service footprint. No transaction value, integration plans, or market share impact disclosed.",
+          "source": "PE Hub",
+          "relevance": "Fire and life safety is essential infrastructure services with recurring revenue and limited commoditization. Add-on M&A typical in Agellus platform consolidation strategy. Limited capital allocation insight without deal size or strategic rationale.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "1-3M"
         }
       ],
-      "keyTakeaway": "If PE deployment into AI/automation software and infrastructure intelligence sustains while consumer/digital advertising exits decelerate, private capital increasingly concentrates in infrastructure-adjacent and agentic technology sectors with defensible unit economics.",
-      "rawCount": 10
+      "keyTakeaway": "Healthcare software and services (Weave, Humata, CheckedUp) are attracting institutional PE capital at elevated multiples, suggesting buyer conviction in continued consolidation and margin expansion in fragmented SME healthcare tech markets; industrial add-ons remain typical bolt-on activity with limited alpha implications.",
+      "rawCount": 5
     },
     "emerging-markets": {
       "label": "Emerging Markets",
@@ -190,52 +394,56 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Chinese AI developers undercut US token pricing; enterprises report higher total cost of ownership once cumulative token usage calculated",
-          "summary": "Per Asia Times, Chinese artificial intelligence vendors are offering lower per-token pricing versus US competitors, but analyst reports indicate enterprise customers incur higher aggregate costs due to elevated token consumption rates and integration complexity. This reflects a race-to-the-bottom dynamic masking inferior efficiency.",
+          "headline": "Saudi Arabia, Turkey, Pakistan sign Mecca Joint Defense Pact, creating collective defence linking Middle East and South Asia",
+          "summary": "Per Asia Times, Saudi Arabia, Turkey, and Pakistan signed the Mecca Joint Defense Pact, establishing a new collective defence arrangement. Described as striking in its central promise of armed response to threats against any signatory. Represents new alliance architecture outside traditional NATO/UN frameworks.",
           "source": "Asia Times",
-          "relevance": "Chinese AI commoditization creates margin pressure on semiconductor and cloud providers globally; enterprises may still favor US vendors on TCO, limiting AI revenue upside for Chinese tech giants.",
-          "signal": "bearish"
+          "relevance": "Signals structural realignment in Middle East and South Asia deterrence posture; implies elevated defence spending by all signatories and potential for arms competition with other regional blocs. Affects EM capital flows toward Gulf defence infrastructure and Pakistan military modernization.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
         },
         {
-          "headline": "Ukraine's Zelensky reports North Korea preparing to deploy up to 50,000 troops to support Russia military campaign; South Korea Ministry and Trump administration respond with competing narratives",
-          "summary": "According to Asia Times, Ukrainian President Zelensky has stated North Korea is mobilizing approximately 50,000 troops for Russia's war effort. This escalation is interpreted differently by Seoul and the Trump administration, with geopolitical implications for regional deterrence and sanctions enforcement.",
+          "headline": "Taliban governance in Afghanistan assessed as 'ultra-extremist'; resistance movements reported growing despite five years in power",
+          "summary": "Per Asia Times, Taliban rule in Afghanistan remains 'ultra-extremist' in character, with no substantive effort at inclusive governance. Article describes growing resistance movements and suggests Taliban rule is fragile despite de facto territorial control.",
           "source": "Asia Times",
-          "relevance": "North Korean force deployment to Russia escalates US-China proxy competition; increases risk premium for Korean won, reduces EM risk appetite, and sustains commodity price volatility.",
-          "signal": "watch"
+          "relevance": "Afghanistan remains ungoverned territory with nascent civil conflict; creates refugee flows toward Pakistan and Iran, straining those economies. Reduces foreign investment and trade; relevant to Pakistan's fiscal and security positioning within Mecca Pact framework.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "6-12M"
         },
         {
-          "headline": "African GDP uplift potential exceeds $1 trillion by 2035 via AI investment; power transmission infrastructure remains critical bottleneck limiting energy distribution and growth",
-          "summary": "Per African Business, Boye Ademola (Bazara Tech CEO) estimates AI investment could add >$1 trillion to African GDP by 2035. However, concurrent reporting highlights that power transmission systems have lagged generation capacity, creating infrastructure mismatches limiting growth realization.",
-          "source": "African Business",
-          "relevance": "Africa's AI and infrastructure growth potential remains contingent on capital availability and transmission buildout; creates investment opportunity in infrastructure financing but carries execution risk.",
-          "signal": "watch"
+          "headline": "US Under Secretary of War for Policy Elbridge Colby addresses Strategic Command Deterrence Symposium; article suggests Seoul should be seated at tactical nuclear weapons discussion table",
+          "summary": "Per Asia Times republishing Pacific Forum analysis, commentary argues South Korea should be included in US-led discussions on tactical nuclear weapons strategy. Reflects broader strategic posture debate over Northeast Asia deterrence architecture.",
+          "source": "Asia Times",
+          "relevance": "Signals emerging debate within US policy circles over nuclear doctrine expansion in Northeast Asia. Relevant to South Korea's strategic positioning and to US-China deterrence competition; may inform Seoul's defence spending and alliance dynamics.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "6-12M"
+        },
+        {
+          "headline": "Trump posts map on Truth Social labeling Strait of Hormuz 'US territory'; Pakistan, Saudi Arabia, Turkey assess Middle East security architecture via Mecca Pact",
+          "summary": "Per emerging market sources, Trump's labeling of Hormuz as US territory, combined with Mecca Pact signing, reflects competing claims over Middle East energy chokepoint and security architecture. Mecca Pact signatories (Saudi Arabia, Turkey) are directly affected by Hormuz jurisdiction dispute.",
+          "source": "Multiple emerging market sources",
+          "relevance": "Creates policy friction between US unilateral assertion of Hormuz control and regional actors' (Saudi Arabia, Turkey) preference for multilateral/collective framework. May accelerate diversification of trade routes and EM capital into alternative energy corridors (China-Central Asia, India-Middle East).",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If North Korean military intervention in Russia escalates and Chinese AI margins compress under price competition, emerging markets face heightened geopolitical risk premium and reduced growth catalysts; African infrastructure and AI potential remain structurally constrained by capital access.",
-      "rawCount": 10
+      "keyTakeaway": "If Trump's Hormuz assertion collides with Mecca Pact's collective defence framework, Middle East regional powers will accelerate defence spending and diversify energy trade routes away from US-controlled chokepoint, benefiting Pakistan, Turkey, and Saudi Arabia defence contractors while creating capital flows toward non-dollar energy and trade infrastructure.",
+      "rawCount": 9
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "White House accuses more than 40 countries of assisting China in tariff circumvention; alleges evasion of US trade restrictions",
-          "summary": "Per theCradle.co, the White House has publicly named over 40 nations as facilitating Chinese efforts to circumvent US tariff barriers, signaling escalating enforcement scrutiny of transshipment, third-country assembly, and origin-manipulation schemes. This reflects broadening protectionist enforcement beyond bilateral US-China disputes.",
-          "source": "theCradle.co",
-          "relevance": "Expanded tariff enforcement against third countries increases compliance costs for global supply chains and may trigger retaliatory measures; raises uncertainty for multinational manufacturers and emerging-market export-dependent economies.",
-          "signal": "bearish"
-        },
-        {
-          "headline": "India challenges US quartz tariffs at WTO, citing export damage; case represents emerging-market pushback against selective US protectionism",
-          "summary": "According to Whalesbook, India has filed a WTO dispute over US quartz tariffs, alleging material export losses. This challenge reflects broader emerging-market resistance to US tariff architecture and signals potential escalation of multilateral trade disputes.",
-          "source": "Whalesbook",
-          "relevance": "WTO dispute initiations increase legal and negotiation costs for US tariff policy; may delay enforcement, encourage negotiated settlements, or trigger retaliatory actions from India affecting US agricultural/tech exports.",
-          "signal": "neutral"
-        }
-      ],
-      "keyTakeaway": "If White House escalates tariff enforcement against 40+ countries while India and others pursue WTO challenges, global supply chains face material compliance uncertainty, raising production costs and pressuring exporters in textiles, minerals, and agricultural sectors.",
-      "rawCount": 2
+      "items": [],
+      "keyTakeaway": "No trade-policy specific items today; monitor Trump's 3-day tariff pause on Canada for outcome (expansion of negotiation vs. return to escalation rhetoric).",
+      "rawCount": 0
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
@@ -243,29 +451,28 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Soybeans close up 23.5 cents per bushel on August 17; corn and soybean markets rebound amid US grain sector recovery",
-          "summary": "Per Successful Farming and Agrolatam, soybean futures recorded a 23.5-cent gain on August 17, 2026, as broader US grain markets rebounded. This price movement reflects crop condition reassessment or demand signals in agricultural commodities.",
-          "source": "Successful Farming; Agrolatam",
-          "relevance": "Soybean price recovery supports farm income margins and reduces hedge fund short positions; impacts feedstock costs for livestock operations and agricultural input demand.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Canadian crop diseases threaten global wheat and canola supplies; disease emergence raises production risk for key exporters",
-          "summary": "Per streamlinefeed.co.ke, disease outbreaks affecting Canadian crops (wheat and canola) present material supply-side risks to global markets given Canada's major exporter position. Disease severity and geographic spread remain unclear but signal potential supply tightening.",
-          "source": "streamlinefeed.co.ke",
-          "relevance": "Canadian wheat/canola supply risk supports prices for US grains and alternative oilseeds; benefits domestic US farmers and raises global food price inflation expectations.",
-          "signal": "bullish"
-        },
-        {
-          "headline": "Quorn Foods UK retail recovery accelerates; foodservice channel 'likely to worsen before improving,' company reports",
-          "summary": "According to AgFunder News, Quorn (alternative protein) has seen UK retail momentum improve with new protein-bite products capturing consumer segments at higher price points and margins. However, foodservice remains pressured and management expects near-term deterioration.",
+          "headline": "Quorn Foods UK retail recovery accelerates; foodservice segment 'likely to get worse before it gets better'",
+          "summary": "Per AgFunder News, Quorn (alternative protein manufacturer) reports retail recovery in UK market with new protein bites reaching broader consumer base at higher price points and margins. Foodservice segment forecast to remain under pressure near-term. No unit economics or market share data disclosed.",
           "source": "AgFunder News",
-          "relevance": "Retail strength in alt protein signals consumer willingness to pay premium; foodservice weakness reflects hospitality margin compression and consumer price sensitivity, creating bifurcated demand.",
-          "signal": "neutral"
+          "relevance": "Signals bifurcated recovery in alt-protein sector (retail strength, foodservice weakness). Relevant to European consumer staples positioning and protein supply chain narratives; suggests consumer willingness to pay premium for novel formats.",
+          "signal": "bullish",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "DSM-Firmenich scales Protopia yeast protein to industrial scale; targets fishmeal and whey displacement",
+          "summary": "Per AgFunder News, ingredient company DSM-Firmenich announced industrial-scale production of Protopia (yeast-derived protein). Technology targets displacement of fishmeal and whey protein in food and feed. Noted as potential revenue stream for Indian ethanol producers with unutilized capacity.",
+          "source": "AgFunder News",
+          "relevance": "Signals industrial-scale fermentation infrastructure entering commodity protein markets; threatens traditional aquafeed and dairy protein margins. Relevant to feed ingredient pricing and India ethanol sector utilization; supports long-cycle biotech capex thesis.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "6-12M"
         }
       ],
-      "keyTakeaway": "If Canadian wheat/canola diseases persist while US grain prices recover, US agricultural exports gain competitive advantage and farm income stabilizes; alternative protein demand remains retail-dependent amid foodservice headwinds.",
-      "rawCount": 10
+      "keyTakeaway": "If Protopia and similar fermentation-based proteins reach cost parity with fishmeal and whey at scale, traditional animal protein supply chains will face margin compression and capex reallocation toward biofermentation infrastructure in India and Europe.",
+      "rawCount": 2
     }
   }
 }
