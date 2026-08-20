@@ -47,8 +47,10 @@ file is therefore always complete — the front-end never has to guess or hide a
   "houseView": [             // always these 6 labels, always in this order
     { "label": "Spain & Madrid Real Estate",
       "view": "CONSTRUCTIVE",  // CONSTRUCTIVE | SELECTIVE | NEUTRAL | CAUTIOUS | DEFENSIVE
+      "previousView": "NEUTRAL", // yesterday's stance, or null
+      "direction": "upgraded",   // upgraded | downgraded | unchanged | new — COMPUTED, see below
       "signal": "bullish",
-      "change": "What moved the view since the previous briefing, or why it is unchanged." }
+      "change": "The evidence behind today's stance — rationale only, no verdict." }
   ],
 
   "catalysts": [             // 0-6 events in the next 72h; empty beats fabricated
@@ -94,6 +96,19 @@ follow from that:
   to ±12 regardless.
 - House view labels are fixed, so `change` is a real day-over-day statement. If the model
   skips a theme, yesterday's stance is carried forward and marked as carried.
+- **`direction` is computed, never asserted.** The five stances sit on one axis
+  (`DEFENSIVE < CAUTIOUS < NEUTRAL < SELECTIVE < CONSTRUCTIVE`) and the generator compares
+  today's `view` against `previousView`. The model is explicitly told not to write the
+  verdict into `change` — left to its own devices it produces things like "Upgraded to
+  watch from CAUTIOUS" while leaving `view` on CAUTIOUS, or "Upgraded from CONSTRUCTIVE to
+  CONSTRUCTIVE". A `view` outside the five-term vocabulary holds yesterday's stance rather
+  than resetting the book to NEUTRAL.
+
+Both front-ends colour a stance by the **stance**, never by `signal`: `signal` is a
+directional read that can legitimately differ from the stance, and colouring by it made a
+CAUTIOUS view render in neutral grey. Briefings written before `direction` existed show no
+movement marker at all — inferring one from the prose would republish whatever the prose
+got wrong.
 
 This means the very first run after deploying reads as "initial house level" — that is
 expected, and it resolves the following morning.

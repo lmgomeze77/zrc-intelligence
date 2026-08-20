@@ -262,6 +262,17 @@ function houseViewSection(briefing) {
   const views = Array.isArray(briefing.houseView) ? briefing.houseView.slice(0, 6) : [];
   if (!views.length) return "";
 
+  // Only movement is marked. An unchanged stance stays quiet — in a summary the
+  // point of the section is what moved. The verdict is computed upstream, so it
+  // cannot disagree with the stance shown beside it.
+  const changeMarker = v => {
+    const from = v.previousView ? ` FROM ${String(v.previousView).toUpperCase()}` : "";
+    const mark = (text, color) => `<div style="font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:800;letter-spacing:1px;color:${color};margin-top:5px;">${escapeHtml(text)}</div>`;
+    if (v.direction === "upgraded") return mark(`▲ UPGRADED${from}`, "#047857");
+    if (v.direction === "downgraded") return mark(`▼ DOWNGRADED${from}`, "#B91C1C");
+    return "";
+  };
+
   const viewColor = v => ({
     CONSTRUCTIVE: "#065F46", SELECTIVE: "#92400E", NEUTRAL: "#374151",
     CAUTIOUS: "#9A3412", DEFENSIVE: "#991B1B"
@@ -280,6 +291,7 @@ function houseViewSection(briefing) {
             <div style="font-family:Arial,Helvetica,sans-serif;font-size:9px;font-weight:800;letter-spacing:0.9px;color:${viewColor(v.view)};margin-top:4px;">
               ${escapeHtml(String(v.view || "").toUpperCase())}
             </div>
+            ${changeMarker(v)}
           </td>
         </tr>
       </table>

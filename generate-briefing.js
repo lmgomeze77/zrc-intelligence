@@ -204,6 +204,11 @@ const REGIME_TONES = ["CONSTRUCTIVE", "BALANCED", "CAUTIOUS"];
 const REGION_VIEWS = ["POSITIVE", "CONSTRUCTIVE", "NEUTRAL", "MIXED", "CAUTIOUS", "NEGATIVE"];
 const PRIVATE_MARKET_VIEWS = ["ATTRACTIVE", "SELECTIVE", "NEUTRAL", "TIGHT", "CHALLENGING"];
 const HOUSE_VIEWS = ["CONSTRUCTIVE", "SELECTIVE", "NEUTRAL", "CAUTIOUS", "DEFENSIVE"];
+
+// The five stances on one risk axis, most defensive to most constructive.
+// This ordering is what makes "upgraded" / "downgraded" a computed fact rather
+// than something the model asserts in prose (and sometimes gets wrong).
+const VIEW_RANK = { DEFENSIVE: 1, CAUTIOUS: 2, NEUTRAL: 3, SELECTIVE: 4, CONSTRUCTIVE: 5 };
 const IMPACT_LEVELS = ["HIGH", "MEDIUM", "LOW"];
 
 // Fixed House View book. Same labels every day → the "change" line is meaningful.
@@ -308,7 +313,14 @@ OPPORTUNITY RADAR — 4 to 6 themes where capital allocation is actually implica
 
 HOUSE VIEW — return one entry for EACH of these six labels, in this order, every day:
 ${HOUSE_VIEW_THEMES.map(t => `  - ${t}`).join("\n")}
-Each entry: "label" exactly as written above, "view" one of CONSTRUCTIVE | SELECTIVE | NEUTRAL | CAUTIOUS | DEFENSIVE, "signal" one of bullish | bearish | neutral | watch, and "change": one sentence stating what moved the view since the previous briefing, or explicitly stating that the view is unchanged and why. You are given yesterday's house view — do not flip a view without evidence in today's headlines.
+Each entry: "label" exactly as written above, "view", "signal", and "change".
+- "view": one of CONSTRUCTIVE | SELECTIVE | NEUTRAL | CAUTIOUS | DEFENSIVE. These five only. "watch" is a signal value and is never a view.
+- "signal": one of bullish | bearish | neutral | watch. It must not contradict the view — a CONSTRUCTIVE view does not carry a bearish signal.
+- "change": the evidence behind today's stance, one or two sentences.
+
+Do NOT state in "change" whether the view was upgraded, downgraded, maintained or left unchanged. That verdict is COMPUTED by comparing your "view" against yesterday's, and any claim you write there will be contradicted by it. Write only what you observed and why it supports the stance.
+If you think a stance should move, move it by CHANGING the "view" field. Describing a move in prose while leaving "view" untouched publishes a contradiction.
+You are given yesterday's house view — do not flip a view without evidence in today's headlines.
 
 CATALYST CALENDAR — up to 6 dated events in the NEXT 72 HOURS that could move prices.
 Include an event ONLY if today's headlines reference it, or if it is a scheduled release/meeting you are confident about (central bank decisions, CPI/GDP prints, elections, OPEC meetings, index reviews, major earnings).
@@ -656,6 +668,18 @@ function deriveRadar(aiRadar, categories) {
   return fromAI;
 }
 
+// Compare today's stance against yesterday's on the rank axis. Never inferred
+// from the model's wording — only from the two view values.
+function viewDirection(view, previousView) {
+  if (!previousView) return "new";
+  const now = VIEW_RANK[view];
+  const before = VIEW_RANK[previousView];
+  if (!now || !before) return "unchanged";
+  if (now > before) return "upgraded";
+  if (now < before) return "downgraded";
+  return "unchanged";
+}
+
 function deriveHouseView(aiHouseView, previousHouseView, regimeTone) {
   const byLabel = new Map(
     (Array.isArray(aiHouseView) ? aiHouseView : [])
@@ -672,21 +696,30 @@ function deriveHouseView(aiHouseView, previousHouseView, regimeTone) {
     const key = label.toLowerCase();
     const ai = byLabel.get(key);
     const prev = prevByLabel.get(key);
+    const previousView = prev ? pick(prev.view, HOUSE_VIEWS, null) : null;
 
     if (ai) {
+      // An unrecognised view (the model reaching for a signal word like "watch")
+      // holds yesterday's stance rather than silently resetting the book to NEUTRAL.
+      const view = pick(ai.view, HOUSE_VIEWS, previousView || "NEUTRAL");
       return {
         label,
-        view: pick(ai.view, HOUSE_VIEWS, "NEUTRAL"),
+        view,
+        previousView,
+        direction: viewDirection(view, previousView),
         signal: normalizeSignal(ai.signal),
-        change: String(ai.change || "").trim() || "Unchanged from the previous briefing."
+        change: String(ai.change || "").trim() || "No new evidence in today's intelligence."
       };
     }
 
     // Model skipped this theme → carry yesterday's stance forward, flagged as carried.
     if (prev) {
+      const view = previousView || "NEUTRAL";
       return {
         label,
-        view: pick(prev.view, HOUSE_VIEWS, "NEUTRAL"),
+        view,
+        previousView,
+        direction: "unchanged",
         signal: normalizeSignal(prev.signal),
         change: "Carried forward — no new evidence in today's intelligence."
       };
@@ -695,6 +728,8 @@ function deriveHouseView(aiHouseView, previousHouseView, regimeTone) {
     return {
       label,
       view: regimeTone === "CONSTRUCTIVE" ? "SELECTIVE" : regimeTone === "CAUTIOUS" ? "CAUTIOUS" : "NEUTRAL",
+      previousView: null,
+      direction: "new",
       signal: "neutral",
       change: "Initial house level — no prior briefing to compare against."
     };

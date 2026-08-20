@@ -268,6 +268,24 @@
       font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; letter-spacing: 1px;
     }
     .house-change { color: var(--muted); font-size: 11px; line-height: 1.45; margin-top: 8px; }
+    /* A stance that moved is never rendered in the same grey as one that held. */
+    .house-change.chg-up { color: #7FD8B0; }
+    .house-change.chg-down { color: #F0A5A5; }
+
+    .house-marker {
+      font-family: 'JetBrains Mono', monospace; font-size: 8px; font-weight: 700;
+      letter-spacing: 1.1px; margin-top: 9px;
+    }
+    .mark-up { color: var(--green); }
+    .mark-down { color: var(--red); }
+    .mark-flat { color: var(--faint); }
+
+    /* Stance colour follows the stance itself, not the signal field. */
+    .view-pos { color: var(--green); }
+    .view-mild { color: var(--gold); }
+    .view-flat { color: var(--muted); }
+    .view-warn { color: var(--amber); }
+    .view-neg { color: var(--red); }
 
     .catalyst-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
     .catalyst {
@@ -626,6 +644,26 @@
       return rows.slice(0,6);
     }
 
+    const VIEW_TONE = {
+      CONSTRUCTIVE: "view-pos",
+      SELECTIVE: "view-mild",
+      NEUTRAL: "view-flat",
+      CAUTIOUS: "view-warn",
+      DEFENSIVE: "view-neg"
+    };
+
+    // The verdict comes from the generator, which compares today's stance with
+    // yesterday's. Briefings written before that field existed show no marker —
+    // inferring one from the prose would repeat whatever the prose got wrong.
+    function changeMarker(v) {
+      const from = v.previousView ? " FROM " + String(v.previousView).toUpperCase() : "";
+      if (v.direction === "upgraded") return { text: "▲ UPGRADED" + from, cls: "mark-up", textCls: "chg-up" };
+      if (v.direction === "downgraded") return { text: "▼ DOWNGRADED" + from, cls: "mark-down", textCls: "chg-down" };
+      if (v.direction === "unchanged") return { text: "UNCHANGED", cls: "mark-flat", textCls: "" };
+      if (v.direction === "new") return { text: "INITIATED", cls: "mark-flat", textCls: "" };
+      return null;
+    }
+
     function SignalBadge({ signal }) {
       signal = normalizeSignal(signal);
       const cls = "signal-badge signal-" + signal;
@@ -749,15 +787,22 @@
 
           <div className="house-grid">
             {views.map(function(v,i) {
-              const signal = normalizeSignal(v.signal);
-              const cls = signal === "bullish" ? "dir-up" : signal === "bearish" ? "dir-down" : "dir-flat";
+              const view = String(v.view || labelFromSignal(v.signal) || "").toUpperCase();
+              const viewCls = VIEW_TONE[view] || "view-flat";
+              const marker = changeMarker(v);
+
               return (
                 <div className="house-card" key={i}>
                   <div className="house-card-top">
                     <div className="house-label">{v.label}</div>
-                    <div className={"house-view " + cls}>{v.view || labelFromSignal(signal)}</div>
+                    <div className={"house-view " + viewCls}>{view}</div>
                   </div>
-                  {v.change && <div className="house-change">{v.change}</div>}
+                  {v.change && (
+                    <div className={"house-change " + (marker ? marker.textCls : "")}>{v.change}</div>
+                  )}
+                  {marker && (
+                    <div className={"house-marker " + marker.cls}>{marker.text}</div>
+                  )}
                 </div>
               );
             })}
