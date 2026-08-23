@@ -1,69 +1,75 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-08-22T06:37:07.710Z",
-  "date": "Saturday, 22 August 2026",
-  "riskIndex": 64,
-  "riskIndexPrev": 62,
+  "generated": "2026-08-23T06:36:46.683Z",
+  "date": "Sunday, 23 August 2026",
+  "riskIndex": 52,
+  "riskIndexPrev": 64,
   "marketRegime": {
-    "tone": "CAUTIOUS",
-    "rationale": "Fed holds steady amid Iran-driven oil volatility and Treasury curve repositioning; Canadian tariff escalation raises trade friction; European nuclear constraints pressure energy costs.",
-    "riskIndex": 64,
-    "europe": "CAUTIOUS",
+    "tone": "BALANCED",
+    "rationale": "",
+    "riskIndex": 52,
+    "europe": "NEUTRAL",
     "spain": "NEUTRAL",
     "privateMarkets": "SELECTIVE"
   },
   "regionSignals": {
-    "europe": "CAUTIOUS",
+    "europe": "NEUTRAL",
     "spain": "NEUTRAL",
     "privateMarkets": "SELECTIVE"
   },
   "executivePulse": [
     {
-      "title": "Oil & Energy",
-      "text": "Brent crude trending toward $94/bbl as U.S. prepares Iran economic measures; European nuclear cooling crisis limits supply flexibility. Oil-linked inflation risk elevated; energy revaluation in commodity allocation warranted.",
-      "signal": "watch"
+      "title": "Macro & Central Banks",
+      "text": "Bank of Korea's Aug. 27 Rate Decision: Hold Favored, but Hiking Cycle Seen Continuing  finance.biggo.com",
+      "signal": "neutral"
     },
     {
-      "title": "Trade Shock",
-      "text": "Canada-U.S. tariff war enters new phase: Ottawa to match U.S. 50% levy on C$20bn imports. Mark Carney signals deal collapse. Cross-border capital flows and supply-chain repricing now imminent across North America.",
-      "signal": "bearish"
+      "title": "Geopolitics & Security",
+      "text": "The women’s all-American final will be followed by a men's title clash between Frances Tiafoe and Arthur Fils of France.",
+      "signal": "neutral"
     },
     {
-      "title": "Rates Divergence",
-      "text": "Fed holds; ECB rate trajectory diverges as EUR/USD strengthens. Treasury buyback program signals bond-market messaging shift. Duration and currency hedges require re-examination for euro-zone institutional allocators.",
+      "title": "FDI & Capital Flows",
+      "text": "United Arab Emirates: Fintech Is Part of the Economic Model  The Fintech Times",
       "signal": "neutral"
     }
   ],
   "opportunityRadar": [
     {
-      "theme": "Energy Infrastructure & Hydrogen",
-      "direction": "up",
-      "conviction": "MEDIUM",
-      "relevance": 4
-    },
-    {
-      "theme": "North American Trade Friction",
-      "direction": "down",
-      "conviction": "HIGH",
-      "relevance": 5
-    },
-    {
-      "theme": "Private Markets Data & Infrastructure",
-      "direction": "up",
-      "conviction": "MEDIUM",
-      "relevance": 3
-    },
-    {
-      "theme": "Healthcare Revenue Cycle Management",
-      "direction": "up",
+      "theme": "Macro & Central Banks",
+      "direction": "flat",
       "conviction": "MEDIUM",
       "relevance": 2
     },
     {
-      "theme": "European Nuclear & Power Assets",
-      "direction": "down",
+      "theme": "Geopolitics & Security",
+      "direction": "flat",
       "conviction": "MEDIUM",
-      "relevance": 4
+      "relevance": 2
+    },
+    {
+      "theme": "FDI & Capital Flows",
+      "direction": "flat",
+      "conviction": "MEDIUM",
+      "relevance": 2
+    },
+    {
+      "theme": "Commodities & Energy",
+      "direction": "flat",
+      "conviction": "MEDIUM",
+      "relevance": 2
+    },
+    {
+      "theme": "Real Estate & Infrastructure",
+      "direction": "flat",
+      "conviction": "MEDIUM",
+      "relevance": 2
+    },
+    {
+      "theme": "M&A & Private Capital",
+      "direction": "flat",
+      "conviction": "MEDIUM",
+      "relevance": 2
     }
   ],
   "houseView": [
@@ -73,7 +79,7 @@
       "previousView": "NEUTRAL",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "No new headline data on Spanish property markets today. European energy constraints and trade uncertainty do not yet materially alter domestic yield prospects."
+      "change": "Carried forward — no new evidence in today's intelligence."
     },
     {
       "label": "European Credit & Financing",
@@ -81,7 +87,7 @@
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
       "signal": "watch",
-      "change": "ECB rate divergence with Fed and Treasury yield volatility create refinancing uncertainty; nuclear power constraints raise industrial credit stress. Cross-border financing costs under pressure."
+      "change": "Carried forward — no new evidence in today's intelligence."
     },
     {
       "label": "Private Capital Deployment",
@@ -89,7 +95,7 @@
       "previousView": "SELECTIVE",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "Vista's C$3bn Allvue sale exploration and healthcare RCM deal volume signal selective appetite in data/services. North American tariff escalation introduces execution risk for cross-border PE platforms."
+      "change": "Carried forward — no new evidence in today's intelligence."
     },
     {
       "label": "Energy & Commodities",
@@ -97,7 +103,7 @@
       "previousView": "CONSTRUCTIVE",
       "direction": "unchanged",
       "signal": "bullish",
-      "change": "Oil rallying toward $94/bbl on Iran sanctions; nuclear cooling crisis in Europe drives LNG/hydrogen opportunity. Iraq's production expansion ambitions and Saudi re-routing signal structural supply friction."
+      "change": "Carried forward — no new evidence in today's intelligence."
     },
     {
       "label": "Emerging Markets",
@@ -105,7 +111,7 @@
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
       "signal": "watch",
-      "change": "BRICS rejects EU carbon tax as trade barrier; South Korea flagged as tariff casualty; India-China paradox persists. Iran economic warfare by U.S. complicates EM energy security; geopolitical fragility rising."
+      "change": "Carried forward — no new evidence in today's intelligence."
     },
     {
       "label": "Global Risk Appetite",
@@ -113,18 +119,12 @@
       "previousView": "DEFENSIVE",
       "direction": "unchanged",
       "signal": "bearish",
-      "change": "Canada-U.S. tariff breakdown, Iran sanctions escalation, and European energy supply stress converge. Cross-asset repricing risk elevated; Treasury messaging (bond buyback) signals policy pivot uncertainty."
+      "change": "Carried forward — no new evidence in today's intelligence."
     }
   ],
-  "catalysts": [
-    {
-      "time": "TUE 08:00 CET",
-      "title": "ECB Consumer Expectations Survey – July 2026 results",
-      "impact": "MEDIUM"
-    }
-  ],
-  "globalBriefing": "North American trade war escalates with Canada-U.S. tariff stalemate deepening, repricing cross-border supply chains and capital flows. Simultaneously, Iran sanctions escalation lifts crude toward $94/bbl while European nuclear constraints and hydrogen emergence reshape energy infrastructure theses. BRICS bloc consolidates autonomy in tech/finance and rejects EU carbon tariffs, fragmenting capital flows along geopolitical lines; China shields itself from Iran disruption while India faces tariff vulnerability, compressing EM margin resilience.",
-  "marketOpen": "Monitor Canada-U.S. tariff-wall feedback into energy and autos; track Brent crude reaction to Iran sanctions detail; watch euro strength persistence as ECB-Fed divergence sustains amid cross-asset repricing.",
+  "catalysts": [],
+  "globalBriefing": "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
+  "marketOpen": "",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -132,58 +132,41 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "Federal Reserve holds interest rates steady; first decision since Iran oil-price spike",
-          "summary": "Fed maintains rates unchanged in context of elevated energy costs and geopolitical risk. ABC News reports decision comes amid broader volatility in oil markets tied to Iran tensions. No explicit rate or inflation figures disclosed in headline, but decision signals pause in tightening cycle.",
-          "source": "ABC News",
-          "relevance": "Central bank hold signals monetary policy patience; critical for duration positioning and capital flow expectations across transatlantic markets.",
+          "headline": "Bank of Korea's Aug. 27 Rate Decision: Hold Favored, but Hiking Cycle Seen Continuing - finance.biggo.com",
+          "summary": "Bank of Korea's Aug. 27 Rate Decision: Hold Favored, but Hiking Cycle Seen Continuing  finance.biggo.com",
+          "source": "Google News Macro",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "EUR/USD strengthens on diverging ECB and Fed rate expectations",
-          "summary": "According to Traders Union, euro appreciates as market prices in different monetary policy trajectories between ECB and Federal Reserve. Divergence reflects differing inflation and growth outlooks. Exact EUR/USD level not specified in headline.",
-          "source": "Traders Union",
-          "relevance": "Currency repricing affects hedging costs and real returns for euro-denominated fixed income and equity exposures; signals portfolio rebalancing pressure.",
-          "signal": "watch",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Sweden's Riksbank holds rates steady as summer inflation fails to shift outlook",
-          "summary": "Per Morningstar, Sweden's central bank maintains policy rate unchanged, signaling confidence inflation trajectory does not yet warrant further tightening. Nordic policy stance thus diverges from broader European macro uncertainty.",
-          "source": "Morningstar",
-          "relevance": "Nordic credit and FX positioning may decouple from eurozone stress if Riksbank maintains patient hold; signals selective opportunity in Swedish government bonds.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Eurozone yields slip from multi-year highs after U.S. Treasury announcement",
-          "summary": "AOL.ca reports long-dated eurozone government yields decline following Treasury's bond buyback announcement, suggesting curve re-pricing and potential shift in Fed signaling. No specific yield figures provided.",
-          "source": "AOL.ca",
-          "relevance": "Treasury curve management affects dollar funding costs and cross-currency basis; euro yield relief may reduce refinancing pressure on peripheral sovereigns and corporates.",
-          "signal": "bullish",
           "impact": 2,
           "conviction": "low",
-          "horizon": "0-1M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE12WkdJQU9QLUUzVGRtQVN3Nzg0OV92U05BMkd5bUVRS0xJaTVqelVnYmhhU1BvNE1CeDhOb1FKNDE0OTBidVVlVzUwcUgwaTEwcm1haXUzUGVkTDBTZk5CemtzRXBkV3MtcHpCOURyb1JRYkFrOXc?oc=5"
         },
         {
-          "headline": "Canada Q2 GDP rebound faces future headwinds: RBC analysis",
-          "summary": "RBC reports Canadian second-quarter GDP growth with cautionary forward guidance. No explicit growth rate cited in headline. Headline warns of deteriorating conditions ahead, likely related to trade friction.",
-          "source": "RBC / CryptoRank",
-          "relevance": "Slowing Canadian growth compounds tariff shock; increases probability of BoC rate cuts and weakens CAD, raising hedging costs for cross-border capital flows.",
-          "signal": "bearish",
+          "headline": "What Europe’s Extreme Weather Means for Its Stocks and Economy - Morningstar",
+          "summary": "What Europe’s Extreme Weather Means for Its Stocks and Economy  Morningstar",
+          "source": "Google News Macro",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOV2lfaUdIcnVPTGx4QVlid0pvelRtZUJjWjBKTkdCLUVzaWJYejJHQTlMalhVYnFtMC0xZWpSb0xsWGhrQlZwazdTb0w5THo1dk5VQU9LaV8wRU1CMm1aLVJndlRNT3pSOXRYQVZwMnVlcWRGS291YUY0Y2tab1B6eEFlRFNUOVUwaUlleVdKbWlyTU0?oc=5"
+        },
+        {
+          "headline": "Higher Global Yields Undermine The Dollar Index's Appeal - Bitcoin World",
+          "summary": "Higher Global Yields Undermine The Dollar Index's Appeal  Bitcoin World",
+          "source": "Google News Fed",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5yTU5xVG85ZlA3X2YyWjljc2cyd3UxTm1jTG9YTGl1OFJKNTFQVkpiQzlzeVdLVnQwMzlUM2ZDRHVIUHI3VFZBbm9sOUpfZWVKVVRjcDlEUm10NmtHd1FHUnBZRzM?oc=5"
         }
       ],
-      "keyTakeaway": "If Fed hold and ECB divergence persist amid energy inflation, euro real rates compress while dollar funding costs rise; expect continued EM currency volatility and selective re-rating of commodity-linked assets.",
-      "rawCount": 10
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 8
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
@@ -191,57 +174,40 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Canada vows to match U.S. tariffs 'dollar for dollar' as trade talks break down",
-          "summary": "BBC and FT World report Canadian government, via Mark Carney, commits to reciprocal tariff response to a new 50% U.S. levy on C$20bn of imports. Carney rejects terms as 'unfair'; deal negotiations have collapsed. Trade friction now bilateral and escalating.",
-          "source": "BBC World, FT World",
-          "relevance": "Trade war directly threatens cross-border M&A execution, supply-chain financing, and real-asset valuations in both countries; reprices cost-of-capital for North American private capital vehicles.",
-          "signal": "bearish",
-          "impact": 5,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Russian strikes on Ukraine kill two; attacks follow deadly mall bombing",
-          "summary": "BBC reports continuation of Russian military strikes on Ukrainian civilian targets, including double-tap tactics on shopping centers. At least 16 killed in prior mall attack; escalation persists. No new territorial or military outcome disclosed.",
-          "source": "BBC World",
-          "relevance": "Persistent Ukraine conflict maintains European defense spending elevation and energy supply uncertainty; supports long-duration defensive positioning on eurozone consumer and industrial credit.",
-          "signal": "watch",
-          "impact": 2,
-          "conviction": "high",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "U.S. prepares new Iran economic measures; oil market braces for supply constraints",
-          "summary": "Multiple sources (Oil & Gas 360, OilPrice.com) report Trump administration pursuing expanded economic pressure on Iran, described as 'economic warfare.' Analysts await details. Strait of Hormuz closure risk implicit. Oil trading toward $94/bbl in anticipation.",
-          "source": "Oil & Gas 360, OilPrice.com",
-          "relevance": "Iran sanctions escalation raises energy price floor and geopolitical risk premium; supports commodity and energy infrastructure allocations; threatens Asian oil-importer profitability (India, China).",
-          "signal": "watch",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Palestinian teen killed in West Bank settler attack; UN responds",
-          "summary": "Al Jazeera reports death of 17-year-old Palestinian and critical injury to another following settler attack in occupied West Bank. UN statement issued. No broader escalation or ceasefire negotiation data disclosed.",
+          "headline": "Pegula dethrones Swiatek to book Cincinnati final against Gauff",
+          "summary": "The women’s all-American final will be followed by a men's title clash between Frances Tiafoe and Arthur Fils of France.",
           "source": "Al Jazeera",
-          "relevance": "Localized casualty event; regional tensions remain elevated but not acutely repriced in current headline flow. Monitor for broader Middle East instability signals.",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
+          "impact": 2,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://www.aljazeera.com/sports/2026/8/23/pegula-dethrones-swiatek-to-book-cincinnati-final-against-gauff?traffic_source=rss"
         },
         {
-          "headline": "India and China's paradoxical relationship: nuclear rivals deepening economic ties",
-          "summary": "Geopolitical Futures outlines contradiction: India and China remain militarily opposed across disputed borders while simultaneously expanding trade and investment. Paradox complicates regional stability assumptions.",
-          "source": "Geopolitical Futures",
-          "relevance": "India-China bifurcation (military standoff vs. economic integration) creates hedging complexity for Asia-focused portfolio managers; undermines single-vector geopolitical risk models for EM positioning.",
-          "signal": "watch",
+          "headline": "Kazakhstan parliamentary elections begin: What’s at stake?",
+          "summary": "The Central Asian country heads to the polls on August 23.",
+          "source": "Al Jazeera",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "6-12M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://www.aljazeera.com/news/2026/8/23/kazakhstan-parliamentary-elections-begin-whats-at-stake?traffic_source=rss"
+        },
+        {
+          "headline": "Trump says Canada wants 'benefits' of being US state as Carney says countries in trade war",
+          "summary": "Canada's prime minister said he was \"reluctantly\" announcing retaliatory tariffs as he accused the US of starting a trade war.",
+          "source": "BBC World",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss"
         }
       ],
-      "keyTakeaway": "If Canada-U.S. tariff war persists and Iran sanctions escalate, cross-border capital flows face simultaneou frictional costs and geopolitical risk premium; EM energy importers face margin compression.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "fdi": {
@@ -250,57 +216,40 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Canadian government commits to matching U.S. tariffs dollar-for-dollar; trade talks collapse",
-          "summary": "FT World reports Mark Carney's rejection of Washington's proposed tariff terms as 'unfair deal,' with top U.S. trade envoy criticizing 'missed opportunity.' C$20bn in Canadian goods face new 50% duty. Bilateral negotiation failure now explicit.",
-          "source": "FT World",
-          "relevance": "Tariff escalation fractures North American supply chains and cross-border M&A logic; raises cost-of-capital for integrating firms and deters new FDI into tariff-exposed sectors (autos, energy, materials).",
-          "signal": "bearish",
-          "impact": 5,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Vista explores $3 billion sale of private markets data provider Allvue, sources say",
-          "summary": "Per Reuters, buyout firm Vista is evaluating a potential exit of Allvue (private markets data platform) at approximately $3bn valuation. Deal process ongoing; no completion certainty. Asset class infrastructure play.",
-          "source": "Reuters",
-          "relevance": "Large PE infrastructure exit signals liquidity appetite in private-markets tools despite macro uncertainty. Valuation point ($3bn) benchmarks mid-market PE-to-PE M&A and indicates confidence in digital asset valuations.",
+          "headline": "United Arab Emirates: Fintech Is Part of the Economic Model - The Fintech Times",
+          "summary": "United Arab Emirates: Fintech Is Part of the Economic Model  The Fintech Times",
+          "source": "Google News SWF",
+          "relevance": "",
           "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Nike, Adidas regain market lead from challenger brands On Holding, Hoka",
-          "summary": "FT World reports major footwear incumbents reversing share losses to newer entrants. On Holding and Hoka described as losing momentum. No market-share percentages or financial metrics disclosed.",
-          "source": "FT World",
-          "relevance": "Competitive consolidation in consumer discretionary; signals market saturation in athleisure and reversion to branded incumbents. Relevant for consumer-focused PE and buyout theses in North America and Europe.",
-          "signal": "neutral",
-          "impact": 1,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOOElhVWpVVk5OZHpqbGhNUnN1TUkzMVV6R2pHVXVmYUtjd0xlS1k4XzBkd3pITWJqQklrNUl3c1ZhYjVZN0JEbWpyMWpNXzI5eHBFMWNINmdXQy1XUWRBLWZTeEZLZ2xmc3BLTzV0OW03NTV6Rm12eXZGMWh1WjJMeTFjdnU3VmlqNzlSOENHMUY?oc=5"
         },
         {
-          "headline": "Mark Walter's Lakers ownership under scrutiny as private capital empire faces unraveling",
-          "summary": "FT World examines Walter's divestiture of Lakers stake and broader challenges to his private capital empire. Context: private capital pursued insurance profitability but at unspecified risk. No quantified portfolio impact disclosed.",
+          "headline": "US buyers snap up Europe’s asset managers at fastest rate in decades",
+          "summary": "European fund groups struggle as firms race to bulk up and expand globally",
           "source": "FT World",
-          "relevance": "High-profile PE entrepreneur distress signal; suggests capital allocation pressures in insurance and alternative asset platforms. Monitor for broader secondary-market repricing of PE-backed insurance platforms.",
-          "signal": "watch",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://www.ft.com/content/dd605c6f-8a6e-4664-970b-f4c07ea7a4d2?syn-25a6b1a6=1"
         },
         {
-          "headline": "Trump's economic agenda under strain: $40trn debt, 6.7% mortgages, $5 diesel amid Iran war fallout",
-          "summary": "FT World synthesis: U.S. fiscal burden ($40trn total debt), elevated mortgage rates (6.7%), and energy cost inflation ($5/gallon diesel) converge to strain administration's policy implementation. Iran conflict cited as exacerbating factor.",
+          "headline": "Coffee chain Blank Street raises funds from General Atlantic to fuel expansion",
+          "summary": "Latest fundraising values the six-year-old company at about $650mn as it aims to be ‘daily luxury brand’",
           "source": "FT World",
-          "relevance": "Macro headwinds (debt, rates, energy) compress U.S. consumer and SME balance sheets; reduce FDI attractiveness relative to other developed markets; create refinancing risk for leveraged platforms.",
-          "signal": "bearish",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "1-3M"
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://www.ft.com/content/c202d7aa-481a-466b-b34f-2c4451f787a5?syn-25a6b1a6=1"
         }
       ],
-      "keyTakeaway": "If Canada-U.S. tariff war persists and U.S. macro headwinds intensify, cross-border FDI into North America contracts; PE exits may accelerate and secondary-market liquidity for mid-market assets tightens.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -309,87 +258,40 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Oil prices rise toward $94/bbl as U.S. prepares new Iran economic measures",
-          "summary": "Oil & Gas 360 reports Brent crude rallying toward $94/barrel on anticipation of expanded U.S. Iran sanctions and possible disruption to Strait of Hormuz trade. Traders await details on isolation campaign. Weekly gains accruing.",
-          "source": "Oil & Gas 360",
-          "relevance": "Oil revaluation at $94/bbl floor supports upstream capex and infrastructure; raises feedstock costs for refining and petrochemicals; lifts energy-intensive industrial margins in Europe and Asia.",
-          "signal": "bullish",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Europe's nuclear cooling crisis forces extraordinary measures as extreme heat disrupts power plants",
-          "summary": "OilPrice.com reports widespread disruption to European nuclear generation capacity due to extreme temperatures limiting cooling-water availability. Governments implementing emergency protocols. No production-volume data or expected duration specified.",
+          "headline": "Europe Dodges a Rhine Crisis for the Worst Possible Reason",
+          "summary": "The Rhine has slightly risen from its mid-August record low (when Kaub’s water level gauge – at the river’s decisive chokepoint – was below 10 cm), but the relief is mostly optical. Barges still cannot carry normal loads through it, leaving the industrial corridor from Rotterdam and Antwerp to south",
           "source": "OilPrice.com",
-          "relevance": "Nuclear supply constraint elevates LNG and gas demand; supports hydrogen and renewable infrastructure investment. Structural energy-cost pressure on European industrial margins; revalues power infrastructure assets.",
-          "signal": "bullish",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Continental Resources to acquire FireBird Energy, adding 32,000 boed Permian production",
-          "summary": "World Oil reports Continental Resources purchasing FireBird Energy II LLC for approximately 32,000 barrels of oil equivalent per day in oil-weighted production. Transaction expands Permian position. No deal value disclosed.",
-          "source": "World Oil",
-          "relevance": "Mid-scale U.S. upstream consolidation signals confidence in Permian returns despite tariff risk; supports domestic energy security positioning and crude supply resilience against Iran disruption.",
-          "signal": "bullish",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Iraq targets doubling oil output to 8-10 million bpd within six years; seeks OPEC production exemption",
-          "summary": "OilPrice.com reports Baghdad aiming to boost production from ~4 million bpd to 8–10 million bpd over six-year horizon. Iraq requesting OPEC to relax production quotas to accommodate expansion. Conflict with cartel discipline implicit.",
-          "source": "OilPrice.com",
-          "relevance": "Iraqi production expansion would depress global oil price; complicates OPEC cohesion. If successful, undermines current $94/bbl rally and long-duration commodity thesis. Monitor OPEC December meeting and political stability in Iraq.",
-          "signal": "watch",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "Saudi Arabia reroutes Mediterranean exports via Sidi Kerir to circumvent Houthi threats; port volumes surge",
-          "summary": "Oil Price reports Saudi crude exports from Egypt's Mediterranean port (Sidi Kerir) surge as producers avoid Houthi-controlled Red Sea/Suez chokepoint. Supply logistics shifting northward. No volume quantification provided.",
-          "source": "Oil Price",
-          "relevance": "Suez-to-Mediterranean rerouting increases shipping costs and transit time; supports tanker-services valuations and energy price premiums. Signals persistent Red Sea security risk; extends geopolitical supply-chain friction.",
-          "signal": "watch",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "U.S. rig count decreases by 5 to 588; drilling activity softening",
-          "summary": "Baker Hughes Rig Count reports U.S. total rig count declined 5 units to 588 in latest week. Marginal weekly decline. No YoY or trend analysis provided in headline.",
-          "source": "Baker Hughes",
-          "relevance": "Rig count contraction suggests upstream capex caution despite elevated oil prices; may reflect capital discipline or tariff uncertainty. Monitor for further softening if macro headwinds persist.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "China's new five-year plan preps nation for peak oil, shielding from Iran war fallout",
-          "summary": "OilPrice.com reports China's energy strategy has substantially insulated the nation from global oil-price volatility tied to Iran conflict and Strait of Hormuz closure risks. Strategic petroleum reserves and diversification cited as protective measures.",
-          "source": "OilPrice.com",
-          "relevance": "Chinese energy independence reduces exposure to Iran sanctions escalation; allows Beijing to hold cheaper oil positions. Creates asymmetry with India, Japan, and S. Korea in energy-cost inflation; signals EM margin divergence.",
+          "relevance": "",
           "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "6-12M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://oilprice.com/Energy/Energy-General/Europe-Dodges-a-Rhine-Crisis-for-the-Worst-Possible-Reason.html"
         },
         {
-          "headline": "The race to unlock the world's hidden hydrogen reserves intensifies globally",
-          "summary": "OilPrice.com reports countries globally competing to develop geologic hydrogen resources. U.S. Department of Energy previously released bombshell report estimating vast global reserves. Nascent sector gaining investment momentum.",
+          "headline": "The Gas Turbine Shortage Just Became AI’s Biggest Constraint",
+          "summary": "Order a heavy-duty gas turbine from GE Vernova today and it won’t arrive until 2031. That’s the company’s actual production schedule, confirmed on its July 22 earnings call, and it’s the fact sitting underneath every AI data center power plan announced in the last two years. It comes up far less oft",
           "source": "OilPrice.com",
-          "relevance": "Hydrogen infrastructure emergence represents multi-year growth vector; supports cleantech capital deployment and energy-transition thesis. Timeline to commercial scale remains uncertain (5–10 years); long-horizon opportunity.",
-          "signal": "bullish",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "6-12M"
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html"
+        },
+        {
+          "headline": "Clean Energy Spending Tracking Toward Record $180 Billion in 2026",
+          "summary": "Donald Trump is accidentally overseeing a massive buildout of the country’s renewable energy capacity and infrastructure. Not only are investments in renewable technologies soaring to new highs, the national energy grid is rapidly transforming to accommodate an increasingly solar- and wind-powered e",
+          "source": "OilPrice.com",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://oilprice.com/Energy/Energy-General/Clean-Energy-Spending-Tracking-Toward-Record-180-Billion-in-2026.html"
         }
       ],
-      "keyTakeaway": "If Iran sanctions escalate and European nuclear constraints persist, oil near $94/bbl is supportable; but Iraqi expansion threat and Saudi rerouting logistics imply price ceiling near term. Hydrogen emergence expands energy-transition allocation thesis.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "real-estate": {
@@ -398,57 +300,40 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Power availability becomes new requirement for Bay Area industrial base amid AI and robotics demand",
-          "summary": "Bisnow reports Bay Area industrial real estate now defined by electricity availability rather than conventional logistics criteria. AI and robotics tenants require high-energy facilities. No specific power-consumption benchmarks or lease terms disclosed.",
-          "source": "Bisnow",
-          "relevance": "Structural shift in industrial real estate demand favors power-rich facilities; supports data-center REIT valuations and raises hurdle for conventional logistics properties. Reprices West Coast industrial real-estate capital allocation.",
-          "signal": "bullish",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Cross Ocean Partners and Fuller Realty acquire 829K SF Energy Corridor office campus in Houston",
-          "summary": "Bisnow reports acquisition of Eldridge Place office campus (829,000 sq ft) in Houston Energy Corridor. No purchase price, cap rate, or tenant diversification disclosed. Transaction signals office recovery in energy hub.",
-          "source": "Bisnow",
-          "relevance": "Energy-adjacent office consolidation suggests regional capital reallocation to oil/gas supply-chain headquarters. Trend dependent on sustained oil prices >$80/bbl; tariff risk to energy sector valuation remains.",
+          "headline": "The Dark Side Of REIT Investing - Seeking Alpha",
+          "summary": "The Dark Side Of REIT Investing  Seeking Alpha",
+          "source": "Google News CRE",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
+          "impact": 2,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5WRHZLUzRSSHVnbzhVUng2T0RiNTFWQWp1Ql9hclc0OHJFOTh2OWFkZ2pHd0kzMzRYRGg4WEFSM0d4LVFSMVpsdUtwNHZRTllJR2xJNkNSYnZXRFFZRmdfdmc5S0FYUjByOEl1WUphbGd4VFF5ekpFRHY2Y1I?oc=5"
         },
         {
-          "headline": "The Honest Co. relocating HQ to The Bluffs, Los Angeles; signs 10-year lease",
-          "summary": "Bisnow reports consumer-goods firm The Honest Company leasing 10-year term at Lincoln's The Bluffs office campus in Los Angeles. Relocation planned by May 2027. No space size or lease value disclosed.",
-          "source": "Bisnow",
-          "relevance": "Quality corporate relocation signals LA office-market stability and tenant appetite for trophy assets. Reflects consumer discretionary confidence; tariff uncertainty creates downside risk to renewal probability.",
+          "headline": "Saudi Capital, Turkish Power: Riyadh’s Growing Leverage in Turkey - Middle East Forum",
+          "summary": "Saudi Capital, Turkish Power: Riyadh’s Growing Leverage in Turkey  Middle East Forum",
+          "source": "Google News Infra",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
+          "impact": 2,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQVGpLSkVCSTZfVF93NklEWkl0QjVaUXBYbGVETzctWDVFNF92ai1KeWNYRGZDYVdLaE91YUZLaFJVT0ZFMk5Ddi02NWJJRkRuN2k0Y3lIS0xDQUtXNjgxQ0REMl96YkpIVkM0Yk9kZ2VkeVZPV1VCUU9iYmg3WWx1eWcyZUdDSlkyUkVaMjNCd0ttZzlKSk5jcGtYOWJLU3ZU?oc=5"
         },
         {
-          "headline": "REITs eye data centres as AI demand rises, but high costs limit expansion",
-          "summary": "Moneycontrol.com reports real-estate investment trusts pursuing data-center allocations to capitalize on AI infrastructure demand, but elevated construction and power costs constrain capacity growth. No specific REIT names or investment volumes disclosed.",
-          "source": "Moneycontrol.com",
-          "relevance": "Data-center REIT expansion thesis valid but capital-constrained; supports selective high-quality names over capacity-expansion play. Power scarcity (Europe, California) may create regional valuation divergence.",
-          "signal": "watch",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Which Retail Real Estate Stock Has Dominated in 2026: Realty Income, Simon Property Group, or Kimco Realty?",
-          "summary": "24/7 Wall St. comparative analysis of retail REIT performance YTD 2026. No specific return figures, cap rates, or leasing metrics disclosed in headline. Performance comparison among major players.",
-          "source": "24/7 Wall St.",
-          "relevance": "Retail REIT sector differentiation implies asset-quality divergence and varying exposure to consumer discretionary; suggests selective entry based on tenant credit profiles and lease-maturity ladders.",
+          "headline": "‘Separate politics from business’: Why Israeli investors are betting on Madrid real estate - Ynetnews",
+          "summary": "‘Separate politics from business’: Why Israeli investors are betting on Madrid real estate  Ynetnews",
+          "source": "Google News CRE",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
+          "impact": 2,
           "conviction": "low",
-          "horizon": "1-3M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE00TTdjZFYyRm9EM0t1TXZFbTVwT0JaZTBfRGlfcHctWC1RMWRjbTZXZ3NnYUhUUTZlQktpcGtzZ3VSbDR1WEJ1WURlcnB4U1BkNHl2blB2RU5oYWwweHBKSTd1cnQ5UQ?oc=5"
         }
       ],
-      "keyTakeaway": "If power costs remain elevated and AI infrastructure demand persists, data-center and power-ready industrial assets command premium rents; office recovery dependent on energy-sector health and tariff regime clarity.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -457,77 +342,40 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Carlyle, Longshore, Serent target revenue cycle management platforms; PE backs 8 healthcare RCM deals",
-          "summary": "PE Hub reports multiple private-equity sponsors (Carlyle, Francisco Partners, New Mountain, Serent Capital) actively acquiring healthcare revenue cycle management platforms. Eight deals cited across sector. RCM consolidation driven by federal price-transparency rules and specialty-focused service demand.",
-          "source": "PE Hub",
-          "relevance": "Healthcare RCM represents durable PE theme: regulatory tailwinds (SEVA investment in price transparency), fragmentation, and margin-improvement opportunity. Portfolio construction tilts toward services-tech and compliance infrastructure.",
-          "signal": "bullish",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "PE-backed Ode with Anthropic acquires AI services firm Casper Studios",
-          "summary": "PE Hub reports Ode (San Francisco AI transformation company, PE-backed, with Anthropic partnership) acquiring Casper Studios (AI services provider). No deal value disclosed. Transaction consolidates enterprise AI transformation services.",
-          "source": "PE Hub",
-          "relevance": "Enterprise AI services consolidation signals maturing supply chain; Anthropic partnership adds credibility. Signals PE appetite for application-layer AI businesses over infrastructure. Dependent on enterprise capex cycle.",
-          "signal": "bullish",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Long Ridge Equity Partners invests in unclaimed property specialist MarketSphere",
-          "summary": "PE Hub reports Long Ridge Equity Partners backing MarketSphere (unclaimed-property compliance platform founded 2002), serving enterprise and mid-market clients across U.S. and Canada. No deal value or fund size disclosed.",
-          "source": "PE Hub",
-          "relevance": "Niche compliance-software platform attracts PE; represents recurring-revenue, low-churn business model. Canadian exposure creates tariff complexity but cross-border regulatory arbitrage may sustain margins.",
+          "headline": "TG Therapeutics: Briumvi's Growth Attracts Buyout Rumors (NASDAQ:TGTX) - Seeking Alpha",
+          "summary": "TG Therapeutics: Briumvi's Growth Attracts Buyout Rumors (NASDAQ:TGTX)  Seeking Alpha",
+          "source": "Google News M&A",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Charlesbank Capital appoints Brandon White and Sandor Hau as co-managing partners",
-          "summary": "PE Hub reports leadership transition at Charlesbank Capital Partners: Michael Choe (president/CEO for 12 years) assumes emeritus role; White and Hau elevated to co-managing partner positions. Succession completed.",
-          "source": "PE Hub",
-          "relevance": "Mid-market PE leadership stability reinforced; signals institutional continuity. Charlesbank's thesis (mid-market buyouts, services, healthcare) remains intact. Marginal negative if key LPs interpret transition as risk.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "Theravance sets vote on cash buyout with ampreloxetine contingent value right",
-          "summary": "Stock Titan reports Theravance Respiratory Company (NASDAQ: TBPH) scheduling shareholder vote on cash acquisition with contingent value rights (CVR) tied to ampreloxetine development. No deal price or termination certainty disclosed.",
-          "source": "Stock Titan",
-          "relevance": "Biotech M&A with CVR structure reflects buyer caution on pipeline value; common in pharma. Implies mid-stage asset pricing pressure but deal completion risk remains. Monitor shareholder vote outcome.",
-          "signal": "watch",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Salem Health nears merger with Santiam Hospital",
-          "summary": "Modern Healthcare reports hospital consolidation: Salem Health exploring merger with Santiam Hospital. Deal timing unclear ('nears' indicates advanced stage). No financial terms or regulatory timeline disclosed.",
-          "source": "Modern Healthcare",
-          "relevance": "Regional hospital consolidation reflects fragmented U.S. healthcare landscape; regulatory scrutiny increasingly stringent. Deal success dependent on antitrust review and provider reimbursement stability (CMS policy dependent).",
-          "signal": "watch",
           "impact": 2,
           "conviction": "low",
-          "horizon": "1-3M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQaXk3bEF5Z2lfUlA2Yi1IeGhhMFR3TGtJNjlTaHlDRVYxcDlwNGpMdVpkNUxSX1ZEdXZhVWVHSHJfMDlOVXg0TVEwdGgxSUpGOHlKY0RJS29yLUsyNnJleG9nSmdfMk9KdWlZaE9tNWVrYXZyQ29BUXFIVjR4ZW5rZjlZSlZUQXd4b3hSQm1hNHpmVnNLUXdLeTJGTQ?oc=5"
         },
         {
-          "headline": "TGTX on track for best trading day in 3.5 months amid fresh buyout rumors",
-          "summary": "TradingView reports Tiga Therapeutics (TGTX) stock rallying on renewed acquisition speculation. No deal source, buyer identity, or valuation disclosed. Rumor-driven price action.",
-          "source": "TradingView",
-          "relevance": "Biotech M&A rumors reflect buyer interest in mid-cap therapeutics; deal completion uncertain. Technical bounce does not imply fundamental thesis shift; execution risk remains.",
+          "headline": "Deals tracker: Salem Health nears merger with Santiam Hospital - Modern Healthcare",
+          "summary": "Deals tracker: Salem Health nears merger with Santiam Hospital  Modern Healthcare",
+          "source": "Google News M&A",
+          "relevance": "",
           "signal": "neutral",
-          "impact": 1,
+          "impact": 2,
           "conviction": "low",
-          "horizon": "1-3M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTzY1UHNsbGNQYUdTQjRCWG9XenhLWU43NTl0VGxJbnYtSkhKRzFEcVhsUVpaRWdtQzEyRUdfcUFZSDY1b3ZBVE5xckpsTG1rTDFGekN4MWgxRWxWWnNyUk11N3NWcmQ0TUltSUpob05TZGotMkxrVmhKYVpBeGxSb3lVVFRFQlM4RHRPd0Znbw?oc=5"
+        },
+        {
+          "headline": "TGTX Stock On Track For Best Day In 3.5 Months Amid Fresh Buyout Rumors - TradingView",
+          "summary": "TGTX Stock On Track For Best Day In 3.5 Months Amid Fresh Buyout Rumors  TradingView",
+          "source": "Google News M&A",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdlFMdTFJVm9kYkQ5S2NKMEpNVjJuR2F6Nno5THZlTE5rYy1iYlk3aEN4VXJKX0VvMHVwRHBFd3k2UnZ4cUlBYWpvZUU5cHBlZTlSeGtDejl6MDdxaEtoeklDZ2t0Tm1yRFdWcU95SDJCUVV6NW1wT25Va3ZxdzJZMy1ua0tYTjcydG9YaWxXZ0owX1BNWHdpYUh5WWVsNVpTbk1PTXlZSjVOOGp2SDZsZGlqdU8tdm11dnJkbDhHYVp3VzdySWZkZFRvcFA?oc=5"
         }
       ],
-      "keyTakeaway": "Healthcare RCM and enterprise AI services consolidation accelerating; biotech M&A remains selective. Tariff escalation creates execution risk for cross-border platforms; monitor hospital consolidation regulatory timeline.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -536,57 +384,40 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "China refuses to aid Trump economic warfare against Iran; shields energy strategy from sanctions impact",
-          "summary": "Asia Times reports China declining to participate in U.S. Trump administration sanctions regime against Iran, described as 'economic warfare.' China's energy diversification and SPR strategy buffer it from Strait of Hormuz disruption.",
+          "headline": "Blacklisted Chinese firm CGN runs power stations in South Korea",
+          "summary": "China General Nuclear Power Corporation (CGN), a Chinese state-owned energy company, is blacklisted by the US for stealing nuclear secrets.  In South Korea, CGN runs five power plants, with a total generation capacity of 2.2 gigawatts (GW). The South Korean government allowing China access to South",
           "source": "Asia Times",
-          "relevance": "Chinese energy independence and sanctions non-participation signal Beijing's continued Middle East engagement and EM bloc consolidation. U.S.-China divergence on Iran elevates geopolitical fragmentation risk; asymmetric EM energy-cost inflation.",
-          "signal": "watch",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "India calls for deeper BRICS cooperation in frontier technologies and innovation financing",
-          "summary": "ANI News reports India proposing expanded BRICS collaboration on AI, frontier tech, and development finance. Signals New Delhi's push for bloc autonomy from Western tech and capital architectures.",
-          "source": "ANI News",
-          "relevance": "BRICS technology and finance integration weakens dollar-denominated capital flows; supports alternative payment and development-finance narratives. Directly competes with Western EM allocators for deal flow in tech and infrastructure.",
-          "signal": "watch",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "BRICS formally rejects EU carbon tax as discriminatory trade barrier",
-          "summary": "ESG News.Earth reports BRICS bloc filing formal objection to EU Carbon Border Adjustment Mechanism (CBAM), characterizing it as protectionist trade policy targeting EM exporters. Dispute escalation implicit.",
-          "source": "ESG News.Earth",
-          "relevance": "CBAM-BRICS friction elevates tariff and trade-war risk; signals North-South economic divergence. EM exporters (India, Vietnam, Indonesia) face margin compression from carbon levies; incentivizes regional supply-chain realignment.",
-          "signal": "bearish",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "South Korea's economy at risk as Trump throws it under the bus",
-          "summary": "Asia Times reports South Korea facing negative trade policy fallout from Trump administration. Lee Jae Myung administration caught between U.S. tariff threats and China proximity. No specific tariff or GDP impact quantified.",
-          "source": "Asia Times",
-          "relevance": "South Korean economy exposed to both U.S. tariff escalation and China supply-chain competition. Sentiment piece signals geopolitical vulnerability; monitor won weakness and Samsung/SK Hynix earnings guidance.",
-          "signal": "bearish",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://asiatimes.com/2026/08/blacklisted-chinese-firm-cgn-runs-power-stations-in-south-korea/"
         },
         {
-          "headline": "Naspers: From South African publisher to global tech investor; Tencent stake performance unravels",
-          "summary": "African Business reports Naspers (South Africa) reflecting on iconic Tencent bet (original $32m investment) and broader tech portfolio performance. Narrative focuses on historical success but implies current portfolio underperformance.",
-          "source": "African Business",
-          "relevance": "South African institutional capital allocation to global tech losing conviction; suggests EM family offices and SWFs reducing foreign-tech concentration. Signals portfolio rebalancing toward domestic/regional emerging assets.",
-          "signal": "watch",
-          "impact": 1,
+          "headline": "Oil importer China won’t aid Trump economic warfare against Iran",
+          "summary": "The Trump administration is once again threatening to carry out “regime change” in Iran, this time using what President Donald Trump described as “economic warfare” against the nation rather than military might. But as Treasury Secretary Scott Bessent demands the world play along with efforts to iso",
+          "source": "Asia Times",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
           "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "1-3M",
+          "link": "https://asiatimes.com/2026/08/oil-importer-china-wont-aid-trump-economic-warfare-against-iran/"
+        },
+        {
+          "headline": "India calls for deeper BRICS cooperation in frontier technologies, innovation financing - ANI News",
+          "summary": "India calls for deeper BRICS cooperation in frontier technologies, innovation financing  ANI News",
+          "source": "Google News EM",
+          "relevance": "",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOVZOdzZJRjF3bF9wc01EeS1tb2I0Rk1hTWxobHhLTDEtYzN2bnFYaUdxMEhZNEFyWmh6b3NrZ1RybVpBRHpmOEJBNGxpbEpRejRDR3hJTmhCUXR4djNNZDZza1NXNVAzaXBwU2dQQU1aUWZJQXhkLVBrNXBXd190anltakdhcWF1WjMwY0VnSzNaWGpCbktwNTkwcXpiTWxsTXY0WFY0d3Q5c3VuNEs1aFFXSC1oaXNxbjcwUVR3V1Q4VUMwbGFxTGJfbGtNaUY3MlZF?oc=5"
         }
       ],
-      "keyTakeaway": "If BRICS bloc continues tech/finance autonomy initiatives and China maintains Iran sanctions non-compliance, EM capital flows fragment; CBAM friction elevates tariff risk for South Asian exporters; Korea faces geopolitical squeeze.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -595,28 +426,19 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Canada commits to matching U.S. tariffs dollar-for-dollar; trade talks collapse",
-          "summary": "FT and BBC report Canadian government, via Mark Carney, rejecting U.S. tariff deal and committing to reciprocal measures. New 50% U.S. levy on C$20bn Canadian goods triggers mirror tariffs. Bilateral breakdown explicit.",
-          "source": "FT World, BBC World",
-          "relevance": "Canada-U.S. tariff war reprices cross-border supply chains; directly impacts automotive, energy, agriculture, and forestry sectors. Raises sourcing costs for North American manufacturers; shifts investment incentives away from continental integration.",
-          "signal": "bearish",
-          "impact": 5,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Changes in manufacturing and trade ecosystem key to achieve $2 trillion Indian export target",
-          "summary": "Hans India reports Indian government policy focus on ecosystem transformation to support $2 trillion export target. Implicit acknowledgment that current trade architecture (tariffs, regulations, logistics) constrains growth.",
-          "source": "Hans India",
-          "relevance": "India doubling down on export-led growth despite global trade friction; creates opportunity for logistics and manufacturing infrastructure investment. Dependent on tariff moderation and supply-chain stability.",
+          "headline": "Comm Secy's South America visit to boost India's trade diversification push - Business Standard",
+          "summary": "Comm Secy's South America visit to boost India's trade diversification push  Business Standard",
+          "source": "Google News Tariffs",
+          "relevance": "",
           "signal": "neutral",
           "impact": 2,
           "conviction": "low",
-          "horizon": "6-12M"
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNczhrNGVfT2t0QldGOWd5U2tPa3dYYjcxZ1lHSmpUR3RrcWNUX1ZKaTFIU1ltbHV0ZTVJOXZHODk3U3Qwa3l1N0JVZXhGNmVWdG1xRmRpZGdKcTAycjNmWE5RVzhGanQxdGc0TmJtNXpIVG5oWmxaamd4WmlmSkUtTHJmTWNvcU5IS0h6Yk5oT1E0ZlptRjlFcUxMTWt3U0dmeEdFa3lpeFpPRDBPU3VjcHdzTGVDSkdYME5wdFBIaXkzMW9STTlrTjhQaVY5Nkp6VW1BV2lSM2ljYl9NcUtZUHZ5cVJIM1NTazdyekEzYWRxV2JUSG5YR1V0bTnSAYICQVVfeXFMTmNJblFCUF9nYldTa1A0aWo4aXpobTkyS0xxRFZrYTlXbE9xbjc0RUtxNTNoSFNRdUhubEFXbVhyRDBhREFQTG81Z203UlBpZWhrdnZkakRsNWNkSE5sT2VJRzdsRUhWcEEtUTN3YVRpV3ExU29iNVFGbmUzUkxpYzFLVjdTclNxLUxiWld0R3lyWjU3WnlKc1lON2hpZ1djdzM1LWJ4TDBZdmY5c29FNXBUS0NzQkllVThyTlV4TWJJTl82d056N3dKa21ib2Q2RXpHTEw1SjhPbDR2U1E5cXJNcmd1MVJiLTRtdGpObnlqZDRIN2RDSjhWRTRwWW9iVWhB?oc=5"
         }
       ],
-      "keyTakeaway": "If Canada-U.S. tariff war sustains, North American supply-chain reshoring stalls; Indian export ambitions depend on tariff moderation and global trade stabilization.",
-      "rawCount": 2
+      "keyTakeaway": "No significant signals detected.",
+      "rawCount": 1
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
@@ -624,58 +446,42 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Corn closes up more than 25 cents week-over-week; strong Iowa, Minnesota crops unlikely to offset U.S. Corn Belt woes",
-          "summary": "Successful Farming reports corn futures advancing >25¢ WoW (Friday Aug 21). Parallel report notes strong Iowa and Minnesota harvests insufficient to offset broader Corn Belt production shortfalls. Supply tightness evident.",
-          "source": "Successful Farming",
-          "relevance": "Corn price rally reflects yield stress in key production regions; suggests structural supply constraint. Elevated grain prices support agricultural credit risk; pressure livestock and poultry margins downstream.",
-          "signal": "bullish",
+          "headline": "Kansas farms struggle with rising fuel costs as state agriculture officials talk solutions - KAKE",
+          "summary": "Kansas farms struggle with rising fuel costs as state agriculture officials talk solutions  KAKE",
+          "source": "Google News Agri",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "high",
-          "horizon": "0-1M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQWFAwWGpsNlpsNWRpZW80bkowaHIxRjZBT1dOOEVkajRHTko4VWxLY0FQR2ZOYVQ4TjVyNXluVEthMXppb1ZtYzhyYy10Z1BKT2g1cGtkdVpKVXpRbW05bnVYQnBubU9rOGtQdGhwUlctNVBZWTN6Y1pUVkplRXpwZXF1dnBWcTJvRzRoOWpYc19SYXBOOWVWMl9NX093Y3c2WmREeFlLRG9sT2RIMnBfd3ZRbEU1SjV4d3ROUVlwcU5PaXRkYmltcDh5RHNOMVBCWHR0Y2p0VVV1MUQ0SDluT2d1Uzloa09VTDBpdFB5bC02ek5YSGxNeUFR?oc=5"
         },
         {
-          "headline": "CBK warns of food price pressures as poor rains put Kenya's maize harvest at risk",
-          "summary": "Dawan Africa reports Kenya's Central Bank warning of imminent food-price inflation tied to substandard rainfall limiting maize production. Regional food security and inflation risk explicit.",
-          "source": "Dawan Africa",
-          "relevance": "East African agricultural stress signals food-price transmission to EM CPI; raises financial stress for food-importing EM economies. Supports long commodity thesis and inflation hedges in emerging-market portfolios.",
-          "signal": "watch",
+          "headline": "When MSP Becomes a Market Guarantee: Strengthening the Farmer’s Bargaining Power - Kashmir Convener",
+          "summary": "When MSP Becomes a Market Guarantee: Strengthening the Farmer’s Bargaining Power  Kashmir Convener",
+          "source": "Google News Food",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSE12WEFWSG1rbWg4bm5naVdHdGZ0Zkc1TnpYcE45RUxmeVNad2wyd1c0LXNhT3dOTHU5TEllQTEzckdqUzVIMGJCT2NEU1Ayd3N4VnBabHpRTFJ5ek1GVEJ6S0dyeEt3b19WYWpXV05RZVBicG5FcmN1ZWZNb2tyS3lPWDczNGRwMG5HaEUzLVNjekk3d1Y4NV83dmpNYXJHYjdLY19sUlJvUEE?oc=5"
         },
         {
-          "headline": "Natural capital gaining increasing recognition from institutional investors; 2-in-5 expect first allocation within 5 years",
-          "summary": "AgFunder News reports survey finding: 40% of institutional asset owners expect to make initial natural-capital allocation within five years. Recognition of biodiversity and ecosystem-services value accelerating.",
+          "headline": "Natural Capital gaining ‘increasing recognition’ from more institutional investors: report",
+          "summary": "Two in five institutional asset owners expect to make their first natural capital allocation within five years.\nThe post Natural Capital gaining ‘increasing recognition’ from more institutional investors: report appeared first on AgFunderNews.",
           "source": "AgFunder News",
-          "relevance": "Natural capital allocation thesis maturing; creates demand for farmland, forest, and biodiversity-linked instruments. Timeline (5 years) suggests medium-term capital deployment window for thematic allocators.",
-          "signal": "bullish",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "AgriFood signals: Farmbot funding, Homestead Capital $150m round, Gates backs HeatSmart cassava",
-          "summary": "AgFunder News reports multiple agritech and innovation fund-raises: Farmbot (farm automation), Homestead Capital ($150m, likely farmland finance), Gates Foundation backing HeatSmart cassava (climate-resilient crops). Sector activity sustained.",
-          "source": "AgFunder News",
-          "relevance": "Agritech and climate-resilient crop innovation attracting institutional capital; signals long-term productivity and food-security thesis. Dependent on commodity-price stability and policy support (climate adaptation funding).",
-          "signal": "bullish",
+          "relevance": "",
+          "signal": "neutral",
           "impact": 2,
-          "conviction": "medium",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Pay attention to where China puts its money: grain marketing and strategic reserves",
-          "summary": "American Farm Publications reports analysis of Chinese capital deployment in global grain markets, implying strategic grain purchasing and reserve-building behavior. Strategic commodity accumulation by Beijing evident.",
-          "source": "American Farm Publications",
-          "relevance": "Chinese grain-buying pressure supports commodity prices and food-security narratives. Capital flows suggest Beijing hedging against supply disruption (Iran, geopolitical risk). Positive for grain-exporting nations (U.S., Brazil, Ukraine).",
-          "signal": "bullish",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "1-3M"
+          "conviction": "low",
+          "horizon": "1-3M",
+          "link": "https://agfundernews.com/natural-capital-gaining-increasing-recognition-from-more-institutional-investors-report"
         }
       ],
-      "keyTakeaway": "If U.S. Corn Belt yields continue stressing and African rainfall remains substandard, grain prices sustain elevated levels; Chinese strategic buying supports exporters. Natural capital theme matures; agritech innovation accelerates.",
+      "keyTakeaway": "No significant signals detected.",
       "rawCount": 10
     }
-  }
+  },
+  "degraded": true
 }
