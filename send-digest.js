@@ -181,7 +181,7 @@ function regimeStrip(briefing) {
               <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;color:${toneColor};letter-spacing:-0.2px;margin-top:4px;">${escapeHtml(tone || "—")}</div>
             </td>
             <td valign="top" align="right">
-              ${microLabel("ZRC risk index", "#C9A84C")}
+              ${microLabel("ZRC market risk index", "#C9A84C")}
               <div style="font-family:Arial,Helvetica,sans-serif;font-size:19px;font-weight:800;color:#FFFFFF;margin-top:4px;">
                 ${risk != null ? escapeHtml(String(risk)) : "—"}<span style="font-size:11px;font-weight:700;color:#64748B;"> / 100</span>
               </div>
@@ -323,7 +323,7 @@ function houseViewSection(briefing) {
 function preheader(briefing) {
   const bits = [];
   if (briefing.marketRegime?.tone) bits.push(`Regime ${briefing.marketRegime.tone}`);
-  if (briefing.riskIndex != null) bits.push(`risk index ${briefing.riskIndex}/100`);
+  if (briefing.riskIndex != null) bits.push(`market risk index ${briefing.riskIndex}/100`);
   const lead = Array.isArray(briefing.executivePulse) && briefing.executivePulse[0]
     ? briefing.executivePulse[0].text
     : briefing.globalBriefing;
@@ -617,7 +617,7 @@ function buildSubject(briefing) {
   const today = new Date().toLocaleDateString("es-ES");
   const bits = [`ZRC Morning Intelligence · ${today}`];
   if (briefing.marketRegime?.tone) bits.push(briefing.marketRegime.tone);
-  if (briefing.riskIndex != null) bits.push(`Risk ${briefing.riskIndex}`);
+  if (briefing.riskIndex != null) bits.push(`Mkt Risk ${briefing.riskIndex}`);
   return bits.join(" · ");
 }
 
@@ -659,7 +659,7 @@ async function sendDigest() {
     fs.writeFileSync("email-preview.html", html);
     console.log("🧪 DRY RUN — no email sent, no subscriber lookup.");
     console.log(`   Briefing:  ${briefing.date || "undated"} · ${totalItems} signals`);
-    console.log(`   Regime:    ${briefing.marketRegime?.tone || "—"} · risk index ${briefing.riskIndex ?? "—"}`);
+    console.log(`   Regime:    ${briefing.marketRegime?.tone || "—"} · market risk index ${briefing.riskIndex ?? "—"}`);
     console.log(`   Executive: ${(briefing.executivePulse || []).length} pulse · ${(briefing.catalysts || []).length} catalysts · ${(briefing.houseView || []).length} house views`);
     console.log(`   Written:   email-preview.html (${Math.round(html.length / 1024)} KB)`);
     if (!briefing.executivePulse) {
