@@ -17,6 +17,9 @@ file is therefore always complete — the front-end never has to guess or hide a
 
   // ── EXECUTIVE LAYER (level 1) ────────────────────────────────────────────
   "riskIndex": 58,          // 0-100. 0-30 benign · 31-50 normal · 51-70 elevated · 71-100 stressed
+                            // Aggregate CAPITAL-MARKETS risk (bonds, rates, oil, M&A, etc.). Distinct
+                            // from zrc-platform's weekly GeoRisk Index, which covers geopolitical
+                            // scenarios only. Displayed as "ZRC market risk index".
   "riskIndexPrev": 44,      // yesterday's value, or null on the first run
 
   "marketRegime": {
