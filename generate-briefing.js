@@ -24,15 +24,15 @@ const FEEDS = {
     label: "Macro & Central Banks",
     icon: "🏦",
     description: "Central bank decisions, inflation prints, GDP, yield curves, and FX",
+    // BIS (404), IMF Blog (403), World Bank RSS (404) and MarketWatch (403)
+    // were retired or hard-blocked; the IMF/World Bank line is now sourced
+    // through a news query instead.
     sources: [
       { name: "Federal Reserve",      url: "https://www.federalreserve.gov/feeds/press_all.xml" },
       { name: "ECB Press Releases",   url: "https://www.ecb.europa.eu/rss/press.html" },
-      { name: "BIS Publications",     url: "https://www.bis.org/doclist/all_speeches.rss" },
-      { name: "IMF Blog",             url: "https://www.imf.org/en/News/rss?language=eng&category=blog" },
-      { name: "World Bank Research",  url: "https://blogs.worldbank.org/en/rss.xml" },
       { name: "Google News Macro",    url: "https://news.google.com/rss/search?q=when:48h+central+bank+interest+rates+inflation+GDP&ceid=US:en&hl=en-US&gl=US" },
-      { name: "Google News Fed",      url: "https://news.google.com/rss/search?q=when:48h+Federal+Reserve+ECB+rate+decision+yield+curve&ceid=US:en&hl=en-US&gl=US" },
-      { name: "MarketWatch Economy",  url: "https://feeds.marketwatch.com/marketwatch/economy-politics" }
+      { name: "Reuters Central Banks",url: "https://news.google.com/rss/search?q=when:48h+site:reuters.com+(%22central+bank%22+OR+inflation+OR+%22rate+decision%22)&ceid=US:en&hl=en-US&gl=US" },
+      { name: "IMF / World Bank",     url: "https://news.google.com/rss/search?q=when:48h+IMF+OR+%22World+Bank%22+outlook+forecast+economy&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -56,11 +56,12 @@ const FEEDS = {
     label: "FDI & Capital Flows",
     icon: "💰",
     description: "Cross-border investments, sovereign wealth, and capital movements",
+    // FT World now returns 403 and Brookings retired its RSS (it redirects to
+    // the homepage), so the wire coverage carries this desk.
     sources: [
-      { name: "FT World",           url: "https://www.ft.com/world?format=rss" },
-      { name: "Brookings",          url: "https://www.brookings.edu/feed/" },
       { name: "Google News FDI",    url: "https://news.google.com/rss/search?q=when:48h+foreign+direct+investment+sovereign+wealth+fund+capital+flows&ceid=US:en&hl=en-US&gl=US" },
-      { name: "Google News SWF",    url: "https://news.google.com/rss/search?q=when:48h+sovereign+wealth+fund+institutional+investor+cross-border&ceid=US:en&hl=en-US&gl=US" }
+      { name: "Google News SWF",    url: "https://news.google.com/rss/search?q=when:48h+sovereign+wealth+fund+institutional+investor+cross-border&ceid=US:en&hl=en-US&gl=US" },
+      { name: "Reuters Capital",    url: "https://news.google.com/rss/search?q=when:48h+site:reuters.com+(investment+OR+%22capital+flows%22+OR+%22sovereign+wealth%22)&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -73,7 +74,8 @@ const FEEDS = {
       { name: "Mining.com",       url: "https://www.mining.com/feed/" },
       { name: "OilPrice.com",     url: "https://oilprice.com/rss/main" },
       { name: "Oil & Gas 360",    url: "https://www.oilandgas360.com/feed/" },
-      { name: "Google News Energy",  url: "https://news.google.com/rss/search?q=when:48h+oil+gas+LNG+critical+minerals+metals+OPEC&ceid=US:en&hl=en-US&gl=US" }
+      // The previous query AND-ed seven terms and matched nothing for months.
+      { name: "Google News Energy",  url: "https://news.google.com/rss/search?q=when:48h+(oil+OR+LNG+OR+OPEC+OR+%22critical+minerals%22)+prices&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -82,11 +84,15 @@ const FEEDS = {
     label: "Real Estate & Infrastructure",
     icon: "🏗️",
     description: "Institutional RE, infrastructure projects, and market trends",
+    // Infrastructure Investor moved behind a registration wall (its feed URL
+    // redirects to /registration/). The Spain query is deliberate: the house
+    // view carries a "Spain & Madrid Real Estate" stance and a daily Spain
+    // signal, and until now no source fed either of them.
     sources: [
       { name: "Bisnow",                url: "https://www.bisnow.com/feed" },
-      { name: "Infrastructure Investor",url: "https://www.infrastructureinvestor.com/feed/" },
       { name: "Google News CRE",       url: "https://news.google.com/rss/search?q=when:48h+commercial+real+estate+REIT+investment&ceid=US:en&hl=en-US&gl=US" },
-      { name: "Google News Infra",     url: "https://news.google.com/rss/search?q=when:48h+infrastructure+investment+fund+project+finance&ceid=US:en&hl=en-US&gl=US" }
+      { name: "Google News Infra",     url: "https://news.google.com/rss/search?q=when:48h+infrastructure+investment+fund+project+finance&ceid=US:en&hl=en-US&gl=US" },
+      { name: "Spain & Madrid RE",     url: "https://news.google.com/rss/search?q=when:48h+(Spain+OR+Madrid+OR+Barcelona)+(%22real+estate%22+OR+property+OR+logistics+OR+offices+OR+housing)&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -96,10 +102,11 @@ const FEEDS = {
     icon: "📊",
     description: "Deal flow, PE/VC activity, and corporate transactions",
     sources: [
+      // Pitchbook's feed is 403 for non-browser clients and its news RSS is gone.
       { name: "PE Hub",            url: "https://www.pehub.com/feed/" },
-      { name: "Pitchbook News",    url: "https://pitchbook.com/feed/news" },
+      { name: "Crunchbase News",   url: "https://news.crunchbase.com/feed/" },
       { name: "Google News M&A",   url: "https://news.google.com/rss/search?q=when:48h+merger+acquisition+buyout+deal&ceid=US:en&hl=en-US&gl=US" },
-      { name: "Google News PE",    url: "https://news.google.com/rss/search?q=when:48h+private+equity+venture+capital+LBO&ceid=US:en&hl=en-US&gl=US" }
+      { name: "Google News PE",    url: "https://news.google.com/rss/search?q=when:48h+(%22private+equity%22+OR+%22venture+capital%22+OR+LBO+OR+buyout)&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -109,11 +116,14 @@ const FEEDS = {
     icon: "🌏",
     description: "Frontier opportunities, risk signals, and market access",
     sources: [
+      // Nikkei's feed carries no dates at all, so it cannot be age-filtered.
+      // Americas Quarterly last published to RSS in 2019 — the LatAm and Asia
+      // queries replace both.
       { name: "African Business",    url: "https://african.business/feed" },
-      { name: "Nikkei Asia",         url: "https://asia.nikkei.com/rss" },
-      { name: "Americas Quarterly",  url: "https://www.americasquarterly.org/feed/" },
       { name: "Asia Times",          url: "https://asiatimes.com/feed/" },
-      { name: "Google News EM",      url: "https://news.google.com/rss/search?q=when:48h+emerging+markets+frontier+BRICS+developing+economies&ceid=US:en&hl=en-US&gl=US" }
+      { name: "Google News EM",      url: "https://news.google.com/rss/search?q=when:48h+emerging+markets+frontier+BRICS+developing+economies&ceid=US:en&hl=en-US&gl=US" },
+      { name: "Google News LatAm",   url: "https://news.google.com/rss/search?q=when:48h+(Brazil+OR+Mexico+OR+Argentina)+(economy+OR+investment+OR+markets)&ceid=US:en&hl=en-US&gl=US" },
+      { name: "Google News Asia",    url: "https://news.google.com/rss/search?q=when:48h+(Asia+OR+India+OR+Indonesia+OR+Vietnam)+(economy+OR+investment+OR+markets)&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -123,10 +133,11 @@ const FEEDS = {
     icon: "🏛️",
     description: "Tariffs, sanctions, export controls, and economic statecraft",
     sources: [
-      { name: "Trade.gov",           url: "https://www.trade.gov/rss.xml" },
-      { name: "Brookings Trade",     url: "https://www.brookings.edu/topic/trade/feed/" },
+      // Trade.gov's feed stopped updating in March 2025 and Brookings retired
+      // its RSS; the reshoring query AND-ed four terms and matched nothing.
       { name: "Google News Tariffs", url: "https://news.google.com/rss/search?q=when:48h+tariffs+trade+policy+export+controls+WTO&ceid=US:en&hl=en-US&gl=US" },
-      { name: "Google News Reshoring",url: "https://news.google.com/rss/search?q=when:48h+reshoring+nearshoring+industrial+policy+subsidy&ceid=US:en&hl=en-US&gl=US" }
+      { name: "Google News Trade",   url: "https://news.google.com/rss/search?q=when:48h+(tariffs+OR+%22export+controls%22+OR+WTO+OR+%22trade+deal%22)&ceid=US:en&hl=en-US&gl=US" },
+      { name: "Google News Reshoring",url: "https://news.google.com/rss/search?q=when:48h+(reshoring+OR+nearshoring+OR+%22industrial+policy%22)&ceid=US:en&hl=en-US&gl=US" }
     ]
   },
 
@@ -145,26 +156,99 @@ const FEEDS = {
 
 // ─── FETCH RSS FEEDS ───────────────────────────────────────────────────────
 
-async function fetchFeed(source) {
-  try {
-    const feed = await parser.parseURL(source.url);
-    const cutoff = Date.now() - 48 * 60 * 60 * 1000;
+// Publishers block unknown user agents and redirect stale feed URLs to landing
+// pages. Fetching ourselves — browser UA, redirects followed, HTML detected,
+// loose ampersands repaired — recovered several sources that the bare
+// parseURL() call reported as dead.
+const BROWSER_UA =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
+  "(KHTML, like Gecko) Chrome/125.0 Safari/537.36";
 
-    return (feed.items || [])
-      .filter(item => {
-        const pubDate = item.pubDate ? new Date(item.pubDate).getTime() : 0;
-        return pubDate > cutoff;
-      })
+// Feeds that emit a raw "&" inside text break the XML parser outright.
+function repairXml(xml) {
+  return xml.replace(/&(?!(?:[a-zA-Z][a-zA-Z0-9]*|#[0-9]+|#x[0-9a-fA-F]+);)/g, "&amp;");
+}
+
+// Tracks what each source actually contributed, so decay is visible in the log
+// instead of silently shrinking the briefing.
+const feedHealth = [];
+
+async function fetchFeed(source) {
+  const note = status => feedHealth.push({ name: source.name, status });
+
+  try {
+    const res = await fetch(source.url, {
+      headers: {
+        "User-Agent": BROWSER_UA,
+        Accept: "application/rss+xml, application/xml, text/xml, */*"
+      },
+      redirect: "follow",
+      signal: AbortSignal.timeout(20000)
+    });
+
+    if (!res.ok) {
+      console.warn(`  ⚠ Failed: ${source.name} (HTTP ${res.status})`);
+      note(`HTTP ${res.status}`);
+      return [];
+    }
+
+    const body = await res.text();
+
+    // A feed URL that now serves a web page — retired feed, paywall or consent
+    // wall. Parsing it yields cryptic XML errors, so name the real problem.
+    if (/^\s*(<!DOCTYPE html|<html)/i.test(body)) {
+      console.warn(`  ⚠ Failed: ${source.name} (serves HTML, not RSS — redirected to ${res.url})`);
+      note("serves HTML");
+      return [];
+    }
+
+    let feed;
+    try {
+      feed = await parser.parseString(body);
+    } catch (err) {
+      feed = await parser.parseString(repairXml(body));
+    }
+
+    const cutoff = Date.now() - 48 * 60 * 60 * 1000;
+    const items = feed.items || [];
+
+    // RDF/Atom feeds carry the date as dc:date or updated, which rss-parser
+    // surfaces as isoDate. Reading pubDate alone discarded those feeds entirely.
+    const stamped = items
+      .map(item => ({ item, ts: new Date(item.isoDate || item.pubDate || 0).getTime() }))
+      .filter(x => Number.isFinite(x.ts) && x.ts > 0);
+
+    if (items.length && !stamped.length) {
+      console.warn(`  ⚠ Undated: ${source.name} (${items.length} items carry no date — cannot age-filter, skipped)`);
+      note("undated");
+      return [];
+    }
+
+    const fresh = stamped.filter(x => x.ts > cutoff);
+
+    if (!fresh.length) {
+      const newest = stamped.length
+        ? new Date(Math.max(...stamped.map(x => x.ts))).toISOString().slice(0, 10)
+        : "never";
+      console.warn(`  ⚠ Stale: ${source.name} (nothing in 48h; newest ${newest})`);
+      note(`stale since ${newest}`);
+      return [];
+    }
+
+    note(`${fresh.length} fresh`);
+
+    return fresh
       .slice(0, 5)
-      .map(item => ({
+      .map(({ item }) => ({
         title: (item.title || "").trim(),
         summary: (item.contentSnippet || item.content || "").substring(0, 300).trim(),
         source: source.name,
-        date: item.pubDate || "",
+        date: item.isoDate || item.pubDate || "",
         link: item.link || ""
       }));
   } catch (err) {
     console.warn(`  ⚠ Failed: ${source.name} (${err.message})`);
+    note(`error: ${err.message.slice(0, 40)}`);
     return [];
   }
 }
@@ -796,7 +880,21 @@ async function main() {
     console.log(`     → ${items.length} items`);
   }
 
-  console.log(`\n  Total: ${totalItems} items across ${Object.keys(FEEDS).length} desks\n`);
+  console.log(`\n  Total: ${totalItems} items across ${Object.keys(FEEDS).length} desks`);
+
+  // Feed decay is gradual and silent: a source 403s or quietly stops publishing
+  // and the briefing just gets thinner. Name the casualties every run.
+  const contributing = feedHealth.filter(f => f.status.endsWith("fresh"));
+  const broken = feedHealth.filter(f => !f.status.endsWith("fresh"));
+  console.log(`  Sources: ${contributing.length}/${feedHealth.length} contributing`);
+  if (broken.length) {
+    console.log("  Not contributing:");
+    for (const f of broken) console.log(`    · ${f.name} — ${f.status}`);
+  }
+  if (contributing.length < feedHealth.length / 2) {
+    console.warn("  ⚠ More than half the sources are down — the briefing is running on a thin base.");
+  }
+  console.log("");
 
   console.log("Phase 2: AI synthesis (single Haiku call)...\n");
   let aiResult = await synthesizeWithAI(allRaw, previous);
