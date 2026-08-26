@@ -1,75 +1,71 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-08-26T06:43:44.607Z",
+  "generated": "2026-08-26T10:06:19.395Z",
   "date": "Wednesday, 26 August 2026",
-  "riskIndex": 50,
-  "riskIndexPrev": 50,
+  "provenance": "manual-reference-baseline",
+  "provenanceNote": "Compiled by hand from public market sources after four consecutive days of failed AI synthesis (23-26 August). It restores a usable continuity baseline; it is not ZRC pipeline output.",
+  "riskIndex": 58,
+  "riskIndexPrev": 64,
   "marketRegime": {
     "tone": "BALANCED",
-    "rationale": "",
-    "riskIndex": 50,
-    "europe": "NEUTRAL",
+    "rationale": "Crude reversed from the mid-August squeeze and long yields eased off multi-decade highs, but Eurozone inflation near 3% and a Jackson Hole address on Friday keep the risk elevated rather than benign.",
+    "riskIndex": 58,
+    "europe": "CAUTIOUS",
     "spain": "NEUTRAL",
     "privateMarkets": "SELECTIVE"
   },
   "regionSignals": {
-    "europe": "NEUTRAL",
+    "europe": "CAUTIOUS",
     "spain": "NEUTRAL",
     "privateMarkets": "SELECTIVE"
   },
   "executivePulse": [
     {
-      "title": "Macro & Central Banks",
-      "text": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
-      "signal": "neutral"
+      "title": "Crude reverses",
+      "signal": "bearish",
+      "text": "Brent at $88.88 after a third straight decline, with crude closing over 3% lower as Washington shifted to economic rather than military pressure on Iran. The August squeeze thesis toward $94 has unwound."
     },
     {
-      "title": "Geopolitics & Security",
-      "text": "Deputy foreign minster says the route's entry as well as part of the exit would run through Iranian territorial waters.",
-      "signal": "neutral"
+      "title": "Yields ease",
+      "signal": "bullish",
+      "text": "The US 10-year eased to 4.64% from about 4.70%, lowering borrowing costs globally, though the 30-year touched 5.327% earlier this month — its highest since June 2007."
     },
     {
-      "title": "FDI & Capital Flows",
-      "text": "Financial resource flow to commercial sector more than doubled to Rs 10.65 lakh crore in April-July: RBI  ANI News",
-      "signal": "neutral"
+      "title": "Europe's inflation floor",
+      "signal": "watch",
+      "text": "Eurozone CPI was 2.9% in July and the ECB's Lane expects it near 3% through 2026, with the Bund at 3.26%, the highest since 2008. European financing conditions stay tight."
     }
   ],
   "opportunityRadar": [
     {
-      "theme": "Macro & Central Banks",
-      "direction": "flat",
-      "conviction": "MEDIUM",
-      "relevance": 2
+      "theme": "European sovereign duration",
+      "direction": "down",
+      "conviction": "HIGH",
+      "relevance": 4
     },
     {
-      "theme": "Geopolitics & Security",
-      "direction": "flat",
+      "theme": "Energy and LNG squeeze",
+      "direction": "down",
       "conviction": "MEDIUM",
-      "relevance": 2
+      "relevance": 4
     },
     {
-      "theme": "FDI & Capital Flows",
-      "direction": "flat",
+      "theme": "LatAm easing cycle",
+      "direction": "up",
       "conviction": "MEDIUM",
-      "relevance": 2
+      "relevance": 3
     },
     {
-      "theme": "Commodities & Energy",
-      "direction": "flat",
+      "theme": "Gold and safe havens",
+      "direction": "up",
       "conviction": "MEDIUM",
-      "relevance": 2
+      "relevance": 3
     },
     {
-      "theme": "Real Estate & Infrastructure",
+      "theme": "Spain and Madrid real assets",
       "direction": "flat",
-      "conviction": "MEDIUM",
-      "relevance": 2
-    },
-    {
-      "theme": "M&A & Private Capital",
-      "direction": "flat",
-      "conviction": "MEDIUM",
-      "relevance": 2
+      "conviction": "SELECTIVE",
+      "relevance": 5
     }
   ],
   "houseView": [
@@ -79,7 +75,7 @@
       "previousView": "NEUTRAL",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "change": "No Spain-specific data in the period. The IBEX 35 retreated from the 20,000 level during the mid-August sovereign debt selloff, per BigGo Finance, with no domestic catalyst since."
     },
     {
       "label": "European Credit & Financing",
@@ -87,7 +83,7 @@
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
       "signal": "watch",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "change": "Eurozone inflation was 2.9% in July and ECB Chief Economist Philip Lane expects it near 3% for the remainder of 2026. The German Bund reached 3.26%, its highest since 2008, and the BTP-Bund spread widened to 82 basis points from 79."
     },
     {
       "label": "Private Capital Deployment",
@@ -95,415 +91,208 @@
       "previousView": "SELECTIVE",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "change": "No new transaction evidence verified in the period. The 22 August read on selective appetite stands."
     },
     {
       "label": "Energy & Commodities",
-      "view": "CONSTRUCTIVE",
+      "view": "SELECTIVE",
       "previousView": "CONSTRUCTIVE",
-      "direction": "unchanged",
-      "signal": "bullish",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "direction": "downgraded",
+      "signal": "bearish",
+      "change": "Brent trades at $88.88 and WTI at $83.11 after a third consecutive decline, with crude closing more than 3% lower on Tuesday as the United States shifted to a strategy of economic pressure on Iran, per CNBC. That unwinds the 22 August case built on crude rallying toward $94 on sanctions escalation."
     },
     {
       "label": "Emerging Markets",
-      "view": "CAUTIOUS",
+      "view": "NEUTRAL",
       "previousView": "CAUTIOUS",
-      "direction": "unchanged",
-      "signal": "watch",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "direction": "upgraded",
+      "signal": "bullish",
+      "change": "Brazil's central bank cut the Selic rate 25 basis points to 14.00%, its fourth consecutive reduction, with the Ibovespa at 174,576.80 (+1.55%) and the real firmer at 5.14 per dollar."
     },
     {
       "label": "Global Risk Appetite",
-      "view": "DEFENSIVE",
+      "view": "CAUTIOUS",
       "previousView": "DEFENSIVE",
-      "direction": "unchanged",
-      "signal": "bearish",
-      "change": "Carried forward — no new evidence in today's intelligence."
+      "direction": "upgraded",
+      "signal": "watch",
+      "change": "The US 10-year eased to 4.64% from about 4.70%, and the S&P 500 (7,677), Dow (53,577) and Nasdaq (26,151) all closed higher. The hedge is still on: gold rose 1.78% to $4,461/oz, and the 30-year Treasury touched 5.327% earlier in the month, its highest since June 2007."
     }
   ],
-  "catalysts": [],
-  "globalBriefing": "AI synthesis was unavailable today — this is an unedited headline digest from ZRC's intelligence feeds.",
-  "marketOpen": "",
+  "catalysts": [
+    {
+      "time": "WED",
+      "title": "US PCE inflation print (Fed's preferred gauge)",
+      "impact": "HIGH"
+    },
+    {
+      "time": "WED",
+      "title": "Nvidia earnings — bellwether for the AI trade",
+      "impact": "HIGH"
+    },
+    {
+      "time": "FRI",
+      "title": "Jackson Hole: Fed Chair Kevin Warsh speaks",
+      "impact": "HIGH"
+    }
+  ],
+  "globalBriefing": "Crude's reversal is the week's pivot: Brent at $88.88 after a third consecutive decline, as the United States moved to economic rather than military pressure on Iran, unwinding the sanctions-squeeze thesis that drove the 22 August briefing. Long yields eased in parallel — the US 10-year to 4.64% — lifting the S&P 500 to 7,677 and the Stoxx 600 by 0.35%, while gold's 1.78% advance to $4,461 shows the hedge has not been unwound with it. Europe is the laggard: inflation at 2.9% with the ECB guiding to near 3% through 2026, and a Bund at 2008 highs, keep regional financing conditions tight even as global risk eases.",
+  "marketOpen": "Wednesday's US PCE print and Nvidia earnings land on the same day, with Chair Warsh at Jackson Hole on Friday — three catalysts capable of reversing the easing in yields that is currently supporting equities.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
+      "rawCount": 0,
+      "keyTakeaway": "If the PCE print confirms the easing in long yields, European credit stays the laggard rather than the leader, because the ECB is guiding to inflation near 3% through year-end.",
       "items": [
         {
-          "headline": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
-          "summary": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
-          "source": "Federal Reserve",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260825a.htm"
+          "headline": "US 10-year Treasury yield eases to 4.64% ahead of July PCE print",
+          "summary": "Per Bloomberg, Treasuries retreated across the curve ahead of the Federal Reserve's preferred inflation gauge, with the 10-year easing from about 4.70% the previous session and lowering borrowing costs globally.",
+          "source": "Bloomberg",
+          "relevance": "Lower long yields relieve refinancing pressure on leveraged real assets, but the move is positioning ahead of a print rather than a confirmed trend.",
+          "signal": "bullish",
+          "impact": 4,
+          "conviction": "medium",
+          "horizon": "0-1M"
         },
         {
-          "headline": "Explainer-Jackson Hole's big question: who pays the government's bill? - AOL.com",
-          "summary": "Explainer-Jackson Hole's big question: who pays the government's bill?  AOL.com",
-          "source": "Google News Fed",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNR3FZSTc3V0V3OW9Sb1daYWMwb0FmbFZhMjFRekRQc0FFQ0RQb0pxREt1MHlpTmxxZHk1M29Id2owSnlTdHNic1hOcGEyNzJpWTRFdDJqVXQ5XzlrUkdyeVZiWGhrV3lxUlZEcW5DUGxkbmtyaHZJVlE4cnpWMHVTOGZn?oc=5"
+          "headline": "Eurozone inflation at 2.9% in July; ECB's Lane guides to near 3% for the rest of 2026",
+          "summary": "According to reporting on ECB Chief Economist Philip Lane's remarks, inflation is expected to hold near 3% through the remainder of 2026, with the German Bund at 3.26%, its highest level since 2008.",
+          "source": "ECB / BigGo Finance",
+          "relevance": "A 3% inflation floor caps the scope for ECB easing and keeps European financing costs elevated relative to the US.",
+          "signal": "bearish",
+          "impact": 4,
+          "conviction": "high",
+          "horizon": "3-6M"
         },
         {
-          "headline": "Euro Recovery Against US Dollar Supported by Data: BBH - CryptoRank",
-          "summary": "Euro Recovery Against US Dollar Supported by Data: BBH  CryptoRank",
-          "source": "Google News Macro",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOeHlqcWw5NktiUkdsaEVweF8zY0tYLUgwRVZvQ1h0TWRGVzdXV0c3Wnc2TUROVTk5a3liVm80Vm1qc25HcFZYNmhTZ2hMcFhtNHY1Vjc5X2NicGFzMnp5T09sRHhyVFZ0TUVRRGItdThGTzNzVmZaZ04zdU1FQWgtaktscFR6YmpNaEJkbFp6WU0yM09YNkE?oc=5"
+          "headline": "Brazil's central bank cuts Selic 25 basis points to 14.00% in fourth consecutive reduction",
+          "summary": "Per Rio Times, the cut extends an easing sequence, with the Ibovespa closing at 174,576.80 (+1.55%) and the real at 5.14 per dollar.",
+          "source": "Rio Times",
+          "relevance": "A sustained LatAm easing cycle supports local-currency debt and equity risk in the region while developed-market policy stays restrictive.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
         }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 7
+      ]
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
+      "rawCount": 0,
+      "keyTakeaway": "If the shift from military to economic pressure on Iran holds, the Hormuz premium stays compressed; a reversal reprices energy and freight within days.",
       "items": [
         {
-          "headline": "Top official says Iran, Oman have agreed new temporary route in Hormuz",
-          "summary": "Deputy foreign minster says the route's entry as well as part of the exit would run through Iranian territorial waters.",
-          "source": "Al Jazeera",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.aljazeera.com/economy/2026/8/26/top-official-says-iran-oman-have-agreed-new-temporary-hormuz-route?traffic_source=rss"
-        },
-        {
-          "headline": "Iran bets economic pain will pressure Trump in game of ‘chicken’",
-          "summary": "Iran is betting global economic fallout and Republicans worried about the midterms will force Trump's retreat.",
-          "source": "Al Jazeera",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.aljazeera.com/video/newsfeed/2026/8/26/iran-bets-economic-pain-will-pressure-trump-in-game-of?traffic_source=rss"
-        },
-        {
-          "headline": "Fireworks factory goes up in smoke in Mexico",
-          "summary": "Two explosions have hit a fireworks facility in Tultepec, Mexico, sending a spectacular mix of flames and explosions",
-          "source": "Al Jazeera",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.aljazeera.com/video/newsfeed/2026/8/26/fireworks-factory-goes-up-in-smoke-in-mexico?traffic_source=rss"
+          "headline": "US strategy on Iran shifts from military escalation to economic pressure",
+          "summary": "Per CNBC, the change in approach eased market fears of renewed war in the Persian Gulf and was the proximate driver of the third consecutive decline in crude.",
+          "source": "CNBC",
+          "relevance": "Removes the tail risk that drove August's freight and energy repricing, without resolving the underlying dispute.",
+          "signal": "bullish",
+          "impact": 4,
+          "conviction": "medium",
+          "horizon": "1-3M"
         }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      ]
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "items": [
-        {
-          "headline": "Financial resource flow to commercial sector more than doubled to Rs 10.65 lakh crore in April-July: RBI - ANI News",
-          "summary": "Financial resource flow to commercial sector more than doubled to Rs 10.65 lakh crore in April-July: RBI  ANI News",
-          "source": "Google News FDI",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOSzhjTHZXcUxmOFBiLVNYWkh5Z2RnSHFDaVVTaGs3Skdob1VxZlJLVEZic0dqWEVTVkhhTWRrU3M0ak56Mk9ITS1JWk15VkE0M1pBckJZRWJtaTJOQXR0eDlkVnk3VmppMC1YVDV6bXZPaEFZcFFlZzYyM2lWMkRUZ1MyMWN4WWNTaVVEMlMyTjdTSVlxbGNZLVdIS0c0c1A0VzhONzg3QUpWTHpjX204aUtoT3pvUGlmOERFRFJnVTVheEpGSWlWaVZlclY0WEtOOFRwOVBvNDU3THpvSEpxVHBWS2xNd1d3?oc=5"
-        },
-        {
-          "headline": "UK household energy price cap to rise by 4% from October",
-          "summary": "Middle East war pushes price limit to three-year high ahead of the winter",
-          "source": "FT World",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.ft.com/content/c89182ba-283f-43ae-abda-7828bfcef07a?syn-25a6b1a6=1"
-        },
-        {
-          "headline": "South Korea's Stock Crash Sends Shockwaves to Wall Street: AI Hedge Fund Posts 67% Monthly Loss, Draws SEC Probe - finance.biggo.com",
-          "summary": "South Korea's Stock Crash Sends Shockwaves to Wall Street: AI Hedge Fund Posts 67% Monthly Loss, Draws SEC Probe  finance.biggo.com",
-          "source": "Google News SWF",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9OcS0zWjc3bkFfaFk2RVNLOGQ4Q1Y3YWU0Ym9VbGtoNHdpMTdDUG1SdzdnRjJ0QW9MdThzZ2ZMX1NQS2dTa3F6dEoyX1E4Uk5ER1pQOG1famZSX3h2dmFBT3U0dmN0bUdkQzNqWVY4MGhjLW5wcWc?oc=5"
-        }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "rawCount": 0,
+      "items": [],
+      "keyTakeaway": "No verified signals for this desk in the reference baseline."
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
+      "rawCount": 0,
+      "keyTakeaway": "If Washington holds to economic rather than military pressure on Iran, the Hormuz risk premium keeps deflating and the energy long loses its catalyst.",
       "items": [
         {
-          "headline": "Oil Prices Fall as Iran-Oman Talks Fuel Hopes of Strait Reopening",
-          "summary": "Crude oil prices dipped earlier today following news reports about Iran and Oman renewing their talks about joint management of the Strait of Hormuz, as those reports were taken to mean the waterway could soon reopen for normal traffic. Reuters reported that the two were discussing “a joint temporar",
-          "source": "OilPrice.com",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-Iran-Oman-Talks-Fuel-Hopes-of-Strait-Reopening.html"
+          "headline": "Crude closes more than 3% lower as US shifts to economic pressure on Iran",
+          "summary": "Per CNBC, prices fell for a third consecutive session as the United States moved to a strategy of economic pressure on Iran, easing fears of renewed conflict in the Persian Gulf. Brent settled at $88.88 and WTI at $83.11.",
+          "source": "CNBC / Rio Times",
+          "relevance": "The reversal removes the supply-disruption premium that underpinned the constructive energy stance taken on 22 August.",
+          "signal": "bearish",
+          "impact": 4,
+          "conviction": "high",
+          "horizon": "0-1M"
         },
         {
-          "headline": "Big Oil Is Betting Billions On Nuclear Fusion",
-          "summary": "After decades confined largely to laboratories, nuclear fusion is beginning to attract the kind of money and industrial planning normally reserved for technologies expected to make it onto the grid. Global private investment in fusion hit a record $4.48 billion in 2025, up 69% from a year earlier, w",
-          "source": "OilPrice.com",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://oilprice.com/Alternative-Energy/Nuclear-Power/Big-Oil-Is-Betting-Billions-On-Nuclear-Fusion.html"
-        },
-        {
-          "headline": "The U.S. Power Play in Iraq That Moscow and Beijing Didn’t See Coming",
-          "summary": "As Russia remains occupied with its war in Ukraine, Iran focuses on defending its territory against U.S. and Israeli attacks, and China maintains its involvement in both conflicts under the bar that would trigger direct conflict with America, Washington is leveraging its position in Iraq. These effo",
-          "source": "OilPrice.com",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://oilprice.com/Energy/Energy-General/The-US-Power-Play-in-Iraq-That-Moscow-and-Beijing-Didnt-See-Coming.html"
+          "headline": "Gold advances 1.78% to $4,461/oz despite the equity rally",
+          "summary": "Per Rio Times, gold rose even as the three major US indices closed higher and the dollar index held near 99.",
+          "source": "Rio Times",
+          "relevance": "Safe-haven demand persisting through an equity rally suggests the risk-on move is positioning, not conviction.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "1-3M"
         }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      ]
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "items": [
-        {
-          "headline": "Olympic Retail Users Taking Early Look At LA",
-          "summary": "The 2028 Olympics are expected to boost demand for some kinds of retail as tenants rush to cash in on the buzz.",
-          "source": "Bisnow",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.bisnow.com/news/los-angeles/retail/los-angeles-olympics-2028-retail"
-        },
-        {
-          "headline": "MG Developer Faces 6 Lawsuits Alleging Millions In Overdue Debt",
-          "summary": "MG Developer faces a half-dozen lawsuits for overdue interest and equity payments as the active builder tries to keep its reputation intact.",
-          "source": "Bisnow",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.bisnow.com/news/south-florida/construction-development/mg-developer-faces-six-lawsuits-claiming-millions-in-overdue-debt"
-        },
-        {
-          "headline": "Zealandia raises $500m for PPP investments - BusinessDesk | NZ",
-          "summary": "Zealandia raises $500m for PPP investments  BusinessDesk | NZ",
-          "source": "Google News Infra",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPUFpTVF91UUtRSGJIeUx4a1Jvd3RUS3M3UUdNWERkM21xeHkyUHZlUEdJTlp3N3E3V3QzZVA0bmI0a2NMaU5pSHJiZWFvSU9ZeE9yazdZdWw1eW5UbTh1eXYwTHNzeDFOcjNKTHUyUUt3UjRQdW9FQktra1o4dHA5aGlZT20zZlJ3RUlhbg?oc=5"
-        }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "rawCount": 0,
+      "items": [],
+      "keyTakeaway": "No verified signals for this desk in the reference baseline."
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "items": [
-        {
-          "headline": "Carlyle wraps up $721 mn acquisition of S.Korean home appliance maker Chungho Nais - KED Global",
-          "summary": "Carlyle wraps up $721 mn acquisition of S.Korean home appliance maker Chungho Nais  KED Global",
-          "source": "Google News M&A",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nMDFuRklMWjAwa3pMSDlGaTR1cU5xQlY0NzNNSHIzZ25LVWxEcUNzMms1a0NIcWZwOWlXUHJ5Z1JjUlZ3aWdVQjc2NjRUaHE1SlNfOENYWldwZlBfbWYtT1F6b3Q3TTZUQVVYVEdocw?oc=5"
-        },
-        {
-          "headline": "Agentic shopping could raise the bar for payments investments, says Apis Partners",
-          "summary": "‘The financial institutions will need to be able to participate in that lightspeed discussion between the various agents to facilitate the whole interaction,’ Matteo Stefanel, managing partner and co-founder, tells PE Hub.\nThe post Agentic shopping could raise the bar for payments investments, says",
-          "source": "PE Hub",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.pehub.com/agentic-shopping-could-raise-the-bar-for-payments-investments-says-apis-partners/"
-        },
-        {
-          "headline": "Gryphon-backed Presidential Heating acquires Shipley Plumbing in Maryland",
-          "summary": "Shipley Plumbing, Heating & Air Conditioning is a Montgomery County, Maryland-based home-services provider offering plumbing, drain clearing and water heater repair and installation.\nThe post Gryphon-backed Presidential Heating acquires Shipley Plumbing in Maryland appeared first on PE Hub.",
-          "source": "PE Hub",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://www.pehub.com/gryphon-backed-presidential-heating-acquires-shipley-plumbing-in-maryland/"
-        }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "rawCount": 0,
+      "items": [],
+      "keyTakeaway": "No verified signals for this desk in the reference baseline."
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
+      "rawCount": 0,
+      "keyTakeaway": "If Brazil's easing sequence continues while developed-market policy stays restrictive, the carry case for LatAm local debt strengthens through year-end.",
       "items": [
         {
-          "headline": "From infrastructure to industrialisation: Building Africa's next bridge to economic integration",
-          "summary": "At the Sustainable Infrastructure Development Symposium South Africa (SIDSSA) 2026, held in Cape Town, H.E. Nardos Bekele-Thomas, Chief Executive Officer of AUDA-NEPAD, delivered a incisive address on what it will take to turn Africa's infrastructure into full economic integration. The article below",
-          "source": "African Business",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://african.business/2026/08/partner-content/from-infrastructure-to-industrialisation-building-africas-next-bridge-to-economic-integration"
+          "headline": "Brazil extends easing cycle as Ibovespa gains 1.55% and the real firms",
+          "summary": "Per Rio Times, the Selic was cut to 14.00% in a fourth consecutive reduction, with mid-month inflation expected to show monthly deflation of 0.31% and a 12-month rate of 4.34%.",
+          "source": "Rio Times",
+          "relevance": "Disinflation alongside an active easing cycle is the cleanest EM carry setup currently visible.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
         },
         {
-          "headline": "Mark Carney shows the world how to bite back at Trump’s tariffs",
-          "summary": "Canadian Prime Minister Carney has announced the suspension of Canada-United States trade talks, citing “last-minute changes” made by American negotiators that “were unfair, uneconomic and called into question the reliability of any deal.” Within hours, President Donald Trump’s new Section 338 tarif",
-          "source": "Asia Times",
-          "relevance": "",
+          "headline": "Chile and Mexico diverge from the Brazilian rally",
+          "summary": "Per Rio Times, the IPSA closed at 11,450.75 (-0.76%) and Mexico's IPC at 65,522.56 (-0.38%), against the Ibovespa's 1.55% advance.",
+          "source": "Rio Times",
+          "relevance": "The regional bid is country-specific rather than a broad LatAm allocation signal.",
           "signal": "neutral",
           "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://asiatimes.com/2026/08/mark-carney-shows-the-world-how-to-bite-back-at-trumps-tariffs/"
-        },
-        {
-          "headline": "S Korea’s AI economy can’t compete with China through conformity",
-          "summary": "South Korea is betting extraordinary sums on artificial intelligence. President Lee Jae-myung has backed an 800 trillion won (US$578 billion) semiconductor expansion involving Samsung Electronics and SK Hynix, promoted a new chip hub in the country’s southwest and joined Korean and US technology com",
-          "source": "Asia Times",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://asiatimes.com/2026/08/s-koreas-ai-economy-cant-compete-with-china-through-conformity/"
+          "conviction": "medium",
+          "horizon": "1-3M"
         }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      ]
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "items": [
-        {
-          "headline": "New rules ease imports, attract investment and push Bangladesh towards freer trade - bdnews24.com",
-          "summary": "New rules ease imports, attract investment and push Bangladesh towards freer trade  bdnews24.com",
-          "source": "Google News Tariffs",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4xSjB0VElPTi1Bc0hIU1dVbFptY2lpVTgwNm9Wc3N0UGx5WlprQ2EtTjc1UlhpNGo4NDR4dnFUZktYNGotTHNiSU02ZWs2NEV5MEFDMA?oc=5"
-        },
-        {
-          "headline": "Bridging the gap between Geneva and Rome for inclusive agricultural trade - PubAffairs Bruxelles",
-          "summary": "Bridging the gap between Geneva and Rome for inclusive agricultural trade  PubAffairs Bruxelles",
-          "source": "Google News Tariffs",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZGJOR1oyRG1RLUhMakR2b3MtMjk4RThQUS1BLUh2bmtvZGZRMjhjdEFnNWp4cDJvTWU2ZlBualFaT05hWC0ycVBhS3JJc3BDRUV0YTFtVnZDRk9yakh0aFRZTklFVEFua3RGTG9zYWZwT0lrZEFGQk5aSXFnZXpCOENHeWlzUU53Z2VXbUV5LUstMWQ4Wnd4ZjUtRDQ4LVI4cmFaVEZuWTNPREh4Z25SNEFpSExQT0JDOUlKQnpnRThodENu?oc=5"
-        },
-        {
-          "headline": "The Indonesia-US Agreement on Reciprocal Trade: Three Views on its Economic and Strategic Impacts - fulcrum.sg",
-          "summary": "The Indonesia-US Agreement on Reciprocal Trade: Three Views on its Economic and Strategic Impacts  fulcrum.sg",
-          "source": "Google News Tariffs",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOaE9kR252ZElMaHRtZVlnVGFSWS1lY0ZxTDlmOG5SWFBxdUpCTHhRRTU3ZE9RWkNmcmtqTWVNZVJxM001ZkdKNlBEeWRnYUhJZk9ZX2gxeV9nUWZKbjJGdjJLQUZobVVUQm9JRlVGeDZYNHFNamJRWXE2NklPMmk2U1N6WXJwS2xLc1FnbnU4a0NhRnNrZWRiRXV2cFZNejJmX2FkZnV0eEVJY21WVjFzSTVDWGRFRHc?oc=5"
-        }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 4
+      "rawCount": 0,
+      "items": [],
+      "keyTakeaway": "No verified signals for this desk in the reference baseline."
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "items": [
-        {
-          "headline": "GIEWS Country Brief: Lebanon 25-August-2026 - ReliefWeb",
-          "summary": "GIEWS Country Brief: Lebanon 25-August-2026  ReliefWeb",
-          "source": "Google News Food",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQWDRIaEZBSHRVQllqWXg2SHM3LTlkdDUxNm9HRDhFZ3ZFUGVVRGVOX2s4V2RqRkhrcTFHem1vbFFpQjlSR0kzZ3BwWlFSa2pRWGd0elFsRDY3ZHhobXQyWXl1dlp1R3BYbDEtYzFVc01YX3ozSV93c0wwb3ZpeC1hVFl4VUtXZw?oc=5"
-        },
-        {
-          "headline": "Climate-driven water shortages push global wheat prices higher - Bioengineer.org",
-          "summary": "Climate-driven water shortages push global wheat prices higher  Bioengineer.org",
-          "source": "Google News Food",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQY0JnVUo4SWZFcGlsd3dQb1JBZkFQM0h2eWRrYTQ5V3gycG9SeTNadmpBWi1seDdOd3NJQXlMRkFqQlByd3ZTQUpQU3pkbUVnQWlRa0RGbWhTT1l6QndrSW9ObWFBRlpHb1RvZ19pbjBUZDVYNXNteFBuS2RaVmNEdl9NVEhxMTFKSDZoOXlnaEk?oc=5"
-        },
-        {
-          "headline": "Squeezed by tariffs and Iran war, farmers say they face a new crisis - The Washington Post",
-          "summary": "Squeezed by tariffs and Iran war, farmers say they face a new crisis  The Washington Post",
-          "source": "Google News Agri",
-          "relevance": "",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "low",
-          "horizon": "1-3M",
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdGtrem1FenhCX2t4TC0teU41NTBtd3hHTGpDYzBwM05fRVdYZUxQdlJZTnoxVU1rYzBiYnEtNmdvMDRmdmJfeUNvVmtXQ0J3YVU4X25NdXpEVmItNVMyREdYcXJnamxqNC1vZTc1eHB1M0FfOTZaeldzMVZFazFGZ01wd25KR0xwdnlhOWRfblRaQ1BvSjl3T3d2cjdWOGsyZTA2c1d5OFo3dXRkOGp1aDJ5X2duQVF4cG1lcA?oc=5"
-        }
-      ],
-      "keyTakeaway": "No significant signals detected.",
-      "rawCount": 10
+      "rawCount": 0,
+      "items": [],
+      "keyTakeaway": "No verified signals for this desk in the reference baseline."
     }
-  },
-  "degraded": true
+  }
 }

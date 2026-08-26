@@ -1167,6 +1167,17 @@
             </div>
           </header>
 
+          {briefing && !briefing.degraded && briefing.provenance === "manual-reference-baseline" && (
+            <section className="shell" style={{ paddingTop:"24px" }}>
+              <div className="degraded-banner" style={{ borderLeftColor:"var(--gold)", background:"rgba(201,168,76,.05)", borderColor:"rgba(201,168,76,.2)" }}>
+                <div className="degraded-label" style={{ color:"var(--gold)" }}>REFERENCE BASELINE · COMPILED MANUALLY FROM PUBLIC SOURCES</div>
+                <div className="degraded-text">
+                  {briefing.provenanceNote || "This briefing was compiled by hand, not produced by the ZRC pipeline."}
+                </div>
+              </div>
+            </section>
+          )}
+
           {briefing && briefing.degraded && (
             <section className="shell" style={{ paddingTop:"24px" }}>
               <div className="degraded-banner">
