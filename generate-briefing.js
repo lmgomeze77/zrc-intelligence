@@ -866,7 +866,21 @@ async function main() {
     categories
   };
 
-  if (aiResult?.degraded) briefing.degraded = true;
+  // A degraded run is raw headlines with no analysis behind them. Publishing it
+  // would put unedited feed content out under the ZRC name, and — worse — it
+  // would become tomorrow's continuity baseline: every signal reads "neutral",
+  // so the risk index, the regime and the whole house view would be measured
+  // against a briefing that judged nothing. Keep the previous data.json, write
+  // the degraded one aside for inspection, and fail loudly.
+  if (aiResult?.degraded) {
+    briefing.degraded = true;
+    fs.writeFileSync("data.degraded.json", JSON.stringify(briefing, null, 2));
+    console.error("\n❌ AI synthesis failed — briefing NOT published.");
+    console.error("   data.json is untouched; the previous briefing stands.");
+    console.error("   The degraded output was written to data.degraded.json for inspection.");
+    console.error("   No email will be sent. Fix the cause and re-run the workflow.\n");
+    process.exit(1);
+  }
 
   fs.writeFileSync("data.json", JSON.stringify(briefing, null, 2));
 

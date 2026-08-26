@@ -654,6 +654,15 @@ async function sendDigest() {
     return;
   }
 
+  // Second line of defence. generate-briefing.js already refuses to publish a
+  // degraded briefing, so this only fires if one reaches here another way —
+  // a stale file in the workspace, or a manual run. Never mail one out.
+  if (briefing.degraded && !DRY_RUN) {
+    console.error("❌ This briefing is flagged degraded — AI synthesis did not run.");
+    console.error("   Refusing to send unedited headlines to subscribers.");
+    process.exit(1);
+  }
+
   if (DRY_RUN) {
     const html = buildEmailHTML(briefing, "Luis", `${BASE_URL}/api/unsubscribe?token=PREVIEW`);
     fs.writeFileSync("email-preview.html", html);

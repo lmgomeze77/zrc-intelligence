@@ -414,6 +414,16 @@
     .loading-dots span:nth-child(2) { animation: loadDot 1.4s infinite .2s; }
     .loading-dots span:nth-child(3) { animation: loadDot 1.4s infinite .4s; }
 
+    .degraded-banner {
+      background: rgba(251,191,36,.05); border: 1px solid rgba(251,191,36,.2);
+      border-left: 3px solid var(--amber); border-radius: 6px; padding: 16px 20px;
+    }
+    .degraded-label {
+      color: var(--amber); font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 7px;
+    }
+    .degraded-text { color: var(--text); font-size: 13px; line-height: 1.6; }
+
     .error-banner {
       background: rgba(248,113,113,.06); border: 1px solid rgba(248,113,113,.15);
       border-radius: 6px; padding: 18px 24px; text-align: center; margin-bottom: 20px;
@@ -1157,9 +1167,22 @@
             </div>
           </header>
 
-          {briefing && <ExecutiveLayer briefing={briefing} />}
+          {briefing && briefing.degraded && (
+            <section className="shell" style={{ paddingTop:"24px" }}>
+              <div className="degraded-banner">
+                <div className="degraded-label">FEED DIGEST ONLY · NO ZRC ANALYSIS TODAY</div>
+                <div className="degraded-text">
+                  Today's synthesis could not be produced, so the executive layer is withheld
+                  rather than estimated. What follows is an unedited digest of the intelligence
+                  feeds — headlines without ZRC classification, conviction or house view.
+                </div>
+              </div>
+            </section>
+          )}
 
-          {briefing && (briefing.globalBriefing || briefing.marketOpen) && (
+          {briefing && !briefing.degraded && <ExecutiveLayer briefing={briefing} />}
+
+          {briefing && !briefing.degraded && (briefing.globalBriefing || briefing.marketOpen) && (
             <section className="shell global-briefing">
               <div className="global-briefing-box">
                 <div className="eyebrow" style={{ marginBottom:"8px" }}>DAILY SYNTHESIS</div>
@@ -1176,9 +1199,9 @@
             </section>
           )}
 
-          {briefing && <OpportunityRadar briefing={briefing} />}
-          {briefing && <HouseView briefing={briefing} />}
-          {briefing && <CatalystCalendar briefing={briefing} />}
+          {briefing && !briefing.degraded && <OpportunityRadar briefing={briefing} />}
+          {briefing && !briefing.degraded && <HouseView briefing={briefing} />}
+          {briefing && !briefing.degraded && <CatalystCalendar briefing={briefing} />}
 
           <main className="shell" id="deep-dive">
             {loadError && (
