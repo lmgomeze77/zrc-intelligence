@@ -1,7 +1,15 @@
 name: ZRC Daily Intelligence Briefing
+
+# GitHub does not guarantee scheduled runs: they are delayed under load and can
+# be dropped entirely, which is what happened on 27 August 2026 — no run fired
+# at all and no email went out. Two mitigations:
+#   · the primary slot avoids :00, the most contended minute of the hour
+#   · a backup slot three hours later retries, and no-ops when the day's
+#     briefing is already published (see the guard step below)
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '17 6 * * *'
+    - cron: '17 9 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -22,17 +30,36 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
+      # Makes the backup slot safe: if the primary run already published today's
+      # briefing, everything below is skipped and no second email goes out. When
+      # the primary was dropped or failed, data.json still carries an older date
+      # and the backup proceeds as a retry.
+      - name: Check whether today's briefing is already published
+        id: guard
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          PUBLISHED=$(node -e "try{const b=require('./data.json');process.stdout.write(String(b.generated||'').slice(0,10))}catch(e){process.stdout.write('')}")
+          echo "Published: ${PUBLISHED:-none} · Today: $TODAY"
+          if [ "$PUBLISHED" = "$TODAY" ]; then
+            echo "already=true" >> "$GITHUB_OUTPUT"
+            echo "Today's briefing is already published — skipping."
+          else
+            echo "already=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Generate daily briefing
+        if: steps.guard.outputs.already != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node generate-briefing.js
       - name: Send email digest
+        if: steps.guard.outputs.already != 'true'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
       - name: Commit and push data.json
+        if: steps.guard.outputs.already != 'true'
         continue-on-error: true
         run: |
           git config user.name "ZRC Intelligence Bot"
