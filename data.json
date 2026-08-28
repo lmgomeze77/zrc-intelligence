@@ -1,15 +1,13 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-08-26T10:06:19.395Z",
-  "date": "Wednesday, 26 August 2026",
-  "provenance": "manual-reference-baseline",
-  "provenanceNote": "Compiled by hand from public market sources after four consecutive days of failed AI synthesis (23-26 August). It restores a usable continuity baseline; it is not ZRC pipeline output.",
-  "riskIndex": 58,
-  "riskIndexPrev": 64,
+  "generated": "2026-08-28T18:46:50.369Z",
+  "date": "Friday, 28 August 2026",
+  "riskIndex": 56,
+  "riskIndexPrev": 58,
   "marketRegime": {
     "tone": "BALANCED",
-    "rationale": "Crude reversed from the mid-August squeeze and long yields eased off multi-decade highs, but Eurozone inflation near 3% and a Jackson Hole address on Friday keep the risk elevated rather than benign.",
-    "riskIndex": 58,
+    "rationale": "Fed Chair Warsh signals conditional rate-hike readiness if inflation persists; energy markets absorb Qatar LNG force majeure and Iran-war tanker premium; no cross-asset shock detected.",
+    "riskIndex": 56,
     "europe": "CAUTIOUS",
     "spain": "NEUTRAL",
     "privateMarkets": "SELECTIVE"
@@ -21,51 +19,51 @@
   },
   "executivePulse": [
     {
-      "title": "Crude reverses",
-      "signal": "bearish",
-      "text": "Brent at $88.88 after a third straight decline, with crude closing over 3% lower as Washington shifted to economic rather than military pressure on Iran. The August squeeze thesis toward $94 has unwound."
+      "title": "Fed Inflation Stance",
+      "text": "Chair Warsh reaffirms Fed's commitment to inflation fight and signals rate hikes may be needed if above-target inflation persists; gold fell 3% on renewed hawkish messaging.",
+      "signal": "bearish"
     },
     {
-      "title": "Yields ease",
-      "signal": "bullish",
-      "text": "The US 10-year eased to 4.64% from about 4.70%, lowering borrowing costs globally, though the 30-year touched 5.327% earlier this month — its highest since June 2007."
+      "title": "Energy Shock Pricing",
+      "text": "Qatar extends LNG force majeure into November amid blocked Strait transit; supertanker earnings surge to $647k/day on Saudi-China route, signaling sustained geopolitical premium on crude logistics.",
+      "signal": "watch"
     },
     {
-      "title": "Europe's inflation floor",
-      "signal": "watch",
-      "text": "Eurozone CPI was 2.9% in July and the ECB's Lane expects it near 3% through 2026, with the Bund at 3.26%, the highest since 2008. European financing conditions stay tight."
+      "title": "OPEC Fragmentation Risk",
+      "text": "Venezuela weighs OPEC exit amid producer-group pressure, with Washington reportedly open to departure; institutional implications for oil-price formation and strategic reserve discipline remain unresolved.",
+      "signal": "watch"
     }
   ],
   "opportunityRadar": [
     {
-      "theme": "European sovereign duration",
-      "direction": "down",
+      "theme": "Energy Transportation Margins",
+      "direction": "up",
       "conviction": "HIGH",
       "relevance": 4
     },
     {
-      "theme": "Energy and LNG squeeze",
-      "direction": "down",
+      "theme": "LNG Supply Constraints",
+      "direction": "up",
       "conviction": "MEDIUM",
       "relevance": 4
     },
     {
-      "theme": "LatAm easing cycle",
+      "theme": "US Manufacturing Reshoring",
       "direction": "up",
       "conviction": "MEDIUM",
       "relevance": 3
     },
     {
-      "theme": "Gold and safe havens",
+      "theme": "India Telecom/Tech Capex (Jio IPO)",
       "direction": "up",
-      "conviction": "MEDIUM",
-      "relevance": 3
-    },
-    {
-      "theme": "Spain and Madrid real assets",
-      "direction": "flat",
       "conviction": "SELECTIVE",
-      "relevance": 5
+      "relevance": 2
+    },
+    {
+      "theme": "OPEC Discipline & Supply",
+      "direction": "down",
+      "conviction": "MEDIUM",
+      "relevance": 4
     }
   ],
   "houseView": [
@@ -75,15 +73,15 @@
       "previousView": "NEUTRAL",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "No Spain-specific data in the period. The IBEX 35 retreated from the 20,000 level during the mid-August sovereign debt selloff, per BigGo Finance, with no domestic catalyst since."
+      "change": "No material new data on Spanish residential or commercial markets in today's headlines; solar panel adoption news is maintenance-level policy, not capital-flow signaling."
     },
     {
       "label": "European Credit & Financing",
       "view": "CAUTIOUS",
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
-      "signal": "watch",
-      "change": "Eurozone inflation was 2.9% in July and ECB Chief Economist Philip Lane expects it near 3% for the remainder of 2026. The German Bund reached 3.26%, its highest since 2008, and the BTP-Bund spread widened to 82 basis points from 79."
+      "signal": "neutral",
+      "change": "Fed hawkish messaging under Warsh creates upward pressure on rates globally; no eurozone-specific credit events or issuance signals reported today."
     },
     {
       "label": "Private Capital Deployment",
@@ -91,208 +89,633 @@
       "previousView": "SELECTIVE",
       "direction": "unchanged",
       "signal": "neutral",
-      "change": "No new transaction evidence verified in the period. The 22 August read on selective appetite stands."
+      "change": "AI-focused funding rounds continue (Instinct megadeal); PE exposure to healthcare/patient engagement and space-tech both active. No shift in selectivity threshold warranted."
     },
     {
       "label": "Energy & Commodities",
       "view": "SELECTIVE",
-      "previousView": "CONSTRUCTIVE",
-      "direction": "downgraded",
-      "signal": "bearish",
-      "change": "Brent trades at $88.88 and WTI at $83.11 after a third consecutive decline, with crude closing more than 3% lower on Tuesday as the United States shifted to a strategy of economic pressure on Iran, per CNBC. That unwinds the 22 August case built on crude rallying toward $94 on sanctions escalation."
+      "previousView": "SELECTIVE",
+      "direction": "unchanged",
+      "signal": "watch",
+      "change": "Qatar LNG force majeure extension and supertanker earnings spike ($647k/day) elevate near-term energy logistics premium; Venezuela OPEC exit threat introduces structural uncertainty to crude discipline."
     },
     {
       "label": "Emerging Markets",
       "view": "NEUTRAL",
-      "previousView": "CAUTIOUS",
-      "direction": "upgraded",
-      "signal": "bullish",
-      "change": "Brazil's central bank cut the Selic rate 25 basis points to 14.00%, its fourth consecutive reduction, with the Ibovespa at 174,576.80 (+1.55%) and the real firmer at 5.14 per dollar."
+      "previousView": "NEUTRAL",
+      "direction": "unchanged",
+      "signal": "neutral",
+      "change": "India Jio IPO approval ($3.8B) and Saudi-Indonesia investment deepening are positive; Pakistan mediation on Iran-US remains speculative; no consensus shift in EM risk posture."
     },
     {
       "label": "Global Risk Appetite",
       "view": "CAUTIOUS",
-      "previousView": "DEFENSIVE",
-      "direction": "upgraded",
-      "signal": "watch",
-      "change": "The US 10-year eased to 4.64% from about 4.70%, and the S&P 500 (7,677), Dow (53,577) and Nasdaq (26,151) all closed higher. The hedge is still on: gold rose 1.78% to $4,461/oz, and the 30-year Treasury touched 5.327% earlier in the month, its highest since June 2007."
+      "previousView": "CAUTIOUS",
+      "direction": "unchanged",
+      "signal": "neutral",
+      "change": "Fed rate-hike signaling and energy supply shocks offset by steady real-estate M&A and capital flow normalization; geopolitical risks (Iran war, Venezuela) are priced but unresolved."
     }
   ],
   "catalysts": [
     {
-      "time": "WED",
-      "title": "US PCE inflation print (Fed's preferred gauge)",
+      "time": "MON TBC",
+      "title": "US Labor Market Data (NFP/Unemployment) — Warsh Inflation Lens",
       "impact": "HIGH"
     },
     {
-      "time": "WED",
-      "title": "Nvidia earnings — bellwether for the AI trade",
-      "impact": "HIGH"
+      "time": "TUE TBC",
+      "title": "Eurozone PMI Flash (Sept) — Post-Summer Demand Signal",
+      "impact": "MEDIUM"
     },
     {
-      "time": "FRI",
-      "title": "Jackson Hole: Fed Chair Kevin Warsh speaks",
-      "impact": "HIGH"
+      "time": "TUE TBC",
+      "title": "Nigeria Frontier Market Reindexing Settlement — FDI Valuation Impact",
+      "impact": "MEDIUM"
     }
   ],
-  "globalBriefing": "Crude's reversal is the week's pivot: Brent at $88.88 after a third consecutive decline, as the United States moved to economic rather than military pressure on Iran, unwinding the sanctions-squeeze thesis that drove the 22 August briefing. Long yields eased in parallel — the US 10-year to 4.64% — lifting the S&P 500 to 7,677 and the Stoxx 600 by 0.35%, while gold's 1.78% advance to $4,461 shows the hedge has not been unwound with it. Europe is the laggard: inflation at 2.9% with the ECB guiding to near 3% through 2026, and a Bund at 2008 highs, keep regional financing conditions tight even as global risk eases.",
-  "marketOpen": "Wednesday's US PCE print and Nvidia earnings land on the same day, with Chair Warsh at Jackson Hole on Friday — three catalysts capable of reversing the easing in yields that is currently supporting equities.",
+  "globalBriefing": "Fed Chair Warsh's hawkish inflation messaging dampens real-asset hedges (gold -3%) while Qatar's LNG force majeure extension and supertanker earnings at record $647k/day sustain energy-logistics premiums amid Iran-war rerouting. India's Jio IPO approval ($3.8B) and Nigeria's frontier-market reinclusión unlock emerging-market tech and equity-fund inflows, offsetting North American tariff uncertainty between US-Canada and cross-border supply-chain stress. Wheat and corn spike on US export demand and China crop damage, signalling sustained agricultural-commodity tailwind.",
+  "marketOpen": "Primary risk at market open: Fed Chair Warsh's continued hawkish tone and bond-yield trajectory following Jackson Hole reaffirmation; watch energy futures on Qatar LNG force majeure persistence through November.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
       "icon": "🏦",
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
-      "rawCount": 0,
-      "keyTakeaway": "If the PCE print confirms the easing in long yields, European credit stays the laggard rather than the leader, because the ECB is guiding to inflation near 3% through year-end.",
       "items": [
         {
-          "headline": "US 10-year Treasury yield eases to 4.64% ahead of July PCE print",
-          "summary": "Per Bloomberg, Treasuries retreated across the curve ahead of the Federal Reserve's preferred inflation gauge, with the 10-year easing from about 4.70% the previous session and lowering borrowing costs globally.",
-          "source": "Bloomberg",
-          "relevance": "Lower long yields relieve refinancing pressure on leveraged real assets, but the move is positioning ahead of a print rather than a confirmed trend.",
-          "signal": "bullish",
-          "impact": 4,
-          "conviction": "medium",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Eurozone inflation at 2.9% in July; ECB's Lane guides to near 3% for the rest of 2026",
-          "summary": "According to reporting on ECB Chief Economist Philip Lane's remarks, inflation is expected to hold near 3% through the remainder of 2026, with the German Bund at 3.26%, its highest level since 2008.",
-          "source": "ECB / BigGo Finance",
-          "relevance": "A 3% inflation floor caps the scope for ECB easing and keeps European financing costs elevated relative to the US.",
+          "headline": "Fed Chair Warsh signals rate hikes may be needed if above-target inflation persists; reaffirms inflation-fighting commitment in Jackson Hole speech.",
+          "summary": "Warsh defended the Fed's 2% inflation target and stated that policy may not be restrictive enough, signaling potential rate hikes if inflation remains elevated. Gold fell 3% on the hawkish messaging (per Mining.com). The reaffirmation contradicts market expectations of imminent cuts.",
+          "source": "Reuters, Investment Executive, Mining.com",
+          "relevance": "Direct implication for Fed funds futures, bond yields, and real-asset pricing; signals end of easing cycle before it begins.",
           "signal": "bearish",
           "impact": 4,
           "conviction": "high",
-          "horizon": "3-6M"
+          "horizon": "0-1M"
         },
         {
-          "headline": "Brazil's central bank cuts Selic 25 basis points to 14.00% in fourth consecutive reduction",
-          "summary": "Per Rio Times, the cut extends an easing sequence, with the Ibovespa closing at 174,576.80 (+1.55%) and the real at 5.14 per dollar.",
-          "source": "Rio Times",
-          "relevance": "A sustained LatAm easing cycle supports local-currency debt and equity risk in the region while developed-market policy stays restrictive.",
-          "signal": "bullish",
-          "impact": 3,
+          "headline": "IMF projects global economy to reach $150 trillion by 2030; IMF forecasts Uzbekistan GDP to reach $273 billion by 2030.",
+          "summary": "Broad-based IMF growth projections anchor long-term capital allocation. World Bank forecasts Ghana growth at 4.8% in 2026. These are consensus baseline data, not surprises.",
+          "source": "IMF, World Bank, Moldova 1, Modern Ghana",
+          "relevance": "Establishes macroeconomic backdrop for emerging-market and frontier-market returns; no tactical shift.",
+          "signal": "neutral",
+          "impact": 2,
           "conviction": "high",
-          "horizon": "3-6M"
+          "horizon": "12M+"
+        },
+        {
+          "headline": "Philippine Peso lags as central bank assessed to be behind the curve on inflation (per BBH analysis).",
+          "summary": "Commentary on Philippine monetary policy lag relative to inflation pressures. Not an official central bank statement, but signals FX vulnerability in Asia ex-China.",
+          "source": "CryptoRank citing BBH",
+          "relevance": "Emerging-market currency risk; relevant to cross-border investment flows into Philippine tech and BPO sectors.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M"
         }
-      ]
+      ],
+      "keyTakeaway": "If Warsh's hawkish stance holds through September labor data, risk-free rate trajectory shifts higher, pressuring duration-heavy assets and constraining EM carry strategies.",
+      "rawCount": 10
     },
     "geopolitics": {
       "label": "Geopolitics & Security",
       "icon": "🌍",
       "description": "Conflicts, alliances, sanctions, and power shifts",
-      "rawCount": 0,
-      "keyTakeaway": "If the shift from military to economic pressure on Iran holds, the Hormuz premium stays compressed; a reversal reprices energy and freight within days.",
       "items": [
         {
-          "headline": "US strategy on Iran shifts from military escalation to economic pressure",
-          "summary": "Per CNBC, the change in approach eased market fears of renewed war in the Persian Gulf and was the proximate driver of the third consecutive decline in crude.",
-          "source": "CNBC",
-          "relevance": "Removes the tail risk that drove August's freight and energy repricing, without resolving the underlying dispute.",
-          "signal": "bullish",
-          "impact": 4,
+          "headline": "US and Canada enter most contentious period in decades; Washington and Ottawa trade tariffs, political pressure, and public shows of resolve.",
+          "summary": "Per Geopolitical Futures, bilateral relations have deteriorated markedly, with tariffs and political positioning creating uncertainty for cross-border capital and trade flows. This extends the trade-policy friction reported separately.",
+          "source": "Geopolitical Futures",
+          "relevance": "Impacts North American supply chains, FDI routing, and energy infrastructure (LNG, oil). Relevant to institutional investors with Mexico/Canada exposure.",
+          "signal": "bearish",
+          "impact": 3,
           "conviction": "medium",
           "horizon": "1-3M"
+        },
+        {
+          "headline": "Norway mourns King Harald; Haakon VIII ascends throne with family motto 'all for Norway.'",
+          "summary": "Succession is complete and stable; no political or financial market disruption signaled.",
+          "source": "BBC World",
+          "relevance": "Symbolic institutional continuity; no capital-allocation implication.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "12M+"
+        },
+        {
+          "headline": "Israeli military strike kills three Palestinians in West Bank's Jenin; Hamas calls for Israeli 'crimes' to stop; violence breaks out in Ceuta over migrant crisis.",
+          "summary": "Ongoing regional tensions in Middle East and Mediterranean migration corridors. No material escalation signal in today's headlines, but volatility backdrop noted.",
+          "source": "Al Jazeera, BBC World",
+          "relevance": "Geopolitical risk premium on energy and refugee-impacted European infrastructure; priced but not quantified as urgent.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Pakistan's latest diplomatic push revives mediation hopes on US-Iran conflict; CIA diplomacy assessed as failing to bridge US-Russia divide.",
+          "summary": "Multiple diplomatic channels active but low assessed probability of breakthrough. Pakistan positions itself as intermediary; US-Russia tensions remain structural.",
+          "source": "Asia Times",
+          "relevance": "Iran-US de-escalation would remove geopolitical premium from energy and shipping; currently low-conviction hope.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "US judge denies injunction against Trump's birthright citizenship order; Trump's Turnberry golf resort charged with damage by seven defendants linked to alleged 'terrorist connection.'",
+          "summary": "Domestic US legal proceedings with no direct institutional capital-markets implication reported.",
+          "source": "Al Jazeera",
+          "relevance": "Marginal; US political/legal uncertainty backdrop, not transaction-level.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "6-12M"
         }
-      ]
+      ],
+      "keyTakeaway": "If US-Canada tariff tensions persist and Iran-US mediation stalls, energy logistics premium and reshoring volatility extend beyond current 1-3M horizon.",
+      "rawCount": 10
     },
     "fdi": {
       "label": "FDI & Capital Flows",
       "icon": "💰",
       "description": "Cross-border investments, sovereign wealth, and capital movements",
-      "rawCount": 0,
-      "items": [],
-      "keyTakeaway": "No verified signals for this desk in the reference baseline."
+      "items": [
+        {
+          "headline": "FTSE Russell restores Nigeria to frontier market status, signaling renewed access to global capital.",
+          "summary": "Index reinclusión removes underweight burden and signals improved regulatory/governance assessment. Direct positive signal for Nigerian equity and credit inflows.",
+          "source": "Arise News",
+          "relevance": "Material for emerging-market allocators and Nigeria-specific country funds; unlocks passive inflows tied to frontier-market indices.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Iran war spurs Gulf infrastructure investment in pipelines and ports; Saudi Arabia and Indonesia deepen investment ties to unlock growth across strategic sectors.",
+          "summary": "Geopolitical redrawing of trade routes forces Gulf capex reallocation to diversify logistics and reduce Iran-transit vulnerability. Saudi-Indonesia cooperation signals emerging-market capital repositioning.",
+          "source": "Reuters, Fast Company Middle East",
+          "relevance": "Energy infrastructure and cross-border M&A opportunity; relevant to infrastructure funds and GCC-ASEAN deal flow.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "China home prices seen falling slightly less this year; property investment slump deepens (per Reuters poll).",
+          "summary": "Reuters consensus shows no recovery in Chinese residential investment despite marginal price stabilization. Capital flight from real estate likely to persist.",
+          "source": "Reuters",
+          "relevance": "Negative signal for FDI into China's property sector and upstream construction supply chains; positive for capital reallocation to Southeast Asia and India.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "India's markets regulator approves Jio Platforms' $3.8 billion IPO; Vietnam urges Qualcomm and Samsung to deepen AI and chip investment.",
+          "summary": "India tech capex and India-Vietnam strategic tech competition both active. Jio IPO approval removes regulatory risk; Vietnam's courtship of chip majors signals desire to diversify away from China manufacturing.",
+          "source": "Reuters, Devdiscourse",
+          "relevance": "Direct investment opportunity in Indian telecom/fintech and Vietnamese semiconductor ecosystems; signals rebalancing of Asia tech supply chains.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Argentina and Chile revive cross-border mining framework for investment.",
+          "summary": "Bilateral agreement removes bilateral friction, reopening copper and lithium exploration capex between the two largest Americas producers.",
+          "source": "Reuters",
+          "relevance": "Positive for cross-border M&A and project-finance activity in lithium and copper; reduces regulatory risk for mining investors.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "India signs deal with US to buy Javelin anti-tank missile systems.",
+          "summary": "Defence procurement agreement signals defence FDI and defence-industrial capex; not a commercial FDI item but reflects geopolitical positioning.",
+          "source": "Devdiscourse",
+          "relevance": "Peripheral to commercial capital flows; signals India-US alignment but no capital reallocation.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "12M+"
+        }
+      ],
+      "keyTakeaway": "If Nigeria frontier-market reinclusión settles without reversals and Gulf infrastructure capex accelerates, emerging-market FDI flows shift toward Africa and GCC-linked infrastructure, away from China.",
+      "rawCount": 10
     },
     "critical-minerals": {
       "label": "Commodities & Energy",
       "icon": "⚡",
       "description": "Oil, gas, metals, supply chains, and energy security",
-      "rawCount": 0,
-      "keyTakeaway": "If Washington holds to economic rather than military pressure on Iran, the Hormuz risk premium keeps deflating and the energy long loses its catalyst.",
       "items": [
         {
-          "headline": "Crude closes more than 3% lower as US shifts to economic pressure on Iran",
-          "summary": "Per CNBC, prices fell for a third consecutive session as the United States moved to a strategy of economic pressure on Iran, easing fears of renewed conflict in the Persian Gulf. Brent settled at $88.88 and WTI at $83.11.",
-          "source": "CNBC / Rio Times",
-          "relevance": "The reversal removes the supply-disruption premium that underpinned the constructive energy stance taken on 22 August.",
+          "headline": "Qatar extends LNG force majeure into November as Strait of Hormuz transit blockage persists; natural gas prices in Asia and Europe jump on extended supply constraint.",
+          "summary": "Qatar's LNG export force majeure, now extended through Nov 2026, removes ~10-15% of global LNG supply. Asian LNG spot prices and European gas futures both rose sharply (per OilPrice.com). Logistics bottleneck is structural, not transient.",
+          "source": "OilPrice.com",
+          "relevance": "Direct cost pressure on power generation and industrial users in Asia and Europe; energy inflation risk and power-plant switching away from gas. High relevance for energy-intensive sectors and utilities.",
           "signal": "bearish",
           "impact": 4,
           "conviction": "high",
           "horizon": "0-1M"
         },
         {
-          "headline": "Gold advances 1.78% to $4,461/oz despite the equity rally",
-          "summary": "Per Rio Times, gold rose even as the three major US indices closed higher and the dollar index held near 99.",
-          "source": "Rio Times",
-          "relevance": "Safe-haven demand persisting through an equity rally suggests the risk-on move is positioning, not conviction.",
-          "signal": "watch",
+          "headline": "Supertanker earnings surge to record $647,000 per day on Saudi Arabia-to-China route as Iran war redraws global oil-trade geography and forces more Gulf oil to move via longer routes.",
+          "summary": "Baltic Exchange benchmark VLCC earnings hit all-time high, driven by geopolitical rerouting of crude flows away from Strait of Hormuz transits. Oil logistics premium is now explicit and priced at $650k/day run rates (per OilPrice.com).",
+          "source": "OilPrice.com",
+          "relevance": "High relevance for shipping companies, energy traders, and oil majors managing cost-of-transport. Signals persistent geopolitical risk premium in energy markets.",
+          "signal": "bearish",
           "impact": 3,
-          "conviction": "medium",
+          "conviction": "high",
           "horizon": "1-3M"
+        },
+        {
+          "headline": "Venezuela weighs OPEC exit amid producer-group fragmentation; Washington reportedly open to departure door.",
+          "summary": "Founding OPEC member Venezuela considers leaving the cartel after decades of dominance disputes. US political alignment with exit suggests geopolitical motivation to weaken OPEC discipline. No formal announcement yet; signal is 'watch' not 'done.'",
+          "source": "Oil & Gas 360, OilPrice.com",
+          "relevance": "If executed, OPEC exit erodes cartel discipline and increases probability of oil-price volatility. Institutional investors in energy and energy equities face higher structural uncertainty.",
+          "signal": "watch",
+          "impact": 4,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "TotalEnergies completes exit from Arctic LNG 2 project; transfers 10% stake to Novatek subsidiary NordLine.",
+          "summary": "Major Western energy company fully divests from Russian Arctic LNG amid sanctions and geopolitical pressure. Completes Western supply-chain decoupling from Russian energy infrastructure.",
+          "source": "Oil & Gas 360",
+          "relevance": "Consolidates Western divestment from Russian LNG and upstream Arctic projects; removes last major Western technology partner from Russian energy. Structural bearish signal for Russian export capacity.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "high",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "US rig count unchanged at 588 total; oil rig count falls by 5, gas rigs rise.",
+          "summary": "Per Baker Hughes, total US drilling activity flat week-over-week. Marginal shift from oil to gas. Signals no acceleration in US onshore production growth.",
+          "source": "Oil & Gas 360",
+          "relevance": "Indicates US energy capex cycle is holding steady, not surging; no signal of production-driven commodity oversupply risk near-term.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Gold price falls more than 3% after Fed Chair Warsh defends 2% inflation target and signals rate hikes may be needed.",
+          "summary": "Hawkish Fed messaging and bond-market intervention commentary weigh on gold. Warsh's swiping at earlier bond-market strength (which had powered gold gains in prior month) signals deliberate messaging to discourage commodity-hedge demand.",
+          "source": "Mining.com",
+          "relevance": "Real-asset allocation signal: if Fed holds hawkish stance, gold and other inflation hedges face headwind. Direct implication for precious-metals and commodity funds.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
         }
-      ]
+      ],
+      "keyTakeaway": "If Qatar LNG force majeure holds and OPEC discipline fractures via Venezuela exit, energy supply constraints and logistics premiums will support sustained pricing for oil and gas, but gold and inflation hedges will underperform on Fed hawkishness.",
+      "rawCount": 10
     },
     "real-estate": {
       "label": "Real Estate & Infrastructure",
       "icon": "🏗️",
       "description": "Institutional RE, infrastructure projects, and market trends",
-      "rawCount": 0,
-      "items": [],
-      "keyTakeaway": "No verified signals for this desk in the reference baseline."
+      "items": [
+        {
+          "headline": "Bridges Real Estate acquires prime mixed-use building in Utrecht, Netherlands.",
+          "summary": "European real-estate dealmaking continues in secondary cities (Utrecht). Signals selective capital deployment in Northern Europe amid macro uncertainty.",
+          "source": "Bisnow",
+          "relevance": "Confirms private-capital appetite for European mixed-use/logistics real estate in lower-rate-shock secondary markets; relevant to European institutional real-estate allocators.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Montgomery County (Maryland) Executive signs $420 million bond authorization, clearing way for $2.7 billion VIVA White Oak mixed-use development.",
+          "summary": "Institutional public-finance support unlocked for major US suburban mixed-use project. Signal that US development-finance ecosystem remains intact and capital is deployed.",
+          "source": "Montgomery County MD government",
+          "relevance": "US mixed-use/suburban development market remains active; financing risk is managed. Relevant to US real-estate opportunistic funds.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Could falling yields make REIT stocks worth a second look? Qatar's first listed REIT a step closer to launch.",
+          "summary": "REIT market sentiment cautious but structurally open to new issuance. Qatar REIT launch signals Middle Eastern real-asset capital formation.",
+          "source": "MarketBeat, Funds Global MENA",
+          "relevance": "Yield-driven REIT valuation question; falling yields (if confirmed) could trigger revaluation, but headline is speculative. GCC real-estate equity capital formation is proceeding.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Everything to know about installing solar panels at your property in Spain; pick your favorite $1.4 million home in Costa del Sol.",
+          "summary": "Spanish residential property marketing and solar-adoption guidance. No institutional capital-flow signal; maintenance-level policy and lifestyle content.",
+          "source": "The Local Spain, The New York Times",
+          "relevance": "Marginal; illustrates Spanish property-market openness to residential buyers but no data on pricing, cap rates, or institutional appetite.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "12M+"
+        },
+        {
+          "headline": "Are climate allocators ignoring early-deployment capital? The new infrastructure premium signals opportunity in digital infrastructure investment.",
+          "summary": "Sector commentary on climate capital allocation gaps and digital infrastructure valuation multiples. Not deal-specific data; frameworks for allocator positioning.",
+          "source": "Forbes, Mondaq",
+          "relevance": "Relevant to institutional allocators seeking underdeployed climate and digital infrastructure themes; suggests selective opportunity if capital-scarcity premium holds.",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "China Merchants Commercial REIT subsidiary enters share purchase agreement; CMC REIT activity ongoing.",
+          "summary": "Routine M&A activity in Chinese REIT market. No major capital reallocation signal; market functioning normally.",
+          "source": "TradingView",
+          "relevance": "Marginal; Chinese commercial real-estate market transacting, but no pricing or credit signal.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "3-6M"
+        }
+      ],
+      "keyTakeaway": "If Fed holds hawkish rates through Q4 2026, US and European commercial real-estate leverage will remain stressed; Qatar REIT launch and Spanish residential sentiment are too nascent to offset macro headwinds.",
+      "rawCount": 10
     },
     "ma-growth": {
       "label": "M&A & Private Capital",
       "icon": "📊",
       "description": "Deal flow, PE/VC activity, and corporate transactions",
-      "rawCount": 0,
-      "items": [],
-      "keyTakeaway": "No verified signals for this desk in the reference baseline."
+      "items": [
+        {
+          "headline": "This week's 10 biggest funding rounds led by AI tools and assistants (Instinct megadeal); space-tech startup funding reaches record $20.3 billion YTD globally in seed-to-growth stage.",
+          "summary": "AI and space-tech remain hyperscale growth-capital magnets. Crunchbase data shows sustained mega-deal velocity. AI assistants and agentic AI applications drive patient engagement tech PE thesis.",
+          "source": "Crunchbase News",
+          "relevance": "Confirms high-growth capital deployment continues despite macro uncertainty; sector concentration risk in AI is material for growth allocators.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Main, New Mountain, Marlin Equity target patient engagement tech; Specialty pharmacy, mental health needs drive Flexpoint's sale of ArtesRx.",
+          "summary": "Tier-1 PE platforms (New Mountain, Marlin) backing healthcare-SaaS M&A and specialty-pharma assets. Signals PE conviction in healthcare IT and mental health verticals as recession-resistant compounders.",
+          "source": "PE Hub",
+          "relevance": "Direct M&A pipeline signal for healthcare-focused growth and PE investors; validates healthcare-tech thesis as PE-backed roll-up opportunity.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "high",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Petra and SharpVue-backed Liberty Restoration acquires Midwest ServiceMaster franchisee; PE backs patient engagement tech: 5 deals in recent activity.",
+          "summary": "Mid-market PE rollup activity continues in disaster restoration and patient engagement verticals. Suggests secondary-market M&A and franchisee consolidation remain active.",
+          "source": "PE Hub",
+          "relevance": "Confirms deal flow in mid-market services and healthcare; fundraising and deployment velocity remain steady.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Private Equity stakeholder analysis on PE landlord clinic closures and apartment-complex failures; California passes bill to stop law firm private equity takeovers.",
+          "summary": "Regulatory and political backlash against PE buyouts of professional services (law firms) and residential real-estate (apartment complex failures reported). PE model facing public scrutiny on healthcare and housing.",
+          "source": "PE Hub, Modern Healthcare, ABA Journal, New York Times",
+          "relevance": "Regulatory risk for PE real-estate and healthcare-services models; signals possible future caps on sector consolidation. Allocators should expect higher ESG/governance diligence requirements.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "How private equity drove an apartment complex into the ground; private equity at franchisee level comes with pros and cons.",
+          "summary": "Negative case studies on PE residential real-estate and franchisee leverage. New York Times and franchise-media narratives amplifying PE operational risk perception.",
+          "source": "New York Times, franchisetimes.com",
+          "relevance": "Media narrative risk for PE fundraising and LBO leverage; may constrain LP appetite for distressed residential assets.",
+          "signal": "bearish",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "PESP provides analysis to New York Times on private equity landlords; PE clinic closures and patient care disruption narratives.",
+          "summary": "Organized labor and policy advocacy against PE healthcare and housing consolidation. Signals sustained political pressure on PE buyout models in these sectors.",
+          "source": "Private Equity Stakeholder Project, Modern Healthcare",
+          "relevance": "Regulatory and political-economy headwind for PE healthcare and residential real-estate; likely to influence fund deployment toward less-regulated tech and SaaS.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        }
+      ],
+      "keyTakeaway": "If PE healthcare-IT and space-tech M&A momentum holds, growth deployment will accelerate despite regulatory backlash against residential real-estate and clinic rollups; sector rotation within PE toward tech and away from healthcare services.",
+      "rawCount": 10
     },
     "emerging-markets": {
       "label": "Emerging Markets",
       "icon": "🌏",
       "description": "Frontier opportunities, risk signals, and market access",
-      "rawCount": 0,
-      "keyTakeaway": "If Brazil's easing sequence continues while developed-market policy stays restrictive, the carry case for LatAm local debt strengthens through year-end.",
       "items": [
         {
-          "headline": "Brazil extends easing cycle as Ibovespa gains 1.55% and the real firms",
-          "summary": "Per Rio Times, the Selic was cut to 14.00% in a fourth consecutive reduction, with mid-month inflation expected to show monthly deflation of 0.31% and a 12-month rate of 4.34%.",
-          "source": "Rio Times",
-          "relevance": "Disinflation alongside an active easing cycle is the cleanest EM carry setup currently visible.",
+          "headline": "India's markets regulator approves Jio Platforms' $3.8 billion IPO; Jio signals intent to deepen AI, telecom, and fintech capex.",
+          "summary": "Regulatory approval for India's largest telecom-fintech IPO removes execution risk and unlocks capital for technology and digital-infrastructure deployment across India's 1.4B consumer base.",
+          "source": "Reuters",
+          "relevance": "Material positive signal for India institutional capital flows, emerging-market tech concentration, and Reliance ecosystem expansion; likely to trigger sector inflows.",
           "signal": "bullish",
           "impact": 3,
           "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Vietnam urges Qualcomm and Samsung to deepen AI and chip investment; Vietnam seeking tech upgrade and manufacturing diversification away from China.",
+          "summary": "Official Vietnamese government courtship of semiconductor majors signals policy intent to become secondary hub for chip design and OSAT outside China and Taiwan. Long-term capex signal.",
+          "source": "Reuters",
+          "relevance": "Strategic capital-allocation signal for Vietnam exposure and semiconductor supply-chain diversification; indicates state-backing for foreign tech FDI.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
           "horizon": "3-6M"
         },
         {
-          "headline": "Chile and Mexico diverge from the Brazilian rally",
-          "summary": "Per Rio Times, the IPSA closed at 11,450.75 (-0.76%) and Mexico's IPC at 65,522.56 (-0.38%), against the Ibovespa's 1.55% advance.",
-          "source": "Rio Times",
-          "relevance": "The regional bid is country-specific rather than a broad LatAm allocation signal.",
-          "signal": "neutral",
+          "headline": "Argentina's Peter Thiel becomes anti-Milei rallying cry for Argentina's left; Milei administration faces left-wing opposition.",
+          "summary": "Political opposition to Milei's tech-billionaire alignment and libertarian reforms. Thiel's Argentina VC fund activities (Founders Fund) become focal point for left-wing critique.",
+          "source": "Bloomberg",
+          "relevance": "Political economy risk for tech/venture-capital inflows into Argentina; allocators should monitor government stability and capital-controls risk.",
+          "signal": "watch",
           "impact": 2,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Mexico trade and investment highlights (Week 35); US-Mexico global competitiveness agreement bolsters bilateral path.",
+          "summary": "Routine trade and investment flows; bilateral economic integration continues despite broader US-Canada tariff tensions.",
+          "source": "Mexico Business News, ASU News",
+          "relevance": "Confirms Mexico remains attractive to US manufacturing and cross-border capex; not a change from baseline.",
+          "signal": "neutral",
+          "impact": 1,
           "conviction": "medium",
           "horizon": "1-3M"
+        },
+        {
+          "headline": "Pakistan's latest diplomatic push revives hopes for US-Iran climbdown; Pakistan positioned as regional mediator on Iran-US conflict.",
+          "summary": "Pakistan attempts to position itself as neutral intermediary in Iran-US tensions. Low assessed probability of breakthrough, but diplomatic activity ongoing.",
+          "source": "Asia Times",
+          "relevance": "If Iran-US de-escalation progresses, Pakistan geopolitical value increases and attracts FDI; currently low-conviction hope.",
+          "signal": "watch",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Indonesia must centre women in its green economy agenda; achieving circular economy across South and Southeast Asia; Danantara shareholder-state model return.",
+          "summary": "Policy and development commentary on Indonesia/SE Asia green transition and state-led development models. Danantara signals Indonesia state-ownership trajectory in key sectors.",
+          "source": "East Asia Forum, Open Access Government, Asia Times",
+          "relevance": "Indonesia policy shift toward state ownership in key sectors (Danantara model) may affect FDI and private-capital deployment; green economy capex remains institutional priority.",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "low",
+          "horizon": "6-12M"
         }
-      ]
+      ],
+      "keyTakeaway": "If India Jio IPO and Vietnam chip FDI proceed on schedule, South and Southeast Asia will become primary emerging-market growth-capital destinations, displacing China allocations; Pakistan and Argentina remain secondary plays with higher political risk.",
+      "rawCount": 10
     },
     "trade-policy": {
       "label": "Trade & Industrial Policy",
       "icon": "🏛️",
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
-      "rawCount": 0,
-      "items": [],
-      "keyTakeaway": "No verified signals for this desk in the reference baseline."
+      "items": [
+        {
+          "headline": "US and Canada enter most contentious period in decades; Washington and Ottawa trade tariffs, political pressure, and public shows of resolve.",
+          "summary": "Bilateral trade tensions escalate beyond tariff announcements into political brinkmanship. Both sides hardening public positions.",
+          "source": "Geopolitical Futures",
+          "relevance": "Direct hit to North American supply chains, cross-border automotive, energy, and agricultural trade; institutional investors should model tariff scenarios on Canada-US value chains.",
+          "signal": "bearish",
+          "impact": 4,
+          "conviction": "high",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Canadian economy recovers sharply in Q2 but shadow of US tariffs looms over future growth outlook.",
+          "summary": "Canada GDP growth remains solid (Q2 data), driven by consumer spending and business investment, but forward-looking sentiment clouded by tariff risk. Domestic resilience masks external vulnerability.",
+          "source": "Al Jazeera",
+          "relevance": "Canada asset allocation faces near-term growth support but medium-term tariff headwind risk; currency volatility likely near-term.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "American manufacturers are hiring again; could tariffs be the reason? Detroit despairs as 'insanity' of Canada trade war punishes city.",
+          "summary": "Mixed signals: some US manufacturers hiring (possibly in response to tariff-driven domestic production reshoring), but Detroit auto supply-chain hubs face demand destruction from Canada trade war.",
+          "source": "Maryland Daily Record, The Guardian",
+          "relevance": "Tariff impacts are sector- and region-specific: reshoring winners vs. cross-border supply-chain losers. Institutional allocators must model granular tariff pass-through.",
+          "signal": "watch",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Uncertainty remains the real challenge, not tariffs themselves; which states do Trump's tariffs hit hardest; Europe's electrification ambition and state of Indonesian reshoring.",
+          "summary": "Academic and policy commentary emphasizes policy uncertainty as primary economic drag rather than tariff rate level itself. State-level granularity shows uneven impact.",
+          "source": "Oglethorpe University, Axios, S&P Global",
+          "relevance": "Volatility in capital allocation driven by policy signal noise, not tariff mechanics. Investors should focus on tariff-path clarity, not current rates.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Broadwind stock leads US industrials screen built for reshoring demand; 2 ETFs to play the US reshoring boom; economic security framed as national security.",
+          "summary": "Capital markets pricing domestic reshoring and onshoring as multi-year secular trend. ETF and equity-selection products emerging. Policy rhetoric frames reshoring as security priority.",
+          "source": "simplywall.st, ETF Trends, Industrial Equipment News",
+          "relevance": "Reshoring is becoming institutional capital-allocation theme with equity product flows; supports US industrial-capex and manufacturing-equipment demand but may require tariff support persistence.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "WTO trade policy review for India: strengthening competitive advantage.",
+          "summary": "Routine WTO process; India positions itself within global rules-based framework.",
+          "source": "NatStrat",
+          "relevance": "Marginal; India's trade stance remains cooperative, supporting FDI inflows.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "high",
+          "horizon": "12M+"
+        }
+      ],
+      "keyTakeaway": "If US-Canada tariff uncertainty persists and US reshoring policy deepens, North American manufacturing will bifurcate between domestic-supply winners and cross-border supply-chain losers; policy clarity is more valuable than tariff-rate certainty for capital deployment.",
+      "rawCount": 10
     },
     "food-agriculture": {
       "label": "Food & Agriculture",
       "icon": "🌾",
       "description": "Food security, agribusiness, and agricultural commodities",
-      "rawCount": 0,
-      "items": [],
-      "keyTakeaway": "No verified signals for this desk in the reference baseline."
+      "items": [
+        {
+          "headline": "Wheat breaks $8 per bushel as export demand reshapes US grain markets; corn hits three-year highs as US grain markets extend powerful summer rally.",
+          "summary": "CBOT wheat and corn prices spike on export demand and global supply concerns (Black Sea war risk mentioned). Per AgroLatam, wheat above $8 and corn at three-year highs signal secular uptrend.",
+          "source": "AgroLatam",
+          "relevance": "Direct implication for US agricultural producers (margin expansion), agricultural equipment makers (capex demand), and food-processing input costs. Commodities-fund allocation signal.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Wheat prices surge as Black Sea war risk shakes global grain trade; China crop damage could open new window for US agricultural exports.",
+          "summary": "Dual supply-shock narrative: Black Sea uncertainty raises wheat prices structurally; concurrent China crop damage diverts Chinese demand from domestic to global (US) suppliers. Sequential bullish signals.",
+          "source": "AgroLatam",
+          "relevance": "US grain exporters and commodity traders face higher price realization but also volatility; China's crop damage is temporary tailwind to US ag exports.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "China must 'take all necessary measures' to secure autumn harvest; Iringa farmers pushed toward certified seeds ahead of crucial planting season.",
+          "summary": "Chinese government directive to secure food security underscores domestic supply pressure. Concurrent African (Tanzania) seed-certification push signals emerging-market agri capex and modernization.",
+          "source": "South China Morning Post, streamlinefeed.co.ke",
+          "relevance": "China food-security concerns support global grain-price floors; African agri-capex is multi-year theme for emerging-market allocators.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Minnesota company tackles nitrogen pollution with ag science in volatile fertilizer market; Reservoir & Deere partnership; MAASH secures funding for mycoprotein.",
+          "summary": "Agtech innovation in fertilizer optimization, equipment partnerships, and alternative protein production. Signals sustained agri-tech VC and corporate M&A activity.",
+          "source": "Successful Farming, AgFunder News",
+          "relevance": "Agtech capital deployment continues; alternative protein and fertilizer-optimization themes attract growth capital despite commodity volatility.",
+          "signal": "neutral",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Livestock management app Breedr plans expansion after $27 million Series B raise led by Partech impact arm; record lows in cattle herd sizes and rising beef prices.",
+          "summary": "Livestock-tech VC funding and structural beef-price support (due to herd depletion) create tailwind for agtech equity. Institutional capital flows toward livestock management platforms.",
+          "source": "AgFunder News",
+          "relevance": "Livestock-tech capital deployment and beef-price tailwind support agri-sector returns; institutional allocators should monitor herd-recovery trajectory.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Plantd converts construction waste problem into revenue with new biochar line; achieving circular economy across South and Southeast Asia.",
+          "summary": "Agtech circular-economy and waste-conversion innovation in construction-materials space. SE Asia circular-economy emphasis supports sustainable agri-capex.",
+          "source": "AgFunder News, Open Access Government",
+          "relevance": "Niche agtech opportunity in biochar and circular economy; supports thematic capital allocation but not systemic ag-market signal.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "3-6M"
+        }
+      ],
+      "keyTakeaway": "If wheat and corn prices hold above 3-year highs and China import demand persists, US agricultural-export earnings and agtech capital deployment will accelerate, supporting rural equipment capex and commodity-linked equity fund flows.",
+      "rawCount": 10
     }
   }
 }
