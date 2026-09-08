@@ -348,6 +348,10 @@ function clamp(n, min, max) {
 
 const MAX_RETRIES = 3;
 
+// The reason synthesis failed, carried through to the alert email. "It failed"
+// is not actionable; "credit balance is too low" is a thing you can go and fix.
+let lastSynthesisError = "";
+
 const SYSTEM_PROMPT = `You are the chief intelligence analyst for Zenith Rise Capital (ZRC), a geopolitical intelligence and investment advisory firm in Madrid. Your briefings are read by family offices, institutional investors, and senior advisors.
 
 You produce TWO layers every morning.
@@ -476,6 +480,9 @@ async function synthesizeWithAI(allCategoryData, previous) {
 
       if (!response.ok) {
         const errBody = await response.text();
+        let detail = errBody.substring(0, 500);
+        try { detail = JSON.parse(errBody).error?.message || detail; } catch (e) {}
+        lastSynthesisError = `HTTP ${response.status} — ${detail}`;
         console.error(`  ❌ HTTP ${response.status} (attempt ${attempt}): ${errBody.substring(0, 500)}`);
         if (attempt < MAX_RETRIES) await new Promise(r => setTimeout(r, 3000));
         continue;
@@ -484,6 +491,7 @@ async function synthesizeWithAI(allCategoryData, previous) {
       const result = await response.json();
 
       if (result.error) {
+        lastSynthesisError = `API error — ${result.error.message || JSON.stringify(result.error)}`;
         console.error(`  API error (attempt ${attempt}):`, JSON.stringify(result.error));
         if (attempt < MAX_RETRIES) await new Promise(r => setTimeout(r, 3000));
         continue;
@@ -517,6 +525,7 @@ async function synthesizeWithAI(allCategoryData, previous) {
       return parsed;
 
     } catch (err) {
+      lastSynthesisError = err.message;
       console.error(`  AI synthesis failed (attempt ${attempt}): ${err.message}`);
       if (attempt < MAX_RETRIES) {
         console.log("  Retrying in 3 seconds...");
@@ -972,8 +981,12 @@ async function main() {
   // the degraded one aside for inspection, and fail loudly.
   if (aiResult?.degraded) {
     briefing.degraded = true;
+    briefing.failureReason = lastSynthesisError || "AI synthesis failed for an unrecorded reason.";
     fs.writeFileSync("data.degraded.json", JSON.stringify(briefing, null, 2));
+    // Plain-text sibling so the alert step can read the cause without parsing JSON.
+    fs.writeFileSync("failure-reason.txt", briefing.failureReason);
     console.error("\n❌ AI synthesis failed — briefing NOT published.");
+    console.error(`   Reason: ${briefing.failureReason}`);
     console.error("   data.json is untouched; the previous briefing stands.");
     console.error("   The degraded output was written to data.degraded.json for inspection.");
     console.error("   No email will be sent. Fix the cause and re-run the workflow.\n");

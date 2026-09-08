@@ -58,6 +58,16 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
+      # A failed run is only useful if someone hears about it. On 4-6 September
+      # six runs failed correctly and silently, and three days of briefings were
+      # lost before anyone looked. Never fails the job itself.
+      - name: Alert on failure
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node alert.js
       - name: Commit and push data.json
         if: steps.guard.outputs.already != 'true'
         continue-on-error: true

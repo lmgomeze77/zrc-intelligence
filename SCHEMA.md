@@ -135,6 +135,28 @@ email is a summary that points at the platform:
 Anything withheld is withheld on purpose. If you add a field, decide which side of that
 line it belongs on before wiring it into the email.
 
+## When the briefing fails
+
+`generate-briefing.js` exits non-zero rather than publishing a briefing with no
+analysis behind it, which means the run fails, nothing is committed, and no email
+reaches subscribers. The previous briefing stays on the platform and stays the
+continuity baseline.
+
+A failure that nobody sees is not much better than a silent one: on 4-6 September
+2026 six runs failed correctly and three days of briefings were lost before anyone
+looked. So a failed run also emails the operator through Resend, with the cause
+diagnosed rather than merely quoted.
+
+That alert needs one repository secret:
+
+| Secret | Purpose |
+| --- | --- |
+| `ALERT_EMAIL` | Where pipeline failure alerts go. Without it the alert step logs a notice and does nothing — subscribers are never involved either way. |
+
+The recurring cause so far has been the Anthropic account running out of credit
+(23-26 August and 4-6 September). Auto-reload on the account removes the failure
+mode entirely; the alert is what tells you when something else breaks.
+
 ## Adding a desk
 
 Add it to `FEEDS` in `generate-briefing.js` **and** to `CATEGORY_ORDER` in `index.html`.
