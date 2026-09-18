@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>ZRC OS</title>
+<meta name="description" content="Cuadro de mando del ZRC Intelligence Officer: pipeline DEALSCORE, cola de decisión y calibración." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+/* ══ ZRC OS ═══════════════════════════════════════════════════════════════
+   Identidad heredada de ZRC Morning Intelligence (index.html).
+   Mundo visual único y deliberado: navy profundo + oro. Todo color explícito.
+   Rampa ordinal de bandas validada (monótona, un solo tono, extremo ≥2:1).
+   ═══════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg: #060D18;
+  --panel: #0B1526;
+  --panel-2: #0E1A2E;
+  --raise: #12203a;
+  --gold: #C9A84C;
+  --gold-soft: rgba(201,168,76,.14);
+  --cream: #E8DCC8;
+  --text: #A5B4C8;
+  --muted: #5A6A80;
+  --faint: #344156;
+  --line: rgba(201,168,76,.12);
+  --line-2: rgba(165,180,200,.10);
+
+  /* Estado — siempre acompañado de icono + etiqueta, nunca color solo */
+  --green: #34D399;
+  --amber: #FBBF24;
+  --red: #F87171;
+
+  /* Bandas DEALSCORE — rampa ordinal de un solo tono (P1 → Descarte) */
+  --b1: #F0D486;
+  --b2: #D9B65C;
+  --b3: #B8933C;
+  --b4: #8A6E2E;
+  --b5: #5E4D24;
+
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background:
+    radial-gradient(circle at 50% -8%, rgba(201,168,76,.06), transparent 38%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select { font: inherit; color: inherit; }
+button { background: none; border: none; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+::selection { background: rgba(201,168,76,.25); color: var(--cream); }
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(201,168,76,.22); border-radius: 4px; }
+
+.shell { max-width: 1120px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+.mono { font-family: var(--mono); }
+.num { font-variant-numeric: tabular-nums; font-family: var(--mono); }
+
+.eyebrow {
+  font-family: var(--mono); font-size: 9px; font-weight: 700;
+  letter-spacing: 2.2px; text-transform: uppercase; color: var(--gold);
+}
+.sec-note { color: var(--muted); font-size: 12.5px; max-width: 68ch; }
+
+/* ── CABECERA ─────────────────────────────────────────────────────────── */
+.header { border-bottom: 1px solid var(--line); padding-block: 26px 0; }
+.header-row {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 20px; flex-wrap: wrap;
+}
+.live-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 8px rgba(52,211,153,.45); display: inline-block;
+  vertical-align: middle; animation: pulse 2.4s ease infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .4; } }
+
+.wordmark {
+  color: var(--cream); font-family: var(--display); font-weight: 600;
+  font-size: clamp(34px, 7vw, 46px); line-height: 1; letter-spacing: -.5px;
+  margin: 10px 0 6px;
+}
+.wordmark span { color: var(--gold); }
+.tagline { color: var(--muted); font-size: 13px; max-width: 54ch; }
+
+.stamp { text-align: right; flex-shrink: 0; }
+.stamp-date { color: var(--cream); font-family: var(--display); font-size: 16px; }
+.stamp-meta { color: var(--muted); font-family: var(--mono); font-size: 10px; letter-spacing: .5px; margin-top: 3px; }
+
+.nav {
+  display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;
+  border-top: 1px solid var(--line-2); padding-block: 12px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: 1.3px;
+}
+.nav a { color: var(--muted); text-decoration: none; transition: color .18s; }
+.nav a:hover, .nav a:focus-visible { color: var(--gold); }
+
+/* ── AVISO DE GOBERNANZA ──────────────────────────────────────────────── */
+.govern {
+  margin-top: 22px; padding: 16px 18px;
+  border: 1px solid rgba(251,191,36,.3); border-left: 3px solid var(--amber);
+  background: rgba(251,191,36,.05);
+}
+.govern-head {
+  display: flex; align-items: center; gap: 9px; margin-bottom: 7px;
+  color: var(--amber); font-family: var(--mono); font-size: 10px;
+  font-weight: 700; letter-spacing: 1.4px;
+}
+.govern p { font-size: 13.5px; color: var(--text); max-width: 82ch; }
+.govern p + p { margin-top: 8px; }
+.govern code {
+  font-family: var(--mono); font-size: 12px; color: var(--cream);
+  background: rgba(201,168,76,.10); padding: 1px 5px; border-radius: 2px;
+}
+
+/* ── SECCIONES ────────────────────────────────────────────────────────── */
+.section { padding-block: 40px 0; }
+.sec-head {
+  display: flex; align-items: baseline; gap: 14px;
+  border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.sec-title {
+  color: var(--cream); font-family: var(--display);
+  font-size: 25px; font-weight: 600; letter-spacing: -.2px;
+}
+.sec-ref { color: var(--faint); font-family: var(--mono); font-size: 9px; letter-spacing: 1px; margin-left: auto; }
+
+/* ── 1 · ESTADO DE LA FIRMA ───────────────────────────────────────────── */
+.stat-grid {
+  display: grid; gap: 1px; background: var(--line-2);
+  border: 1px solid var(--line-2);
+  /* 6 tiles: 3+3 en escritorio, 2+2+2 en tableta, 1 por fila en móvil.
+     Siempre filas completas — ninguna tarjeta queda sola estirándose. */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.stat { background: var(--panel); padding: 16px 17px 15px; }
+.stat-label {
+  font-family: var(--mono); font-size: 8.5px; letter-spacing: 1.3px;
+  color: var(--muted); text-transform: uppercase; margin-bottom: 9px;
+}
+.stat-value {
+  color: var(--cream); font-family: var(--display);
+  font-size: 34px; font-weight: 600; line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.stat-value small { font-size: 15px; color: var(--muted); font-weight: 400; margin-left: 3px; }
+.stat-sub { font-family: var(--mono); font-size: 9.5px; color: var(--muted); margin-top: 8px; letter-spacing: .3px; }
+.stat-sub b { color: var(--text); font-weight: 500; }
+.stat.is-alert .stat-value { color: var(--amber); }
+
+.spark-wrap { margin-top: 9px; }
+.spark-legend {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px;
+  font-family: var(--mono); font-size: 8px; letter-spacing: .6px; color: var(--muted);
+}
+.spark-legend i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
+
+/* ── 2 · COLA DE DECISIÓN ─────────────────────────────────────────────── */
+.queue { display: flex; flex-direction: column; gap: 1px; background: var(--line-2); border: 1px solid var(--line-2); }
+.q-item {
+  background: var(--panel); padding: 15px 17px;
+  display: grid; gap: 4px 16px;
+  grid-template-columns: auto 1fr auto; align-items: start;
+}
+.q-rank {
+  font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--gold);
+  letter-spacing: .5px; padding-top: 3px; min-width: 22px;
+}
+.q-title { color: var(--cream); font-family: var(--display); font-size: 18px; font-weight: 600; line-height: 1.25; }
+.q-why { font-size: 13px; color: var(--text); margin-top: 3px; max-width: 72ch; }
+.q-act {
+  margin-top: 7px; font-family: var(--mono); font-size: 10px;
+  letter-spacing: .6px; color: var(--muted);
+}
+.q-act b { color: var(--gold); font-weight: 700; }
+.q-side { display: flex; flex-direction: column; align-items: flex-end; gap: 7px; }
+
+/* ── PASTILLAS ────────────────────────────────────────────────────────── */
+.pill {
+  font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1px;
+  padding: 3px 8px; border-radius: 2px; white-space: nowrap;
+  border: 1px solid currentColor;
+}
+.pill-P1 { color: var(--b1); }
+.pill-P2 { color: var(--b2); }
+.pill-P3 { color: var(--b3); }
+.pill-P4 { color: var(--b4); }
+.pill-DESCARTE { color: var(--b5); }
+.pill-NONE { color: var(--faint); }
+
+.flag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .6px;
+  padding: 3px 7px; border-radius: 2px; white-space: nowrap;
+}
+.flag-warn { color: var(--amber); background: rgba(251,191,36,.09); border: 1px solid rgba(251,191,36,.26); }
+.flag-stop { color: var(--red);   background: rgba(248,113,113,.09); border: 1px solid rgba(248,113,113,.26); }
+.flag-ok   { color: var(--green); background: rgba(52,211,153,.09); border: 1px solid rgba(52,211,153,.26); }
+
+/* ── 3 · PIPELINE ─────────────────────────────────────────────────────── */
+.toolbar {
+  display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+  margin-bottom: 14px;
+}
+.toolbar select, .toolbar .tbtn {
+  background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--text); font-family: var(--mono); font-size: 10px;
+  letter-spacing: .8px; padding: 7px 10px; border-radius: 2px;
+  transition: border-color .18s, color .18s;
+}
+.toolbar select:hover, .tbtn:hover { border-color: rgba(201,168,76,.4); color: var(--cream); }
+.tbtn[aria-pressed="true"] { color: var(--bg); background: var(--gold); border-color: var(--gold); font-weight: 700; }
+.toolbar-count { margin-left: auto; font-family: var(--mono); font-size: 9.5px; color: var(--muted); letter-spacing: .6px; }
+
+.table-scroll { overflow-x: auto; border: 1px solid var(--line-2); }
+table.pipe { width: 100%; border-collapse: collapse; min-width: 720px; }
+table.pipe thead th {
+  background: var(--panel-2); text-align: left; padding: 10px 12px;
+  font-family: var(--mono); font-size: 8.5px; font-weight: 700;
+  letter-spacing: 1.2px; color: var(--muted); text-transform: uppercase;
+  border-bottom: 1px solid var(--line); white-space: nowrap;
+}
+table.pipe thead th.sortable { cursor: pointer; }
+table.pipe thead th.sortable:hover { color: var(--gold); }
+table.pipe tbody tr {
+  background: var(--panel); cursor: pointer;
+  border-bottom: 1px solid var(--line-2);
+  transition: background .15s;
+}
+table.pipe tbody tr:hover, table.pipe tbody tr:focus-visible { background: var(--raise); }
+table.pipe tbody tr[aria-selected="true"] { background: var(--raise); box-shadow: inset 3px 0 0 var(--gold); }
+table.pipe td { padding: 11px 12px; vertical-align: middle; font-size: 13.5px; }
+.td-code { font-family: var(--mono); font-size: 9.5px; color: var(--muted); letter-spacing: .4px; white-space: nowrap; }
+.td-name { color: var(--cream); font-family: var(--display); font-size: 16px; font-weight: 600; line-height: 1.25; }
+.td-vert { font-family: var(--mono); font-size: 9.5px; color: var(--muted); letter-spacing: .4px; margin-top: 2px; }
+
+.score-cell { display: flex; align-items: center; gap: 10px; min-width: 128px; }
+.score-num { font-family: var(--mono); font-size: 14px; font-weight: 700; color: var(--cream); font-variant-numeric: tabular-nums; min-width: 38px; }
+.score-num.is-empty { color: var(--faint); font-size: 10px; font-weight: 400; letter-spacing: .6px; }
+.score-bar { flex: 1; height: 5px; background: rgba(165,180,200,.10); border-radius: 3px; overflow: hidden; min-width: 54px; }
+.score-fill { display: block; height: 100%; border-radius: 3px; transition: width .35s ease; }
+
+/* ── DETALLE / PUNTUACIÓN ─────────────────────────────────────────────── */
+.detail {
+  margin-top: 20px; border: 1px solid var(--line);
+  background: var(--panel); padding: 20px;
+}
+.detail-head { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+.detail-title { color: var(--cream); font-family: var(--display); font-size: 24px; font-weight: 600; line-height: 1.2; }
+.detail-meta { font-family: var(--mono); font-size: 9.5px; color: var(--muted); letter-spacing: .6px; margin-top: 4px; }
+.detail-score { text-align: right; }
+.detail-score-n {
+  font-family: var(--display); font-size: 46px; font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums; color: var(--cream);
+}
+.detail-score-l { font-family: var(--mono); font-size: 9px; letter-spacing: 1.2px; color: var(--muted); margin-top: 4px; }
+
+.detail-cols { display: grid; gap: 26px; margin-top: 22px; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+@media (max-width: 820px) { .detail-cols { grid-template-columns: 1fr; } }
+
+.dim-row { padding: 9px 0; border-bottom: 1px solid var(--line-2); }
+.dim-row:last-child { border-bottom: none; }
+.dim-top { display: flex; align-items: center; gap: 10px; }
+.dim-code { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--gold); min-width: 22px; }
+.dim-name { font-size: 13px; color: var(--text); flex: 1; min-width: 0; }
+.dim-w { font-family: var(--mono); font-size: 9px; color: var(--faint); letter-spacing: .5px; }
+.dim-val { font-family: var(--mono); font-size: 13px; font-weight: 700; color: var(--cream); min-width: 22px; text-align: right; font-variant-numeric: tabular-nums; }
+.dim-bar-row { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+.dim-track { flex: 1; height: 6px; background: rgba(165,180,200,.10); border-radius: 3px; overflow: hidden; }
+.dim-fill { display: block; height: 100%; background: var(--gold); border-radius: 3px; transition: width .3s ease; }
+/* La palanca se marca con etiqueta, no con color: oro y ámbar son
+   indistinguibles a este tamaño, y la identidad nunca va en el color solo. */
+.dim-row.is-lever { background: rgba(201,168,76,.045); box-shadow: inset 2px 0 0 var(--gold); padding-left: 10px; margin-left: -10px; }
+.lever-tag {
+  font-family: var(--mono); font-size: 7.5px; font-weight: 700; letter-spacing: 1px;
+  color: var(--bg); background: var(--gold); padding: 2px 5px; border-radius: 2px; flex-shrink: 0;
+}
+.dim-anchor { font-size: 11.5px; color: var(--muted); margin-top: 6px; font-style: italic; line-height: 1.45; }
+
+/* El control se distingue del dato: la barra de arriba es la marca (6px, con
+   color de estado); el deslizador es un hilo con tirador, no un segundo gráfico. */
+.dim-slider { width: 100%; margin-top: 6px; height: 14px; background: none; -webkit-appearance: none; appearance: none; cursor: pointer; }
+.dim-slider::-webkit-slider-runnable-track { height: 2px; background: rgba(165,180,200,.18); border-radius: 2px; }
+.dim-slider::-moz-range-track { height: 2px; background: rgba(165,180,200,.18); border-radius: 2px; }
+.dim-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; appearance: none; width: 11px; height: 11px; border-radius: 50%;
+  background: var(--gold); border: 2px solid var(--panel); margin-top: -4.5px;
+}
+.dim-slider::-moz-range-thumb { width: 11px; height: 11px; border-radius: 50%; background: var(--gold); border: 2px solid var(--panel); }
+
+.gonogo { border: 1px solid var(--line-2); background: var(--panel-2); padding: 15px 16px; }
+.gonogo h4 {
+  font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1.3px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 11px;
+}
+.gg-item { display: flex; gap: 9px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid var(--line-2); font-size: 12.5px; }
+.gg-item:last-child { border-bottom: none; }
+.gg-mark { font-family: var(--mono); font-size: 11px; font-weight: 700; flex-shrink: 0; width: 15px; }
+.gg-pass .gg-mark { color: var(--green); }
+.gg-fail .gg-mark { color: var(--red); }
+.gg-warn .gg-mark { color: var(--amber); }
+.gg-q { flex: 1; color: var(--text); }
+.gg-t { font-family: var(--mono); font-size: 9.5px; color: var(--muted); white-space: nowrap; }
+.gg-verdict {
+  margin-top: 13px; padding: 10px 12px; text-align: center;
+  font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1.6px;
+}
+.gg-verdict.go { color: var(--green); background: rgba(52,211,153,.08); border: 1px solid rgba(52,211,153,.3); }
+.gg-verdict.cio { color: var(--amber); background: rgba(251,191,36,.08); border: 1px solid rgba(251,191,36,.3); }
+.gg-verdict.no { color: var(--red); background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.3); }
+
+.lever {
+  margin-top: 16px; padding: 13px 15px;
+  border-left: 2px solid var(--gold); background: rgba(201,168,76,.05);
+}
+.lever h4 { font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1.3px; color: var(--gold); margin-bottom: 7px; }
+.lever p { font-size: 13px; color: var(--text); }
+
+.scope-notes { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.scope-note { font-size: 12.5px; color: var(--text); display: flex; gap: 9px; align-items: flex-start; }
+
+/* ── 4 · CALIBRACIÓN ──────────────────────────────────────────────────── */
+.cal-grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+.card { border: 1px solid var(--line-2); background: var(--panel); padding: 17px 18px; }
+.card h3 {
+  font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: 1.3px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 4px;
+}
+.card .card-note { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+
+.bandrow { display: flex; align-items: center; gap: 11px; padding: 7px 0; border-bottom: 1px solid var(--line-2); }
+.bandrow:last-child { border-bottom: none; }
+.bandrow .bl { font-family: var(--mono); font-size: 10px; font-weight: 700; min-width: 66px; letter-spacing: .6px; }
+.bandrow .bt { flex: 1; height: 16px; background: rgba(165,180,200,.07); border-radius: 2px; overflow: hidden; }
+.bandrow .bf { display: block; height: 100%; border-radius: 2px; }
+.bandrow .bn { font-family: var(--mono); font-size: 11px; color: var(--text); min-width: 58px; text-align: right; font-variant-numeric: tabular-nums; }
+
+.gauge-track { height: 9px; background: rgba(165,180,200,.10); border-radius: 5px; overflow: hidden; margin: 14px 0 8px; position: relative; }
+.gauge-fill { display: block; height: 100%; background: var(--red); border-radius: 5px; }
+.gauge-ticks { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 8.5px; color: var(--faint); letter-spacing: .5px; }
+.empty-state {
+  font-size: 12.5px; color: var(--muted); font-style: italic;
+  padding: 14px 0; line-height: 1.6;
+}
+
+.layers { display: flex; flex-direction: column; gap: 1px; background: var(--line-2); border: 1px solid var(--line-2); }
+.layer { background: var(--panel); padding: 13px 16px; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.layer-n { font-family: var(--mono); font-size: 10px; font-weight: 700; color: var(--gold); min-width: 54px; letter-spacing: .6px; }
+.layer-name { color: var(--cream); font-family: var(--display); font-size: 17px; font-weight: 600; min-width: 150px; }
+.layer-desc { font-size: 12.5px; color: var(--muted); flex: 1; min-width: 190px; }
+
+/* ── PIE ──────────────────────────────────────────────────────────────── */
+.foot {
+  margin-top: 46px; border-top: 1px solid var(--line);
+  padding-block: 22px 40px;
+  font-family: var(--mono); font-size: 9.5px; color: var(--faint);
+  letter-spacing: .5px; line-height: 1.9;
+}
+.foot b { color: var(--muted); font-weight: 500; }
+
+@media (max-width: 560px) {
+  .shell { padding-left: 16px; padding-right: 16px; }
+  .stamp { text-align: left; }
+  .q-item { grid-template-columns: auto 1fr; }
+  .q-side { grid-column: 1 / -1; flex-direction: row; align-items: center; margin-top: 8px; }
+  .detail-head { flex-direction: column; }
+  .detail-score { text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ══ CABECERA ═══════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-row">
+      <div>
+        <div class="eyebrow"><span class="live-dot"></span>&nbsp;&nbsp;Zenith Rise Capital · Calesius Global, S.L.</div>
+        <h1 class="wordmark">ZRC <span>OS</span></h1>
+        <p class="tagline">Capa de mando del Intelligence Officer. Originación, cualificación y memoria en una sola superficie.</p>
+      </div>
+      <div class="stamp">
+        <div class="stamp-date" id="stampDate">—</div>
+        <div class="stamp-meta">CIO · MADRID</div>
+        <div class="stamp-meta" id="stampBuild">—</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#estado">01 · ESTADO</a>
+      <a href="#decision">02 · COLA DE DECISIÓN</a>
+      <a href="#pipeline">03 · PIPELINE DEALSCORE</a>
+      <a href="#calibracion">04 · CALIBRACIÓN</a>
+      <a href="#arquitectura">05 · ARQUITECTURA</a>
+    </nav>
+  </header>
+
+  <!-- ══ AVISO DE GOBERNANZA ════════════════════════════════════════════ -->
+  <div class="govern" role="note">
+    <div class="govern-head">▲ DECISIÓN PENDIENTE DEL CIO · MODELO DE SCORING</div>
+    <p>El corpus contiene <b>dos sistemas de puntuación incompatibles que comparten los mismos nombres de columna</b> <code>D1…D8</code>. En el manual del Intelligence Officer (ZOS, §5.2) <code>D3</code> es <i>Acceso al decisor</i> con peso 18&nbsp;%. En el esquema Postgres de Capa&nbsp;3 y en el libro de backtest (DEALSCORE, ZRC-DOC-INT-001 §5.2) <code>D3</code> es <i>Probabilidad de cierre</i> con peso 15&nbsp;%, y <i>Acceso al decisor</i> es <code>D2</code>. Las bandas también difieren: 85/70/55/40/20 frente a 80/65/50/35.</p>
+    <p>Este cuadro de mando calcula sobre <b>DEALSCORE</b>, porque es el modelo que implementan el esquema SQL y el libro de calibración —las dos piezas que ya existen como sistema. Consecuencia operativa: mientras no se unifique, <b>una puntuación cargada bajo un modelo y leída bajo el otro produce una banda equivocada sin error visible</b>. Unificar o versionar explícitamente es requisito previo a cargar el histórico.</p>
+  </div>
+
+  <!-- ══ 1 · ESTADO DE LA FIRMA ═════════════════════════════════════════ -->
+  <section class="section" id="estado">
+    <div class="sec-head">
+      <h2 class="sec-title">Estado de la firma</h2>
+      <span class="sec-ref">MANUAL §12 · CAPA 3</span>
+    </div>
+    <div class="stat-grid" id="statGrid"></div>
+  </section>
+
+  <!-- ══ 2 · COLA DE DECISIÓN ═══════════════════════════════════════════ -->
+  <section class="section" id="decision">
+    <div class="sec-head">
+      <h2 class="sec-title">Cola de decisión</h2>
+      <span class="sec-ref">SOP-08 · MÁX. 8 ELEMENTOS</span>
+    </div>
+    <p class="sec-note" style="margin-bottom:18px">
+      Jerarquía del briefing diario: primero lo que afecta a mandatos vivos, después oportunidades nuevas, después contexto.
+      La cola se deriva de reglas —banda, antigüedad, flags de ámbito—, no de la elocuencia con que llegó el expediente.
+    </p>
+    <div class="queue" id="queue"></div>
+  </section>
+
+  <!-- ══ 3 · PIPELINE ═══════════════════════════════════════════════════ -->
+  <section class="section" id="pipeline">
+    <div class="sec-head">
+      <h2 class="sec-title">Pipeline DEALSCORE</h2>
+      <span class="sec-ref">20 EXPEDIENTES · PESOS v1.0</span>
+    </div>
+    <p class="sec-note" style="margin-bottom:16px">
+      Los 20 expedientes son los del libro de backtest. <b style="color:var(--text)">En el libro, las ocho dimensiones están vacías</b>:
+      ninguna puntuación real existe todavía. El escenario de muestra rellena valores ilustrativos para que el cuadro se pueda leer;
+      con él activo, cada cifra va marcada como muestra. Desactívalo y puntúa tú: las rúbricas ancladas están bajo cada dimensión.
+    </p>
+
+    <div class="toolbar">
+      <button class="tbtn" id="sampleBtn" aria-pressed="true">◉ ESCENARIO DE MUESTRA</button>
+      <select id="fVert" aria-label="Filtrar por vertical"><option value="">TODAS LAS VERTICALES</option></select>
+      <select id="fBand" aria-label="Filtrar por banda">
+        <option value="">TODAS LAS BANDAS</option>
+        <option value="P1">P1 · PRIORIDAD MÁXIMA</option>
+        <option value="P2">P2 · ACTIVA</option>
+        <option value="P3">P3 · WATCHLIST</option>
+        <option value="P4">P4 · ARCHIVO ACTIVO</option>
+        <option value="DESCARTE">DESCARTE</option>
+        <option value="NONE">SIN PUNTUAR</option>
+      </select>
+      <span class="toolbar-count" id="pipeCount">—</span>
+    </div>
+
+    <div class="table-scroll">
+      <table class="pipe">
+        <thead>
+          <tr>
+            <th>Expediente</th>
+            <th class="sortable" data-sort="vertical">Vertical</th>
+            <th class="sortable" data-sort="score">DEALSCORE</th>
+            <th>Banda</th>
+            <th>Ámbito</th>
+          </tr>
+        </thead>
+        <tbody id="pipeBody"></tbody>
+      </table>
+    </div>
+
+    <div class="detail" id="detail"></div>
+  </section>
+
+  <!-- ══ 4 · CALIBRACIÓN ════════════════════════════════════════════════ -->
+  <section class="section" id="calibracion">
+    <div class="sec-head">
+      <h2 class="sec-title">Calibración</h2>
+      <span class="sec-ref">MANUAL §5.8 · §12.5 · SOP-10</span>
+    </div>
+    <p class="sec-note" style="margin-bottom:18px">
+      El bucle de aprendizaje de la firma. Sin desenlaces registrados no hay tasa base, y sin tasa base
+      el DEALSCORE es una opinión ordenada. Aquí es donde el sistema deja de ser una plantilla.
+    </p>
+    <div class="cal-grid">
+      <div class="card">
+        <h3>Distribución por banda</h3>
+        <p class="card-note">Reparto del pipeline actual. Una distribución plana indica rúbricas mal ancladas, no un pipeline bueno.</p>
+        <div id="bandDist"></div>
+      </div>
+      <div class="card">
+        <h3>Conversión por banda</h3>
+        <p class="card-note">Si P1+P2 no convierten claramente por encima de P3+P4, el score no separa.</p>
+        <div class="empty-state">
+          Sin datos. Ningún expediente tiene desenlace registrado en el libro de backtest
+          (<span class="num">0</span> de <span class="num">20</span>).<br />
+          <b style="color:var(--text);font-style:normal">Esta tarjeta no puede rellenarse desde el análisis: exige el desenlace real de operaciones cerradas y abortadas.</b>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Muestra para recalibrar</h3>
+        <p class="card-note">Expedientes con desenlace conocido frente al mínimo accionable.</p>
+        <div class="gauge-track"><span class="gauge-fill" style="width:2%"></span></div>
+        <div class="gauge-ticks"><span>0 ACTUAL</span><span>10 ORIENTATIVO</span><span>20 ACCIONABLE</span></div>
+        <p class="empty-state" style="padding-bottom:0">
+          Por debajo de 10, los resultados son orientativos. Incluye siempre los que salieron mal
+          y los que descartaste: un backtest hecho solo con éxitos es sesgo de supervivencia.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Poder discriminante</h3>
+        <p class="card-note">Cuánto separa cada dimensión los expedientes que cerraron de los que no.</p>
+        <div class="empty-state">
+          Sin datos. Se calcula como la diferencia entre la media de la dimensión en cerrados y en no cerrados;
+          una dimensión con discriminación cercana a cero no aporta información, por mucho peso que se le haya dado.<br /><br />
+          <b style="color:var(--text);font-style:normal">Primer contraste esperado:</b> el manual asigna a <i>Acceso al decisor</i>
+          el mayor peso por su correlación empírica con el cierre. Es la primera hipótesis que el backtest debe confirmar o refutar.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ 5 · ARQUITECTURA ═══════════════════════════════════════════════ -->
+  <section class="section" id="arquitectura">
+    <div class="sec-head">
+      <h2 class="sec-title">Arquitectura</h2>
+      <span class="sec-ref">DE QUÉ SE ALIMENTA CADA MÓDULO</span>
+    </div>
+    <div class="layers">
+      <div class="layer">
+        <span class="layer-n">CAPA 1</span>
+        <span class="layer-name">Doctrina</span>
+        <span class="layer-desc">Manual del Intelligence Officer: epistemología, rúbricas, playbooks, gobernanza. No es código; es lo que el código tiene que respetar.</span>
+        <span class="flag flag-ok">✓ v1.0</span>
+      </div>
+      <div class="layer">
+        <span class="layer-n">CAPA 2</span>
+        <span class="layer-name">Señal</span>
+        <span class="layer-desc">ZRC Morning Intelligence: barrido de fuentes, 9 mesas, índice de riesgo. Ya en producción y publicando a diario.</span>
+        <span class="flag flag-ok">✓ EN VIVO</span>
+      </div>
+      <div class="layer">
+        <span class="layer-n">CAPA 3</span>
+        <span class="layer-name">Memoria</span>
+        <span class="layer-desc">Postgres/Supabase: compañías, contactos, mandatos, oportunidades, tesis, decisiones. Esquema escrito, RLS activo, tablas vacías.</span>
+        <span class="flag flag-warn">▲ SIN CARGAR</span>
+      </div>
+      <div class="layer">
+        <span class="layer-n">CAPA 4</span>
+        <span class="layer-name">Mando</span>
+        <span class="layer-desc">Esta superficie. Hoy lee de un fichero estático; el paso siguiente es leer las vistas <span class="num">v_opportunity_scores</span>, <span class="num">v_mandatos_vivos</span> y <span class="num">v_pendientes</span>.</span>
+        <span class="flag flag-warn">▲ PROTOTIPO</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div><b>ZRC OS</b> · Prototipo de cuadro de mando · Capa 4</div>
+    <div>Fuentes: ZRC-IO-MANUAL v1.0 · zrc_capa3_memoria_schema.sql v1.0 · ZRC DEALSCORE Backtest y Calibración v1.0 · risk-index-history.json</div>
+    <div>Serie de riesgo: 21 días · 14 publicados · 3 degradados · 4 reconstruidos por interpolación — los reconstruidos no son lecturas.</div>
+    <div><b>Ninguna cifra financiera, honorario ni desenlace ha sido inventado.</b> Las puntuaciones del escenario de muestra son ilustrativas y están marcadas como tales.</div>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ══ MODELO DEALSCORE ═════════════════════════════════════════════════
+     Pesos y umbrales del libro de backtest, pestaña 'Pesos'.
+     DEALSCORE = SUMPRODUCT(D1:D8 ; pesos) / 10
+     ═══════════════════════════════════════════════════════════════════ */
+  var DIMS = [
+    { code: 'D1', name: 'Encaje estratégico con ZRC',          w: 15, inv: false },
+    { code: 'D2', name: 'Acceso al decisor',                   w: 15, inv: false },
+    { code: 'D3', name: 'Probabilidad de cierre',              w: 15, inv: false },
+    { code: 'D4', name: 'Catalizador y urgencia',              w: 12, inv: false },
+    { code: 'D5', name: 'Economía del mandato',                w: 12, inv: false },
+    { code: 'D6', name: 'Calidad del activo o negocio',        w: 12, inv: false },
+    { code: 'D7', name: 'Complejidad de ejecución',            w: 10, inv: true  },
+    { code: 'D8', name: 'Competencia y exclusividad',          w:  9, inv: true  }
+  ];
+
+  var BANDS = [
+    { key: 'P1',       min: 80, label: 'P1 · PRIORIDAD MÁXIMA', action: 'Escalar al CIO. Ficha completa y ángulo en 48 h.', color: 'var(--b1)' },
+    { key: 'P2',       min: 65, label: 'P2 · ACTIVA',           action: 'Ficha de oportunidad. Outreach con ángulo definido en 7 días.', color: 'var(--b2)' },
+    { key: 'P3',       min: 50, label: 'P3 · WATCHLIST',        action: 'Investigación dirigida a las dos dimensiones más débiles.', color: 'var(--b3)' },
+    { key: 'P4',       min: 35, label: 'P4 · ARCHIVO ACTIVO',   action: 'Monitorizar con disparador explícito. No consumir tiempo activo.', color: 'var(--b4)' },
+    { key: 'DESCARTE', min: -1, label: 'DESCARTE',              action: 'Archivar con motivo. No volver a proponer salvo cambio sustancial.', color: 'var(--b5)' }
+  ];
+
+  /* Rúbricas ancladas — pestaña 'Rúbricas' del libro (ZRC-DOC-INT-001 §5.3).
+     Índice 0..5 → tramos 0-2, 3-4, 5-6, 7-8, 9-10. */
+  var RUBRIC = {
+    D1: ['Fuera de vertical y geografía; sin capacidad diferencial', 'Vertical adyacente; mandato de aprendizaje sin ventaja', 'Vertical conocido y geografía core, sin ventaja específica', 'Vertical de foco con analítica, comparables y contactos previos', 'Vertical de foco y un activo intelectual o relacional que nadie más tiene'],
+    D2: ['No se identifica quién decide; sin vía de contacto', 'Decisor identificado; solo acceso frío', 'Acceso indirecto vía asesor con relación tibia', 'Presentación cálida disponible por contacto de confianza mutua', 'Relación directa preexistente del CIO con el decisor'],
+    D3: ['«Escucharía ofertas»; sin proceso, sin precio, sin urgencia', 'Intención declarada sin ningún paso material dado', 'Decisión tomada; falta alinear socios y fijar expectativa de precio', 'Decisión firme, precio en rango de mercado, asesores designados', 'Proceso en marcha, contraparte identificada, financiación previsible'],
+    D4: ['Ninguno. Nadie pierde nada por no hacer nada', 'Motivación difusa («algún día habrá que hacer algo»)', 'Catalizador blando: cansancio del fundador, oferta no solicitada', 'Catalizador duro con calendario: vencimiento, pacto, jubilación decidida', 'Reloj legal o financiero en marcha: preconcurso, ejecución, plazo regulatorio'],
+    D5: ['Fee por debajo del coste de oportunidad; esperan trabajo gratis', 'Economía justa solo si cierra rápido y sin incidencias', 'Fee razonable, sin retainer, alta dependencia del éxito', 'Retainer + éxito, exclusividad, duración razonable', 'Retainer significativo, hitos intermedios, exclusividad amplia, recurrencia'],
+    D6: ['Declive estructural sin activos subyacentes; o vicio insalvable', 'Rentabilidad errática, dependencia extrema de un cliente o una persona', 'Estable sin ventaja competitiva clara; activo estándar en zona media', 'Márgenes sobre sector, cartera diversificada, activo bien ubicado', 'Calidad institucional: posición defendible, ingresos contratados'],
+    D7: ['Multi-jurisdicción opaca, estructura enmarañada, litigios, contingencias', 'Varias sociedades, socios enfrentados, cargas o irregularidad urbanística', 'Complejidad normal de una operación de tamaño medio', 'Estructura limpia, contabilidad ordenada, un único decisor', 'Sociedad única, cuentas auditadas, activo libre de cargas, doméstica'],
+    D8: ['Proceso competitivo abierto con banco contratado; llegamos tarde', 'El activo circula por varias mesas de intermediación', 'Conocido por algunos actores; sin proceso formal', 'Prácticamente off-market; uno o dos actores enterados', 'Estrictamente off-market originado por ZRC; nadie más lo mira']
+  };
+
+  /* ══ PIPELINE ═════════════════════════════════════════════════════════
+     Códigos, nombres y verticales: literales del libro de backtest.
+     `sample`: puntuaciones ILUSTRATIVAS — el libro las tiene vacías.
+     `scope`:  flags derivados de las reglas del manual (§3.2, §3.4, §13.4),
+               no de información nueva sobre el expediente.
+     ═══════════════════════════════════════════════════════════════════ */
+  var PIPELINE = [
+    { code: 'ZRC-HTL-2026-MAD-01', name: 'Hotel Albasanz', place: 'Madrid', vertical: 'Inmobiliario hotelero', geo: 'ES', sample: [8,7,6,6,7,7,6,8] },
+    { code: 'ZRC-HTL-2026-MAD-02', name: 'Hotel Miguel Fleta', place: 'Madrid', vertical: 'Inmobiliario hotelero', geo: 'ES', sample: [8,6,5,5,6,6,6,7] },
+    { code: 'ZRC-HTL-2026-MIA-01', name: 'Project Atlantic — Seacoast Suites', place: 'Miami Beach', vertical: 'Inmobiliario hotelero', geo: 'US', sample: [3,5,4,5,8,7,3,4],
+      scope: [{ level: 'stop', text: 'Estados Unidos queda fuera del ámbito de originación (§3.2: «resto del mundo» se trata como contexto macro, nunca como originación). Proponerlo exige excepción registrada del CIO o conexión con un mandato ibérico vivo.' }] },
+    { code: 'ZRC-OLV-JRZ-2026', name: 'Olivar Jerez de la Frontera', place: 'Cádiz', vertical: 'Agro', geo: 'ES', sample: [7,8,6,6,6,7,7,8] },
+    { code: null, name: 'Corredor del Alqueva', place: 'Portugal', vertical: 'Agro', geo: 'PT', sample: [6,5,4,4,6,6,5,7],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado. §12.3 exige identificador con el patrón ZRC-[TIPO]-[AÑO]-[GEO]-[NN] antes de registrar en Capa 3.' }] },
+    { code: null, name: 'Olivar Guadalquivir', place: 'Andalucía', vertical: 'Agro', geo: 'ES', sample: [7,6,5,4,5,7,7,7],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Proyecto Tropical — invernaderos', place: 'España', vertical: 'Agro', geo: 'ES', sample: [6,5,4,4,5,5,6,6],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Proyecto OASIS', place: 'Marruecos', vertical: 'Agro-infraestructura', geo: 'MENA', sample: [4,6,3,5,8,6,2,8],
+      scope: [
+        { level: 'warn', text: 'MENA es geografía selectiva con encaje condicionado (◐). La oportunidad necesita un ancla local identificada explícitamente antes de puntuarse (§3.2, §3.3).' },
+        { level: 'warn', text: 'Exige diligencia reforzada de origen de fondos (§13.4).' },
+        { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }
+      ] },
+    { code: null, name: 'Sushi Bar Tottori — SM AT HOME LAGASCA', place: 'Madrid', vertical: 'M&A minoritaria', geo: 'ES', sample: [3,7,5,5,2,4,7,7],
+      scope: [{ level: 'warn', text: 'Tamaño previsiblemente por debajo del sweet spot de V1 (EV 5–100 M€). §5.3 D5: por debajo del umbral económico el mandato solo se justifica por valor estratégico de la relación — y eso se refleja en D1, no inflando D5.' },
+              { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Proyecto Libia — Grupsa', place: 'Libia', vertical: 'Reestructuración + capital', geo: 'MENA', sample: [4,6,2,7,6,3,1,8],
+      scope: [
+        { level: 'stop', text: 'Cribado de sanciones y acreditación de origen de fondos obligatorios ANTES de consumir tiempo analítico. §5.5 knock-out 2 y §3.4: contraparte en listas de sanciones u origen de fondos no acreditable descarta automáticamente, con independencia de la puntuación.' },
+        { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }
+      ] },
+    { code: null, name: 'MAIDEN S.A. — taller Mercedes', place: 'Chamberí, Madrid', vertical: 'M&A sell-side', geo: 'ES', sample: [7,8,7,7,6,6,7,8],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'MAAR Construcción', place: 'España', vertical: 'M&A sell-side', geo: 'ES', sample: [7,6,5,5,6,5,6,7],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Espronceda 38 — plataforma automoción', place: 'Madrid', vertical: 'Inmobiliario / M&A', geo: 'ES', sample: [7,7,6,6,7,7,5,7],
+      scope: [{ level: 'warn', text: 'Expediente a caballo entre dos verticales. §3.1 obliga a clasificar en una sola: la vertical determina el playbook y el playbook determina el proceso.' },
+              { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Edificio Salamanca — Francisco Silvela', place: 'Madrid', vertical: 'Inmobiliario', geo: 'ES', sample: [9,9,8,7,8,8,8,8],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Edificio Plaza Santa Ana', place: 'Madrid', vertical: 'Inmobiliario', geo: 'ES', sample: [8,6,6,5,7,8,6,6],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Finca Cabrerizas', place: 'Vilches, Jaén', vertical: 'Inmobiliario rústico', geo: 'ES', sample: [5,6,5,4,4,5,7,8],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Proyecto Matalentisco', place: 'Águilas, Murcia', vertical: 'Suelo turístico', geo: 'ES', sample: [6,5,3,4,6,5,3,7],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Parcela Nigrán — Chandebrito', place: 'Pontevedra', vertical: 'Suelo', geo: 'ES', sample: [5,6,4,3,3,4,6,7],
+      scope: [{ level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'WAENN', place: 'España', vertical: 'Fundraising startup', geo: 'ES', sample: [6,8,5,6,5,5,8,6],
+      scope: [{ level: 'warn', text: 'V2 exige distinguir capital para crecer de capital para sobrevivir. Lo segundo es V5 y lleva otro playbook; confundirlas es el error más caro de esta vertical (§3.1).' },
+              { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] },
+    { code: null, name: 'Quantax', place: 'España', vertical: 'Fundraising startup', geo: 'ES', sample: [6,7,4,5,5,5,8,6],
+      scope: [{ level: 'warn', text: 'V2 exige distinguir capital para crecer de capital para sobrevivir (§3.1).' },
+              { level: 'warn', text: 'Sin código de expediente asignado (§12.3).' }] }
+  ];
+
+  /* ══ SERIE DE RIESGO — datos reales de risk-index-history.json ═══════ */
+  var RISK = [
+    { d: '08-19', v: 62, s: 'p' }, { d: '08-20', v: 64, s: 'p' }, { d: '08-21', v: 62, s: 'p' },
+    { d: '08-22', v: 64, s: 'p' }, { d: '08-23', v: 52, s: 'g' }, { d: '08-24', v: 50, s: 'g' },
+    { d: '08-25', v: 50, s: 'g' }, { d: '08-26', v: 58, s: 'p' }, { d: '08-27', v: 57, s: 'r' },
+    { d: '08-28', v: 56, s: 'p' }, { d: '08-29', v: 58, s: 'p' }, { d: '08-30', v: 62, s: 'p' },
+    { d: '08-31', v: 68, s: 'p' }, { d: '09-01', v: 72, s: 'p' }, { d: '09-02', v: 68, s: 'p' },
+    { d: '09-03', v: 62, s: 'p' }, { d: '09-04', v: 64, s: 'r' }, { d: '09-05', v: 65, s: 'r' },
+    { d: '09-06', v: 67, s: 'r' }, { d: '09-07', v: 68, s: 'p' }, { d: '09-08', v: 72, s: 'p' }
+  ];
+  var RISK_NOW = 62, RISK_PREV = 65, RISK_DATE = '18 septiembre 2026';
+
+  /* ══ ESTADO ═══════════════════════════════════════════════════════════ */
+  var STORE_KEY = 'zrc-os-scores-v1';
+  var state = {
+    sample: true,
+    scores: {},            // id → [8 valores] introducidos por el usuario
+    selected: 0,
+    sortKey: 'score',
+    sortDir: -1,
+    fVert: '',
+    fBand: ''
+  };
+
+  PIPELINE.forEach(function (p, i) { p.id = i; });
+
+  try {
+    var raw = localStorage.getItem(STORE_KEY);
+    if (raw) { state.scores = JSON.parse(raw) || {}; }
+  } catch (e) { /* almacenamiento no disponible: se opera sin persistencia */ }
+
+  function persist() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(state.scores)); } catch (e) {}
+  }
+
+  /* ══ CÁLCULO ══════════════════════════════════════════════════════════ */
+  function valuesFor(p) {
+    if (state.scores[p.id]) return { v: state.scores[p.id], src: 'user' };
+    if (state.sample && p.sample) return { v: p.sample, src: 'sample' };
+    return { v: null, src: 'none' };
+  }
+
+  function dealscore(v) {
+    if (!v) return null;
+    var t = 0;
+    for (var i = 0; i < 8; i++) { t += v[i] * DIMS[i].w; }
+    return Math.round(t) / 10;
+  }
+
+  function bandOf(score) {
+    if (score === null) return { key: 'NONE', label: 'SIN PUNTUAR', action: 'Puntuar contra las rúbricas ancladas antes de asignar recursos.', color: 'var(--faint)' };
+    for (var i = 0; i < BANDS.length; i++) { if (score >= BANDS[i].min) return BANDS[i]; }
+    return BANDS[BANDS.length - 1];
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function fullName(p) { return p.name + (p.place ? ' (' + p.place + ')' : ''); }
+
+  /* ══ 1 · ESTADO DE LA FIRMA ══════════════════════════════════════════ */
+  function sparkline() {
+    var W = 200, H = 42, PT = 6, PB = 6, PL = 2, PR = 6;
+    var vals = RISK.map(function (r) { return r.v; });
+    var lo = Math.min.apply(null, vals) - 3, hi = Math.max.apply(null, vals) + 3;
+    var x = function (i) { return PL + i * (W - PL - PR) / (RISK.length - 1); };
+    var y = function (v) { return PT + (hi - v) * (H - PT - PB) / (hi - lo); };
+
+    var d = RISK.map(function (r, i) { return (i ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(r.v).toFixed(1); }).join(' ');
+    var area = d + ' L' + x(RISK.length - 1).toFixed(1) + ' ' + H + ' L' + x(0).toFixed(1) + ' ' + H + ' Z';
+
+    var dots = RISK.map(function (r, i) {
+      var last = i === RISK.length - 1;
+      if (r.s === 'p' && !last) return '';
+      var cx = x(i).toFixed(1), cy = y(r.v).toFixed(1);
+      if (last) return '<circle cx="' + cx + '" cy="' + cy + '" r="3" fill="#C9A84C" stroke="#0B1526" stroke-width="1.5"></circle>';
+      // Reconstruido o degradado: marca hueca — no es una lectura
+      return '<circle cx="' + cx + '" cy="' + cy + '" r="2.4" fill="#0B1526" stroke="' + (r.s === 'r' ? '#5A6A80' : '#FBBF24') + '" stroke-width="1.2"></circle>';
+    }).join('');
+
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '" role="img" ' +
+      'aria-label="Índice de riesgo ZRC, 21 días, de ' + RISK[0].v + ' a ' + RISK[RISK.length - 1].v + '" ' +
+      'preserveAspectRatio="none" style="display:block;max-width:100%">' +
+      '<defs><linearGradient id="sparkG" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0%" stop-color="#C9A84C" stop-opacity=".22"></stop>' +
+      '<stop offset="100%" stop-color="#C9A84C" stop-opacity="0"></stop>' +
+      '</linearGradient></defs>' +
+      '<path d="' + area + '" fill="url(#sparkG)"></path>' +
+      '<path d="' + d + '" fill="none" stroke="#C9A84C" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"></path>' +
+      dots + '</svg>';
+  }
+
+  function renderStats() {
+    var scored = 0, p12 = 0, flagged = 0, uncoded = 0;
+    PIPELINE.forEach(function (p) {
+      var vs = valuesFor(p);
+      if (vs.v) {
+        scored++;
+        var b = bandOf(dealscore(vs.v)).key;
+        if (b === 'P1' || b === 'P2') p12++;
+      }
+      if (p.scope && p.scope.some(function (s) { return s.level === 'stop'; })) flagged++;
+      if (!p.code) uncoded++;
+    });
+
+    var delta = RISK_NOW - RISK_PREV;
+    var arrow = delta === 0 ? '→' : (delta > 0 ? '▲' : '▼');
+    var mark = state.sample ? ' <span style="color:var(--amber)">MUESTRA</span>' : '';
+
+    var html = '';
+
+    html += '<div class="stat"><div class="stat-label">Expedientes en pipeline</div>' +
+      '<div class="stat-value">' + PIPELINE.length + '</div>' +
+      '<div class="stat-sub"><b>' + scored + '</b> puntuados · <b>' + (PIPELINE.length - scored) + '</b> sin puntuar</div></div>';
+
+    html += '<div class="stat"><div class="stat-label">En banda P1–P2</div>' +
+      '<div class="stat-value">' + p12 + '<small>/ ' + PIPELINE.length + '</small></div>' +
+      '<div class="stat-sub">Acción en 48 h y 7 días' + mark + '</div></div>';
+
+    html += '<div class="stat is-alert"><div class="stat-label">Mandatos vivos</div>' +
+      '<div class="stat-value">—</div>' +
+      '<div class="stat-sub">Tabla <b>mandates</b> vacía en Capa 3</div></div>';
+
+    html += '<div class="stat' + (flagged ? ' is-alert' : '') + '"><div class="stat-label">Verificación previa</div>' +
+      '<div class="stat-value">' + flagged + '</div>' +
+      '<div class="stat-sub">Ámbito o sanciones antes de analizar</div></div>';
+
+    html += '<div class="stat is-alert"><div class="stat-label">Sin código de expediente</div>' +
+      '<div class="stat-value">' + uncoded + '<small>/ ' + PIPELINE.length + '</small></div>' +
+      '<div class="stat-sub">Bloquea el registro en Capa 3 (§12.3)</div></div>';
+
+    html += '<div class="stat"><div class="stat-label">Índice de riesgo ZRC</div>' +
+      '<div class="stat-value">' + RISK_NOW + '<small>' + arrow + ' ' + Math.abs(delta) + '</small></div>' +
+      '<div class="spark-wrap">' + sparkline() + '</div>' +
+      '<div class="spark-legend">' +
+        '<span><i style="background:#C9A84C"></i>Publicado</span>' +
+        '<span><i style="border:1.2px solid #FBBF24"></i>Degradado</span>' +
+        '<span><i style="border:1.2px solid #5A6A80"></i>Reconstruido</span>' +
+      '</div></div>';
+
+    document.getElementById('statGrid').innerHTML = html;
+  }
+
+  /* ══ 2 · COLA DE DECISIÓN ════════════════════════════════════════════ */
+  function renderQueue() {
+    var items = [];
+
+    // Regla 1 — knock-outs y ámbito: preceden a cualquier puntuación (§5.5).
+    PIPELINE.forEach(function (p) {
+      if (!p.scope) return;
+      p.scope.forEach(function (s) {
+        if (s.level !== 'stop') return;
+        items.push({
+          prio: 0,
+          title: fullName(p),
+          why: s.text,
+          act: 'Resolver antes de asignar analista',
+          band: null,
+          flag: '⛔ VERIFICACIÓN PREVIA',
+          flagClass: 'flag-stop',
+          id: p.id
+        });
+      });
+    });
+
+    // Regla 2 — bandas altas: la acción por defecto la fija la banda.
+    PIPELINE.map(function (p) {
+      var vs = valuesFor(p);
+      var sc = dealscore(vs.v);
+      return { p: p, sc: sc, b: bandOf(sc), src: vs.src };
+    }).filter(function (r) {
+      return r.sc !== null && (r.b.key === 'P1' || r.b.key === 'P2');
+    }).sort(function (a, b) { return b.sc - a.sc; })
+      .forEach(function (r) {
+        var lv = levers(valuesFor(r.p).v, 2);
+        items.push({
+          prio: r.b.key === 'P1' ? 1 : 2,
+          title: fullName(r.p),
+          why: 'DEALSCORE ' + r.sc.toFixed(1) + '. Recorrido disponible en ' +
+               lv.map(function (i) { return DIMS[i].code + ' · ' + DIMS[i].name.toLowerCase(); }).join(' y ') + '.',
+          act: r.b.action,
+          band: r.b,
+          flag: r.src === 'sample' ? 'MUESTRA' : null,
+          flagClass: 'flag-warn',
+          id: r.p.id
+        });
+      });
+
+    // Regla 3 — higiene de memoria: bloquea el registro, no el análisis.
+    var uncoded = PIPELINE.filter(function (p) { return !p.code; }).length;
+    if (uncoded) {
+      items.push({
+        prio: 3,
+        title: 'Asignar código a ' + uncoded + ' expedientes',
+        why: '§12.3 exige el patrón ZRC-[TIPO]-[AÑO]-[GEO]-[NN]. Sin código no hay clave estable, y sin clave estable el backtest no puede casar puntuación con desenlace.',
+        act: 'Higiene de Capa 3 · bloquea la carga del histórico',
+        band: null,
+        flag: null,
+        id: null
+      });
+    }
+
+    items.sort(function (a, b) { return a.prio - b.prio; });
+    items = items.slice(0, 8);   // SOP-08: máximo 8 elementos
+
+    var html = items.map(function (it, i) {
+      var side = '';
+      if (it.band) side += '<span class="pill pill-' + it.band.key + '">' + it.band.key + '</span>';
+      if (it.flag) side += '<span class="flag ' + (it.flagClass || 'flag-warn') + '">' + esc(it.flag) + '</span>';
+      return '<div class="q-item"' + (it.id !== null ? ' data-goto="' + it.id + '" role="button" tabindex="0" style="cursor:pointer"' : '') + '>' +
+        '<div class="q-rank">' + String(i + 1).padStart(2, '0') + '</div>' +
+        '<div><div class="q-title">' + esc(it.title) + '</div>' +
+        '<div class="q-why">' + esc(it.why) + '</div>' +
+        '<div class="q-act"><b>ACCIÓN</b> · ' + esc(it.act) + '</div></div>' +
+        '<div class="q-side">' + side + '</div></div>';
+    }).join('');
+
+    document.getElementById('queue').innerHTML = html;
+  }
+
+  /* Las palancas no son las dimensiones con peor nota, sino aquellas donde
+     queda más recorrido ponderado: (10 − valor) × peso. Es la diferencia entre
+     «esto está flojo» y «aquí es donde hay puntos que ganar». */
+  function levers(v, n) {
+    if (!v) return [];
+    return v.map(function (x, i) { return { i: i, gain: (10 - x) * DIMS[i].w }; })
+      .sort(function (a, b) { return b.gain - a.gain; })
+      .slice(0, n).map(function (o) { return o.i; });
+  }
+
+  /* ══ 3 · PIPELINE ════════════════════════════════════════════════════ */
+  function rows() {
+    return PIPELINE.map(function (p) {
+      var vs = valuesFor(p);
+      var sc = dealscore(vs.v);
+      return { p: p, v: vs.v, src: vs.src, sc: sc, b: bandOf(sc) };
+    }).filter(function (r) {
+      if (state.fVert && r.p.vertical !== state.fVert) return false;
+      if (state.fBand && r.b.key !== state.fBand) return false;
+      return true;
+    }).sort(function (a, b) {
+      var d;
+      if (state.sortKey === 'vertical') { d = a.p.vertical.localeCompare(b.p.vertical); }
+      else { d = (a.sc === null ? -1 : a.sc) - (b.sc === null ? -1 : b.sc); }
+      return d * state.sortDir;
+    });
+  }
+
+  function renderPipe() {
+    var rs = rows();
+    var html = rs.map(function (r) {
+      var pct = r.sc === null ? 0 : r.sc;
+      var scoreCell = r.sc === null
+        ? '<span class="score-num is-empty">SIN PUNTUAR</span>'
+        : '<span class="score-num">' + r.sc.toFixed(1) + '</span>' +
+          '<span class="score-bar"><span class="score-fill" style="width:' + pct + '%;background:' + r.b.color + '"></span></span>';
+
+      var scopeCell = '<span class="flag flag-ok">✓ NÚCLEO</span>';
+      if (r.p.scope) {
+        var stop = r.p.scope.some(function (s) { return s.level === 'stop'; });
+        var n = r.p.scope.length;
+        scopeCell = stop
+          ? '<span class="flag flag-stop">⛔ ' + n + '</span>'
+          : '<span class="flag flag-warn">▲ ' + n + '</span>';
+      }
+
+      return '<tr data-id="' + r.p.id + '" tabindex="0" aria-selected="' + (r.p.id === state.selected) + '">' +
+        '<td><div class="td-name">' + esc(r.p.name) + '</div>' +
+        '<div class="td-code">' + esc(r.p.code || '— sin código —') + (r.p.place ? ' · ' + esc(r.p.place) : '') + '</div></td>' +
+        '<td><span class="td-vert">' + esc(r.p.vertical) + '</span></td>' +
+        '<td><div class="score-cell">' + scoreCell + '</div></td>' +
+        '<td><span class="pill pill-' + r.b.key + '">' + r.b.key + '</span></td>' +
+        '<td>' + scopeCell + '</td></tr>';
+    }).join('');
+
+    document.getElementById('pipeBody').innerHTML = html;
+    document.getElementById('pipeCount').textContent =
+      rs.length + ' DE ' + PIPELINE.length + ' EXPEDIENTES' + (state.sample ? ' · ESCENARIO DE MUESTRA ACTIVO' : '');
+  }
+
+  /* ══ DETALLE ═════════════════════════════════════════════════════════ */
+  function renderDetail() {
+    var p = PIPELINE[state.selected];
+    var vs = valuesFor(p);
+    var v = vs.v || [0,0,0,0,0,0,0,0];
+    var sc = dealscore(vs.v);
+    var b = bandOf(sc);
+    var weak = levers(vs.v, 2);
+
+    var srcTag = vs.src === 'user'
+      ? '<span class="flag flag-ok">✓ PUNTUADO POR TI</span>'
+      : (vs.src === 'sample'
+        ? '<span class="flag flag-warn">▲ ESCENARIO DE MUESTRA — NO ES UNA LECTURA</span>'
+        : '<span class="flag flag-warn">▲ SIN PUNTUAR</span>');
+
+    var dimHtml = DIMS.map(function (d, i) {
+      var val = v[i];
+      var tier = Math.min(4, Math.floor(val / 2.0001));
+      var isLever = weak.indexOf(i) >= 0 && !!vs.v;
+      return '<div class="dim-row' + (isLever ? ' is-lever' : '') + '">' +
+        '<div class="dim-top">' +
+          '<span class="dim-code">' + d.code + '</span>' +
+          '<span class="dim-name">' + esc(d.name) + (d.inv ? ' <span class="dim-w">(invertida)</span>' : '') + '</span>' +
+          (isLever ? '<span class="lever-tag">PALANCA</span>' : '') +
+          '<span class="dim-w">' + d.w + '%</span>' +
+          '<span class="dim-val">' + val + '</span>' +
+        '</div>' +
+        '<div class="dim-bar-row"><span class="dim-track"><span class="dim-fill" style="width:' + (val * 10) + '%"></span></span></div>' +
+        '<input class="dim-slider" type="range" id="dim' + i + '" min="0" max="10" step="1" value="' + val + '" data-dim="' + i + '" aria-label="' + esc(d.code + ' ' + d.name) + '" />' +
+        '<div class="dim-anchor">' + esc(RUBRIC[d.code][tier]) + '</div>' +
+      '</div>';
+    }).join('');
+
+    // Anexo B — matriz GO / NO-GO. Las cuatro primeras son eliminatorias.
+    var hasStop = !!(p.scope && p.scope.some(function (s) { return s.level === 'stop'; }));
+    var checks = [
+      { q: '¿Supera los knock-outs de §5.5?', ok: !hasStop, t: 'OBLIGATORIO', kill: true },
+      // Iberia = núcleo. MENA = encaje condicionado (◐): pendiente de ancla local, no un fallo.
+      // Resto del mundo = fuera de ámbito.
+      { q: '¿Está dentro del ámbito de la Parte 3?', ok: (p.geo === 'ES' || p.geo === 'PT') ? true : (p.geo === 'MENA' ? null : false), t: 'OBLIGATORIO', kill: true },
+      { q: '¿Hay vía identificada al decisor?', ok: vs.v ? v[1] >= 3 : null, t: 'D2 ≥ 3', kill: true },
+      { q: '¿Existe catalizador identificado y fechable?', ok: vs.v ? v[3] >= 4 : null, t: 'D4 ≥ 4', kill: true },
+      { q: '¿DEALSCORE en banda alta o superior?', ok: sc === null ? null : sc >= 65, t: '≥ 65 (P2)', kill: false },
+      { q: '¿Los honorarios justifican el trabajo?', ok: vs.v ? v[4] >= 4 : null, t: 'D5 ≥ 4', kill: false },
+      { q: '¿Hay respuesta de una frase a «por qué ZRC»?', ok: vs.v ? v[0] >= 6 : null, t: 'D1 ≥ 6', kill: false }
+    ];
+
+    var killFail = checks.some(function (c) { return c.kill && c.ok === false; });
+    var anyPending = checks.some(function (c) { return c.ok === null; });
+    var softFail = checks.some(function (c) { return !c.kill && c.ok === false; });
+
+    var ggHtml = checks.map(function (c) {
+      var cls = c.ok === true ? 'gg-pass' : (c.ok === false ? 'gg-fail' : 'gg-warn');
+      var mk = c.ok === true ? '✓' : (c.ok === false ? '✕' : '?');
+      return '<div class="gg-item ' + cls + '"><span class="gg-mark">' + mk + '</span>' +
+        '<span class="gg-q">' + esc(c.q) + '</span><span class="gg-t">' + esc(c.t) + '</span></div>';
+    }).join('');
+
+    var verdict, vcls;
+    if (killFail) { verdict = 'NO-GO AUTOMÁTICO'; vcls = 'no'; }
+    else if (anyPending) { verdict = 'INFORMACIÓN INSUFICIENTE'; vcls = 'cio'; }
+    else if (softFail) { verdict = 'DECISIÓN DEL CIO · EXCEPCIÓN DOCUMENTADA'; vcls = 'cio'; }
+    else { verdict = 'GO'; vcls = 'go'; }
+
+    var leverHtml = '';
+    if (vs.v && weak.length === 2) {
+      leverHtml = '<div class="lever"><h4>◆ LECTURA OPERATIVA</h4><p>La puntuación no dice qué hacer; dice dónde está el problema. ' +
+        'Las dos palancas de este expediente son <b style="color:var(--cream)">' + DIMS[weak[0]].code + ' · ' + esc(DIMS[weak[0]].name) +
+        '</b> y <b style="color:var(--cream)">' + DIMS[weak[1]].code + ' · ' + esc(DIMS[weak[1]].name) +
+        '</b>. Mover cualquiera de las dos cambia la banda más que cualquier trabajo adicional sobre las seis restantes.</p></div>';
+    }
+
+    var scopeHtml = '';
+    if (p.scope && p.scope.length) {
+      scopeHtml = '<div class="scope-notes">' + p.scope.map(function (s) {
+        return '<div class="scope-note"><span class="flag ' + (s.level === 'stop' ? 'flag-stop' : 'flag-warn') + '">' +
+          (s.level === 'stop' ? '⛔' : '▲') + '</span><span>' + esc(s.text) + '</span></div>';
+      }).join('') + '</div>';
+    }
+
+    document.getElementById('detail').innerHTML =
+      '<div class="detail-head">' +
+        '<div><div class="detail-title">' + esc(fullName(p)) + '</div>' +
+        '<div class="detail-meta">' + esc(p.code || '— SIN CÓDIGO DE EXPEDIENTE —') + ' · ' + esc(p.vertical.toUpperCase()) + ' · ' + esc(p.geo) + '</div>' +
+        '<div style="margin-top:9px">' + srcTag + '</div></div>' +
+        '<div class="detail-score">' +
+          '<div class="detail-score-n" style="color:' + (sc === null ? 'var(--faint)' : b.color) + '">' + (sc === null ? '—' : sc.toFixed(1)) + '</div>' +
+          '<div class="detail-score-l">' + esc(b.label) + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="detail-cols">' +
+        '<div>' + dimHtml + '</div>' +
+        '<div><div class="gonogo"><h4>Matriz GO / NO-GO · Anexo B</h4>' + ggHtml +
+        '<div class="gg-verdict ' + vcls + '">' + verdict + '</div></div>' +
+        leverHtml + scopeHtml + '</div>' +
+      '</div>';
+
+    // Sliders
+    Array.prototype.forEach.call(document.querySelectorAll('#detail input[type=range]'), function (el) {
+      el.addEventListener('input', function () {
+        var base = (state.scores[p.id] || (state.sample && p.sample) || [5,5,5,5,5,5,5,5]).slice();
+        base[Number(el.dataset.dim)] = Number(el.value);
+        state.scores[p.id] = base;
+        persist();
+        renderAll();
+        var again = document.getElementById('dim' + el.dataset.dim);
+        if (again) again.focus();
+      });
+    });
+  }
+
+  /* ══ 4 · DISTRIBUCIÓN POR BANDA ══════════════════════════════════════ */
+  function renderBandDist() {
+    var counts = { P1: 0, P2: 0, P3: 0, P4: 0, DESCARTE: 0, NONE: 0 };
+    PIPELINE.forEach(function (p) { counts[bandOf(dealscore(valuesFor(p).v)).key]++; });
+
+    var order = [
+      { k: 'P1', c: 'var(--b1)', l: 'P1' }, { k: 'P2', c: 'var(--b2)', l: 'P2' },
+      { k: 'P3', c: 'var(--b3)', l: 'P3' }, { k: 'P4', c: 'var(--b4)', l: 'P4' },
+      { k: 'DESCARTE', c: 'var(--b5)', l: 'DESCARTE' }, { k: 'NONE', c: 'rgba(52,65,86,.8)', l: 'SIN PUNT.' }
+    ];
+    var max = Math.max.apply(null, order.map(function (o) { return counts[o.k]; })) || 1;
+
+    document.getElementById('bandDist').innerHTML = order.map(function (o) {
+      var n = counts[o.k];
+      return '<div class="bandrow"><span class="bl" style="color:' + o.c + '">' + o.l + '</span>' +
+        '<span class="bt"><span class="bf" style="width:' + (n / max * 100) + '%;background:' + o.c + '"></span></span>' +
+        '<span class="bn">' + n + ' exp.</span></div>';
+    }).join('');
+  }
+
+  /* ══ RENDER GLOBAL ═══════════════════════════════════════════════════ */
+  function renderAll() {
+    renderStats();
+    renderQueue();
+    renderPipe();
+    renderDetail();
+    renderBandDist();
+  }
+
+  /* ══ EVENTOS ═════════════════════════════════════════════════════════ */
+  function select(id) {
+    state.selected = id;
+    renderPipe();
+    renderDetail();
+    document.getElementById('detail').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  document.getElementById('pipeBody').addEventListener('click', function (e) {
+    var tr = e.target.closest('tr[data-id]');
+    if (tr) select(Number(tr.dataset.id));
+  });
+  document.getElementById('pipeBody').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var tr = e.target.closest('tr[data-id]');
+    if (tr) { e.preventDefault(); select(Number(tr.dataset.id)); }
+  });
+  document.getElementById('queue').addEventListener('click', function (e) {
+    var el = e.target.closest('[data-goto]');
+    if (el) select(Number(el.dataset.goto));
+  });
+  document.getElementById('queue').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var el = e.target.closest('[data-goto]');
+    if (el) { e.preventDefault(); select(Number(el.dataset.goto)); }
+  });
+
+  document.getElementById('sampleBtn').addEventListener('click', function () {
+    state.sample = !state.sample;
+    this.setAttribute('aria-pressed', String(state.sample));
+    this.textContent = (state.sample ? '◉' : '○') + ' ESCENARIO DE MUESTRA';
+    renderAll();
+  });
+
+  document.getElementById('fVert').addEventListener('change', function () { state.fVert = this.value; renderPipe(); });
+  document.getElementById('fBand').addEventListener('change', function () { state.fBand = this.value; renderPipe(); });
+
+  Array.prototype.forEach.call(document.querySelectorAll('th.sortable'), function (th) {
+    th.addEventListener('click', function () {
+      var k = th.dataset.sort;
+      if (state.sortKey === k) { state.sortDir *= -1; } else { state.sortKey = k; state.sortDir = k === 'score' ? -1 : 1; }
+      renderPipe();
+    });
+  });
+
+  /* ══ ARRANQUE ════════════════════════════════════════════════════════ */
+  (function init() {
+    var verts = [];
+    PIPELINE.forEach(function (p) { if (verts.indexOf(p.vertical) < 0) verts.push(p.vertical); });
+    verts.sort().forEach(function (v) {
+      var o = document.createElement('option');
+      o.value = v; o.textContent = v.toUpperCase();
+      document.getElementById('fVert').appendChild(o);
+    });
+
+    document.getElementById('stampDate').textContent = RISK_DATE;
+    document.getElementById('stampBuild').textContent = 'DEALSCORE v1.0 · CAPA 3 v1.0';
+
+    // Abre en el expediente de mayor puntuación, para que la primera
+    // pantalla muestre el instrumento funcionando y no un panel vacío.
+    var best = -1, bestId = 0;
+    PIPELINE.forEach(function (p) {
+      var s = dealscore(valuesFor(p).v);
+      if (s !== null && s > best) { best = s; bestId = p.id; }
+    });
+    state.selected = bestId;
+
+    renderAll();
+  })();
+})();
+</script>
+
+</body>
+</html>
