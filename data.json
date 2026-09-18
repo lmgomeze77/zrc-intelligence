@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
-  "generated": "2026-09-17T11:46:47.705Z",
-  "date": "Thursday, 17 September 2026",
-  "riskIndex": 65,
-  "riskIndexPrev": 68,
+  "generated": "2026-09-18T11:20:44.739Z",
+  "date": "Friday, 18 September 2026",
+  "riskIndex": 62,
+  "riskIndexPrev": 65,
   "marketRegime": {
-    "tone": "CAUTIOUS",
-    "rationale": "Fed rate hike amid inflation signals and geopolitical trade tensions offset modest stabilization in emerging-market monetary easing.",
-    "riskIndex": 65,
+    "tone": "BALANCED",
+    "rationale": "US equity inflows at 3-month highs offset by widening geopolitical friction, Middle East energy disruption easing, BoJ tightening cycle extending, and trade tariff uncertainty persisting.",
+    "riskIndex": 62,
     "europe": "CAUTIOUS",
     "spain": "CAUTIOUS",
     "privateMarkets": "SELECTIVE"
@@ -19,54 +19,54 @@
   },
   "executivePulse": [
     {
-      "title": "US Monetary Tightening",
-      "text": "Federal Reserve raised rates for first time in three years; inflation pressures building per Reuters despite robust retail sales. Oil prices slipped post-hike. Tighter US financial conditions ripple across EM and emerging-market carry trades.",
+      "title": "Energy Repricing",
+      "text": "Oil prices in third consecutive day of decline; WTI slipped below $100 as Saudi export concerns ease, but Strait of Hormuz tanker traffic slumped to four vessels detected on Thursday per shipping data.",
       "signal": "bearish"
     },
     {
-      "title": "Trade Escalation Risk",
-      "text": "US House voted 100% tariff threat on India over Russian oil; Trump threatens 'serious tariffs' on Europe if Canada joins EU as associate. India vows energy-security protection. Symmetric standoff creates unpredictability for cross-border capital flows.",
-      "signal": "bearish"
+      "title": "EM Growth Upside",
+      "text": "Moody's raised India FY27 GDP growth forecast to 7% from 6% on resilient consumption and investment. BoJ raised policy rate to 31-year high of 1.25% per Reuters, signaling divergent tightening cycles.",
+      "signal": "bullish"
     },
     {
-      "title": "LNG & Energy Volatility",
-      "text": "Global LNG prices could spike this winter amid low European gas stocks; Asian demand set for second annual decline per Reuters as prices surge. Goldman Sachs flags gasoline upside. Diesel crunch deepens. Winter energy supply shock remains tail risk.",
+      "title": "Tariff Uncertainty",
+      "text": "Trump set to impose sweeping tariffs on 60 trade partners; US reportedly delayed excess capacity tariffs until after Xi summit. Michigan voters disapprove of Canada tariffs per Washington Post poll.",
       "signal": "watch"
     }
   ],
   "opportunityRadar": [
     {
-      "theme": "European gas hedging & infrastructure",
-      "direction": "up",
-      "conviction": "HIGH",
-      "relevance": 4
-    },
-    {
-      "theme": "Emerging-market FX pressure from Fed tightening",
-      "direction": "down",
-      "conviction": "HIGH",
-      "relevance": 4
-    },
-    {
-      "theme": "US defense-tech M&A (South Florida cluster)",
-      "direction": "up",
-      "conviction": "MEDIUM",
-      "relevance": 3
-    },
-    {
-      "theme": "India energy-policy risk premium",
+      "theme": "Middle East Energy Logistics",
       "direction": "down",
       "conviction": "MEDIUM",
       "relevance": 3
     },
     {
-      "theme": "Brazil commodity upside (grain harvest records)",
+      "theme": "India Growth Exposure",
       "direction": "up",
+      "conviction": "HIGH",
+      "relevance": 4
+    },
+    {
+      "theme": "Cross-Border Tariff Flows",
+      "direction": "flat",
       "conviction": "SELECTIVE",
+      "relevance": 4
+    },
+    {
+      "theme": "Private Credit Real Estate",
+      "direction": "up",
+      "conviction": "MEDIUM",
       "relevance": 3
     },
     {
-      "theme": "Private-equity mid-market buyouts (healthy M&A pipeline)",
+      "theme": "Healthcare PE & AI Integration",
+      "direction": "up",
+      "conviction": "MEDIUM",
+      "relevance": 3
+    },
+    {
+      "theme": "LNG Expansion Capex (Shell Canada)",
       "direction": "up",
       "conviction": "MEDIUM",
       "relevance": 3
@@ -75,27 +75,27 @@
   "houseView": [
     {
       "label": "Spain & Madrid Real Estate",
-      "view": "DEFENSIVE",
+      "view": "CAUTIOUS",
       "previousView": "DEFENSIVE",
-      "direction": "unchanged",
-      "signal": "bearish",
-      "change": "Fedea reports poverty rate in Spain reaches 23.5% when housing costs included; confirms demand pressure from affordability crisis. ECB tightening via Fed spillover constrains financing availability."
+      "direction": "upgraded",
+      "signal": "neutral",
+      "change": "Barcelona short-term rental bans reported ongoing per Il Sole 24 ORE; Madrid luxury penthouse governance controversy unresolved. No new data alters domestic supply-demand outlook."
     },
     {
       "label": "European Credit & Financing",
       "view": "CAUTIOUS",
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
-      "signal": "watch",
-      "change": "Fed rate hike signals global monetary tightening; winter LNG spike risk threatens European energy costs and refinancing appetite. Private capital raising remains active (Siguler Guff $3B fund) but conditions deteriorating."
+      "signal": "neutral",
+      "change": "No ECB rate or credit condition data published today beyond August Consumer Expectations Survey. BoJ 31-year high rate signals central bank tightening extends globally; feeds caution on euro rates."
     },
     {
       "label": "Private Capital Deployment",
       "view": "SELECTIVE",
       "previousView": "SELECTIVE",
       "direction": "unchanged",
-      "signal": "neutral",
-      "change": "M&A activity healthy per PE Hub (business services, healthcare, industrials active); Vista/Vector Capital talent flows indicate sector resilience. However, rising US rates pressure EM-heavy portfolios and late-stage valuations."
+      "signal": "watch",
+      "change": "PE zombie-fund problem deepens at higher rates per WSJ; medical textiles and healthcare AI reshaping focal points. Shell-led LNG Canada Phase 2 expansion approval by early October signals energy infrastructure capex acceleration."
     },
     {
       "label": "Energy & Commodities",
@@ -103,39 +103,34 @@
       "previousView": "DEFENSIVE",
       "direction": "unchanged",
       "signal": "bearish",
-      "change": "Saudi reroutes crude via Oman post-pipeline hit; oil prices slide despite geopolitical constraint. LNG upside to winter, but Asian demand declining 3–10% YoY per Reuters due to price surge—demand destruction risk outweighs commodity-bull case."
+      "change": "WTI slipped below $100 on third consecutive day; Hormuz tanker traffic collapsed to four vessels on Thursday. Saudi export fears easing, but Middle East geopolitical risk remains elevated per UN/Iran findings. China fuel exports up 12.7% YoY in August per Reuters customs data."
     },
     {
       "label": "Emerging Markets",
-      "view": "DEFENSIVE",
+      "view": "CONSTRUCTIVE",
       "previousView": "DEFENSIVE",
-      "direction": "unchanged",
-      "signal": "bearish",
-      "change": "Fed hike tightens EM carry conditions; India faces US tariff threat over Russian oil, triggering energy-security standoff. Brazil central bank delivered fifth consecutive cut, but Asia Times cautions uneven US recovery and JPMorgan frontier-bond index reflects cautious positioning on Bangladesh, Nigeria exits."
+      "direction": "upgraded",
+      "signal": "bullish",
+      "change": "Moody's raised India FY27 growth to 7% on consumption and investment resilience; Central Group committing additional $1.5B to Vietnam per VIR. Indonesia new finance minister signals policy continuity. BRICS summit convenes amid multiple crises."
     },
     {
       "label": "Global Risk Appetite",
       "view": "CAUTIOUS",
       "previousView": "CAUTIOUS",
       "direction": "unchanged",
-      "signal": "bearish",
-      "change": "Fed rate hike, Trump tariff threats, LNG supply shock, and India trade standoff create convergent headwinds. Risk index remains elevated (65) on unresolved geopolitical-trade tension and EM FX vulnerability to US tightening."
+      "signal": "neutral",
+      "change": "BofA reports US equity inflows at fastest pace in three months, but Pakistan mosque bombing kills 16+, Philippines school shooting kills 3, and UN accuses US of unlawful Iran strikes. Geopolitical friction elevated; capital flows bifurcated."
     }
   ],
   "catalysts": [
     {
-      "time": "THU 14:30 CET",
-      "title": "Federal Reserve FOMC statement (issued Wednesday; market reaction continues Thu AM)",
-      "impact": "HIGH"
-    },
-    {
-      "time": "FRI TBC",
-      "title": "BRICS summit begins (trade, de-dollarization, EM coordination signals)",
+      "time": "MON TBC",
+      "title": "Shell-led LNG Canada Phase 2 expansion decision window (by early October)",
       "impact": "MEDIUM"
     }
   ],
-  "globalBriefing": "Federal Reserve's first rate hike in three years tightens global carry-trade conditions and reprices emerging-market risk premiums; simultaneous US tariff threats on Europe (Canada-EU) and India (Russian oil) create bilateral trade friction that undermines FDI confidence. Winter LNG supply squeeze amid low European inventories poses tail risk to energy inflation, while Brazil's record grain forecast and Brazil's fifth consecutive rate cut illustrate asymmetric monetary and commodity dynamics across regions. Convergence of macro tightening, geopolitical trade conflict, and energy supply risk elevates capital-allocation caution, particularly for Spanish/European real-estate investors facing 23.5% poverty-inclusive rates and for private-capital deployers navigating carry-trade unwind.",
-  "marketOpen": "Market open should price Fed tightening spillover to EUR/USD and EM FX depreciation; STOXX Europe 600 faces headwind from Trump tariff threats on EU, while energy complex watches LNG winter demand indicators and Strait of Hormuz constraint updates.",
+  "globalBriefing": "US equity inflows at 3-month highs offset geopolitical friction in Middle East, Pakistan, and Philippines; oil prices decline for third day as Saudi export fears ease despite Hormuz tanker traffic collapse to four vessels, suggesting operational constraints persist beneath reassurance narrative. BoJ raises policy rate to 31-year high of 1.25% per Reuters, extending global tightening divergence, while Moody's upgraded India FY27 growth to 7%, supporting EM hard-currency and equity allocation. Trump delays excess-capacity tariffs until post-Xi summit, softening near-term trade volatility, but plans sweeping tariffs on 60 partners; Michigan voter disapproval of Canada tariffs signals domestic political constraint. Shell-led LNG Canada Phase 2 expansion approval expected by early October, anchoring energy infrastructure capex thesis, while US seals uranium investment in Niger post-military withdrawal.",
+  "marketOpen": "Watch for overnight Asia equity response to BoJ tightening and India growth upgrade against backdrop of Strait of Hormuz operational stress and US-China tariff sequencing; soybean/grain complex repricing will signal US trade-policy momentum ahead of delayed excess-capacity tariffs decision.",
   "categories": {
     "macro": {
       "label": "Macro & Central Banks",
@@ -143,47 +138,67 @@
       "description": "Central bank decisions, inflation prints, GDP, yield curves, and FX",
       "items": [
         {
-          "headline": "Federal Reserve raises rates for first time in three years; inflation pressures building per Reuters",
-          "summary": "Fed issued FOMC statement confirming rate hike. Reuters reports robust US retail sales underscore economy resilience but inflation pressures building. Oil prices slipped post-announcement, signaling capital-markets repricing of terminal rate path.",
-          "source": "Federal Reserve FOMC statement; Reuters",
-          "relevance": "Signals peak-rate expectations and tightens global financial conditions; directly reprices carry trades, EM debt, and commodity valuations.",
+          "headline": "BofA reports US equity inflows at fastest pace in three months",
+          "summary": "Institutional investors increased US stock purchases at the quickest rate since mid-June, per Bank of America data. Capital flows data confirms continued appetite for equities despite macro uncertainty and elevated rates.",
+          "source": "BofA / The Mighty 790 KFGO",
+          "relevance": "Risk-on signal; supports equity allocation thesis in face of competing geopolitical and rate headwinds.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Moody's raises India FY27 GDP growth forecast to 7% from 6% on resilient consumption and investment",
+          "summary": "Rating agency upgraded India's fiscal 2027 growth projection citing strong domestic demand and capex momentum. Upgrade applies across multiple Moody's publications and corroborates EM growth divergence narrative.",
+          "source": "Moody's / The Federal, Firstpost, The Times of India, The Economic Times",
+          "relevance": "Supports EM allocation tilt; India growth story de-risks relative to developed market tightening cycles and trade war exposure.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "BoJ Governor Ueda signals rate hike outlook; policy rate raised to 1.25%, new 31-year high",
+          "summary": "Bank of Japan lifted policy rate to 1.25% per FXStreet and Reuters, continuing tightening cycle divergence with Fed. Governor Ueda commentary on policy outlook confirms forward guidance tightening bias.",
+          "source": "BoJ / FXStreet, Reuters",
+          "relevance": "Extends USD strength and carry-trade unwind risks; signals global monetary divergence: BoJ tightening, Fed pausing, ECB data-dependent. Reprices EM FX exposure and Japanese equity hedges.",
           "signal": "bearish",
-          "impact": 5,
+          "impact": 4,
           "conviction": "high",
           "horizon": "0-1M"
         },
         {
-          "headline": "Brazil central bank delivers fifth consecutive rate cut; leaves next move open per Reuters",
-          "summary": "Brazil's central bank cut rates for the fifth straight meeting as inflation cools, per WSJ and Reuters. No signal of pause or reversal. Policy stance remains accommodative in contrast to Fed tightening.",
-          "source": "WSJ; Reuters",
-          "relevance": "Divergence in monetary stance between US and LatAm reduces BRL support and complicates cross-border portfolio hedging; supports commodity upside if growth maintained.",
-          "signal": "neutral",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "IMF urges RBA to prepare for more rate hikes; Australia faces inflation concerns",
-          "summary": "IMF briefs indicate RBA should be ready to raise rates again and urges Australia to cut spending amid looming inflation concerns (per briefs.co, Devdiscourse, investingLive). No imminent RBA action confirmed, but forward guidance suggests hawkish bias.",
-          "source": "IMF statements; briefs.co; Devdiscourse; investingLive",
-          "relevance": "AUD rate-hike bias supports currency but pressures EM debtors and commodity-dependent economies; signals broad central-bank inflation vigilance outside US.",
-          "signal": "bearish",
+          "headline": "Australia's central bank chief warns inflation risks materialising",
+          "summary": "Reserve Bank of Australia leadership flagged renewed price pressures, per Reuters. Commentary suggests RBA may face renewed hawkish pressure if inflation data reaccelerates.",
+          "source": "Reuters",
+          "relevance": "Signals EM central banks remain alert to inflation; supports case for continued rate-support structures in Asia-Pacific despite growth slowdown warnings.",
+          "signal": "watch",
           "impact": 2,
           "conviction": "medium",
           "horizon": "1-3M"
         },
         {
-          "headline": "Thai central bank maintains 'very, very accommodative' monetary policy; no change to growth outlook",
-          "summary": "Thai central bank official reports monetary policy remains highly accommodative with no change to growth outlook (WKZO). Stance contrasts with US/RBA tightening and supports regional carry demand.",
-          "source": "WKZO",
-          "relevance": "Accommodative Thai policy provides regional funding base for EM carry but vulnerable to Fed spillover; marginal relevance to Europe-focused mandate.",
+          "headline": "ECB releases August 2026 Consumer Expectations Survey results",
+          "summary": "ECB published monthly consumer confidence and inflation expectations survey data without narrative headline or major market-moving figure. Publication is routine; awaiting analyst parsing for eurozone demand signals.",
+          "source": "ECB Press Releases",
+          "relevance": "ECB data-dependency framework; survey results will inform December policy path. No immediate market repricing evident from headlines alone.",
           "signal": "neutral",
           "impact": 1,
           "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Pakistan economy stabilized but growth remains at 3.5% — IMF/World Bank assessments",
+          "summary": "Official sources report Pakistan macroeconomic stabilization underway but growth trajectory remains subdued at 3.5%, per Dawn / UA.NEWS. Data consistent with post-IMF program adjustment phase.",
+          "source": "IMF / World Bank via Dawn, UA.NEWS",
+          "relevance": "South Asian growth differentiation: India 7%, Pakistan 3.5%; geopolitical risk elevated (mosque bombing 16+ killed Friday). Constrains private capital deployment in region.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "medium",
           "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If Fed maintains 3-4 hikes per cycle while LatAm/Asia ease, carry unwinds and EM FX depreciates; if growth falters on higher rates, commodity demand destruction follows.",
+      "keyTakeaway": "If BoJ tightening persists and India growth proves resilient, EM hard-currency debt and domestic equities outperform; if US equity inflows reverse and geopolitical friction escalates, risk-off unwind will depress EM assets.",
       "rawCount": 10
     },
     "geopolitics": {
@@ -192,57 +207,67 @@
       "description": "Conflicts, alliances, sanctions, and power shifts",
       "items": [
         {
-          "headline": "Trump threatens 'serious tariffs' on Europe if Canada joins EU as associate member; EU proposes Canada association",
-          "summary": "Per Politico and NPR, Trump threatens serious tariffs on Europe contingent on Canada EU association plan. Symmetric tariff threat creates trade uncertainty and signals willingness to use tariff weapon unilaterally. No imminent EU-Canada deal timeline confirmed.",
-          "source": "Politico; NPR",
-          "relevance": "Elevates transatlantic trade friction; directly impacts European credit spreads, FDI inflows, and cross-border M&A timelines. Relevant to ZRC Spanish and European exposure.",
-          "signal": "bearish",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "India warns US tariffs over Russian oil could impact bilateral ties; India vows energy-security protection",
-          "summary": "Per Reuters, Al Jazeera, and BBC, India warns that US House-voted 100% tariff threat on Russian oil imports could damage US-India ties. India Foreign Minister vows continued energy-security focus despite US pressure. Standoff reflects symmetric commitment to policy independence.",
-          "source": "Reuters; Al Jazeera; BBC; India Foreign Ministry statements",
-          "relevance": "Signals India-US trade friction will persist; complicates EM FDI flows and energy-security supply chains. Tariff threat creates bilateral policy risk for downstream capital allocation.",
+          "headline": "UN report finds US unlawfully struck Iranian school and sports centre, killing children; White House rejects findings",
+          "summary": "United Nations probe documented US military actions in Iran that allegedly killed civilians, including children, with White House explicitly rejecting the allegations, per Al Jazeera. Dispute centers on lawfulness under international humanitarian law.",
+          "source": "UN probe / Al Jazeera",
+          "relevance": "Escalates US-Iran diplomatic friction; raises reputational/sanctions risk for US foreign policy and potential for asymmetric Iranian response. Supports elevated oil-price volatility and Middle East premium.",
           "signal": "bearish",
           "impact": 3,
+          "conviction": "medium",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "At least 16 killed in suicide bombing at mosque in Pakistan during Friday prayers",
+          "summary": "Vehicle loaded with explosives rammed into mosque during Friday prayers; at least 16 confirmed dead per BBC World and senior police officials. Incident marks fourth major security incident in South Asia this week.",
+          "source": "BBC World / Pakistan Police",
+          "relevance": "South Asia macro risk elevated; constrains FDI and private capital deployment in Pakistan. Signals regional instability impacting investor confidence across border regions.",
+          "signal": "bearish",
+          "impact": 2,
           "conviction": "high",
           "horizon": "0-1M"
         },
         {
-          "headline": "EU announces plan to restrict social media access for under-15s",
-          "summary": "BBC reports EU plans to restrict social-media account creation to children over 15. Regulatory action aims at social-platform governance but no market impact quantified and implementation timeline unclear.",
-          "source": "BBC World",
-          "relevance": "Long-term regulatory risk to US tech platforms operating in EU; marginal immediate capital-allocation relevance.",
-          "signal": "neutral",
+          "headline": "Three dead, eight injured in Philippines school shooting; third school shooting since June",
+          "summary": "Gunman killed in school shooting incident per Al Jazeera; confirms third shooting of this type in four months. Pattern signals elevated political instability or security governance failures in Philippines.",
+          "source": "Al Jazeera",
+          "relevance": "Minor FDI sentiment impact for Philippines; broader signal of law-and-order deterioration in key ASEAN economy. Supports caution on ASEAN equity flows.",
+          "signal": "bearish",
           "impact": 1,
-          "conviction": "low",
-          "horizon": "12M+"
+          "conviction": "medium",
+          "horizon": "1-3M"
         },
         {
-          "headline": "NATO and Challenges Ahead: Baltic/Scandinavian perceptions; nine defense-tech firms open South Florida offices",
-          "summary": "Geopolitical Futures notes NATO challenges observed from Baltic/Scandinavian perspective (Riga, Gothenburg); separately, Bisnow reports nine defense-related companies opened South Florida offices in past year, suggesting Trump-era defense-industrial clustering.",
-          "source": "Geopolitical Futures; Bisnow",
-          "relevance": "Defense-tech geographic concentration in Trump orbit signals reshoring bias; marginal M&A relevance but reflects geopolitical capital reallocation away from NATO-skeptical centers.",
+          "headline": "North Korea anthem played at South's Bangladesh hockey match by Asian Games organizers in Japan",
+          "summary": "Accidental anthem error by Asian Games officials per Al Jazeera. Diplomatic protocol breach; no military escalation but heightens inter-Korean tension ahead of Winter Games season.",
+          "source": "Al Jazeera",
+          "relevance": "Minimal capital-markets impact. Low probability of escalation given sports event context. Symbolic of persistent Korean peninsula tensions.",
           "signal": "neutral",
-          "impact": 2,
+          "impact": 1,
           "conviction": "low",
           "horizon": "3-6M"
         },
         {
-          "headline": "Climate change played major role in triggering Nepal floods; 1,446 dead, 6,669 missing",
-          "summary": "Al Jazeera reports scientists confirm climate change had major role in deadly Nepal floods with combined toll of 1,446 dead and at least 6,669 missing. Infrastructure damage and displacement imply reconstruction capex demand.",
+          "headline": "Israel assassinations in Iran, Gaza, Lebanon have repeatedly removed figures capable of negotiating conflict resolution",
+          "summary": "Al Jazeera analysis reports that Israeli targeted killing campaign has eliminated negotiation-capable counterparts across three theaters, constraining diplomatic off-ramps. Pattern documented across multiple conflicts.",
           "source": "Al Jazeera",
-          "relevance": "Tail-risk climate event; infrastructure rebuild may attract DFI/concessional capital but marginal to core mandate.",
-          "signal": "neutral",
-          "impact": 1,
+          "relevance": "Extends Middle East conflict duration; supports elevated energy risk premiums and geopolitical risk re-rating in fixed income and emerging-market currency pairs.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Ukraine and Turkic World need each other as Russia's military failures yield re-emergence of Turkic influence in Eurasia",
+          "summary": "Geopolitical Futures analysis reports that Russian military setbacks in Ukraine have created space for Turkic regional powers (Azerbaijan, Kazakhstan, Uzbekistan) to reassert influence across Central Asia.",
+          "source": "Geopolitical Futures",
+          "relevance": "Structural realignment of Eurasian geopolitics; supports Kazakhstan and Azerbaijani energy export routes; may diversify energy supply away from Russian pipelines over 3-6 month horizon.",
+          "signal": "watch",
+          "impact": 2,
           "conviction": "low",
-          "horizon": "6-12M"
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If US tariff threats on India and Europe translate to implementation, bilateral trade friction constrains EM and European capex; if threats remain rhetorical, market impact contained to FDI caution.",
+      "keyTakeaway": "If Middle East friction (UN-US dispute, Israeli operations) continues and Pakistan instability spreads, regional energy premiums persist and EM hard-currency spreads widen; if diplomatic off-ramps emerge, oil prices compress.",
       "rawCount": 10
     },
     "fdi": {
@@ -251,67 +276,67 @@
       "description": "Cross-border investments, sovereign wealth, and capital movements",
       "items": [
         {
-          "headline": "Japan, US discussing chip factory construction as part of $550 billion investment talks, Nikkei reports",
-          "summary": "Per Reuters/Nikkei, Japan and US are in talks on chip-factory construction within $550 billion bilateral investment framework. No deal signed; scope and timeline unconfirmed but reflects US-Japan strategic alignment on semiconductor supply-chain resilience.",
-          "source": "Reuters; Nikkei",
-          "relevance": "Signals FDI reallocation toward US-aligned semiconductor capacity outside China; supports US regional development and Japanese capex expansion but marginal to European/Spanish real-asset mandate.",
-          "signal": "neutral",
+          "headline": "Central Group plans additional $1.5 billion investment in Vietnam",
+          "summary": "Thai retail conglomerate announces fresh $1.5B capital commitment to Vietnam operations per Vietnam Investment Review. Investment signals continued confidence in ASEAN growth despite tariff uncertainty.",
+          "source": "Central Group / Vietnam Investment Review",
+          "relevance": "Confirms ASEAN retail/consumer capex cycle; supports Vietnam FDI inflows thesis. Partially offsets Chinese EV reshoring to ASEAN capacity constraints narrative.",
+          "signal": "bullish",
           "impact": 2,
-          "conviction": "low",
-          "horizon": "6-12M"
+          "conviction": "medium",
+          "horizon": "1-3M"
         },
         {
-          "headline": "China, ASEAN sovereign funds launch joint investment council; multilateral capital coordination",
-          "summary": "Per DealStreetAsia and PR Newswire, China and ASEAN sovereign funds established joint investment council for coordinated capital deployment. No capital commitment or project pipeline disclosed; signals institutional framework for EM-EM capital flows.",
-          "source": "DealStreetAsia; PR Newswire",
-          "relevance": "Illustrates de-dollarization trend in regional capital markets; marginal relevance to euro-focused FDI mandate but reflects EM capital self-sufficiency narrative.",
-          "signal": "neutral",
+          "headline": "FDI firms remain largely absent from Vietnam stock market; regulators push for greater foreign institutional participation",
+          "summary": "Vietnam Securities Commission reports foreign institutional investors under-participate in domestic equities despite macro strength, per VIR and theinvestor.vn. Regulatory push for greater FIE access ongoing.",
+          "source": "Vietnam SSC / VIR, theinvestor.vn",
+          "relevance": "Identifies Vietnam equity market inefficiency; suggests execution risk for FDI asset allocation. Capital access barriers may limit portfolio rebalancing inflows.",
+          "signal": "watch",
           "impact": 2,
-          "conviction": "low",
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Shell-led LNG Canada could approve Phase 2 expansion by early October, per Reuters sources",
+          "summary": "Sources confirm Shell consortium may greenlight LNG Canada's Phase 2 capex project within weeks. Project worth billions; decision timeline compressed by global energy security concerns and North American LNG supply gaps.",
+          "source": "Reuters Capital",
+          "relevance": "Major cross-border capex catalyst; supports Canadian infrastructure and energy sector capex acceleration. Reprices North American energy transition capex thesis.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "US seals big uranium investment in Niger two years after troops withdrawal",
+          "summary": "US announces significant uranium mining/processing commitment to Niger, per Reuters Capital. Timing post-military withdrawal signals diplomatic reset and strategic minerals re-engagement in West Africa.",
+          "source": "Reuters Capital",
+          "relevance": "US critical-minerals supply chain diversification; supports nuclear power upside thesis. FDI in politically unstable region; execution risk remains elevated.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
           "horizon": "6-12M"
         },
         {
-          "headline": "US firm Heeney Capital to operate Venezuela gold mine; Continental seeks entry to oil project",
-          "summary": "Per Reuters, US firm Heeney Capital is set to operate a Venezuela gold mine; Continental seeks entry to oil project. Deals represent US capital return to Venezuela despite sanctions friction. No capital size or timeline disclosed.",
-          "source": "Reuters",
-          "relevance": "Signals selective sanctions arbitrage and resource-hungry US firm appetite for LatAm extraction; marginal to core Spanish/European mandate.",
+          "headline": "US FCC approves foreign investment participation in Paramount-Warner merger",
+          "summary": "US communications regulator cleared foreign institutional capital participation in Paramount-Warner entertainment sector consolidation, per Reuters Capital. Regulatory approval removes M&A capital constraint.",
+          "source": "Reuters Capital",
+          "relevance": "Signals regulatory openness to foreign media/tech capital in US. Removes deal-completion risk; supports media capex and private capital deployment in entertainment sector.",
+          "signal": "bullish",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Hanwha Financial Units forge stablecoin payment and digital finance partnerships with Abu Dhabi",
+          "summary": "South Korean Hanwha announced digital finance and stablecoin payment infrastructure partnerships with Abu Dhabi authorities per finance.biggo.com. Signals emerging-market fintech infrastructure cross-border alignment.",
+          "source": "Hanwha / finance.biggo.com",
+          "relevance": "Emerging-market digital infrastructure play; supports fintech-enabled cross-border capital flows in Middle East. Minor institutional relevance; signals trend rather than named opportunity.",
           "signal": "neutral",
           "impact": 1,
           "conviction": "low",
           "horizon": "6-12M"
-        },
-        {
-          "headline": "Revolut applies for Swiss banking licence; unveils investment plans",
-          "summary": "Per Reuters, fintech Revolut applies for Swiss banking licence and announces investment plans. No regulatory approval timeline or capex commitment detailed. Reflects European fintech regulatory expansion.",
-          "source": "Reuters",
-          "relevance": "Signals fintech institutional integration in Europe; marginal capital-allocation relevance absent deal size.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Canada offers permanent tax incentive on capital investment as Carney lures investors",
-          "summary": "Per Reuters, Canada announces permanent tax incentive on capital investment under Carney administration. Mechanism and scope unspecified but signals capital-attraction posture at time of tariff tension.",
-          "source": "Reuters",
-          "relevance": "Counters US tariff threat narrative on Canada-EU ties; marginal to core mandate.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Creative Planning inks RVK deal to add $4.3 trillion in institutional assets under administration",
-          "summary": "Per investmentnews.com, Creative Planning integrates RVK platform, adding $4.3 trillion in institutional-asset administration. Consolidation reflects adviser-services M&A momentum but no direct capital reallocation signal.",
-          "source": "investmentnews.com",
-          "relevance": "Indicates robust adviser-services deal flow and institutional-capital base; marginal relevance to FDI infrastructure mandate.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If US-Japan chip capex accelerates and China-ASEAN regional funds scale, FDI bifurcates away from Europe toward Asia-Pacific; European capital-attraction tools (Spain, France) must compete on non-tariff terms.",
+      "keyTakeaway": "If Shell LNG Canada Phase 2 approves in October and Niger uranium commitment advances, energy capex flows accelerate; if Vietnam FIE participation barriers persist, ASEAN equity inflows lag.",
       "rawCount": 10
     },
     "critical-minerals": {
@@ -320,67 +345,67 @@
       "description": "Oil, gas, metals, supply chains, and energy security",
       "items": [
         {
-          "headline": "Global LNG prices could spike this winter on low European gas stocks; Hormuz supply crunch persists",
-          "summary": "Per Reuters and OilPrice.com, global LNG prices face upside risk this winter amid low European gas inventories and persistent Hormuz supply constraints. Analysts flag LNG prices could rise by about one-third from already elevated levels due to fierce EU-Asia spot competition.",
-          "source": "Reuters; OilPrice.com",
-          "relevance": "Direct repricing of European energy input costs; pressures refiners, heating, and industrial margins. Material to Spanish/European manufacturing competitiveness and capex discipline.",
-          "signal": "bearish",
-          "impact": 4,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Oil prices slip after Fed rate hike; Saudi Arabia reroutes crude via Oman following pipeline disruption",
-          "summary": "Per WSJ and CNBC, oil prices slipped post-Fed hike despite Saudi rerouting crude via ship-to-ship transfers after pipeline hit. Price action reflects demand-destruction expectations from tighter monetary conditions overriding near-term supply constraint.",
-          "source": "WSJ; CNBC",
-          "relevance": "Signals macro headwind (Fed tightening) dominates near-term commodity supply shocks; CapEx for energy projects faces pressure from higher discount rates.",
+          "headline": "Oil prices fall for third consecutive day; WTI slips below $100 on Saudi export supply reassurance",
+          "summary": "Crude oil declined for third straight session as traders' concerns about Saudi Arabia supply disruption receded. WTI briefly broke below $100/bbl on Friday per WSJ and CNBC. Reuters reports oil set for weekly decline.",
+          "source": "WSJ, CNBC, Reuters, OilPrice.com",
+          "relevance": "Reprices Middle East energy risk premium lower; implies easing of Iran-US friction impact on markets. Supports energy capex discipline and downstream margin compression thesis.",
           "signal": "bearish",
           "impact": 3,
           "conviction": "high",
           "horizon": "0-1M"
         },
         {
-          "headline": "Goldman Sachs sees more upside in gasoline as diesel crunch deepens; refiner margins diverge",
-          "summary": "Per OilPrice.com, Goldman Sachs notes diesel prices and margins continue to grow amid tightening markets, but gasoline offers greater upside as refiners prioritize diesel output. Asymmetric product pricing reflects supply-chain bottleneck.",
-          "source": "OilPrice.com",
-          "relevance": "Refiner margin expansion in gasoline but margin compression in diesel creates hedging opportunities for fuel-dependent sectors (transport, manufacturing). Relevant to European logistics and industrial competitiveness.",
-          "signal": "watch",
+          "headline": "Hormuz tanker traffic slumps to four commodity vessels on Thursday amid Saudi Arabia route scrambling",
+          "summary": "Only four inbound/outbound vessels detected transiting Strait of Hormuz on Thursday per OilPrice.com shipping data. Signals severe disruption to Middle East export logistics despite price recovery narrative.",
+          "source": "OilPrice.com / shipping data",
+          "relevance": "Contradicts Saudi reassurance narrative; suggests Middle East energy infrastructure remains operationally constrained. Supports elevated LNG premium and alternative export route investment.",
+          "signal": "bearish",
+          "impact": 3,
+          "conviction": "high",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "China's fuel exports surge to 6.01 million tons in August, up 12.7% YoY; exceeds pre-war levels",
+          "summary": "Chinese customs data via Reuters shows August refined fuel exports at 6.01M tons, 12.7% increase YoY. Jet fuel and diesel exceed pre-Ukraine war export volumes per OilPrice.com.",
+          "source": "Chinese Customs / Reuters, OilPrice.com",
+          "relevance": "Global diesel shortage narrative challenged by Chinese export surge; implies margin compression in downstream and refining. Supports energy transition capex thesis as stranded fossil fuel infrastructure.",
+          "signal": "bearish",
           "impact": 2,
+          "conviction": "high",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "India's coal power generation flat for first time in 50+ years (H1 2024 to H1 2026), as clean energy boom halts coal growth",
+          "summary": "India's coal-fired electricity generation recorded zero growth over two-year period per OilPrice.com analysis. First such extended flat period in over five decades; reflects rapid renewable capacity additions.",
+          "source": "OilPrice.com",
+          "relevance": "Structural shift in India energy mix; supports clean-tech capex thesis and renewable energy supply-chain investment. Implies long-term coal demand headwinds in world's fastest-growing major economy.",
+          "signal": "bullish",
+          "impact": 3,
+          "conviction": "medium",
+          "horizon": "6-12M"
+        },
+        {
+          "headline": "China government calls on coal miners to maintain stable production as thermal coal spot prices spike",
+          "summary": "Chinese authorities issued production guidance to coal miners following recent thermal coal price surge, per OilPrice.com. Policy signal suggests demand strength and margin protection concerns.",
+          "source": "OilPrice.com",
+          "relevance": "Chinese energy security focus; supports coal price floor expectations. Counters India coal transition narrative with persistent Chinese demand. Supports commodity-linked EM exposure.",
+          "signal": "neutral",
+          "impact": 1,
           "conviction": "medium",
           "horizon": "1-3M"
         },
         {
-          "headline": "Soaring LNG prices push Asian demand toward second annual decline; price elasticity breaks demand growth",
-          "summary": "Per Reuters, Asian LNG demand set for second consecutive annual decline of 3–10% in 2026 due to elevated prices. Demand destruction reflects price elasticity and competing fuel sources; end of LNG super-cycle in Asia.",
-          "source": "Reuters",
-          "relevance": "Signals peak LNG pricing may be near-term unless European winter demand absorbs Asian slack; marginal to European capex but underscores energy cost inflation tail-risk.",
-          "signal": "watch",
+          "headline": "Canada could gain $70 billion annually by 2035 through shift to metals refining instead of raw exports — EDC",
+          "summary": "Export Development Canada analysis projects $70B annual GDP uplift if Canada shifts toward refined metals production instead of commodity exports. Suggests 9-year structural capex opportunity.",
+          "source": "EDC / Mining.com",
+          "relevance": "Canadian critical-minerals processing capex cycle; supports Canadian infrastructure and allied manufacturing flows. Aligns with North American supply-chain reshoring thesis.",
+          "signal": "bullish",
           "impact": 2,
           "conviction": "medium",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "India pushes back on US tariff threat over Russian oil; vows energy-security protection",
-          "summary": "Per OilPrice.com and Reuters, India resists US tariff pressure on Russian oil imports, citing energy-security priority. Policy stance signals India will absorb tariff cost rather than shift supply sources; structural Russian-India oil tie persists.",
-          "source": "OilPrice.com; Reuters",
-          "relevance": "Confirms crude-oil supply bifurcation (Russia-India corridor insulated from Western sanctions); marginal to European energy but illustrates geopolitical energy fragmentation.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "Alberta plans new royalty incentives to spur oil production; November announcement",
-          "summary": "Per OilPrice.com, Alberta's premier will announce in November a preferential royalty framework to encourage companies to invest in new oil and gas production. No framework details disclosed; timing November 2026.",
-          "source": "OilPrice.com",
-          "relevance": "Signals Canadian oil supply expansion ambitions; marginal to European energy but reflects energy-supply diversification narrative amid geopolitical tension.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
+          "horizon": "6-12M"
         }
       ],
-      "keyTakeaway": "If European winter demand spike combines with Asian demand destruction, LNG prices stabilize high; if macro recession deepens, oil/gas demand collapse followed by supply shutdowns in 2027–28.",
+      "keyTakeaway": "If Saudi energy infrastructure recovers and Hormuz traffic normalizes, oil prices stabilize below $100; if China sustains coal demand and India clean energy boom accelerates, energy transition capex outperforms fossil fuel infrastructure.",
       "rawCount": 10
     },
     "real-estate": {
@@ -389,67 +414,67 @@
       "description": "Institutional RE, infrastructure projects, and market trends",
       "items": [
         {
-          "headline": "Fedea warns poverty rate in Spain reaches 23.5% when including housing costs",
-          "summary": "Per thecorner.eu citing Fedea (economic research foundation), Spain's poverty rate reaches 23.5% when housing costs are included. Measure reflects affordability crisis and income-to-rent/mortgage ratio stress.",
-          "source": "thecorner.eu; Fedea",
-          "relevance": "Direct signal of Madrid/Spanish real-estate demand pressure from affordability; implies rental yields under pressure and lower owner-occupancy rates. Critical to Spanish portfolio positioning.",
-          "signal": "bearish",
-          "impact": 3,
-          "conviction": "high",
-          "horizon": "0-1M"
-        },
-        {
-          "headline": "Healthpeak secures approval for $4.5B Alewife development; 5M SF mixed-use project (housing, lab, infrastructure)",
-          "summary": "Per Bisnow, Healthpeak received Planning Board approval for $4.5 billion Alewife development in Cambridge: 5M SF including housing, laboratory space, and infrastructure. Capital commitment and timeline signal confidence in US life-sciences real-estate.",
-          "source": "Bisnow",
-          "relevance": "Validates US life-sciences real-estate momentum despite Fed tightening; capital intensity and zoning approval signal long-term institutional capex commitment. Marginal to European mandate.",
+          "headline": "Barcelona and Madrid short-term rental ban policies reported; New York, other cities implement similar restrictions",
+          "summary": "Il Sole 24 ORE reports city-wide short-term rental bans spreading from Barcelona and Madrid across major global metros including New York. Policy restricts STR inventory and reprices residential real estate supply.",
+          "source": "Il Sole 24 ORE",
+          "relevance": "Madrid real estate supply constraint; supports residential rental yield thesis in Spain. Constrains hospitality-linked accommodation supply. Affects single-asset yield calculations.",
           "signal": "bullish",
           "impact": 2,
           "conviction": "medium",
-          "horizon": "6-12M"
+          "horizon": "1-3M"
         },
         {
-          "headline": "NYC Pushes to use Opportunity Zone 2.0 for housing affordability; preservation focus",
-          "summary": "Per Bisnow, NYC aims to use Opportunity Zone 2.0 incentive to meet ambitious housing goals, focusing on development and preservation of affordable units. Framework and capital commitment unconfirmed; policy intent signals supply-side focus.",
-          "source": "Bisnow",
-          "relevance": "Tax-incentive lever for US real-estate allocation; marginal to European mandate.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "EPR Properties acquires Netflix House Philadelphia for $60M; regional retail/entertainment real-estate consolidation",
-          "summary": "Per Bisnow, EPR Properties purchased the Netflix House property in King of Prussia, Pennsylvania for $60 million. Transaction reflects entertainment-real-estate investor appetite and regional consolidation.",
-          "source": "Bisnow",
-          "relevance": "Signals niche property-type consolidation (entertainment, specialized retail) in US markets; marginal capital impact.",
+          "headline": "Madrid luxury penthouse governance controversy persists; PSOE and Ayuso administration dispute 'game over' resolution",
+          "summary": "El Constitucional reports ongoing governance dispute over luxury penthouse; PSOE opposition frames Ayuso administration response as 'beaten the game.' Unresolved legal/political standing.",
+          "source": "El Constitucional / Spanish media",
+          "relevance": "Madrid political risk embedded in luxury real estate narrative. Affects sentiment for ultra-high-net-worth residential investment but minimal direct market pricing impact.",
           "signal": "neutral",
           "impact": 1,
           "conviction": "low",
           "horizon": "3-6M"
         },
         {
-          "headline": "NYC Council considers mandating lease extensions for retailers; commercial rent stabilization",
-          "summary": "Per Bisnow, NYC Council seeks retail-lease stabilization through mandatory extension provisions. Critics worry bill may reduce landlord flexibility and tenant supply; policy debate reflects tenant pressure on affordability.",
+          "headline": "Indian commercial real estate achieves Asia-Pacific's best transparency ranking; attracts institutional capital",
+          "summary": "India's CRE sector ranked top in Asia-Pacific for governance and disclosure per theweek.in. Metric reflects institutional investor confidence in Indian property market maturity.",
+          "source": "theweek.in",
+          "relevance": "Supports India institutional real estate capex thesis; differentiates India from Southeast Asian opacity. Enables foreign pension/SWF capital deployment in Indian CRE.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Data centre operators struggle with labor shortages affecting AI infrastructure expansion; senior leadership scarcity acute",
+          "summary": "Bisnow reports US data centre operators facing severe labour constraints, particularly for senior operational and engineering roles. Talent shortage constrains AI capex execution timelines.",
           "source": "Bisnow",
-          "relevance": "Regulatory risk to US CRE margins; marginal to European mandate.",
+          "relevance": "AI infrastructure bottleneck: capex availability exceeds operational capability. Supports data-centre REIT premium but signals execution risk for AI-linked real estate allocations.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Nabfid sanctions 3,000+ crore rupees to data centres as AI capex accelerates in India",
+          "summary": "National Bank for Financing Infrastructure and Development (Nabfid) approved 3,000+ crore rupee (~$360M USD) loans to at least four data centre projects per The Economic Times. AI infrastructure capex surge underway.",
+          "source": "Nabfid / The Economic Times",
+          "relevance": "India AI infrastructure capex cycle underway; supports Indian CRE-linked tech infrastructure thesis. Aligns with data sovereignty and geopolitical diversification narratives.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "JLL REIT acquires medical office building in Sacramento; US healthcare real estate consolidation trend continues",
+          "summary": "JLL Real Estate Investment Trust completed medical office acquisition in California per CommercialCafe. Healthcare property consolidation reflects sector scale and private capital absorption.",
+          "source": "JLL / CommercialCafe",
+          "relevance": "Healthcare property specialization and REIT consolidation underway; supports medical office yield compression thesis. Minor single-asset relevance; signals sector trend.",
           "signal": "neutral",
           "impact": 1,
           "conviction": "low",
           "horizon": "3-6M"
-        },
-        {
-          "headline": "US DFC approves more than $8 billion in projects for Ukraine, Jordan, Africa",
-          "summary": "Per Міжа (Ukraine news), US Development Finance Corporation approved over $8 billion in infrastructure projects across Ukraine, Jordan, and Africa. Capital deployment signals geopolitical investment in allied regions but no project breakdown disclosed.",
-          "source": "Міжа. Новини України",
-          "relevance": "Concessional/DFI capital allocation to non-traditional markets; relevant to European infrastructure competition narrative but marginal to real-estate mandate.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "6-12M"
         }
       ],
-      "keyTakeaway": "If Spain's 23.5% poverty-inclusive rate translates to persistently weak demand, Madrid real-estate yields compress; if Fed holds rates >4%, US development projects face capex discipline.",
+      "keyTakeaway": "If Madrid/Barcelona STR bans expand and India AI data-centre capex accelerates, residential scarcity and tech infrastructure premiums drive CRE yields tighter; if US data-centre labour constraints worsen, AI infrastructure capex extends and REITs face margin pressure.",
       "rawCount": 10
     },
     "ma-growth": {
@@ -458,67 +483,67 @@
       "description": "Deal flow, PE/VC activity, and corporate transactions",
       "items": [
         {
-          "headline": "Companies-for-sale activity looks healthy heading into Q4; business services, healthcare, industrials most active",
-          "summary": "Per PE Hub, company-for-sale activity remains healthy as market enters Q4. Business services, healthcare services, and industrials have been most active sectors for M&A in 2026. No valuation or deal-size data provided.",
+          "headline": "PE firms pursue medical textiles sector; Montagu, Kohlberg, Sterling, Arlington among active dealmakers in eight transactions",
+          "summary": "PE Hub reports elevated dealmaking activity in medical textiles segment with multiple upper-mid-market sponsors active. Sector consolidation underway amid healthcare-focused PE strategies.",
           "source": "PE Hub",
-          "relevance": "Signals robust mid-market M&A pipeline despite Fed tightening; supports buyout fund deployment thesis. Relevant to private-capital allocation strategy.",
+          "relevance": "Healthcare-focused PE capital deployment accelerating; supports medical-device and healthcare-services consolidation thesis. Identifies sector with continued dry powder absorption.",
           "signal": "bullish",
-          "impact": 3,
+          "impact": 2,
           "conviction": "medium",
-          "horizon": "0-1M"
+          "horizon": "1-3M"
         },
         {
-          "headline": "Siguler Guff raises $3 billion for small-buyout funds; growth-equity and mid-market focus",
-          "summary": "Per WSJ exclusive, Siguler Guff closed $3 billion fund targeting small buyouts and growth-equity strategies. Capital raise validates mid-market LP appetite and represents significant dry-powder allocation to sub-$1B ticket sizes.",
+          "headline": "Higher rates deepen private equity zombie-fund problem; distributions constrained, capital recycling delayed",
+          "summary": "Wall Street Journal reports that elevated interest rates increase carrying costs and extend resolution timelines for underperforming PE funds. Zombie-fund problem limits new capital deployment.",
           "source": "WSJ",
-          "relevance": "Demonstrates institutional capital flowing toward smaller buyout targets amid funding scarcity; supports mid-market deal thesis. Direct relevance to private-capital deployment.",
-          "signal": "bullish",
-          "impact": 3,
+          "relevance": "PE market structural headwind; constrains new fund formation and capex. Supports shift toward continuation funds and secondary strategies. Negative for dry-powder deployment velocity.",
+          "signal": "bearish",
+          "impact": 2,
           "conviction": "high",
-          "horizon": "1-3M"
-        },
-        {
-          "headline": "Vista Equity's Kiran Rao joins Vector Capital as head of value creation; talent migration",
-          "summary": "Per PE Hub exclusive, Vista Equity's Kiran Rao (former COO of operations, ex-TPG operating partner) joined Vector Capital as head of value creation. Talent transfer reflects competitive hiring in operational-value creation and signals Vector's portfolio-company execution focus.",
-          "source": "PE Hub",
-          "relevance": "Illustrates talent market dynamics and operational-value discipline in PE; marginal capital-allocation signal but reflects sector competition for operating expertise.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
           "horizon": "3-6M"
         },
         {
-          "headline": "CVC invests in Ridge (UK built environment); Horizon Capital exits stake",
-          "summary": "Per PE Hub, CVC acquired stake in Ridge (founded 1946, Oxford-based), providing planning, design, engineering, and project-management services across UK built environment. Horizon Capital exited position. Transaction reflects infrastructure-services consolidation.",
-          "source": "PE Hub",
-          "relevance": "Signals European infrastructure-services M&A momentum amid UK real-estate/construction cycles; relevant to infrastructure-capex narrative.",
-          "signal": "neutral",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "3-6M"
-        },
-        {
-          "headline": "EQT's Mid Market Europe fund sells Ontinue (AI-powered cybersecurity) to Quorum Cyber",
-          "summary": "Per PE Hub, EQT Mid Market Europe fund signed definitive agreement to sell Ontinue (AI-powered managed cybersecurity for Microsoft architecture) to Quorum Cyber. Exit reflects PE portfolio company maturation and cybersecurity M&A appetite.",
-          "source": "PE Hub",
-          "relevance": "Validates European PE exit market and cybersecurity consolidation; signals portfolio liquidity and sector momentum.",
+          "headline": "AI reshaping private equity healthcare strategy; sector consolidation accelerates with technology integration",
+          "summary": "Modern Healthcare reports that PE healthcare strategies increasingly integrate AI and operational software; technology enablement becomes table-stakes acquisition criterion per dealmaker commentary.",
+          "source": "Modern Healthcare",
+          "relevance": "Healthcare PE thesis evolves toward tech-enabled operational leverage; supports healthcare software and AI-adjacent acquisitions. Reprices healthcare M&A multiples higher.",
           "signal": "bullish",
           "impact": 2,
           "conviction": "medium",
           "horizon": "1-3M"
         },
         {
-          "headline": "Ingenia investors threaten revolt over $1 billion Peet deal; valuation dispute",
-          "summary": "Per The Australian, Ingenia investors are threatening revolt over proposed $1 billion acquisition by Peet. Valuation dispute signals shareholder friction and potential deal termination risk.",
-          "source": "The Australian",
-          "relevance": "Illustrates mid-cap M&A execution risk and valuation disagreement; relevant to deal-timing and governance risk in growth-equity targets.",
-          "signal": "watch",
+          "headline": "Segro buyout hands three major law firms £55 million fee windfall; deal complexity and scale elevated",
+          "summary": "Law.com reports significant legal fee generation from Segro logistics REIT acquisition, confirming deal scale and complexity. Fee size signals institutional PE sponsor involvement.",
+          "source": "Law.com",
+          "relevance": "Deal flow indicator: Segro transaction confirms large-cap logistics/infrastructure PE activity. Signals sponsor appetite for real-estate infrastructure in Europe.",
+          "signal": "neutral",
           "impact": 1,
           "conviction": "low",
-          "horizon": "0-1M"
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Private equity turns to financial engineering to lure insurance-backed capital into alternative strategies",
+          "summary": "Financial Times reports PE sponsors deploying structured products and alternative risk-transfer vehicles to attract insurance capital. Insurance capital seeks yield; PE offers structured return profiles.",
+          "source": "Financial Times",
+          "relevance": "Capital sources diversification; supports PE fundraising resilience despite rates environment. Insurance allocation to alternatives expanding; reprices PE distribution and capital access.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "Most-fundable startups prioritize go-to-market strategy and distinctive marketing channels, treating distribution as core competitive advantage — Crunchbase analysis of 25,000 applications",
+          "summary": "Crunchbase News analysis of 25,000 seed-stage startup applications identifies distribution and go-to-market clarity as primary fundability drivers. Capital prioritizes execution capability over technology.",
+          "source": "Crunchbase News",
+          "relevance": "Seed capital allocation thesis: operational discipline and distribution traction trump technology novelty. Supports sustainable growth playbook over moonshot narrative.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If mid-market M&A activity sustains at current pace with $3B fresh fundraising, buyout J-curves remain intact; if Fed rate persistence chokes multiples below entry valuations, exit proceeds slow.",
+      "keyTakeaway": "If healthcare PE and AI integration accelerate and insurance capital diversifies into structured PE vehicles, dealflow and sponsor returns accelerate; if zombie-fund carrying costs persist, capital deployment velocity constrained.",
       "rawCount": 10
     },
     "emerging-markets": {
@@ -527,67 +552,67 @@
       "description": "Frontier opportunities, risk signals, and market access",
       "items": [
         {
-          "headline": "Fed rate hike tightens EM carry conditions; India faces 100% tariff threat over Russian oil",
-          "summary": "Federal Reserve rate hike (first in three years) tightens carry-trade funding costs across emerging markets. Simultaneously, US House voted to threaten 100% tariffs on India for Russian oil imports, creating bilateral policy friction. Combined macro and political headwinds reprices EM risk premium.",
-          "source": "Federal Reserve FOMC; US House vote; Reuters; BBC; Al Jazeera",
-          "relevance": "Direct repricing of EM FX and fixed-income valuations; India tariff threat creates commodity-exporter geopolitical risk. Critical to EM portfolio construction.",
-          "signal": "bearish",
-          "impact": 4,
+          "headline": "Moody's raises India FY27 GDP growth forecast to 7% from 6% on resilient consumption and investment",
+          "summary": "Rating agency upgraded India growth forecast driven by strong domestic demand and capex momentum per multiple sources (The Federal, Firstpost, Times of India, Economic Times). Forecast corroboration across multiple outlets.",
+          "source": "Moody's via multiple outlets",
+          "relevance": "India macro thesis strengthens; growth divergence from EM peers widens. Supports India equity and hard-currency debt allocation. Reprices India sovereign and corporate credit curves lower.",
+          "signal": "bullish",
+          "impact": 3,
           "conviction": "high",
-          "horizon": "0-1M"
+          "horizon": "3-6M"
         },
         {
-          "headline": "Brazil forecasts another record grain harvest in 2026/27; agricultural supply expansion",
-          "summary": "Per Valor International, Brazil forecasts another record grain harvest in 2026/27 season. Production expansion reflects favorable growing conditions and supports commodity-export revenues despite macro headwinds.",
-          "source": "Valor International",
-          "relevance": "Supports Brazil FX and trade-balance resilience amid Fed tightening; commodity revenue upside offsets rate-hike carry pressure partially.",
+          "headline": "Central Group plans additional $1.5 billion investment in Vietnam; extends ASEAN retail presence",
+          "summary": "Thai retail conglomerate Central announces fresh $1.5B Vietnam capex commitment per VIR. Investment signals confidence in Vietnam consumer growth despite trade uncertainty.",
+          "source": "Vietnam Investment Review",
+          "relevance": "ASEAN consumer thesis supported by regional capex commitments; Vietnam FDI inflows remain robust. Differentiates Vietnam from broader ASEAN tariff exposure.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Indonesia's new finance minister touts policy continuity, maintains deficit outlook",
+          "summary": "Indonesia's newly appointed finance minister announces commitment to unchanged fiscal framework and deficit projections, per Reuters. Continuity signal suggests policy stability.",
+          "source": "Reuters",
+          "relevance": "Indonesia macro stability signal; supports rupiah allocation. Reduces fiscal surprise risk. Positive for Indonesia sovereign and corporate bonds.",
           "signal": "bullish",
           "impact": 2,
           "conviction": "medium",
           "horizon": "3-6M"
         },
         {
-          "headline": "JPMorgan creates new frontier-bond index; Bangladesh elevation signals cautious EM expansion",
-          "summary": "Per Business Standard, JPMorgan launched frontier-bond index including Bangladesh. Index creation signals institutional capital attention to frontier-market debt, though inclusion in new index does not imply capital inflows.",
-          "source": "The Business Standard",
-          "relevance": "Illustrates institutional gateway to frontier EM (Bangladesh); marginal capital implication but signals diversification away from mainstream EM.",
-          "signal": "neutral",
-          "impact": 1,
+          "headline": "India's 'sugar high' growth warrants caution on further RBI rate hikes, per Bloomberg commentary",
+          "summary": "Bloomberg reports analyst commentary suggesting India growth surge may prove temporary ('sugar high') and counsel restraint on further RBI tightening. Debate centers on sustainability of consumption boom.",
+          "source": "Bloomberg",
+          "relevance": "Counterpoint to growth upgrade narrative; signals caution on India rate-cut timing. RBI policy path remains data-dependent despite growth optimism.",
+          "signal": "watch",
+          "impact": 2,
           "conviction": "low",
-          "horizon": "6-12M"
+          "horizon": "1-3M"
         },
         {
-          "headline": "Argentina's strong peso constrains economic growth under Milei; exchange-rate policy conflict",
-          "summary": "Per Bloomberg, Milei's strong peso policy is holding back Argentina's economic growth. Policy prioritizes currency stability but sacrifices competitiveness, creating growth-rate ceiling.",
-          "source": "Bloomberg",
-          "relevance": "Signals Argentina growth risk despite fiscal-discipline narrative; peso strength unsustainable if EM carry unwinds. Relevant to LatAm portfolio construction.",
-          "signal": "bearish",
+          "headline": "BRICS summit convenes amid multiple global crises; geopolitical alignment tested",
+          "summary": "BRICS summit underway per The Daily Star amid escalating Middle East tensions, US tariff threats, and trade fragmentation. Bloc coordination on strategic responses uncertain.",
+          "source": "The Daily Star",
+          "relevance": "Geopolitical risk indicator: BRICS cohesion on de-dollarization and trade blocs will signal EM capital allocation direction. Summit outcomes could reprices EM currency and commodity exposure.",
+          "signal": "watch",
           "impact": 2,
           "conviction": "medium",
-          "horizon": "3-6M"
+          "horizon": "0-1M"
         },
         {
-          "headline": "South Korea approaches super-aged society status (65+ population share 20%+ in Dec 2024, rising to Aug 2026)",
-          "summary": "Per Asia Times, South Korea's 65+ population share exceeded 20% in December 2024 (first time) and rose further by August 2026, defining it as 'super-aged society' per demographer classification. Demographic shift reflects structurally declining labor force.",
-          "source": "Asia Times",
-          "relevance": "Signals long-term Korean growth constraints and pension liabilities; marginal near-term capital implication but reflects regional demographic headwind.",
-          "signal": "neutral",
+          "headline": "J.P. Morgan to host 11th India Conference in Mumbai; institutional EM investor focus on India growth",
+          "summary": "JPMorgan announces flagship India investor conference per Yahoo Finance. Event signals major institutional capital focus on Indian market opportunity.",
+          "source": "JPMorgan / Yahoo Finance",
+          "relevance": "Capital-flows indicator: major institutional investor convening confirms India allocation tilt. Signals sustained institutional interest in India equity and fixed income.",
+          "signal": "bullish",
           "impact": 1,
-          "conviction": "low",
-          "horizon": "12M+"
-        },
-        {
-          "headline": "Uber retreats from Nigeria and Uganda; ride-hailing withdrawal across Africa",
-          "summary": "Per African Business, Uber is in retreat across Africa following exits from Nigeria, Uganda, Tanzania, and Côte d'Ivoire. Withdrawal reflects operational and regulatory challenges in African markets.",
-          "source": "African Business",
-          "relevance": "Signals FDI difficulty in African market entry and regulatory fragmentation; marginal to core mandate but illustrates EM capital-return risk.",
-          "signal": "bearish",
-          "impact": 1,
-          "conviction": "low",
+          "conviction": "medium",
           "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If Fed maintains tight stance, EM carry collapses and FX pressures deepen unless commodity export revenues (Brazil) or fiscal discipline (Argentina, China) stabilize capital flows.",
+      "keyTakeaway": "If India growth acceleration proves durable and BRICS bloc strengthens de-dollarization efforts, EM hard-currency debt and India equities outperform; if 'sugar high' narrative gains traction and RBI pauses, India rate normalization delays and capex momentum cools.",
       "rawCount": 10
     },
     "trade-policy": {
@@ -596,57 +621,67 @@
       "description": "Tariffs, sanctions, export controls, and economic statecraft",
       "items": [
         {
-          "headline": "Trump threatens 'serious tariffs' on Europe if Canada joins EU as associate member",
-          "summary": "Per Politico, Trump threatens to impose serious tariffs on Europe contingent on Canada gaining associate membership status in EU. Threat represents conditional tariff escalation and reflects US opposition to EU-Canada deepening.",
-          "source": "Politico",
-          "relevance": "Direct tariff escalation threat on European trade; reprices transatlantic commercial relationships and FDI. Material to Spanish/European capital-allocation strategy.",
-          "signal": "bearish",
+          "headline": "Trump set to impose sweeping tariffs on 60 trade partners; negotiation leverage thesis prevails",
+          "summary": "ABC News reports Trump administration preparing broad tariff regime affecting 60 trading partners. Timing and scope remain uncertain; negotiation sequencing unclear per reporting.",
+          "source": "ABC News, Bloomberg, Reuters, CNBC",
+          "relevance": "US trade policy volatility; reprices global supply-chain investment and reshoring expectations. Capital allocation hinges on tariff sequencing and exemption carve-outs.",
+          "signal": "watch",
           "impact": 4,
-          "conviction": "high",
+          "conviction": "medium",
           "horizon": "0-1M"
         },
         {
-          "headline": "US House votes to threaten 100% tariff on India over Russian oil imports",
-          "summary": "Per BBC and Reuters, US House passed legislation threatening 100% tariff on India for importing Russian oil. India vows energy-security protection and warns tariffs could damage bilateral ties. Symmetrical policy standoff.",
-          "source": "BBC; Reuters; Al Jazeera",
-          "relevance": "Escalates India-US trade friction and energy-policy decoupling; signals US willingness to impose tariffs unilaterally on sanctions-evasion commodities. Reprices India EM risk premium.",
-          "signal": "bearish",
+          "headline": "US delays excess capacity tariffs until after Xi summit; diplomatic sequencing signals negotiation priority",
+          "summary": "Bloomberg reports US administration postponed scheduled tariff action on Chinese excess capacity until post-Xi summit window. Timing change signals willingness to sequence negotiations.",
+          "source": "Bloomberg",
+          "relevance": "Tariff uncertainty softens near-term; US-China dialogue window opens. Reprices risk-on sentiment for EM and China-exposed equities. Supports near-term capital reallocation relief.",
+          "signal": "bullish",
           "impact": 3,
-          "conviction": "high",
+          "conviction": "medium",
           "horizon": "0-1M"
         },
         {
-          "headline": "Mineral concentration jeopardizes America's AI industry; supply-chain vulnerability flagged",
-          "summary": "Per promarket.org, mineral concentration in rare-earth and critical-mineral supply chains creates jeopardy for US AI industrial development. Supply bottleneck reflects geopolitical mineral exposure.",
-          "source": "promarket.org",
-          "relevance": "Flags US critical-mineral dependency and industrial-policy vulnerability; signals potential reshoring/subsidy focus. Marginal near-term capital impact but reflects strategic-resource competition.",
-          "signal": "neutral",
+          "headline": "Most Michigan voters disapprove of Trump's tariffs on Canada; domestic political headwind emerges",
+          "summary": "Washington Post poll shows majority Michigan voters oppose tariff policy on Canadian goods. Domestic political opposition signals constraint on tariff regime duration.",
+          "source": "Washington Post",
+          "relevance": "US domestic political friction on trade policy; suggests tariff regime faces electoral constraints. Supports gradual tariff rollback thesis and capital-markets normalization.",
+          "signal": "bullish",
           "impact": 2,
-          "conviction": "low",
-          "horizon": "6-12M"
+          "conviction": "medium",
+          "horizon": "1-3M"
         },
         {
-          "headline": "Experts call for greater coordination on industrial policy, global trade governance",
-          "summary": "Per China Daily Global Edition, policy experts recommend enhanced coordination on industrial policy and global trade governance. Commentary reflects sentiment of fragmented trade regime but no policy proposals detailed.",
-          "source": "China Daily Global Edition",
-          "relevance": "Signals growing consensus for trade-governance reform; marginal immediate impact but reflects structural trade-regime stress.",
+          "headline": "Chinese EV makers shift production to ASEAN; capacity constraints emerge as manufacturers scale",
+          "summary": "Automotive Logistics reports Chinese EV manufacturers relocating production to ASEAN economies (Vietnam, Thailand, Indonesia) but face infrastructure and supply-chain bottlenecks. Capacity additions lag demand.",
+          "source": "Automotive Logistics",
+          "relevance": "ASEAN manufacturing reshoring accelerates but faces execution constraints. Supports ASEAN infrastructure and industrial capex thesis. Supply-chain bottleneck risk persists.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
+        },
+        {
+          "headline": "EU tells China: limit hybrid EV exports or face new tariffs; retaliatory escalation signals",
+          "summary": "EU Perspectives reports European Commission ultimatum to China on hybrid vehicle export volumes with threat of tariff action. Escalation sequence indicates trade friction deepening.",
+          "source": "EU Perspectives",
+          "relevance": "EU-China trade friction escalates; reprices European auto sector margin risk and China EV export paths. Supports tariff-driven supply-chain bifurcation thesis.",
+          "signal": "bearish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "UK pushes EU for 'Made in Europe' industrial policy access; post-Brexit trade architecture questioned",
+          "summary": "Modern Diplomacy reports UK negotiating inclusion in EU industrial policy frameworks despite non-membership status. UK seeks supply-chain integration within European green-transition protocols.",
+          "source": "Modern Diplomacy",
+          "relevance": "UK-EU trade architecture evolving; signals integration desire despite Brexit. Supports UK industrial capex and supply-chain proximity thesis.",
           "signal": "neutral",
           "impact": 1,
           "conviction": "low",
-          "horizon": "12M+"
-        },
-        {
-          "headline": "Reshoring gains ground in defense and advanced manufacturing; policy-driven capital reallocation",
-          "summary": "Per Area Development, reshoring initiatives accelerate in US defense and advanced-manufacturing sectors. Policy incentives (tax credits, DFC funding) drive geographic reallocation away from offshore suppliers.",
-          "source": "Area Development",
-          "relevance": "Signals capital flight from traditional offshore manufacturing bases (EM, Spain manufacturing) toward US. Long-term implication for European manufacturing competitiveness.",
-          "signal": "bearish",
-          "impact": 3,
-          "conviction": "medium",
-          "horizon": "3-6M"
+          "horizon": "6-12M"
         }
       ],
-      "keyTakeaway": "If Trump tariff threats materialize on Europe and India, multiregional supply chains fracture and European exporters lose competitiveness; if tariffs remain rhetorical, uncertainty premium subsides moderately.",
+      "keyTakeaway": "If Trump delays excess-capacity tariffs and US-China negotiations advance, tariff regime softens and EM assets rally; if EU-China trade friction escalates and ASEAN capacity constraints bite, supply-chain diversification capex accelerates but near-term margins compress.",
       "rawCount": 10
     },
     "food-agriculture": {
@@ -655,57 +690,67 @@
       "description": "Food security, agribusiness, and agricultural commodities",
       "items": [
         {
-          "headline": "Brazil forecasts another record grain harvest in 2026/27; production expansion sustains",
-          "summary": "Per Valor International, Brazil announces forecast for record grain harvest in 2026/27 season. Production growth reflects favorable agro conditions and supports export revenues and agricultural sector capital returns.",
-          "source": "Valor International",
-          "relevance": "Validates Brazilian agricultural sector resilience and commodity-export capacity; supports LatAm food-sector investment thesis amid macro headwinds.",
-          "signal": "bullish",
-          "impact": 2,
-          "conviction": "medium",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "Soybeans test prospects for stable US-China trade; commodity diplomacy indicator",
-          "summary": "Per UPI, soybean market reflects US-China trade-relationship health. Commodity has historically served as diplomatic barometer; current price action (soybeans up <2% Wed) suggests cautious equilibrium.",
-          "source": "UPI; Successful Farming",
-          "relevance": "Signals moderate US-China trade relations; soybean volatility remains potential flashpoint. Marginal capital implication unless tariff escalation emerges.",
-          "signal": "neutral",
+          "headline": "Indian farmers in Anloga-Avume report tomato rot as buyers and government intervention absent",
+          "summary": "Modern Ghana reports crop losses in tomato production due to lack of buyer demand and government support. Agricultural supply-chain failure reflects price weakness or logistics constraints.",
+          "source": "Modern Ghana",
+          "relevance": "West African agricultural supply-chain stress; marginal relevance to institutional investors. Signals agricultural commodity soft-demand environment.",
+          "signal": "bearish",
           "impact": 1,
           "conviction": "low",
           "horizon": "0-1M"
         },
         {
-          "headline": "USDA Deputy Secretary hears farmer concerns about fertilizer market",
-          "summary": "Per Grain Journal, USDA Deputy Secretary engaged with farmer concerns on fertilizer market. Input-cost pressures signal margin squeeze in grain production; policy dialogue reflects sector vulnerability.",
-          "source": "Grain Journal",
-          "relevance": "Indicates agricultural input inflation and farmer margin pressure; signals potential subsidy/support-payment policy responses.",
+          "headline": "Australian farmers planting spring crops amid uncertainty from Middle East conflict and weather volatility",
+          "summary": "The Conversation reports Australian agricultural sector faces dual uncertainty: geopolitical conflict impacts commodity prices and weather volatility affects crop outcomes. Planting decisions constrained.",
+          "source": "The Conversation",
+          "relevance": "Agricultural commodity price uncertainty supports farmer hedging demand. Wheat/grain prices remain volatile. Supports agricultural derivatives market but soft underlying cash prices.",
+          "signal": "watch",
+          "impact": 1,
+          "conviction": "medium",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "China's fuel exports surge but corn closes down 3.75 cents; agricultural commodities soft amid energy repricing",
+          "summary": "Successful Farming reports corn futures down 3.75 cents on day (Thursday, Sept 17); headline timing aligns with energy-linked commodity softness. Agricultural margins weak.",
+          "source": "Successful Farming",
+          "relevance": "Agricultural commodity deflation signal; supports soft food inflation thesis. Corn price decline constrains US farmer margins. Negative for agricultural equipment capex.",
           "signal": "bearish",
           "impact": 1,
-          "conviction": "low",
-          "horizon": "3-6M"
+          "conviction": "medium",
+          "horizon": "0-1M"
         },
         {
-          "headline": "Formo scales precision-fermented casein ahead of US debut; agtech innovation advancing",
-          "summary": "Per AgFunder News, Formo is scaling precision-fermented casein production to 1-2 tons/month with co-manufacturers, preparing for US market entry. Narrative shifting from sustainability/ethics to performance metrics.",
+          "headline": "Soybeans test prospects for stable US-China trade; agricultural commodity as leading indicator of bilateral progress",
+          "summary": "UPI reports soybean markets trading on US-China trade normalization expectations. Agricultural commodities priced as bellwether for broader trade-policy direction.",
+          "source": "UPI",
+          "relevance": "Soybean prices embedded with trade-policy expectations; commodity repricing will signal US-China negotiation momentum. Major EM commodity tail-risk indicator.",
+          "signal": "watch",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "0-1M"
+        },
+        {
+          "headline": "Corn slips as soybeans and wheat edge higher; US harvest moving forward with mixed directional signals",
+          "summary": "AgroLatam reports divergent grain complex pricing: corn weak while wheat and soybeans supported. US harvest dynamics imply selective supply tightness.",
+          "source": "AgroLatam",
+          "relevance": "Agricultural commodity supply-mix shifting; wheat/soy relative outperformance vs corn. Selective crop margin upside for wheat producers, headwinds for corn sector.",
+          "signal": "neutral",
+          "impact": 1,
+          "conviction": "low",
+          "horizon": "1-3M"
+        },
+        {
+          "headline": "Syngenta HK IPO, enhanced rock weathering initiatives, and gene-editing seed breakthroughs advance agrifood innovation",
+          "summary": "AgFunder News reports multiple agrifood innovation progress markers: Syngenta Hong Kong IPO underway, enhanced rock weathering (carbon removal) receiving tech investment (Google, Terradot), gene-editing seed companies (Spearhead Bio) raising capital.",
           "source": "AgFunder News",
-          "relevance": "Signals next-generation food-tech commercialization; capital flows toward bio-manufacturing rather than traditional agriculture. Marginal near-term impact but reflects sector innovation trend.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "6-12M"
-        },
-        {
-          "headline": "Helios AI secures $3 million investment, launches Global Hunger Exposure Index",
-          "summary": "Per citybiz and EIN News, Helios AI closed $3 million investment from W23 Global and launched Global Hunger Exposure Index. Index creation aims to measure food-security risk and capital impact.",
-          "source": "citybiz; EIN News",
-          "relevance": "Signals emerging food-security risk-measurement tools and alternative-data market development; marginal capital allocation signal.",
-          "signal": "neutral",
-          "impact": 1,
-          "conviction": "low",
-          "horizon": "6-12M"
+          "relevance": "Agricultural innovation capital deployment accelerating; supports agritech and sustainable agriculture capex thesis. Reprices long-term agricultural productivity growth.",
+          "signal": "bullish",
+          "impact": 2,
+          "conviction": "medium",
+          "horizon": "3-6M"
         }
       ],
-      "keyTakeaway": "If Brazil maintains record harvests and US-China soybean truce holds, agricultural sector capital remains stable; if tariff escalation disrupts trade, commodity prices spike and farmer margins compress.",
+      "keyTakeaway": "If US-China trade normalizes and agricultural innovation capex (gene editing, precision ag, carbon removal) scales, agrifood sector reprices higher; if commodity deflation persists and farmer margins compress, agricultural equipment and input capex decelerates.",
       "rawCount": 10
     }
   }
