@@ -532,7 +532,12 @@
       .subscribe-modal { padding: 28px 22px; }
       .subscribe-modal .form-row { flex-direction: column; }
     }
-  </style>
+  
+    .upgrade-cta { margin: 30px auto 8px; max-width: 1016px; padding: 24px; border: 1px solid rgba(201,168,76,.28); border-radius: 8px; background: linear-gradient(135deg,rgba(201,168,76,.10),rgba(11,21,38,.98)); }
+    .upgrade-cta h3 { color: var(--cream); font-family: 'Cormorant Garamond',Georgia,serif; font-size: 24px; margin: 5px 0 8px; }
+    .upgrade-cta p { font-size: 13px; line-height: 1.6; max-width: 760px; }
+    .upgrade-link { display:inline-block; margin-top:14px; padding:10px 16px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; }
+</style>
 </head>
 
 <body>
@@ -1192,6 +1197,14 @@
           )}
 
           {briefing && !briefing.degraded && <ExecutiveLayer briefing={briefing} />}
+          <section className="shell">
+            <div className="upgrade-cta">
+              <div className="eyebrow">GO BEYOND THE BRIEFING</div>
+              <h3>From signal to scenario.</h3>
+              <p>Morning Intelligence tells you what is changing. ZRC Intelligence lets you analyse what it means through GeoRisk scenarios, predictive models, macro tools and the full proprietary intelligence environment.</p>
+              <a className="upgrade-link" href="https://www.zenithrisecapital.com/?utm_source=morning_intelligence&utm_medium=owned&utm_campaign=founding_intelligence">EXPLORE FOUNDING INTELLIGENCE · 7-DAY TRIAL →</a>
+            </div>
+          </section>
 
           {briefing && !briefing.degraded && (briefing.globalBriefing || briefing.marketOpen) && (
             <section className="shell global-briefing">
