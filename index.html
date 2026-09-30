@@ -741,7 +741,76 @@
       );
     }
 
-    function OpportunityRadar({ briefing }) {
+    
+    function GeoRiskPulse() {
+      const [data, setData] = useState(null);
+
+      useEffect(function() {
+        fetch("https://zenith-risecapital.lmgomeze77.workers.dev/api/georisk-index?v=" + Date.now())
+          .then(function(r) { if (!r.ok) throw new Error("GeoRisk unavailable"); return r.json(); })
+          .then(function(d) {
+            const h = Array.isArray(d.history) ? d.history : [];
+            const current = h.length ? h[h.length - 1] : null;
+            const previous = h.length > 1 ? h[h.length - 2] : null;
+            const live = d.live || null;
+            const value = current ? Number(current.index_value) : Number(live && live.value);
+            const previousValue = previous ? Number(previous.index_value) : null;
+            const delta = Number.isFinite(previousValue) ? value - previousValue : null;
+            setData({
+              value: value,
+              label: current ? current.risk_label : live && live.riskLabel,
+              scenario: current ? current.dominant_scenario : live && live.dominantScenario,
+              delta: delta,
+              summary: live && live.summary ? live.summary : (current && current.notes ? current.notes : null),
+              inputDate: live && live.inputDate ? live.inputDate : (current && current.week_start ? current.week_start : null)
+            });
+          })
+          .catch(function() { setData(null); });
+      }, []);
+
+      if (!data || !Number.isFinite(data.value)) return null;
+
+      const deltaText = data.delta == null ? "—" : (data.delta >= 0 ? "+" : "") + data.delta.toFixed(2);
+      const deltaPct = data.delta == null ? null : ((data.delta / (data.value - data.delta)) * 100);
+      const drivers = (data.summary || "")
+        .split(/\.|;/)
+        .map(function(x) { return x.trim(); })
+        .filter(Boolean)
+        .slice(0,3);
+
+      return (
+        <section className="shell" id="georisk">
+          <div className="georisk-block">
+            <div className="eyebrow">ZRC PROPRIETARY RISK BENCHMARK</div>
+            <h2 className="section-title">GeoRisk Index</h2>
+            <div className="georisk-grid">
+              <div>
+                <div className="georisk-score">{data.value.toFixed(2)}</div>
+                <div className="georisk-meta">
+                  <span className="georisk-chip">{String(data.label || "N/A").toUpperCase()}</span>
+                  <span className="georisk-chip">{deltaText} WoW{deltaPct == null ? "" : " · " + (deltaPct >= 0 ? "+" : "") + deltaPct.toFixed(2) + "%"}</span>
+                  <span className="georisk-chip">DOMINANT · {data.scenario || "—"}</span>
+                </div>
+                <p className="section-sub" style={{marginTop:"12px"}}>
+                  ZRC's weekly composite geopolitical risk benchmark, translated into the dominant scenario and week-over-week movement.
+                </p>
+                <a className="georisk-link" href="https://www.zenithrisecapital.com/#georisk-index?utm_source=morning_intelligence&utm_medium=owned&utm_campaign=georisk_index">
+                  OPEN FULL GEORISK ANALYSIS →
+                </a>
+              </div>
+              <div>
+                <div className="mono-hint" style={{marginBottom:"8px"}}>WHAT MOVED THE INDEX THIS WEEK</div>
+                {drivers.length ? drivers.map(function(d,i) {
+                  return <div className="georisk-driver" key={i}>0{i+1} · {d}.</div>;
+                }) : <div className="georisk-driver">Weekly evidence update available in the full GeoRisk analysis.</div>}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+function OpportunityRadar({ briefing }) {
       const rows = deriveRadar(briefing);
       if (!rows.length) return null;
 
@@ -1164,7 +1233,7 @@
 
               <nav className="top-nav">
                 <a href="#pulse">EXECUTIVE PULSE</a>
-                <a href="#radar">OPPORTUNITY RADAR</a>
+                <a href="#georisk">GEORISK INDEX</a>\n                <a href="#radar">OPPORTUNITY RADAR</a>
                 <a href="#house-view">HOUSE VIEW</a>
                 <a href="#catalysts">CATALYSTS</a>
                 <a href="#deep-dive">DEEP DIVE</a>
@@ -1197,6 +1266,7 @@
           )}
 
           {briefing && !briefing.degraded && <ExecutiveLayer briefing={briefing} />}
+          <GeoRiskPulse />
           <section className="shell">
             <div className="upgrade-cta">
               <div className="eyebrow">GO BEYOND THE BRIEFING</div>
@@ -1272,3 +1342,13 @@
   </script>
 </body>
 </html>
+    .georisk-block{margin-top:26px;margin-bottom:8px;border:1px solid rgba(201,168,76,.22);background:linear-gradient(135deg,rgba(201,168,76,.08),rgba(15,24,38,.7));padding:26px}
+    .georisk-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:stretch}
+    .georisk-score{font-size:54px;font-weight:700;letter-spacing:-2px;color:#F3E7C2;line-height:1}
+    .georisk-meta{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+    .georisk-chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.8px;border:1px solid rgba(201,168,76,.28);padding:6px 8px;color:#D7C8A5}
+    .georisk-driver{padding:10px 0;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.45;color:#B9C3CF}
+    .georisk-driver:first-child{border-top:none}
+    .georisk-link{display:inline-block;margin-top:14px;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.8px;text-decoration:none}
+    @media(max-width:760px){.georisk-grid{grid-template-columns:1fr}.georisk-score{font-size:46px}}
+
