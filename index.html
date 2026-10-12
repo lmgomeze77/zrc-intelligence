@@ -537,6 +537,19 @@
     .upgrade-cta h3 { color: var(--cream); font-family: 'Cormorant Garamond',Georgia,serif; font-size: 24px; margin: 5px 0 8px; }
     .upgrade-cta p { font-size: 13px; line-height: 1.6; max-width: 760px; }
     .upgrade-link { display:inline-block; margin-top:14px; padding:10px 16px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; font-family:'JetBrains Mono',monospace; font-size:9px; letter-spacing:1px; }
+    .georisk-link,
+    .georisk-link:visited {
+      color: #7DD3FC;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s;
+    }
+    .georisk-link:hover,
+    .georisk-link:focus-visible { color: #BAE6FD; }
+    .georisk-link:focus-visible {
+      outline: 2px solid #7DD3FC;
+      outline-offset: 4px;
+    }
 </style>
 </head>
 
@@ -1349,6 +1362,5 @@ function OpportunityRadar({ briefing }) {
     .georisk-chip{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.8px;border:1px solid rgba(201,168,76,.28);padding:6px 8px;color:#D7C8A5}
     .georisk-driver{padding:10px 0;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.45;color:#B9C3CF}
     .georisk-driver:first-child{border-top:none}
-    .georisk-link{display:inline-block;margin-top:14px;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.8px;text-decoration:none}
     @media(max-width:760px){.georisk-grid{grid-template-columns:1fr}.georisk-score{font-size:46px}}
 
