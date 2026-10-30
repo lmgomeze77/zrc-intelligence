@@ -1,39 +1,44 @@
 name: ZRC Daily Intelligence Briefing
 
-# GitHub does not guarantee scheduled runs: they are delayed under load and can
-# be dropped entirely, which is what happened on 27 August 2026 — no run fired
-# at all and no email went out. Two mitigations:
-#   · the primary slot avoids :00, the most contended minute of the hour
-#   · a backup slot three hours later retries, and no-ops when the day's
-#     briefing is already published (see the guard step below)
+# Scheduled runs can be delayed or dropped. The backup slot retries only when
+# today's briefing is not already published.
 on:
   schedule:
     - cron: '17 6 * * *'
     - cron: '17 9 * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: zrc-daily-briefing-main
   cancel-in-progress: false
+
 jobs:
   generate-and-send:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
+
+      # A rerun can point at an old SHA. Always evaluate the publication guard
+      # and build the next briefing from the current main branch.
+      - name: Refresh main
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '22'
+
       - name: Install dependencies
         run: npm install
-      # Makes the backup slot safe: if the primary run already published today's
-      # briefing, everything below is skipped and no second email goes out. When
-      # the primary was dropped or failed, data.json still carries an older date
-      # and the backup proceeds as a retry.
+
       - name: Check whether today's briefing is already published
         id: guard
         run: |
@@ -46,21 +51,74 @@ jobs:
           else
             echo "already=false" >> "$GITHUB_OUTPUT"
           fi
+
       - name: Generate daily briefing
         if: steps.guard.outputs.already != 'true'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node generate-briefing.js
-      - name: Send email digest
+
+      - name: Preserve generated briefing
         if: steps.guard.outputs.already != 'true'
+        run: cp data.json "$RUNNER_TEMP/generated-briefing.json"
+
+      # Publish before email delivery. This prevents duplicate emails when the
+      # backup slot retries after a repository race or failed push.
+      - name: Publish data.json
+        if: steps.guard.outputs.already != 'true'
+        run: |
+          git config user.name "ZRC Intelligence Bot"
+          git config user.email "intelligence@zenrisecapital.com"
+
+          for i in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            LATEST=$(node -e "try{const b=require('./data.json');process.stdout.write(String(b.generated||''))}catch(e){process.stdout.write('')}")
+            GENERATED=$(node -e "const b=require(process.env.RUNNER_TEMP + '/generated-briefing.json');process.stdout.write(String(b.generated||''))")
+
+            if [ -n "$LATEST" ] && [ "$LATEST" > "$GENERATED" -o "$LATEST" = "$GENERATED" ]; then
+              echo "An equal or newer briefing is already published: $LATEST"
+              exit 0
+            fi
+
+            cp "$RUNNER_TEMP/generated-briefing.json" data.json
+            node -e "const b=require('./data.json');if(!b.generated||!Array.isArray(b.news)||b.news.length===0)throw new Error('Invalid generated briefing')"
+            git add data.json
+            git commit -m "📡 Daily briefing — $(date -u +'%Y-%m-%d')"
+
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+
+            echo "Push attempt $i lost a race, rebuilding on latest main..."
+            sleep 5
+          done
+
+          exit 1
+
+      # Recovery exception: the 30 October rerun delivered the email successfully
+      # before its old workflow failed to publish. The scheduled backup must
+      # publish the briefing but not send the same digest twice.
+      - name: Check recovery delivery suppression
+        if: steps.guard.outputs.already != 'true'
+        id: delivery
+        run: |
+          if [ "$(date -u +%Y-%m-%d)" = "2026-10-30" ]; then
+            echo "send=false" >> "$GITHUB_OUTPUT"
+            echo "Email already delivered by the recovery run; publication only."
+          else
+            echo "send=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send email digest
+        if: steps.guard.outputs.already != 'true' && steps.delivery.outputs.send == 'true'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
-      # A failed run is only useful if someone hears about it. On 4-6 September
-      # six runs failed correctly and silently, and three days of briefings were
-      # lost before anyone looked. Never fails the job itself.
+
       - name: Alert on failure
         if: failure()
         env:
@@ -68,18 +126,3 @@ jobs:
           ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: node alert.js
-      - name: Commit and push data.json
-        if: steps.guard.outputs.already != 'true'
-        continue-on-error: true
-        run: |
-          git config user.name "ZRC Intelligence Bot"
-          git config user.email "intelligence@zenrisecapital.com"
-          git add data.json
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          DATESTR=$(date -u +"%Y-%m-%d")
-          git commit -m "📡 Daily briefing — $DATESTR"
-          git pull --rebase origin main
-          git push origin HEAD:main
