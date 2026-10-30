@@ -77,7 +77,7 @@ jobs:
             LATEST=$(node -e "try{const b=require('./data.json');process.stdout.write(String(b.generated||''))}catch(e){process.stdout.write('')}")
             GENERATED=$(node -e "const b=require(process.env.RUNNER_TEMP + '/generated-briefing.json');process.stdout.write(String(b.generated||''))")
 
-            if [ -n "$LATEST" ] && [ "$LATEST" > "$GENERATED" -o "$LATEST" = "$GENERATED" ]; then
+            if [[ -n "$LATEST" && ( "$LATEST" > "$GENERATED" || "$LATEST" == "$GENERATED" ) ]]; then
               echo "An equal or newer briefing is already published: $LATEST"
               exit 0
             fi
