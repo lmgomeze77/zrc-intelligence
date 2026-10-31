@@ -83,7 +83,7 @@ jobs:
             fi
 
             cp "$RUNNER_TEMP/generated-briefing.json" data.json
-            node -e "const b=require('./data.json');if(!b.generated||!Array.isArray(b.news)||b.news.length===0)throw new Error('Invalid generated briefing')"
+            node -e "const b=require('./data.json');const c=Object.values(b.categories||{});if(!b.generated||!c.some(x=>Array.isArray(x?.items)&&x.items.length>0))throw new Error('Invalid generated briefing')"
             git add data.json
             git commit -m "📡 Daily briefing — $(date -u +'%Y-%m-%d')"
 
