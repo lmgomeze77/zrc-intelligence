@@ -1,0 +1,26 @@
+name: Briefing freshness watchdog
+on:
+  schedule:
+    - cron: '47 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-publication-and-delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check current edition and delivery receipts
+        run: node scripts/watchdog.js
+      - name: Alert if publication or delivery is missing
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: node alert.js

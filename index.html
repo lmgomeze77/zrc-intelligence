@@ -978,8 +978,16 @@ function OpportunityRadar({ briefing }) {
                 </>
               )}
 
+              {item.scenario && <><div className="detail-label">SCENARIO · CONDITIONAL HYPOTHESIS</div><p className="news-summary">{item.scenario}</p></>}
+
               {item.source && (
-                <span className="news-source">SOURCE: {String(item.source).toUpperCase()}</span>
+                <div className="news-source">
+                  SOURCE: {String(item.source).toUpperCase()}
+                  {(item.sources || []).filter(function(s) { return /^https?:\/\//i.test(s.link || ""); }).map(function(s,i) {
+                    return <div key={i}><a href={s.link} target="_blank" rel="noopener noreferrer" onClick={function(e) { e.stopPropagation(); }} style={{color:"#BAE6FD"}}>{s.title || s.source || "Read source"}</a>{s.publishedAt && <span> · {new Date(s.publishedAt).toLocaleDateString("en-GB", {timeZone:"Europe/Madrid"})}</span>}</div>;
+                  })}
+                  {!item.sources && /^https?:\/\//i.test(item.link || "") && <a href={item.link} target="_blank" rel="noopener noreferrer" onClick={function(e) { e.stopPropagation(); }}> · Read source</a>}
+                </div>
               )}
             </div>
           )}
@@ -1214,9 +1222,11 @@ function OpportunityRadar({ briefing }) {
       });
 
       const generatedTime = briefing && briefing.generated
-        ? new Date(briefing.generated).toLocaleTimeString("en-GB", { hour:"2-digit", minute:"2-digit" })
+        ? new Date(briefing.generated).toLocaleTimeString("en-GB", { hour:"2-digit", minute:"2-digit", timeZone:"Europe/Madrid", timeZoneName:"short" })
         : null;
 
+      const madridDay = function(value) { return new Intl.DateTimeFormat("en-CA", {timeZone:"Europe/Madrid", year:"numeric", month:"2-digit", day:"2-digit"}).format(new Date(value)); };
+      const stale = briefing && (!briefing.generated || !Number.isFinite(Date.parse(briefing.generated)) || madridDay(briefing.generated) !== madridDay(now));
       const totalItems = briefing?.categories
         ? Object.values(briefing.categories).reduce(function(sum,c) {
             return sum + (c.items ? c.items.length : 0);
@@ -1225,12 +1235,13 @@ function OpportunityRadar({ briefing }) {
 
       return (
         <div>
+          {stale && <div role="status" style={{background:"#78350F",color:"#FEF3C7",padding:"12px 20px",textAlign:"center"}}>Latest available briefing: {briefing.date}. Today's edition is not yet available. Analysis and market references below are from that edition.</div>}
           <header className="header">
             <div className="shell">
               <div className="header-row">
                 <div>
                   <div>
-                    <span className="live-dot"></span>
+                    <span className="live-dot" style={stale ? {background:"#F59E0B",animation:"none"} : {}}></span>
                     <span className="brand-tag">ZENITH RISE CAPITAL</span>
                   </div>
                   <h1 className="main-title">Morning Intelligence</h1>
@@ -1240,13 +1251,14 @@ function OpportunityRadar({ briefing }) {
                 <div className="date-block">
                   <div className="date-text">{displayDate}</div>
                   <div className="time-text">{timeStr}</div>
-                  {generatedTime && <div className="generated-tag">BRIEFING GENERATED {generatedTime} CET</div>}
+                  {generatedTime && <div className="generated-tag">BRIEFING GENERATED {generatedTime}</div>}
                 </div>
               </div>
 
               <nav className="top-nav">
                 <a href="#pulse">EXECUTIVE PULSE</a>
-                <a href="#georisk">GEORISK INDEX</a>\n                <a href="#radar">OPPORTUNITY RADAR</a>
+                <a href="#georisk">GEORISK INDEX</a>
+                <a href="#radar">OPPORTUNITY RADAR</a>
                 <a href="#house-view">HOUSE VIEW</a>
                 <a href="#catalysts">CATALYSTS</a>
                 <a href="#deep-dive">DEEP DIVE</a>
@@ -1363,4 +1375,5 @@ function OpportunityRadar({ briefing }) {
     .georisk-driver{padding:10px 0;border-top:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.45;color:#B9C3CF}
     .georisk-driver:first-child{border-top:none}
     @media(max-width:760px){.georisk-grid{grid-template-columns:1fr}.georisk-score{font-size:46px}}
+
 

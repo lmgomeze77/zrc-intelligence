@@ -6,7 +6,10 @@
   "scripts": {
     "generate": "node generate-briefing.js",
     "preview:email": "DRY_RUN=1 node send-digest.js",
-    "test:email": "node send-digest.js"
+    "test:email": "node send-digest.js",
+    "test": "node --test test/*.test.js",
+    "verify:openai": "node scripts/verify-openai.js",
+    "validate": "node scripts/pipeline.js validate data.json"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"

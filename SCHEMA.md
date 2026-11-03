@@ -1,3 +1,5 @@
+> Schema v3 migration: new editions use OpenAI, source IDs, sourceCatalog, linked item.sources, conditional scenarios, feed health and machine-dated catalysts. The v2 fields documented below are retained for the existing UI. The executable v3 synthesis schema and runtime checks live in `lib/briefing-contract.js`; operations and compatibility details are in `OPENAI_SETUP.md`. Historical v2 editions are not rewritten.
+
 # `data.json` — ZRC Morning Intelligence schema (v2)
 
 Written every morning by `generate-briefing.js`, consumed by `index.html` (site) and
@@ -162,3 +164,4 @@ mode entirely; the alert is what tells you when something else breaks.
 Add it to `FEEDS` in `generate-briefing.js` **and** to `CATEGORY_ORDER` in `index.html`.
 These two lists must stay in sync; a desk missing from `CATEGORY_ORDER` is generated,
 costs tokens, and is never displayed.
+

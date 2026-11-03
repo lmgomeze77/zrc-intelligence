@@ -21,22 +21,25 @@
 // data.json still produces a valid, shorter briefing.
 
 const fs = require("fs");
+const { ZONE, safeUrl, validatePublished } = require("./lib/briefing-contract");
+const { loadLedger, deliver } = require("./lib/delivery");
 
 const PLATFORM_URL = "https://zenith-news-room.netlify.app";
 
 // ─── SUPABASE ────────────────────────────────────────────────────────────────
 
-async function getSubscribers() {
-  const SUPABASE_URL = process.env.SUPABASE_URL;
-  const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+async function getSubscribers(env = process.env, fetchImpl = fetch) {
+  const SUPABASE_URL = env.SUPABASE_URL;
+  const SUPABASE_KEY = env.SUPABASE_SERVICE_ROLE_KEY;
 
   if (!SUPABASE_URL || !SUPABASE_KEY) {
     throw new Error("SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY not set");
   }
 
-  const res = await fetch(
+  const res = await fetchImpl(
     `${SUPABASE_URL}/rest/v1/subscribers?active=eq.true&select=email,name,unsubscribe_token`,
     {
+      signal: AbortSignal.timeout(30000),
       headers: {
         apikey: SUPABASE_KEY,
         Authorization: `Bearer ${SUPABASE_KEY}`,
@@ -45,8 +48,7 @@ async function getSubscribers() {
   );
 
   if (!res.ok) {
-    const body = await res.text();
-    throw new Error(`Supabase error ${res.status}: ${body}`);
+    throw new Error(`Supabase subscriber lookup failed (HTTP ${res.status})`);
   }
 
   return res.json();
@@ -58,7 +60,9 @@ function escapeHtml(value = "") {
   return String(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function formatText(value = "") {
@@ -336,7 +340,9 @@ function preheader(briefing) {
 // Relevance is intentionally dropped from the email; it still lives in data.json
 // and is rendered in full on the ZRC platform.
 function itemRow(item, mode = "full") {
-  const headline = escapeHtml(item.headline || item.title || "");
+  const label = escapeHtml(item.headline || item.title || "");
+  const url = safeUrl(item.link);
+  const headline = url ? `<a href="${escapeHtml(url)}" style="color:inherit;text-decoration:underline;">${label}</a>` : label;
   // Trimmed on purpose: the email carries the signal, the platform carries the analysis.
   const summary  = formatText(truncate(item.summary || "", 200));
   const badge    = signalBadge(item.signal || item.risk);
@@ -614,7 +620,7 @@ function buildEmailHTML(briefing, name, unsubscribeUrl) {
 
 // Subject carries the house position — the reader sees the call before opening.
 function buildSubject(briefing) {
-  const today = new Date().toLocaleDateString("es-ES");
+  const today = new Date(briefing.generated).toLocaleDateString("es-ES", { timeZone: ZONE });
   const bits = [`ZRC Morning Intelligence · ${today}`];
   if (briefing.marketRegime?.tone) bits.push(briefing.marketRegime.tone);
   if (briefing.riskIndex != null) bits.push(`Mkt Risk ${briefing.riskIndex}`);
@@ -623,143 +629,35 @@ function buildSubject(briefing) {
 
 // ─── SEND DIGEST ──────────────────────────────────────────────────────────────
 
-async function sendDigest() {
-  const RESEND_API_KEY = process.env.RESEND_API_KEY;
-  const BASE_URL = process.env.BASE_URL || "https://zrc-api.onrender.com";
-
-  // Two test modes, both of which leave the subscriber list untouched:
-  //   DRY_RUN=1              → render email-preview.html and exit. No network at all.
-  //   TEST_EMAIL=you@zrc.com → send exactly one real email to that address.
-  const DRY_RUN = /^(1|true|yes)$/i.test(process.env.DRY_RUN || "");
-  const TEST_EMAIL = (process.env.TEST_EMAIL || "").trim();
-
-  if (!RESEND_API_KEY && !DRY_RUN) {
-    console.log("⚠ RESEND_API_KEY not set. Skipping email digest.");
-    return;
-  }
-
-  if (!fs.existsSync("data.json")) {
-    console.error("❌ data.json not found. Generate briefing first.");
-    process.exit(1);
-  }
-
+async function sendDigest({ env = process.env, fetchImpl = fetch, now = new Date() } = {}) {
+  const DRY_RUN = /^(1|true|yes)$/i.test(env.DRY_RUN || "");
+  const TEST_EMAIL = (env.TEST_EMAIL || "").trim();
   const briefing = JSON.parse(fs.readFileSync("data.json", "utf8"));
-  const totalItems = Object.values(briefing.categories || {}).reduce(
-    (sum, c) => sum + (c.items?.length || 0),
-    0
-  );
-
-  if (totalItems === 0 && !DRY_RUN) {
-    console.log("⚠ No signals in briefing. Skipping email.");
-    return;
-  }
-
-  // Second line of defence. generate-briefing.js already refuses to publish a
-  // degraded briefing, so this only fires if one reaches here another way —
-  // a stale file in the workspace, or a manual run. Never mail one out.
-  if (briefing.degraded && !DRY_RUN) {
-    console.error("❌ This briefing is flagged degraded — AI synthesis did not run.");
-    console.error("   Refusing to send unedited headlines to subscribers.");
-    process.exit(1);
-  }
-
   if (DRY_RUN) {
-    const html = buildEmailHTML(briefing, "Luis", `${BASE_URL}/api/unsubscribe?token=PREVIEW`);
+    const html = buildEmailHTML(briefing, "Luis", `${env.BASE_URL || "https://zrc-api.onrender.com"}/api/unsubscribe?token=PREVIEW`);
     fs.writeFileSync("email-preview.html", html);
-    console.log("🧪 DRY RUN — no email sent, no subscriber lookup.");
-    console.log(`   Briefing:  ${briefing.date || "undated"} · ${totalItems} signals`);
-    console.log(`   Regime:    ${briefing.marketRegime?.tone || "—"} · market risk index ${briefing.riskIndex ?? "—"}`);
-    console.log(`   Executive: ${(briefing.executivePulse || []).length} pulse · ${(briefing.catalysts || []).length} catalysts · ${(briefing.houseView || []).length} house views`);
-    console.log(`   Written:   email-preview.html (${Math.round(html.length / 1024)} KB)`);
-    if (!briefing.executivePulse) {
-      console.log("   ⚠ This data.json predates the executive layer — run generate-briefing.js for the full email.");
-    }
+    console.log(`Preview rendered for ${briefing.date}. No subscriber lookup or email send.`);
     return;
   }
-
-  if (TEST_EMAIL) {
-    console.log(`🧪 TEST SEND — one email to ${TEST_EMAIL}. Subscriber list not touched.`);
-    const html = buildEmailHTML(briefing, "Luis", `${BASE_URL}/api/unsubscribe?token=TEST`);
-    const subject = buildSubject(briefing);
-    console.log(`   Subject: [TEST] ${subject}`);
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "ZRC Intelligence <intelligence@zenithrisecapital.com>",
-        to: TEST_EMAIL,
-        subject: `[TEST] ${subject}`,
-        html,
-      }),
-    });
-    const result = await res.json();
-    if (res.ok) {
-      console.log(`   ✅ Sent to ${TEST_EMAIL} (id ${result.id || "n/a"})`);
-    } else {
-      console.error(`   ❌ Failed: ${JSON.stringify(result)}`);
-      process.exit(1);
-    }
-    return;
-  }
-
-  console.log("📋 Fetching subscribers from Supabase...");
-  const subscribers = await getSubscribers();
-  console.log(`   Found ${subscribers.length} active subscriber(s).`);
-
-  if (subscribers.length === 0) {
-    console.log("⚠ No active subscribers. Skipping email.");
-    return;
-  }
-
-  console.log("📧 Sending emails...");
-  const subject = buildSubject(briefing);
-  console.log(`   Subject: ${subject}`);
-  let sent = 0;
-  let failed = 0;
-
-  for (const sub of subscribers) {
-    const unsubscribeUrl = `${BASE_URL}/api/unsubscribe?token=${sub.unsubscribe_token}`;
-    const html = buildEmailHTML(briefing, sub.name, unsubscribeUrl);
-
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "ZRC Intelligence <intelligence@zenithrisecapital.com>",
-          to: sub.email,
-          subject,
-          html,
-        }),
-      });
-
-      const result = await res.json();
-
-      if (res.ok) {
-        console.log(`   ✅ ${sub.email}`);
-        sent++;
-      } else {
-        console.error(`   ❌ ${sub.email}: ${JSON.stringify(result)}`);
-        failed++;
-      }
-    } catch (err) {
-      console.error(`   ❌ ${sub.email}: ${err.message}`);
-      failed++;
-    }
-  }
-
-  console.log(`\n📊 Results: ${sent} sent, ${failed} failed, ${subscribers.length} total.`);
+  validatePublished(briefing, { now, requireOpenAI: true });
+  if (!env.RESEND_API_KEY) throw new Error("RESEND_API_KEY is missing; delivery did not run");
+  const subscribers = TEST_EMAIL
+    ? [{ email: TEST_EMAIL, name: "Luis", unsubscribe_token: "TEST" }]
+    : await getSubscribers(env, fetchImpl);
+  if (!subscribers.length) throw new Error("No active subscribers; no digest delivered. Check the subscriber configuration.");
+  const path = TEST_EMAIL ? "delivery-test-state.json" : "delivery-state.json";
+  const ledger = loadLedger(fs, path);
+  const checkpoint = value => {
+    fs.writeFileSync(path + ".tmp", JSON.stringify(value, null, 2) + "\n");
+    fs.renameSync(path + ".tmp", path);
+  };
+  const summary = await deliver({ briefing, subscribers, env, buildEmailHTML, buildSubject, ledger, checkpoint, fetchImpl, now, namespace: TEST_EMAIL ? "test" : "daily" });
+  console.log(`Delivery: ${summary.accepted} accepted by email provider, ${summary.skipped} previously accepted, ${summary.failed} failed.`);
+  return summary;
 }
-
-sendDigest()
-  .then(() => process.exit(0))
-  .catch(err => {
-    console.error("Digest error:", err);
-    process.exit(1);
-  });
+if (require.main === module) sendDigest().catch(err => {
+  fs.writeFileSync("failure-reason.txt", err.message);
+  console.error("Digest error:", err.message);
+  process.exitCode = 1;
+});
+module.exports = { sendDigest, buildEmailHTML, buildSubject, getSubscribers };
