@@ -1,0 +1,71 @@
+name: Briefing validation
+on:
+  pull_request:
+  push:
+    branches: [main, codex/openai-briefing]
+  workflow_dispatch:
+    inputs:
+      full_preview:
+        description: Generate a full unpublished preview (uses OpenAI credits; no sends)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - name: Render existing edition without network or delivery
+        run: npm run preview:email
+      - uses: actions/upload-artifact@v4
+        with:
+          name: email-preview
+          path: email-preview.html
+  openai-preflight:
+    # Secrets never run on external forks. No subscriber or delivery keys used.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-6-astra' }}
+      OPENAI_REASONING_EFFORT: ${{ vars.OPENAI_REASONING_EFFORT || 'low' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify API access without publishing or sending
+        run: node scripts/verify-openai.js
+
+  full-preview:
+    if: github.event_name == 'workflow_dispatch' && inputs.full_preview
+    needs: [regression, openai-preflight]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-6-astra' }}
+      OPENAI_REASONING_EFFORT: ${{ vars.OPENAI_REASONING_EFFORT || 'low' }}
+      TZ: Europe/Madrid
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npm run generate
+      - run: npm run validate
+      - run: npm run preview:email
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unpublished-openai-edition
+          path: |
+            data.json
+            email-preview.html

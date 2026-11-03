@@ -3,7 +3,7 @@ name: ZRC Test Digest (manual)
 # Manual test send. Deliberately isolated from the daily pipeline:
 #   · sends to ONE address, never to the subscriber list (Supabase is not queried)
 #   · never commits data.json, so a test run cannot alter the published briefing
-#   · regenerating the briefing is opt-in, since it costs an Anthropic API call
+#   · regenerating the briefing is opt-in, since it costs an OpenAI API call
 on:
   workflow_dispatch:
     inputs:
@@ -30,15 +30,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --ignore-scripts --no-audit --no-fund
 
       - name: Regenerate briefing (optional)
         if: ${{ inputs.regenerate }}
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-6-astra' }}
+          OPENAI_REASONING_EFFORT: ${{ vars.OPENAI_REASONING_EFFORT || 'low' }}
         run: node generate-briefing.js
 
       - name: Preview email (dry run — no send)
@@ -50,6 +52,7 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           TEST_EMAIL: ${{ inputs.test_email }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
 
       - name: Upload rendered email
@@ -58,3 +61,4 @@ jobs:
           name: email-preview
           path: email-preview.html
           if-no-files-found: warn
+

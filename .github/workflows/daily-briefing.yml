@@ -1,7 +1,4 @@
 name: ZRC Daily Intelligence Briefing
-
-# Scheduled runs can be delayed or dropped. The backup slot retries only when
-# today's briefing is not already published.
 on:
   schedule:
     - cron: '17 6 * * *'
@@ -10,115 +7,95 @@ on:
 
 permissions:
   contents: write
-
 concurrency:
   group: zrc-daily-briefing-main
   cancel-in-progress: false
-
+env:
+  OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-6-astra' }}
+  OPENAI_REASONING_EFFORT: ${{ vars.OPENAI_REASONING_EFFORT || 'low' }}
+  TZ: Europe/Madrid
 jobs:
   generate-and-send:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v7
+      - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
-
-      # A rerun can point at an old SHA. Always evaluate the publication guard
-      # and build the next briefing from the current main branch.
       - name: Refresh main
         run: |
           git fetch origin main
           git reset --hard origin/main
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
+      - uses: actions/setup-node@v4
         with:
           node-version: '22'
-
+          cache: npm
       - name: Install dependencies
-        run: npm install
-
-      - name: Check whether today's briefing is already published
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run regression tests
+        run: npm test
+      - name: Decide generation independently of delivery
         id: guard
-        run: |
-          TODAY=$(date -u +%Y-%m-%d)
-          PUBLISHED=$(node -e "try{const b=require('./data.json');process.stdout.write(String(b.generated||'').slice(0,10))}catch(e){process.stdout.write('')}")
-          echo "Published: ${PUBLISHED:-none} · Today: $TODAY"
-          if [ "$PUBLISHED" = "$TODAY" ]; then
-            echo "already=true" >> "$GITHUB_OUTPUT"
-            echo "Today's briefing is already published — skipping."
-          else
-            echo "already=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Generate daily briefing
-        if: steps.guard.outputs.already != 'true'
+        run: node scripts/pipeline.js guard
+      - name: Generate sourced OpenAI briefing
+        if: steps.guard.outputs.generate == 'true'
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: node generate-briefing.js
-
-      - name: Preserve generated briefing
-        if: steps.guard.outputs.already != 'true'
-        run: cp data.json "$RUNNER_TEMP/generated-briefing.json"
-
-      # Publish before email delivery. This prevents duplicate emails when the
-      # backup slot retries after a repository race or failed push.
-      - name: Publish data.json
-        if: steps.guard.outputs.already != 'true'
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          node generate-briefing.js
+          node scripts/pipeline.js validate
+          cp data.json "$RUNNER_TEMP/generated-briefing.json"
+      - name: Publish validated briefing
+        if: steps.guard.outputs.generate == 'true'
         run: |
           git config user.name "ZRC Intelligence Bot"
-          git config user.email "intelligence@zenrisecapital.com"
-
-          for i in 1 2 3; do
+          git config user.email "intelligence@zenithrisecapital.com"
+          for attempt in 1 2 3; do
             git fetch origin main
             git reset --hard origin/main
-
-            LATEST=$(node -e "try{const b=require('./data.json');process.stdout.write(String(b.generated||''))}catch(e){process.stdout.write('')}")
-            GENERATED=$(node -e "const b=require(process.env.RUNNER_TEMP + '/generated-briefing.json');process.stdout.write(String(b.generated||''))")
-
-            if [[ -n "$LATEST" && ( "$LATEST" > "$GENERATED" || "$LATEST" == "$GENERATED" ) ]]; then
-              echo "An equal or newer briefing is already published: $LATEST"
+            if node scripts/pipeline.js validate >/dev/null 2>&1; then
+              echo "A valid current edition is already published; using it for delivery."
               exit 0
             fi
-
             cp "$RUNNER_TEMP/generated-briefing.json" data.json
-            node -e "const b=require('./data.json');const c=Object.values(b.categories||{});if(!b.generated||!c.some(x=>Array.isArray(x?.items)&&x.items.length>0))throw new Error('Invalid generated briefing')"
+            node scripts/pipeline.js validate
             git add data.json
-            git commit -m "📡 Daily briefing — $(date -u +'%Y-%m-%d')"
-
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-
-            echo "Push attempt $i lost a race, rebuilding on latest main..."
-            sleep 5
+            git commit -m "Daily OpenAI briefing"
+            if git push origin HEAD:main; then exit 0; fi
           done
-
           exit 1
-
-      # Recovery exception: the 30 October rerun delivered the email successfully
-      # before its old workflow failed to publish. The scheduled backup must
-      # publish the briefing but not send the same digest twice.
-      - name: Check recovery delivery suppression
-        if: steps.guard.outputs.already != 'true'
+      - name: Deliver published edition or resume failed recipients
         id: delivery
-        run: |
-          if [ "$(date -u +%Y-%m-%d)" = "2026-10-30" ]; then
-            echo "send=false" >> "$GITHUB_OUTPUT"
-            echo "Email already delivered by the recovery run; publication only."
-          else
-            echo "send=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Send email digest
-        if: steps.guard.outputs.already != 'true' && steps.delivery.outputs.send == 'true'
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node send-digest.js
-
+      - name: Persist private delivery receipts even after partial failure
+        if: always() && steps.delivery.outcome != 'skipped'
+        run: |
+          if [ ! -f delivery-state.json ]; then exit 0; fi
+          cp delivery-state.json "$RUNNER_TEMP/delivery-state.json"
+          git config user.name "ZRC Intelligence Bot"
+          git config user.email "intelligence@zenithrisecapital.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/pipeline.js merge-ledger delivery-state.json "$RUNNER_TEMP/delivery-state.json"
+            git add delivery-state.json
+            if git diff --cached --quiet; then exit 0; fi
+            git commit -m "Record briefing delivery receipts"
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          exit 1
+      - name: Preserve diagnostics
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-diagnostics-${{ github.run_id }}
+          path: failure-reason.txt
+          if-no-files-found: ignore
       - name: Alert on failure
         if: failure()
         env:

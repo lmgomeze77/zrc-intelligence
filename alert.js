@@ -32,29 +32,17 @@ function readReason() {
 // says what to actually do rather than just quoting the error.
 function diagnose(reason) {
   const r = reason.toLowerCase();
-  if (r.includes("credit balance")) {
-    return {
-      headline: "The Anthropic API has run out of credit.",
-      action: "Top up at console.anthropic.com → Plans & Billing, then re-run the workflow. Consider enabling auto-reload so this stops recurring."
-    };
+  if (/insufficient_quota|billing_hard_limit|credit balance/.test(r)) {
+    return { headline: "OpenAI API billing or quota blocked the briefing.", action: "Check OpenAI Platform billing and project limits, then retry the workflow. ChatGPT subscription billing is separate." };
   }
-  if (r.includes("rate limit") || r.includes("429")) {
-    return {
-      headline: "The Anthropic API rate-limited the briefing.",
-      action: "Usually transient — re-run the workflow. If it repeats daily, the account's rate limits need raising."
-    };
+  if (r.includes("429") || r.includes("rate limit")) {
+    return { headline: "OpenAI API rate limit reached.", action: "Transient limits are retried automatically. Check project rate limits if this persists." };
   }
-  if (r.includes("authentication") || r.includes("401") || r.includes("api key")) {
-    return {
-      headline: "The Anthropic API key was rejected.",
-      action: "Check the ANTHROPIC_API_KEY secret in the repository settings — it may have been rotated or revoked."
-    };
+  if (/401|api.key|authentication/.test(r)) {
+    return { headline: "OpenAI API key missing or rejected.", action: "Check the OPENAI_API_KEY repository secret and its project permissions, then retry." };
   }
-  if (r.includes("overloaded") || r.includes("529")) {
-    return {
-      headline: "The Anthropic API was overloaded.",
-      action: "Transient — the backup slot will retry automatically later today."
-    };
+  if (r.includes("delivery") || r.includes("resend")) {
+    return { headline: "The briefing may be published but email delivery is incomplete.", action: "Retry the daily workflow. It reuses the published edition and skips accepted recipients using the delivery ledger and provider idempotency keys." };
   }
   if (!reason) {
     return {
@@ -103,7 +91,7 @@ async function main() {
       <table width="560" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;max-width:560px;background:#FFFFFF;border:1px solid #E2E8F0;">
         <tr><td style="background:#7F1D1D;padding:16px 22px;">
           <div style="font-size:9px;font-weight:800;color:#FCA5A5;letter-spacing:2px;text-transform:uppercase;">ZRC Intelligence · Pipeline alert</div>
-          <div style="font-size:19px;font-weight:800;color:#FFFFFF;margin-top:5px;">No briefing today</div>
+          <div style="font-size:19px;font-weight:800;color:#FFFFFF;margin-top:5px;">Briefing pipeline needs attention</div>
           <div style="font-size:12px;color:#FCA5A5;margin-top:3px;">${esc(today)}</div>
         </td></tr>
         <tr><td style="padding:22px;">
@@ -171,3 +159,4 @@ main().then(() => process.exit(0)).catch(err => {
   console.error("Alert error:", err);
   process.exit(0);
 });
+
