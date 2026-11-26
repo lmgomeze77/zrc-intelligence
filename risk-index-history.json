@@ -1,17 +1,9 @@
 {
-  "note": "Historic ZRC market risk index, one entry per calendar day. This file is a record, not an input: nothing reads it, and it does not feed the generator's continuity baseline. Check 'source' before using any value.",
-  "sources": {
-    "published": "Value as published in that day's data.json.",
-    "published-degraded": "Published, but the AI synthesis failed that morning and every signal defaulted to neutral, so the value reflects the deterministic fallback drifting toward its midpoint rather than a read on the day's headlines. Predates the guard in 9bd41ca that now blocks publishing a degraded run.",
-    "reconstructed": "NOT a reading. No briefing ran on this date, and no source data survives (the failed runs wrote data.degraded.json but exited before the commit step, and the 48h RSS window has long closed). Straight-line interpolation between the nearest published days, recorded so the series has no calendar gaps. Do not cite as a ZRC assessment."
-  },
+  "note": "Published ZRC Morning Intelligence market-risk readings only. Missing dates are gaps, not interpolated values. Distinct from the weekly ZRC geopolitical index.",
   "coverage": {
     "from": "2026-08-19",
-    "to": "2026-09-08",
-    "days": 21,
-    "published": 14,
-    "publishedDegraded": 3,
-    "reconstructed": 4
+    "to": "2026-11-17",
+    "published": 65
   },
   "series": [
     {
@@ -39,35 +31,10 @@
       "source": "published"
     },
     {
-      "date": "2026-08-23",
-      "riskIndex": 52,
-      "tone": "BALANCED",
-      "source": "published-degraded"
-    },
-    {
-      "date": "2026-08-24",
-      "riskIndex": 50,
-      "tone": "BALANCED",
-      "source": "published-degraded"
-    },
-    {
-      "date": "2026-08-25",
-      "riskIndex": 50,
-      "tone": "BALANCED",
-      "source": "published-degraded"
-    },
-    {
       "date": "2026-08-26",
       "riskIndex": 58,
       "tone": "BALANCED",
       "source": "published"
-    },
-    {
-      "date": "2026-08-27",
-      "riskIndex": 57,
-      "tone": null,
-      "source": "reconstructed",
-      "basis": "linear interpolation between 2026-08-26 (58) and 2026-08-28 (56); no briefing ran on this date"
     },
     {
       "date": "2026-08-28",
@@ -112,27 +79,6 @@
       "source": "published"
     },
     {
-      "date": "2026-09-04",
-      "riskIndex": 64,
-      "tone": null,
-      "source": "reconstructed",
-      "basis": "linear interpolation between 2026-09-03 (62) and 2026-09-07 (68); no briefing ran on this date"
-    },
-    {
-      "date": "2026-09-05",
-      "riskIndex": 65,
-      "tone": null,
-      "source": "reconstructed",
-      "basis": "linear interpolation between 2026-09-03 (62) and 2026-09-07 (68); no briefing ran on this date"
-    },
-    {
-      "date": "2026-09-06",
-      "riskIndex": 67,
-      "tone": null,
-      "source": "reconstructed",
-      "basis": "linear interpolation between 2026-09-03 (62) and 2026-09-07 (68); no briefing ran on this date"
-    },
-    {
       "date": "2026-09-07",
       "riskIndex": 68,
       "tone": "CAUTIOUS",
@@ -142,6 +88,312 @@
       "date": "2026-09-08",
       "riskIndex": 72,
       "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-09",
+      "riskIndex": 76,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-10",
+      "riskIndex": 72,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-11",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-12",
+      "riskIndex": 66,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-13",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-14",
+      "riskIndex": 76,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-15",
+      "riskIndex": 72,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-16",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-17",
+      "riskIndex": 65,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-18",
+      "riskIndex": 62,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-19",
+      "riskIndex": 58,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-20",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-21",
+      "riskIndex": 65,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-22",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-23",
+      "riskIndex": 58,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-24",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-25",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-26",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-27",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-28",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-29",
+      "riskIndex": 60,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-09-30",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-01",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-02",
+      "riskIndex": 58,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-03",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-04",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-05",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-06",
+      "riskIndex": 66,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-07",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-08",
+      "riskIndex": 72,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-09",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-10",
+      "riskIndex": 66,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-11",
+      "riskIndex": 64,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-12",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-13",
+      "riskIndex": 66,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-15",
+      "riskIndex": 62,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-16",
+      "riskIndex": 68,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-17",
+      "riskIndex": 71,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-29",
+      "riskIndex": 58,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-10-31",
+      "riskIndex": 56,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-02",
+      "riskIndex": 54,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-03",
+      "riskIndex": 58,
+      "tone": "CAUTIOUS",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-04",
+      "riskIndex": 54,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-05",
+      "riskIndex": 52,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-11",
+      "riskIndex": 54,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-12",
+      "riskIndex": 58,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-13",
+      "riskIndex": 56,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-14",
+      "riskIndex": 54,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-15",
+      "riskIndex": 54,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-16",
+      "riskIndex": 56,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-17",
+      "riskIndex": 58,
+      "tone": "BALANCED",
       "source": "published"
     }
   ]
