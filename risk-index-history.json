@@ -2,8 +2,8 @@
   "note": "Published ZRC Morning Intelligence market-risk readings only. Missing dates are gaps, not interpolated values. Distinct from the weekly ZRC geopolitical index.",
   "coverage": {
     "from": "2026-08-19",
-    "to": "2026-11-17",
-    "published": 65
+    "to": "2026-11-26",
+    "published": 66
   },
   "series": [
     {
@@ -393,6 +393,12 @@
     {
       "date": "2026-11-17",
       "riskIndex": 58,
+      "tone": "BALANCED",
+      "source": "published"
+    },
+    {
+      "date": "2026-11-26",
+      "riskIndex": 56,
       "tone": "BALANCED",
       "source": "published"
     }
